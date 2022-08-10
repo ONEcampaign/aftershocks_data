@@ -22,7 +22,6 @@ def key_indicators_chart() -> None:
         weo.get_data(indicators="all", keep_metadata=True)
         .pipe(add_short_names_column, id_column="iso_code")
         .pipe(filter_african_countries, id_column="iso_code", id_type="ISO3")
-        .filter(["name_short", "indicator_name", "year", "value"], axis=1)
         .loc[lambda d: d.year.dt.year.between(2012, 2022)]
     )
 
