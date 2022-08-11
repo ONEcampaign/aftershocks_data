@@ -81,6 +81,7 @@ def _wfp_charts() -> None:
             date=lambda d: d.date.dt.strftime("%d %b %Y"),
             value=lambda d: d.value.map("{:,.0f}".format),
         )
+        .rename(columns={"date": "As of"})
     )
 
     # Chart version
