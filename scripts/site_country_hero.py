@@ -111,6 +111,9 @@ def _vax_chart() -> None:
             date=lambda d: d.date.dt.strftime("%d %b %Y"),
             indicator="Share of population fully vaccinated",
         )
+        .pipe(filter_african_countries, id_type="ISO3")
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .filter(["name_short", "date", "indicator", "value"], axis=1)
         .rename(columns={"date": "As of"})
     )
 
@@ -138,4 +141,3 @@ def key_indicators_chart() -> None:
 
 if __name__ == "__main__":
     key_indicators_chart()
-
