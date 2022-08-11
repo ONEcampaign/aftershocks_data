@@ -7,6 +7,8 @@ from scripts.config import PATHS
 
 from bblocks.import_tools.wfp import WFPData
 
+from scripts.owid_covid import tools as ot
+
 
 def _weo_charts() -> None:
     weo = WorldEconomicOutlook()
@@ -93,6 +95,32 @@ def _wfp_charts() -> None:
     )
 
 
+def _vax_chart() -> None:
+    """Data for the Overview charts on the country pages"""
+    data = ot.read_owid_data()
+
+    indicator = "people_fully_vaccinated_per_hundred"
+    chart_name = "overview_pct_fully_vaccinated"
+
+    vax = (
+        data.pipe(ot.get_indicators_ts, indicators=[indicator])
+        .dropna(subset="value")
+        .pipe(filter_latest_by, date_column="date", value_columns="value")
+        .assign(
+            value=lambda d: d.value.map("{:,.1f}%".format),
+            indicator="Share of population fully vaccinated",
+        )
+    )
+
+    # Chart version
+    vax.to_csv(f"{PATHS.charts}/country_page/{chart_name}.csv", index=False)
+
+    # Download version
+    vax.assign(source="Our World In Data").to_csv(
+        f"{PATHS.download}/country_page/{chart_name}.csv", index=False
+    )
+
+
 def key_indicators_chart() -> None:
     """Data for the Overview charts on the country pages"""
 
@@ -102,6 +130,10 @@ def key_indicators_chart() -> None:
     # Create csvs for the WFP charts
     _wfp_charts()
 
+    # Create csvs for the Vax charts
+    _vax_chart()
+
 
 if __name__ == "__main__":
     key_indicators_chart()
+
