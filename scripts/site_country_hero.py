@@ -111,6 +111,7 @@ def _vax_chart() -> None:
             date=lambda d: d.date.dt.strftime("%d %b %Y"),
             indicator="Share of population fully vaccinated",
         )
+        .rename(columns={"date": "As of"})
     )
 
     # Chart version
