@@ -108,6 +108,7 @@ def _vax_chart() -> None:
         .pipe(filter_latest_by, date_column="date", value_columns="value")
         .assign(
             value=lambda d: d.value.map("{:,.1f}%".format),
+            date=lambda d: d.date.dt.strftime("%d %b %Y"),
             indicator="Share of population fully vaccinated",
         )
     )
