@@ -126,6 +126,35 @@ def _vax_chart() -> None:
     )
 
 
+def _debt_chart() -> None:
+    """Data for the Debt Service key number"""
+
+    url: str = (
+        "https://onecampaign.github.io/project_covid-19_tracker/c07_debt_service_ts.csv"
+    )
+
+    debt = pd.read_csv(url, usecols=["year", "country_name", "Total"])
+
+    debt = (
+        debt.replace("C.A.R", "Central African Republic")
+        .pipe(add_short_names_column, id_column="country_name")
+        .loc[lambda d: d.year == 2022]
+        .filter(["name_short", "year", "Total"], axis=1)
+        .rename(columns={"year": "As of", "Total": "value"})
+        .assign(indicator="Debt Service, Total (USD million)")
+        .filter(["name_short", "As of", "indicator", "value"], axis=1)
+        .assign(value=lambda d: d.value.map("{:,.0f}".format))
+    )
+
+    # Chart version
+    debt.to_csv(f"{PATHS.charts}/country_page/overview_debt.csv", index=False)
+
+    # Download version
+    debt.assign(
+        source="World Bank International Debt Statistics database, 2022"
+    ).to_csv(f"{PATHS.download}/country_page/overview_debt.csv", index=False)
+
+
 def key_indicators_chart() -> None:
     """Data for the Overview charts on the country pages"""
 
@@ -137,6 +166,9 @@ def key_indicators_chart() -> None:
 
     # Create csvs for the Vax charts
     _vax_chart()
+
+    # Create csvs for the Debt charts
+    _debt_chart()
 
 
 if __name__ == "__main__":
