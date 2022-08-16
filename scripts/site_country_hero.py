@@ -2,6 +2,7 @@ import pandas as pd
 from bblocks.import_tools.imf import WorldEconomicOutlook
 from bblocks.dataframe_tools.add import add_short_names_column
 from bblocks.cleaning_tools.filter import filter_african_countries, filter_latest_by
+from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.config import PATHS
 
@@ -155,6 +156,113 @@ def _debt_chart() -> None:
     ).to_csv(f"{PATHS.download}/country_page/overview_debt.csv", index=False)
 
 
+def _basic_info_chart() -> None:
+    """Poverty headcount, total population, life expectancy, and age dependency"""
+
+    wb = WorldBankData()
+
+    indicators = {
+        "SI.POV.DDAY": "% of population below the poverty line",
+        "SP.POP.TOTL": "Total Population",
+        "SP.DYN.LE00.IN": "Life Expectancy",
+    }
+
+    for code, name in indicators.items():
+        wb.load_indicator(code, indicator_name=name, most_recent_only=True)
+
+    dfs = {}
+    for indicator in wb.indicators:
+        dfs[indicator] = (
+            wb.get_data(indicator)
+            .pipe(filter_african_countries, id_column="iso_code", id_type="ISO3")
+            .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+            .assign(indicator=lambda d: d.indicator_code.map(indicators))
+            .filter(["date", "name_short", "indicator", "value"], axis=1)
+        )
+
+    poverty = (
+        dfs["SI.POV.DDAY"]
+        .assign(
+            source="World Bank, Poverty and Inequality Platform.",
+            value=lambda d: d.value.map("{:,.1f}%".format),
+            date=lambda d: d.date.dt.year,
+        )
+        .rename(columns={"date": "As_of"})
+        .filter(["name_short", "As of", "indicator", "value", "source"], axis=1)
+    )
+
+    # Chart version
+    poverty.drop("source", axis=1).to_csv(
+        f"{PATHS.charts}/country_page/overview_poverty.csv", index=False
+    )
+
+    # Download version
+    poverty.to_csv(f"{PATHS.download}/country_page/overview_poverty.csv", index=False)
+
+    pop_source = (
+        "( 1 ) United Nations Population Division. World Population Prospects:"
+        " 2019 Revision. ( 2 ) Census reports and other statistical publications"
+        " from national statistical offices, ( 3 ) Eurostat: Demographic"
+        " Statistics, ( 4 ) United Nations Statistical Division. Population "
+        "and Vital Statistics Reprot ( various years ), ( 5 ) U.S. Census"
+        " Bureau: International Database, and ( 6 ) Secretariat of the Pacific"
+        " Community: Statistics and Demography Programme."
+    )
+
+    population = (
+        dfs["SP.POP.TOTL"]
+        .assign(
+            source=pop_source,
+            value=lambda d: d.value.div(1e6).map("{:,.1f} million " "people".format),
+            date=lambda d: d.date.dt.year,
+        )
+        .rename(columns={"date": "As of"})
+        .filter(["name_short", "As of", "indicator", "value", "source"], axis=1)
+    )
+    # Chart version
+    population.drop("source", axis=1).to_csv(
+        f"{PATHS.charts}/country_page/overview_population.csv", index=False
+    )
+
+    # Download version
+    population.to_csv(
+        f"{PATHS.download}/country_page/overview_population.csv", index=False
+    )
+
+    life_source = (
+        "( 1 ) United Nations Population Division. World Population"
+        " Prospects: 2019 Revision, or derived from male and female life "
+        "expectancy at birth from sources such as: ( 2 ) Census reports "
+        "and other statistical publications from national statistical "
+        "offices, ( 3 ) Eurostat: Demographic Statistics, ( 4 ) United "
+        "Nations Statistical Division. Population and Vital Statistics "
+        "Report ( various years ), ( 5 ) U.S. Census Bureau: International "
+        "Database, and ( 6 ) Secretariat of the Pacific Community: Statistics "
+        "and Demography Programme."
+    )
+
+    life = (
+        dfs["SP.DYN.LE00.IN"]
+        .assign(source=life_source)
+        .assign(
+            value=lambda d: d.value.map("{:,.1f} years".format),
+            date=lambda d: d.date.dt.year,
+        )
+        .rename(columns={"date": "As of"})
+        .filter(["name_short", "As of", "indicator", "value", "source"], axis=1)
+    )
+
+    # Chart version
+    life.drop("source", axis=1).to_csv(
+        f"{PATHS.charts}/country_page/overview_life_expectancy.csv", index=False
+    )
+
+    # Download version
+    life.to_csv(
+        f"{PATHS.download}/country_page/overview_life_expectancy.csv", index=False
+    )
+
+
 def key_indicators_chart() -> None:
     """Data for the Overview charts on the country pages"""
 
@@ -169,6 +277,9 @@ def key_indicators_chart() -> None:
 
     # Create csvs for the Debt charts
     _debt_chart()
+
+    # Create csvs for the Basic Info charts
+    _basic_info_chart()
 
 
 if __name__ == "__main__":
