@@ -1,8 +1,9 @@
 import pandas as pd
 from bblocks.import_tools.imf import WorldEconomicOutlook
-from bblocks.dataframe_tools.add import add_short_names_column
+from bblocks.dataframe_tools.add import add_short_names_column, add_iso_codes_column
 from bblocks.cleaning_tools.filter import filter_african_countries, filter_latest_by
 from bblocks.import_tools.world_bank import WorldBankData
+from bblocks.dataframe_tools.add import add_gdp_share_column
 
 from scripts.config import PATHS
 
@@ -144,7 +145,21 @@ def _debt_chart() -> None:
         .rename(columns={"year": "As of", "Total": "value"})
         .assign(indicator="Debt Service, Total (USD million)")
         .filter(["name_short", "As of", "indicator", "value"], axis=1)
-        .assign(value=lambda d: d.value.map("{:,.0f}".format))
+        .assign(
+            value_units=lambda d: d.value * 1e6,
+            value=lambda d: d.value.map("{:,.0f}".format),
+        )
+        .pipe(add_iso_codes_column, id_column="name_short", id_type="short_name")
+        .pipe(
+            add_gdp_share_column,
+            id_column="iso_code",
+            id_type="ISO3",
+            value_column="value_units",
+            usd=True,
+            include_estimates=True,
+        )
+        .drop(columns=["value_units", "iso_code"])
+        .assign(gdp_share=lambda d: d.gdp_share.astype(str) + "%")
     )
 
     # Chart version

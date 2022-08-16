@@ -1,50 +1,50 @@
-name_short,As of,indicator,value
-Angola,2022,"Debt Service, Total (USD million)","7,860"
-Burundi,2022,"Debt Service, Total (USD million)",85
-Benin,2022,"Debt Service, Total (USD million)",464
-Burkina Faso,2022,"Debt Service, Total (USD million)",286
-Botswana,2022,"Debt Service, Total (USD million)",160
-Central African Republic,2022,"Debt Service, Total (USD million)",21
-Cote d'Ivoire,2022,"Debt Service, Total (USD million)","1,993"
-Cameroon,2022,"Debt Service, Total (USD million)","1,507"
-DR Congo,2022,"Debt Service, Total (USD million)",514
-Congo Republic,2022,"Debt Service, Total (USD million)",574
-Comoros,2022,"Debt Service, Total (USD million)",21
-Cabo Verde,2022,"Debt Service, Total (USD million)",133
-Djibouti,2022,"Debt Service, Total (USD million)",206
-Algeria,2022,"Debt Service, Total (USD million)",123
-Egypt,2022,"Debt Service, Total (USD million)","12,433"
-Eritrea,2022,"Debt Service, Total (USD million)",38
-Ethiopia,2022,"Debt Service, Total (USD million)","2,523"
-Gabon,2022,"Debt Service, Total (USD million)",583
-Ghana,2022,"Debt Service, Total (USD million)","2,265"
-Guinea,2022,"Debt Service, Total (USD million)",315
-Gambia,2022,"Debt Service, Total (USD million)",60
-Guinea-Bissau,2022,"Debt Service, Total (USD million)",40
-Kenya,2022,"Debt Service, Total (USD million)","3,412"
-Liberia,2022,"Debt Service, Total (USD million)",40
-Lesotho,2022,"Debt Service, Total (USD million)",72
-Morocco,2022,"Debt Service, Total (USD million)","5,231"
-Madagascar,2022,"Debt Service, Total (USD million)",170
-Mali,2022,"Debt Service, Total (USD million)",365
-Mozambique,2022,"Debt Service, Total (USD million)",836
-Mauritania,2022,"Debt Service, Total (USD million)",629
-Mauritius,2022,"Debt Service, Total (USD million)",208
-Malawi,2022,"Debt Service, Total (USD million)",108
-Niger,2022,"Debt Service, Total (USD million)",317
-Nigeria,2022,"Debt Service, Total (USD million)","2,296"
-Rwanda,2022,"Debt Service, Total (USD million)",153
-Sudan,2022,"Debt Service, Total (USD million)",639
-Senegal,2022,"Debt Service, Total (USD million)","1,139"
-Sierra Leone,2022,"Debt Service, Total (USD million)",61
-Somalia,2022,"Debt Service, Total (USD million)",55
-Sao Tome and Principe,2022,"Debt Service, Total (USD million)",8
-Eswatini,2022,"Debt Service, Total (USD million)",54
-Chad,2022,"Debt Service, Total (USD million)",417
-Togo,2022,"Debt Service, Total (USD million)",222
-Tunisia,2022,"Debt Service, Total (USD million)","3,400"
-Tanzania,2022,"Debt Service, Total (USD million)","1,549"
-Uganda,2022,"Debt Service, Total (USD million)",717
-South Africa,2022,"Debt Service, Total (USD million)","7,180"
-Zambia,2022,"Debt Service, Total (USD million)","2,731"
-Zimbabwe,2022,"Debt Service, Total (USD million)",174
+name_short,As of,indicator,value,gdp_share
+Angola,2022,"Debt Service, Total (USD million)","7,860",6.3%
+Burundi,2022,"Debt Service, Total (USD million)",85,2.47%
+Benin,2022,"Debt Service, Total (USD million)",464,2.53%
+Burkina Faso,2022,"Debt Service, Total (USD million)",286,1.46%
+Botswana,2022,"Debt Service, Total (USD million)",160,0.87%
+Central African Republic,2022,"Debt Service, Total (USD million)",21,0.78%
+Cote d'Ivoire,2022,"Debt Service, Total (USD million)","1,993",2.73%
+Cameroon,2022,"Debt Service, Total (USD million)","1,507",3.3%
+DR Congo,2022,"Debt Service, Total (USD million)",514,0.79%
+Congo Republic,2022,"Debt Service, Total (USD million)",574,3.6%
+Comoros,2022,"Debt Service, Total (USD million)",21,1.57%
+Cabo Verde,2022,"Debt Service, Total (USD million)",133,6.68%
+Djibouti,2022,"Debt Service, Total (USD million)",206,5.37%
+Algeria,2022,"Debt Service, Total (USD million)",123,0.06%
+Egypt,2022,"Debt Service, Total (USD million)","12,433",2.85%
+Eritrea,2022,"Debt Service, Total (USD million)",38,1.49%
+Ethiopia,2022,"Debt Service, Total (USD million)","2,523",2.4%
+Gabon,2022,"Debt Service, Total (USD million)",583,2.6%
+Ghana,2022,"Debt Service, Total (USD million)","2,265",3.06%
+Guinea,2022,"Debt Service, Total (USD million)",315,1.5%
+Gambia,2022,"Debt Service, Total (USD million)",60,2.78%
+Guinea-Bissau,2022,"Debt Service, Total (USD million)",40,2.44%
+Kenya,2022,"Debt Service, Total (USD million)","3,412",2.98%
+Liberia,2022,"Debt Service, Total (USD million)",40,1.04%
+Lesotho,2022,"Debt Service, Total (USD million)",72,2.8%
+Morocco,2022,"Debt Service, Total (USD million)","5,231",3.93%
+Madagascar,2022,"Debt Service, Total (USD million)",170,1.16%
+Mali,2022,"Debt Service, Total (USD million)",365,1.89%
+Mozambique,2022,"Debt Service, Total (USD million)",836,4.62%
+Mauritania,2022,"Debt Service, Total (USD million)",629,6.78%
+Mauritius,2022,"Debt Service, Total (USD million)",208,1.84%
+Malawi,2022,"Debt Service, Total (USD million)",108,0.9%
+Niger,2022,"Debt Service, Total (USD million)",317,2.03%
+Nigeria,2022,"Debt Service, Total (USD million)","2,296",0.45%
+Rwanda,2022,"Debt Service, Total (USD million)",153,1.27%
+Sudan,2022,"Debt Service, Total (USD million)",639,2.03%
+Senegal,2022,"Debt Service, Total (USD million)","1,139",4.01%
+Sierra Leone,2022,"Debt Service, Total (USD million)",61,1.44%
+Somalia,2022,"Debt Service, Total (USD million)",55,0.65%
+Sao Tome and Principe,2022,"Debt Service, Total (USD million)",8,1.6%
+Eswatini,2022,"Debt Service, Total (USD million)",54,1.17%
+Chad,2022,"Debt Service, Total (USD million)",417,3.22%
+Togo,2022,"Debt Service, Total (USD million)",222,2.55%
+Tunisia,2022,"Debt Service, Total (USD million)","3,400",7.45%
+Tanzania,2022,"Debt Service, Total (USD million)","1,549",2.0%
+Uganda,2022,"Debt Service, Total (USD million)",717,1.55%
+South Africa,2022,"Debt Service, Total (USD million)","7,180",1.68%
+Zambia,2022,"Debt Service, Total (USD million)","2,731",10.24%
+Zimbabwe,2022,"Debt Service, Total (USD million)",174,0.48%
