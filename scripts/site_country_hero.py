@@ -28,7 +28,7 @@ def _weo_charts() -> None:
         weo.get_data(indicators="all", keep_metadata=True)
         .pipe(add_short_names_column, id_column="iso_code")
         .pipe(filter_african_countries, id_column="iso_code", id_type="ISO3")
-        .loc[lambda d: d.year.dt.year.between(2012, 2022)]
+        .loc[lambda d: d.year.dt.year.between(2012, 2024)]
     )
 
     for indicator in indicators.values():
