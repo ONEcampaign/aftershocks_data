@@ -187,7 +187,7 @@ def _basic_info_chart() -> None:
             value=lambda d: d.value.map("{:,.1f}%".format),
             date=lambda d: d.date.dt.year,
         )
-        .rename(columns={"date": "As_of"})
+        .rename(columns={"date": "As of"})
         .filter(["name_short", "As of", "indicator", "value", "source"], axis=1)
     )
 
