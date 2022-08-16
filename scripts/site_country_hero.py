@@ -110,7 +110,7 @@ def _vax_chart() -> None:
         .assign(
             value=lambda d: d.value.map("{:,.1f}%".format),
             date=lambda d: d.date.dt.strftime("%d %b %Y"),
-            indicator="Share of population fully vaccinated",
+            indicator="Share of population fully vaccinated against COVID-19",
         )
         .pipe(filter_african_countries, id_type="ISO3")
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
