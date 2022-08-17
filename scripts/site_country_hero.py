@@ -1,14 +1,17 @@
 import pandas as pd
-from bblocks.import_tools.imf import WorldEconomicOutlook
-from bblocks.dataframe_tools.add import add_short_names_column, add_iso_codes_column
+from bblocks.analysis_tools.get import change_from_date
 from bblocks.cleaning_tools.filter import filter_african_countries, filter_latest_by
+from bblocks.dataframe_tools.add import (
+    add_short_names_column,
+    add_iso_codes_column,
+    add_gdp_share_column,
+)
+from bblocks.import_tools.imf import WorldEconomicOutlook
+from bblocks.import_tools.wfp import WFPData
 from bblocks.import_tools.world_bank import WorldBankData
-from bblocks.dataframe_tools.add import add_gdp_share_column
+from dateutil.relativedelta import relativedelta
 
 from scripts.config import PATHS
-
-from bblocks.import_tools.wfp import WFPData
-
 from scripts.owid_covid import tools as ot
 
 
@@ -42,6 +45,23 @@ def _weo_charts() -> None:
         )
 
 
+def _group_monthly_change(
+    group: pd.DataFrame, value_columns: list, percentage: bool
+) -> pd.DataFrame:
+    """""" ""
+    sdate = group.date.max() - relativedelta(months=1)
+    edate = group.date.max()
+
+    return change_from_date(
+        group,
+        date_column="date",
+        start_date=sdate,
+        end_date=edate,
+        value_columns=value_columns,
+        percentage=percentage,
+    )
+
+
 def _wfp_charts() -> None:
     """Data for the Food Security charts on the country pages"""
 
@@ -69,18 +89,35 @@ def _wfp_charts() -> None:
         f"{PATHS.download}/country_page/overview_inflation.csv", index=False
     )
 
+    food = wfp.get_data("insufficient_food")
+
+    # calculate starting date
+
     food = (
-        wfp.get_data("insufficient_food")
-        .pipe(add_short_names_column, id_column="iso_code")
+        food.pipe(add_short_names_column, id_column="iso_code")
         .pipe(filter_african_countries, id_type="ISO3")
-        .pipe(
+        .assign(indicator="People with insufficient food consumption")
+        .filter(["name_short", "date", "indicator", "value"], axis=1)
+    )
+
+    change = (
+        food.groupby(["name_short"])
+        .apply(_group_monthly_change, value_columns=["value"], percentage=True)
+        .assign(value=lambda d: d.value.map("{:+,.1%}".format))
+        .reset_index(drop=True)
+        .filter(["name_short", "value"], axis=1)
+        .rename(columns={"value": "Change in last month"})
+    )
+
+    # For charts
+    food = (
+        food.pipe(
             filter_latest_by,
             date_column="date",
             value_columns="value",
             group_by=["name_short"],
         )
-        .assign(indicator="People with insufficient food consumption")
-        .filter(["name_short", "date", "indicator", "value"], axis=1)
+        .merge(change, on=["name_short"], how="left")
         .assign(
             date=lambda d: d.date.dt.strftime("%d %b %Y"),
             value=lambda d: d.value.map("{:,.0f}".format),
