@@ -103,10 +103,10 @@ def _wfp_charts() -> None:
     change = (
         food.groupby(["name_short"])
         .apply(_group_monthly_change, value_columns=["value"], percentage=True)
-        .assign(value=lambda d: d.value.map("{:+,.1%}".format))
+        .assign(value=lambda d: d.value.map("Change in last month: {:+,.1%}".format))
         .reset_index(drop=True)
         .filter(["name_short", "value"], axis=1)
-        .rename(columns={"value": "Change in last month"})
+        .rename(columns={"value": "note"})
     )
 
     # For charts
