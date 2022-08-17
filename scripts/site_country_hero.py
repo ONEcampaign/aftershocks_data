@@ -4,7 +4,7 @@ from bblocks.cleaning_tools.filter import filter_african_countries, filter_lates
 from bblocks.dataframe_tools.add import (
     add_short_names_column,
     add_iso_codes_column,
-    add_gdp_share_column,
+    add_gov_exp_share_column,
 )
 from bblocks.import_tools.imf import WorldEconomicOutlook
 from bblocks.import_tools.wfp import WFPData
@@ -188,7 +188,7 @@ def _debt_chart() -> None:
         )
         .pipe(add_iso_codes_column, id_column="name_short", id_type="short_name")
         .pipe(
-            add_gdp_share_column,
+            add_gov_exp_share_column,
             id_column="iso_code",
             id_type="ISO3",
             value_column="value_units",
@@ -197,7 +197,9 @@ def _debt_chart() -> None:
             include_estimates=True,
         )
         .drop(columns=["value_units", "iso_code"])
-        .assign(note=lambda d: d.note.astype(str) + "% of GDP")
+        .assign(
+            note=lambda d: d.note.round(1).astype(str) + "% of government expenditure"
+        )
     )
 
     # Chart version
