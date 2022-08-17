@@ -5,6 +5,8 @@ from bblocks.dataframe_tools.add import (
     add_short_names_column,
     add_iso_codes_column,
     add_gov_exp_share_column,
+    add_population_share_column,
+    add_median_observation,
 )
 from bblocks.import_tools.imf import WorldEconomicOutlook
 from bblocks.import_tools.wfp import WFPData
@@ -353,6 +355,60 @@ def _basic_info_chart() -> None:
     )
 
 
+def _food_sec_chart() -> None:
+    url = (
+        "https://onecampaign.github.io/project_covid-19_tracker/"
+        "insufficient_food-trend.csv"
+    )
+
+    df = pd.read_csv(url)
+
+    value_cols = ["People with Insufficient Food Consumption (%)"]
+
+    df = (
+        df.melt(id_vars=["indicator", "date"], var_name="country", value_name="value")
+        .astype({"date": "datetime64[ns]"})
+        .replace("C.A.R", "Central African Republic")
+        .pipe(
+            add_short_names_column,
+            id_column="country",
+            id_type="regex",
+        )
+        .loc[lambda d: d.indicator.isin(value_cols)]
+        .loc[lambda d: d.date.dt.year >= 2022]
+        .dropna(subset=["value"])
+        .filter(
+            [
+                "name_short",
+                "date",
+                "value",
+            ],
+            axis=1,
+        )
+        .pipe(
+            add_median_observation,
+            group_name="Africa (median)",
+            value_columns="value",
+            group_by=["date"],
+        )
+        .sort_values(["name_short", "date"])
+        .reset_index(drop=True)
+        .pivot(index="date", columns="name_short", values="value")
+        .reset_index()
+    )
+
+    # Chart version
+    df.to_csv(f"{PATHS.charts}/country_page/country_insufficient_food.csv", index=False)
+
+    # Download version
+    df.melt(id_vars="date", var_name="country").assign(
+        source="WFP HungerMapLive",
+        indicator="% of People with Insufficient food Consumption",
+    ).to_csv(
+        f"{PATHS.download}/country_page/country_insufficient_food.csv", index=False
+    )
+
+
 def key_indicators_chart() -> None:
     """Data for the Overview charts on the country pages"""
 
@@ -370,6 +426,9 @@ def key_indicators_chart() -> None:
 
     # Create csvs for the Basic Info charts
     _basic_info_chart()
+
+    # Create CSVs for Food Security charts
+    _food_sec_chart()
 
 
 if __name__ == "__main__":
