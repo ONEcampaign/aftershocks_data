@@ -192,11 +192,12 @@ def _debt_chart() -> None:
             id_column="iso_code",
             id_type="ISO3",
             value_column="value_units",
+            target_column="note",
             usd=True,
             include_estimates=True,
         )
         .drop(columns=["value_units", "iso_code"])
-        .assign(gdp_share=lambda d: d.gdp_share.astype(str) + "%")
+        .assign(note=lambda d: d.note.astype(str) + "% of GDP")
     )
 
     # Chart version
