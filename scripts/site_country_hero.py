@@ -46,10 +46,13 @@ def _weo_charts() -> None:
 
 
 def _group_monthly_change(
-    group: pd.DataFrame, value_columns: list, percentage: bool
+    group: pd.DataFrame,
+    value_columns: list,
+    percentage: bool,
+    months: int = 1,
 ) -> pd.DataFrame:
     """""" ""
-    sdate = group.date.max() - relativedelta(months=1)
+    sdate = group.date.max() - relativedelta(months=months)
     edate = group.date.max()
 
     return change_from_date(
@@ -59,6 +62,15 @@ def _group_monthly_change(
         end_date=edate,
         value_columns=value_columns,
         percentage=percentage,
+    )
+
+
+def _group_interpolate(
+    group: pd.DataFrame,
+) -> pd.DataFrame:
+    """""" ""
+    return group.filter(["value"]).interpolate(
+        method="linear", limit_direction="forward"
     )
 
 
@@ -143,16 +155,39 @@ def _vax_chart() -> None:
 
     vax = (
         data.pipe(ot.get_indicators_ts, indicators=[indicator])
-        .dropna(subset="value")
-        .pipe(filter_latest_by, date_column="date", value_columns="value")
+        .groupby(["iso_code", "indicator"], as_index=False)
+        .apply(
+            lambda d: d.set_index(["iso_code", "indicator", "date"]).interpolate(
+                limit_direction="backward"
+            )
+        )
+        .reset_index()
+        .filter(["iso_code", "indicator", "date", "value"], axis=1)
+        .dropna(subset=["value"])
+    )
+
+    change = (
+        vax.groupby(["iso_code"])
+        .apply(
+            _group_monthly_change, value_columns=["value"], percentage=False, months=3
+        )
+        .reset_index(drop=True)
+        .filter(["iso_code", "value"], axis=1)
+        .rename(columns={"value": "note"})
+        .assign(note=lambda d: d.note.map("{:+,.1f}pp in the last 3 months".format))
+    )
+
+    vax = (
+        vax.pipe(filter_latest_by, date_column="date", value_columns="value")
         .assign(
             value=lambda d: d.value.map("{:,.1f}%".format),
             date=lambda d: d.date.dt.strftime("%d %b %Y"),
             indicator="Share of population fully vaccinated against COVID-19",
         )
         .pipe(filter_african_countries, id_type="ISO3")
+        .merge(change, on=["iso_code"], how="left")
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
-        .filter(["name_short", "date", "indicator", "value"], axis=1)
+        .filter(["name_short", "date", "indicator", "value", "note"], axis=1)
         .rename(columns={"date": "As of"})
     )
 
