@@ -207,7 +207,7 @@ def aid_gni_key_number() -> None:
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .assign(
             oda_gni=lambda d: format_number(d.oda_gni, decimals=2, as_percentage=True),
-            distance=lambda d: "Additional required to get to 0.7%: "
+            distance=lambda d: "Additional required to get to 0.7%: US$"
             + format_number(d.distance * 1e6, decimals=0, as_billions=True)
             + " billion",
             year=lambda d: d.year.dt.year,
