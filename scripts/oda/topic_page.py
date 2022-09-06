@@ -4,6 +4,8 @@ from pydeflate import deflate
 from bblocks.cleaning_tools.clean import format_number, convert_id
 from bblocks.cleaning_tools.filter import filter_latest_by
 
+CONSTANT_YEAR: int = 2021
+
 DAC = [
     1,
     2,
@@ -141,7 +143,7 @@ def global_aid_key_number() -> None:
     df = (
         _read_total_oda(official_definition=True)
         .pipe(_append_DAC_total)
-        .pipe(_add_constant_change_column, base=2021)
+        .pipe(_add_constant_change_column, base=CONSTANT_YEAR)
         .assign(
             pct_change=lambda d: "Real change from previous year: " + d["pct_change"]
         )
@@ -236,49 +238,47 @@ def aid_gni_key_number() -> None:
     )
 
 
-def aid_to_africa_key_number() -> None:
+def aid_to_africa_ts() -> None:
     df = (
         _read_oda_africa()
         .pipe(_append_DAC_total, grouper=["year"])
         .pipe(_add_short_names)
         .loc[lambda d: d.name == "DAC Countries, Total"]
+        .pipe(
+            deflate,
+            base_year=CONSTANT_YEAR - 1,
+            date_column="year",
+            source="oecd_dac",
+            id_column="donor_code",
+            id_type="DAC",
+            source_col="value_africa",
+            target_col="africa_constant",
+        )
         .assign(
             year=lambda d: d.year.dt.year,
-            value=lambda d: format_number(
-                d.value_africa * 1e6, as_billions=True, decimals=1
-            )
-            + " billion",
             share=lambda d: format_number(
-                d.value_africa / d.value_all, decimals=1, as_percentage=True
-            )
-            + " of total ODA",
+                d.value_africa / d.value_all, as_percentage=True, decimals=1
+            ),
+            value=lambda d: format_number(
+                d.africa_constant * 1e6, as_billions=True, decimals=1
+            ),
         )
-        .pipe(
-            filter_latest_by,
-            date_column="year",
-            group_by=["name"],
-            value_columns=["value", "value_africa", "value_all", "share"],
-        )
+        .loc[lambda d: d.year.isin(range(2010, 20230))]
         .filter(["name", "year", "value", "share"], axis=1)
-        .rename(
-            columns={
-                "year": "As of",
-                "share": "note",
-            }
-        )
+        .rename(columns={"value": "Aid to Africa", "share": "Share of total ODA"})
     )
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/key_number_aid_to_africa.csv", index=False)
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
     df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/key_number_aid_to_africa.csv", index=False
+        f"{PATHS.download}/oda_topic/aid_to_africa_ts.csv", index=False
     )
 
 
 if __name__ == "__main__":
     global_aid_key_number()
     aid_gni_key_number()
-    aid_to_africa_key_number()
+    aid_to_africa_ts()
