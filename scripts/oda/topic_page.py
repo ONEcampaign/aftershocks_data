@@ -91,6 +91,21 @@ def _add_constant_change_column(df: pd.DataFrame, base: int) -> pd.DataFrame:
     return df_constant
 
 
+def _add_short_names(df: pd.DataFrame) -> pd.DataFrame:
+
+    return df.assign(
+        name=lambda d: convert_id(
+            d.donor_code,
+            from_type="DACcode",
+            to_type="name_short",
+            additional_mapping={
+                20001: "DAC Countries, Total",
+                918: "EU Institutions",
+            },
+        ),
+    )
+
+
 def global_aid_key_number() -> None:
     """Create an overview chart which contains the latest total ODA value and
     the change in constant terms."""
@@ -100,17 +115,11 @@ def global_aid_key_number() -> None:
         .pipe(_append_DAC_total)
         .pipe(_add_constant_change_column, base=2021)
         .assign(
-            name=lambda d: convert_id(
-                d.donor_code,
-                from_type="DACcode",
-                to_type="name_short",
-                additional_mapping={
-                    20001: "DAC Countries, Total",
-                    918: "EU Institutions",
-                },
-            ),
-            year=lambda d: d.year.dt.year,
+            pct_change=lambda d: "Real change from previous year: " + d["pct_change"]
         )
+        .pipe(_add_short_names)
+        .loc[lambda d: d.name == "DAC Countries, Total"]
+        .assign(year=lambda d: d.year.dt.year)
         .pipe(
             filter_latest_by,
             date_column="year",
@@ -120,10 +129,11 @@ def global_aid_key_number() -> None:
         .filter(["name", "year", "value", "pct_change"], axis=1)
         .rename(
             columns={
-                "value": "Total ODA (USD million)",
-                "pct_change": "Real year-on-year change",
+                "year": "As of",
+                "pct_change": "note",
             }
         )
+
     )
 
     # chart version
