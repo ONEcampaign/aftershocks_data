@@ -121,7 +121,8 @@ def global_aid_key_number() -> None:
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .assign(
             year=lambda d: d.year.dt.year,
-            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1),
+            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1)
+            + " billion",
         )
         .pipe(
             filter_latest_by,
