@@ -86,6 +86,7 @@ def _add_constant_change_column(df: pd.DataFrame, base: int) -> pd.DataFrame:
     df_constant["pct_change"] = format_number(
         df_constant["pct_change"],
         as_percentage=True,
+        decimals=1,
     ).replace("nan%", "")
 
     return df_constant
