@@ -210,6 +210,7 @@ def aid_gni_key_number() -> None:
             distance=lambda d: "Additional required to get to 0.7%: "
             + format_number(d.distance * 1e6, decimals=0, as_billions=True)
             + " billion",
+            year=lambda d: d.year.dt.year,
         )
         .filter(["name", "year", "oda_gni", "distance"], axis=1)
         .rename({"oda_gni": "value", "distance": "note", "year": "As of"}, axis=1)
