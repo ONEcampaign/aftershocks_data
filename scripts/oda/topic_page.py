@@ -250,7 +250,8 @@ def aid_to_africa_key_number() -> None:
             + " billion",
             share=lambda d: format_number(
                 d.value_africa / d.value_all, decimals=1, as_percentage=True
-            ),
+            )
+            + " of total ODA",
         )
         .pipe(
             filter_latest_by,
