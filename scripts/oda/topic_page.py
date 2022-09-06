@@ -58,19 +58,29 @@ def _read_oda_gni() -> pd.DataFrame:
     return pd.read_csv(f"{PATHS.raw_oda}/oda_gni.csv", parse_dates=["year"])
 
 
+def _read_oda_africa() -> pd.DataFrame:
+    """Read the csv containing ODA to Africa data"""
+
+    return pd.read_csv(
+        f"{PATHS.raw_oda}/total_oda_to_africa.csv", parse_dates=["year"]
+    ).loc[lambda d: d.donor_code.isin(DAC)]
+
+
 def _read_gni() -> pd.DataFrame:
     """Read the csv containing GNI data"""
 
     return pd.read_csv(f"{PATHS.raw_oda}/gni.csv", parse_dates=["year"])
 
 
-def _append_DAC_total(df: pd.DataFrame) -> pd.DataFrame:
+def _append_DAC_total(df: pd.DataFrame, grouper=None) -> pd.DataFrame:
     """Append the "DAC Countries, Total" value to the dataframe.
     Identify with code 20001"""
+    if grouper is None:
+        grouper = ["year", "flows_code", "indicator"]
 
     df_dac = (
         df.loc[lambda d: d.donor_code != 918]
-        .groupby(["year", "flows_code", "indicator"], as_index=False)
+        .groupby(grouper, as_index=False)
         .sum()
         .assign(donor_code=20001)
     )
@@ -226,6 +236,48 @@ def aid_gni_key_number() -> None:
     )
 
 
+def aid_to_africa_key_number() -> None:
+    df = (
+        _read_oda_africa()
+        .pipe(_append_DAC_total, grouper=["year"])
+        .pipe(_add_short_names)
+        .loc[lambda d: d.name == "DAC Countries, Total"]
+        .assign(
+            year=lambda d: d.year.dt.year,
+            value=lambda d: format_number(
+                d.value_africa * 1e6, as_billions=True, decimals=1
+            )
+            + " billion",
+            share=lambda d: format_number(
+                d.value_africa / d.value_all, decimals=1, as_percentage=True
+            ),
+        )
+        .pipe(
+            filter_latest_by,
+            date_column="year",
+            group_by=["name"],
+            value_columns=["value", "value_africa", "value_all", "share"],
+        )
+        .filter(["name", "year", "value", "share"], axis=1)
+        .rename(
+            columns={
+                "year": "As of",
+                "share": "note",
+            }
+        )
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/key_number_aid_to_africa.csv", index=False)
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/key_number_aid_to_africa.csv", index=False
+    )
+
+
 if __name__ == "__main__":
     global_aid_key_number()
     aid_gni_key_number()
+    aid_to_africa_key_number()
