@@ -52,6 +52,18 @@ def _read_total_oda(official_definition: bool = True) -> pd.DataFrame:
     ]
 
 
+def _read_oda_gni() -> pd.DataFrame:
+    """Read the csv containing ODA/GNI data"""
+
+    return pd.read_csv(f"{PATHS.raw_oda}/oda_gni.csv", parse_dates=["year"])
+
+
+def _read_gni() -> pd.DataFrame:
+    """Read the csv containing GNI data"""
+
+    return pd.read_csv(f"{PATHS.raw_oda}/gni.csv", parse_dates=["year"])
+
+
 def _append_DAC_total(df: pd.DataFrame) -> pd.DataFrame:
     """Append the "DAC Countries, Total" value to the dataframe.
     Identify with code 20001"""
@@ -107,6 +119,11 @@ def _add_short_names(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+# ------------------------------------------------------------------------------
+#                                   Charts
+# ------------------------------------------------------------------------------
+
+
 def global_aid_key_number() -> None:
     """Create an overview chart which contains the latest total ODA value and
     the change in constant terms."""
@@ -150,5 +167,64 @@ def global_aid_key_number() -> None:
     )
 
 
+def aid_gni_key_number() -> None:
+    """Create an overview chart which contains the latest ODA/GNI value and
+    the change in constant terms."""
+
+    gni = (
+        _read_gni()
+        .pipe(
+            filter_latest_by,
+            date_column="year",
+            group_by=["donor_code", "flows_code", "indicator"],
+            value_columns=["value"],
+        )
+        .loc[lambda d: d.donor_code.isin(DAC)]
+        .pipe(_append_DAC_total)
+        .rename(columns={"value": "gni"})
+        .filter(["year", "donor_code", "gni"], axis=1)
+    )
+
+    oda = (
+        _read_total_oda(official_definition=True)
+        .pipe(_append_DAC_total)
+        .pipe(
+            filter_latest_by,
+            date_column="year",
+            group_by=["donor_code"],
+            value_columns=["value"],
+        )
+        .rename(columns={"value": "oda"})
+        .filter(["year", "donor_code", "oda"], axis=1)
+    )
+
+    df = (
+        oda.merge(gni, on=["year", "donor_code"], how="left")
+        .assign(
+            oda_gni=lambda d: d.oda / d.gni, distance=lambda d: d.gni * 0.007 - d.oda
+        )
+        .pipe(_add_short_names)
+        .loc[lambda d: d.name == "DAC Countries, Total"]
+        .assign(
+            oda_gni=lambda d: format_number(d.oda_gni, decimals=2, as_percentage=True),
+            distance=lambda d: "Additional required to get to 0.7%: "
+            + format_number(d.distance * 1e6, decimals=0, as_billions=True)
+            + " billion",
+        )
+        .filter(["name", "year", "oda_gni", "distance"], axis=1)
+        .rename({"oda_gni": "value", "distance": "note", "year": "As of"}, axis=1)
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/key_number_oda_gni.csv", index=False)
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/key_number_oda_gni.csv", index=False
+    )
+
+
 if __name__ == "__main__":
     global_aid_key_number()
+    aid_gni_key_number()
