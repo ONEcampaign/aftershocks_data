@@ -394,6 +394,7 @@ def aid_to_health_ts() -> None:
             share=lambda d: format_number(
                 d.value / d.value_all, decimals=1, as_percentage=True
             ),
+            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1),
         )
         .filter(["name", "year", "value", "share"], axis=1)
         .rename(columns={"value": "Total aid to health", "share": "Share of total ODA"})
