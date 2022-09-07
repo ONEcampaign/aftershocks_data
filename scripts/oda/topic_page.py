@@ -68,10 +68,38 @@ def _read_oda_africa() -> pd.DataFrame:
     ).loc[lambda d: d.donor_code.isin(DAC)]
 
 
+def _read_oda_by_income() -> pd.DataFrame:
+    """Read the csv containing ODA by income group data"""
+
+    return pd.read_csv(
+        f"{PATHS.raw_oda}/total_oda_by_income.csv", parse_dates=["year"]
+    ).loc[lambda d: d.donor_code.isin(DAC)]
+
+
 def _read_gni() -> pd.DataFrame:
     """Read the csv containing GNI data"""
 
-    return pd.read_csv(f"{PATHS.raw_oda}/gni.csv", parse_dates=["year"])
+    return pd.read_csv(f"{PATHS.raw_oda}/gni.csv", parse_dates=["year"]).loc[
+        lambda d: d.donor_code.isin(DAC)
+    ]
+
+
+def _read_sectors() -> pd.DataFrame:
+    df = pd.read_csv(f"{PATHS.raw_oda}/sectors_view.csv", parse_dates=["year"]).loc[
+        lambda d: d.donor_code.isin(DAC)
+    ]
+
+    # df = df.loc[
+    #    lambda d: (d.currency == "usd")
+    #    & (d.donor_code.isin(DAC))
+    #    & (d.prices == "current")
+    #    & (d.recipient.isin(["Africa", "LDCs", "All Developing Countries"]))
+    # ].filter(
+    #    ["year", "donor_code", "indicator", "sector", "recipient", "value", "share"],
+    #    axis=1,
+    # )
+
+    return df
 
 
 def _append_DAC_total(df: pd.DataFrame, grouper=None) -> pd.DataFrame:
@@ -129,6 +157,17 @@ def _add_short_names(df: pd.DataFrame) -> pd.DataFrame:
             },
         ),
     )
+
+
+def _filter_health_sectors(df: pd.DataFrame) -> pd.DataFrame:
+    health = [
+        "Basic Health",
+        "Health, General",
+        "Non-communicable diseases (NCDs)",
+        "Population Policies/Programmes & Reproductive Health",
+    ]
+
+    return df.loc[lambda d: d.sector.isin(health)].reset_index(drop=True)
 
 
 # ------------------------------------------------------------------------------
@@ -278,7 +317,100 @@ def aid_to_africa_ts() -> None:
     )
 
 
+def aid_to_incomes_latest() -> None:
+
+    order = [
+        "Low income",
+        "Lower-middle income",
+        "Upper-middle income",
+        "High income",
+        "Not classified by income",
+    ]
+
+    df = (
+        _read_oda_by_income()
+        .pipe(_append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(_add_short_names)
+        .loc[lambda d: d.name == "DAC Countries, Total"]
+        .assign(
+            year=lambda d: d.year.dt.year,
+            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1),
+        )
+        .pipe(filter_latest_by, date_column="year", group_by=["name", "recipient"])
+        .filter(
+            [
+                "name",
+                "year",
+                "recipient",
+                "value",
+            ],
+            axis=1,
+        )
+        .astype({"value": "float"})
+        .assign(
+            share=lambda d: d.groupby("year")["value"].transform(lambda x: x / x.sum())
+        )
+        .assign(
+            share=lambda d: format_number(d.share, decimals=1, as_percentage=True),
+            lable=lambda d: d["recipient"] + ": " + d["share"],
+        )
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_africa_ts.csv", index=False
+    )
+
+
+def aid_to_health_ts() -> None:
+
+    all_sectors = (
+        _read_sectors()
+        .loc[
+            lambda d: (d.donor_code != 918)
+            & (d.recipient == "All Developing Countries")
+        ]
+        .groupby(["year", "recipient"], as_index=False)["value"]
+        .sum()
+        .filter(["year", "value"], axis=1)
+    )
+
+    df = (
+        _read_sectors()
+        .pipe(_filter_health_sectors)
+        .loc[lambda d: d.recipient == "All Developing Countries"]
+        .groupby(["year", "donor_code"], as_index=False)["value"]
+        .sum()
+        .pipe(_append_DAC_total, grouper=["year"])
+        .pipe(_add_short_names)
+        .loc[lambda d: d.name == "DAC Countries, Total"]
+        .merge(all_sectors, on=["year"], how="left", suffixes=("", "_all"))
+        .assign(
+            year=lambda d: d.year.dt.year,
+            share=lambda d: format_number(
+                d.value / d.value_all, decimals=1, as_percentage=True
+            ),
+        )
+        .filter(["name", "year", "value", "share"], axis=1)
+        .rename(columns={"value": "Total aid to health", "share": "Share of total ODA"})
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_health_ts.csv", index=False)
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_health_ts.csv", index=False
+    )
+
+
 if __name__ == "__main__":
     global_aid_key_number()
     aid_gni_key_number()
     aid_to_africa_ts()
+    aid_to_health_ts()
