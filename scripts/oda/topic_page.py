@@ -394,7 +394,21 @@ def aid_to_health_ts() -> None:
             share=lambda d: format_number(
                 d.value / d.value_all, decimals=1, as_percentage=True
             ),
-            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1),
+        )
+        .assign(
+            value=lambda d: deflate(
+                d,
+                base_year=CONSTANT_YEAR - 1,
+                date_column="year",
+                source="oecd_dac",
+                id_column="donor_code",
+                id_type="DAC",
+                source_col="value",
+                target_col="value_constant",
+            ).value_constant,
+        )
+        .assign(
+            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1)
         )
         .filter(["name", "year", "value", "share"], axis=1)
         .rename(columns={"value": "Total aid to health", "share": "Share of total ODA"})
