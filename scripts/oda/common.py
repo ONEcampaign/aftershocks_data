@@ -55,7 +55,7 @@ def read_total_oda(official_definition: bool = True) -> pd.DataFrame:
     ]
 
 
-def _read_oda_gni() -> pd.DataFrame:
+def read_oda_gni() -> pd.DataFrame:
     """Read the csv containing ODA/GNI data"""
 
     return pd.read_csv(f"{PATHS.raw_oda}/oda_gni.csv", parse_dates=["year"])
@@ -168,3 +168,57 @@ def filter_health_sectors(df: pd.DataFrame) -> pd.DataFrame:
     ]
 
     return df.loc[lambda d: d.sector.isin(health)].reset_index(drop=True)
+
+
+def filter_food_sectors(df: pd.DataFrame) -> pd.DataFrame:
+    food = ["Developmental Food Aid/Food Security Assistance"]
+
+    return df.loc[lambda d: d.sector.isin(food)].reset_index(drop=True)
+
+
+def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
+
+    all_sectors = (
+        read_sectors()
+        .loc[
+            lambda d: (d.donor_code != 918)
+            & (d.recipient == "All Developing Countries")
+        ]
+        .groupby(["year", "recipient"], as_index=False)["value"]
+        .sum()
+        .filter(["year", "value"], axis=1)
+    )
+
+    return (
+        read_sectors()
+        .pipe(filter_function)
+        .loc[lambda d: d.recipient == "All Developing Countries"]
+        .groupby(["year", "donor_code"], as_index=False)["value"]
+        .sum()
+        .pipe(append_DAC_total, grouper=["year"])
+        .pipe(add_short_names)
+        .loc[lambda d: d.name == "DAC Countries, Total"]
+        .merge(all_sectors, on=["year"], how="left", suffixes=("", "_all"))
+        .assign(
+            year=lambda d: d.year.dt.year,
+            share=lambda d: format_number(
+                d.value / d.value_all, decimals=1, as_percentage=True
+            ),
+        )
+        .assign(
+            value=lambda d: deflate(
+                d,
+                base_year=CONSTANT_YEAR - 1,
+                date_column="year",
+                source="oecd_dac",
+                id_column="donor_code",
+                id_type="DAC",
+                source_col="value",
+                target_col="value_constant",
+            ).value_constant,
+        )
+        .assign(
+            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1)
+        )
+        .filter(["name", "year", "value", "share"], axis=1)
+    )

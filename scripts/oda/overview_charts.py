@@ -1,3 +1,4 @@
+import pandas as pd
 from bblocks.cleaning_tools.clean import format_number
 from bblocks.cleaning_tools.filter import filter_latest_by
 from pydeflate import deflate
@@ -195,50 +196,9 @@ def aid_to_incomes_latest() -> None:
 
 
 def aid_to_health_ts() -> None:
-    all_sectors = (
-        common.read_sectors()
-        .loc[
-            lambda d: (d.donor_code != 918)
-            & (d.recipient == "All Developing Countries")
-        ]
-        .groupby(["year", "recipient"], as_index=False)["value"]
-        .sum()
-        .filter(["year", "value"], axis=1)
-    )
 
-    df = (
-        common.read_sectors()
-        .pipe(common.filter_health_sectors)
-        .loc[lambda d: d.recipient == "All Developing Countries"]
-        .groupby(["year", "donor_code"], as_index=False)["value"]
-        .sum()
-        .pipe(common.append_DAC_total, grouper=["year"])
-        .pipe(common.add_short_names)
-        .loc[lambda d: d.name == "DAC Countries, Total"]
-        .merge(all_sectors, on=["year"], how="left", suffixes=("", "_all"))
-        .assign(
-            year=lambda d: d.year.dt.year,
-            share=lambda d: format_number(
-                d.value / d.value_all, decimals=1, as_percentage=True
-            ),
-        )
-        .assign(
-            value=lambda d: deflate(
-                d,
-                base_year=common.CONSTANT_YEAR - 1,
-                date_column="year",
-                source="oecd_dac",
-                id_column="donor_code",
-                id_type="DAC",
-                source_col="value",
-                target_col="value_constant",
-            ).value_constant,
-        )
-        .assign(
-            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1)
-        )
-        .filter(["name", "year", "value", "share"], axis=1)
-        .rename(columns={"value": "Total aid to health", "share": "Share of total ODA"})
+    df = common.aid_to_sector_ts(common.filter_health_sectors).rename(
+        columns={"value": "Total aid to health", "share": "Share of total ODA"}
     )
 
     # chart version
@@ -251,9 +211,25 @@ def aid_to_health_ts() -> None:
     )
 
 
+def aid_to_food() -> None:
+    df = common.aid_to_sector_ts(common.filter_food_sectors).rename(
+        columns={"value": "Total Food Aid", "share": "Share of total ODA"}
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_food_ts.csv", index=False)
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_food_ts.csv", index=False
+    )
+
+
 if __name__ == "__main__":
     global_aid_key_number()
     aid_gni_key_number()
     aid_to_incomes_latest()
     aid_to_africa_ts()
     aid_to_health_ts()
+    aid_to_food()
