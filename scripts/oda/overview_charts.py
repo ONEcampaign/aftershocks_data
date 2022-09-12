@@ -1,4 +1,3 @@
-import pandas as pd
 from bblocks.cleaning_tools.clean import format_number
 from bblocks.cleaning_tools.filter import filter_latest_by
 from pydeflate import deflate
@@ -13,7 +12,7 @@ from scripts.oda import common
 
 
 def global_aid_key_number() -> None:
-    """Create an overview chart which contains the latest total ODA value and
+    """Create an overview chart whi§ch contains the latest total ODA value and
     the change in constant terms."""
 
     df = (
@@ -154,8 +153,43 @@ def aid_to_africa_ts() -> None:
     )
 
 
-def aid_to_incomes_latest() -> None:
+def aid_to_incomes() -> None:
+    df = (
+        common.read_oda_by_income()
+        .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.add_short_names)
+        .assign(
+            year=lambda d: d.year.dt.year, value=lambda d: round((d.value / 1e3), 2)
+        )
+        .filter(
+            [
+                "name",
+                "year",
+                "recipient",
+                "value",
+            ],
+            axis=1,
+        )
+        .groupby(["name", "year", "recipient"], as_index=False)
+        .sum()
+        .pivot(index=["name", "year"], columns="recipient", values="value")
+    )
 
+    df2 = df.copy(deep=True).rename(columns=lambda d: d + " (value)").round(2)
+
+    df = df.merge(df2, left_index=True, right_index=True).reset_index()
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_africa_ts.csv", index=False
+    )
+
+
+def aid_to_incomes_latest() -> None:
     df = (
         common.read_oda_by_income()
         .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
@@ -196,7 +230,6 @@ def aid_to_incomes_latest() -> None:
 
 
 def aid_to_health_ts() -> None:
-
     df = common.aid_to_sector_ts(common.filter_health_sectors).rename(
         columns={"value": "Total aid to health", "share": "Share of total ODA"}
     )
@@ -223,6 +256,56 @@ def aid_to_food() -> None:
     source = "OECD DAC Creditor Reporting System (CRS)"
     df.assign(source=source).to_csv(
         f"{PATHS.download}/oda_topic/aid_to_food_ts.csv", index=False
+    )
+
+
+def aid_to_regions_ts() -> None:
+    df = (
+        common.read_oda_by_region()
+        .pipe(common.total_by_region)
+        .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.add_short_names)
+        .assign(year=lambda d: d.year.dt.year)
+        .assign(
+            share=lambda d: d.groupby(["year", "donor_code"])["value"].transform(
+                lambda x: x / x.sum()
+            )
+        )
+        .filter(["year", "name", "recipient", "value", "share"], axis=1)
+        .assign(
+            share_note=lambda d: format_number(
+                d.share, decimals=1, as_percentage=True
+            ).replace("nan%", "", regex=False)
+        )
+    )
+
+    share_note = (
+        df.sort_values(["name", "recipient"])
+        .assign(
+            value=lambda d: format_number(1e6 * d.value, decimals=1, as_millions=True)
+            + " million"
+        )
+        .groupby(["year", "name"])[["value", "recipient"]]
+        .apply(
+            lambda d: "<br>".join("<b>" + d.recipient.fillna("") + ":</b> " + d.value)
+        )
+        .reset_index()
+        .rename(columns={0: "note"})
+    )
+
+    df = (
+        df.pivot(index=["year", "name"], columns="recipient", values="value")
+        .reset_index()
+        .merge(share_note, on=["year", "name"])
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_regions_ts.csv", index=False)
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_regions_ts.csv", index=False
     )
 
 

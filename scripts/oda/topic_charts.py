@@ -1,3 +1,4 @@
+import pandas as pd
 from bblocks.cleaning_tools.clean import format_number
 from bblocks.cleaning_tools.filter import filter_latest_by
 from pydeflate import deflate
@@ -89,6 +90,90 @@ def oda_gni_single_year() -> None:
             axis=1,
         )
     )
+    df.to_clipboard(index=False)
+
+
+def _sectors_ts() -> tuple[pd.DataFrame, list]:
+
+    df_ = common.read_sectors()
+    common.check_sector_completeness(df_=df_)
+
+    df = pd.DataFrame()
+
+    for sn, sl in common.SECTORS_MAPPING.items():
+        _ = df_.pipe(common.filter_map_broad_sector, sector_name=sn, sectors_list=sl)
+        df = pd.concat([df, _], ignore_index=True)
+
+    df = (
+        df.groupby(["year", "donor_code", "sector", "recipient"], as_index=False)[
+            ["value", "share"]
+        ]
+        .sum()
+        .loc[lambda d: d.recipient == "All Developing Countries"]
+        .assign(year=lambda d: d.year.dt.year)
+        .pipe(
+            common.append_DAC_total,
+            grouper=["year", "sector", "recipient"],
+        )
+        .pipe(common.add_short_names)
+        .assign(
+            share=lambda d: d.groupby(["year", "name", "recipient"])["value"].transform(
+                lambda x: x / x.sum()
+            )
+        )
+        .filter(["name", "year", "sector", "share", "value"], axis=1)
+        .sort_values(["year", "name", "share"], ascending=[False, True, False])
+    )
+
+    order = (
+        df.groupby(["sector"], as_index=False)["share"]
+        .sum()
+        .sort_values("share", ascending=False)
+        .sector.to_list()
+    )
+
+    return df, order
+
+
+def sector_totals() -> None:
+
+    df, order = _sectors_ts()
+
+    df = (
+        df.pivot(index=["year", "name"], columns="sector", values="value")
+        .round(1)
+        .filter(order, axis=1)
+        .reset_index()
+        .pipe(common.sort_dac_first, keep_current_sorting=True)
+    )
+
+    df.to_clipboard(index=False)
+
+
+def key_sector_shares() -> None:
+
+    key_sectors = [
+        "Humanitarian",
+        "Education",
+        "Health",
+        "Refugees in Donor Countries",
+        "Social Protection",
+        "Environment Protection",
+        "Agriculture & Forestry and Fishing",
+    ]
+
+    df, order = _sectors_ts()
+
+    order = [s for s in order if s in key_sectors]
+
+    df = (
+        df.pivot(index=["year", "name"], columns="sector", values="share")
+        .round(4)
+        .filter(order, axis=1)
+        .reset_index()
+        .pipe(common.sort_dac_first, keep_current_sorting=True)
+    )
+
     df.to_clipboard(index=False)
 
 

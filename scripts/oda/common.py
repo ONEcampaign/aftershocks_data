@@ -41,6 +41,82 @@ DAC = [
 ]
 
 
+SECTORS_MAPPING: dict = {
+    "Other Sectors": [
+        "Action Relating to Debt",
+        "General Budget Support",
+        "Other Commodity Assistance",
+    ],
+    "Administrative Costs of Donors": ["Administrative Costs of Donors"],
+    "Agriculture & Forestry and Fishing": [
+        "Agriculture",
+        "Forestry & Fishing",
+    ],
+    "Other Economic Infrastructure": [
+        "Banking & Financial Services",
+        "Business & Other Services",
+        "Communications",
+        "Energy",
+        "Industry, Mining & Construction",
+        "Industry, Mining, Construction",
+        "Trade Policies & Regulations",
+        "Transport & Storage",
+    ],
+    "Education": [
+        "Education, Level Unspecified",
+        "Basic Education",
+        "Secondary Education",
+        "Post-Secondary Education",
+    ],
+    "Health": [
+        "Basic Health",
+        "Health, General",
+        "Non-communicable diseases (NCDs)",
+        "Population Policies/Programmes & Reproductive Health",
+    ],
+    "Environment Protection": [
+        "Bio-diversity",
+        "Biosphere Protection",
+        "Environment Education/Training",
+        "Environmental Policy and Admin Management",
+        "Environmental Research",
+        "Site-Preservation",
+        "Site- Preservation",
+    ],
+    "Other Social Infrastructure": [
+        "Conflict, Peace & Security",
+        "Conflict Peace and Security",
+        "Government & Civil Society",
+        "Other Social Infrastructure & Services",
+        "Water Supply & Sanitation",
+    ],
+    "Developmental Food Aid/Food Security Assistance": [
+        "Developmental Food Aid/Food Security Assistance"
+    ],
+    "Humanitarian": [
+        "Disaster Prevention & Preparedness",
+        "Emergency Response",
+        "Reconstruction, Relief & Rehabilitation",
+    ],
+    "Multisector": [
+        "Disaster Risk Reduction",
+        "Multi-Sector",
+        "Other multi-sector Aid",
+        "Rural Development",
+        "Urban Development",
+    ],
+    "Social Protection": [
+        "Multi-Sector Aid for Basic Social Services",
+        "Social Protection",
+    ],
+    "Refugees in Donor Countries": ["Refugees in Donor Countries"],
+    "Unallocated/ Unspecified": [
+        "Unallocated/ Unspecified",
+        "Unallocated/ Unspecificed",
+    ],
+}
+
+
 def read_total_oda(official_definition: bool = True) -> pd.DataFrame:
     """Read the csv containing total ODA data"""
     flow = pd.read_csv(f"{PATHS.raw_oda}/total_oda_flow.csv", parse_dates=["year"])
@@ -103,6 +179,18 @@ def read_sectors() -> pd.DataFrame:
     return df
 
 
+def read_oda_by_region() -> pd.DataFrame:
+    return pd.read_csv(
+        f"{PATHS.raw_oda}/total_oda_by_region.csv", parse_dates=["year"]
+    ).loc[lambda d: d.donor_code.isin(DAC)]
+
+
+def total_by_region(df: pd.DataFrame) -> pd.DataFrame:
+    return df.groupby(
+        ["year", "donor_code", "recipient_code", "recipient"], as_index=False
+    )["value"].sum()
+
+
 def append_DAC_total(df: pd.DataFrame, grouper=None) -> pd.DataFrame:
     """Append the "DAC Countries, Total" value to the dataframe.
     Identify with code 20001"""
@@ -160,20 +248,20 @@ def add_short_names(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def filter_health_sectors(df: pd.DataFrame) -> pd.DataFrame:
-    health = [
-        "Basic Health",
-        "Health, General",
-        "Non-communicable diseases (NCDs)",
-        "Population Policies/Programmes & Reproductive Health",
-    ]
 
-    return df.loc[lambda d: d.sector.isin(health)].reset_index(drop=True)
+    return df.loc[lambda d: d.sector.isin(SECTORS_MAPPING["Health"])].reset_index(
+        drop=True
+    )
 
 
 def filter_food_sectors(df: pd.DataFrame) -> pd.DataFrame:
     food = ["Developmental Food Aid/Food Security Assistance"]
 
-    return df.loc[lambda d: d.sector.isin(food)].reset_index(drop=True)
+    return df.loc[
+        lambda d: d.sector.isin(
+            SECTORS_MAPPING["Developmental Food Aid/Food Security Assistance"]
+        )
+    ].reset_index(drop=True)
 
 
 def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
@@ -222,3 +310,37 @@ def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
         )
         .filter(["name", "year", "value", "share"], axis=1)
     )
+
+
+def filter_map_broad_sector(
+    df: pd.DataFrame, sector_name, sectors_list: list
+) -> pd.DataFrame:
+
+    return (
+        df.loc[lambda d: d.sector.isin(sectors_list)]
+        .assign(sector=sector_name)
+        .reset_index(drop=True)
+    )
+
+
+def check_sector_completeness(df_: pd.DataFrame) -> None:
+    """Check that all sectors are in the mapping"""
+
+    all_sectors = [
+        sector for sectors_list in SECTORS_MAPPING.values() for sector in sectors_list
+    ]
+
+    not_included = set(df_.sector.unique()) - set(all_sectors)
+
+    assert len(not_included) == 0
+
+
+def sort_dac_first(df: pd.DataFrame, keep_current_sorting=True):
+
+    if not keep_current_sorting:
+        df = df.sort_values(["year", "name"], ascending=[True, False])
+
+    dac = df.query("name == 'DAC Countries, Total'").reset_index(drop=True)
+    other = df.query("name != 'DAC Countries, Total'").reset_index(drop=True)
+
+    return pd.concat([dac, other], ignore_index=True)
