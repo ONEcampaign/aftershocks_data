@@ -244,6 +244,21 @@ def aid_to_health_ts() -> None:
     )
 
 
+def aid_to_humanitarian_ts() -> None:
+    df = common.aid_to_sector_ts(common.filter_humanitarian_sectors).rename(
+        columns={"value": "Total Humanitarian Aid", "share": "Share of total ODA"}
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_humanitarian_ts.csv", index=False)
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_humanitarian_ts.csv", index=False
+    )
+
+
 def aid_to_food() -> None:
     df = common.aid_to_sector_ts(common.filter_food_sectors).rename(
         columns={"value": "Total Food Aid", "share": "Share of total ODA"}
@@ -316,3 +331,4 @@ if __name__ == "__main__":
     aid_to_africa_ts()
     aid_to_health_ts()
     aid_to_food()
+    aid_to_humanitarian_ts()

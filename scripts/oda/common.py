@@ -254,6 +254,13 @@ def filter_health_sectors(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+def filter_humanitarian_sectors(df: pd.DataFrame) -> pd.DataFrame:
+
+    return df.loc[lambda d: d.sector.isin(SECTORS_MAPPING["Humanitarian"])].reset_index(
+        drop=True
+    )
+
+
 def filter_food_sectors(df: pd.DataFrame) -> pd.DataFrame:
     food = ["Developmental Food Aid/Food Security Assistance"]
 
