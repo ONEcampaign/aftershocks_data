@@ -39,11 +39,39 @@ def _latest_weo_ssa_with_yoy_change(
     )
 
 
-def revenue_key_number() -> None:
+def _latest_unu_ssa_with_yoy_change(
+    df: pd.DataFrame, summary: bool = True
+) -> pd.DataFrame:
 
+    latest_year = 2020
+
+    exclude = ["value", "iso_code"] if summary else ["value"]
+
+    df_grouper = [c for c in df.columns if c not in exclude]
+    change_grouper = "indicator" if summary else "iso_code"
+
+    return (
+        df.loc[lambda d: d.year.dt.year.isin([latest_year - 1, latest_year])]
+        .assign(
+            region=lambda d: convert_id(d.iso_code, "ISO3", "Continent"),
+        )
+        .query("region == 'Africa' and iso_code not in @common.north_africa")
+        .sort_values(["iso_code", "year"])
+        .groupby(df_grouper, as_index=False)
+        .sum()
+        .assign(
+            yoy_change=lambda d: d.groupby(change_grouper)["value"].pct_change(),
+            region="Sub-Saharan Africa",
+        )
+        .loc[lambda d: d.year.dt.year == latest_year]
+    )
+
+
+def revenue_key_number(summary:bool=True) -> None:
+
+    df = common.gov_revenue(WEO)
     df = (
-        common.gov_revenue(weo=WEO)
-        .pipe(_latest_weo_ssa_with_yoy_change)
+        df.pipe(_latest_weo_ssa_with_yoy_change, summary=summary)
         .assign(
             note=lambda d: "Real change from previous year: "
             + format_number(d.yoy_change, decimals=1, as_percentage=True),
@@ -57,16 +85,17 @@ def revenue_key_number() -> None:
     )
 
     # live version
-    df.to_csv(f"{PATHS.charts}/drm_topic/revenue_key_number.csv", index=False)
+    # df.to_csv(f"{PATHS.charts}/drm_topic/revenue_key_number.csv", index=False)
 
     # download version
-    df.assign(source="IMF World Economic Outlook").to_csv(
-        f"{PATHS.download}/drm_topic/revenue_key_number.csv", index=False
-    )
+    # df.assign(source="IMF World Economic Outlook").to_csv(
+    #    f"{PATHS.download}/drm_topic/revenue_key_number.csv", index=False
+    # )
 
     df.to_clipboard(index=False)
 
 
 if __name__ == "__main__":
 
-    revenue_key_number()
+    revenue_key_number(summary=False)
+    ...

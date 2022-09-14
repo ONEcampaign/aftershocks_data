@@ -21,5 +21,9 @@ class Paths:
     def raw_oda(self):
         return os.path.join(self.project_dir, "raw_data", "oda")
 
+    @property
+    def raw_drm(self):
+        return os.path.join(self.project_dir, "raw_data", "drm")
+
 
 PATHS = Paths(os.path.dirname(os.path.dirname(__file__)))
