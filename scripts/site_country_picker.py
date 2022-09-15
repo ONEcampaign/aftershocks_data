@@ -2,18 +2,16 @@ import datetime
 
 import country_converter as coco
 import pandas as pd
+from bblocks.cleaning_tools.clean import clean_numeric_series
 from bblocks.dataframe_tools.add import (
     add_population_share_column,
     add_flourish_geometries,
-    add_income_level_column,
     add_population_column,
     add_iso_codes_column,
 )
 from bblocks.import_tools.imf import WorldEconomicOutlook
 from bblocks.import_tools.wfp import WFPData
 from bblocks.import_tools.world_bank import WorldBankData
-
-from bblocks.cleaning_tools.clean import clean_numeric_series
 
 from scripts.config import PATHS
 from scripts.owid_covid import tools as owid_tools
@@ -229,7 +227,7 @@ def map_data(base_map: pd.DataFrame) -> None:
     # Add WEO indicators
     df = df.merge(
         weo_indicators().drop("year", axis=1), on=MapDataSchema.ISO_CODE, how="left"
-    ).dropna(how='any')
+    ).dropna(how="any")
 
     # Add population
     df = add_population_column(
