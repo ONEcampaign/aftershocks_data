@@ -224,20 +224,12 @@ def latest_debt_service() -> pd.DataFrame:
 
 
 def map_data(base_map: pd.DataFrame) -> None:
-    df = base_map
-
-    # Add income levels
-    df = add_income_level_column(
-        df,
-        id_column=MapDataSchema.ISO_CODE,
-        id_type="ISO3",
-        target_column="Income Level",
-    ).fillna("Not classified")
+    df = base_map_data()
 
     # Add WEO indicators
     df = df.merge(
         weo_indicators().drop("year", axis=1), on=MapDataSchema.ISO_CODE, how="left"
-    )
+    ).dropna(how='any')
 
     # Add population
     df = add_population_column(
@@ -287,7 +279,7 @@ def map_data(base_map: pd.DataFrame) -> None:
 
 
 def bubble_data(base_bubble: pd.DataFrame) -> None:
-    df = base_bubble_data()
+    df = base_bubble
 
     base_map = pd.read_csv(f"{PATHS.charts}/home_map_data.csv").drop(
         ["geometry", "formal_name", "name"], axis=1
