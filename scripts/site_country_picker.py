@@ -264,10 +264,10 @@ def map_data(base_map: pd.DataFrame) -> None:
     df = df.merge(latest_debt_service(), on=MapDataSchema.ISO_CODE, how="left")
 
     order = [
-        "geometry",
-        "formal_name",
-        "name",
-        "iso_code",
+        MapDataSchema.GEOMETRY,
+        MapDataSchema.FORMAL_NAME,
+        MapDataSchema.NAME,
+        MapDataSchema.ISO_CODE,
         "Income Level",
         "GDP Growth (% change)",
         "GDP per capita (US$)",
@@ -286,4 +286,37 @@ def map_data(base_map: pd.DataFrame) -> None:
     df.filter(order, axis=1).to_csv(f"{PATHS.charts}/home_map_data.csv", index=False)
 
 
+def bubble_data(base_bubble: pd.DataFrame) -> None:
+    df = base_bubble_data()
+
+    base_map = pd.read_csv(f"{PATHS.charts}/home_map_data.csv").drop(
+        ["geometry", "formal_name", "name"], axis=1
+    )
+
+    df = df.merge(base_map, on=MapDataSchema.ISO_CODE, how="left")
+
+    order = [
+        BubbleDataSchema.FORMAL_NAME,
+        BubbleDataSchema.NAME,
+        BubbleDataSchema.ISO_CODE,
+        BubbleDataSchema.POSITION,
+        "Income Level",
+        "GDP Growth (% change)",
+        "GDP per capita (US$)",
+        "Inflation Rate (%)",
+        "Population with Insufficient Food (%)",
+        "Debt Service (US$ million)",
+        "Covid Vaccination Rate (%)",
+        "Population",
+        "Fertility Rate",
+        "Infant Mortality Rate",
+        "Life Expectancy",
+        "Literacy Rate",
+        "Human Capital Index",
+    ]
+
+    df.filter(order, axis=1).to_csv(f"{PATHS.charts}/home_bubble_data.csv", index=False)
+
+
 map_data(base_map_data())
+bubble_data(base_bubble_data())
