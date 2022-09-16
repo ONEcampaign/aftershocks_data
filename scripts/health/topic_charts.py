@@ -74,8 +74,8 @@ def dtp_topic_chart():
     df = (df.loc[df.SpatialDimType == 'WORLDBANKINCOMEGROUP', ['SpatialDim', 'TimeDim', 'NumericValue']]
           .pivot(index='TimeDim', columns='SpatialDim', values='NumericValue')
           .reset_index()
-          .rename(columns={'TimeDim': 'year', 'WB_HI': 'High-income', 'WB_LI': 'Low-income',
-                           'WB_LMI': 'Lower-middle-income', 'WB_UMI': 'Upper-middle-income'})
+          .rename(columns={'TimeDim': 'year', 'WB_HI': 'High income', 'WB_LI': 'Low income',
+                           'WB_LMI': 'Lower-middle income', 'WB_UMI': 'Upper-middle income'})
           )
 
     df.to_csv(f'{PATHS.charts}/health/DTP_topic_chart.csv', index=False)
