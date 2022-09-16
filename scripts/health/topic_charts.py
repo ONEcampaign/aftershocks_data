@@ -3,6 +3,8 @@
 import pandas as pd
 from scripts.config import PATHS
 import requests
+from zipfile import ZipFile
+import io
 
 
 def hiv_topic_chart():
@@ -80,9 +82,86 @@ def dtp_topic_chart():
     df.to_csv(f'{PATHS.download}/health/DTP_topic_chart.csv', index=False)
 
 
-if __name__ == "__main__":
+### IHME ###
 
-# hiv_topic_chart()
-# malaria_topic_chart()
-    dtp_topic_chart() 
+def __extract_data():
+    """ """
+
+    zip_url = 'https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_HEALTH_SPENDING_1995_2018_CSV.zip'
+
+    try:
+        response = requests.get(zip_url)
+        folder = ZipFile(io.BytesIO(response.content))
+        file_name = list(folder.NameToInfo.keys())[0]
+        df = pd.read_csv(folder.open(file_name), low_memory=False, encoding='ISO-8859-1')
+        return df
+
+    except ConnectionError:
+        raise ConnectionError('Could not connect to IHME website')
+
+
+def __extract_codes():
+    """ """
+
+    code_url = 'https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_HEALTH_SPENDING_1995_2018_CODEBOOK_Y2021M09D22.CSV'
+    try:
+        response = requests.get(code_url)
+        codes_dict = pd.read_csv(io.StringIO(response.text), sep=",").iloc[0, :].to_dict()
+        return codes_dict
+
+    except ConnectionError:
+        raise ConnectionError('Could not connect to IHME website')
+
+
+def get_ihme_spending():
+    """ """
+    df = __extract_data()
+    codes = __extract_codes()
+
+    df = (df
+          .melt(id_vars=['location_id', 'location_name', 'iso3', 'level', 'year', ])
+          .assign(variable_name=lambda d: d.variable.map(codes))
+          )
+    return df
+
+
+def ihme_spending_topic_chart():
+    """ """
+
+    indicators = {'Out-of-pocket Health Spending (2020 USD) ': 'Total',
+                  'Government Health Spending (2020 USD)': 'Total',
+                  'Prepaid Private Health Spending (2020 USD)': 'Total',
+                  'DAH (2020 USD)': 'Total',
+
+                  'Total Health Spending per person (2020 USD)': 'Per person',
+                  'Government Health Spending per person (2020 USD)': 'Per person',
+                  'Prepaid Private Health Spending for per person (2020 USD)': 'Per person',
+                  'DAH per person (2020 USD)': 'Per person'
+                  }
+
+    df = get_ihme_spending()
+
+    query = (df.variable_name.isin(indicators) & (df.location_name == 'Sub-Saharan Africa'))
+
+    df = (df[query]
+          .assign(category = lambda d: d.variable_name.map(indicators))
+          .assign(variable_name = lambda d: d.variable_name.str.replace('per person', '', regex=False))
+          .assign(variable_name = lambda d: d.variable_name.str.replace('(2020 USD)', '', regex=False))
+          .assign(variable_name = lambda d: d.variable_name.str.strip())
+          .pivot(index=['year', 'category'], columns = 'variable_name', values = 'value')
+          .reset_index()
+          .sort_values(by = 'category', ascending=False)
+          )
+
+    df.to_csv(f'{PATHS.charts}/health/health_spending_topic_chart.csv', index=False)
+    df.to_csv(f'{PATHS.download}/health/health_spending_topic_chart.csv', index=False)
+
+
+if __name__ == "__main__":
+    """ """
+
+    # hiv_topic_chart()
+    # malaria_topic_chart()
+    # dtp_topic_chart()
+    ihme_spending_topic_chart()
 
