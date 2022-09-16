@@ -10,6 +10,8 @@ from scripts.oda import common
 #                                   Charts
 # ------------------------------------------------------------------------------
 
+KEY_NUMBERS: dict = {}
+
 
 def global_aid_key_number() -> None:
     """Create an overview chart whi§ch contains the latest total ODA value and
@@ -43,6 +45,11 @@ def global_aid_key_number() -> None:
             }
         )
     )
+
+    # Total ODA key numberes
+
+    KEY_NUMBERS["total_oda"] = df["value"].values[0]
+    KEY_NUMBERS["total_oda_change"] = df["note"].values[0].split(": ")[1]
 
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/key_number_total_oda.csv", index=False)
@@ -103,6 +110,10 @@ def aid_gni_key_number() -> None:
         .rename({"oda_gni": "value", "distance": "note", "year": "As of"}, axis=1)
     )
 
+    # Key numbers
+    KEY_NUMBERS["oda_gni"] = df["value"].values[0]
+    KEY_NUMBERS["oda_gni_distance"] = df["note"].values[0].split(": ")[1]
+
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/key_number_oda_gni.csv", index=False)
 
@@ -142,6 +153,10 @@ def aid_to_africa_ts() -> None:
         .filter(["name", "year", "value", "share"], axis=1)
         .rename(columns={"value": "Aid to Africa", "share": "Share of total ODA"})
     )
+
+    # Aid to Africa key numbers
+    KEY_NUMBERS["aid_to_africa"] = df["Aid to Africa"].values[-1] + " billion"
+    KEY_NUMBERS["aid_to_africa_share"] = df["Share of total ODA"].values[-1]
 
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
@@ -219,6 +234,15 @@ def aid_to_incomes_latest() -> None:
         )
     )
 
+    # Key numbers
+    KEY_NUMBERS["aid_to_incomes"] = (
+        df[["recipient", "value"]].set_index("recipient").to_dict()["value"]
+    )
+
+    KEY_NUMBERS["aid_to_incomes_share"] = (
+        df[["recipient", "share"]].set_index("recipient").to_dict()["share"]
+    )
+
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
 
@@ -234,6 +258,10 @@ def aid_to_health_ts() -> None:
         columns={"value": "Total aid to health", "share": "Share of total ODA"}
     )
 
+    # Key numbers
+    KEY_NUMBERS["aid_to_health"] = df["Total aid to health"].values[-1] + " billion"
+    KEY_NUMBERS["aid_to_health_share"] = df["Share of total ODA"].values[-1]
+
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_health_ts.csv", index=False)
 
@@ -248,6 +276,12 @@ def aid_to_humanitarian_ts() -> None:
     df = common.aid_to_sector_ts(common.filter_humanitarian_sectors).rename(
         columns={"value": "Total Humanitarian Aid", "share": "Share of total ODA"}
     )
+
+    # Key numbers
+    KEY_NUMBERS["aid_to_humanitarian"] = (
+        df["Total Humanitarian Aid"].values[-1] + " billion"
+    )
+    KEY_NUMBERS["aid_to_humanitarian_share"] = df["Share of total ODA"].values[-1]
 
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_humanitarian_ts.csv", index=False)
@@ -324,6 +358,14 @@ def aid_to_regions_ts() -> None:
     )
 
 
+def export_key_numbers_overview() -> None:
+    """Export KEY_NUMBERS dictionary as json"""
+    import json
+
+    with open(f"{PATHS.charts}/oda_topic/key_numbers.json", "w") as f:
+        json.dump(KEY_NUMBERS, f, indent=4)
+
+
 if __name__ == "__main__":
     global_aid_key_number()
     aid_gni_key_number()
@@ -332,3 +374,4 @@ if __name__ == "__main__":
     aid_to_health_ts()
     aid_to_food()
     aid_to_humanitarian_ts()
+    export_key_numbers_overview()

@@ -5,7 +5,6 @@ from bblocks.dataframe_tools.add import (
     add_short_names_column,
     add_iso_codes_column,
     add_gov_exp_share_column,
-    add_population_share_column,
     add_median_observation,
 )
 from bblocks.import_tools.imf import WorldEconomicOutlook
