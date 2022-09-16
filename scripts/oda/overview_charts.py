@@ -50,6 +50,7 @@ def global_aid_key_number() -> None:
 
     KEY_NUMBERS["total_oda"] = df["value"].values[0]
     KEY_NUMBERS["total_oda_change"] = df["note"].values[0].split(": ")[1]
+    KEY_NUMBERS["latest_year"] = str(df["As of"].values[0])
 
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/key_number_total_oda.csv", index=False)
