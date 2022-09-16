@@ -27,7 +27,7 @@ def debt_service_africa_trend() -> None:
         + " billion"
     )
 
-    df.to_csv(f"{PATHS.charts}/debt_service_africa_trend.csv", index=False)
+    df.to_csv(f"{PATHS.charts}/debt/debt_service_africa_trend.csv", index=False)
 
 
 def debt_stocks_africa_trend() -> None:
@@ -46,7 +46,7 @@ def debt_stocks_africa_trend() -> None:
         + " billion"
     )
 
-    df.to_csv(f"{PATHS.charts}/debt_stocks_africa_trend.csv", index=False)
+    df.to_csv(f"{PATHS.charts}/debt/debt_stocks_africa_trend.csv", index=False)
 
 
 debt_service_africa_trend()
