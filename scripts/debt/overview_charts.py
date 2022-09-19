@@ -27,7 +27,22 @@ def debt_distress() -> None:
     KEY_NUMBERS["debt_distress_africa_share"] = (
         str(round(100 * len(africa) / len(df))) + "%"
     )
+
     KEY_NUMBERS["debt_distress_africa"] = str(number)
+
+    card = pd.DataFrame(
+        {
+            "name": ["African countries"],
+            "Latest assessment": africa.latest_publication.max().strftime("%B %Y"),
+            "value": [f"{number}<br> countries in, or at risk of, debt distress"],
+            "note": [f"out of {len(df)} countries assessed"],
+        }
+    )
+
+    # chart version
+    card.to_csv(
+        f"{PATHS.charts}/debt_topic/debt_distress_africa_key_number.csv", index=False
+    )
 
 
 def debt_service_africa_trend() -> None:
@@ -77,10 +92,14 @@ def export_key_numbers_overview() -> None:
         json.dump(KEY_NUMBERS, f, indent=4)
 
 
-debt_service_africa_trend()
+def update_overview_charts_key_numbers() -> None:
+    """Update key numbers for overview charts"""
 
-debt_stocks_africa_trend()
+    debt_distress()
+    debt_service_africa_trend()
+    debt_stocks_africa_trend()
+    export_key_numbers_overview()
 
-debt_distress()
 
-export_key_numbers_overview()
+if __name__ == "__main__":
+    update_overview_charts_key_numbers()
