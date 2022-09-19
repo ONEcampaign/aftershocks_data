@@ -5,6 +5,12 @@ from scripts.config import PATHS
 import requests
 from zipfile import ZipFile
 import io
+from scripts.health.common import query_who
+import country_converter as coco
+
+from bblocks.import_tools.world_bank import WorldBankData
+from bblocks.dataframe_tools import add
+import json
 
 
 def hiv_topic_chart():
@@ -34,31 +40,20 @@ def hiv_topic_chart():
     df.to_csv(f'{PATHS.download}/health/hiv_topic_chart.csv', index=False)
 
 
-def query_who(code: str):
-    """To be replaced in bblocks"""
-
-    URL = 'https://ghoapi.azureedge.net/api/'
-
-    request = requests.get(URL + code)
-    data = request.json()
-    df = pd.DataFrame.from_records(data['value'])
-
-    return df
-
-
 def malaria_topic_chart():
     """ """
 
     code = 'MALARIA_EST_DEATHS'
 
     df = query_who(code)
-
-    df = (df.loc[df.SpatialDim.isin(['GLOBAL', 'AFR']), ['SpatialDim', 'TimeDim', 'NumericValue']]
+    regions = {'NGA': 'Nigeria', 'COD': 'DRC', 'AFR': 'Africa',
+               'GLOBAL': 'Global'}
+    df = (df.loc[df.SpatialDim.isin(regions), ['SpatialDim', 'TimeDim', 'NumericValue']]
           .pivot(index='TimeDim', columns='SpatialDim', values='NumericValue')
           .reset_index()
           .assign(rest=lambda d: d['GLOBAL'] - d['AFR'])
-          .rename(columns={'TimeDim': 'year', 'AFR': 'Africa', 'GLOBAL': 'Global', 'rest': 'Rest of the world'})
-
+          .rename(columns=regions)
+          .rename(columns={'rest': 'Rest of the world', 'TimeDim': 'year'})
           )
 
     df.to_csv(f'{PATHS.charts}/health/malaria_topic_chart.csv', index=False)
@@ -144,17 +139,121 @@ def ihme_spending_topic_chart():
     query = (df.variable_name.isin(indicators) & (df.location_name == 'Sub-Saharan Africa'))
 
     df = (df[query]
-          .assign(category = lambda d: d.variable_name.map(indicators))
-          .assign(variable_name = lambda d: d.variable_name.str.replace('per person', '', regex=False))
-          .assign(variable_name = lambda d: d.variable_name.str.replace('(2020 USD)', '', regex=False))
-          .assign(variable_name = lambda d: d.variable_name.str.strip())
-          .pivot(index=['year', 'category'], columns = 'variable_name', values = 'value')
+          .assign(category=lambda d: d.variable_name.map(indicators))
+          .assign(variable_name=lambda d: d.variable_name.str.replace('per person', '', regex=False))
+          .assign(variable_name=lambda d: d.variable_name.str.replace('(2020 USD)', '', regex=False))
+          .assign(variable_name=lambda d: d.variable_name.str.strip())
+          .pivot(index=['year', 'category'], columns='variable_name', values='value')
           .reset_index()
-          .sort_values(by = 'category', ascending=False)
+          .sort_values(by='category', ascending=False)
           )
 
     df.to_csv(f'{PATHS.charts}/health/health_spending_topic_chart.csv', index=False)
     df.to_csv(f'{PATHS.download}/health/health_spending_topic_chart.csv', index=False)
+
+
+def spending():
+    """ """
+    cc = coco.CountryConverter()
+
+    indicators = {'SH.XPD.CHEX.GD.ZS': 'Current health expenditure (% of GDP)',
+                  'SH.XPD.CHEX.PC.CD': 'Current health expenditure per capita (current USD)'}
+
+    wb = WorldBankData()
+    for code, _ in indicators.items():
+        wb.load_indicator(code)
+
+    df = pd.DataFrame()
+
+    for code, _ in indicators.items():
+        _ = (wb.get_data(code)
+                 .dropna(subset='value')
+                 .sort_values('date')
+                 .groupby('iso_code', as_index=False)
+                 .last()
+                 .loc[:, ['iso_code', 'indicator', 'value']]
+                 )
+
+        df = pd.concat([df, _])
+
+    df = (df
+              .pivot(index='iso_code', columns='indicator', values='value')
+              .reset_index()
+              .rename(columns=indicators)
+              .loc[lambda d: d.iso_code.isin(cc.data.ISO3), :]
+              .assign(country_name=lambda d: coco.convert(d.iso_code, to='name_short', not_found=None))
+              .dropna(subset=['country_name'])
+              .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
+              .pipe(add.add_population_column, 'iso_code')
+              .pipe(add.add_income_level_column, 'iso_code')
+              .loc[lambda d: d.income_level.isin(['Lower middle income', 'Low income']), :]
+
+              )
+    return df
+
+
+def health_spending_wb():
+    """ """
+    cc = coco.CountryConverter()
+
+    wb = WorldBankData()
+    wb.load_indicator('SH.XPD.CHEX.PC.CD')
+
+    df = (wb
+              .get_data()
+              .dropna(subset='value')
+              .sort_values('date')
+              .groupby('iso_code', as_index=False)
+              .last()
+              .loc[:, ['iso_code', 'indicator', 'value']]
+              .assign(country_name=lambda d: coco.convert(d.iso_code, to='name_short', not_found=None))
+              .loc[lambda d: d.iso_code.isin(cc.data.ISO3), :]
+              .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
+              .pipe(add.add_income_level_column, 'iso_code')
+              .loc[lambda d: (d.continent == 'Africa') & (d.income_level.isin(['Lower middle income', 'Low income'])),
+                   ['value', 'country_name']]
+              )
+
+    df.to_csv(f'{PATHS.charts}/health/health_expenditure_per_person.csv', index=False)
+    df.to_csv(f'{PATHS.download}/health/health_expenditure_per_person.csv', index=False)
+
+
+def spending_dynamic():
+    """ """
+    wb = WorldBankData()
+    wb.load_indicator('SH.XPD.CHEX.PC.CD')
+    wb.load_indicator('SH.XPD.CHEX.GD.ZS')
+
+    pc = (wb.get_data('SH.XPD.CHEX.PC.CD')
+              .dropna(subset='value')
+              .sort_values('date')
+              .groupby('iso_code', as_index=False)
+              .last()
+              .loc[:, ['iso_code', 'value']]
+              .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
+              .loc[lambda d: (d.continent == 'Africa') & (d.value >= 86), :]
+        .assign(indicator = 'pc')
+              )
+    gdp = (wb.get_data('SH.XPD.CHEX.GD.ZS')
+               .dropna(subset='value')
+               .sort_values('date')
+               .groupby('iso_code', as_index=False)
+               .last()
+               .loc[:, ['iso_code', 'value']]
+               .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
+               .loc[lambda d: (d.continent == 'Africa') & (d.value >= 5), :]
+        .assign(indicator = 'gdp')
+               )
+
+    dff = pd.concat([df, gdp])
+    dff = dff.pivot(index='iso_code', columns = 'indicator', values='value')
+    dff = dff.dropna()
+
+    dynamic_text = {'count_86_target': len(pc), 'count_86_5_target': len(dff)}
+
+    with open(f"{PATHS.charts}/health/key_numbers.json", "w") as file:
+        json.dump(dynamic_text, file, indent=4)
+
 
 
 if __name__ == "__main__":
@@ -163,5 +262,4 @@ if __name__ == "__main__":
     # hiv_topic_chart()
     # malaria_topic_chart()
     # dtp_topic_chart()
-    ihme_spending_topic_chart()
-
+    # ihme_spending_topic_chart()
