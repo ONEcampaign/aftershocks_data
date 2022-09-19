@@ -11,6 +11,7 @@ from scripts.debt.common import read_dservice_data, read_dstocks_data
 KEY_NUMBERS: dict = {}
 
 CURRENT_YEAR = datetime.datetime.now().year
+STOCKS_YEAR = CURRENT_YEAR - 2
 
 
 def debt_distress() -> None:
@@ -61,6 +62,8 @@ def debt_service_africa_trend() -> None:
         + " billion"
     )
 
+    KEY_NUMBERS["debt_service_year"] = str(CURRENT_YEAR)
+
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_africa_trend.csv", index=False)
 
 
@@ -104,10 +107,12 @@ def debt_stocks_africa_trend() -> None:
 
     KEY_NUMBERS["debt_stocks_africa"] = (
         format_number(
-            df.loc[df.year == CURRENT_YEAR - 2, "Total"], as_billions=True, decimals=1
+            df.loc[df.year == STOCKS_YEAR, "Total"], as_billions=True, decimals=1
         ).values[0]
         + " billion"
     )
+
+    KEY_NUMBERS["debt_stocks_year"] = str(STOCKS_YEAR)
 
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_stocks_africa_trend.csv", index=False)
 
