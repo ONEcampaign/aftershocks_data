@@ -1,12 +1,12 @@
 import datetime
 
-from scripts.debt.common import read_dservice_data, read_dstocks_data
-from bblocks.import_tools.debt.common import get_dsa
-from bblocks.cleaning_tools.clean import convert_id
-
 import pandas as pd
+from bblocks.cleaning_tools.clean import convert_id, format_number
+from bblocks.dataframe_tools.add import add_gdp_column
+from bblocks.import_tools.debt.common import get_dsa
+
 from scripts.config import PATHS
-from bblocks.cleaning_tools.clean import format_number
+from scripts.debt.common import read_dservice_data, read_dstocks_data
 
 KEY_NUMBERS: dict = {}
 
@@ -46,7 +46,6 @@ def debt_distress() -> None:
 
 
 def debt_service_africa_trend() -> None:
-
     df = (
         read_dservice_data()
         .filter(["year", "iso_code", "Total"], axis=1)
@@ -63,6 +62,36 @@ def debt_service_africa_trend() -> None:
     )
 
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_africa_trend.csv", index=False)
+
+
+def debt_to_gdp_trend() -> None:
+    df = (
+        read_dstocks_data()
+        .filter(["year", "iso_code", "Total"], axis=1)
+        .loc[lambda d: d.year <= CURRENT_YEAR]
+        .pipe(
+            add_gdp_column,
+            id_column="iso_code",
+            date_column="year",
+            usd=True,
+            include_estimates=True,
+        )
+        .groupby(["year"], as_index=False)
+        .sum()
+        .assign(
+            Total=lambda d: d.Total * 1e6,
+            gdp_share=lambda d: format_number(
+                d.Total / d.gdp, as_percentage=True, decimals=1
+            ),
+        )
+        .rename(columns={"gdp_share": "Debt to GDP ratio"})
+    )
+
+    KEY_NUMBERS["debt_to_gdp_africa"] = df.loc[
+        df.year == df.year.max(), "Debt to GDP ratio"
+    ].values[0]
+
+    df.to_csv(f"{PATHS.charts}/debt_topic/debt_gdp_africa_trend.csv", index=False)
 
 
 def debt_stocks_africa_trend() -> None:
@@ -98,6 +127,7 @@ def update_overview_charts_key_numbers() -> None:
     debt_distress()
     debt_service_africa_trend()
     debt_stocks_africa_trend()
+    debt_to_gdp_trend()
     export_key_numbers_overview()
 
 
