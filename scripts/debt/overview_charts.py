@@ -34,7 +34,7 @@ def debt_distress() -> None:
         {
             "name": ["African countries"],
             "Latest assessment": africa.latest_publication.max().strftime("%B %Y"),
-            "value": [f"{number}<br> countries in, or at risk of, debt distress"],
+            "value": [f"{number} African countries in, or at risk of, debt distress"],
             "note": [f"out of {len(df)} countries assessed"],
         }
     )
