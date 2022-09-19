@@ -2,7 +2,11 @@ import datetime
 
 import pandas as pd
 from bblocks.cleaning_tools.clean import convert_id, format_number
-from bblocks.dataframe_tools.add import add_gdp_column
+from bblocks.dataframe_tools.add import (
+    add_gdp_column,
+    add_gov_expenditure_column,
+    add_short_names_column,
+)
 from bblocks.import_tools.debt.common import get_dsa
 
 from scripts.config import PATHS
@@ -65,6 +69,37 @@ def debt_service_africa_trend() -> None:
     KEY_NUMBERS["debt_service_year"] = str(CURRENT_YEAR)
 
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_africa_trend.csv", index=False)
+
+
+def debt_service_gov_spending() -> None:
+    df = (
+        read_dservice_data()
+        .filter(["year", "iso_code", "Total"], axis=1)
+        .pipe(
+            add_gov_expenditure_column,
+            id_column="iso_code",
+            date_column="year",
+            usd=True,
+            include_estimates=True,
+        )
+        .dropna(subset=["Total", "gov_exp"], how="any")
+        .assign(Total=lambda d: d.Total * 1e6)
+    )
+
+    africa = df.groupby(["year"], as_index=False).sum().assign(iso_code="Africa")
+
+    df = (
+        pd.concat([africa, df], ignore_index=True)
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .assign(share=lambda d: d.Total / d.gov_exp)
+        .filter(["year", "name_short", "share"], axis=1)
+        .pivot(index="year", columns="name_short", values="share")
+        .round(5)
+        .reset_index()
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/debt_topic/dservice_to_gov_exp.csv", index=False)
 
 
 def debt_to_gdp_trend() -> None:
