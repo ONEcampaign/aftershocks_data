@@ -80,6 +80,7 @@ def debt_to_gdp_trend() -> None:
         .sum()
         .assign(
             Total=lambda d: d.Total * 1e6,
+            value=lambda d: d.Total / d.gdp,
             gdp_share=lambda d: format_number(
                 d.Total / d.gdp, as_percentage=True, decimals=1
             ),
