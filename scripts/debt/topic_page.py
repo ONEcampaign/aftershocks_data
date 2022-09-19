@@ -65,15 +65,19 @@ def debt_service_columns() -> None:
 
     africa = df.groupby(["year"], as_index=False).sum().assign(iso_code="Africa")
 
-    df = pd.concat([africa, df], ignore_index=True).filter(
-        [
-            "iso_code",
-            "year",
-            "Bilateral",
-            "Multilateral",
-            "Private",
-        ],
-        axis=1,
+    df = (
+        pd.concat([africa, df], ignore_index=True)
+        .filter(
+            [
+                "iso_code",
+                "year",
+                "Bilateral",
+                "Multilateral",
+                "Private",
+            ],
+            axis=1,
+        )
+        .loc[lambda d: d.year <= (CURRENT_YEAR + 2)]
     )
 
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_ts.csv", index=False)
