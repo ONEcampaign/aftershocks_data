@@ -79,18 +79,16 @@ def debt_to_gdp_trend() -> None:
         .groupby(["year"], as_index=False)
         .sum()
         .assign(
-            Total=lambda d: d.Total * 1e6,
-            value=lambda d: d.Total / d.gdp,
-            gdp_share=lambda d: format_number(
-                d.Total / d.gdp, as_percentage=True, decimals=1
-            ),
+            Total=lambda d: d.Total * 1e6, gdp_share=lambda d: round(d.Total / d.gdp, 5)
         )
         .rename(columns={"gdp_share": "Debt to GDP ratio"})
     )
 
-    KEY_NUMBERS["debt_to_gdp_africa"] = df.loc[
-        df.year == df.year.max(), "Debt to GDP ratio"
-    ].values[0]
+    KEY_NUMBERS["debt_to_gdp_africa"] = format_number(
+        df.loc[df.year == df.year.max(), "Debt to GDP ratio"],
+        as_percentage=True,
+        decimals=1,
+    ).values[0]
 
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_gdp_africa_trend.csv", index=False)
 
