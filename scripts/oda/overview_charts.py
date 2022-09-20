@@ -19,7 +19,7 @@ def global_aid_key_number() -> None:
 
     df = (
         common.read_total_oda(official_definition=True)
-        .pipe(common.append_DAC_total)
+        .pipe(common.append_dac_total)
         .pipe(common.add_constant_change_column, base=common.CONSTANT_YEAR)
         .assign(
             pct_change=lambda d: "Real change from previous year: " + d["pct_change"]
@@ -75,14 +75,14 @@ def aid_gni_key_number() -> None:
             value_columns=["value"],
         )
         .loc[lambda d: d.donor_code.isin(common.DAC)]
-        .pipe(common.append_DAC_total)
+        .pipe(common.append_dac_total)
         .rename(columns={"value": "gni"})
         .filter(["year", "donor_code", "gni"], axis=1)
     )
 
     oda = (
         common.read_total_oda(official_definition=True)
-        .pipe(common.append_DAC_total)
+        .pipe(common.append_dac_total)
         .pipe(
             filter_latest_by,
             date_column="year",
@@ -128,7 +128,7 @@ def aid_gni_key_number() -> None:
 def aid_to_africa_ts() -> None:
     df = (
         common.read_oda_africa()
-        .pipe(common.append_DAC_total, grouper=["year"])
+        .pipe(common.append_dac_total, grouper=["year"])
         .pipe(common.add_short_names)
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .pipe(
@@ -172,7 +172,7 @@ def aid_to_africa_ts() -> None:
 def aid_to_incomes() -> None:
     df = (
         common.read_oda_by_income()
-        .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
         .assign(
             year=lambda d: d.year.dt.year, value=lambda d: round((d.value / 1e3), 2)
@@ -208,7 +208,7 @@ def aid_to_incomes() -> None:
 def aid_to_incomes_latest() -> None:
     df = (
         common.read_oda_by_income()
-        .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .assign(
@@ -313,7 +313,7 @@ def aid_to_regions_ts() -> None:
     df = (
         common.read_oda_by_region()
         .pipe(common.total_by_region)
-        .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
         .assign(year=lambda d: d.year.dt.year)
         .assign(

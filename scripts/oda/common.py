@@ -4,9 +4,13 @@ from pydeflate import deflate
 
 from scripts.config import PATHS
 
+# Define a year for the constant price calculations
 CONSTANT_YEAR: int = 2021
+
+# Start year for the timeseries charts
 START_YEAR: int = 2010
 
+# DAC codes for the members of the DAC
 DAC = [
     1,
     2,
@@ -40,7 +44,7 @@ DAC = [
     918,
 ]
 
-
+# How to group sectors into more aggregated categories
 SECTORS_MAPPING: dict = {
     "Other Sectors": [
         "Action Relating to Debt",
@@ -118,10 +122,15 @@ SECTORS_MAPPING: dict = {
 
 
 def read_total_oda(official_definition: bool = True) -> pd.DataFrame:
-    """Read the csv containing total ODA data"""
+    """Read the csv containing total ODA data.
+    This CSV is generated in another repository. Eventually this should
+    be replaced by a connection to our database
+    """
     flow = pd.read_csv(f"{PATHS.raw_oda}/total_oda_flow.csv", parse_dates=["year"])
     ge = pd.read_csv(f"{PATHS.raw_oda}/total_oda_ge.csv", parse_dates=["year"])
 
+    # Filter dataframe to keep only the 'official definition' of ODA in a given year
+    # This means GE from 2018 and Flow before then.
     if official_definition:
         flow = flow.loc[flow.year.dt.year < 2018]
         ge = ge.loc[ge.year.dt.year >= 2018]
@@ -191,7 +200,7 @@ def total_by_region(df: pd.DataFrame) -> pd.DataFrame:
     )["value"].sum()
 
 
-def append_DAC_total(df: pd.DataFrame, grouper=None) -> pd.DataFrame:
+def append_dac_total(df: pd.DataFrame, grouper=None) -> pd.DataFrame:
     """Append the "DAC Countries, Total" value to the dataframe.
     Identify with code 20001"""
     if grouper is None:
@@ -262,7 +271,6 @@ def filter_humanitarian_sectors(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def filter_food_sectors(df: pd.DataFrame) -> pd.DataFrame:
-    food = ["Developmental Food Aid/Food Security Assistance"]
 
     return df.loc[
         lambda d: d.sector.isin(
@@ -290,7 +298,7 @@ def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
         .loc[lambda d: d.recipient == "All Developing Countries"]
         .groupby(["year", "donor_code"], as_index=False)["value"]
         .sum()
-        .pipe(append_DAC_total, grouper=["year"])
+        .pipe(append_dac_total, grouper=["year"])
         .pipe(add_short_names)
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .merge(all_sectors, on=["year"], how="left", suffixes=("", "_all"))

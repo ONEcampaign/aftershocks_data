@@ -165,8 +165,9 @@ def update_overview_charts_key_numbers() -> None:
 
     debt_distress()
     debt_service_africa_trend()
-    debt_stocks_africa_trend()
+    debt_service_gov_spending()
     debt_to_gdp_trend()
+    debt_stocks_africa_trend()
     export_key_numbers_overview()
 
 
