@@ -10,11 +10,10 @@ import country_converter as coco
 
 from bblocks.import_tools.world_bank import WorldBankData
 from bblocks.dataframe_tools import add
-import json
 
 
-def hiv_topic_chart():
-    """ """
+def hiv_topic_chart() -> None:
+    """Create HIV topic chart"""
 
     deaths = pd.read_csv(f'{PATHS.raw_data}/health/aids_region_AIDS-related deaths - All ages.csv')
     treatment = pd.read_csv(f'{PATHS.raw_data}/health/aids_region_People living with HIV receiving ART (%).csv')
@@ -40,8 +39,8 @@ def hiv_topic_chart():
     df.to_csv(f'{PATHS.download}/health/hiv_topic_chart.csv', index=False)
 
 
-def malaria_topic_chart():
-    """ """
+def malaria_topic_chart() -> None:
+    """Create Malaria topic chart"""
 
     code = 'MALARIA_EST_DEATHS'
 
@@ -60,8 +59,8 @@ def malaria_topic_chart():
     df.to_csv(f'{PATHS.download}/health/malaria_topic_chart.csv', index=False)
 
 
-def dtp_topic_chart():
-    """ """
+def dtp_topic_chart() -> None:
+    """Create DTP topic chart"""
 
     code = 'WHS4_100'
     df = query_who(code)
@@ -77,10 +76,9 @@ def dtp_topic_chart():
     df.to_csv(f'{PATHS.download}/health/DTP_topic_chart.csv', index=False)
 
 
-### IHME ###
-
-def __extract_data():
-    """ """
+# IHME spending
+def __extract_data() -> pd.DataFrame:
+    """Read IHME data from zip file"""
 
     zip_url = 'https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_HEALTH_SPENDING_1995_2018_CSV.zip'
 
@@ -95,8 +93,8 @@ def __extract_data():
         raise ConnectionError('Could not connect to IHME website')
 
 
-def __extract_codes():
-    """ """
+def __extract_codes() -> dict:
+    """Extract codes from IHME website"""
 
     code_url = 'https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_HEALTH_SPENDING_1995_2018_CODEBOOK_Y2021M09D22.CSV'
     try:
@@ -108,8 +106,8 @@ def __extract_codes():
         raise ConnectionError('Could not connect to IHME website')
 
 
-def get_ihme_spending():
-    """ """
+def get_ihme_spending() -> pd.DataFrame:
+    """Extract IHME data qnd convert codes"""
     df = __extract_data()
     codes = __extract_codes()
 
@@ -120,8 +118,8 @@ def get_ihme_spending():
     return df
 
 
-def ihme_spending_topic_chart():
-    """ """
+def ihme_spending_topic_chart() -> None:
+    """Create IHME spending topic chart"""
 
     indicators = {'Out-of-pocket Health Spending (2020 USD) ': 'Total',
                   'Government Health Spending (2020 USD)': 'Total',
@@ -152,48 +150,9 @@ def ihme_spending_topic_chart():
     df.to_csv(f'{PATHS.download}/health/health_spending_topic_chart.csv', index=False)
 
 
-def spending():
-    """ """
-    cc = coco.CountryConverter()
+def wb_spending_topic_chart() -> None:
+    """Create World Bank health spending topic chart"""
 
-    indicators = {'SH.XPD.CHEX.GD.ZS': 'Current health expenditure (% of GDP)',
-                  'SH.XPD.CHEX.PC.CD': 'Current health expenditure per capita (current USD)'}
-
-    wb = WorldBankData()
-    for code, _ in indicators.items():
-        wb.load_indicator(code)
-
-    df = pd.DataFrame()
-
-    for code, _ in indicators.items():
-        _ = (wb.get_data(code)
-                 .dropna(subset='value')
-                 .sort_values('date')
-                 .groupby('iso_code', as_index=False)
-                 .last()
-                 .loc[:, ['iso_code', 'indicator', 'value']]
-                 )
-
-        df = pd.concat([df, _])
-
-    df = (df
-              .pivot(index='iso_code', columns='indicator', values='value')
-              .reset_index()
-              .rename(columns=indicators)
-              .loc[lambda d: d.iso_code.isin(cc.data.ISO3), :]
-              .assign(country_name=lambda d: coco.convert(d.iso_code, to='name_short', not_found=None))
-              .dropna(subset=['country_name'])
-              .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
-              .pipe(add.add_population_column, 'iso_code')
-              .pipe(add.add_income_level_column, 'iso_code')
-              .loc[lambda d: d.income_level.isin(['Lower middle income', 'Low income']), :]
-
-              )
-    return df
-
-
-def health_spending_wb():
-    """ """
     cc = coco.CountryConverter()
 
     wb = WorldBankData()
@@ -218,48 +177,11 @@ def health_spending_wb():
     df.to_csv(f'{PATHS.download}/health/health_expenditure_per_person.csv', index=False)
 
 
-def spending_dynamic():
-    """ """
-    wb = WorldBankData()
-    wb.load_indicator('SH.XPD.CHEX.PC.CD')
-    wb.load_indicator('SH.XPD.CHEX.GD.ZS')
+def update_health_charts() -> None:
+    """" """
 
-    pc = (wb.get_data('SH.XPD.CHEX.PC.CD')
-              .dropna(subset='value')
-              .sort_values('date')
-              .groupby('iso_code', as_index=False)
-              .last()
-              .loc[:, ['iso_code', 'value']]
-              .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
-              .loc[lambda d: (d.continent == 'Africa') & (d.value >= 86), :]
-        .assign(indicator = 'pc')
-              )
-    gdp = (wb.get_data('SH.XPD.CHEX.GD.ZS')
-               .dropna(subset='value')
-               .sort_values('date')
-               .groupby('iso_code', as_index=False)
-               .last()
-               .loc[:, ['iso_code', 'value']]
-               .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
-               .loc[lambda d: (d.continent == 'Africa') & (d.value >= 5), :]
-        .assign(indicator = 'gdp')
-               )
-
-    dff = pd.concat([df, gdp])
-    dff = dff.pivot(index='iso_code', columns = 'indicator', values='value')
-    dff = dff.dropna()
-
-    dynamic_text = {'count_86_target': len(pc), 'count_86_5_target': len(dff)}
-
-    with open(f"{PATHS.charts}/health/key_numbers.json", "w") as file:
-        json.dump(dynamic_text, file, indent=4)
-
-
-
-if __name__ == "__main__":
-    """ """
-
-    # hiv_topic_chart()
-    # malaria_topic_chart()
-    # dtp_topic_chart()
-    # ihme_spending_topic_chart()
+    hiv_topic_chart()
+    malaria_topic_chart()
+    dtp_topic_chart()
+    ihme_spending_topic_chart()
+    wb_spending_topic_chart()
