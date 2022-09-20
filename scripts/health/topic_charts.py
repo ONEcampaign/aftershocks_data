@@ -126,9 +126,9 @@ def ihme_spending_topic_chart() -> None:
                   'Prepaid Private Health Spending (2020 USD)': 'Total',
                   'DAH (2020 USD)': 'Total',
 
-                  'Total Health Spending per person (2020 USD)': 'Per person',
+                  'Out-of-pocket Health Spending per person (2020 USD)': 'Per person',
                   'Government Health Spending per person (2020 USD)': 'Per person',
-                  'Prepaid Private Health Spending for per person (2020 USD)': 'Per person',
+                  'Prepaid Private Health Spending per person (2020 USD)': 'Per person',
                   'DAH per person (2020 USD)': 'Per person'
                   }
 
