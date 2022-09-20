@@ -63,7 +63,7 @@ def vaccination_dynamic() -> dict:
             'vaccination_date': vaccination_date}
 
 
-def update_dynamic_text():
+def update_dynamic_text() -> None:
     """"Update dynamic text for health topic page"""
     dynamic_text = {}
 

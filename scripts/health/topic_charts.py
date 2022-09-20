@@ -177,7 +177,7 @@ def wb_spending_topic_chart() -> None:
     df.to_csv(f'{PATHS.download}/health/health_expenditure_per_person.csv', index=False)
 
 
-def update_health_charts() -> None:
+def update_health_topic_charts() -> None:
     """" """
 
     hiv_topic_chart()

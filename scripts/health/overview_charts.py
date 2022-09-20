@@ -66,7 +66,7 @@ def malaria_chart(malaria_dict) -> None:
      )
 
 
-def update_health_overview_charts():
+def update_health_overview_charts() -> None:
     """Update health overview charts"""
 
     malaria_chart(get_malaria_data())
