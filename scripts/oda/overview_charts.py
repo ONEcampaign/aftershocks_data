@@ -10,6 +10,8 @@ from scripts.oda import common
 #                                   Charts
 # ------------------------------------------------------------------------------
 
+KEY_NUMBERS: dict = {}
+
 
 def global_aid_key_number() -> None:
     """Create an overview chart whi§ch contains the latest total ODA value and
@@ -17,7 +19,7 @@ def global_aid_key_number() -> None:
 
     df = (
         common.read_total_oda(official_definition=True)
-        .pipe(common.append_DAC_total)
+        .pipe(common.append_dac_total)
         .pipe(common.add_constant_change_column, base=common.CONSTANT_YEAR)
         .assign(
             pct_change=lambda d: "Real change from previous year: " + d["pct_change"]
@@ -44,6 +46,12 @@ def global_aid_key_number() -> None:
         )
     )
 
+    # Total ODA key numberes
+
+    KEY_NUMBERS["total_oda"] = df["value"].values[0]
+    KEY_NUMBERS["total_oda_change"] = df["note"].values[0].split(": ")[1]
+    KEY_NUMBERS["latest_year"] = str(df["As of"].values[0])
+
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/key_number_total_oda.csv", index=False)
 
@@ -67,14 +75,14 @@ def aid_gni_key_number() -> None:
             value_columns=["value"],
         )
         .loc[lambda d: d.donor_code.isin(common.DAC)]
-        .pipe(common.append_DAC_total)
+        .pipe(common.append_dac_total)
         .rename(columns={"value": "gni"})
         .filter(["year", "donor_code", "gni"], axis=1)
     )
 
     oda = (
         common.read_total_oda(official_definition=True)
-        .pipe(common.append_DAC_total)
+        .pipe(common.append_dac_total)
         .pipe(
             filter_latest_by,
             date_column="year",
@@ -103,6 +111,10 @@ def aid_gni_key_number() -> None:
         .rename({"oda_gni": "value", "distance": "note", "year": "As of"}, axis=1)
     )
 
+    # Key numbers
+    KEY_NUMBERS["oda_gni"] = df["value"].values[0]
+    KEY_NUMBERS["oda_gni_distance"] = df["note"].values[0].split(": ")[1]
+
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/key_number_oda_gni.csv", index=False)
 
@@ -116,7 +128,7 @@ def aid_gni_key_number() -> None:
 def aid_to_africa_ts() -> None:
     df = (
         common.read_oda_africa()
-        .pipe(common.append_DAC_total, grouper=["year"])
+        .pipe(common.append_dac_total, grouper=["year"])
         .pipe(common.add_short_names)
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .pipe(
@@ -143,6 +155,10 @@ def aid_to_africa_ts() -> None:
         .rename(columns={"value": "Aid to Africa", "share": "Share of total ODA"})
     )
 
+    # Aid to Africa key numbers
+    KEY_NUMBERS["aid_to_africa"] = df["Aid to Africa"].values[-1] + " billion"
+    KEY_NUMBERS["aid_to_africa_share"] = df["Share of total ODA"].values[-1]
+
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
 
@@ -156,7 +172,7 @@ def aid_to_africa_ts() -> None:
 def aid_to_incomes() -> None:
     df = (
         common.read_oda_by_income()
-        .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
         .assign(
             year=lambda d: d.year.dt.year, value=lambda d: round((d.value / 1e3), 2)
@@ -192,7 +208,7 @@ def aid_to_incomes() -> None:
 def aid_to_incomes_latest() -> None:
     df = (
         common.read_oda_by_income()
-        .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .assign(
@@ -219,6 +235,15 @@ def aid_to_incomes_latest() -> None:
         )
     )
 
+    # Key numbers
+    KEY_NUMBERS["aid_to_incomes"] = (
+        df[["recipient", "value"]].set_index("recipient").to_dict()["value"]
+    )
+
+    KEY_NUMBERS["aid_to_incomes_share"] = (
+        df[["recipient", "share"]].set_index("recipient").to_dict()["share"]
+    )
+
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
 
@@ -234,6 +259,10 @@ def aid_to_health_ts() -> None:
         columns={"value": "Total aid to health", "share": "Share of total ODA"}
     )
 
+    # Key numbers
+    KEY_NUMBERS["aid_to_health"] = df["Total aid to health"].values[-1] + " billion"
+    KEY_NUMBERS["aid_to_health_share"] = df["Share of total ODA"].values[-1]
+
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_health_ts.csv", index=False)
 
@@ -248,6 +277,12 @@ def aid_to_humanitarian_ts() -> None:
     df = common.aid_to_sector_ts(common.filter_humanitarian_sectors).rename(
         columns={"value": "Total Humanitarian Aid", "share": "Share of total ODA"}
     )
+
+    # Key numbers
+    KEY_NUMBERS["aid_to_humanitarian"] = (
+        df["Total Humanitarian Aid"].values[-1] + " billion"
+    )
+    KEY_NUMBERS["aid_to_humanitarian_share"] = df["Share of total ODA"].values[-1]
 
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_humanitarian_ts.csv", index=False)
@@ -278,7 +313,7 @@ def aid_to_regions_ts() -> None:
     df = (
         common.read_oda_by_region()
         .pipe(common.total_by_region)
-        .pipe(common.append_DAC_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
         .assign(year=lambda d: d.year.dt.year)
         .assign(
@@ -324,6 +359,14 @@ def aid_to_regions_ts() -> None:
     )
 
 
+def export_key_numbers_overview() -> None:
+    """Export KEY_NUMBERS dictionary as json"""
+    import json
+
+    with open(f"{PATHS.charts}/oda_topic/key_numbers.json", "w") as f:
+        json.dump(KEY_NUMBERS, f, indent=4)
+
+
 if __name__ == "__main__":
     global_aid_key_number()
     aid_gni_key_number()
@@ -332,3 +375,4 @@ if __name__ == "__main__":
     aid_to_health_ts()
     aid_to_food()
     aid_to_humanitarian_ts()
+    export_key_numbers_overview()

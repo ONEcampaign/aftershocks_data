@@ -1,0 +1,175 @@
+import datetime
+
+import pandas as pd
+from bblocks.cleaning_tools.clean import convert_id, format_number
+from bblocks.dataframe_tools.add import (
+    add_gdp_column,
+    add_gov_expenditure_column,
+    add_short_names_column,
+)
+from bblocks.import_tools.debt.common import get_dsa
+
+from scripts.config import PATHS
+from scripts.debt.common import read_dservice_data, read_dstocks_data
+
+KEY_NUMBERS: dict = {}
+
+CURRENT_YEAR = datetime.datetime.now().year
+STOCKS_YEAR = CURRENT_YEAR - 2
+
+
+def debt_distress() -> None:
+    df = get_dsa(update=False, local_path=f"{PATHS.raw_data}/dsa_list.pdf")
+
+    df = df.assign(continent=lambda d: convert_id(d.country, to_type="continent")).loc[
+        lambda d: d.risk_of_debt_distress.isin(["High", "In debt distress"])
+    ]
+
+    africa = df.loc[df.continent == "Africa", :]
+
+    number = len(africa)
+
+    KEY_NUMBERS["debt_distress_africa_share"] = (
+        str(round(100 * len(africa) / len(df))) + "%"
+    )
+
+    KEY_NUMBERS["debt_distress_africa"] = str(number)
+
+    card = pd.DataFrame(
+        {
+            "name": ["African countries"],
+            "Latest assessment": africa.latest_publication.max().strftime("%B %Y"),
+            "value": [f"{number} African countries in, or at risk of, debt distress"],
+            "note": [f"out of {len(df)} countries assessed"],
+        }
+    )
+
+    # chart version
+    card.to_csv(
+        f"{PATHS.charts}/debt_topic/debt_distress_africa_key_number.csv", index=False
+    )
+
+
+def debt_service_africa_trend() -> None:
+    df = (
+        read_dservice_data()
+        .filter(["year", "iso_code", "Total"], axis=1)
+        .groupby(["year"], as_index=False)
+        .sum()
+        .assign(Total=lambda d: d.Total * 1e6)
+    )
+
+    KEY_NUMBERS["debt_service_africa"] = (
+        format_number(
+            df.loc[df.year == CURRENT_YEAR, "Total"], as_billions=True, decimals=1
+        ).values[0]
+        + " billion"
+    )
+
+    KEY_NUMBERS["debt_service_year"] = str(CURRENT_YEAR)
+
+    df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_africa_trend.csv", index=False)
+
+
+def debt_service_gov_spending() -> None:
+    df = (
+        read_dservice_data()
+        .filter(["year", "iso_code", "Total"], axis=1)
+        .pipe(
+            add_gov_expenditure_column,
+            id_column="iso_code",
+            date_column="year",
+            usd=True,
+            include_estimates=True,
+        )
+        .dropna(subset=["Total", "gov_exp"], how="any")
+        .assign(Total=lambda d: d.Total * 1e6)
+    )
+
+    africa = df.groupby(["year"], as_index=False).sum().assign(iso_code="Africa")
+
+    df = (
+        pd.concat([africa, df], ignore_index=True)
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .assign(share=lambda d: d.Total / d.gov_exp)
+        .filter(["year", "name_short", "share"], axis=1)
+        .pivot(index="year", columns="name_short", values="share")
+        .round(5)
+        .reset_index()
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/debt_topic/dservice_to_gov_exp.csv", index=False)
+
+
+def debt_to_gdp_trend() -> None:
+    df = (
+        read_dstocks_data()
+        .filter(["year", "iso_code", "Total"], axis=1)
+        .loc[lambda d: d.year <= CURRENT_YEAR]
+        .pipe(
+            add_gdp_column,
+            id_column="iso_code",
+            date_column="year",
+            usd=True,
+            include_estimates=True,
+        )
+        .groupby(["year"], as_index=False)
+        .sum()
+        .assign(
+            Total=lambda d: d.Total * 1e6, gdp_share=lambda d: round(d.Total / d.gdp, 5)
+        )
+        .rename(columns={"gdp_share": "Debt to GDP ratio"})
+    )
+
+    KEY_NUMBERS["debt_to_gdp_africa"] = format_number(
+        df.loc[df.year == df.year.max(), "Debt to GDP ratio"],
+        as_percentage=True,
+        decimals=1,
+    ).values[0]
+
+    df.to_csv(f"{PATHS.charts}/debt_topic/debt_gdp_africa_trend.csv", index=False)
+
+
+def debt_stocks_africa_trend() -> None:
+    df = (
+        read_dstocks_data()
+        .filter(["year", "iso_code", "Total"], axis=1)
+        .groupby(["year"], as_index=False)
+        .sum()
+        .assign(Total=lambda d: d.Total * 1e6)
+    )
+
+    KEY_NUMBERS["debt_stocks_africa"] = (
+        format_number(
+            df.loc[df.year == STOCKS_YEAR, "Total"], as_billions=True, decimals=1
+        ).values[0]
+        + " billion"
+    )
+
+    KEY_NUMBERS["debt_stocks_year"] = str(STOCKS_YEAR)
+
+    df.to_csv(f"{PATHS.charts}/debt_topic/debt_stocks_africa_trend.csv", index=False)
+
+
+def export_key_numbers_overview() -> None:
+    """Export KEY_NUMBERS dictionary as json"""
+    import json
+
+    with open(f"{PATHS.charts}/debt_topic/key_numbers.json", "w") as f:
+        json.dump(KEY_NUMBERS, f, indent=4)
+
+
+def update_overview_charts_key_numbers() -> None:
+    """Update key numbers for overview charts"""
+
+    debt_distress()
+    debt_service_africa_trend()
+    debt_service_gov_spending()
+    debt_to_gdp_trend()
+    debt_stocks_africa_trend()
+    export_key_numbers_overview()
+
+
+if __name__ == "__main__":
+    update_overview_charts_key_numbers()

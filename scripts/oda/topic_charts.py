@@ -16,7 +16,7 @@ def global_aid_ts() -> None:
     df = (
         common.read_total_oda(official_definition=True)
         .merge(gni, on=["year", "donor_code"], how="left", suffixes=("", "_gni"))
-        .pipe(common.append_DAC_total)
+        .pipe(common.append_dac_total)
         # .pipe(common.add_constant_change_column, base=common.CONSTANT_YEAR)
         .assign(
             #    pct_change=lambda d: "Real change from previous year: " + d["pct_change"],
@@ -60,7 +60,7 @@ def oda_gni_single_year() -> None:
     df = (
         common.read_total_oda(official_definition=True)
         .merge(gni, on=["year", "donor_code"], how="left", suffixes=("", "_gni"))
-        .pipe(common.append_DAC_total, grouper=["year"])
+        .pipe(common.append_dac_total, grouper=["year"])
         .assign(
             missing=lambda d: round(d.value_gni * 0.007 - d.value, 1),
             oda_gni=lambda d: round(100 * d.value / d.value_gni, 2),
@@ -112,7 +112,7 @@ def _sectors_ts() -> tuple[pd.DataFrame, list]:
         .loc[lambda d: d.recipient == "All Developing Countries"]
         .assign(year=lambda d: d.year.dt.year)
         .pipe(
-            common.append_DAC_total,
+            common.append_dac_total,
             grouper=["year", "sector", "recipient"],
         )
         .pipe(common.add_short_names)
