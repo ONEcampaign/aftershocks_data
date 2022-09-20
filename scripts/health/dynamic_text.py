@@ -8,35 +8,41 @@ import country_converter as coco
 from scripts.health.common import get_malaria_data
 
 
-def spending_dynamic():
-    """Create dynamic text for health spending"""
-    wb = WorldBankData()
-    wb.load_indicator('SH.XPD.CHEX.PC.CD')
-    wb.load_indicator('SH.XPD.CHEX.GD.ZS')
+def _format_wb_df(df: pd.DataFrame, indicator_name: str):
+    """ """
 
-    pc = (wb.get_data('SH.XPD.CHEX.PC.CD')
-          .dropna(subset='value')
-          .sort_values('date')
+    df = (df
+          .dropna(subset=['value']).sort_values('date')
           .groupby('iso_code', as_index=False)
           .last()
           .loc[:, ['iso_code', 'value']]
           .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
-          .loc[lambda d: (d.continent == 'Africa') & (d.value >= 86), :]
-          .assign(indicator = 'pc')
+          .loc[lambda d: d.continent == 'Africa', :]
+          .assign(indicator=indicator_name)
+          .reset_index(drop=True)
           )
-    gdp = (wb.get_data('SH.XPD.CHEX.GD.ZS')
-           .dropna(subset='value')
-           .sort_values('date')
-           .groupby('iso_code', as_index=False)
-           .last()
-           .loc[:, ['iso_code', 'value']]
-           .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
-           .loc[lambda d: (d.continent == 'Africa') & (d.value >= 5), :]
-           .assign(indicator = 'gdp')
-           )
+    return df
+
+
+def spending_dynamic() -> dict:
+    """ """
+
+    wb = WorldBankData()
+    wb.load_indicator('SH.XPD.CHEX.PC.CD')
+    wb.load_indicator('SH.XPD.CHEX.GD.ZS')
+
+    pc = (wb
+          .get_data('SH.XPD.CHEX.PC.CD')
+          .pipe(_format_wb_df, 'pc')
+          .loc[lambda d: d.value >= 86, :])
+
+    gdp = (wb
+           .get_data('SH.XPD.CHEX.GD.ZS')
+           .pipe(_format_wb_df, 'gdp')
+           .loc[lambda d: d.value >= 5, :])
 
     dff = pd.concat([pc, gdp])
-    dff = dff.pivot(index='iso_code', columns = 'indicator', values='value')
+    dff = dff.pivot(index='iso_code', columns='indicator', values='value')
     dff = dff.dropna()
 
     return {'count_86_target': len(pc), 'count_86_5_target': len(dff)}

@@ -22,19 +22,19 @@ def get_malaria_data() -> dict:
 
     malaria_dict = (query_who('MALARIA_EST_DEATHS')
         .loc[lambda d: d.SpatialDim.isin(['GLOBAL', 'AFR']), ['SpatialDim', 'TimeDim', 'NumericValue']]
+        .astype({'TimeDim': 'int64'})
         .sort_values('TimeDim')
         .groupby(['SpatialDim'], as_index=False)
         .last()
-        .assign(NumericValue=lambda d: pd.to_numeric(d.NumericValue))
+        .assign(NumericValue=lambda d: pd.to_numeric(d.NumericValue, errors='coerce'))
         .pivot(index='TimeDim', columns='SpatialDim', values='NumericValue')
         .reset_index()
-        .assign(malaria_rest_of_world_total=lambda d: d['GLOBAL'] - d['AFR'])
-        .assign(malaria_africa_proportion=lambda d: (d['AFR'] / d['GLOBAL']) * 100)
-        .assign(malaria_rest_of_world_proportion=lambda d: (d['malaria_rest_of_world_total'] / d['GLOBAL']) * 100)
+        .assign(malaria_rest_of_world_total=lambda d: d['GLOBAL'] - d['AFR'],
+                malaria_africa_proportion=lambda d: (d['AFR'] / d['GLOBAL']) * 100,
+                malaria_rest_of_world_proportion=lambda d: (d['malaria_rest_of_world_total'] / d['GLOBAL']) * 100)
         .rename(columns={'AFR': 'malaria_africa_total', 'GLOBAL': 'malaria_world_total', 'TimeDim': 'malaria_year'})
         .round(0)
         .astype(int)
         .to_dict(orient='records')[0]
         )
     return malaria_dict
-

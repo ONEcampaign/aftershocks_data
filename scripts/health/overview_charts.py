@@ -29,7 +29,7 @@ def wb_charts() -> None:
                         }
 
     wb = WorldBankData(update_data=True)
-    for _, code in chart_indicators.items():
+    for code in chart_indicators.values():
         wb.load_indicator(code)
 
     for name, code in chart_indicators.items():
