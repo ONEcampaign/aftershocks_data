@@ -1,103 +1,41 @@
-Cause,Deaths (000s),% of total deaths,Cumulative % of total deaths,"CDR 
-(per 100 000 
-population)",group
-Ischaemic heart disease,"6,756",13.2,13.2,110,Global
-Stroke,"5,464",10.7,23.8,89,Global
-Neonatal conditions,"3,198",6.2,30.1,52.1,Global
-Lower respiratory infections,"3,051",6,36,49.7,Global
-Chronic obstructive pulmonary disease,"2,986",5.8,41.9,48.6,Global
-Diarrhoeal diseases,"2,648",5.2,47,43.1,Global
-Tuberculosis,"1,738",3.4,50.4,28.3,Global
-HIV/AIDS,"1,379",2.7,53.1,22.5,Global
-"Trachea, bronchus, lung cancers","1,206",2.4,55.4,19.6,Global
-Road injury,"1,167",2.3,57.7,19,Global
-Cirrhosis of the liver,"1,098",2.1,59.9,17.9,Global
-Diabetes mellitus,877,1.7,61.6,14.3,Global
-Kidney diseases,813,1.6,63.2,13.2,Global
-Self-harm,792,1.5,64.7,12.9,Global
-Stomach cancer,788,1.5,66.2,12.8,Global
-Hypertensive heart disease,727,1.4,67.7,11.8,Global
-Malaria,721,1.4,69.1,11.7,Global
-Congenital anomalies,648,1.3,70.3,10.6,Global
-Colon and rectum cancers,597,1.2,71.5,9.7,Global
-Alzheimer disease and other dementias,584,1.1,72.6,9.5,Global
-Neonatal conditions,574,11,11,142.8,Low-income
-Lower respiratory infections,559,10.7,21.8,139.2,Low-income
-Diarrhoeal diseases,494,9.5,31.3,122.9,Low-income
-HIV/AIDS,395,7.6,38.8,98.3,Low-income
-Malaria,348,6.7,45.5,86.5,Low-income
-Ischaemic heart disease,243,4.7,50.2,60.4,Low-income
-Stroke,241,4.6,54.8,59.9,Low-income
-Tuberculosis,222,4.3,59.1,55.3,Low-income
-Measles,165,3.2,62.2,41,Low-income
-Meningitis,160,3.1,65.3,39.7,Low-income
-Protein-energy malnutrition,146,2.8,68.1,36.4,Low-income
-Road injury,110,2.1,70.2,27.5,Low-income
-Maternal conditions,109,2.1,72.3,27.2,Low-income
-Cirrhosis of the liver,95,1.8,74.2,23.6,Low-income
-Congenital anomalies,88,1.7,75.8,21.8,Low-income
-Collective violence and legal intervention,83,1.6,77.4,20.7,Low-income
-Chronic obstructive pulmonary disease,71,1.4,78.8,17.7,Low-income
-Hypertensive heart disease,66,1.3,80.1,16.3,Low-income
-Diabetes mellitus,63,1.2,81.3,15.6,Low-income
-Tetanus,55,1.1,82.3,13.7,Low-income
-Neonatal conditions,"2,020",10.4,10.4,93.6,Lower-middle income
-Ischaemic heart disease,"1,997",10.3,20.6,92.6,Lower-middle income
-Diarrhoeal diseases,"1,939",10,30.6,89.9,Lower-middle income
-Lower respiratory infections,"1,490",7.6,38.2,69.1,Lower-middle income
-Stroke,"1,313",6.7,45,60.9,Lower-middle income
-Tuberculosis,"1,157",5.9,50.9,53.7,Lower-middle income
-Chronic obstructive pulmonary disease,892,4.6,55.5,41.4,Lower-middle income
-HIV/AIDS,662,3.4,58.9,30.7,Lower-middle income
-Cirrhosis of the liver,472,2.4,61.3,21.9,Lower-middle income
-Road injury,385,2,63.3,17.9,Lower-middle income
-Malaria,368,1.9,65.2,17.1,Lower-middle income
-Measles,343,1.8,66.9,15.9,Lower-middle income
-Asthma,305,1.6,68.5,14.1,Lower-middle income
-Kidney diseases,301,1.5,70.1,14,Lower-middle income
-Diabetes mellitus,301,1.5,71.6,13.9,Lower-middle income
-Congenital anomalies,300,1.5,73.1,13.9,Lower-middle income
-Self-harm,272,1.4,74.5,12.6,Lower-middle income
-Meningitis,247,1.3,75.8,11.4,Lower-middle income
-Maternal conditions,230,1.2,77,10.6,Lower-middle income
-Falls,212,1.1,78.1,9.8,Lower-middle income
-Stroke,"2,916",16.7,16.7,117.1,Upper-middle income
-Ischaemic heart disease,"2,459",14.1,30.8,98.8,Upper-middle income
-Chronic obstructive pulmonary disease,"1,601",9.2,40,64.3,Upper-middle income
-Lower respiratory infections,627,3.6,43.6,25.2,Upper-middle income
-"Trachea, bronchus, lung cancers",566,3.2,46.9,22.7,Upper-middle income
-Neonatal conditions,562,3.2,50.1,22.6,Upper-middle income
-Road injury,522,3,53.1,21,Upper-middle income
-Stomach cancer,478,2.7,55.8,19.2,Upper-middle income
-Cirrhosis of the liver,382,2.2,58,15.3,Upper-middle income
-Hypertensive heart disease,342,2,60,13.7,Upper-middle income
-Self-harm,339,1.9,61.9,13.6,Upper-middle income
-Liver cancer,338,1.9,63.9,13.6,Upper-middle income
-Tuberculosis,337,1.9,65.8,13.5,Upper-middle income
-Diabetes mellitus,334,1.9,67.7,13.4,Upper-middle income
-HIV/AIDS,296,1.7,69.4,11.9,Upper-middle income
-Kidney diseases,292,1.7,71.1,11.7,Upper-middle income
-Oesophagus cancer,265,1.5,72.6,10.6,Upper-middle income
-Interpersonal violence,265,1.5,74.1,10.6,Upper-middle income
-Alzheimer disease and other dementias,230,1.3,75.4,9.2,Upper-middle income
-Colon and rectum cancers,218,1.3,76.7,8.7,Upper-middle income
-Ischaemic heart disease,"2,056",22.5,22.5,188.7,High-income
-Stroke,995,10.9,33.3,91.3,High-income
-"Trachea, bronchus, lung cancers",502,5.5,38.8,46.1,High-income
-Chronic obstructive pulmonary disease,422,4.6,43.4,38.7,High-income
-Lower respiratory infections,375,4.1,47.5,34.4,High-income
-Colon and rectum cancers,289,3.2,50.7,26.5,High-income
-Alzheimer disease and other dementias,216,2.4,53,19.8,High-income
-Diabetes mellitus,180,2,55,16.6,High-income
-Breast cancer,176,1.9,56.9,16.2,High-income
-Stomach cancer,171,1.9,58.8,15.7,High-income
-Kidney diseases,166,1.8,60.6,15.2,High-income
-Road injury,149,1.6,62.3,13.7,High-income
-Cirrhosis of the liver,149,1.6,63.9,13.7,High-income
-Self-harm,149,1.6,65.5,13.6,High-income
-Prostate cancer,131,1.4,66.9,12,High-income
-"Lymphomas, multiple myeloma",125,1.4,68.3,11.4,High-income
-Pancreas cancer,122,1.3,69.6,11.2,High-income
-Hypertensive heart disease,121,1.3,70.9,11.1,High-income
-Liver cancer,107,1.2,72.1,9.8,High-income
-"Cardiomyopathy, myocarditis, endocarditis",89,1,73.1,8.1,High-income
+cause,deaths,percent of all deaths,region
+Neonatal conditions,519000,11.1,Low income
+Lower respiratory infections,416000,8.9,Low income
+Ischaemic heart disease,379000,8.1,Low income
+Stroke,334000,7.1,Low income
+Diarrhoeal diseases,263000,5.6,Low income
+Malaria,191000,4.1,Low income
+Road injury,189000,4,Low income
+Tuberculosis,171000,3.6,Low income
+HIV/AIDS,161000,3.4,Low income
+Cirrhosis of the liver,114000,2.4,Low income
+Ischaemic heart disease,"3,097,000",15.7,Lower-middle income
+Stroke,"1,734,000",8.8,Lower-middle income
+Neonatal conditions,"1,274,000",6.4,Lower-middle income
+Chronic obstructive pulmonary disease,"1,242,000",6.3,Lower-middle income
+Lower respiratory infections,"1,121,000",5.7,Lower-middle income
+Diarrhoeal diseases,"1,104,000",5.6,Lower-middle income
+Tuberculosis,836000,4.2,Lower-middle income
+Cirrhosis of the liver,614000,3.1,Lower-middle income
+Diabetes mellitus,597000,3,Lower-middle income
+Road injury,504000,2.6,Lower-middle income
+Ischaemic heart disease,"3,679,000",18.2,Upper-middle income
+Stroke,"3,336,000",16.5,Upper-middle income
+Chronic obstructive pulmonary disease,"1,337,000",6.6,Upper-middle income
+"Trachea, bronchus, lung cancers",976000,4.8,Upper-middle income
+Lower respiratory infections,637000,3.2,Upper-middle income
+Diabetes mellitus,604000,3,Upper-middle income
+Hypertensive heart disease,525000,2.6,Upper-middle income
+Alzheimer disease and other dementias,522000,2.6,Upper-middle income
+Stomach cancer,518000,2.6,Upper-middle income
+Road injury,488000,2.4,Upper-middle income
+Ischaemic heart disease,"1,729,000",16.1,High income
+Alzheimer disease and other dementias,814000,7.6,High income
+Stroke,790000,7.4,High income
+"Trachea, bronchus, lung cancers",584000,5.4,High income
+Chronic obstructive pulmonary disease,551000,5.1,High income
+Lower respiratory infections,419000,3.9,High income
+Colon and rectum cancers,331000,3.1,High income
+Kidney diseases,270000,2.5,High income
+Hypertensive heart disease,220000,2.1,High income
+Diabetes mellitus,202000,1.9,High income
