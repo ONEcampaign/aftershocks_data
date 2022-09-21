@@ -1,6 +1,7 @@
 import pandas as pd
 from pyjstat import pyjstat
 from bblocks.dataframe_tools.add import add_iso_codes_column
+from bblocks.import_tools.world_bank import WorldBankData
 
 BASE_TRACKER: str = "https://onecampaign.github.io/project_covid-19_tracker/"
 
@@ -117,4 +118,30 @@ def read_dstocks_data() -> pd.DataFrame:
         .replace("C.A.R", "Central African Republic")
         .replace("D.R.C", "Democratic Republic of the Congo")
         .pipe(add_iso_codes_column, id_column="iso_code", id_type="regex")
+    )
+
+
+def education_expenditure_share() -> pd.DataFrame:
+    indicator = "SE.XPD.TOTL.GB.ZS"
+
+    return (
+        WorldBankData()
+        .load_indicator(indicator)
+        .get_data()
+        .dropna(subset="value")
+        .assign(year=lambda d: d.date.dt.year)
+        .filter(["year", "iso_code", "value"])
+    )
+
+
+def health_expenditure_share() -> pd.DataFrame:
+    indicator = "SH.XPD.GHED.GE.ZS"
+
+    return (
+        WorldBankData()
+        .load_indicator(indicator)
+        .get_data()
+        .dropna(subset="value")
+        .assign(year=lambda d: d.date.dt.year)
+        .filter(["year", "iso_code", "value"])
     )

@@ -1,10 +1,19 @@
 import pandas as pd
 from bblocks.cleaning_tools.clean import convert_id
-from bblocks.dataframe_tools.add import add_gdp_column, add_short_names_column
+from bblocks.dataframe_tools.add import (
+    add_gdp_column,
+    add_short_names_column,
+    add_gov_expenditure_column,
+)
 
 from scripts.config import PATHS
 from scripts.debt import common
-from scripts.debt.common import read_dstocks_data
+from scripts.debt.common import (
+    read_dstocks_data,
+    read_dservice_data,
+    education_expenditure_share,
+    health_expenditure_share,
+)
 from scripts.debt.overview_charts import CURRENT_YEAR
 
 STOCKS_URL: str = (
@@ -215,12 +224,69 @@ def debt_to_china_chart() -> None:
     )
 
 
+def debt_service_comparison_chart() -> None:
+    edu = education_expenditure_share()
+    health = health_expenditure_share()
+    comparison = edu.merge(
+        health, on=["iso_code", "year"], how="outer", suffixes=("_edu", "_health")
+    )
+
+    df = (
+        read_dservice_data()
+        .filter(["year", "iso_code", "Total"], axis=1)
+        .pipe(
+            add_gov_expenditure_column,
+            id_column="iso_code",
+            id_type="ISO3",
+            date_column="year",
+            usd=True,
+            include_estimates=True,
+        )
+        .dropna(subset=["Total", "gov_exp"], how="any")
+        .assign(Total=lambda d: d.Total * 1e6)
+    )
+
+    df = (
+        df.merge(comparison, on=["year", "iso_code"], how="left")
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .assign(share=lambda d: round(100 * d.Total / d.gov_exp, 2))
+    )
+
+    africa = (
+        df.groupby(["year"], as_index=False)
+        .median()
+        .assign(name_short="Africa (median)")
+    )
+
+    df = (
+        pd.concat([africa, df], ignore_index=True)
+        .filter(["name_short", "year", "share", "value_edu", "value_health"], axis=1)
+        .rename(
+            columns={
+                "share": "Debt service",
+                "year": "Year",
+                "value_edu": "Education expenditure",
+                "value_health": "Health expenditure",
+                "name_short": "Country",
+            }
+        )
+    )
+    # chart version
+    df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_comparison.csv", index=False)
+
+    # download version
+    df.assign(source=f"{SOURCE}{DATE}").to_csv(
+        f"{PATHS.download}/debt_topic/debt_service_comparison.csv", index=False
+    )
+
+
 def update_debt_country_charts() -> None:
     debt_stocks_columns()
     debt_service_columns()
     debt_to_gdp_ts()
     debt_composition_chart()
     debt_to_china_chart()
+    debt_service_comparison_chart()
 
 
 if __name__ == "__main__":
