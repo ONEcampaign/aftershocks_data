@@ -159,20 +159,21 @@ def wb_spending_topic_chart() -> None:
     wb.load_indicator('SH.XPD.CHEX.PC.CD')
 
     df = (wb
-              .get_data()
-              .dropna(subset='value')
-              .sort_values('date')
-              .groupby('iso_code', as_index=False)
-              .last()
-              .loc[:, ['iso_code', 'indicator', 'value']]
-              .round(2)
-              .assign(country_name=lambda d: coco.convert(d.iso_code, to='name_short', not_found=None))
-              .loc[lambda d: d.iso_code.isin(cc.data.ISO3), :]
-              .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
-              .pipe(add.add_income_level_column, 'iso_code')
-              .loc[lambda d: (d.continent == 'Africa') & (d.income_level.isin(['Lower middle income', 'Low income'])),
-                   ['value', 'country_name']]
-              )
+          .get_data()
+          .dropna(subset='value')
+          .sort_values('date')
+          .groupby('iso_code', as_index=False)
+          .last()
+          .loc[:, ['iso_code', 'indicator', 'value']]
+          .round(2)
+          .assign(country_name=lambda d: coco.convert(d.iso_code, to='name_short', not_found=None))
+          .loc[lambda d: d.iso_code.isin(cc.data.ISO3), :]
+          .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
+          .pipe(add.add_income_level_column, 'iso_code')
+          .loc[lambda d: (d.continent == 'Africa') & (d.income_level.isin(['Lower middle income', 'Low income'])),
+               ['value', 'country_name']]
+          .assign(country_name = lambda d: d.country_name.replace({'Sao Tome and Principe': 'Sao Tome'}))
+          )
 
     df.to_csv(f'{PATHS.charts}/health/health_expenditure_per_person.csv', index=False)
     df.to_csv(f'{PATHS.download}/health/health_expenditure_per_person.csv', index=False)
