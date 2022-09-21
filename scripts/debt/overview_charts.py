@@ -101,6 +101,9 @@ def debt_service_gov_spending() -> None:
     # chart version
     df.to_csv(f"{PATHS.charts}/debt_topic/dservice_to_gov_exp.csv", index=False)
 
+    # download version
+    df.to_csv(f"{PATHS.download}/debt_topic/dservice_to_gov_exp.csv", index=False)
+
 
 def debt_to_gdp_trend() -> None:
     df = (
