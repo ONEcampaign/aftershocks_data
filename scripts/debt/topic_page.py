@@ -15,6 +15,9 @@ SERVICE_URL: str = (
     "https://onecampaign.github.io/project_covid-19_tracker/c07_debt_service_ts.csv"
 )
 
+SOURCE = "International Debt Statistics (IDS) Database"
+DATE = " (October 2021)"
+
 
 def debt_stocks_columns() -> None:
     """Bar chart of debt stocks by country"""
@@ -46,7 +49,13 @@ def debt_stocks_columns() -> None:
         axis=1,
     )
 
+    # chart version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_stocks_ts.csv", index=False)
+
+    # download version
+    df.assign(source=f"{SOURCE}{DATE}").to_csv(
+        f"{PATHS.download}/debt_topic/debt_stocks_ts.csv", index=False
+    )
 
 
 def debt_service_columns() -> None:
@@ -80,7 +89,13 @@ def debt_service_columns() -> None:
         .loc[lambda d: d.year <= (CURRENT_YEAR + 2)]
     )
 
+    # chart version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_ts.csv", index=False)
+
+    # download version
+    df.assign(source=f"{SOURCE}{DATE}").to_csv(
+        f"{PATHS.download}/debt_service_ts.csv", index=False
+    )
 
 
 def debt_to_gdp_ts() -> None:
@@ -109,7 +124,14 @@ def debt_to_gdp_ts() -> None:
         .filter(["name_short", "year", "Debt to GDP ratio"], axis=1)
         .pivot(index="year", columns="name_short", values="Debt to GDP ratio")
     )
+
+    # chart version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_gdp_ratio_country_ts.csv", index=False)
+
+    # download version
+    df.assign(source=f"{SOURCE}{DATE}").to_csv(
+        f"{PATHS.download}/debt_topic/debt_gdp_ratio_country_ts.csv", index=False
+    )
 
 
 def read_debt_chart_data() -> pd.DataFrame:
@@ -149,7 +171,13 @@ def debt_composition_chart() -> None:
         )
     )
 
+    # chart version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_composition_country.csv", index=False)
+
+    # download version
+    df.assign(source=f"{SOURCE}{DATE}").to_csv(
+        f"{PATHS.download}/debt_topic/debt_composition_country.csv", index=False
+    )
 
 
 def debt_to_china_chart() -> None:
@@ -178,7 +206,13 @@ def debt_to_china_chart() -> None:
         lambda d: d[["Bilateral", "Private"]].sum(axis=1) > 0
     ]
 
-    df.to_clipboard(index=False)
+    # chart version
+    df.to_csv(f"{PATHS.charts}/debt_topic/debt_to_china_country.csv", index=False)
+
+    # download version
+    df.assign(source=f"{SOURCE}{DATE}").to_csv(
+        f"{PATHS.download}/debt_topic/debt_to_china_country.csv", index=False
+    )
 
 
 def update_debt_country_charts() -> None:
@@ -187,3 +221,7 @@ def update_debt_country_charts() -> None:
     debt_to_gdp_ts()
     debt_composition_chart()
     debt_to_china_chart()
+
+
+if __name__ == "__main__":
+    update_debt_country_charts()
