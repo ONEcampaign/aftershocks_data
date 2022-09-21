@@ -94,7 +94,7 @@ def debt_service_columns() -> None:
 
     # download version
     df.assign(source=f"{SOURCE}{DATE}").to_csv(
-        f"{PATHS.download}/debt_service_ts.csv", index=False
+        f"{PATHS.download}/debt_topic/debt_service_ts.csv", index=False
     )
 
 
