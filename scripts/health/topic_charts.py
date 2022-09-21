@@ -165,6 +165,7 @@ def wb_spending_topic_chart() -> None:
               .groupby('iso_code', as_index=False)
               .last()
               .loc[:, ['iso_code', 'indicator', 'value']]
+              .round(2)
               .assign(country_name=lambda d: coco.convert(d.iso_code, to='name_short', not_found=None))
               .loc[lambda d: d.iso_code.isin(cc.data.ISO3), :]
               .assign(continent=lambda d: coco.convert(d.iso_code, to='continent', not_found=None))
