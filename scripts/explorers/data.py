@@ -10,6 +10,7 @@ from scripts.explorers.common import (
     WEO_YEAR,
     ECONOMICS_INDICATORS,
     indicators_metadata,
+    add_hdi_column,
 )
 
 
@@ -81,7 +82,9 @@ def econ_explorer():
     base = basic_info()
     econ = _base_weo_economics()
 
-    df = base.merge(econ, on=ExplorerSchema.ID, how="left")
+    df = base.merge(econ, on=ExplorerSchema.ID, how="left").pipe(
+        add_hdi_column, iso_column=ExplorerSchema.ID
+    )
 
     metadata = indicators_metadata().loc[lambda d: d.indicator.isin(df.columns)]
 
