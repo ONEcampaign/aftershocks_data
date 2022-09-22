@@ -39,12 +39,12 @@ class ExplorerSchema:
     GOV_EXPENDITURE = "General Government Expenditure (% of GDP)"
     HDI = "Human Development Index"
     CHILD_MORTALITY = "Under 5 mortality rate (per 1,000)"
-    MATERNAL_MORTALITY = "Maternal mortality ratio (per 100,000)"
+    MATERNAL_MORTALITY = "Maternal mortality (per 100,000)"
     HEALTH_EXPENDITURE = "General Gov. Health expenditure (% of GDP)"
-    COVID_VAX_SHARE = "Population vaccinated against COVID (%)"
-    AIDS_DEATHS = "AIDS related deaths (per 100,000)"
+    COVID_VAX_SHARE = "Pop. vaccinated against COVID-19 (%)"
+    AIDS_DEATHS = "AIDS related deaths"
     MALARIA_DEATHS = "Malaria deaths"
-    RECEIVING_ART = "Receiving ART (% of people living with HIV)"
+    RECEIVING_ART = "Share Receiving ART (of ppl living with HIV)"
 
 
 # Constants
@@ -284,7 +284,7 @@ def _owid_health_meta() -> pd.DataFrame:
         .groupby(["iso_code", "indicator"], as_index=False)
         .last()
         .rename(columns={"date": ExplorerSchema.TIME})
-        .assign(source="Our World in Data")
+        .assign(source="Our World in Data", indicator=ExplorerSchema.COVID_VAX_SHARE)
         .drop("value", axis=1)
     )
 

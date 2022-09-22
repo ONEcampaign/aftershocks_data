@@ -47,6 +47,7 @@ def _base_owid_health() -> pd.DataFrame:
         .pivot(index=["iso_code"], columns="indicator", values="value")
         .reset_index()
         .rename(columns={"iso_code": ExplorerSchema.ID})
+        .rename(columns=OWID_INDICATORS)
     )
 
 
