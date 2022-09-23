@@ -16,6 +16,12 @@ CAUSE_GROUPS = {
     3: "Injuries",
 }
 
+CAUSES_SOURCE = (
+    "Global Health Estimates 2020: Deaths by Cause, Age, Sex,"
+    " by Country and by Region, 2000-2019. "
+    "Geneva, World Health Organization; 2020."
+)
+
 
 def get_url(country_code, year):
     return (
@@ -113,13 +119,6 @@ def _combined_causes_of_death_data(sort_indicator: str) -> pd.DataFrame:
 
 def leading_causes_of_death_chart() -> None:
 
-    # source
-    source = (
-        "Global Health Estimates 2020: Deaths by Cause, Age, Sex,"
-        " by Country and by Region, 2000-2019. "
-        "Geneva, World Health Organization; 2020."
-    )
-
     dfc = (
         _combined_causes_of_death_data("death_rate")
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
@@ -144,7 +143,7 @@ def leading_causes_of_death_chart() -> None:
     dfc.to_csv(f"{PATHS.charts}/health/leading_causes_of_death.csv", index=False)
 
     # download version
-    dfc.assign(source=source).to_csv(
+    dfc.assign(source=CAUSES_SOURCE).to_csv(
         f"{PATHS.download}/health/leading_causes_of_death.csv", index=False
     )
 
