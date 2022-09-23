@@ -92,7 +92,7 @@ def _wfp_charts() -> None:
         .loc[lambda d: d.date.dt.year.between(2018, 2022)]
         .loc[lambda d: d.indicator == "Inflation Rate"]
         .filter(["name_short", "date", "indicator", "value"], axis=1)
-        .rename(columns={"indicator": "indicator_name"})
+        .rename(columns={"indicator": "indicator_name",})
     )
 
     # Chart version
