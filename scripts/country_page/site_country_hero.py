@@ -332,13 +332,10 @@ def _debt_chart() -> None:
         .pipe(add_short_names_column, id_column="country_name")
         .loc[lambda d: d.year == 2022]
         .filter(["name_short", "year", "Total"], axis=1)
+        .assign(year=lambda d: d["year"].astype(str) + " estimate")
         .rename(columns={"year": "As of", "Total": "value"})
-        .assign(indicator="Debt Service, Total (USD million)")
-        .filter(["name_short", "As of", "indicator", "value"], axis=1)
-        .assign(
-            value_units=lambda d: d.value * 1e6,
-            value=lambda d: d.value.map("{:,.0f}".format),
-        )
+        .assign(value_units=lambda d: d.value * 1e6)
+        .filter(["name_short", "As of", "indicator", "value", "value_units"], axis=1)
         .pipe(add_iso_codes_column, id_column="name_short", id_type="short_name")
         .pipe(
             add_gov_exp_share_column,
@@ -351,18 +348,13 @@ def _debt_chart() -> None:
         )
         .drop(columns=["value_units", "iso_code"])
         .assign(
-            note=lambda d: d.note.round(1).astype(str) + "% of government expenditure"
+            note=lambda d: d.note.round(1), center="", lower="of government spending"
         )
+        .filter(["name_short", "As of", "value", "lower", "note", "center"], axis=1)
     )
 
     # Chart version
-    debt.to_csv(f"{PATHS.charts}/country_page/overview_debt.csv", index=False)
-
-    # Download version
-    debt.assign(
-        source="World Bank International Debt Statistics database, 2022"
-    ).to_csv(f"{PATHS.download}/country_page/overview_debt.csv", index=False)
-
+    debt.to_csv(f"{PATHS.charts}/country_page/overview_debt_sm.csv", index=False)
 
 # ---------- WORLD BANK ------------ #
 
