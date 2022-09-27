@@ -1,11 +1,16 @@
+import numpy as np
 import requests
 
 import pandas as pd
-from bblocks.cleaning_tools.clean import format_number
+from bblocks.cleaning_tools.clean import format_number, clean_numeric_series
+from bblocks.cleaning_tools.filter import filter_african_countries
+from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.config import PATHS
 from scripts.explorers.common import base_africa_map
 from bblocks.dataframe_tools.add import add_short_names_column
+
+from scripts import common
 
 CAUSES_OF_DEATH_YEAR = 2019
 CAUSES_YEAR_COMPARISON = 2000
@@ -121,6 +126,7 @@ def leading_causes_of_death_chart() -> None:
 
     dfc = (
         _combined_causes_of_death_data("death_rate")
+        .merge(common.base_africa_df(), on="iso_code", how="outer")
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
         .assign(deaths=lambda d: format_number(d.deaths, as_units=True, decimals=0))
         .filter(
@@ -137,7 +143,10 @@ def leading_causes_of_death_chart() -> None:
                 "cause_group": "Type",
             }
         )
+        .assign(missing=lambda d: np.where(d.Cause.isna(), True, False))
     )
+
+    dfc.to_clipboard(index=False)
 
     # chart version
     dfc.to_csv(f"{PATHS.charts}/health/leading_causes_of_death.csv", index=False)
@@ -148,6 +157,92 @@ def leading_causes_of_death_chart() -> None:
     )
 
 
+def leading_causes_of_death_column_chart() -> None:
+
+    dfc = (
+        _combined_causes_of_death_data("death_rate")
+        .merge(common.base_africa_df(), on="iso_code", how="outer")
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .assign(deaths=lambda d: format_number(d.deaths, as_units=True, decimals=0))
+        .fillna({"year": "missing"})
+        .filter(
+            ["name_short", "cause", "cause_group", "year", "death_rate", "deaths"],
+            axis=1,
+        )
+        .pivot(
+            index=["name_short", "cause", "cause_group"],
+            columns="year",
+            values=["death_rate", "deaths"],
+        )
+        .reset_index()
+    )
+
+    dfc.columns = [f"{a}_{b}".split(".")[0] for a, b in dfc.columns]
+
+    dfc = (
+        dfc.rename(
+            columns={
+                "name_short_": "Country",
+                "cause_": "Cause",
+                "cause_group_": "Type",
+                "death_rate_2000": "2000",
+                "death_rate_2019": "2019",
+                "deaths_2000": "Deaths (2000)",
+                "deaths_2019": "Deaths (2019)",
+            }
+        )
+        .drop(["death_rate_missing", "deaths_missing"], axis=1)
+        .assign(missing=lambda d: np.where(d.Cause.isna(), True, False))
+    )
+
+    dfc.to_clipboard(index=False)
+
+    # chart version
+    dfc.to_csv(f"{PATHS.charts}/health/leading_causes_of_death.csv", index=False)
+
+    # download version
+    dfc.assign(source=CAUSES_SOURCE).to_csv(
+        f"{PATHS.download}/health/leading_causes_of_death.csv", index=False
+    )
+
+
+# -------------------  Life expectancy --------------- #
+
+
+def _get_life_expectancy() -> pd.DataFrame:
+
+    wb = WorldBankData()
+    wb.load_indicator("SP.DYN.LE00.IN")
+
+    return (
+        wb.get_data()
+        .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
+        .copy()
+        .replace({"SSA": "Sub-Saharan Africa", "WLD": "World"})
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .assign(
+            indicator="Life expectancy at birth (years)",
+            year=lambda d: d.date.dt.year,
+        )
+        .filter(["year", "name_short", "indicator", "value"], axis=1)
+    )
+
+
+def life_expectancy_chart() -> None:
+
+    df = _get_life_expectancy()
+
+    chart = df.loc[lambda d: d.year.between(d.year.max() - 10, d.year.max())].pivot(
+        index=["year"], columns="name_short", values="value"
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/health/life_expectancy.csv", index=False)
+
+    # download version
+    df.to_csv(f"{PATHS.download}/health/life_expectancy.csv", index=False)
+
+
 if __name__ == "__main__":
     ...
-    leading_causes_of_death_chart()
+    # leading_causes_of_death_chart()
