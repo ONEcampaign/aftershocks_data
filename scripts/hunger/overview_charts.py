@@ -4,7 +4,7 @@ import pandas as pd
 from bblocks.import_tools.world_bank import WorldBankData
 from scripts.config import PATHS
 from scripts.common import clean_wb_overview
-from bblocks.import_tools.wfp import WFPData
+from scripts.hunger.common import get_insufficient_food, aggregate_insufficient_food
 import datetime
 
 wb_indicators = {'SH.STA.STNT.ME.ZS': 'Stunting prevalence, height for age (% of children under 5)',
@@ -24,39 +24,15 @@ def wb_charts():
          .to_csv(f'{PATHS.charts}/hunger_topic/{name}.csv', index=False))
 
 
-def __get_insufficient_food():
-    """ """
-    wfp = WFPData()
-    wfp.load_indicator('insufficient_food')
-    # wfp.update()
-    df = (wfp.get_data('insufficient_food'))
-
-    return df
-
-
-def _aggregate(df, date, date_col):
+def insufficient_food_single_measure():
     """ """
 
-    date_min = date - datetime.timedelta(days=7)
-
-    return (df.dropna(subset=['value'])
-            .loc[lambda d: (d[date_col] >= date_min) & (d[date_col] <= date)]
-            .groupby('iso_code', as_index=False)
-            .last()
-            ['value']
-            .sum()
-            )
-
-
-def insufficient_food():
-    """ """
-
-    wfp_data = __get_insufficient_food()
+    wfp_data = get_insufficient_food()
     latest_date = wfp_data['date'].max()
     month_date = latest_date - datetime.timedelta(days=30)
 
-    latest_value = _aggregate(wfp_data, latest_date, 'date')
-    month_value = _aggregate(wfp_data, month_date, 'date')
+    latest_value = aggregate_insufficient_food(wfp_data, latest_date, 'date')
+    month_value = aggregate_insufficient_food(wfp_data, month_date, 'date')
     change = ((latest_value - month_value) / month_value) * 100
     arrow = ((latest_value - month_value) / month_value)
 
@@ -68,4 +44,12 @@ def insufficient_food():
 
          }
 
-    return pd.DataFrame.from_records([d])
+    df = pd.DataFrame.from_records([d])
+    df.to_csv(f'{PATHS.charts}/hunger_topic/insufficient_food_single_measure.csv', index=False)
+
+
+def update_hunger_overview_charts():
+    """ """
+
+    wb_charts()
+    insufficient_food_single_measure()
