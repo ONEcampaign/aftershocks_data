@@ -6,6 +6,7 @@ from scripts.hunger.common import get_insufficient_food, aggregate_insufficient_
 import datetime
 from scripts.config import PATHS
 import json
+import os
 
 
 def stunting() -> dict:
@@ -21,12 +22,10 @@ def stunting() -> dict:
         .round({"value": 0})
     )
 
-    ssa_value = str(int(df.loc[df.iso_code == "SSA", "value"].iloc[-1]))
-    ssa_date = str(df.loc[df.iso_code == "SSA", "date"].iloc[-1])
-    ssa_value_2020 = str(
-        int(df.loc[(df.iso_code == "SSA") & (df.date == 2020), "value"].iloc[-1])
-    )
-    world_value = str(int(df.loc[df.iso_code == "WLD", "value"].iloc[-1]))
+    ssa_value = f'{df.loc[df.iso_code == "SSA", "value"].iloc[-1]:.0f}'
+    ssa_date = f'{df.loc[df.iso_code == "SSA", "date"].iloc[-1]}'
+    ssa_value_2020 = f'{df.loc[(df.iso_code == "SSA") & (df.date == 2020), "value"].iloc[-1]:.0f}'
+    world_value = f'{df.loc[df.iso_code == "WLD", "value"].iloc[-1]:.0f}'
 
     return {
         "stunting_ssa_value": ssa_value,
@@ -40,8 +39,8 @@ def ipc_dynamic(ipc) -> dict:
     """IPC hunger phases dynamic text"""
 
     return {
-        "phase3plus_world_value": round((sum(ipc.phase_3plus)) / 1000000, 0),
-        "phase5_world_millions": round((sum(ipc.phase_5)) / 1000000, 0),
+        "phase3plus_world_value": f'{sum(ipc.phase_3plus)/ 1000000:.2f}',
+        "phase5_world_millions": f'{sum(ipc.phase_5) / 1000000:.2f}',
     }
 
 
@@ -57,8 +56,8 @@ def insufficient_food_dynamic() -> dict:
     change = ((latest_value - month_value) / month_value) * 100
 
     return {
-        "insufficient_food_latest_value": str(str(round(latest_value / 1000000, 2))),
-        "insufficient_food_month_change": str(round(change, 2)),
+        "insufficient_food_latest_value": f'{latest_value / 1000000:.2f}',
+        "insufficient_food_month_change": f'{change:.2f}',
         "insufficient_food_date": latest_date.strftime("%d %b %Y"),
     }
 
@@ -68,7 +67,7 @@ def update_hunger_dynamic_text() -> None:
 
     d = {}
 
-    ipc = IPC(api_key="bac2a4d1-1274-4526-9065-0502ce9d4d5e")
+    ipc = IPC(api_key=os.environ.get('IPC_API'))
     ipc_df = ipc.get_ipc_ch_data()
     d.update(ipc_dynamic(ipc_df))
 

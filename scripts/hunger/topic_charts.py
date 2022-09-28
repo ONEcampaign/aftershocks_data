@@ -6,6 +6,7 @@ from scripts.config import PATHS
 from bblocks.import_tools.world_bank import WorldBankData, WorldBankPinkSheet
 import country_converter as coco
 import datetime
+import os
 
 
 def ipc_chart(df: pd.DataFrame) -> None:
@@ -153,7 +154,7 @@ def price_table() -> None:
 def update_hunger_topic_charts() -> None:
     """Update all charts for the hunger topic"""
 
-    ipc = IPC(api_key="bac2a4d1-1274-4526-9065-0502ce9d4d5e")
+    ipc = IPC(api_key=os.environ.get('IPC_API'))
     df = ipc.get_ipc_ch_data()
     ipc_chart(df)
 
