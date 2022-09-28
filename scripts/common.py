@@ -17,6 +17,12 @@ def get_full_africa_iso3() -> list:
     # Add World
     africa.append("WLD")
 
+    # Add Africa
+    africa.append("AFR")
+
+    # ADD Global
+    africa.append("GLOBAL")
+
     return africa
 
 
