@@ -25,6 +25,7 @@ def ipc_chart(df: pd.DataFrame) -> None:
             from_date=lambda d: pd.to_datetime(d.from_date).dt.strftime("%B %Y"),
             to_date=lambda d: pd.to_datetime(df.to_date).dt.strftime("%B %Y"),
         )
+        .loc[lambda d: d.country_name != "LAC"]
     )
 
     df.to_csv(f"{PATHS.charts}/hunger_topic/ipc_phases.csv", index=False)
