@@ -2,18 +2,14 @@ import json
 import os
 from dataclasses import dataclass
 from datetime import datetime
-
+import pandas as pd
+import requests
+from country_converter import convert
 from dateutil.relativedelta import relativedelta
 
 IPC_WEB_API = 'bac2a4d1-1274-4526-9065-0502ce9d4d5e'
 IPC_API = "86c60e39-64f7-4f7d-a56b-c5316174bb6a"
 
-
-
-
-import pandas as pd
-import requests
-from country_converter import convert
 
 BASE_URL: str = "https://api.ipcinfo.org/"
 WEB_URL: str = "https://fsr2av3qi2.execute-api.us-east-1.amazonaws.com/ch/"
@@ -184,7 +180,3 @@ class IPC:
             df = pd.concat([_, df], ignore_index=True)
 
         return df
-
-
-if __name__ == "__main__":
-    pass
