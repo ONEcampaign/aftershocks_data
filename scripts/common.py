@@ -7,9 +7,9 @@ from country_converter import country_converter
 def get_full_africa_iso3() -> list:
     africa = (
         coco.CountryConverter()
-        .data[["ISO3", "continent"]]
-        .query("continent == 'Africa'")
-        .ISO3.to_list()
+            .data[["ISO3", "continent"]]
+            .query("continent == 'Africa'")
+            .ISO3.to_list()
     )
 
     # Add sub saharan Africa
@@ -22,13 +22,12 @@ def get_full_africa_iso3() -> list:
 
 
 def sort_name_first(
-    df: pd.DataFrame,
-    name: str,
-    name_column: str,
-    date_column: str,
-    keep_current_sorting=True,
+        df: pd.DataFrame,
+        name: str,
+        name_column: str,
+        date_column: str,
+        keep_current_sorting=True,
 ):
-
     if not keep_current_sorting:
         df = df.sort_values([date_column, name_column], ascending=[True, False])
 
@@ -43,14 +42,15 @@ def base_africa_df():
 
     return (
         country_converter.CountryConverter()
-        .data[["ISO3", "continent"]]
-        .rename(columns={"ISO3": "iso_code"})
-        .query("continent == 'Africa'")
-        .drop(columns="continent")
+            .data[["ISO3", "continent"]]
+            .rename(columns={"ISO3": "iso_code"})
+            .query("continent == 'Africa'")
+            .drop(columns="continent")
     )
 
 
 WEO_YEAR: int = 2022
+
 
 def clean_wb_overview(df: pd.DataFrame) -> pd.DataFrame:
     """Clean World Bank data for overview charts
