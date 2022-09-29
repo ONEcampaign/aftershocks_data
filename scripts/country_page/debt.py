@@ -11,7 +11,7 @@ from scripts.config import PATHS
 def debt_chart() -> None:
     """Data for the Debt Service key number"""
 
-    debt = pd.read_csv(f"{PATHS.raw_data}/debt/tracker_debt_service.csv.csv")
+    debt = pd.read_csv(f"{PATHS.raw_data}/debt/tracker_debt_service.csv")
 
     debt = (
         debt.replace("C.A.R", "Central African Republic")
