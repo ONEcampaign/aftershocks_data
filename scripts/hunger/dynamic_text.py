@@ -24,14 +24,14 @@ def stunting() -> dict:
 
     ssa_value = f'{df.loc[df.iso_code == "SSA", "value"].iloc[-1]:.0f}'
     ssa_date = f'{df.loc[df.iso_code == "SSA", "date"].iloc[-1]}'
-    ssa_value_2020 = f'{df.loc[(df.iso_code == "SSA") & (df.date == 2020), "value"].iloc[-1]:.0f}'
+    ssa_value_2000 = f'{df.loc[(df.iso_code == "SSA") & (df.date == 2000), "value"].iloc[-1]:.0f}'
     world_value = f'{df.loc[df.iso_code == "WLD", "value"].iloc[-1]:.0f}'
 
     return {
         "stunting_ssa_value": ssa_value,
         "stunting_ssa_date": ssa_date,
         "stunting_world_value": world_value,
-        "stunting_ssa_2020_value": ssa_value_2020,
+        "stunting_ssa_2000_value": ssa_value_2000,
     }
 
 
