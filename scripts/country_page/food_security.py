@@ -84,6 +84,7 @@ def insufficient_food_chart() -> None:
         .assign(value=lambda d: round(100 * d.value / d.population, 2))
         .drop("population", axis=1)
         .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
+        .loc[lambda d: d.date.dt.year >= 2022]
     )
 
     incomplete = (
@@ -142,7 +143,6 @@ def food_inflation_chart() -> None:
     inflation = (
         pd.concat([median, inflation], ignore_index=True)
         .drop("indicator_name", axis=1)
-        .loc[lambda d: d.date.dt.year >= 2022]
         .pivot(index="date", columns="name_short", values="value")
         .reset_index()
     )
