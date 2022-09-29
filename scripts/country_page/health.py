@@ -337,15 +337,17 @@ def malaria_chart() -> None:
         .filter(
             [
                 "name_short",
-                "continent",
                 "year",
                 "MALARIA_EST_MORTALITY",
                 "MALARIA_EST_DEATHS",
-                "population",
             ],
             axis=1,
         )
         .sort_values(["name_short", "year"])
+        .rename(columns={
+            "MALARIA_EST_MORTALITY": "Malaria mortality rate (per 100K people)",
+            "MALARIA_EST_DEATHS": "Malaria deaths (estimated)",
+        })
     )
 
     # chart version
