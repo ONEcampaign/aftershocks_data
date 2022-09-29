@@ -194,14 +194,14 @@ def leading_causes_of_death_column_chart() -> None:
         .assign(missing=lambda d: np.where(d.Cause.isna(), True, False))
     )
 
-    dfc.to_clipboard(index=False)
-
     # chart version
-    dfc.to_csv(f"{PATHS.charts}/country_page/leading_causes_of_death.csv", index=False)
+    dfc.to_csv(
+        f"{PATHS.charts}/country_page/leading_causes_of_death_column.csv", index=False
+    )
 
     # download version
     dfc.assign(source=CAUSES_SOURCE).to_csv(
-        f"{PATHS.download}/country_page/leading_causes_of_death.csv", index=False
+        f"{PATHS.download}/country_page/leading_causes_of_death_column.csv", index=False
     )
 
 

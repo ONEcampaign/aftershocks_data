@@ -26,7 +26,7 @@ from scripts.country_page.health import (
     life_expectancy_chart,
     art_chart,
     malaria_chart,
-    dpt_chart,
+    dpt_chart, leading_causes_of_death_column_chart,
 )
 from scripts.country_page.health_update import (
     get_ghe_url,
@@ -204,6 +204,7 @@ def update_monthly() -> None:
 
     # Health
     leading_causes_of_death_chart()
+    leading_causes_of_death_column_chart()
     life_expectancy_chart()
     art_chart()
     malaria_chart()
