@@ -142,6 +142,7 @@ def food_inflation_chart() -> None:
     inflation = (
         pd.concat([median, inflation], ignore_index=True)
         .drop("indicator_name", axis=1)
+        .loc[lambda d: d.date.dt.year >= 2022]
         .pivot(index="date", columns="name_short", values="value")
         .reset_index()
     )
