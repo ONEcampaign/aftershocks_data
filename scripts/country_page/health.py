@@ -233,7 +233,7 @@ def life_expectancy_chart() -> None:
 
     chart = df.loc[lambda d: d.year.between(d.year.max() - 10, d.year.max())].pivot(
         index=["year"], columns="name_short", values="value"
-    )
+    ).reset_index()
 
     # chart version
     chart.to_csv(f"{PATHS.charts}/country_page/life_expectancy.csv", index=False)
