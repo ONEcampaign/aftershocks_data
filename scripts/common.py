@@ -13,6 +13,7 @@ def get_full_africa_iso3() -> list:
 
     # Add sub saharan Africa
     africa.append("SSA")
+    africa.append("SSF")
 
     # Add World
     africa.append("WLD")
@@ -64,10 +65,10 @@ def clean_wb_overview(df: pd.DataFrame) -> pd.DataFrame:
     returns a dataframe for a line chart with values for World and SSA
     """
 
-    return (df
-            .loc[lambda d: d['iso_code'].isin(['WLD', 'SSA'])]
-            .pivot(index='date', columns='iso_code', values='value')
-            .reset_index()
-            .dropna(subset=['SSA', 'WLD'])
-            .rename(columns={'SSA': 'Sub-Saharan Africa', 'WLD': 'World'})
-            )
+    return (
+        df.loc[lambda d: d["iso_code"].isin(["WLD", "SSA"])]
+        .pivot(index="date", columns="iso_code", values="value")
+        .reset_index()
+        .dropna(subset=["SSA", "WLD"])
+        .rename(columns={"SSA": "Sub-Saharan Africa", "WLD": "World"})
+    )

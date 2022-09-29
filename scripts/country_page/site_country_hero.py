@@ -154,13 +154,13 @@ def _read_wfp() -> WFPData:
     return wfp
 
 
-def _wfp_inflation(wfp: WFPData) -> pd.DataFrame:
+def _wfp_inflation(wfp: WFPData, indicator="Inflation Rate") -> pd.DataFrame:
     return (
         wfp.get_data("inflation")
         .pipe(add_short_names_column, id_column="iso_code")
         .pipe(filter_african_countries, id_type="ISO3")
         .loc[lambda d: d.date.dt.year.between(2018, 2022)]
-        .loc[lambda d: d.indicator == "Inflation Rate"]
+        .loc[lambda d: d.indicator == indicator]
         .filter(["name_short", "date", "indicator", "value"], axis=1)
         .rename(
             columns={
@@ -355,6 +355,7 @@ def _debt_chart() -> None:
 
     # Chart version
     debt.to_csv(f"{PATHS.charts}/country_page/overview_debt_sm.csv", index=False)
+
 
 # ---------- WORLD BANK ------------ #
 

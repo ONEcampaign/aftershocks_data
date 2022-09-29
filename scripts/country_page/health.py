@@ -1,16 +1,13 @@
 import numpy as np
-import requests
-
 import pandas as pd
+import requests
 from bblocks.cleaning_tools.clean import format_number, clean_numeric_series, convert_id
-from bblocks.cleaning_tools.filter import filter_african_countries
+from bblocks.dataframe_tools.add import add_short_names_column
 from bblocks.import_tools.world_bank import WorldBankData
 
+from scripts import common
 from scripts.config import PATHS
 from scripts.explorers.common import base_africa_map
-from bblocks.dataframe_tools.add import add_short_names_column, add_population_column
-
-from scripts import common
 
 CAUSES_OF_DEATH_YEAR = 2019
 CAUSES_YEAR_COMPARISON = 2000
@@ -46,7 +43,6 @@ def get_ghe_url(country_code, year):
 
 
 def get_url_malaria(indicator: str):
-
     return f"https://ghoapi.azureedge.net/api/{indicator}"
 
 
@@ -71,12 +67,10 @@ def __unpack_country(country: str, country_data: list, year: int) -> pd.DataFram
 
 
 def _download_leading_causes_of_death(request_year: int) -> None:
-
     dfs = []
     africa = base_africa_map().iso_code.to_list()
 
     for country in africa:
-
         d = requests.get(get_ghe_url(country, request_year)).json()["value"]
         dfs.append(__unpack_country(country, d, request_year))
 
@@ -89,14 +83,12 @@ def _download_leading_causes_of_death(request_year: int) -> None:
 
 
 def _read_leading_causes_of_death(year: int) -> pd.DataFrame:
-
     return pd.read_csv(
         f"{PATHS.raw_data}/health/leading_causes_of_death_{year}.csv"
     ).assign(cause_group=lambda d: d.cause_group.map(CAUSE_GROUPS))
 
 
 def _get_x_largest_causes(df: pd.DataFrame, x: int = 5) -> pd.DataFrame:
-
     return df.groupby(["iso_code", "year"], as_index=False).apply(
         lambda d: d.nlargest(n=x, columns="death_rate")
     )
@@ -128,7 +120,6 @@ def _combined_causes_of_death_data(sort_indicator: str) -> pd.DataFrame:
 
 
 def leading_causes_of_death_chart() -> None:
-
     dfc = (
         _combined_causes_of_death_data("death_rate")
         .merge(common.base_africa_df(), on="iso_code", how="outer")
@@ -163,7 +154,6 @@ def leading_causes_of_death_chart() -> None:
 
 
 def leading_causes_of_death_column_chart() -> None:
-
     dfc = (
         _combined_causes_of_death_data("death_rate")
         .merge(common.base_africa_df(), on="iso_code", how="outer")
@@ -215,7 +205,6 @@ def leading_causes_of_death_column_chart() -> None:
 
 
 def _get_life_expectancy() -> pd.DataFrame:
-
     wb = WorldBankData()
     wb.load_indicator("SP.DYN.LE00.IN")
 
@@ -234,7 +223,6 @@ def _get_life_expectancy() -> pd.DataFrame:
 
 
 def life_expectancy_chart() -> None:
-
     df = _get_life_expectancy()
 
     chart = df.loc[lambda d: d.year.between(d.year.max() - 10, d.year.max())].pivot(
@@ -265,7 +253,6 @@ def __clean_hiv(df_hiv: pd.DataFrame) -> pd.DataFrame:
 
 
 def __clean_art(df_art: pd.DataFrame) -> pd.DataFrame:
-
     cols = df_art.columns
 
     columns = {
@@ -326,7 +313,6 @@ def _read_art() -> pd.DataFrame:
 
 
 def art_chart() -> None:
-
     indicator = {
         "Among people living with HIV, the percent on ART -All ages": "people_on_art"
     }
@@ -371,7 +357,6 @@ def art_chart() -> None:
 
 
 def __unpack_malaria(indicator: str) -> pd.DataFrame:
-
     url = get_url_malaria(indicator)
 
     df = pd.DataFrame()
@@ -408,7 +393,6 @@ def _read_malaria_data() -> pd.DataFrame:
 
 
 def malaria_chart() -> None:
-
     wb = WorldBankData()
     wb.load_indicator("SP.POP.TOTL")
     population = (
@@ -446,6 +430,60 @@ def malaria_chart() -> None:
         )
         .sort_values(["name_short", "year"])
     )
+
+
+def _read_dpt_data() -> pd.DataFrame:
+
+    file = "Diphtheria Tetanus Toxoid and Pertussis (DTP) vaccination coverage.xlsx"
+    return pd.read_excel(f"{PATHS.raw_data}/health/{file}", sheet_name=0)
+
+
+def dpt_chart() -> pd.DataFrame:
+
+    columns = {
+        "CODE": "iso_code",
+        "NAME": "name",
+        "YEAR": "year",
+        "COVERAGE_CATEGORY": "coverage_category",
+        "COVERAGE": "coverage",
+    }
+
+    regions = {
+        "African Region": "Africa",
+        "Eastern Mediterranean Region": "Eastern Mediterranean",
+        "European Region": "Europe",
+        "South-East Asia Region": "South-East Asia",
+        "Western Pacific Region": "Western Pacific",
+        "Region of the Americas": "America",
+        "Global": "Global",
+    }
+
+    df = _read_dpt_data()
+
+    countries = (
+        df.loc[lambda d: d.GROUP == "COUNTRIES"]
+        .filter(columns, axis=1)
+        .rename(columns=columns)
+        .loc[lambda d: d.coverage_category == "WUENIC"]
+        .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
+        .astype({"year": int})
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .filter(["name_short", "year", "coverage"], axis=1)
+    )
+
+    regions = (
+        df.loc[lambda d: (d.GROUP == "WHO_REGIONS") | (d.GROUP == "GLOBAL")]
+        .filter(columns, axis=1)
+        .rename(columns=columns)
+        .loc[lambda d: d.coverage_category == "WUENIC"]
+        .astype({"year": int})
+        .assign(name_short=lambda d: d.name.map(regions))
+        .filter(["name_short", "year", "coverage"], axis=1)
+    )
+
+    data = pd.concat([regions, countries], ignore_index=True).pivot(
+        index="year", columns="name_short", values="coverage"
+    ).reset_index()
 
 
 if __name__ == "__main__":
