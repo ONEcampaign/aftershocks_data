@@ -231,9 +231,11 @@ def _get_life_expectancy() -> pd.DataFrame:
 def life_expectancy_chart() -> None:
     df = _get_life_expectancy()
 
-    chart = df.loc[lambda d: d.year.between(d.year.max() - 10, d.year.max())].pivot(
-        index=["year"], columns="name_short", values="value"
-    ).reset_index()
+    chart = (
+        df.loc[lambda d: d.year.between(d.year.max() - 10, d.year.max())]
+        .pivot(index=["year"], columns="name_short", values="value")
+        .reset_index()
+    )
 
     # chart version
     chart.to_csv(f"{PATHS.charts}/country_page/life_expectancy.csv", index=False)
@@ -345,6 +347,14 @@ def malaria_chart() -> None:
             axis=1,
         )
         .sort_values(["name_short", "year"])
+    )
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/country_page/malaria_deaths.csv", index=False)
+
+    # download version
+    df.assign(source="WHO").to_csv(
+        f"{PATHS.download}/country_page/malaria_deaths.csv", index=False
     )
 
 
