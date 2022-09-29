@@ -98,6 +98,8 @@ def insufficient_food_chart() -> None:
         .assign(iso_code="Africa (median)")
     )
 
+    food = food.loc[lambda d: ~d.date.isin(incomplete.date)]
+
     food = (
         pd.concat([median, food], ignore_index=True)
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
