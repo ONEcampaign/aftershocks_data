@@ -6,6 +6,7 @@ from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.common import CAUSES_OF_DEATH_YEAR
 from scripts.config import PATHS
+from scripts.country_page.debt import debt_chart
 from scripts.country_page.financial_security import (
     inflation_overview,
     inflation_ts_chart,
@@ -143,6 +144,17 @@ def update_monthly_wb_data() -> None:
     wb_recent.update()
 
 
+def update_monthly_debt_data() -> None:
+
+    url: str = (
+        "https://onecampaign.github.io/project_covid-19_tracker/c07_debt_service_ts.csv"
+    )
+
+    debt = pd.read_csv(url, usecols=["year", "country_name", "Total"])
+
+    debt.to_csv(f"{PATHS.raw_data}/debt/tracker_debt_service.csv", index=False)
+
+
 def update_daily() -> None:
     """Update all data that is updated daily"""
 
@@ -170,11 +182,12 @@ def update_weekly() -> None:
 def update_monthly() -> None:
     """Update all data that is updated monthly"""
 
-    # Update underlying data
+    # ------- update underlying data-----------
 
     # Financial
     update_monthly_weo_data()
     update_monthly_wb_data()
+    update_monthly_debt_data()
 
     # Health
     update_monthly_leading_causes_of_death()
@@ -187,6 +200,7 @@ def update_monthly() -> None:
     gdp_growth_single_measure()
     poverty_chart()
     wb_poverty_single_measure()
+    debt_chart()
 
     # Health
     leading_causes_of_death_chart()
