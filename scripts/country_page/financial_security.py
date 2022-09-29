@@ -1,25 +1,227 @@
 import pandas as pd
-from bblocks.dataframe_tools.add import add_short_names_column
+from bblocks.cleaning_tools.filter import filter_african_countries
+from bblocks.dataframe_tools.add import add_short_names_column, add_iso_codes_column
+from bblocks.import_tools.imf import WorldEconomicOutlook
+from bblocks.import_tools.wfp import WFPData
 from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts import common
-from scripts.country_page.site_country_hero import _read_wfp, _wfp_inflation
+from scripts.common import WEO_YEAR
+from scripts.config import PATHS
 
 
-def poverty_chart() -> pd.DataFrame:
-    indicators = {
-        "SI.POV.DDAY": "% of population below the poverty line",
-        "SP.POP.TOTL": "Population",
-    }
+# ------------------------------------------------------------------------------
+# Country Page - Inflation
+# ------------------------------------------------------------------------------
+
+
+def _read_wfp() -> WFPData:
+    """Read all available WFP indicators"""
+    wfp = WFPData()
+
+    for indicator in wfp.available_indicators:
+        wfp.load_indicator(indicator)
+
+    return wfp
+
+
+def _wfp_inflation(wfp: WFPData, indicator="Inflation Rate") -> pd.DataFrame:
+    """Read an inflation indicator from WFP and return a dataframe"""
+
+    return (
+        wfp.get_data("inflation")
+        .pipe(add_short_names_column, id_column="iso_code")
+        .pipe(filter_african_countries, id_type="ISO3")
+        .loc[lambda d: d.date.dt.year.between(2018, 2023)]
+        .loc[lambda d: d.indicator == indicator]
+        .filter(["name_short", "date", "indicator", "value"], axis=1)
+        .rename(
+            columns={
+                "indicator": "indicator_name",
+            }
+        )
+    )
+
+
+# ---------- OVERVIEW ----------
+def inflation_overview() -> None:
+    """Create a line chart with an overview of inflation data"""
+
+    wfp = _read_wfp()
+
+    inflation = _wfp_inflation(wfp)
+
+    # Live chart version
+    inflation.to_csv(f"{PATHS.charts}/country_page/overview_inflation.csv", index=False)
+
+
+# ---------- TIME SERIES ----------
+def inflation_ts_chart() -> None:
+    """Create a line chart with an overview of inflation data"""
+    source = "Price inflation data from the WFP VAM resource centre"
+
+    wfp = _read_wfp()
+
+    inflation = _wfp_inflation(wfp)
+
+    incomplete = (
+        inflation.groupby("date", as_index=False)
+        .value.count()
+        .loc[lambda d: d.value < 30]
+    )
+
+    median = (
+        inflation.loc[lambda d: ~d.date.isin(incomplete.date)]
+        .groupby(["date"], as_index=False)
+        .value.median()
+        .assign(name_short="Africa (median)")
+    )
+
+    inflation = (
+        pd.concat([median, inflation], ignore_index=True)
+        .drop("indicator_name", axis=1)
+        .pivot(index="date", columns="name_short", values="value")
+        .reset_index()
+    )
+
+    # Live chart version
+    inflation.to_csv(
+        f"{PATHS.charts}/country_page/inflation_ts_by_country.csv", index=False
+    )
+
+    # Download version
+    inflation.assign(source=source).to_csv(
+        f"{PATHS.download}/country_page/inflation_ts_by_country.csv", index=False
+    )
+
+
+# ------------------------------------------------------------------------------
+# Country Page - Growth
+# ------------------------------------------------------------------------------
+
+# --------------- OVERVIEW ---------------
+
+WEO_INDICATORS = {"NGDP_RPCH": "GDP Growth"}
+
+
+def __weo_center(df: pd.DataFrame) -> pd.DataFrame:
+    """Calculate the angle of the Single Measure template arrow"""
+    return df.assign(
+        center=lambda d: d.groupby(["iso_code", "indicator"]).value.transform(
+            lambda g: g / g.abs().max()
+        )
+    )
+
+
+def _read_weo() -> pd.DataFrame:
+    """Read the WEO data and return a dataframe with the last 10 years of data"""
+    weo = WorldEconomicOutlook()
+
+    for c, n in WEO_INDICATORS.items():
+        weo.load_indicator(indicator_code=c, indicator_name=n)
+
+    return (
+        weo.get_data(indicators="all", keep_metadata=True)
+        .pipe(add_short_names_column, id_column="iso_code")
+        .pipe(filter_african_countries, id_column="iso_code", id_type="ISO3")
+        .loc[lambda d: d.year.dt.year.between(WEO_YEAR - 10, WEO_YEAR)]
+    )
+
+
+def __single_weo_measure(indicator_code: str, comparison_year_difference: int = 1):
+    """Create a dataframe for use with the Single Measure template"""
+
+    # Read the data and add the arrow angle
+    df = _read_weo().pipe(__weo_center)
+
+    data = (
+        df.loc[lambda d: d.indicator == indicator_code]
+        .loc[
+            lambda d: d.year.dt.year.isin(
+                [WEO_YEAR - comparison_year_difference, WEO_YEAR]
+            )
+        ]
+        .assign(year=lambda d: d.year.dt.year)
+        .filter(["name_short", "indicator_name", "year", "value", "center"], axis=1)
+    )
+
+    latest = data.loc[lambda d: d.year == WEO_YEAR]
+    previous = data.loc[
+        lambda d: d.year == WEO_YEAR - comparison_year_difference
+    ].filter(["name_short", "value"], axis=1)
+
+    return (
+        latest.merge(previous, on=["name_short"], suffixes=("", "_previous"))
+        .assign(indicator_name=f"{WEO_YEAR} estimate")
+        .drop("year", axis=1)
+        .assign(lower=f"in {WEO_YEAR - comparison_year_difference}")
+        .filter(
+            [
+                "name_short",
+                "indicator_name",
+                "value",
+                "lower",
+                "value_previous",
+                "center",
+            ],
+            axis=1,
+        )
+    )
+
+
+def gdp_growth_single_measure() -> None:
+    # GDP Growth
+    gdp_growth_chart = __single_weo_measure("NGDP_RPCH", comparison_year_difference=1)
+
+    # chart version
+    gdp_growth_chart.to_csv(
+        f"{PATHS.charts}/country_page/overview_GDP_growth.csv", index=False
+    )
+
+
+# ------------------------------------------------------------------------------
+# Country Page - Poverty
+# ------------------------------------------------------------------------------
+
+WB_INDICATORS = {
+    "SI.POV.DDAY": "% of population below the poverty line",
+    "SP.POP.TOTL": "Total Population",
+    "SP.DYN.LE00.IN": "Life Expectancy",
+}
+
+
+def _read_wb_ts() -> dict:
+    wb = WorldBankData()
+
+    for code, name in WB_INDICATORS.items():
+        wb.load_indicator(code, indicator_name=name)
+
+    dfs = {}
+    for indicator in wb.indicators:
+        dfs[indicator] = (
+            wb.get_data(indicator)
+            .pipe(filter_african_countries, id_column="iso_code", id_type="ISO3")
+            .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+            .assign(indicator=lambda d: d.indicator_code.map(WB_INDICATORS))
+            .filter(["date", "name_short", "indicator", "value"], axis=1)
+        )
+
+    return dfs
+
+
+# --------------- Time Series by country ---------------
+def poverty_chart() -> None:
 
     indicator_names = {
         "value_poverty": "% of population below the poverty line",
         "people_in_poverty": "People below the poverty line",
     }
 
+    source = "World Bank Open Data: SI.POV.DDAY"
+
     wb = WorldBankData()
 
-    for _ in indicators:
+    for _ in WB_INDICATORS:
         wb.load_indicator(_)
 
     cols = ["date", "iso_code", "value"]
@@ -71,29 +273,51 @@ def poverty_chart() -> pd.DataFrame:
 
     data = pd.concat(dfs, ignore_index=True)
 
+    # chart version
+    data.to_csv(f"{PATHS.charts}/country_page/poverty_country_ts.csv", index=False)
 
-def inflation_chart() -> pd.DataFrame:
-
-    wfp = _read_wfp()
-
-    inflation = _wfp_inflation(wfp)
-
-    incomplete = (
-        inflation.groupby("date", as_index=False)
-        .value.count()
-        .loc[lambda d: d.value < 30]
+    # download version
+    (
+        data.melt(id_vars=["Year", "Indicator"], var_name="country")
+        .assign(source=source)
+        .pipe(add_iso_codes_column, id_column="country", id_type="regex")
+        .filter(["iso_code", "country", "Year", "Indicator", "value", "source"], axis=1)
+        .to_csv(f"{PATHS.download}/country_page/poverty_country_ts.csv", index=False)
     )
 
-    median = (
-        inflation.loc[lambda d: ~d.date.isin(incomplete.date)]
-        .groupby(["date"], as_index=False)
-        .value.median()
-        .assign(name_short="Africa (median)")
+
+# --------------- Overview Single Measure ---------------
+def wb_poverty_single_measure() -> None:
+
+    data_dict = _read_wb_ts()
+
+    df90s = (
+        data_dict["SI.POV.DDAY"]
+        .loc[lambda d: d.date.dt.year.between(1989, 2000)]
+        .dropna(subset=["value"])
+        .drop_duplicates(subset=["name_short"], keep="first")
+    )
+    df_mrnev = (
+        data_dict["SI.POV.DDAY"]
+        .dropna(subset=["value"])
+        .drop_duplicates(subset=["name_short"], keep="last")
     )
 
-    inflation = (
-        pd.concat([median, inflation], ignore_index=True)
-        .drop("indicator_name", axis=1)
-        .pivot(index="date", columns="name_short", values="value")
-        .reset_index()
+    data = (
+        df_mrnev.merge(
+            df90s, on=["name_short", "indicator"], suffixes=["", "_90s"], how="left"
+        )
+        .assign(
+            name=lambda d: "As of " + d.date.dt.year.astype(str),
+            lower=lambda d: d.date_90s.apply(
+                lambda x: f"In {x.year}"
+                if not pd.isnull(x)
+                else "Comparison not available"
+            ),
+            center=lambda d: (d.value - d.value_90s) / d.value_90s,
+        )
+        .filter(["name_short", "name", "value", "lower", "value_90s", "center"], axis=1)
     )
+
+    # chart version
+    data.to_csv(f"{PATHS.charts}/country_page/poverty_single_measure.csv", index=False)

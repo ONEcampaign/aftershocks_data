@@ -1,5 +1,6 @@
 import pandas as pd
 from bblocks.analysis_tools.get import change_from_date
+from bblocks.cleaning_tools.clean import date_to_str
 from bblocks.cleaning_tools.filter import filter_african_countries, filter_latest_by
 from bblocks.dataframe_tools.add import (
     add_short_names_column,
@@ -7,114 +8,12 @@ from bblocks.dataframe_tools.add import (
     add_gov_exp_share_column,
     add_median_observation,
 )
-from bblocks.cleaning_tools.clean import date_to_str
-from bblocks.import_tools.imf import WorldEconomicOutlook
 from bblocks.import_tools.wfp import WFPData
 from bblocks.import_tools.world_bank import WorldBankData
 from dateutil.relativedelta import relativedelta
 
-from scripts.common import WEO_YEAR
 from scripts.config import PATHS
 from scripts.owid_covid import tools as ot
-
-WEO_INDICATORs = {
-    "NGDP_RPCH": "GDP Growth",
-    "LUR": "Unemployment rate",
-    "GGR_NGDP": "Government Revenue (% GDP)",
-    "GGXWDN_NGDP": "Government Debt (% GDP)",
-}
-
-WB_INDICATORs = {
-    "SI.POV.DDAY": "% of population below the poverty line",
-    "SP.POP.TOTL": "Total Population",
-    "SP.DYN.LE00.IN": "Life Expectancy",
-}
-
-
-def __weo_center(df: pd.DataFrame) -> pd.DataFrame:
-    return df.assign(
-        center=lambda d: d.groupby(["iso_code", "indicator"]).value.transform(
-            lambda g: g / g.abs().max()
-        )
-    )
-
-
-def _read_weo() -> pd.DataFrame:
-    weo = WorldEconomicOutlook()
-
-    for c, n in WEO_INDICATORs.items():
-        weo.load_indicator(indicator_code=c, indicator_name=n)
-
-    return (
-        weo.get_data(indicators="all", keep_metadata=True)
-        .pipe(add_short_names_column, id_column="iso_code")
-        .pipe(filter_african_countries, id_column="iso_code", id_type="ISO3")
-        .loc[lambda d: d.year.dt.year.between(WEO_YEAR - 10, WEO_YEAR)]
-    )
-
-
-def _weo_charts() -> None:
-
-    df = _read_weo()
-
-    for indicator in WEO_INDICATORs.values():
-        df.loc[df.indicator_name == indicator].filter(
-            ["name_short", "indicator_name", "year", "value"], axis=1
-        ).to_csv(f"{PATHS.charts}/country_page/overview_{indicator}.csv", index=False)
-
-        df.loc[df.indicator_name == indicator].to_csv(
-            f"{PATHS.download}/country_page/overview_{indicator}.csv", index=False
-        )
-
-
-def __single_weo_measure(indicator_code: str, comparison_year_difference: int = 1):
-
-    df = _read_weo().pipe(__weo_center)
-
-    data = (
-        df.loc[lambda d: d.indicator == indicator_code]
-        .loc[
-            lambda d: d.year.dt.year.isin(
-                [WEO_YEAR - comparison_year_difference, WEO_YEAR]
-            )
-        ]
-        .assign(year=lambda d: d.year.dt.year)
-        .filter(["name_short", "indicator_name", "year", "value", "center"], axis=1)
-    )
-
-    latest = data.loc[lambda d: d.year == WEO_YEAR]
-    previous = data.loc[
-        lambda d: d.year == WEO_YEAR - comparison_year_difference
-    ].filter(["name_short", "value"], axis=1)
-
-    return (
-        latest.merge(previous, on=["name_short"], suffixes=("", "_previous"))
-        .assign(indicator_name=f"{WEO_YEAR} estimate")
-        .drop("year", axis=1)
-        .assign(lower=f"in {WEO_YEAR - comparison_year_difference}")
-        .filter(
-            [
-                "name_short",
-                "indicator_name",
-                "value",
-                "lower",
-                "value_previous",
-                "center",
-            ],
-            axis=1,
-        )
-    )
-
-
-def _gdp_growth_single_measure() -> None:
-    # GDP Growth
-
-    gdp_growth_chart = __single_weo_measure("NGDP_RPCH", comparison_year_difference=1)
-
-    # chart version
-    gdp_growth_chart.to_csv(
-        f"{PATHS.charts}/country_page/overview_GDP_growth.csv", index=False
-    )
 
 
 def _group_monthly_change(
@@ -123,7 +22,6 @@ def _group_monthly_change(
     percentage: bool,
     months: int = 1,
 ) -> pd.DataFrame:
-
     sdate = group.date.max() - relativedelta(months=months)
     edate = group.date.max()
 
@@ -145,33 +43,7 @@ def _group_interpolate(
     )
 
 
-def _read_wfp() -> WFPData:
-    wfp = WFPData()
-
-    for indicator in wfp.available_indicators:
-        wfp.load_indicator(indicator)
-
-    return wfp
-
-
-def _wfp_inflation(wfp: WFPData, indicator="Inflation Rate") -> pd.DataFrame:
-    return (
-        wfp.get_data("inflation")
-        .pipe(add_short_names_column, id_column="iso_code")
-        .pipe(filter_african_countries, id_type="ISO3")
-        .loc[lambda d: d.date.dt.year.between(2018, 2022)]
-        .loc[lambda d: d.indicator == indicator]
-        .filter(["name_short", "date", "indicator", "value"], axis=1)
-        .rename(
-            columns={
-                "indicator": "indicator_name",
-            }
-        )
-    )
-
-
 def _wfp_food_sm(wfp: WFPData) -> pd.DataFrame:
-
     food = wfp.get_data("insufficient_food")
 
     food = (
@@ -399,7 +271,6 @@ def _read_wb_ts() -> dict:
 
 
 def _wb_poverty_single_measure(data_dict: dict) -> pd.DataFrame:
-
     data_dict = _read_wb_ts()
 
     df90s = (
@@ -566,11 +437,6 @@ def _food_sec_chart() -> None:
 
 def key_indicators_chart() -> None:
     """Data for the Overview charts on the country pages"""
-
-    # Create csvs for the WEO charts
-    _weo_charts()
-
-    _gdp_growth_single_measure()
 
     # Create csvs for the WFP charts
     _wfp_charts()
