@@ -1,20 +1,14 @@
 import pandas as pd
-from bblocks.analysis_tools.get import change_from_date
-from bblocks.cleaning_tools.clean import date_to_str
-from bblocks.cleaning_tools.filter import filter_african_countries, filter_latest_by
+from bblocks.cleaning_tools.filter import filter_african_countries
 from bblocks.dataframe_tools.add import (
     add_short_names_column,
     add_iso_codes_column,
     add_gov_exp_share_column,
     add_median_observation,
 )
-from bblocks.import_tools.wfp import WFPData
 from bblocks.import_tools.world_bank import WorldBankData
-from dateutil.relativedelta import relativedelta
 
 from scripts.config import PATHS
-from scripts.owid_covid import tools as ot
-
 
 
 def _group_interpolate(
@@ -23,120 +17,6 @@ def _group_interpolate(
     return group.filter(["value"]).interpolate(
         method="linear", limit_direction="forward"
     )
-
-
-
-def _wfp_charts() -> None:
-    """Data for the Food Security charts on the country pages"""
-
-    source = "World Food Programme HungerMapLive"
-    wfp = _read_wfp()
-
-    inflation = _wfp_inflation(wfp)
-
-    # Chart version
-    inflation.to_csv(f"{PATHS.charts}/country_page/overview_inflation.csv", index=False)
-
-    # Download version
-    inflation.assign(source=source).to_csv(
-        f"{PATHS.download}/country_page/overview_inflation.csv", index=False
-    )
-
-    _ = _wfp_food_sm(wfp)
-
-    food = wfp.get_data("insufficient_food")
-
-    # calculate starting date
-
-    food = (
-        food.pipe(add_short_names_column, id_column="iso_code")
-        .pipe(filter_african_countries, id_type="ISO3")
-        .assign(indicator="People with insufficient food consumption")
-        .filter(["name_short", "date", "indicator", "value"], axis=1)
-    )
-
-    change = (
-        food.groupby(["name_short"])
-        .apply(_group_monthly_change, value_columns=["value"], percentage=True)
-        .assign(value=lambda d: d.value.map("Change in last month: {:+,.1%}".format))
-        .reset_index(drop=True)
-        .filter(["name_short", "value"], axis=1)
-        .rename(columns={"value": "note"})
-    )
-
-    # For charts
-    food = (
-        food.pipe(
-            filter_latest_by,
-            date_column="date",
-            value_columns="value",
-            group_by=["name_short"],
-        )
-        .merge(change, on=["name_short"], how="left")
-        .assign(
-            date=lambda d: d.date.dt.strftime("%d %b %Y"),
-            value=lambda d: d.value.map("{:,.0f}".format),
-        )
-        .rename(columns={"date": "As of"})
-    )
-
-    # Chart version
-    food.to_csv(f"{PATHS.charts}/country_page/overview_food.csv", index=False)
-
-    # Download version
-    food.assign(source=source).to_csv(
-        f"{PATHS.download}/country_page/overview_food.csv", index=False
-    )
-
-
-def _vax_chart() -> None:
-    """Data for the Overview charts on the country pages"""
-    data = ot.read_owid_data()
-
-    indicator = "people_fully_vaccinated_per_hundred"
-    chart_name = "overview_pct_fully_vaccinated"
-
-    vax = (
-        data.pipe(ot.get_indicators_ts, indicators=[indicator])
-        .groupby(["iso_code", "indicator"], as_index=False)
-        .apply(
-            lambda d: d.set_index(["iso_code", "indicator", "date"]).interpolate(
-                limit_direction="backward"
-            )
-        )
-        .reset_index()
-        .filter(["iso_code", "indicator", "date", "value"], axis=1)
-        .dropna(subset=["value"])
-    )
-
-    change = (
-        vax.groupby(["iso_code"])
-        .apply(
-            _group_monthly_change, value_columns=["value"], percentage=False, months=3
-        )
-        .reset_index(drop=True)
-        .filter(["iso_code", "value"], axis=1)
-        .rename(columns={"value": "note"})
-        .assign(note=lambda d: round(d.note, 3))
-    )
-
-    vax = (
-        vax.pipe(filter_latest_by, date_column="date", value_columns="value")
-        .assign(date=lambda d: "As of " + d.date.dt.strftime("%d %B"))
-        .pipe(filter_african_countries, id_type="ISO3")
-        .merge(change, on=["iso_code"], how="left")
-        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
-        .filter(["name_short", "date", "indicator", "value", "note"], axis=1)
-        .rename(columns={"date": "As of"})
-        .assign(
-            lower="Change in the previous 3 months",
-            center=lambda d: round(d.note / d.note.max(), 3),
-        )
-        .filter(["name_short", "As of", "value", "lower", "note", "center"], axis=1)
-    )
-
-    # Chart version
-    vax.to_csv(f"{PATHS.charts}/country_page/{chart_name}.csv", index=False)
 
 
 def _debt_chart() -> None:

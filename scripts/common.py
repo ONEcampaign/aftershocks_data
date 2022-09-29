@@ -57,6 +57,7 @@ def base_africa_df():
 
 
 WEO_YEAR: int = 2022
+CAUSES_OF_DEATH_YEAR = 2019
 
 
 def clean_wb_overview(df: pd.DataFrame) -> pd.DataFrame:

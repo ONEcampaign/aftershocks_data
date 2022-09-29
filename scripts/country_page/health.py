@@ -1,15 +1,18 @@
 import numpy as np
 import pandas as pd
 import requests
-from bblocks.cleaning_tools.clean import format_number, clean_numeric_series, convert_id
+from bblocks.cleaning_tools.clean import format_number, convert_id
+from bblocks.cleaning_tools.filter import filter_latest_by, filter_african_countries
 from bblocks.dataframe_tools.add import add_short_names_column
 from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts import common
+from scripts.common import CAUSES_OF_DEATH_YEAR
 from scripts.config import PATHS
-from scripts.explorers.common import base_africa_map
+from scripts.country_page.food_security import _group_monthly_change
+from scripts.country_page.health_update import read_dpt_data
+from scripts.owid_covid import tools as ot
 
-CAUSES_OF_DEATH_YEAR = 2019
 CAUSES_YEAR_COMPARISON = 2000
 
 CAUSE_GROUPS = {
@@ -25,61 +28,64 @@ CAUSES_SOURCE = (
 )
 
 
-def get_ghe_url(country_code, year):
-    return (
-        "https://frontdoor-l4uikgap6gz3m.azurefd.net/"
-        "DEX_CMS/GHE_FULL?&$orderby=VAL_DEATHS_RATE100K_NUMERIC"
-        "%20desc&$select=DIM_COUNTRY_CODE,"
-        "DIM_GHECAUSE_TITLE,DIM_YEAR_CODE,"
-        "FLAG_CAUSEGROUP,"
-        "VAL_DEATHS_COUNT_NUMERIC,"
-        "ATTR_POPULATION_NUMERIC,"
-        "VAL_DEATHS_RATE100K_NUMERIC&"
-        "$filter=FLAG_RANKABLE%20eq%201%20and%20DIM_COUNTRY_CODE"
-        f"%20eq%20%27{country_code}%27%20and%20DIM_SEX_CODE%20eq%20%27BTSX%27%20"
-        "and%20DIM_AGEGROUP_CODE%20eq%20%27ALLAges%27%20and%20"
-        f"DIM_YEAR_CODE%20eq%20%27{year}%27"
-    )
+# ------------------------------------------------------------------------------
+# Country Page - COVID Vaccination
+# ------------------------------------------------------------------------------
 
 
-def get_url_malaria(indicator: str):
-    return f"https://ghoapi.azureedge.net/api/{indicator}"
+def vaccination_rate_single_measure() -> None:
+    """Data for the Overview charts on the country pages"""
+    data = ot.read_owid_data()
 
+    indicator = "people_fully_vaccinated_per_hundred"
+    chart_name = "overview_pct_fully_vaccinated_single_measure"
 
-def __unpack_country(country: str, country_data: list, year: int) -> pd.DataFrame:
-    df = pd.DataFrame()
-
-    for y in country_data:
-        d = pd.DataFrame(
-            {
-                "iso_code": [country],
-                "year": [year],
-                "cause": [y["DIM_GHECAUSE_TITLE"]],
-                "cause_group": [y["FLAG_CAUSEGROUP"]],
-                "deaths": [y["VAL_DEATHS_COUNT_NUMERIC"]],
-                "population": [y["ATTR_POPULATION_NUMERIC"]],
-                "death_rate": [y["VAL_DEATHS_RATE100K_NUMERIC"]],
-            }
+    vax = (
+        data.pipe(ot.get_indicators_ts, indicators=[indicator])
+        .groupby(["iso_code", "indicator"], as_index=False)
+        .apply(
+            lambda d: d.set_index(["iso_code", "indicator", "date"]).interpolate(
+                limit_direction="backward"
+            )
         )
-        df = pd.concat([df, d], ignore_index=True)
-
-    return df
-
-
-def _download_leading_causes_of_death(request_year: int) -> None:
-    dfs = []
-    africa = base_africa_map().iso_code.to_list()
-
-    for country in africa:
-        d = requests.get(get_ghe_url(country, request_year)).json()["value"]
-        dfs.append(__unpack_country(country, d, request_year))
-
-    df = pd.concat(dfs, ignore_index=True)
-
-    df.to_csv(
-        f"{PATHS.raw_data}/health/leading_causes_of_death_{request_year}.csv",
-        index=False,
+        .reset_index()
+        .filter(["iso_code", "indicator", "date", "value"], axis=1)
+        .dropna(subset=["value"])
     )
+
+    change = (
+        vax.groupby(["iso_code"])
+        .apply(
+            _group_monthly_change, value_columns=["value"], percentage=False, months=3
+        )
+        .reset_index(drop=True)
+        .filter(["iso_code", "value"], axis=1)
+        .rename(columns={"value": "note"})
+        .assign(note=lambda d: round(d.note, 3))
+    )
+
+    vax = (
+        vax.pipe(filter_latest_by, date_column="date", value_columns="value")
+        .assign(date=lambda d: "As of " + d.date.dt.strftime("%d %B"))
+        .pipe(filter_african_countries, id_type="ISO3")
+        .merge(change, on=["iso_code"], how="left")
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .filter(["name_short", "date", "indicator", "value", "note"], axis=1)
+        .rename(columns={"date": "As of"})
+        .assign(
+            lower="Change in the previous 3 months",
+            center=lambda d: round(d.note / d.note.max(), 3),
+        )
+        .filter(["name_short", "As of", "value", "lower", "note", "center"], axis=1)
+    )
+
+    # Chart version
+    vax.to_csv(f"{PATHS.charts}/country_page/{chart_name}.csv", index=False)
+
+
+# ------------------------------------------------------------------------------
+# Country Page - Leading Causes of Death
+# ------------------------------------------------------------------------------
 
 
 def _read_leading_causes_of_death(year: int) -> pd.DataFrame:
@@ -104,7 +110,7 @@ def _combined_causes_of_death_data(sort_indicator: str) -> pd.DataFrame:
     for country in df_latest.iso_code.unique():
         causes[country] = df_latest.query("iso_code == @country").cause.unique()
 
-    # get 200 data
+    # get 2000 data
     df_comparison = _read_leading_causes_of_death(CAUSES_YEAR_COMPARISON)
 
     # combine and sort
@@ -142,14 +148,12 @@ def leading_causes_of_death_chart() -> None:
         .assign(missing=lambda d: np.where(d.Cause.isna(), True, False))
     )
 
-    dfc.to_clipboard(index=False)
-
     # chart version
-    dfc.to_csv(f"{PATHS.charts}/health/leading_causes_of_death.csv", index=False)
+    dfc.to_csv(f"{PATHS.charts}/country_page/leading_causes_of_death.csv", index=False)
 
     # download version
     dfc.assign(source=CAUSES_SOURCE).to_csv(
-        f"{PATHS.download}/health/leading_causes_of_death.csv", index=False
+        f"{PATHS.download}/country_page/leading_causes_of_death.csv", index=False
     )
 
 
@@ -193,15 +197,17 @@ def leading_causes_of_death_column_chart() -> None:
     dfc.to_clipboard(index=False)
 
     # chart version
-    dfc.to_csv(f"{PATHS.charts}/health/leading_causes_of_death.csv", index=False)
+    dfc.to_csv(f"{PATHS.charts}/country_page/leading_causes_of_death.csv", index=False)
 
     # download version
     dfc.assign(source=CAUSES_SOURCE).to_csv(
-        f"{PATHS.download}/health/leading_causes_of_death.csv", index=False
+        f"{PATHS.download}/country_page/leading_causes_of_death.csv", index=False
     )
 
 
-# -------------------  Life expectancy --------------- #
+# ------------------------------------------------------------------------------
+# Country Page - Leading Causes of Death
+# ------------------------------------------------------------------------------
 
 
 def _get_life_expectancy() -> pd.DataFrame:
@@ -230,82 +236,15 @@ def life_expectancy_chart() -> None:
     )
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/health/life_expectancy.csv", index=False)
+    chart.to_csv(f"{PATHS.charts}/country_page/life_expectancy.csv", index=False)
 
     # download version
-    df.to_csv(f"{PATHS.download}/health/life_expectancy.csv", index=False)
+    chart.to_csv(f"{PATHS.download}/country_page/life_expectancy.csv", index=False)
 
 
-def __clean_hiv(df_hiv: pd.DataFrame) -> pd.DataFrame:
-    df_hiv = df_hiv.rename(columns={"Unnamed: 0": "year", "Unnamed: 1": "iso_code"})
-    df_hiv.columns = ["year", "iso_code"] + df_hiv.iloc[4, 2:].fillna("").to_list()
-    df_hiv = (
-        df_hiv.drop("", axis=1)
-        .iloc[6:]
-        .dropna(subset="iso_code")
-        .set_index(["year", "iso_code"])
-        .replace("...", "")
-    )
-
-    return df_hiv.pipe(
-        clean_numeric_series, series_columns=df_hiv.columns, to=float
-    ).reset_index()
-
-
-def __clean_art(df_art: pd.DataFrame) -> pd.DataFrame:
-    cols = df_art.columns
-
-    columns = {
-        cols[0]: "year",
-        cols[1]: "iso_code",
-        cols[2]: "name",
-        cols[3]: (
-            "Among people living with HIV, the percent who know"
-            " their status (First 90 of 90-90-90 target) -All ages"
-        ),
-        cols[18]: "Among people living with HIV, the percent on ART -All ages",
-        cols[33]: (
-            "Among people who know their HIV status, the percent on ART "
-            "(Second 90 of 90-90-90 target) -All ages"
-        ),
-        cols[48]: (
-            "Among people living with HIV, the percent with suppressed "
-            "viral load -All ages"
-        ),
-        cols[63]: (
-            "Among people on ART, the percent with suppressed viral load "
-            "(Third 90 of 90-90-90 target) -All ages"
-        ),
-        cols[78]: "Number who know their HIV status -All ages",
-    }
-
-    df_art = (
-        df_art.rename(columns=columns)
-        .dropna(subset=["name"])
-        .loc[:, lambda d: ~d.columns.str.contains("named")]
-        .set_index(["year", "iso_code", "name"])
-        .replace("...", "")
-    )
-    return df_art.pipe(
-        clean_numeric_series, series_columns=df_art.columns, to=float
-    ).reset_index()
-
-
-def _download_aids_data() -> None:
-    url = (
-        "http://www.unaids.org/sites/default/files/media_asset/"
-        "HIV_estimates_from_1990-to-present.xlsx"
-    )
-
-    files = pd.read_excel(url, sheet_name=[0, 1, 2, 3])
-
-    # HIV country file
-    df_hiv = __clean_hiv(files[0])
-    df_hiv.to_csv(f"{PATHS.raw_data}/health/hiv_estimates.csv", index=False)
-
-    # ART file
-    df_art = __clean_art(files[2])
-    df_art.to_csv(f"{PATHS.raw_data}/health/art_estimates.csv", index=False)
+# ------------------------------------------------------------------------------
+# Country Page - HIV ART
+# ------------------------------------------------------------------------------
 
 
 def _read_art() -> pd.DataFrame:
@@ -350,42 +289,19 @@ def art_chart() -> None:
         .filter(["year", "name_short", "people_on_art"], axis=1)
         .sort_values(["year", "name_short"])
         .drop_duplicates(["name_short", "year"], keep="last")
-        .pivot(index="year", columns="name_short", values="people_on_art")
     )
 
-    df.to_clipboard()
+    # chart version
+    (
+        df.pivot(index="year", columns="name_short", values="people_on_art")
+        .reset_index()
+        .to_csv(f"{PATHS.charts}/country_page/people_on_art_ts.csv", index=False)
+    )
 
-
-def __unpack_malaria(indicator: str) -> pd.DataFrame:
-    url = get_url_malaria(indicator)
-
-    df = pd.DataFrame()
-
-    data = requests.get(url).json()["value"]
-
-    for point in data:
-        _ = pd.DataFrame(
-            {
-                "iso_code": [point["SpatialDim"]],
-                "year": [point["TimeDim"]],
-                "value": [point["NumericValue"]],
-            }
-        )
-        df = pd.concat([df, _], ignore_index=True).assign(indicator=indicator)
-
-    return df
-
-
-def _download_malaria_data() -> None:
-    indicator = "MALARIA_EST_DEATHS"
-    indicator2 = "MALARIA_EST_MORTALITY"
-
-    deaths = __unpack_malaria(indicator)
-    mortality = __unpack_malaria(indicator2)
-
-    df = pd.concat([deaths, mortality], ignore_index=True)
-
-    df.to_csv(f"{PATHS.raw_data}/health/malaria_deaths.csv", index=False)
+    # download version
+    df.assign(source="UNAIDS").to_csv(
+        f"{PATHS.download}/country_page/people_on_art.csv", index=False
+    )
 
 
 def _read_malaria_data() -> pd.DataFrame:
@@ -432,14 +348,7 @@ def malaria_chart() -> None:
     )
 
 
-def _read_dpt_data() -> pd.DataFrame:
-
-    file = "Diphtheria Tetanus Toxoid and Pertussis (DTP) vaccination coverage.xlsx"
-    return pd.read_excel(f"{PATHS.raw_data}/health/{file}", sheet_name=0)
-
-
-def dpt_chart() -> pd.DataFrame:
-
+def dpt_chart() -> None:
     columns = {
         "CODE": "iso_code",
         "NAME": "name",
@@ -458,7 +367,7 @@ def dpt_chart() -> pd.DataFrame:
         "Global": "Global",
     }
 
-    df = _read_dpt_data()
+    df = read_dpt_data()
 
     countries = (
         df.loc[lambda d: d.GROUP == "COUNTRIES"]
@@ -481,9 +390,19 @@ def dpt_chart() -> pd.DataFrame:
         .filter(["name_short", "year", "coverage"], axis=1)
     )
 
-    data = pd.concat([regions, countries], ignore_index=True).pivot(
-        index="year", columns="name_short", values="coverage"
-    ).reset_index()
+    data = (
+        pd.concat([regions, countries], ignore_index=True)
+        .pivot(index="year", columns="name_short", values="coverage")
+        .reset_index()
+    )
+
+    # chart version
+    data.to_csv(f"{PATHS.charts}/country_page/dpt_ts.csv", index=False)
+
+    # download version
+    pd.concat([regions, countries], ignore_index=True).assign(source="WHO").to_csv(
+        f"{PATHS.download}/country_page/dpt_ts.csv", index=False
+    )
 
 
 if __name__ == "__main__":
