@@ -1,19 +1,81 @@
 import pandas as pd
+from bblocks.analysis_tools.get import change_from_date
+from bblocks.cleaning_tools.clean import date_to_str
+from bblocks.cleaning_tools.filter import filter_african_countries
 from bblocks.dataframe_tools.add import add_population_column, add_short_names_column
+from bblocks.import_tools.wfp import WFPData
 
 from scripts import common
-from scripts.country_page.site_country_hero import (
-    _read_wfp,
-    _wfp_food_sm,
-    _wfp_inflation,
-)
+from scripts.config import PATHS
+from scripts.country_page.financial_security import _read_wfp, _wfp_inflation
+from dateutil.relativedelta import relativedelta
 
 
-def insufficient_food_chart() -> pd.DataFrame:
+# ------------------------------------------------------------------------------
+# Country Page - Insufficient Food
+# ------------------------------------------------------------------------------
+
+
+def _group_monthly_change(
+    group: pd.DataFrame,
+    value_columns: list,
+    percentage: bool,
+    months: int = 1,
+) -> pd.DataFrame:
+
+    sdate = group.date.max() - relativedelta(months=months)
+    edate = group.date.max()
+
+    return change_from_date(
+        group,
+        date_column="date",
+        start_date=sdate,
+        end_date=edate,
+        value_columns=value_columns,
+        percentage=percentage,
+    )
+
+
+def wfp_insufficient_food_single_measure() -> None:
 
     wfp = _read_wfp()
+    food = wfp.get_data("insufficient_food")
 
-    food = _wfp_food_sm(wfp)
+    food = (
+        food.pipe(add_short_names_column, id_column="iso_code")
+        .pipe(filter_african_countries, id_type="ISO3")
+        .assign(indicator="People with insufficient food consumption")
+        .filter(["name_short", "date", "indicator", "value"], axis=1)
+    )
+
+    change = (
+        food.groupby(["name_short"])
+        .apply(_group_monthly_change, value_columns=["value"], percentage=True)
+        .reset_index(drop=True)
+        .filter(["name_short", "value"], axis=1)
+        .rename(columns={"value": "change"})
+    )
+
+    df = (
+        food.merge(change, on=["name_short"], how="left")
+        .groupby(["name_short"])
+        .last()
+        .reset_index()
+        .assign(
+            date=lambda d: "On " + date_to_str(d.date, "%d %B"),
+            lower="Change in the last month",
+            center=lambda d: d.change / d.change.max(),
+        )
+        .filter(["name_short", "date", "value", "lower", "change", "center"], axis=1)
+    )
+
+    df.to_csv(f"{PATHS.charts}/country_page/overview_food_sm.csv", index=False)
+
+
+def insufficient_food_chart() -> None:
+
+    wfp = _read_wfp()
+    source = "WFP HungerMapLive"
 
     food = (
         wfp.get_data("insufficient_food")
@@ -43,10 +105,19 @@ def insufficient_food_chart() -> pd.DataFrame:
         .reset_index()
     )
 
+    # Chart version
+    food.to_csv(f"{PATHS.charts}/country_page/insufficient_food_ts.csv", index=False)
 
-def food_inflation_chart() -> pd.DataFrame:
+    # Download_version
+    pd.concat([median, food], ignore_index=True).assign(source=source).to_csv(
+        f"{PATHS.download}/country_page/insufficient_food_ts.csv", index=False
+    )
+
+
+def food_inflation_chart() -> None:
 
     wfp = _read_wfp()
+    source = "Price inflation data from the WFP VAM resource centre"
 
     inflation = _wfp_inflation(wfp, "Food Inflation").dropna(subset=["value"])
 
@@ -68,4 +139,12 @@ def food_inflation_chart() -> pd.DataFrame:
         .drop("indicator_name", axis=1)
         .pivot(index="date", columns="name_short", values="value")
         .reset_index()
+    )
+
+    # Chart version
+    inflation.to_csv(f"{PATHS.charts}/country_page/food_inflation_ts.csv", index=False)
+
+    # Download version
+    pd.concat([median, inflation], ignore_index=True).assign(source=source).to_csv(
+        f"{PATHS.download}/country_page/food_inflation_ts.csv", index=False
     )

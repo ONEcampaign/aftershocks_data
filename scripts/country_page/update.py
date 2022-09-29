@@ -10,6 +10,11 @@ from scripts.country_page.financial_security import (
     poverty_chart,
     wb_poverty_single_measure,
 )
+from scripts.country_page.food_security import (
+    wfp_insufficient_food_single_measure,
+    insufficient_food_chart,
+    food_inflation_chart,
+)
 
 
 def update_daily_wfp_data() -> None:
@@ -77,13 +82,18 @@ def update_daily() -> None:
     update_daily_wfp_data()
 
     # Update related charts
-    inflation_overview()
-    inflation_ts_chart()
+    wfp_insufficient_food_single_measure()
+    insufficient_food_chart()
 
 
 def update_weekly() -> None:
     """Update all data that is updated weekly"""
     update_weekly_wfp_data()
+
+    # Update related charts
+    inflation_overview()
+    inflation_ts_chart()
+    food_inflation_chart()
 
 
 def update_monthly() -> None:

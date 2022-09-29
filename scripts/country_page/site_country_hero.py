@@ -16,24 +16,6 @@ from scripts.config import PATHS
 from scripts.owid_covid import tools as ot
 
 
-def _group_monthly_change(
-    group: pd.DataFrame,
-    value_columns: list,
-    percentage: bool,
-    months: int = 1,
-) -> pd.DataFrame:
-    sdate = group.date.max() - relativedelta(months=months)
-    edate = group.date.max()
-
-    return change_from_date(
-        group,
-        date_column="date",
-        start_date=sdate,
-        end_date=edate,
-        value_columns=value_columns,
-        percentage=percentage,
-    )
-
 
 def _group_interpolate(
     group: pd.DataFrame,
@@ -42,39 +24,6 @@ def _group_interpolate(
         method="linear", limit_direction="forward"
     )
 
-
-def _wfp_food_sm(wfp: WFPData) -> pd.DataFrame:
-    food = wfp.get_data("insufficient_food")
-
-    food = (
-        food.pipe(add_short_names_column, id_column="iso_code")
-        .pipe(filter_african_countries, id_type="ISO3")
-        .assign(indicator="People with insufficient food consumption")
-        .filter(["name_short", "date", "indicator", "value"], axis=1)
-    )
-
-    change = (
-        food.groupby(["name_short"])
-        .apply(_group_monthly_change, value_columns=["value"], percentage=True)
-        .reset_index(drop=True)
-        .filter(["name_short", "value"], axis=1)
-        .rename(columns={"value": "change"})
-    )
-
-    df = (
-        food.merge(change, on=["name_short"], how="left")
-        .groupby(["name_short"])
-        .last()
-        .reset_index()
-        .assign(
-            date=lambda d: "On " + date_to_str(d.date, "%d %B"),
-            lower="Change in the last month",
-            center=lambda d: d.change / d.change.max(),
-        )
-        .filter(["name_short", "date", "value", "lower", "change", "center"], axis=1)
-    )
-
-    df.to_csv(f"{PATHS.charts}/country_page/overview_food_sm.csv", index=False)
 
 
 def _wfp_charts() -> None:
