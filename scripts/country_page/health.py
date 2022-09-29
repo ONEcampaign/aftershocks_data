@@ -191,7 +191,6 @@ def leading_causes_of_death_column_chart() -> None:
             }
         )
         .drop(["death_rate_missing", "deaths_missing"], axis=1)
-        .assign(missing=lambda d: np.where(d.Cause.isna(), True, False))
     )
 
     # chart version
