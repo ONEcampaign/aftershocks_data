@@ -5,18 +5,7 @@ import pandas as pd
 from scripts.config import PATHS
 from scripts.owid_covid import tools as owid_tools
 from scripts.health.common import get_malaria_data
-
-
-def __clean_wb_overview(df: pd.DataFrame) -> pd.DataFrame:
-    """Clean World Bank data for overview charts"""
-
-    return (df
-            .loc[lambda d: d['iso_code'].isin(['WLD', 'SSA'])]
-            .pivot(index='date', columns='iso_code', values='value')
-            .reset_index()
-            .dropna(subset=['SSA', 'WLD'])
-            .rename(columns={'SSA': 'Sub-Saharan Africa', 'WLD': 'World'})
-            )
+from scripts.common import clean_wb_overview
 
 
 def wb_charts() -> None:
@@ -34,7 +23,7 @@ def wb_charts() -> None:
 
     for name, code in chart_indicators.items():
         (wb.get_data(code)
-         .pipe(__clean_wb_overview)
+         .pipe(clean_wb_overview)
          .to_csv(f'{PATHS.charts}/health/{name}.csv', index=False))
 
 
