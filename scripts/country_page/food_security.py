@@ -3,12 +3,11 @@ from bblocks.analysis_tools.get import change_from_date
 from bblocks.cleaning_tools.clean import date_to_str
 from bblocks.cleaning_tools.filter import filter_african_countries
 from bblocks.dataframe_tools.add import add_population_column, add_short_names_column
-from bblocks.import_tools.wfp import WFPData
+from dateutil.relativedelta import relativedelta
 
 from scripts import common
 from scripts.config import PATHS
 from scripts.country_page.financial_security import _read_wfp, _wfp_inflation
-from dateutil.relativedelta import relativedelta
 
 
 # ------------------------------------------------------------------------------
@@ -22,7 +21,6 @@ def _group_monthly_change(
     percentage: bool,
     months: int = 1,
 ) -> pd.DataFrame:
-
     sdate = group.date.max() - relativedelta(months=months)
     edate = group.date.max()
 
@@ -37,7 +35,6 @@ def _group_monthly_change(
 
 
 def wfp_insufficient_food_single_measure() -> None:
-
     wfp = _read_wfp()
     food = wfp.get_data("insufficient_food")
 
@@ -71,9 +68,25 @@ def wfp_insufficient_food_single_measure() -> None:
 
     df.to_csv(f"{PATHS.charts}/country_page/overview_food_sm.csv", index=False)
 
+    # dynamic version
+    kn = (
+        df.assign(
+            date=lambda d: d["date"].apply(lambda x: x.split("On")[1].strip()),
+            value=lambda d: d.value.map(lambda x: f"{x:,.0f}"),
+        )
+        .filter(["name_short", "date", "value"], axis=1)
+        .pipe(
+            common.df_to_key_number,
+            indicator_name="insufficient_food",
+            id_column="name_short",
+            value_columns=["value", "date"],
+        )
+    )
+
+    common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+
 
 def insufficient_food_chart() -> None:
-
     wfp = _read_wfp()
     source = "WFP HungerMapLive"
 
@@ -104,12 +117,16 @@ def insufficient_food_chart() -> None:
         pd.concat([median, food], ignore_index=True)
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
         .drop("iso_code", axis=1)
-        .pivot(index="date", columns="name_short", values="value")
-        .reset_index()
     )
 
+    food_pivot = food.pivot(
+        index="date", columns="name_short", values="value"
+    ).reset_index()
+
     # Chart version
-    food.to_csv(f"{PATHS.charts}/country_page/insufficient_food_ts.csv", index=False)
+    food_pivot.to_csv(
+        f"{PATHS.charts}/country_page/insufficient_food_ts.csv", index=False
+    )
 
     # Download_version
     pd.concat([median, food], ignore_index=True).assign(source=source).to_csv(
@@ -123,7 +140,6 @@ def insufficient_food_chart() -> None:
 
 
 def food_inflation_chart() -> None:
-
     wfp = _read_wfp()
     source = "Price inflation data from the WFP VAM resource centre"
 

@@ -1,0 +1,1272 @@
+{
+    "gdp_growth": {
+        "Angola": {
+            "value": "3.0%",
+            "year": "2022"
+        },
+        "Burundi": {
+            "value": "3.6%",
+            "year": "2022"
+        },
+        "Benin": {
+            "value": "5.9%",
+            "year": "2022"
+        },
+        "Burkina Faso": {
+            "value": "4.7%",
+            "year": "2022"
+        },
+        "Botswana": {
+            "value": "4.3%",
+            "year": "2022"
+        },
+        "Central African Republic": {
+            "value": "3.5%",
+            "year": "2022"
+        },
+        "Cote d'Ivoire": {
+            "value": "6.0%",
+            "year": "2022"
+        },
+        "Cameroon": {
+            "value": "4.3%",
+            "year": "2022"
+        },
+        "DR Congo": {
+            "value": "6.4%",
+            "year": "2022"
+        },
+        "Congo Republic": {
+            "value": "2.4%",
+            "year": "2022"
+        },
+        "Comoros": {
+            "value": "3.5%",
+            "year": "2022"
+        },
+        "Cabo Verde": {
+            "value": "5.2%",
+            "year": "2022"
+        },
+        "Djibouti": {
+            "value": "3.0%",
+            "year": "2022"
+        },
+        "Algeria": {
+            "value": "2.4%",
+            "year": "2022"
+        },
+        "Egypt": {
+            "value": "5.9%",
+            "year": "2022"
+        },
+        "Eritrea": {
+            "value": "4.7%",
+            "year": "2022"
+        },
+        "Ethiopia": {
+            "value": "3.8%",
+            "year": "2022"
+        },
+        "Gabon": {
+            "value": "2.7%",
+            "year": "2022"
+        },
+        "Ghana": {
+            "value": "5.2%",
+            "year": "2022"
+        },
+        "Guinea": {
+            "value": "4.8%",
+            "year": "2022"
+        },
+        "Gambia": {
+            "value": "5.6%",
+            "year": "2022"
+        },
+        "Guinea-Bissau": {
+            "value": "3.8%",
+            "year": "2022"
+        },
+        "Equatorial Guinea": {
+            "value": "6.1%",
+            "year": "2022"
+        },
+        "Kenya": {
+            "value": "5.7%",
+            "year": "2022"
+        },
+        "Liberia": {
+            "value": "4.5%",
+            "year": "2022"
+        },
+        "Libya": {
+            "value": "3.5%",
+            "year": "2022"
+        },
+        "Lesotho": {
+            "value": "3.1%",
+            "year": "2022"
+        },
+        "Morocco": {
+            "value": "1.1%",
+            "year": "2022"
+        },
+        "Madagascar": {
+            "value": "5.1%",
+            "year": "2022"
+        },
+        "Mali": {
+            "value": "2.0%",
+            "year": "2022"
+        },
+        "Mozambique": {
+            "value": "3.8%",
+            "year": "2022"
+        },
+        "Mauritania": {
+            "value": "5.0%",
+            "year": "2022"
+        },
+        "Mauritius": {
+            "value": "6.1%",
+            "year": "2022"
+        },
+        "Malawi": {
+            "value": "2.7%",
+            "year": "2022"
+        },
+        "Namibia": {
+            "value": "2.8%",
+            "year": "2022"
+        },
+        "Niger": {
+            "value": "6.9%",
+            "year": "2022"
+        },
+        "Nigeria": {
+            "value": "3.4%",
+            "year": "2022"
+        },
+        "Rwanda": {
+            "value": "6.4%",
+            "year": "2022"
+        },
+        "Sudan": {
+            "value": "0.3%",
+            "year": "2022"
+        },
+        "Senegal": {
+            "value": "5.0%",
+            "year": "2022"
+        },
+        "Sierra Leone": {
+            "value": "3.4%",
+            "year": "2022"
+        },
+        "Somalia": {
+            "value": "3.0%",
+            "year": "2022"
+        },
+        "South Sudan": {
+            "value": "6.5%",
+            "year": "2022"
+        },
+        "Sao Tome and Principe": {
+            "value": "1.6%",
+            "year": "2022"
+        },
+        "Eswatini": {
+            "value": "2.1%",
+            "year": "2022"
+        },
+        "Seychelles": {
+            "value": "4.6%",
+            "year": "2022"
+        },
+        "Chad": {
+            "value": "3.3%",
+            "year": "2022"
+        },
+        "Togo": {
+            "value": "5.6%",
+            "year": "2022"
+        },
+        "Tunisia": {
+            "value": "2.2%",
+            "year": "2022"
+        },
+        "Tanzania": {
+            "value": "4.8%",
+            "year": "2022"
+        },
+        "Uganda": {
+            "value": "4.9%",
+            "year": "2022"
+        },
+        "South Africa": {
+            "value": "1.9%",
+            "year": "2022"
+        },
+        "Zambia": {
+            "value": "3.1%",
+            "year": "2022"
+        },
+        "Zimbabwe": {
+            "value": "3.5%",
+            "year": "2022"
+        }
+    },
+    "poverty": {
+        "Central African Republic": {
+            "value": "65.9",
+            "Year": "2008"
+        },
+        "Congo Republic": {
+            "value": "39.6",
+            "Year": "2011"
+        },
+        "Algeria": {
+            "value": "0.4",
+            "Year": "2011"
+        },
+        "DR Congo": {
+            "value": "77.2",
+            "Year": "2012"
+        },
+        "Madagascar": {
+            "value": "78.8",
+            "Year": "2012"
+        },
+        "Morocco": {
+            "value": "0.9",
+            "Year": "2013"
+        },
+        "Burundi": {
+            "value": "72.8",
+            "Year": "2013"
+        },
+        "Comoros": {
+            "value": "19.1",
+            "Year": "2014"
+        },
+        "Mauritania": {
+            "value": "6.0",
+            "Year": "2014"
+        },
+        "South Africa": {
+            "value": "18.7",
+            "Year": "2014"
+        },
+        "Sudan": {
+            "value": "12.2",
+            "Year": "2014"
+        },
+        "Cameroon": {
+            "value": "26.0",
+            "Year": "2014"
+        },
+        "Mozambique": {
+            "value": "63.7",
+            "Year": "2014"
+        },
+        "Kenya": {
+            "value": "37.1",
+            "Year": "2015"
+        },
+        "Gambia": {
+            "value": "10.3",
+            "Year": "2015"
+        },
+        "Tunisia": {
+            "value": "0.2",
+            "Year": "2015"
+        },
+        "Ethiopia": {
+            "value": "30.8",
+            "Year": "2015"
+        },
+        "Namibia": {
+            "value": "13.8",
+            "Year": "2015"
+        },
+        "Zambia": {
+            "value": "58.7",
+            "Year": "2015"
+        },
+        "Cabo Verde": {
+            "value": "3.4",
+            "Year": "2015"
+        },
+        "Botswana": {
+            "value": "14.5",
+            "Year": "2015"
+        },
+        "Rwanda": {
+            "value": "56.5",
+            "Year": "2016"
+        },
+        "Ghana": {
+            "value": "12.7",
+            "Year": "2016"
+        },
+        "South Sudan": {
+            "value": "76.5",
+            "Year": "2016"
+        },
+        "Liberia": {
+            "value": "44.4",
+            "Year": "2016"
+        },
+        "Eswatini": {
+            "value": "29.2",
+            "Year": "2016"
+        },
+        "Djibouti": {
+            "value": "17.0",
+            "Year": "2017"
+        },
+        "Sao Tome and Principe": {
+            "value": "25.6",
+            "Year": "2017"
+        },
+        "Somalia": {
+            "value": "68.6",
+            "Year": "2017"
+        },
+        "Mauritius": {
+            "value": "0.2",
+            "Year": "2017"
+        },
+        "Gabon": {
+            "value": "3.4",
+            "Year": "2017"
+        },
+        "Egypt": {
+            "value": "3.8",
+            "Year": "2017"
+        },
+        "Lesotho": {
+            "value": "27.2",
+            "Year": "2017"
+        },
+        "World": {
+            "value": "8.7",
+            "Year": "2018"
+        },
+        "Guinea": {
+            "value": "23.2",
+            "Year": "2018"
+        },
+        "Sierra Leone": {
+            "value": "43.0",
+            "Year": "2018"
+        },
+        "Cote d'Ivoire": {
+            "value": "9.2",
+            "Year": "2018"
+        },
+        "Chad": {
+            "value": "33.2",
+            "Year": "2018"
+        },
+        "Nigeria": {
+            "value": "39.1",
+            "Year": "2018"
+        },
+        "Niger": {
+            "value": "41.4",
+            "Year": "2018"
+        },
+        "Senegal": {
+            "value": "7.6",
+            "Year": "2018"
+        },
+        "Seychelles": {
+            "value": "0.5",
+            "Year": "2018"
+        },
+        "Togo": {
+            "value": "24.1",
+            "Year": "2018"
+        },
+        "Benin": {
+            "value": "19.2",
+            "Year": "2018"
+        },
+        "Angola": {
+            "value": "49.9",
+            "Year": "2018"
+        },
+        "Guinea-Bissau": {
+            "value": "24.7",
+            "Year": "2018"
+        },
+        "Mali": {
+            "value": "16.3",
+            "Year": "2018"
+        },
+        "Burkina Faso": {
+            "value": "33.7",
+            "Year": "2018"
+        },
+        "Tanzania": {
+            "value": "49.4",
+            "Year": "2018"
+        },
+        "Zimbabwe": {
+            "value": "39.5",
+            "Year": "2019"
+        },
+        "Sub-Saharan Africa": {
+            "value": "38.3",
+            "Year": "2019"
+        },
+        "Uganda": {
+            "value": "41.0",
+            "Year": "2019"
+        },
+        "Malawi": {
+            "value": "73.5",
+            "Year": "2019"
+        }
+    },
+    "insufficient_food": {
+        "Algeria": {
+            "value": "4,726,997",
+            "date": "30 September"
+        },
+        "Angola": {
+            "value": "3,913,167",
+            "date": "30 September"
+        },
+        "Benin": {
+            "value": "4,917,495",
+            "date": "11 January"
+        },
+        "Botswana": {
+            "value": "248,704",
+            "date": "30 September"
+        },
+        "Burkina Faso": {
+            "value": "12,356,852",
+            "date": "30 September"
+        },
+        "Burundi": {
+            "value": "4,090,030",
+            "date": "30 September"
+        },
+        "Cabo Verde": {
+            "value": "83,022",
+            "date": "30 September"
+        },
+        "Cameroon": {
+            "value": "10,595,208",
+            "date": "30 September"
+        },
+        "Central African Republic": {
+            "value": "1,561,104",
+            "date": "30 September"
+        },
+        "Chad": {
+            "value": "5,687,669",
+            "date": "30 September"
+        },
+        "Comoros": {
+            "value": "158,924",
+            "date": "30 September"
+        },
+        "Congo Republic": {
+            "value": "1,879,013",
+            "date": "30 September"
+        },
+        "Cote d'Ivoire": {
+            "value": "4,901,924",
+            "date": "30 September"
+        },
+        "DR Congo": {
+            "value": "51,086,090",
+            "date": "30 September"
+        },
+        "Djibouti": {
+            "value": "170,619",
+            "date": "30 September"
+        },
+        "Egypt": {
+            "value": "11,094,713",
+            "date": "30 September"
+        },
+        "Eswatini": {
+            "value": "318,559",
+            "date": "30 September"
+        },
+        "Ethiopia": {
+            "value": "19,436,364",
+            "date": "30 September"
+        },
+        "Gambia": {
+            "value": "369,707",
+            "date": "30 September"
+        },
+        "Ghana": {
+            "value": "6,697,693",
+            "date": "30 September"
+        },
+        "Guinea": {
+            "value": "8,676,245",
+            "date": "30 September"
+        },
+        "Guinea-Bissau": {
+            "value": "629,194",
+            "date": "30 September"
+        },
+        "Kenya": {
+            "value": "10,554,162",
+            "date": "30 September"
+        },
+        "Lesotho": {
+            "value": "945,013",
+            "date": "30 September"
+        },
+        "Liberia": {
+            "value": "1,686,647",
+            "date": "30 September"
+        },
+        "Libya": {
+            "value": "1,257,986",
+            "date": "30 September"
+        },
+        "Madagascar": {
+            "value": "9,088,023",
+            "date": "30 September"
+        },
+        "Malawi": {
+            "value": "3,614,877",
+            "date": "30 September"
+        },
+        "Mali": {
+            "value": "12,998,145",
+            "date": "30 September"
+        },
+        "Mauritania": {
+            "value": "2,221,197",
+            "date": "22 September"
+        },
+        "Morocco": {
+            "value": "4,873,424",
+            "date": "30 September"
+        },
+        "Mozambique": {
+            "value": "7,576,162",
+            "date": "30 September"
+        },
+        "Namibia": {
+            "value": "337,463",
+            "date": "30 September"
+        },
+        "Niger": {
+            "value": "17,148,942",
+            "date": "30 September"
+        },
+        "Nigeria": {
+            "value": "55,171,382",
+            "date": "30 September"
+        },
+        "Rwanda": {
+            "value": "2,793,175",
+            "date": "30 September"
+        },
+        "Sao Tome and Principe": {
+            "value": "36,617",
+            "date": "30 September"
+        },
+        "Senegal": {
+            "value": "2,483,981",
+            "date": "30 September"
+        },
+        "Sierra Leone": {
+            "value": "4,555,532",
+            "date": "30 September"
+        },
+        "Somalia": {
+            "value": "11,170,753",
+            "date": "30 September"
+        },
+        "South Sudan": {
+            "value": "6,844,223",
+            "date": "30 September"
+        },
+        "Sudan": {
+            "value": "10,202,007",
+            "date": "30 September"
+        },
+        "Tanzania": {
+            "value": "6,050,392",
+            "date": "30 September"
+        },
+        "Togo": {
+            "value": "2,491,165",
+            "date": "30 September"
+        },
+        "Tunisia": {
+            "value": "1,338,744",
+            "date": "30 September"
+        },
+        "Uganda": {
+            "value": "15,471,017",
+            "date": "30 September"
+        },
+        "Zambia": {
+            "value": "2,010,665",
+            "date": "30 September"
+        },
+        "Zimbabwe": {
+            "value": "5,315,719",
+            "date": "30 September"
+        }
+    },
+    "vaccination": {
+        "Angola": {
+            "value": "22.6",
+            "date": "04 September"
+        },
+        "Burundi": {
+            "value": "0.2",
+            "date": "18 September"
+        },
+        "Benin": {
+            "value": "20.7",
+            "date": "18 September"
+        },
+        "Burkina Faso": {
+            "value": "9.6",
+            "date": "28 August"
+        },
+        "Botswana": {
+            "value": "53.1",
+            "date": "11 September"
+        },
+        "Central African Republic": {
+            "value": "28.8",
+            "date": "18 September"
+        },
+        "Cote d'Ivoire": {
+            "value": "32.1",
+            "date": "18 September"
+        },
+        "Cameroon": {
+            "value": "4.6",
+            "date": "11 September"
+        },
+        "DR Congo": {
+            "value": "3.2",
+            "date": "18 September"
+        },
+        "Congo Republic": {
+            "value": "11.2",
+            "date": "31 July"
+        },
+        "Comoros": {
+            "value": "46.5",
+            "date": "31 July"
+        },
+        "Cabo Verde": {
+            "value": "52.5",
+            "date": "18 September"
+        },
+        "Djibouti": {
+            "value": "19.5",
+            "date": "20 September"
+        },
+        "Algeria": {
+            "value": "14.7",
+            "date": "04 September"
+        },
+        "Egypt": {
+            "value": "36.1",
+            "date": "25 September"
+        },
+        "Ethiopia": {
+            "value": "30.5",
+            "date": "31 July"
+        },
+        "Gabon": {
+            "value": "11.0",
+            "date": "18 September"
+        },
+        "Ghana": {
+            "value": "25.5",
+            "date": "18 September"
+        },
+        "Guinea": {
+            "value": "21.4",
+            "date": "18 September"
+        },
+        "Gambia": {
+            "value": "13.5",
+            "date": "07 August"
+        },
+        "Guinea-Bissau": {
+            "value": "19.6",
+            "date": "18 September"
+        },
+        "Equatorial Guinea": {
+            "value": "13.1",
+            "date": "24 July"
+        },
+        "Kenya": {
+            "value": "18.8",
+            "date": "18 September"
+        },
+        "Liberia": {
+            "value": "59.0",
+            "date": "18 September"
+        },
+        "Libya": {
+            "value": "18.2",
+            "date": "21 September"
+        },
+        "Lesotho": {
+            "value": "38.2",
+            "date": "17 July"
+        },
+        "Morocco": {
+            "value": "63.4",
+            "date": "26 September"
+        },
+        "Madagascar": {
+            "value": "5.2",
+            "date": "18 September"
+        },
+        "Mali": {
+            "value": "8.0",
+            "date": "18 September"
+        },
+        "Mozambique": {
+            "value": "41.4",
+            "date": "11 September"
+        },
+        "Mauritania": {
+            "value": "30.8",
+            "date": "04 September"
+        },
+        "Mauritius": {
+            "value": "75.3",
+            "date": "18 September"
+        },
+        "Malawi": {
+            "value": "12.0",
+            "date": "18 September"
+        },
+        "Namibia": {
+            "value": "20.3",
+            "date": "18 September"
+        },
+        "Niger": {
+            "value": "11.8",
+            "date": "11 September"
+        },
+        "Nigeria": {
+            "value": "15.8",
+            "date": "18 September"
+        },
+        "Rwanda": {
+            "value": "66.4",
+            "date": "18 September"
+        },
+        "Sudan": {
+            "value": "9.9",
+            "date": "30 May"
+        },
+        "Senegal": {
+            "value": "6.6",
+            "date": "18 September"
+        },
+        "St. Helena": {
+            "value": "65.3",
+            "date": "05 May"
+        },
+        "Sierra Leone": {
+            "value": "28.7",
+            "date": "18 September"
+        },
+        "Somalia": {
+            "value": "19.4",
+            "date": "25 September"
+        },
+        "South Sudan": {
+            "value": "18.5",
+            "date": "18 September"
+        },
+        "Sao Tome and Principe": {
+            "value": "46.3",
+            "date": "18 September"
+        },
+        "Eswatini": {
+            "value": "41.2",
+            "date": "11 September"
+        },
+        "Seychelles": {
+            "value": "76.3",
+            "date": "18 September"
+        },
+        "Chad": {
+            "value": "21.0",
+            "date": "28 August"
+        },
+        "Togo": {
+            "value": "16.6",
+            "date": "11 September"
+        },
+        "Tunisia": {
+            "value": "52.0",
+            "date": "20 September"
+        },
+        "Tanzania": {
+            "value": "29.6",
+            "date": "18 September"
+        },
+        "Uganda": {
+            "value": "27.6",
+            "date": "18 September"
+        },
+        "South Africa": {
+            "value": "32.7",
+            "date": "28 September"
+        },
+        "Zambia": {
+            "value": "31.3",
+            "date": "28 September"
+        },
+        "Zimbabwe": {
+            "value": "29.6",
+            "date": "08 September"
+        }
+    },
+    "debt_service": {
+        "Angola": {
+            "debt_service": "7860.3",
+            "debt_service_share": "34.5"
+        },
+        "Burundi": {
+            "debt_service": "84.9",
+            "debt_service_share": "6.4"
+        },
+        "Benin": {
+            "debt_service": "464.4",
+            "debt_service_share": "13.5"
+        },
+        "Burkina Faso": {
+            "debt_service": "286.2",
+            "debt_service_share": "5.9"
+        },
+        "Botswana": {
+            "debt_service": "160.5",
+            "debt_service_share": "2.6"
+        },
+        "Central African Republic": {
+            "debt_service": "20.6",
+            "debt_service_share": "4.1"
+        },
+        "Cote d'Ivoire": {
+            "debt_service": "1993.4",
+            "debt_service_share": "13.8"
+        },
+        "Cameroon": {
+            "debt_service": "1507.4",
+            "debt_service_share": "19.0"
+        },
+        "DR Congo": {
+            "debt_service": "513.9",
+            "debt_service_share": "4.8"
+        },
+        "Congo Republic": {
+            "debt_service": "573.8",
+            "debt_service_share": "20.4"
+        },
+        "Comoros": {
+            "debt_service": "20.6",
+            "debt_service_share": "7.2"
+        },
+        "Cabo Verde": {
+            "debt_service": "133.4",
+            "debt_service_share": "19.0"
+        },
+        "Djibouti": {
+            "debt_service": "206.0",
+            "debt_service_share": "24.2"
+        },
+        "Algeria": {
+            "debt_service": "122.7",
+            "debt_service_share": "0.2"
+        },
+        "Egypt": {
+            "debt_service": "12432.6",
+            "debt_service_share": "10.1"
+        },
+        "Eritrea": {
+            "debt_service": "38.2",
+            "debt_service_share": "4.2"
+        },
+        "Ethiopia": {
+            "debt_service": "2522.9",
+            "debt_service_share": "16.5"
+        },
+        "Gabon": {
+            "debt_service": "583.2",
+            "debt_service_share": "16.8"
+        },
+        "Ghana": {
+            "debt_service": "2264.7",
+            "debt_service_share": "12.1"
+        },
+        "Guinea": {
+            "debt_service": "314.6",
+            "debt_service_share": "8.9"
+        },
+        "Gambia": {
+            "debt_service": "60.2",
+            "debt_service_share": "11.5"
+        },
+        "Guinea-Bissau": {
+            "debt_service": "40.4",
+            "debt_service_share": "11.1"
+        },
+        "Kenya": {
+            "debt_service": "3412.5",
+            "debt_service_share": "12.2"
+        },
+        "Liberia": {
+            "debt_service": "39.8",
+            "debt_service_share": "3.4"
+        },
+        "Lesotho": {
+            "debt_service": "71.6",
+            "debt_service_share": "5.1"
+        },
+        "Morocco": {
+            "debt_service": "5230.6",
+            "debt_service_share": "11.6"
+        },
+        "Madagascar": {
+            "debt_service": "170.2",
+            "debt_service_share": "5.6"
+        },
+        "Mali": {
+            "debt_service": "364.9",
+            "debt_service_share": "7.6"
+        },
+        "Mozambique": {
+            "debt_service": "836.2",
+            "debt_service_share": "14.3"
+        },
+        "Mauritania": {
+            "debt_service": "629.4",
+            "debt_service_share": "33.2"
+        },
+        "Mauritius": {
+            "debt_service": "207.5",
+            "debt_service_share": "6.4"
+        },
+        "Malawi": {
+            "debt_service": "107.8",
+            "debt_service_share": "3.9"
+        },
+        "Niger": {
+            "debt_service": "316.8",
+            "debt_service_share": "8.8"
+        },
+        "Nigeria": {
+            "debt_service": "2296.3",
+            "debt_service_share": "3.0"
+        },
+        "Rwanda": {
+            "debt_service": "153.1",
+            "debt_service_share": "3.9"
+        },
+        "Sudan": {
+            "debt_service": "639.0",
+            "debt_service_share": "16.3"
+        },
+        "Senegal": {
+            "debt_service": "1138.9",
+            "debt_service_share": "15.6"
+        },
+        "Sierra Leone": {
+            "debt_service": "61.3",
+            "debt_service_share": "6.0"
+        },
+        "Somalia": {
+            "debt_service": "55.1",
+            "debt_service_share": "9.8"
+        },
+        "Sao Tome and Principe": {
+            "debt_service": "8.4",
+            "debt_service_share": "5.4"
+        },
+        "Eswatini": {
+            "debt_service": "54.3",
+            "debt_service_share": "3.8"
+        },
+        "Chad": {
+            "debt_service": "417.1",
+            "debt_service_share": "19.3"
+        },
+        "Togo": {
+            "debt_service": "221.6",
+            "debt_service_share": "10.8"
+        },
+        "Tunisia": {
+            "debt_service": "3400.5",
+            "debt_service_share": "20.8"
+        },
+        "Tanzania": {
+            "debt_service": "1549.0",
+            "debt_service_share": "10.7"
+        },
+        "Uganda": {
+            "debt_service": "716.9",
+            "debt_service_share": "7.6"
+        },
+        "South Africa": {
+            "debt_service": "7180.4",
+            "debt_service_share": "5.1"
+        },
+        "Zambia": {
+            "debt_service": "2731.3",
+            "debt_service_share": "35.2"
+        },
+        "Zimbabwe": {
+            "debt_service": "174.1",
+            "debt_service_share": "2.5"
+        }
+    },
+    "debt_service_regions": {
+        "Africa": {
+            "debt_service": "64389.5",
+            "debt_service_share": "9.1"
+        }
+    },
+    "inflation": {
+        "Congo Republic": {
+            "value": "1.2",
+            "date": "30 April 2018"
+        },
+        "Eritrea": {
+            "value": "4.8",
+            "date": "31 December 2020"
+        },
+        "Equatorial Guinea": {
+            "value": "3.0",
+            "date": "31 December 2020"
+        },
+        "Central African Republic": {
+            "value": "4.2",
+            "date": "30 November 2021"
+        },
+        "Mali": {
+            "value": "8.7",
+            "date": "31 January 2022"
+        },
+        "Gabon": {
+            "value": "2.9",
+            "date": "31 March 2022"
+        },
+        "DR Congo": {
+            "value": "7.07",
+            "date": "30 April 2022"
+        },
+        "Djibouti": {
+            "value": "5.3",
+            "date": "31 May 2022"
+        },
+        "Cameroon": {
+            "value": "5.93",
+            "date": "31 May 2022"
+        },
+        "Comoros": {
+            "value": "11.4",
+            "date": "30 June 2022"
+        },
+        "Libya": {
+            "value": "5.0",
+            "date": "30 June 2022"
+        },
+        "Sudan": {
+            "value": "148.9",
+            "date": "30 June 2022"
+        },
+        "Guinea": {
+            "value": "12.5",
+            "date": "30 June 2022"
+        },
+        "Algeria": {
+            "value": "11.7",
+            "date": "30 June 2022"
+        },
+        "Guinea-Bissau": {
+            "value": "8.3",
+            "date": "30 June 2022"
+        },
+        "Chad": {
+            "value": "5.3",
+            "date": "30 June 2022"
+        },
+        "Sao Tome and Principe": {
+            "value": "16.7",
+            "date": "30 June 2022"
+        },
+        "Sierra Leone": {
+            "value": "28.0",
+            "date": "30 June 2022"
+        },
+        "Senegal": {
+            "value": "11.0",
+            "date": "31 July 2022"
+        },
+        "Cote d'Ivoire": {
+            "value": "5.4",
+            "date": "31 July 2022"
+        },
+        "South Africa": {
+            "value": "7.8",
+            "date": "31 July 2022"
+        },
+        "Eswatini": {
+            "value": "5.4",
+            "date": "31 July 2022"
+        },
+        "Cabo Verde": {
+            "value": "9.0",
+            "date": "31 July 2022"
+        },
+        "Kenya": {
+            "value": "8.3",
+            "date": "31 July 2022"
+        },
+        "Burundi": {
+            "value": "19.055",
+            "date": "31 July 2022"
+        },
+        "Africa (median)": {
+            "value": "9.4",
+            "date": "31 July 2022"
+        },
+        "South Sudan": {
+            "value": "6.43",
+            "date": "31 July 2022"
+        },
+        "Morocco": {
+            "value": "7.7",
+            "date": "31 July 2022"
+        },
+        "Lesotho": {
+            "value": "9.8",
+            "date": "31 July 2022"
+        },
+        "Liberia": {
+            "value": "6.48",
+            "date": "31 July 2022"
+        },
+        "Ethiopia": {
+            "value": "33.5",
+            "date": "31 July 2022"
+        },
+        "Mauritania": {
+            "value": "10.6",
+            "date": "31 July 2022"
+        },
+        "Nigeria": {
+            "value": "19.64",
+            "date": "31 July 2022"
+        },
+        "Mauritius": {
+            "value": "11.0",
+            "date": "31 July 2022"
+        },
+        "Tanzania": {
+            "value": "4.5",
+            "date": "31 July 2022"
+        },
+        "Seychelles": {
+            "value": "3.53",
+            "date": "31 July 2022"
+        },
+        "Namibia": {
+            "value": "6.8",
+            "date": "31 July 2022"
+        },
+        "Madagascar": {
+            "value": "8.4",
+            "date": "31 July 2022"
+        },
+        "Angola": {
+            "value": "21.4",
+            "date": "31 July 2022"
+        },
+        "Burkina Faso": {
+            "value": "18.2",
+            "date": "31 July 2022"
+        },
+        "Botswana": {
+            "value": "14.3",
+            "date": "31 July 2022"
+        },
+        "Benin": {
+            "value": "-1.0",
+            "date": "31 July 2022"
+        },
+        "Mozambique": {
+            "value": "11.77",
+            "date": "31 July 2022"
+        },
+        "Niger": {
+            "value": "3.8",
+            "date": "31 July 2022"
+        },
+        "Malawi": {
+            "value": "24.6",
+            "date": "31 July 2022"
+        },
+        "Togo": {
+            "value": "6.0",
+            "date": "31 July 2022"
+        },
+        "Ghana": {
+            "value": "33.9",
+            "date": "31 August 2022"
+        },
+        "Zambia": {
+            "value": "9.8",
+            "date": "31 August 2022"
+        },
+        "Egypt": {
+            "value": "14.6",
+            "date": "31 August 2022"
+        },
+        "Rwanda": {
+            "value": "20.4",
+            "date": "31 August 2022"
+        },
+        "Gambia": {
+            "value": "12.9",
+            "date": "31 August 2022"
+        },
+        "Uganda": {
+            "value": "9.0",
+            "date": "31 August 2022"
+        },
+        "Somalia": {
+            "value": "7.6",
+            "date": "31 August 2022"
+        },
+        "Tunisia": {
+            "value": "8.6",
+            "date": "31 August 2022"
+        },
+        "Zimbabwe": {
+            "value": "280.4",
+            "date": "30 September 2022"
+        }
+    }
+}

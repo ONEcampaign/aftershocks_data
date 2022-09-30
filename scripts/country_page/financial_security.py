@@ -1,4 +1,5 @@
 import pandas as pd
+from bblocks.cleaning_tools.clean import format_number
 from bblocks.cleaning_tools.filter import filter_african_countries
 from bblocks.dataframe_tools.add import add_short_names_column, add_iso_codes_column
 from bblocks.import_tools.imf import WorldEconomicOutlook
@@ -94,6 +95,23 @@ def inflation_ts_chart() -> None:
         f"{PATHS.download}/country_page/inflation_ts_by_country.csv", index=False
     )
 
+    # Dynamic text version
+    kn = (
+        inflation.melt(id_vars="date")
+        .sort_values("date")
+        .dropna(subset=["value"])
+        .drop_duplicates(["name_short"], keep="last")
+        .assign(date=lambda d: d.date.dt.strftime("%d %B %Y"))
+        .pipe(
+            common.df_to_key_number,
+            indicator_name="inflation",
+            id_column="name_short",
+            value_columns=["value", "date"],
+        )
+    )
+
+    common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+
 
 # ------------------------------------------------------------------------------
 # Country Page - Growth
@@ -177,6 +195,20 @@ def gdp_growth_single_measure() -> None:
     gdp_growth_chart.to_csv(
         f"{PATHS.charts}/country_page/overview_GDP_growth.csv", index=False
     )
+
+    # dynamic text version
+    kn = (
+        gdp_growth_chart.filter(["name_short", "value"], axis=1)
+        .assign(year=WEO_YEAR, value=lambda d: d.value.round(1).astype(str) + "%")
+        .pipe(
+            common.df_to_key_number,
+            indicator_name="gdp_growth",
+            id_column="name_short",
+            value_columns=["value", "year"],
+        )
+    )
+
+    common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
 
 
 # ------------------------------------------------------------------------------
@@ -277,13 +309,31 @@ def poverty_chart() -> None:
     data.to_csv(f"{PATHS.charts}/country_page/poverty_country_ts.csv", index=False)
 
     # download version
-    (
+    data_download = (
         data.melt(id_vars=["Year", "Indicator"], var_name="country")
         .assign(source=source)
         .pipe(add_iso_codes_column, id_column="country", id_type="regex")
         .filter(["iso_code", "country", "Year", "Indicator", "value", "source"], axis=1)
-        .to_csv(f"{PATHS.download}/country_page/poverty_country_ts.csv", index=False)
     )
+    data_download.to_csv(
+        f"{PATHS.download}/country_page/poverty_country_ts.csv", index=False
+    )
+
+    # dynamic text version
+    kn = (
+        data_download.sort_values("Year")
+        .dropna(subset=["value"])
+        .drop_duplicates(["country", "Indicator"], keep="last")
+        .loc[lambda d: d.Indicator == "% of population below the poverty line"]
+        .pipe(
+            common.df_to_key_number,
+            indicator_name="poverty",
+            id_column="country",
+            value_columns=["value", "Year"],
+        )
+    )
+
+    common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
 
 
 # --------------- Overview Single Measure ---------------

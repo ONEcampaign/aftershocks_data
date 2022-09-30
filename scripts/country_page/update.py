@@ -6,7 +6,7 @@ from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.common import CAUSES_OF_DEATH_YEAR
 from scripts.config import PATHS
-from scripts.country_page.debt import debt_chart
+from scripts.country_page.debt import debt_chart_country, debt_chart_region
 from scripts.country_page.financial_security import (
     inflation_overview,
     inflation_ts_chart,
@@ -26,7 +26,8 @@ from scripts.country_page.health import (
     life_expectancy_chart,
     art_chart,
     malaria_chart,
-    dpt_chart, leading_causes_of_death_column_chart,
+    dpt_chart,
+    leading_causes_of_death_column_chart,
 )
 from scripts.country_page.health_update import (
     get_ghe_url,
@@ -35,6 +36,7 @@ from scripts.country_page.health_update import (
     clean_art,
     unpack_malaria,
 )
+from scripts.country_page.overview_text import build_summary
 from scripts.explorers.common import base_africa_map
 
 
@@ -168,6 +170,9 @@ def update_daily() -> None:
     # Update charts for which underlying data is updated elsewhere
     vaccination_rate_single_measure()
 
+    # Update live text
+    build_summary()
+
 
 def update_weekly() -> None:
     """Update all data that is updated weekly"""
@@ -200,7 +205,8 @@ def update_monthly() -> None:
     gdp_growth_single_measure()
     poverty_chart()
     wb_poverty_single_measure()
-    debt_chart()
+    debt_chart_country()
+    debt_chart_region()
 
     # Health
     leading_causes_of_death_chart()

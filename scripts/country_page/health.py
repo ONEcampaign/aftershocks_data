@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import requests
 from bblocks.cleaning_tools.clean import format_number, convert_id
 from bblocks.cleaning_tools.filter import filter_latest_by, filter_african_countries
 from bblocks.dataframe_tools.add import add_short_names_column
@@ -81,6 +80,23 @@ def vaccination_rate_single_measure() -> None:
 
     # Chart version
     vax.to_csv(f"{PATHS.charts}/country_page/{chart_name}.csv", index=False)
+
+    # dynamic text version
+    kn = (
+        vax.assign(
+            date=lambda d: d["As of"].apply(lambda x: x.split("As of")[1].strip()),
+            value=lambda d: d.value.round(1).astype(str),
+        )
+        .filter(["name_short", "date", "value"], axis=1)
+        .pipe(
+            common.df_to_key_number,
+            indicator_name="vaccination",
+            id_column="name_short",
+            value_columns=["value", "date"],
+        )
+    )
+
+    common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
 
 
 # ------------------------------------------------------------------------------
@@ -178,20 +194,17 @@ def leading_causes_of_death_column_chart() -> None:
 
     dfc.columns = [f"{a}_{b}".split(".")[0] for a, b in dfc.columns]
 
-    dfc = (
-        dfc.rename(
-            columns={
-                "name_short_": "Country",
-                "cause_": "Cause",
-                "cause_group_": "Type",
-                "death_rate_2000": "2000",
-                "death_rate_2019": "2019",
-                "deaths_2000": "Deaths (2000)",
-                "deaths_2019": "Deaths (2019)",
-            }
-        )
-        .drop(["death_rate_missing", "deaths_missing"], axis=1)
-    )
+    dfc = dfc.rename(
+        columns={
+            "name_short_": "Country",
+            "cause_": "Cause",
+            "cause_group_": "Type",
+            "death_rate_2000": "2000",
+            "death_rate_2019": "2019",
+            "deaths_2000": "Deaths (2000)",
+            "deaths_2019": "Deaths (2019)",
+        }
+    ).drop(["death_rate_missing", "deaths_missing"], axis=1)
 
     # chart version
     dfc.to_csv(
@@ -241,6 +254,22 @@ def life_expectancy_chart() -> None:
 
     # download version
     chart.to_csv(f"{PATHS.download}/country_page/life_expectancy.csv", index=False)
+
+    # dynamic version
+    kn = (
+        df.sort_values("year")
+        .dropna(subset=["value"])
+        .drop_duplicates("name_short", keep="last")
+        .assign(value=lambda d: round(d.value, 1))
+        .pipe(
+            common.df_to_key_number,
+            id_column="name_short",
+            indicator_name="life_expectancy",
+            value_columns="value",
+        )
+    )
+
+    common.update_key_number(f"{PATHS.charts}/country_page/health.json", kn)
 
 
 # ------------------------------------------------------------------------------
@@ -344,10 +373,12 @@ def malaria_chart() -> None:
             axis=1,
         )
         .sort_values(["name_short", "year"])
-        .rename(columns={
-            "MALARIA_EST_MORTALITY": "Malaria mortality rate (per 100K people)",
-            "MALARIA_EST_DEATHS": "Malaria deaths (estimated)",
-        })
+        .rename(
+            columns={
+                "MALARIA_EST_MORTALITY": "Malaria mortality rate (per 100K people)",
+                "MALARIA_EST_DEATHS": "Malaria deaths (estimated)",
+            }
+        )
     )
 
     # chart version
