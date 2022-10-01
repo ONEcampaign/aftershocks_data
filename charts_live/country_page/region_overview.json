@@ -90,5 +90,51 @@
             "value": "4.2%",
             "year": "2022"
         }
+    },
+    "insufficient_food": {
+        "North Africa (WB)": {
+            "value": "23,441,569",
+            "date": "01 October"
+        },
+        "Sub-Saharan Africa (WB)": {
+            "value": "329,603,146",
+            "date": "01 October"
+        },
+        "Africa": {
+            "value": "353,044,715",
+            "date": "01 October"
+        },
+        "Sub-Saharan Africa (UN)": {
+            "value": "319,505,799",
+            "date": "01 October"
+        },
+        "Eastern and Southern Africa": {
+            "value": "172,175,012",
+            "date": "01 October"
+        },
+        "Western and Central Africa": {
+            "value": "157,258,467",
+            "date": "01 October"
+        },
+        "Northern Africa": {
+            "value": "33,538,916",
+            "date": "01 October"
+        },
+        "Middle Africa": {
+            "value": "75,554,387",
+            "date": "01 October"
+        },
+        "Western Africa": {
+            "value": "137,328,052",
+            "date": "01 October"
+        },
+        "Southern Africa": {
+            "value": "1,834,586",
+            "date": "01 October"
+        },
+        "Eastern Africa": {
+            "value": "104,788,774",
+            "date": "01 October"
+        }
     }
 }

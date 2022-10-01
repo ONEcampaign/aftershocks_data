@@ -2,7 +2,11 @@ import pandas as pd
 from bblocks.analysis_tools.get import change_from_date
 from bblocks.cleaning_tools.clean import date_to_str
 from bblocks.cleaning_tools.filter import filter_african_countries
-from bblocks.dataframe_tools.add import add_population_column, add_short_names_column
+from bblocks.dataframe_tools.add import (
+    add_population_column,
+    add_short_names_column,
+    add_iso_codes_column,
+)
 from dateutil.relativedelta import relativedelta
 
 from scripts import common
@@ -84,6 +88,58 @@ def wfp_insufficient_food_single_measure() -> None:
     )
 
     common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+
+    # ---- REGIONS
+
+    regions = []
+    for region in common.regions():
+        _ = (
+            df.pipe(add_iso_codes_column, id_column="name_short", id_type="name_short")
+            .loc[lambda d: d.iso_code.isin(common.regions()[region])]
+            .assign(previous=lambda d: d.value * (d.change + 1))
+            .groupby("lower", as_index=False)
+            .agg(
+                {
+                    "value": "sum",
+                    "previous": "sum",
+                    "change": "mean",
+                    "center": "median",
+                    "date": pd.Series.mode,
+                }
+            )
+            .assign(change=lambda d: d.value / d.previous - 1, name_short=region)
+            .drop("previous", axis=1)
+            .assign(name_short=lambda d: d.name_short.replace(common.region_names()))
+            .filter(
+                ["name_short", "date", "value", "lower", "change", "center"], axis=1
+            )
+        )
+        regions.append(_)
+
+    regions = pd.concat(regions, ignore_index=True)
+
+    regions.to_csv(
+        f"{PATHS.charts}/country_page/overview_food_sm_region.csv", index=False
+    )
+
+    # dynamic regions version
+    kn_region = (
+        regions.assign(
+            date=lambda d: d["date"].apply(lambda x: x.split("On")[1].strip()),
+            value=lambda d: d.value.map(lambda x: f"{x:,.0f}"),
+        )
+        .filter(["name_short", "date", "value"], axis=1)
+        .pipe(
+            common.df_to_key_number,
+            indicator_name="insufficient_food",
+            id_column="name_short",
+            value_columns=["value", "date"],
+        )
+    )
+
+    common.update_key_number(
+        f"{PATHS.charts}/country_page/region_overview.json", kn_region
+    )
 
 
 def insufficient_food_chart() -> None:
