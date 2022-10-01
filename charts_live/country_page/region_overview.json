@@ -1,0 +1,78 @@
+{
+    "inflation": {
+        "Northern Africa": {
+            "value": "8.2",
+            "date": "31 July 2022"
+        },
+        "North Africa (UN)": {
+            "value": "8.2",
+            "date": "31 July 2022"
+        },
+        "Southern Africa": {
+            "value": "7.8",
+            "date": "31 July 2022"
+        },
+        "Sub-Saharan Africa (WB)": {
+            "value": "9.8",
+            "date": "31 July 2022"
+        },
+        "Middle Africa": {
+            "value": "21.4",
+            "date": "31 July 2022"
+        },
+        "Africa": {
+            "value": "9.4",
+            "date": "31 July 2022"
+        },
+        "Sub-Saharan Africa (UN)": {
+            "value": "9.8",
+            "date": "31 July 2022"
+        },
+        "Western Africa": {
+            "value": "9.8",
+            "date": "31 July 2022"
+        },
+        "Eastern Africa": {
+            "value": "9.9",
+            "date": "31 July 2022"
+        }
+    },
+    "gdp_growth": {
+        "North Africa (UN)": {
+            "value": "2.4%",
+            "year": "2022"
+        },
+        "Sub-Saharan Africa (WB)": {
+            "value": "4.3%",
+            "year": "2022"
+        },
+        "Africa": {
+            "value": "3.8%",
+            "year": "2022"
+        },
+        "Sub-Saharan Africa (UN)": {
+            "value": "4.3%",
+            "year": "2022"
+        },
+        "Northern Africa": {
+            "value": "2.3%",
+            "year": "2022"
+        },
+        "Middle Africa": {
+            "value": "3.3%",
+            "year": "2022"
+        },
+        "Western Africa": {
+            "value": "5.0%",
+            "year": "2022"
+        },
+        "Southern Africa": {
+            "value": "2.8%",
+            "year": "2022"
+        },
+        "Eastern Africa": {
+            "value": "4.2%",
+            "year": "2022"
+        }
+    }
+}

@@ -6,36 +6,13 @@ from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.common import CAUSES_OF_DEATH_YEAR
 from scripts.config import PATHS
+from scripts.country_page import (
+    financial_security,
+    food_security,
+    health,
+    health_update as hu,
+)
 from scripts.country_page.debt import debt_chart_country, debt_chart_region
-from scripts.country_page.financial_security import (
-    inflation_overview,
-    inflation_ts_chart,
-    gdp_growth_single_measure,
-    WB_INDICATORS,
-    poverty_chart,
-    wb_poverty_single_measure,
-)
-from scripts.country_page.food_security import (
-    wfp_insufficient_food_single_measure,
-    insufficient_food_chart,
-    food_inflation_chart,
-)
-from scripts.country_page.health import (
-    vaccination_rate_single_measure,
-    leading_causes_of_death_chart,
-    life_expectancy_chart,
-    art_chart,
-    malaria_chart,
-    dpt_chart,
-    leading_causes_of_death_column_chart,
-)
-from scripts.country_page.health_update import (
-    get_ghe_url,
-    unpack_ghe_country,
-    clean_hiv,
-    clean_art,
-    unpack_malaria,
-)
 from scripts.country_page.overview_text import build_summary
 from scripts.explorers.common import base_africa_map
 
@@ -48,8 +25,8 @@ def update_monthly_leading_causes_of_death() -> None:
     africa = base_africa_map().iso_code.to_list()
 
     for country in africa:
-        d = requests.get(get_ghe_url(country, request_year)).json()["value"]
-        dfs.append(unpack_ghe_country(country, d, request_year))
+        d = requests.get(hu.get_ghe_url(country, request_year)).json()["value"]
+        dfs.append(hu.unpack_ghe_country(country, d, request_year))
 
     df = pd.concat(dfs, ignore_index=True)
 
@@ -68,11 +45,11 @@ def update_monthly_hiv_data() -> None:
     files = pd.read_excel(url, sheet_name=[0, 1, 2, 3])
 
     # HIV country file
-    df_hiv = clean_hiv(files[0])
+    df_hiv = hu.clean_hiv(files[0])
     df_hiv.to_csv(f"{PATHS.raw_data}/health/hiv_estimates.csv", index=False)
 
     # ART file
-    df_art = clean_art(files[2])
+    df_art = hu.clean_art(files[2])
     df_art.to_csv(f"{PATHS.raw_data}/health/art_estimates.csv", index=False)
 
 
@@ -80,8 +57,8 @@ def update_monthly_malaria_data() -> None:
     indicator = "MALARIA_EST_DEATHS"
     indicator2 = "MALARIA_EST_MORTALITY"
 
-    deaths = unpack_malaria(indicator)
-    mortality = unpack_malaria(indicator2)
+    deaths = hu.unpack_malaria(indicator)
+    mortality = hu.unpack_malaria(indicator2)
 
     df = pd.concat([deaths, mortality], ignore_index=True)
 
@@ -128,7 +105,7 @@ def update_monthly_wb_data() -> None:
     wb = WorldBankData()
 
     # Load indicators
-    for _ in WB_INDICATORS:
+    for _ in financial_security.WB_INDICATORS:
         wb.load_indicator(_)
 
     # update full timeseries data
@@ -140,14 +117,13 @@ def update_monthly_wb_data() -> None:
     wb_recent = WorldBankData()
 
     # Load only most recent data
-    for _ in WB_INDICATORS:
+    for _ in financial_security.WB_INDICATORS:
         wb_recent.load_indicator(_, most_recent_only=True)
 
     wb_recent.update()
 
 
 def update_monthly_debt_data() -> None:
-
     url: str = (
         "https://onecampaign.github.io/project_covid-19_tracker/c07_debt_service_ts.csv"
     )
@@ -164,11 +140,11 @@ def update_daily() -> None:
     update_daily_wfp_data()
 
     # Update related charts
-    wfp_insufficient_food_single_measure()
-    insufficient_food_chart()
+    food_security.wfp_insufficient_food_single_measure()
+    food_security.insufficient_food_chart()
 
     # Update charts for which underlying data is updated elsewhere
-    vaccination_rate_single_measure()
+    health.vaccination_rate_single_measure()
 
     # Update live text
     build_summary()
@@ -179,9 +155,11 @@ def update_weekly() -> None:
     update_weekly_wfp_data()
 
     # Update related charts
-    inflation_overview()
-    inflation_ts_chart()
-    food_inflation_chart()
+    financial_security.inflation_overview()
+    financial_security.inflation_overview_regions()
+
+    financial_security.inflation_ts_chart()
+    food_security.food_inflation_chart()
 
 
 def update_monthly() -> None:
@@ -202,16 +180,17 @@ def update_monthly() -> None:
     # ------- update related charts-----------
 
     # Financial security
-    gdp_growth_single_measure()
-    poverty_chart()
-    wb_poverty_single_measure()
+    financial_security.gdp_growth_single_measure()
+    financial_security.gdp_growth_regions_single_measure()
+    financial_security.poverty_chart()
+    financial_security.wb_poverty_single_measure()
     debt_chart_country()
     debt_chart_region()
 
     # Health
-    leading_causes_of_death_chart()
-    leading_causes_of_death_column_chart()
-    life_expectancy_chart()
-    art_chart()
-    malaria_chart()
-    dpt_chart()
+    health.leading_causes_of_death_chart()
+    health.leading_causes_of_death_column_chart()
+    health.life_expectancy_chart()
+    health.art_chart()
+    health.malaria_chart()
+    health.dpt_chart()

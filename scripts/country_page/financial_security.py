@@ -92,6 +92,22 @@ def inflation_overview_regions() -> None:
         f"{PATHS.charts}/country_page/overview_inflation_regions.csv", index=False
     )
 
+    # Dynamic text version
+    kn = (
+        inflation.sort_values("date")
+        .dropna(subset=["value"])
+        .drop_duplicates(["name_short"], keep="last")
+        .assign(date=lambda d: d.date.dt.strftime("%d %B %Y"))
+        .pipe(
+            common.df_to_key_number,
+            indicator_name="inflation",
+            id_column="name_short",
+            value_columns=["value", "date"],
+        )
+    )
+
+    common.update_key_number(f"{PATHS.charts}/country_page/region_overview.json", kn)
+
 
 # ---------- TIME SERIES ----------
 def inflation_ts_chart() -> None:
@@ -246,6 +262,47 @@ def gdp_growth_single_measure() -> None:
     )
 
     common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+
+
+def gdp_growth_regions_single_measure() -> None:
+    gdp_growth = __single_weo_measure("NGDP_RPCH", comparison_year_difference=1).pipe(
+        add_iso_codes_column, id_column="name_short", id_type="name_short"
+    )
+
+    dfs = []
+
+    for region in common.regions():
+        _ = (
+            gdp_growth.loc[lambda d: d.iso_code.isin(common.regions()[region])]
+            .groupby(["indicator_name", "lower"], as_index=False)
+            .median()
+            .assign(name_short=common.region_names()[region])
+            .assign(indicator_name=f"{WEO_YEAR} estimate (median)")
+        )
+        dfs.append(_)
+
+    gdp_growth = pd.concat(dfs, ignore_index=True).filter(
+        ["name_short", "indicator_name", "value", "lower", "value_previous", "center"],
+        axis=1,
+    )
+
+    # chart version
+    gdp_growth.to_csv(
+        f"{PATHS.charts}/country_page/overview_GDP_growth_regions.csv", index=False
+    )
+
+    kn = (
+        gdp_growth.filter(["name_short", "value"], axis=1)
+        .assign(year=WEO_YEAR, value=lambda d: d.value.round(1).astype(str) + "%")
+        .pipe(
+            common.df_to_key_number,
+            indicator_name="gdp_growth",
+            id_column="name_short",
+            value_columns=["value", "year"],
+        )
+    )
+
+    common.update_key_number(f"{PATHS.charts}/country_page/region_overview.json", kn)
 
 
 # ------------------------------------------------------------------------------
