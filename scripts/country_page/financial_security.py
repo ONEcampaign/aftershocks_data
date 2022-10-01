@@ -326,7 +326,9 @@ def _read_wb_ts() -> dict:
     for indicator in wb.indicators:
         dfs[indicator] = (
             wb.get_data(indicator)
-            .pipe(filter_african_countries, id_column="iso_code", id_type="ISO3")
+            .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
+            .copy()
+            .assign(iso_code=lambda d: d.iso_code.replace(common.region_names()))
             .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
             .assign(indicator=lambda d: d.indicator_code.map(WB_INDICATORS))
             .filter(["date", "name_short", "indicator", "value"], axis=1)
