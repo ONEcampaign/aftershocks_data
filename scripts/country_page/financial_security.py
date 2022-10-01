@@ -63,6 +63,14 @@ def inflation_overview_regions() -> None:
         add_iso_codes_column, id_column="name_short", id_type="name_short"
     )
 
+    incomplete = (
+        inflation.groupby("date", as_index=False)
+        .value.count()
+        .loc[lambda d: d.value < 30]
+    )
+
+    inflation = inflation.loc[lambda d: ~d.date.isin(incomplete.date)]
+
     dfs = []
 
     for region in common.regions():
