@@ -1,5 +1,4 @@
 import pandas as pd
-from bblocks.cleaning_tools.clean import format_number
 from bblocks.cleaning_tools.filter import filter_african_countries
 from bblocks.dataframe_tools.add import add_short_names_column, add_iso_codes_column
 from bblocks.import_tools.imf import WorldEconomicOutlook
@@ -54,6 +53,36 @@ def inflation_overview() -> None:
 
     # Live chart version
     inflation.to_csv(f"{PATHS.charts}/country_page/overview_inflation.csv", index=False)
+
+
+def inflation_overview_regions() -> None:
+
+    wfp = _read_wfp()
+
+    inflation = _wfp_inflation(wfp).pipe(
+        add_iso_codes_column, id_column="name_short", id_type="name_short"
+    )
+
+    dfs = []
+
+    for region in common.regions():
+        _ = (
+            inflation.loc[lambda d: d.iso_code.isin(common.regions()[region])]
+            .groupby(["date"], as_index=False)
+            .value.median()
+            .assign(name_short=common.region_names()[region])
+            .assign(indicator_name="Inflation Rate (median)")
+        )
+        dfs.append(_)
+
+    inflation = pd.concat(dfs, ignore_index=True).filter(
+        ["name_short", "date", "indicator_name", "value"]
+    )
+
+    # Live chart version
+    inflation.to_csv(
+        f"{PATHS.charts}/country_page/overview_inflation_regions.csv", index=False
+    )
 
 
 # ---------- TIME SERIES ----------
@@ -243,7 +272,6 @@ def _read_wb_ts() -> dict:
 
 # --------------- Time Series by country ---------------
 def poverty_chart() -> None:
-
     indicator_names = {
         "value_poverty": "% of population below the poverty line",
         "people_in_poverty": "People below the poverty line",
@@ -295,7 +323,6 @@ def poverty_chart() -> None:
     dfs = []
 
     for d in df.Indicator.unique():
-
         _ = (
             df.loc[lambda x: x.Indicator == d]
             .pivot(index=["Year", "Indicator"], columns="name_short", values="value")
@@ -338,7 +365,6 @@ def poverty_chart() -> None:
 
 # --------------- Overview Single Measure ---------------
 def wb_poverty_single_measure() -> None:
-
     data_dict = _read_wb_ts()
 
     df90s = (

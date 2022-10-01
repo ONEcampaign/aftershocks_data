@@ -6,6 +6,10 @@ import pandas as pd
 from country_converter import country_converter
 
 
+WEO_YEAR: int = 2022
+CAUSES_OF_DEATH_YEAR = 2019
+
+
 def get_full_africa_iso3() -> list:
     africa = (
         coco.CountryConverter()
@@ -59,8 +63,59 @@ def base_africa_df():
     )
 
 
-WEO_YEAR: int = 2022
-CAUSES_OF_DEATH_YEAR = 2019
+def regions() -> dict:
+
+    north_africa_wb = [
+        "DZA",
+        "EGY",
+        "LBY",
+        "MAR",
+        "TUN",
+    ]
+
+    un_mapping = {
+        "Northern Africa": "NAF",
+        "Middle Africa": "MAF",
+        "Western Africa": "WAF",
+        "Eastern Africa": "EAF",
+        "Southern Africa": "SAF",
+    }
+
+    data = (
+        country_converter.CountryConverter()
+        .data[["ISO3", "continent", "UNregion"]]
+        .rename(columns={"ISO3": "iso_code"})
+        .query("continent == 'Africa'")
+        .assign(un=lambda d: d.UNregion.map(un_mapping))
+    )
+
+    regions_dict = {
+        "NAF_WB": north_africa_wb,
+        "SSA_WB": data.query("iso_code not in @north_africa_wb").iso_code.to_list(),
+        "AFR": data.iso_code.to_list(),
+        "SSA_UN": data.query("un != 'NAF'").iso_code.to_list(),
+    }
+
+    # UN regions
+    for region in data.un.unique():
+        regions_dict[region] = data.query("un == @region").iso_code.to_list()
+
+    return regions_dict
+
+
+def region_names() -> dict:
+
+    return {
+        "NAF_WB": "North Africa (UN)",
+        "SSA_WB": "Sub-Saharan Africa (WB)",
+        "AFR": "Africa",
+        "SSA_UN": "Sub-Saharan Africa (UN)",
+        "NAF": "Northern Africa",
+        "MAF": "Middle Africa",
+        "WAF": "Western Africa",
+        "EAF": "Eastern Africa",
+        "SAF": "Southern Africa",
+    }
 
 
 def clean_wb_overview(df: pd.DataFrame) -> pd.DataFrame:
