@@ -5,6 +5,7 @@ import country_converter as coco
 import pandas as pd
 from country_converter import country_converter
 
+from scripts.config import PATHS
 
 WEO_YEAR: int = 2022
 CAUSES_OF_DEATH_YEAR = 2019
@@ -21,6 +22,8 @@ def get_full_africa_iso3() -> list:
     # Add sub saharan Africa
     africa.append("SSA")
     africa.append("SSF")
+    africa.append("AFE")
+    africa.append("AFW")
 
     # Add World
     africa.append("WLD")
@@ -63,6 +66,31 @@ def base_africa_df():
     )
 
 
+def _download_wb_regions():
+    df = pd.read_excel(
+        "http://databank.worldbank.org/" "data/download/site-content/CLASS.xlsx",
+        sheet_name="Groups",
+    ).rename(
+        columns={
+            "GroupCode": "group_code",
+            "GroupName": "group_name",
+            "CountryCode": "iso_code",
+            "CountryName": "country_name",
+        }
+    )
+    df.to_csv(f"{PATHS.raw_data}/wb_groupings.csv", index=False)
+
+
+def read_wb_regions(region_code: str) -> dict:
+    """Read World Bank regions from csv file"""
+
+    df = pd.read_csv(f"{PATHS.raw_data}/wb_groupings.csv")
+
+    data = df.groupby("group_code").apply(lambda d: d.iso_code.to_list()).to_dict()
+
+    return data[region_code]
+
+
 def regions() -> dict:
 
     north_africa_wb = [
@@ -94,6 +122,8 @@ def regions() -> dict:
         "SSA_WB": data.query("iso_code not in @north_africa_wb").iso_code.to_list(),
         "AFR": data.iso_code.to_list(),
         "SSA_UN": data.query("un != 'NAF'").iso_code.to_list(),
+        "AFE_WB": read_wb_regions("AFE"),
+        "AFW_WB": read_wb_regions("AFW"),
     }
 
     # UN regions
@@ -106,8 +136,14 @@ def regions() -> dict:
 def region_names() -> dict:
 
     return {
-        "NAF_WB": "North Africa (UN)",
+        "NAF_WB": "North Africa (WB)",
         "SSA_WB": "Sub-Saharan Africa (WB)",
+        "SSA": "Sub-Saharan Africa (WB exc. high income)",
+        "SSF": "Sub-Saharan Africa (WB)",
+        "AFE_WB": "Eastern and Southern Africa",
+        "AFE": "Eastern and Southern Africa",
+        "AFW_WB": "Western and Central Africa",
+        "AFW": "Western and Central Africa",
         "AFR": "Africa",
         "SSA_UN": "Sub-Saharan Africa (UN)",
         "NAF": "Northern Africa",
@@ -115,6 +151,7 @@ def region_names() -> dict:
         "WAF": "Western Africa",
         "EAF": "Eastern Africa",
         "SAF": "Southern Africa",
+        "WLD": "World",
     }
 
 

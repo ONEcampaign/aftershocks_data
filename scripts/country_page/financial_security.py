@@ -368,13 +368,7 @@ def poverty_chart() -> None:
         )
         .dropna(subset=["value_poverty"])
         .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
-        .replace(
-            {
-                "SSA": "Sub-Saharan Africa (ex. high income)",
-                "SSF": "Sub-Saharan Africa",
-                "WLD": "World",
-            }
-        )
+        .replace(common.region_names())
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
         .drop("iso_code", axis=1)
         .melt(id_vars=["name_short", "date"], var_name="Indicator")
