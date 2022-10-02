@@ -25,5 +25,9 @@ class Paths:
     def raw_drm(self):
         return os.path.join(self.project_dir, "raw_data", "drm")
 
+    @property
+    def root_log(self):
+        return os.path.join(self.project_dir, "scripts", "logs")
+
 
 PATHS = Paths(os.path.dirname(os.path.dirname(__file__)))

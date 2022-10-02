@@ -1,11 +1,12 @@
 import logging
+from scripts.config import PATHS
 
 # Create a root logger
 logger = logging.getLogger(__name__)
 
 # Create two handlers (terminal and file)
 shell_handler = logging.StreamHandler()
-file_handler = logging.FileHandler(r"./scripts_log.log")
+file_handler = logging.FileHandler(f"{PATHS.root_log}/scripts_log.log")
 
 # Set levels for the logger, shell and file
 logger.setLevel(logging.DEBUG)
