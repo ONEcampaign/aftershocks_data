@@ -15,6 +15,7 @@ from scripts.country_page import (
 from scripts.country_page.debt import debt_chart_country, debt_chart_region
 from scripts.country_page.overview_text import build_summary
 from scripts.explorers.common import base_africa_map
+from scripts.logger import logger
 
 
 def update_monthly_leading_causes_of_death() -> None:
@@ -138,16 +139,20 @@ def update_daily() -> None:
 
     # Update underlying data
     update_daily_wfp_data()
+    logger.info("Updated WFP data (insufficient food)")
 
     # Update related charts
     food_security.wfp_insufficient_food_single_measure()
     food_security.insufficient_food_chart()
+    logger.info("Updated WFP insufficient food charts")
 
     # Update charts for which underlying data is updated elsewhere
     health.vaccination_rate_single_measure()
+    logger.info("Updated vaccination rate chart")
 
     # Update live text
     build_summary()
+    logger.info("Updated overview text (summary) json")
 
 
 def update_weekly() -> None:

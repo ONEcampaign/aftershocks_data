@@ -7,6 +7,7 @@ from bblocks.dataframe_tools.add import (
 )
 
 from scripts.config import PATHS
+from scripts.logger import logger
 from scripts.common import update_key_number, df_to_key_number
 
 
@@ -53,6 +54,7 @@ def debt_chart_country() -> None:
 
     # Chart version
     debt.to_csv(f"{PATHS.charts}/country_page/overview_debt_sm.csv", index=False)
+    logger.debug("Saved live version of 'overview_debt_sm.csv'")
 
     # Key number version
     kn = debt.rename(
@@ -65,6 +67,7 @@ def debt_chart_country() -> None:
     )
 
     update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+    logger.debug("Updated 'overview.json'")
 
 
 def debt_chart_region() -> None:
@@ -95,6 +98,7 @@ def debt_chart_region() -> None:
 
     # Chart version
     debt.to_csv(f"{PATHS.charts}/country_page/overview_debt_sm_region.csv", index=False)
+    logger.debug("Saved live version of 'overview_debt_sm_region.csv'")
 
     # Key number version
     kn = debt.rename(
@@ -107,3 +111,4 @@ def debt_chart_region() -> None:
     )
 
     update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+    logger.debug("Updated 'overview.json'")

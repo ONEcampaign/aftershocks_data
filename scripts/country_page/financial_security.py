@@ -8,6 +8,7 @@ from bblocks.import_tools.world_bank import WorldBankData
 from scripts import common
 from scripts.common import WEO_YEAR
 from scripts.config import PATHS
+from scripts.logger import logger
 
 
 # ------------------------------------------------------------------------------
@@ -53,10 +54,10 @@ def inflation_overview() -> None:
 
     # Live chart version
     inflation.to_csv(f"{PATHS.charts}/country_page/overview_inflation.csv", index=False)
+    logger.debug("Saved live version of 'overview_inflation.csv'")
 
 
 def inflation_overview_regions() -> None:
-
     wfp = _read_wfp()
 
     inflation = _wfp_inflation(wfp).pipe(
@@ -91,6 +92,7 @@ def inflation_overview_regions() -> None:
     inflation.to_csv(
         f"{PATHS.charts}/country_page/overview_inflation_regions.csv", index=False
     )
+    logger.debug("Saved live version of 'overview_inflation_regions.csv'")
 
     # Dynamic text version
     kn = (
@@ -107,6 +109,7 @@ def inflation_overview_regions() -> None:
     )
 
     common.update_key_number(f"{PATHS.charts}/country_page/region_overview.json", kn)
+    logger.debug("Updated 'region_overview.json'")
 
 
 # ---------- TIME SERIES ----------
@@ -142,11 +145,13 @@ def inflation_ts_chart() -> None:
     inflation.to_csv(
         f"{PATHS.charts}/country_page/inflation_ts_by_country.csv", index=False
     )
+    logger.debug("Saved live version of 'inflation_ts_by_country.csv'")
 
     # Download version
     inflation.assign(source=source).to_csv(
         f"{PATHS.download}/country_page/inflation_ts_by_country.csv", index=False
     )
+    logger.debug("Saved download version of 'inflation_ts_by_country.csv'")
 
     # Dynamic text version
     kn = (
@@ -164,6 +169,7 @@ def inflation_ts_chart() -> None:
     )
 
     common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+    logger.debug("Updated 'overview.json'")
 
 
 # ------------------------------------------------------------------------------
@@ -248,6 +254,7 @@ def gdp_growth_single_measure() -> None:
     gdp_growth_chart.to_csv(
         f"{PATHS.charts}/country_page/overview_GDP_growth.csv", index=False
     )
+    logger.debug("Saved live version of 'overview_GDP_growth.csv'")
 
     # dynamic text version
     kn = (
@@ -262,6 +269,7 @@ def gdp_growth_single_measure() -> None:
     )
 
     common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+    logger.debug("Updated 'overview.json'")
 
 
 def gdp_growth_regions_single_measure() -> None:
@@ -290,6 +298,7 @@ def gdp_growth_regions_single_measure() -> None:
     gdp_growth.to_csv(
         f"{PATHS.charts}/country_page/overview_GDP_growth_regions.csv", index=False
     )
+    logger.debug("Saved live version of 'overview_GDP_growth_regions.csv'")
 
     kn = (
         gdp_growth.filter(["name_short", "value"], axis=1)
@@ -303,6 +312,7 @@ def gdp_growth_regions_single_measure() -> None:
     )
 
     common.update_key_number(f"{PATHS.charts}/country_page/region_overview.json", kn)
+    logger.debug("Updated 'region_overview.json'")
 
 
 # ------------------------------------------------------------------------------
@@ -395,6 +405,7 @@ def poverty_chart() -> None:
 
     # chart version
     data.to_csv(f"{PATHS.charts}/country_page/poverty_country_ts.csv", index=False)
+    logger.debug("Saved live version of 'poverty_country_ts.csv'")
 
     # download version
     data_download = (
@@ -406,6 +417,7 @@ def poverty_chart() -> None:
     data_download.to_csv(
         f"{PATHS.download}/country_page/poverty_country_ts.csv", index=False
     )
+    logger.debug("Saved download version of 'poverty_country_ts.csv'")
 
     # dynamic text version
     kn = (
@@ -422,6 +434,7 @@ def poverty_chart() -> None:
     )
 
     common.update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
+    logger.debug("Updated 'overview.json'")
 
 
 # --------------- Overview Single Measure ---------------
@@ -458,3 +471,4 @@ def wb_poverty_single_measure() -> None:
 
     # chart version
     data.to_csv(f"{PATHS.charts}/country_page/poverty_single_measure.csv", index=False)
+    logger.debug("Saved live version of 'poverty_single_measure.csv'")
