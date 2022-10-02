@@ -11,4 +11,4 @@ def country_page_weekly():
 
 
 if __name__ == "__main__":
-    ...
+    country_page_weekly()
