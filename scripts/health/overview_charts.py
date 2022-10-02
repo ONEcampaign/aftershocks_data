@@ -13,6 +13,7 @@ WORLD_BANK_INDICATORS = {
     "infant_mortality_overview": "SH.DYN.MORT",
     "health_expenditure_overview": "SH.XPD.CHEX.GD.ZS",
     "maternal_mortality_overview": "SH.STA.MMRT",
+    "health_spending_per_capita": "SH.XPD.CHEX.PC.CD",
 }
 
 
@@ -84,5 +85,4 @@ def malaria_chart() -> None:
 
     # Save overview chart
     df.to_csv(f"{PATHS.charts}/health/malaria_overview.csv", index=False)
-
     logger.debug("Saved live version of malaria_overview.csv")

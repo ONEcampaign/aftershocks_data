@@ -1,6 +1,8 @@
 import pandas as pd
 import requests
 
+from scripts.config import PATHS
+
 WHO_API_URL = "https://ghoapi.azureedge.net/api/"
 
 
@@ -16,15 +18,27 @@ def query_who(code: str):
     return df
 
 
+def update_malaria_data() -> None:
+    """Update WHO data for malaria"""
+    df = (
+        query_who("MALARIA_EST_DEATHS")
+        .loc[lambda d: d.SpatialDim.isin(["GLOBAL", "AFR"])]
+        .filter(["SpatialDim", "TimeDim", "NumericValue"], axis=1)
+    )
+
+    df.to_csv(f"{PATHS.raw_data}/health/who_malaria_data.csv", index=False)
+
+
+def read_malaria_data() -> pd.DataFrame:
+    """Read malaria data from file"""
+    return pd.read_csv(f"{PATHS.raw_data}/health/who_malaria_data.csv")
+
+
 def get_malaria_data() -> dict:
     """Extract and clean malaria data for overview chart"""
 
     malaria_dict = (
-        query_who("MALARIA_EST_DEATHS")
-        .loc[
-            lambda d: d.SpatialDim.isin(["GLOBAL", "AFR"]),
-            ["SpatialDim", "TimeDim", "NumericValue"],
-        ]
+        read_malaria_data()
         .astype({"TimeDim": "int64"})
         .sort_values("TimeDim")
         .groupby(["SpatialDim"], as_index=False)
