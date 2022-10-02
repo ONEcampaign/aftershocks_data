@@ -265,4 +265,3 @@ def food_inflation_chart() -> None:
     regions_data.assign(source=source).to_csv(
         f"{PATHS.download}/country_page/food_inflation_ts_regions.csv", index=False
     )
-    
