@@ -1,4 +1,4 @@
-from scripts.health.update import update_daily_health
+from scripts.health import update as health_topic_update
 from scripts.logger import logger
 from scripts.country_page import update as update_country_page
 
@@ -7,7 +7,7 @@ def health_daily():
     """Update daily charts in health page"""
 
     # Run update scripts
-    update_daily_health()
+    health_topic_update.update_daily()
     logger.info("Updated daily charts in health page")
 
 

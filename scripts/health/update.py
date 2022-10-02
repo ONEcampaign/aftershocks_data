@@ -56,6 +56,18 @@ def update_monthly_health_charts() -> None:
     health_topic.ihme_spending_topic_chart()
 
 
+def update_daily() -> None:
+    """Update all data that is updated daily"""
+    update_daily_health_data()
+    update_daily_health_charts()
+
+
+def update_monthly() -> None:
+    """Update all data that is updated monthly"""
+    update_monthly_health_data()
+    update_monthly_health_charts()
+
+
 if __name__ == "__main__":
     update_daily_health_data()
     update_daily_health_charts()
