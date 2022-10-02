@@ -9,6 +9,9 @@ from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.config import PATHS
 from scripts.health.common import query_who
+from scripts.logger import logger
+
+DTP_CODE = "WHS4_100"
 
 
 def hiv_topic_chart() -> None:
@@ -46,7 +49,10 @@ def hiv_topic_chart() -> None:
     )
 
     df.to_csv(f"{PATHS.charts}/health/hiv_topic_chart.csv", index=False)
+    logger.debug("Saved live version of 'hiv_topic_chart.csv'")
+
     df.to_csv(f"{PATHS.download}/health/hiv_topic_chart.csv", index=False)
+    logger.debug("Saved download version of 'hiv_topic_chart.csv'")
 
 
 def malaria_topic_chart() -> None:
@@ -69,18 +75,25 @@ def malaria_topic_chart() -> None:
     df.to_csv(f"{PATHS.download}/health/malaria_topic_chart.csv", index=False)
 
 
+def update_dtp_data() -> None:
+
+    df = query_who(DTP_CODE)
+
+    df = df.loc[df.SpatialDimType == "WORLDBANKINCOMEGROUP"].filter(
+        ["SpatialDim", "TimeDim", "NumericValue"], axis=1
+    )
+
+    df.to_csv(f"{PATHS.raw_data}/health/who_dtp.csv", index=False)
+    logger.info("Updated DTP data from WHO.")
+
+
 def dtp_topic_chart() -> None:
     """Create DTP topic chart"""
 
-    code = "WHS4_100"
-    df = query_who(code)
+    df = pd.read_csv(f"{PATHS.raw_data}/health/who_dtp.csv")
 
     df = (
-        df.loc[
-            df.SpatialDimType == "WORLDBANKINCOMEGROUP",
-            ["SpatialDim", "TimeDim", "NumericValue"],
-        ]
-        .pivot(index="TimeDim", columns="SpatialDim", values="NumericValue")
+        df.pivot(index="TimeDim", columns="SpatialDim", values="NumericValue")
         .reset_index()
         .rename(
             columns={
@@ -92,16 +105,23 @@ def dtp_topic_chart() -> None:
             }
         )
     )
-
+    # Create live chart version
     df.to_csv(f"{PATHS.charts}/health/DTP_topic_chart.csv", index=False)
+    logger.debug("Saved live version of 'DTP_topic_chart.csv'")
+
+    # Create download version
     df.to_csv(f"{PATHS.download}/health/DTP_topic_chart.csv", index=False)
+    logger.debug("Saved download version of 'DTP_topic_chart.csv'")
 
 
 # IHME spending
 def __extract_data() -> pd.DataFrame:
     """Read IHME data from zip file"""
 
-    zip_url = "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_HEALTH_SPENDING_1995_2018_CSV.zip"
+    zip_url = (
+        "https://ghdx.healthdata.org/sites/default/files/"
+        "record-attached-files/IHME_HEALTH_SPENDING_1995_2018_CSV.zip"
+    )
 
     try:
         response = requests.get(zip_url)
@@ -116,25 +136,48 @@ def __extract_data() -> pd.DataFrame:
         raise ConnectionError("Could not connect to IHME website")
 
 
-def __extract_codes() -> dict:
+def __extract_codes() -> pd.DataFrame:
     """Extract codes from IHME website"""
 
-    code_url = "https://ghdx.healthdata.org/sites/default/files/record-attached-files/IHME_HEALTH_SPENDING_1995_2018_CODEBOOK_Y2021M09D22.CSV"
+    code_url = (
+        "https://ghdx.healthdata.org/sites/default/files/record-attached-files/"
+        "IHME_HEALTH_SPENDING_1995_2018_CODEBOOK_Y2021M09D22.CSV"
+    )
     try:
         response = requests.get(code_url)
-        codes_dict = (
-            pd.read_csv(io.StringIO(response.text), sep=",").iloc[0, :].to_dict()
-        )
-        return codes_dict
+        codes = pd.read_csv(io.StringIO(response.text), sep=",")
+        return codes
 
     except ConnectionError:
         raise ConnectionError("Could not connect to IHME website")
 
 
+def update_ihme_data() -> None:
+    df = __extract_data()
+    df.to_csv(f"{PATHS.raw_data}/health/ihme_health_spending.csv", index=False)
+    logger.info("Updated IHME health spending data")
+
+    codes = __extract_codes()
+    codes.to_csv(f"{PATHS.raw_data}/health/ihme_health_spending_codes.csv", index=False)
+    logger.info("Updated IHME health spending codes")
+
+
+def _read_ihme_data() -> pd.DataFrame:
+    return pd.read_csv(f"{PATHS.raw_data}/health/ihme_health_spending.csv")
+
+
+def _read_ihme_codes() -> dict:
+    return (
+        pd.read_csv(f"{PATHS.raw_data}/health/ihme_health_spending_codes.csv")
+        .iloc[0, :]
+        .to_dict()
+    )
+
+
 def get_ihme_spending() -> pd.DataFrame:
     """Extract IHME data qnd convert codes"""
-    df = __extract_data()
-    codes = __extract_codes()
+    df = _read_ihme_data()
+    codes = _read_ihme_codes()
 
     df = df.melt(
         id_vars=[
@@ -187,8 +230,15 @@ def ihme_spending_topic_chart() -> None:
         .sort_values(by="category", ascending=False)
     )
 
+    # TODO: the dollar pricing is removed. Find a better way to store and communicate prices
+
+    # Create live chart version
     df.to_csv(f"{PATHS.charts}/health/health_spending_topic_chart.csv", index=False)
+    logger.debug("Saved live version of 'health_spending_topic_chart.csv'")
+
+    # Create download version
     df.to_csv(f"{PATHS.download}/health/health_spending_topic_chart.csv", index=False)
+    logger.debug("Saved download version of 'health_spending_topic_chart.csv'")
 
 
 def wb_spending_topic_chart() -> None:
