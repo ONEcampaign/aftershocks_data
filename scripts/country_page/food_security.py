@@ -1,3 +1,5 @@
+from functools import reduce
+
 import pandas as pd
 from bblocks.analysis_tools.get import change_from_date
 from bblocks.cleaning_tools.clean import date_to_str
@@ -214,17 +216,53 @@ def food_inflation_chart() -> None:
         .assign(name_short="Africa (median)")
     )
 
-    inflation = (
+    inflation_chart = (
         pd.concat([median, inflation], ignore_index=True)
         .drop("indicator_name", axis=1)
         .pivot(index="date", columns="name_short", values="value")
+        .round(2)
         .reset_index()
     )
 
     # Chart version
-    inflation.to_csv(f"{PATHS.charts}/country_page/food_inflation_ts.csv", index=False)
+    inflation_chart.to_csv(
+        f"{PATHS.charts}/country_page/food_inflation_ts.csv", index=False
+    )
 
     # Download version
     pd.concat([median, inflation], ignore_index=True).assign(source=source).to_csv(
         f"{PATHS.download}/country_page/food_inflation_ts.csv", index=False
     )
+
+    # regions version
+    regions = []
+
+    for region in common.regions():
+        _ = (
+            inflation.copy()
+            .loc[lambda d: ~d.date.isin(incomplete.date)]
+            .pipe(add_iso_codes_column, id_column="name_short", id_type="name_short")
+            .loc[lambda d: d.iso_code.isin(common.regions()[region])]
+            .groupby(["date"], as_index=False)
+            .value.median()
+            .assign(name_short=common.region_names()[region])
+            .pivot(index="date", columns="name_short", values="value")
+            .round(2)
+            .reset_index()
+        )
+        regions.append(_)
+
+    regions_data = reduce(
+        lambda left, right: pd.merge(left, right, on=["date"], how="left"), regions
+    )
+
+    # Chart version
+    regions_data.to_csv(
+        f"{PATHS.charts}/country_page/food_inflation_ts_regions.csv", index=False
+    )
+
+    # Download version
+    regions_data.assign(source=source).to_csv(
+        f"{PATHS.download}/country_page/food_inflation_ts_regions.csv", index=False
+    )
+    
