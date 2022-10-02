@@ -1,5 +1,5 @@
-from scripts.country_page import update as update_country_page
-from scripts.logger import logger
+from .country_page import update as update_country_page
+from .logger import logger
 
 
 def country_page_weekly():
