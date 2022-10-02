@@ -1,6 +1,6 @@
-from .health import update as health_topic_update
-from .logger import logger
-from .country_page import update as update_country_page
+from scripts.health import update as health_topic_update
+from scripts.logger import logger
+from scripts.country_page import update as update_country_page
 
 
 def health_daily():

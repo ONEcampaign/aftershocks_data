@@ -1,5 +1,5 @@
-from .health import update as health_topic_update
-from .logger import logger
+from scripts.health import update as health_topic_update
+from scripts.logger import logger
 
 
 def health_monthly():

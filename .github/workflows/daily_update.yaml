@@ -22,7 +22,6 @@ jobs:
           pip install -r requirements.txt
       - name: Run daily update
         run:  |
-          cd scripts
           python update_daily.py
       - name: Save changes
         run:  |
