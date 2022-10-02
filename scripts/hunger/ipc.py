@@ -70,7 +70,7 @@ class IPC:
     def _get_request_url(
             self, call_type: str = "population", format: str = "csv", **parameters
     ) -> str:
-        """Get the URL for the API request"""
+        """Get the WHO_API_URL for the API request"""
 
         # Create a parameters string
         params_str = "&".join(f"{k}={v}" for k, v in parameters.items())

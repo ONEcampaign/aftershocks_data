@@ -6,7 +6,7 @@ from scripts.config import PATHS
 
 
 def get_ghe_url(country_code, year):
-    """Get a URL to the GHE API for a given country and year"""
+    """Get a WHO_API_URL to the GHE API for a given country and year"""
     return (
         "https://frontdoor-l4uikgap6gz3m.azurefd.net/"
         "DEX_CMS/GHE_FULL?&$orderby=VAL_DEATHS_RATE100K_NUMERIC"
