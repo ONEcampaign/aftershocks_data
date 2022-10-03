@@ -5,7 +5,7 @@ from bblocks.import_tools.world_bank import WorldBankData
 
 BASE_TRACKER: str = "https://onecampaign.github.io/project_covid-19_tracker/"
 
-debt_service = {
+DEBT_SERVICE = {
     "DT.AMT.BLAT.CD": "Bilateral",
     "DT.AMT.MLAT.CD": "Multilateral",
     "DT.AMT.PBND.CD": "Private",
@@ -18,13 +18,26 @@ debt_service = {
     "DT.INT.PROP.CD": "Private",
 }
 
-debt_stocks = {
+DEBT_STOCKS = {
     "DT.DOD.BLAT.CD": "Bilateral",
     "DT.DOD.MLAT.CD": "Multilateral",
     "DT.DOD.PBND.CD": "Private",
     "DT.DOD.PCBK.CD": "Private",
     "DT.DOD.PROP.CD": "Private",
 }
+
+WORLD_BANK_INDICATORS = {
+    "SH.XPD.GHED.GE.ZS": "health_expenditure_share",
+    "SE.XPD.TOTL.GB.ZS": "education_expenditure_share",
+}
+
+
+def update_debt_world_bank() -> None:
+    wb = WorldBankData()
+    for indicator in WORLD_BANK_INDICATORS:
+        wb.load_indicator(indicator)
+
+    wb.update()
 
 
 def _time_period(start_year: int, end_year: int) -> str:

@@ -148,7 +148,7 @@ def read_debt_chart_data() -> pd.DataFrame:
     return (
         pd.read_csv(f"{PATHS.raw_data}/debt/ids_tableau.csv")
         .assign(
-            stocks_type=lambda d: d["Series Id"].map(common.debt_stocks),
+            stocks_type=lambda d: d["Series Id"].map(common.DEBT_STOCKS),
             service_type=lambda d: d["Series Id"].map(common.debt_service),
         )
         .assign(

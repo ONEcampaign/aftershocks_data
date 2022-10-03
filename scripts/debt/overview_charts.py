@@ -53,6 +53,7 @@ def debt_service_africa_trend() -> None:
 
     # Live version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_africa_trend.csv", index=False)
+    logger.debug("Saved live debt file 'debt_service_africa_trend.csv'")
 
     # Dynamic text version
     number = format_number(
@@ -99,9 +100,11 @@ def debt_service_gov_spending() -> None:
 
     # chart version
     df.to_csv(f"{PATHS.charts}/debt_topic/dservice_to_gov_exp.csv", index=False)
+    logger.debug("Saved live debt file 'dservice_to_gov_exp.csv'")
 
     # download version
     df.to_csv(f"{PATHS.download}/debt_topic/dservice_to_gov_exp.csv", index=False)
+    logger.debug("Saved download debt file 'dservice_to_gov_exp.csv'")
 
 
 def debt_to_gdp_trend() -> None:
@@ -128,6 +131,7 @@ def debt_to_gdp_trend() -> None:
 
     # Live version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_gdp_africa_trend.csv", index=False)
+    logger.debug("Saved live debt file 'debt_gdp_africa_trend.csv'")
 
     # Dynamic text version
     number = format_number(
@@ -154,6 +158,7 @@ def debt_stocks_africa_trend() -> None:
 
     # Live version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_stocks_africa_trend.csv", index=False)
+    logger.debug("Saved live debt file 'debt_stocks_africa_trend.csv'")
 
     # Dynamic text version
     number = format_number(
@@ -167,17 +172,3 @@ def debt_stocks_africa_trend() -> None:
 
     update_key_number(f"{PATHS.charts}/debt_topic/debt_key_numbers.json", kn)
     logger.debug("Updated debt file 'overview.json'")
-
-
-def update_overview_charts_key_numbers() -> None:
-    """Update key numbers for overview charts"""
-
-    debt_distress()
-    debt_service_africa_trend()
-    debt_service_gov_spending()
-    debt_to_gdp_trend()
-    debt_stocks_africa_trend()
-
-
-if __name__ == "__main__":
-    update_overview_charts_key_numbers()

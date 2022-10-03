@@ -1,6 +1,7 @@
-from scripts.debt.common import get_indicator_data, debt_service, debt_stocks
+from scripts.debt.common import get_indicator_data, DEBT_SERVICE, DEBT_STOCKS
 import pandas as pd
 from scripts.config import PATHS
+from scripts.logger import logger
 
 START_YEAR: int = 2009
 END_YEAR: int = 2026
@@ -11,13 +12,13 @@ def _download_ids_service() -> None:
 
     d_ = [
         get_indicator_data(i, start_year=START_YEAR, end_year=END_YEAR)
-        for i in debt_service
+        for i in DEBT_SERVICE
     ]
 
     df = pd.concat(d_, ignore_index=True)
 
     df.to_csv(f"{PATHS.raw_data}/debt/ids_service_raw.csv", index=False)
-    print("Downloaded IDS debt service data")
+    logger.info("Downloaded IDS debt service data")
 
 
 def _download_ids_stocks() -> None:
@@ -25,13 +26,18 @@ def _download_ids_stocks() -> None:
 
     d_ = [
         get_indicator_data(i, start_year=START_YEAR, end_year=END_YEAR)
-        for i in debt_stocks
+        for i in DEBT_STOCKS
     ]
 
     df = pd.concat(d_, ignore_index=True)
 
     df.to_csv(f"{PATHS.raw_data}/debt/ids_stocks_raw.csv", index=False)
-    print("Downloaded IDS debt stocks data")
+    logger.info("Downloaded IDS debt stocks data")
+
+
+def update_ids_data() -> None:
+    _download_ids_service()
+    _download_ids_stocks()
 
 
 def add_ids_iso(
@@ -62,7 +68,7 @@ def _clean_ids_data(df: pd.DataFrame, detail: bool = False) -> pd.DataFrame:
 
     """Avoid total duplication, add iso_codes, simplify series names"""
 
-    dict_ = {**debt_stocks, **debt_service}
+    dict_ = {**DEBT_STOCKS, **DEBT_SERVICE}
 
     if detail:
         df = df.loc[df["counterpart-area"] != "World"]
@@ -152,11 +158,3 @@ def _clean_ids_china_stocks(df: pd.DataFrame) -> pd.DataFrame:
         .drop("order", axis=1)
         .reset_index(drop=True)
     )
-
-
-if __name__ == "__main__":
-
-    _download_ids_service()
-    _download_ids_stocks()
-
-    pass
