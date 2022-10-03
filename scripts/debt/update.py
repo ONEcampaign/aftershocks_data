@@ -35,3 +35,16 @@ def update_monthly_data() -> None:
 
     update_debt_world_bank()
     logger.info("Updated World Bank Health and Education spending data")
+
+
+def update_debt_weekly() -> None:
+    # Update data
+    update_weekly_data()
+
+    # Update charts
+    update_weekly_charts()
+
+
+def update_debt_monthly() -> None:
+    # Update data
+    update_monthly_data()
