@@ -28,42 +28,21 @@ def debt_distress() -> None:
         lambda d: d.risk_of_debt_distress.isin(["High", "In debt distress"])
     ]
 
-    africa = df.loc[df.continent == "Africa", :]
-
-    number = len(africa)
-
-    KEY_NUMBERS["debt_distress_africa_share"] = (
-        str(round(100 * len(africa) / len(df))) + "%"
-    )
-
-    KEY_NUMBERS["debt_distress_africa"] = str(number)
+    africa = df.loc[df.continent == "Africa"]
 
     # Dynamic text version
     kn = {
         "debt_distress_africa_share": (str(round(100 * len(africa) / len(df))) + "%"),
-        "debt_distress_africa": str(number),
+        "debt_distress_africa": str(len(africa)),
     }
 
     update_key_number(f"{PATHS.charts}/debt_topic/debt_key_numbers.json", kn)
-    logger.debug("Updated 'overview.json'")
-
-    # TODO: verify if this is used somewhere
-    card = pd.DataFrame(
-        {
-            "name": ["African countries"],
-            "Latest assessment": africa.latest_publication.max().strftime("%B %Y"),
-            "value": [f"{number} African countries in, or at risk of, debt distress"],
-            "note": [f"out of {len(df)} countries assessed"],
-        }
-    )
-
-    # chart version
-    card.to_csv(
-        f"{PATHS.charts}/debt_topic/debt_distress_africa_key_number.csv", index=False
-    )
+    logger.debug("Updated debt file 'overview.json'")
 
 
 def debt_service_africa_trend() -> None:
+    """Debt Service trend overview chart"""
+
     df = (
         read_dservice_data()
         .filter(["year", "iso_code", "Total"], axis=1)
@@ -72,19 +51,25 @@ def debt_service_africa_trend() -> None:
         .assign(Total=lambda d: d.Total * 1e6)
     )
 
-    KEY_NUMBERS["debt_service_africa"] = (
-        format_number(
-            df.loc[df.year == CURRENT_YEAR, "Total"], as_billions=True, decimals=1
-        ).values[0]
-        + " billion"
-    )
-
-    KEY_NUMBERS["debt_service_year"] = str(CURRENT_YEAR)
-
+    # Live version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_service_africa_trend.csv", index=False)
+
+    # Dynamic text version
+    number = format_number(
+        df.loc[df.year == CURRENT_YEAR, "Total"], as_billions=True, decimals=1
+    ).values[0]
+
+    kn = {
+        "debt_service_africa": f"{number} billion",
+        "debt_service_year": f"{CURRENT_YEAR}",
+    }
+    update_key_number(f"{PATHS.charts}/debt_topic/debt_key_numbers.json", kn)
+    logger.debug("Updated debt file 'overview.json'")
 
 
 def debt_service_gov_spending() -> None:
+    """Debt Service vs Government Spending debt chart"""
+
     df = (
         read_dservice_data()
         .filter(["year", "iso_code", "Total"], axis=1)
@@ -99,6 +84,7 @@ def debt_service_gov_spending() -> None:
         .assign(Total=lambda d: d.Total * 1e6)
     )
 
+    # Regional view
     africa = df.groupby(["year"], as_index=False).sum().assign(iso_code="Africa")
 
     df = (
@@ -119,6 +105,8 @@ def debt_service_gov_spending() -> None:
 
 
 def debt_to_gdp_trend() -> None:
+    """Africa's debt to gdp overview chart"""
+
     df = (
         read_dstocks_data()
         .filter(["year", "iso_code", "Total"], axis=1)
@@ -138,16 +126,24 @@ def debt_to_gdp_trend() -> None:
         .rename(columns={"gdp_share": "Debt to GDP ratio"})
     )
 
-    KEY_NUMBERS["debt_to_gdp_africa"] = format_number(
+    # Live version
+    df.to_csv(f"{PATHS.charts}/debt_topic/debt_gdp_africa_trend.csv", index=False)
+
+    # Dynamic text version
+    number = format_number(
         df.loc[df.year == df.year.max(), "Debt to GDP ratio"],
         as_percentage=True,
         decimals=1,
     ).values[0]
 
-    df.to_csv(f"{PATHS.charts}/debt_topic/debt_gdp_africa_trend.csv", index=False)
+    kn = {"debt_to_gdp_africa": f"{number}"}
+    update_key_number(f"{PATHS.charts}/debt_topic/debt_key_numbers.json", kn)
+    logger.debug("Updated debt file 'overview.json'")
 
 
 def debt_stocks_africa_trend() -> None:
+    """Africa's debt to stock overview chart"""
+
     df = (
         read_dstocks_data()
         .filter(["year", "iso_code", "Total"], axis=1)
@@ -156,24 +152,21 @@ def debt_stocks_africa_trend() -> None:
         .assign(Total=lambda d: d.Total * 1e6)
     )
 
-    KEY_NUMBERS["debt_stocks_africa"] = (
-        format_number(
-            df.loc[df.year == STOCKS_YEAR, "Total"], as_billions=True, decimals=1
-        ).values[0]
-        + " billion"
-    )
-
-    KEY_NUMBERS["debt_stocks_year"] = str(STOCKS_YEAR)
-
+    # Live version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_stocks_africa_trend.csv", index=False)
 
+    # Dynamic text version
+    number = format_number(
+        df.loc[df.year == STOCKS_YEAR, "Total"], as_billions=True, decimals=1
+    ).values[0]
 
-def export_key_numbers_overview() -> None:
-    """Export KEY_NUMBERS dictionary as json"""
-    import json
+    kn = {
+        "debt_stocks_africa": f"{number} billion",
+        "debt_stocks_year": f"{STOCKS_YEAR}",
+    }
 
-    with open(f"{PATHS.charts}/debt_topic/key_numbers.json", "w") as f:
-        json.dump(KEY_NUMBERS, f, indent=4)
+    update_key_number(f"{PATHS.charts}/debt_topic/debt_key_numbers.json", kn)
+    logger.debug("Updated debt file 'overview.json'")
 
 
 def update_overview_charts_key_numbers() -> None:
@@ -184,7 +177,6 @@ def update_overview_charts_key_numbers() -> None:
     debt_service_gov_spending()
     debt_to_gdp_trend()
     debt_stocks_africa_trend()
-    export_key_numbers_overview()
 
 
 if __name__ == "__main__":
