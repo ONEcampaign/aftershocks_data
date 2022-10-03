@@ -3,6 +3,8 @@ from pyjstat import pyjstat
 from bblocks.dataframe_tools.add import add_iso_codes_column
 from bblocks.import_tools.world_bank import WorldBankData
 
+from scripts.config import PATHS
+
 BASE_TRACKER: str = "https://onecampaign.github.io/project_covid-19_tracker/"
 
 DEBT_SERVICE = {
@@ -33,7 +35,7 @@ WORLD_BANK_INDICATORS = {
 
 
 def update_debt_world_bank() -> None:
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
     for indicator in WORLD_BANK_INDICATORS:
         wb.load_indicator(indicator)
 
@@ -138,7 +140,7 @@ def education_expenditure_share() -> pd.DataFrame:
     indicator = "SE.XPD.TOTL.GB.ZS"
 
     return (
-        WorldBankData()
+        WorldBankData(data_path=PATHS.bblocks_data)
         .load_indicator(indicator)
         .get_data()
         .dropna(subset="value")
@@ -151,7 +153,7 @@ def health_expenditure_share() -> pd.DataFrame:
     indicator = "SH.XPD.GHED.GE.ZS"
 
     return (
-        WorldBankData()
+        WorldBankData(data_path=PATHS.bblocks_data)
         .load_indicator(indicator)
         .get_data()
         .dropna(subset="value")

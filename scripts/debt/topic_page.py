@@ -119,6 +119,7 @@ def debt_to_gdp_ts() -> None:
             date_column="year",
             usd=True,
             include_estimates=True,
+            data_path=PATHS.bblocks_data,
         )
         .assign(Total=lambda d: d.Total * 1e6)
     )
@@ -149,7 +150,7 @@ def read_debt_chart_data() -> pd.DataFrame:
         pd.read_csv(f"{PATHS.raw_data}/debt/ids_tableau.csv")
         .assign(
             stocks_type=lambda d: d["Series Id"].map(common.DEBT_STOCKS),
-            service_type=lambda d: d["Series Id"].map(common.debt_service),
+            service_type=lambda d: d["Series Id"].map(common.DEBT_SERVICE),
         )
         .assign(
             continent=lambda d: convert_id(
@@ -242,6 +243,7 @@ def debt_service_comparison_chart() -> None:
             date_column="year",
             usd=True,
             include_estimates=True,
+            data_path=PATHS.bblocks_data,
         )
         .dropna(subset=["Total", "gov_exp"], how="any")
         .assign(Total=lambda d: d.Total * 1e6)

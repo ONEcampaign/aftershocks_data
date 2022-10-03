@@ -80,6 +80,7 @@ def debt_service_gov_spending() -> None:
             date_column="year",
             usd=True,
             include_estimates=True,
+            data_path=PATHS.bblocks_data,
         )
         .dropna(subset=["Total", "gov_exp"], how="any")
         .assign(Total=lambda d: d.Total * 1e6)
@@ -120,6 +121,7 @@ def debt_to_gdp_trend() -> None:
             date_column="year",
             usd=True,
             include_estimates=True,
+            data_path=PATHS.bblocks_data,
         )
         .groupby(["year"], as_index=False)
         .sum()

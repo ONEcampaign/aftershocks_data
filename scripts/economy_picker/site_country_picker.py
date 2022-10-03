@@ -87,7 +87,7 @@ def weo_indicators() -> pd.DataFrame:
     }
 
     # Create a WEO object to import the data
-    weo = WorldEconomicOutlook()
+    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
 
     # Load the data for the relevant indicators
     for indicator in indicators:
@@ -143,7 +143,7 @@ def wb_indicators() -> pd.DataFrame:
         "HD.HCI.OVRL": "Human Capital Index",
     }
 
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
 
     for indicator in indicators:
         wb.load_indicator(indicator_code=indicator, most_recent_only=True)
@@ -160,7 +160,7 @@ def wb_indicators() -> pd.DataFrame:
 
 
 def latest_inflation_data() -> pd.DataFrame:
-    wfp = WFPData()
+    wfp = WFPData(data_path=PATHS.bblocks_data)
 
     for indicator in wfp.available_indicators:
         wfp.load_indicator(indicator)
@@ -179,7 +179,7 @@ def latest_inflation_data() -> pd.DataFrame:
 
 
 def latest_food_data() -> pd.DataFrame:
-    wfp = WFPData()
+    wfp = WFPData(data_path=PATHS.bblocks_data)
 
     for indicator in wfp.available_indicators:
         wfp.load_indicator(indicator)
@@ -197,6 +197,7 @@ def latest_food_data() -> pd.DataFrame:
             id_column="iso_code",
             id_type="ISO3",
             target_column="Population with Insufficient Food (%)",
+            data_path=PATHS.bblocks_data,
         )
         .rename(columns={"iso_code": MapDataSchema.ISO_CODE})
         .drop(["value", "date"], axis=1)
@@ -207,7 +208,7 @@ def latest_debt_service() -> pd.DataFrame:
 
     return (
         pd.read_csv(
-            f"{PATHS.charts}/country_page/overview_debt.csv",
+            f"{PATHS.charts}/country_page/overview_debt_sm.csv",
             usecols=["name_short", "value"],
         )
         .pipe(add_iso_codes_column, id_column="name_short")

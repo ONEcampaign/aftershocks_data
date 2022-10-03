@@ -109,6 +109,7 @@ Burundi,2022-04-30,Inflation Rate,16.091
 Burundi,2022-05-31,Inflation Rate,18.565
 Burundi,2022-06-30,Inflation Rate,17.574
 Burundi,2022-07-31,Inflation Rate,19.055
+Burundi,2022-08-31,Inflation Rate,19.569
 Benin,2018-01-31,Inflation Rate,0.9
 Benin,2018-02-28,Inflation Rate,1.5
 Benin,2018-03-31,Inflation Rate,1.0
@@ -219,7 +220,6 @@ Burkina Faso,2022-04-30,Inflation Rate,15.1
 Burkina Faso,2022-05-31,Inflation Rate,15.3
 Burkina Faso,2022-06-30,Inflation Rate,17.8
 Burkina Faso,2022-07-31,Inflation Rate,18.2
-Burkina Faso,2022-08-31,Inflation Rate,18.1
 Botswana,2018-01-31,Inflation Rate,3.2
 Botswana,2018-02-28,Inflation Rate,3.2
 Botswana,2018-03-31,Inflation Rate,2.9
@@ -597,6 +597,7 @@ Cabo Verde,2022-04-30,Inflation Rate,7.6
 Cabo Verde,2022-05-31,Inflation Rate,7.8
 Cabo Verde,2022-06-30,Inflation Rate,8.2
 Cabo Verde,2022-07-31,Inflation Rate,9.0
+Cabo Verde,2022-08-31,Inflation Rate,8.6
 Djibouti,2018-01-31,Inflation Rate,-0.4
 Djibouti,2018-02-28,Inflation Rate,-0.2
 Djibouti,2018-03-31,Inflation Rate,-2.4
@@ -821,7 +822,6 @@ Ethiopia,2022-04-30,Inflation Rate,36.6
 Ethiopia,2022-05-31,Inflation Rate,37.7
 Ethiopia,2022-06-30,Inflation Rate,34.0
 Ethiopia,2022-07-31,Inflation Rate,33.5
-Ethiopia,2022-08-31,Inflation Rate,32.5
 Gabon,2018-01-31,Inflation Rate,1.7
 Gabon,2018-02-28,Inflation Rate,3.0
 Gabon,2018-03-31,Inflation Rate,3.4
@@ -928,7 +928,6 @@ Ghana,2022-04-30,Inflation Rate,23.6
 Ghana,2022-05-31,Inflation Rate,27.6
 Ghana,2022-06-30,Inflation Rate,29.8
 Ghana,2022-07-31,Inflation Rate,31.7
-Ghana,2022-08-31,Inflation Rate,33.9
 Guinea,2018-01-31,Inflation Rate,9.6
 Guinea,2018-02-28,Inflation Rate,9.7
 Guinea,2018-03-31,Inflation Rate,9.7
@@ -1205,6 +1204,7 @@ Liberia,2022-03-31,Inflation Rate,9.51
 Liberia,2022-04-30,Inflation Rate,6.26
 Liberia,2022-05-31,Inflation Rate,6.23
 Liberia,2022-06-30,Inflation Rate,6.32
+Liberia,2022-07-31,Inflation Rate,6.48
 Libya,2018-01-31,Inflation Rate,28.0
 Libya,2018-02-28,Inflation Rate,21.7
 Libya,2018-03-31,Inflation Rate,16.9
@@ -1311,6 +1311,7 @@ Lesotho,2022-04-30,Inflation Rate,7.3
 Lesotho,2022-05-31,Inflation Rate,7.8
 Lesotho,2022-06-30,Inflation Rate,8.8
 Lesotho,2022-07-31,Inflation Rate,9.8
+Lesotho,2022-08-31,Inflation Rate,9.4
 Morocco,2018-01-31,Inflation Rate,1.8
 Morocco,2018-02-28,Inflation Rate,1.8
 Morocco,2018-03-31,Inflation Rate,2.5
@@ -1470,6 +1471,7 @@ Mali,2021-10-31,Inflation Rate,2.9
 Mali,2021-11-30,Inflation Rate,3.2
 Mali,2021-12-31,Inflation Rate,3.9
 Mali,2022-01-31,Inflation Rate,8.7
+Mali,2022-02-28,Inflation Rate,7.5
 Mozambique,2018-01-31,Inflation Rate,3.84
 Mozambique,2018-02-28,Inflation Rate,2.93
 Mozambique,2018-03-31,Inflation Rate,3.05
@@ -1852,7 +1854,6 @@ Nigeria,2022-04-30,Inflation Rate,16.82
 Nigeria,2022-05-31,Inflation Rate,17.71
 Nigeria,2022-06-30,Inflation Rate,18.6
 Nigeria,2022-07-31,Inflation Rate,19.64
-Nigeria,2022-08-31,Inflation Rate,20.52
 Rwanda,2018-01-31,Inflation Rate,0.1
 Rwanda,2018-02-28,Inflation Rate,-1.3
 Rwanda,2018-03-31,Inflation Rate,-1.4
@@ -2182,6 +2183,7 @@ South Sudan,2022-03-31,Inflation Rate,-8.21
 South Sudan,2022-04-30,Inflation Rate,-4.29
 South Sudan,2022-05-31,Inflation Rate,-6.56
 South Sudan,2022-06-30,Inflation Rate,3.2
+South Sudan,2022-07-31,Inflation Rate,6.43
 Sao Tome and Principe,2018-01-31,Inflation Rate,7.7
 Sao Tome and Principe,2018-02-28,Inflation Rate,7.7
 Sao Tome and Principe,2018-03-31,Inflation Rate,7.2
@@ -2399,7 +2401,6 @@ Chad,2022-03-31,Inflation Rate,3.5
 Chad,2022-04-30,Inflation Rate,4.0
 Chad,2022-05-31,Inflation Rate,5.0
 Chad,2022-06-30,Inflation Rate,5.3
-Chad,2022-07-31,Inflation Rate,6.1
 Togo,2018-01-31,Inflation Rate,-0.1
 Togo,2018-02-28,Inflation Rate,-0.4
 Togo,2018-03-31,Inflation Rate,1.0
@@ -2736,6 +2737,7 @@ Zambia,2022-05-31,Inflation Rate,10.2
 Zambia,2022-06-30,Inflation Rate,9.7
 Zambia,2022-07-31,Inflation Rate,9.9
 Zambia,2022-08-31,Inflation Rate,9.8
+Zambia,2022-09-30,Inflation Rate,9.9
 Zimbabwe,2018-01-31,Inflation Rate,3.52
 Zimbabwe,2018-02-28,Inflation Rate,2.98
 Zimbabwe,2018-03-31,Inflation Rate,2.68
