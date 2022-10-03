@@ -162,45 +162,6 @@ def aid_to_africa_ts() -> None:
     update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
     logger.debug(f"Updated dynamic text ODA topic page oda_key_numbers.json")
 
-
-def aid_to_incomes() -> None:
-    df = (
-        common.read_oda_by_income()
-        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
-        .pipe(common.add_short_names)
-        .assign(
-            year=lambda d: d.year.dt.year, value=lambda d: round((d.value / 1e3), 2)
-        )
-        .filter(
-            [
-                "name",
-                "year",
-                "recipient",
-                "value",
-            ],
-            axis=1,
-        )
-        .groupby(["name", "year", "recipient"], as_index=False)
-        .sum()
-        .pivot(index=["name", "year"], columns="recipient", values="value")
-    )
-
-    df2 = df.copy(deep=True).rename(columns=lambda d: d + " (value)").round(2)
-
-    df = df.merge(df2, left_index=True, right_index=True).reset_index()
-
-    # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_income_ts.csv", index=False)
-    logger.debug("Saved chart version of aid_to_income_ts.csv")
-
-    # download version
-    source = "OECD DAC Creditor Reporting System (CRS)"
-    df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/aid_to_income_ts.csv", index=False
-    )
-    logger.debug("Saved download version of aid_to_income_ts.csv")
-
-
 def aid_to_incomes_latest() -> None:
     df = (
         common.read_oda_by_income()

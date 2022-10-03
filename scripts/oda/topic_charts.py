@@ -1,4 +1,5 @@
 import pandas as pd
+from bblocks.cleaning_tools.clean import format_number
 from pydeflate import deflate
 
 from scripts.config import PATHS
@@ -88,7 +89,17 @@ def oda_gni_single_year() -> None:
             axis=1,
         )
     )
-    df.to_clipboard(index=False)
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/oda_gni_single_year_ts.csv", index=False)
+    logger.debug("Saved live chart oda_gni_single_year_ts.csv")
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/oda_gni_single_year_ts.csv", index=False
+    )
+    logger.debug("Saved download chart oda_gni_sing_year_ts.csv")
 
 
 def _sectors_ts() -> tuple[pd.DataFrame, list]:
@@ -172,7 +183,96 @@ def key_sector_shares() -> None:
     df.to_clipboard(index=False)
 
 
-if __name__ == "__main__":
-    global_aid_ts()
+def aid_to_regions_ts() -> None:
+    df = (
+        common.read_oda_by_region()
+        .pipe(common.total_by_region)
+        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.add_short_names)
+        .assign(year=lambda d: d.year.dt.year)
+        .assign(
+            share=lambda d: d.groupby(["year", "donor_code"])["value"].transform(
+                lambda x: x / x.sum()
+            )
+        )
+        .filter(["year", "name", "recipient", "value", "share"], axis=1)
+        .assign(
+            share_note=lambda d: format_number(
+                d.share, decimals=1, as_percentage=True
+            ).replace("nan%", "", regex=False)
+        )
+    )
 
-    oda_gni_single_year()
+    share_note = (
+        df.sort_values(["name", "recipient"])
+        .assign(
+            value=lambda d: format_number(1e6 * d.value, decimals=1, as_millions=True)
+            + " million"
+        )
+        .groupby(["year", "name"])[["value", "recipient"]]
+        .apply(
+            lambda d: "<br>".join("<b>" + d.recipient.fillna("") + ":</b> " + d.value)
+        )
+        .reset_index()
+        .rename(columns={0: "note"})
+    )
+
+    df = (
+        df.pivot(index=["year", "name"], columns="recipient", values="value")
+        .round(2)
+        .reset_index()
+        .merge(share_note, on=["year", "name"])
+    )
+
+    df = common.sort_dac_first(df, keep_current_sorting=True)
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_regions_ts.csv", index=False)
+    logger.debug("Saved live chart aid_to_regions_ts.csv")
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_regions_ts.csv", index=False
+    )
+    logger.debug("Saved download chart aid_to_regions_ts.csv")
+
+
+def aid_to_incomes() -> None:
+    df = (
+        common.read_oda_by_income()
+        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
+        .pipe(common.add_short_names)
+        .assign(
+            year=lambda d: d.year.dt.year, value=lambda d: round((d.value / 1e3), 2)
+        )
+        .filter(
+            [
+                "name",
+                "year",
+                "recipient",
+                "value",
+            ],
+            axis=1,
+        )
+        .groupby(["name", "year", "recipient"], as_index=False)
+        .sum()
+        .pivot(index=["name", "year"], columns="recipient", values="value")
+    )
+
+    df2 = df.copy(deep=True).rename(columns=lambda d: d + " (value)").round(2)
+
+    df = df.merge(df2, left_index=True, right_index=True).reset_index()
+
+    df = common.sort_dac_first(df, keep_current_sorting=True)
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_income_ts.csv", index=False)
+    logger.debug("Saved chart version of aid_to_income_ts.csv")
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_income_ts.csv", index=False
+    )
+    logger.debug("Saved download version of aid_to_income_ts.csv")
