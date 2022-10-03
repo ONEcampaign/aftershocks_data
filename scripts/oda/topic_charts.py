@@ -154,7 +154,17 @@ def sector_totals() -> None:
         .pipe(common.sort_dac_first, keep_current_sorting=True)
     )
 
-    df.to_clipboard(index=False)
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/sector_totals.csv", index=False)
+    logger.debug("Saved live chart sector_totals.csv")
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/sector_totals.csv", index=False
+    )
+    logger.debug("Saved download chart sector_totals.csv")
+
 
 
 def key_sector_shares() -> None:
