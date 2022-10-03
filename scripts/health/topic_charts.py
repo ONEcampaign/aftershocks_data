@@ -245,7 +245,7 @@ def wb_spending_topic_chart() -> None:
 
     cc = coco.CountryConverter()
 
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
     wb.load_indicator("SH.XPD.CHEX.PC.CD")
 
     df = (

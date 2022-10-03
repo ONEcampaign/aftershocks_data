@@ -13,7 +13,7 @@ from scripts.explorers.common import (
 
 
 def _base_weo_economics() -> pd.DataFrame:
-    weo = WorldEconomicOutlook()
+    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
 
     for indicator in ECONOMICS_WEO_INDICATORS:
         weo.load_indicator(indicator)

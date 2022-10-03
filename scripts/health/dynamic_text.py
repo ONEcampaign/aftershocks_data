@@ -27,7 +27,7 @@ def _format_wb_df(df: pd.DataFrame, indicator_name: str):
 
 
 def spending_dynamic() -> dict:
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
     wb.load_indicator("SH.XPD.CHEX.PC.CD")
     wb.load_indicator("SH.XPD.CHEX.GD.ZS")
 

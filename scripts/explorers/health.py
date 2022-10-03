@@ -19,7 +19,7 @@ from scripts.owid_covid.tools import (
 
 def _base_wb_health() -> pd.DataFrame:
 
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
 
     for indicator in HEALTH_WB_INDICATORS:
         wb.load_indicator(indicator, most_recent_only=True)

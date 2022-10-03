@@ -1,37 +1,73 @@
 {
     "life_expectancy": {
+        "AFE": {
+            "value": "64.3"
+        },
         "Zambia": {
             "value": "64.2"
         },
-        "Angola": {
-            "value": "61.5"
-        },
-        "Morocco": {
-            "value": "76.9"
+        "Lesotho": {
+            "value": "54.8"
         },
         "South Africa": {
             "value": "64.4"
         },
-        "Rwanda": {
-            "value": "69.3"
+        "Cameroon": {
+            "value": "59.6"
         },
-        "Gabon": {
-            "value": "66.7"
-        },
-        "Sudan": {
-            "value": "65.5"
+        "Mauritania": {
+            "value": "65.1"
         },
         "Ethiopia": {
             "value": "67.0"
         },
-        "Senegal": {
-            "value": "68.2"
+        "Sao Tome and Principe": {
+            "value": "70.6"
         },
-        "Eritrea": {
-            "value": "66.7"
+        "DR Congo": {
+            "value": "61.0"
         },
-        "Ghana": {
-            "value": "64.3"
+        "Guinea-Bissau": {
+            "value": "58.6"
+        },
+        "SSF": {
+            "value": "62.0"
+        },
+        "Congo Republic": {
+            "value": "64.8"
+        },
+        "Mauritius": {
+            "value": "74.2"
+        },
+        "South Sudan": {
+            "value": "58.1"
+        },
+        "Comoros": {
+            "value": "64.5"
+        },
+        "Gambia": {
+            "value": "62.4"
+        },
+        "Sub-Saharan Africa": {
+            "value": "61.9"
+        },
+        "Cabo Verde": {
+            "value": "73.2"
+        },
+        "Malawi": {
+            "value": "64.7"
+        },
+        "Guinea": {
+            "value": "62.0"
+        },
+        "Somalia": {
+            "value": "57.7"
+        },
+        "Djibouti": {
+            "value": "67.5"
+        },
+        "Namibia": {
+            "value": "64.0"
         },
         "Sierra Leone": {
             "value": "55.1"
@@ -39,86 +75,47 @@
         "Algeria": {
             "value": "77.1"
         },
-        "Sub-Saharan Africa": {
-            "value": "61.9"
+        "Ghana": {
+            "value": "64.3"
         },
-        "Djibouti": {
-            "value": "67.5"
-        },
-        "South Sudan": {
-            "value": "58.1"
-        },
-        "Cabo Verde": {
-            "value": "73.2"
-        },
-        "SSF": {
-            "value": "62.0"
+        "Senegal": {
+            "value": "68.2"
         },
         "Egypt": {
             "value": "72.2"
         },
-        "Nigeria": {
-            "value": "55.0"
-        },
-        "Guinea": {
-            "value": "62.0"
-        },
         "Niger": {
             "value": "62.8"
         },
-        "Zimbabwe": {
-            "value": "61.7"
+        "Sudan": {
+            "value": "65.5"
         },
-        "Madagascar": {
-            "value": "67.4"
+        "Eritrea": {
+            "value": "66.7"
         },
-        "Lesotho": {
-            "value": "54.8"
+        "Gabon": {
+            "value": "66.7"
         },
-        "Mali": {
-            "value": "59.7"
+        "Rwanda": {
+            "value": "69.3"
         },
-        "Libya": {
-            "value": "73.1"
-        },
-        "Mozambique": {
-            "value": "61.4"
-        },
-        "Liberia": {
-            "value": "64.4"
-        },
-        "Mauritania": {
-            "value": "65.1"
-        },
-        "Kenya": {
-            "value": "67.0"
-        },
-        "Mauritius": {
-            "value": "74.2"
+        "Eswatini": {
+            "value": "60.7"
         },
         "Equatorial Guinea": {
             "value": "59.1"
         },
-        "Malawi": {
-            "value": "64.7"
+        "Nigeria": {
+            "value": "55.0"
         },
-        "Guinea-Bissau": {
-            "value": "58.6"
+        "Cote d'Ivoire": {
+            "value": "58.1"
         },
-        "Namibia": {
-            "value": "64.0"
+        "Madagascar": {
+            "value": "67.4"
         },
-        "Gambia": {
-            "value": "62.4"
-        },
-        "Comoros": {
-            "value": "64.5"
-        },
-        "Sao Tome and Principe": {
-            "value": "70.6"
-        },
-        "Somalia": {
-            "value": "57.7"
+        "Tanzania": {
+            "value": "65.8"
         },
         "Benin": {
             "value": "62.1"
@@ -126,50 +123,59 @@
         "Uganda": {
             "value": "63.7"
         },
-        "Seychelles": {
-            "value": "77.2"
-        },
-        "Tanzania": {
-            "value": "65.8"
-        },
-        "Botswana": {
-            "value": "69.8"
+        "Angola": {
+            "value": "61.5"
         },
         "Tunisia": {
             "value": "76.9"
         },
-        "DR Congo": {
-            "value": "61.0"
+        "Burkina Faso": {
+            "value": "62.0"
+        },
+        "Liberia": {
+            "value": "64.4"
+        },
+        "Libya": {
+            "value": "73.1"
         },
         "Togo": {
             "value": "61.3"
         },
-        "World": {
-            "value": "72.7"
+        "Mali": {
+            "value": "59.7"
         },
-        "Cameroon": {
-            "value": "59.6"
+        "Morocco": {
+            "value": "76.9"
+        },
+        "Botswana": {
+            "value": "69.8"
+        },
+        "Kenya": {
+            "value": "67.0"
+        },
+        "Zimbabwe": {
+            "value": "61.7"
         },
         "Chad": {
             "value": "54.5"
         },
-        "Eswatini": {
-            "value": "60.7"
-        },
         "Central African Republic": {
             "value": "53.7"
         },
+        "Mozambique": {
+            "value": "61.4"
+        },
+        "AFW": {
+            "value": "58.4"
+        },
+        "Seychelles": {
+            "value": "77.2"
+        },
+        "World": {
+            "value": "72.7"
+        },
         "Burundi": {
             "value": "61.9"
-        },
-        "Congo Republic": {
-            "value": "64.8"
-        },
-        "Burkina Faso": {
-            "value": "62.0"
-        },
-        "Cote d'Ivoire": {
-            "value": "58.1"
         }
     }
 }

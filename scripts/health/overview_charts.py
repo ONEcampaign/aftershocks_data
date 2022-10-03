@@ -21,7 +21,7 @@ def update_wb_health_data() -> None:
     """Update World Bank health overview charts"""
 
     # Create object
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
 
     # Load indicators
     for code in WORLD_BANK_INDICATORS.values():
@@ -34,7 +34,7 @@ def update_wb_health_data() -> None:
 def wb_health_charts() -> None:
     """Create World Bank overview charts"""
 
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
 
     for name, code in WORLD_BANK_INDICATORS.items():
         (
