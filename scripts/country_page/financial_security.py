@@ -192,7 +192,7 @@ def __weo_center(df: pd.DataFrame) -> pd.DataFrame:
 
 def _read_weo() -> pd.DataFrame:
     """Read the WEO data and return a dataframe with the last 10 years of data"""
-    weo = WorldEconomicOutlook()
+    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
 
     for c, n in WEO_INDICATORS.items():
         weo.load_indicator(indicator_code=c, indicator_name=n)
@@ -327,7 +327,7 @@ WB_INDICATORS = {
 
 
 def _read_wb_ts() -> dict:
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
 
     for code, name in WB_INDICATORS.items():
         wb.load_indicator(code, indicator_name=name)
@@ -356,7 +356,7 @@ def poverty_chart() -> None:
 
     source = "World Bank Open Data: SI.POV.DDAY"
 
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
 
     for _ in WB_INDICATORS:
         wb.load_indicator(_)

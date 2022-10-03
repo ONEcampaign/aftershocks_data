@@ -68,7 +68,7 @@ def update_monthly_malaria_data() -> None:
 
 def update_daily_wfp_data() -> None:
     # Create a wfp object
-    wfp = WFPData()
+    wfp = WFPData(data_path=PATHS.bblocks_data)
 
     # Load daily indicator
     wfp.load_indicator("insufficient_food")
@@ -79,7 +79,7 @@ def update_daily_wfp_data() -> None:
 
 def update_weekly_wfp_data() -> None:
     # Create a wfp object
-    wfp = WFPData()
+    wfp = WFPData(data_path=PATHS.bblocks_data)
 
     # Load weekly indicator
     wfp.load_indicator("inflation")
@@ -92,7 +92,7 @@ def update_monthly_weo_data() -> None:
     """Update the WEO data. Monthly schedule though it updates twice a year"""
 
     # create object
-    weo = WorldEconomicOutlook()
+    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
 
     # update data
     weo.update()
@@ -103,7 +103,7 @@ def update_monthly_wb_data() -> None:
     import time
 
     # create object
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
 
     # Load indicators
     for _ in financial_security.WB_INDICATORS:
@@ -115,7 +115,7 @@ def update_monthly_wb_data() -> None:
     time.sleep(180)
 
     # create new object
-    wb_recent = WorldBankData()
+    wb_recent = WorldBankData(data_path=PATHS.bblocks_data)
 
     # Load only most recent data
     for _ in financial_security.WB_INDICATORS:

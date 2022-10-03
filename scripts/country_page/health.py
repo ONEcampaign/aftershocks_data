@@ -223,7 +223,7 @@ def leading_causes_of_death_column_chart() -> None:
 
 
 def _get_life_expectancy() -> pd.DataFrame:
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
     wb.load_indicator("SP.DYN.LE00.IN")
 
     return (
@@ -339,7 +339,7 @@ def _read_malaria_data() -> pd.DataFrame:
 
 
 def malaria_chart() -> None:
-    wb = WorldBankData()
+    wb = WorldBankData(data_path=PATHS.bblocks_data)
     wb.load_indicator("SP.POP.TOTL")
     population = (
         wb.get_data().drop("indicator", axis=1).rename(columns={"value": "population"})
