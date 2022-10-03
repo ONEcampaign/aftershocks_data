@@ -3,14 +3,15 @@ from bblocks.cleaning_tools.filter import filter_latest_by
 from pydeflate import deflate
 
 from scripts.config import PATHS
+from scripts.logger import logger
 from scripts.oda import common
+
+from scripts.common import update_key_number, df_to_key_number
 
 
 # ------------------------------------------------------------------------------
 #                                   Charts
 # ------------------------------------------------------------------------------
-
-KEY_NUMBERS: dict = {}
 
 
 def global_aid_key_number() -> None:
@@ -19,17 +20,14 @@ def global_aid_key_number() -> None:
 
     df = (
         common.read_total_oda(official_definition=True)
+        .assign(value=lambda d: d.value * 1e6)
         .pipe(common.append_dac_total)
         .pipe(common.add_constant_change_column, base=common.CONSTANT_YEAR)
-        .assign(
-            pct_change=lambda d: "Real change from previous year: " + d["pct_change"]
-        )
         .pipe(common.add_short_names)
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .assign(
             year=lambda d: d.year.dt.year,
-            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1)
-            + " billion",
+            pct_change=lambda d: d["pct_change"].str.replace("%", ""),
         )
         .pipe(
             filter_latest_by,
@@ -37,29 +35,30 @@ def global_aid_key_number() -> None:
             group_by=["name"],
             value_columns=["value", "pct_change"],
         )
-        .filter(["name", "year", "value", "pct_change"], axis=1)
-        .rename(
-            columns={
-                "year": "As of",
-                "pct_change": "note",
-            }
+        .assign(
+            first_line=lambda d: f"As of {d.year.item()}",
+            second_line=lambda d: f"real change from {d.year.item() - 1}",
+            centre=lambda d: round(d["pct_change"].astype(float) / 10, 2),
+        )
+        .filter(
+            ["name", "first_line", "value", "second_line", "pct_change", "centre"],
+            axis=1,
         )
     )
 
-    # Total ODA key numberes
-
-    KEY_NUMBERS["total_oda"] = df["value"].values[0]
-    KEY_NUMBERS["total_oda_change"] = df["note"].values[0].split(": ")[1]
-    KEY_NUMBERS["latest_year"] = str(df["As of"].values[0])
-
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/key_number_total_oda.csv", index=False)
+    df.to_csv(f"{PATHS.charts}/oda_topic/sm_total_oda.csv", index=False)
+    logger.debug("Saved chart version of sm_total_oda.csv")
 
-    # download version
-    source = "OECD DAC Creditor Reporting System (CRS)"
-    df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/key_number_total_oda.csv", index=False
-    )
+    # Dynamic text version
+    kn = {
+        "total_oda": f"{df['value'].item()/1e9:,.1f} billion",
+        "total_oda_change": f"{float(df['pct_change'].item()):.1f} %",
+        "latest_year": f"{df['first_line'].item().split(' ')[-1]}",
+    }
+
+    update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
+    logger.debug(f"Updated dynamic text ODA topic page oda_key_numbers.json")
 
 
 def aid_gni_key_number() -> None:
@@ -96,33 +95,34 @@ def aid_gni_key_number() -> None:
     df = (
         oda.merge(gni, on=["year", "donor_code"], how="left")
         .assign(
-            oda_gni=lambda d: d.oda / d.gni, distance=lambda d: d.gni * 0.007 - d.oda
+            oda_gni=lambda d: d.oda / d.gni,
+            distance=lambda d: round(d.gni * 0.007 - d.oda, 1),
         )
         .pipe(common.add_short_names)
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .assign(
-            oda_gni=lambda d: format_number(d.oda_gni, decimals=2, as_percentage=True),
-            distance=lambda d: "Additional required to get to 0.7%: US$"
-            + format_number(d.distance * 1e6, decimals=0, as_billions=True)
-            + " billion",
             year=lambda d: d.year.dt.year,
+            first_line=lambda d: f"As of {d.year.item()}",
+            second_line="Additional required to get to 0.7%",
+            centre="",
         )
-        .filter(["name", "year", "oda_gni", "distance"], axis=1)
-        .rename({"oda_gni": "value", "distance": "note", "year": "As of"}, axis=1)
+        .filter(
+            ["name", "first_line", "oda_gni", "second_line", "distance", "centre"],
+        )
     )
-
-    # Key numbers
-    KEY_NUMBERS["oda_gni"] = df["value"].values[0]
-    KEY_NUMBERS["oda_gni_distance"] = df["note"].values[0].split(": ")[1]
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/key_number_oda_gni.csv", index=False)
+    df.to_csv(f"{PATHS.charts}/oda_topic/oda_gni_sm.csv", index=False)
+    logger.debug("Saved chart version of oda_gni_sm.csv")
 
-    # download version
-    source = "OECD DAC Creditor Reporting System (CRS)"
-    df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/key_number_oda_gni.csv", index=False
-    )
+    # Dynamic text version
+    kn = {
+        "oda_gni": f"{100*df.oda_gni.item():,.2f}%",
+        "oda_gni_distance": f"{df.distance.item()/1e3:,.0f} billion",
+    }
+
+    update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
+    logger.debug(f"Updated dynamic text ODA topic page oda_key_numbers.json")
 
 
 def aid_to_africa_ts() -> None:
@@ -155,18 +155,17 @@ def aid_to_africa_ts() -> None:
         .rename(columns={"value": "Aid to Africa", "share": "Share of total ODA"})
     )
 
-    # Aid to Africa key numbers
-    KEY_NUMBERS["aid_to_africa"] = df["Aid to Africa"].values[-1] + " billion"
-    KEY_NUMBERS["aid_to_africa_share"] = df["Share of total ODA"].values[-1]
-
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
+    logger.debug("Saved chart version of aid_to_africa_ts.csv")
 
-    # download version
-    source = "OECD DAC Creditor Reporting System (CRS)"
-    df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/aid_to_africa_ts.csv", index=False
-    )
+    # Dynamic text version
+    kn = {
+        "aid_to_africa": f"{df['Aid to Africa'].values[-1]} billion",
+        "aid_to_africa_share": f"{df['Share of total ODA'].values[-1]}",
+    }
+    update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
+    logger.debug(f"Updated dynamic text ODA topic page oda_key_numbers.json")
 
 
 def aid_to_incomes() -> None:
@@ -196,13 +195,15 @@ def aid_to_incomes() -> None:
     df = df.merge(df2, left_index=True, right_index=True).reset_index()
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_income_ts.csv", index=False)
+    logger.debug("Saved chart version of aid_to_income_ts.csv")
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
     df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/aid_to_africa_ts.csv", index=False
+        f"{PATHS.download}/oda_topic/aid_to_income_ts.csv", index=False
     )
+    logger.debug("Saved download version of aid_to_income_ts.csv")
 
 
 def aid_to_incomes_latest() -> None:
@@ -235,23 +236,27 @@ def aid_to_incomes_latest() -> None:
         )
     )
 
-    # Key numbers
-    KEY_NUMBERS["aid_to_incomes"] = (
-        df[["recipient", "value"]].set_index("recipient").to_dict()["value"]
-    )
-
-    KEY_NUMBERS["aid_to_incomes_share"] = (
-        df[["recipient", "share"]].set_index("recipient").to_dict()["share"]
-    )
-
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
+    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_income_latest.csv", index=False)
+    logger.debug("Saved chart version of aid_to_income_latest.csv")
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
     df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/aid_to_africa_ts.csv", index=False
+        f"{PATHS.download}/oda_topic/aid_to_income_latest.csv", index=False
     )
+    logger.debug("Saved download version of aid_to_income_latest.csv")
+
+    # Dynamic text version
+    income_dict = df_to_key_number(
+        df,
+        indicator_name="aid_to_incomes",
+        id_column="recipient",
+        value_columns=["value", "share"],
+    )
+
+    update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", income_dict)
+    logger.debug(f"Updated dynamic text ODA topic page oda_key_numbers.json")
 
 
 def aid_to_health_ts() -> None:
@@ -259,18 +264,24 @@ def aid_to_health_ts() -> None:
         columns={"value": "Total aid to health", "share": "Share of total ODA"}
     )
 
-    # Key numbers
-    KEY_NUMBERS["aid_to_health"] = df["Total aid to health"].values[-1] + " billion"
-    KEY_NUMBERS["aid_to_health_share"] = df["Share of total ODA"].values[-1]
-
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_health_ts.csv", index=False)
+    logger.debug("Saved chart version of aid_to_health_ts.csv")
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
     df.assign(source=source).to_csv(
         f"{PATHS.download}/oda_topic/aid_to_health_ts.csv", index=False
     )
+    logger.debug("Saved download version of aid_to_health_ts.csv")
+
+    # Dynamic text version
+    kn = {
+        "aid_to_health": f"{df['Total aid to health'].values[-1]} billion",
+        "aid_to_health_share": f"{df['Share of total ODA'].values[-1]}",
+    }
+    update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
+    logger.debug(f"Updated dynamic text ODA topic page oda_key_numbers.json")
 
 
 def aid_to_humanitarian_ts() -> None:
@@ -278,20 +289,24 @@ def aid_to_humanitarian_ts() -> None:
         columns={"value": "Total Humanitarian Aid", "share": "Share of total ODA"}
     )
 
-    # Key numbers
-    KEY_NUMBERS["aid_to_humanitarian"] = (
-        df["Total Humanitarian Aid"].values[-1] + " billion"
-    )
-    KEY_NUMBERS["aid_to_humanitarian_share"] = df["Share of total ODA"].values[-1]
-
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_humanitarian_ts.csv", index=False)
+    logger.debug("Saved chart version of aid_to_humanitarian_ts.csv")
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
     df.assign(source=source).to_csv(
         f"{PATHS.download}/oda_topic/aid_to_humanitarian_ts.csv", index=False
     )
+    logger.debug("Saved download version of aid_to_humanitarian_ts.csv")
+
+    # Dynamic text version
+    kn = {
+        "aid_to_humanitarian": f"{df['Total Humanitarian Aid'].values[-1]} billion",
+        "aid_to_humanitarian_share": f"{df['Share of total ODA'].values[-1]}",
+    }
+    update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
+    logger.debug(f"Updated dynamic text ODA topic page oda_key_numbers.json")
 
 
 def aid_to_food() -> None:
@@ -301,70 +316,14 @@ def aid_to_food() -> None:
 
     # chart version
     df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_food_ts.csv", index=False)
+    logger.debug("Saved chart version of aid_to_food_ts.csv")
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
     df.assign(source=source).to_csv(
         f"{PATHS.download}/oda_topic/aid_to_food_ts.csv", index=False
     )
-
-
-def aid_to_regions_ts() -> None:
-    df = (
-        common.read_oda_by_region()
-        .pipe(common.total_by_region)
-        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
-        .pipe(common.add_short_names)
-        .assign(year=lambda d: d.year.dt.year)
-        .assign(
-            share=lambda d: d.groupby(["year", "donor_code"])["value"].transform(
-                lambda x: x / x.sum()
-            )
-        )
-        .filter(["year", "name", "recipient", "value", "share"], axis=1)
-        .assign(
-            share_note=lambda d: format_number(
-                d.share, decimals=1, as_percentage=True
-            ).replace("nan%", "", regex=False)
-        )
-    )
-
-    share_note = (
-        df.sort_values(["name", "recipient"])
-        .assign(
-            value=lambda d: format_number(1e6 * d.value, decimals=1, as_millions=True)
-            + " million"
-        )
-        .groupby(["year", "name"])[["value", "recipient"]]
-        .apply(
-            lambda d: "<br>".join("<b>" + d.recipient.fillna("") + ":</b> " + d.value)
-        )
-        .reset_index()
-        .rename(columns={0: "note"})
-    )
-
-    df = (
-        df.pivot(index=["year", "name"], columns="recipient", values="value")
-        .reset_index()
-        .merge(share_note, on=["year", "name"])
-    )
-
-    # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_regions_ts.csv", index=False)
-
-    # download version
-    source = "OECD DAC Creditor Reporting System (CRS)"
-    df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/aid_to_regions_ts.csv", index=False
-    )
-
-
-def export_key_numbers_overview() -> None:
-    """Export KEY_NUMBERS dictionary as json"""
-    import json
-
-    with open(f"{PATHS.charts}/oda_topic/key_numbers.json", "w") as f:
-        json.dump(KEY_NUMBERS, f, indent=4)
+    logger.debug("Saved download version of aid_to_food_ts.csv")
 
 
 if __name__ == "__main__":
@@ -375,4 +334,3 @@ if __name__ == "__main__":
     aid_to_health_ts()
     aid_to_food()
     aid_to_humanitarian_ts()
-    export_key_numbers_overview()

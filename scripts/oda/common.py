@@ -257,21 +257,18 @@ def add_short_names(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def filter_health_sectors(df: pd.DataFrame) -> pd.DataFrame:
-
     return df.loc[lambda d: d.sector.isin(SECTORS_MAPPING["Health"])].reset_index(
         drop=True
     )
 
 
 def filter_humanitarian_sectors(df: pd.DataFrame) -> pd.DataFrame:
-
     return df.loc[lambda d: d.sector.isin(SECTORS_MAPPING["Humanitarian"])].reset_index(
         drop=True
     )
 
 
 def filter_food_sectors(df: pd.DataFrame) -> pd.DataFrame:
-
     return df.loc[
         lambda d: d.sector.isin(
             SECTORS_MAPPING["Developmental Food Aid/Food Security Assistance"]
@@ -280,7 +277,6 @@ def filter_food_sectors(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
-
     all_sectors = (
         read_sectors()
         .loc[
@@ -330,7 +326,6 @@ def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
 def filter_map_broad_sector(
     df: pd.DataFrame, sector_name, sectors_list: list
 ) -> pd.DataFrame:
-
     return (
         df.loc[lambda d: d.sector.isin(sectors_list)]
         .assign(sector=sector_name)
@@ -351,7 +346,6 @@ def check_sector_completeness(df_: pd.DataFrame) -> None:
 
 
 def sort_dac_first(df: pd.DataFrame, keep_current_sorting=True):
-
     if not keep_current_sorting:
         df = df.sort_values(["year", "name"], ascending=[True, False])
 
