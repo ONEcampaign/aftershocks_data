@@ -9,8 +9,10 @@ from bblocks.dataframe_tools.add import (
 )
 from bblocks.import_tools.debt.common import get_dsa
 
+from scripts.common import update_key_number
 from scripts.config import PATHS
 from scripts.debt.common import read_dservice_data, read_dstocks_data
+from scripts.logger import logger
 
 KEY_NUMBERS: dict = {}
 
@@ -19,7 +21,8 @@ STOCKS_YEAR = CURRENT_YEAR - 2
 
 
 def debt_distress() -> None:
-    df = get_dsa(update=False, local_path=f"{PATHS.raw_data}/dsa_list.pdf")
+    """Update Debt Distress live number"""
+    df = get_dsa(update=False, local_path=f"{PATHS.raw_data}/debt/dsa_list.pdf")
 
     df = df.assign(continent=lambda d: convert_id(d.country, to_type="continent")).loc[
         lambda d: d.risk_of_debt_distress.isin(["High", "In debt distress"])
@@ -35,6 +38,16 @@ def debt_distress() -> None:
 
     KEY_NUMBERS["debt_distress_africa"] = str(number)
 
+    # Dynamic text version
+    kn = {
+        "debt_distress_africa_share": (str(round(100 * len(africa) / len(df))) + "%"),
+        "debt_distress_africa": str(number),
+    }
+
+    update_key_number(f"{PATHS.charts}/debt_topic/debt_key_numbers.json", kn)
+    logger.debug("Updated 'overview.json'")
+
+    # TODO: verify if this is used somewhere
     card = pd.DataFrame(
         {
             "name": ["African countries"],

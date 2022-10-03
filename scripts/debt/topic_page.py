@@ -132,6 +132,7 @@ def debt_to_gdp_ts() -> None:
         .rename(columns={"gdp_share": "Debt to GDP ratio"})
         .filter(["name_short", "year", "Debt to GDP ratio"], axis=1)
         .pivot(index="year", columns="name_short", values="Debt to GDP ratio")
+        .reset_index()
     )
 
     # chart version
