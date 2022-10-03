@@ -180,7 +180,17 @@ def key_sector_shares() -> None:
         .pipe(common.sort_dac_first, keep_current_sorting=True)
     )
 
-    df.to_clipboard(index=False)
+    # chart version
+    df.to_csv(f"{PATHS.charts}/oda_topic/key_sector_shares.csv", index=False)
+    logger.debug("Saved live chart key_sector_shares.csv")
+
+    # download version
+    source = "OECD DAC Creditor Reporting System (CRS)"
+    df.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/key_sector_shares.csv", index=False
+    )
+    logger.debug("Saved download chart key_sector_shares.csv")
+
 
 
 def aid_to_regions_ts() -> None:
