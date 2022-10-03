@@ -9,11 +9,6 @@ from scripts.oda import common
 from scripts.common import update_key_number, df_to_key_number
 
 
-# ------------------------------------------------------------------------------
-#                                   Charts
-# ------------------------------------------------------------------------------
-
-
 def global_aid_key_number() -> None:
     """Create an overview chart whi§ch contains the latest total ODA value and
     the change in constant terms."""
