@@ -18,7 +18,7 @@ from scripts.logger import logger
 
 def _read_wfp() -> WFPData:
     """Read all available WFP indicators"""
-    wfp = WFPData()
+    wfp = WFPData(data_path=PATHS.bblocks_data)
 
     for indicator in wfp.available_indicators:
         wfp.load_indicator(indicator)

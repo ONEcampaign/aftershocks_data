@@ -44,6 +44,7 @@ def debt_chart_country() -> None:
             target_column="note",
             usd=True,
             include_estimates=True,
+            data_path=PATHS.bblocks_data,
         )
         .drop(columns=["value_units", "iso_code"])
         .assign(
@@ -82,6 +83,7 @@ def debt_chart_region() -> None:
             target_column="gov_exp",
             usd=True,
             include_estimates=True,
+            data_path=PATHS.bblocks_data,
         )
         .dropna(subset=["value"])
         .groupby(["As of"], as_index=False)[["value", "value_units", "gov_exp"]]

@@ -18,6 +18,10 @@ class Paths:
         return os.path.join(self.project_dir, "raw_data")
 
     @property
+    def bblocks_data(self):
+        return os.path.join(self.project_dir, "raw_data", "bblocks_data")
+
+    @property
     def raw_oda(self):
         return os.path.join(self.project_dir, "raw_data", "oda")
 
