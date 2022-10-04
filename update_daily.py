@@ -1,4 +1,6 @@
 from scripts.economy_picker.update_economy_picker import update_map_charts
+from scripts.explorers.economics import econ_explorer
+from scripts.explorers.health import health_explorer
 from scripts.health import update as health_topic_update
 from scripts.logger import logger
 from scripts.country_page import update as update_country_page
@@ -28,7 +30,13 @@ def update_economy_picker():
     logger.info("Updated economy picker")
 
 
+def update_explorers():
+    econ_explorer()
+    health_explorer()
+
+
 if __name__ == "__main__":
     health_daily()
     country_page_daily()
     update_economy_picker()
+    update_explorers()
