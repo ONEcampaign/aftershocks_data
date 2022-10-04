@@ -16,6 +16,7 @@ from bblocks.import_tools.world_bank import WorldBankData
 from scripts.config import PATHS
 from scripts.owid_covid import tools as owid_tools
 from scripts.schemas import MapDataSchema, BubbleDataSchema
+from scripts.explorers.common import base_africa_map
 
 
 def _core_data() -> pd.DataFrame:
@@ -32,7 +33,7 @@ def _core_data() -> pd.DataFrame:
                 "name_official": MapDataSchema.FORMAL_NAME,
             }
         )
-        .loc[lambda d: d.continent == "Africa"]
+        .loc[lambda d: d.iso_code.isin(base_africa_map().iso_code.unique())]
         .pipe(add_flourish_geometries, id_column=MapDataSchema.ISO_CODE, id_type="ISO3")
         .dropna(subset=[MapDataSchema.GEOMETRY])
     )
@@ -307,7 +308,3 @@ def bubble_data(base_bubble: pd.DataFrame) -> None:
     ]
 
     df.filter(order, axis=1).to_csv(f"{PATHS.charts}/home_bubble_data.csv", index=False)
-
-
-map_data(base_map_data())
-bubble_data(base_bubble_data())
