@@ -1,3 +1,6 @@
+from bblocks.dataframe_tools.add import add_short_names_column
+
+from scripts import common
 from scripts.debt.common import get_indicator_data, DEBT_SERVICE, DEBT_STOCKS
 import pandas as pd
 from scripts.config import PATHS
@@ -5,6 +8,10 @@ from scripts.logger import logger
 
 START_YEAR: int = 2009
 END_YEAR: int = 2026
+
+# ---------------------------------------------------------------------
+# Download
+# ---------------------------------------------------------------------
 
 
 def _download_ids_service() -> None:
@@ -40,6 +47,11 @@ def update_ids_data() -> None:
     _download_ids_stocks()
 
 
+# ---------------------------------------------------------------------
+# Clean
+# ---------------------------------------------------------------------
+
+
 def add_ids_iso(
     df: pd.DataFrame, name_col: str = "country", target_col: str = "iso_code"
 ):
@@ -55,10 +67,10 @@ def add_ids_iso(
 def read_ids_service() -> pd.DataFrame:
     """Read IDS debt service data"""
 
-    return pd.read_csv(f"{PATHS.raw_data}/ids_service_raw.csv")
+    return pd.read_csv(f"{PATHS.raw_data}/debt/ids_service_raw.csv")
 
 
-def ids_stocks() -> pd.DataFrame:
+def read_ids_stocks() -> pd.DataFrame:
     """Read IDS debt service data"""
 
     return pd.read_csv(f"{PATHS.raw_data}/debt/ids_stocks_raw.csv")
@@ -83,6 +95,38 @@ def _clean_ids_data(df: pd.DataFrame, detail: bool = False) -> pd.DataFrame:
             "value"
         ]
         .sum()
+    )
+
+
+def _flourish_clean_ids(df: pd.DataFrame) -> pd.DataFrame:
+    """Clean dataframe for Flourish"""
+
+    return (
+        df.loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
+        .groupby(["iso_code", "year", "indicator"], as_index=False)["value"]
+        .sum()
+        .pivot(index=["iso_code", "year"], columns="indicator", values="value")
+        .assign(Total=lambda d: d.fillna(0).sum(axis=1))
+        .reset_index(drop=False)
+        .pipe(
+            add_short_names_column,
+            id_column="iso_code",
+            id_type="ISO3",
+            target_column="country_name",
+        )
+        .sort_values(by=["year", "iso_code"])
+        .reset_index(drop=True)
+    ).filter(
+        [
+            "year",
+            "iso_code",
+            "Bilateral",
+            "Multilateral",
+            "Private",
+            "Total",
+            "country_name",
+        ],
+        axis=1,
     )
 
 
@@ -115,7 +159,8 @@ def _clean_ids_china_service(df: pd.DataFrame) -> pd.DataFrame:
     }
 
     return (
-        df.append(china, ignore_index=True)
+        pd.concat([df, china], ignore_index=True)
+        .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
         .assign(order=lambda d: d.indicator.map(order))
         .sort_values(["iso_code", "year", "order"], ascending=(True, True, True))
         .drop("order", axis=1)
@@ -152,9 +197,65 @@ def _clean_ids_china_stocks(df: pd.DataFrame) -> pd.DataFrame:
     }
 
     return (
-        df.append(china, ignore_index=True)
+        pd.concat([df, china], ignore_index=True)
+        .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
         .assign(order=lambda d: d.indicator.map(order))
         .sort_values(["iso_code", "year", "order"], ascending=(True, True, True))
         .drop("order", axis=1)
         .reset_index(drop=True)
+        .pipe(
+            add_short_names_column,
+            id_column="iso_code",
+            id_type="ISO3",
+            target_column="iso_code",
+        )
     )
+
+
+# ---------------------------------------------------------------------
+# Export
+# ---------------------------------------------------------------------
+
+
+def _flourish_pivot_debt(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.pivot(index=["iso_code", "year"], columns=["indicator"], values="value")
+        .assign(Total=lambda d: d.fillna(0).sum(axis=1).round(1))
+        .reset_index(drop=False)
+        .assign(country_name=lambda d: d.iso_code)
+    )
+
+
+def flourish_ids_debt_stocks() -> None:
+    """Debt Stocks data for Flourish in Millions"""
+    df = (
+        read_ids_stocks()
+        .pipe(_clean_ids_data, detail=True)
+        .pipe(_clean_ids_china_stocks)
+        .assign(value=lambda d: d.value / 1e6)  # in millions
+        .pipe(_flourish_pivot_debt)
+        .round(1)
+    )
+
+    df.to_csv(f"{PATHS.raw_data}/debt/debt_stocks-ts.csv", index=False)
+    logger.debug("Saved debt file debt_stocks-ts.csv (tracker version)")
+
+
+def flourish_ids_debt_service() -> None:
+    """Debt service data for Flourish, in millions"""
+
+    df = (
+        read_ids_service()
+        .pipe(_clean_ids_data, detail=False)
+        .assign(value=lambda d: (d.value / 1e6))  # In millions
+        .pipe(_flourish_clean_ids)
+        .pipe(
+            add_short_names_column,
+            id_column="iso_code",
+            id_type="ISO3",
+            target_column="iso_code",
+        )
+        .round(1)
+    )
+    df.to_csv(f"{PATHS.raw_data}/debt/debt_service_ts.csv", index=False)
+    logger.debug("Saved debt file debt_service_ts.csv (tracker version)")

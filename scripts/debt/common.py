@@ -1,11 +1,15 @@
+import time
+
 import pandas as pd
+import requests
 from pyjstat import pyjstat
 from bblocks.dataframe_tools.add import add_iso_codes_column
 from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.config import PATHS
+from scripts.logger import logger
 
-BASE_TRACKER: str = "https://onecampaign.github.io/project_covid-19_tracker/"
+# BASE_TRACKER: str = "https://onecampaign.github.io/project_covid-19_tracker/"
 
 DEBT_SERVICE = {
     "DT.AMT.BLAT.CD": "Bilateral",
@@ -104,21 +108,41 @@ def get_indicator_data(
     url = _api_url(indicator, countries, start_year, end_year, source)
 
     # Get data
-    data = pyjstat.Dataset.read(url).write(output="dataframe")
+    try:
+        data = pyjstat.Dataset.read(url).write(output="dataframe")
+        logger.debug(f"Got data for {indicator}")
 
-    # Clean and return
-    return (
-        data.loc[data.value.notna()]
-        .assign(series_code=indicator)
-        .reset_index(drop=True)
+        return (
+            data.loc[data.value.notna()]
+            .assign(series_code=indicator)
+            .reset_index(drop=True)
+        )
+
+    except requests.exceptions.HTTPError:
+        logger.debug(f"Failed to get data for {indicator}")
+
+    except requests.exceptions.JSONDecodeError:
+        logger.debug(f"Failed to get data for {indicator}")
+
+    except Exception as e:
+        print("Ran into other trouble: ", e)
+
+    time.sleep(300)
+
+    get_indicator_data(
+        indicator=indicator,
+        countries=countries,
+        start_year=start_year,
+        end_year=end_year,
+        source=source,
     )
 
 
 def read_dservice_data() -> pd.DataFrame:
-    file: str = "c07_debt_service_ts.csv"
+    file: str = "debt_service_ts.csv"
 
     return (
-        pd.read_csv(f"{BASE_TRACKER}{file}")
+        pd.read_csv(f"{PATHS.raw_data}/debt/{file}")
         .replace("C.A.R", "Central African Republic")
         .replace("D.R.C", "Democratic Republic of the Congo")
         .pipe(add_iso_codes_column, id_column="iso_code", id_type="regex")
@@ -126,10 +150,10 @@ def read_dservice_data() -> pd.DataFrame:
 
 
 def read_dstocks_data() -> pd.DataFrame:
-    file: str = "c08_debt_stocks-ts.csv"
+    file: str = "debt_stocks-ts.csv"
 
     return (
-        pd.read_csv(f"{BASE_TRACKER}{file}")
+        pd.read_csv(f"{PATHS.raw_data}/debt/{file}")
         .replace("C.A.R", "Central African Republic")
         .replace("D.R.C", "Democratic Republic of the Congo")
         .pipe(add_iso_codes_column, id_column="iso_code", id_type="regex")
