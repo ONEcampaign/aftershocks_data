@@ -25,7 +25,7 @@ def _unpack_inflation(d: dict) -> dict:
     for country in d:
         new_data[country] = (
             "<li>"
-            f"In {d[country]['date']}, inflation "
+            f"On {d[country]['date']}, inflation "
             f"in {country} was "
             f"{source_link}{d[country]['value']}</a>."
             "</li>"
@@ -145,8 +145,33 @@ def build_summary() -> None:
     debt = _unpack_debt(data["debt_service"])
     vaccinated = _unpack_vaccinated(data["vaccination"])
 
+    countries = [
+        country
+        for country in (
+            list(inflation["inflation"].keys()),
+            list(growth["growth"].keys()),
+            list(poverty["poverty"].keys()),
+            list(food["insufficient_food"].keys()),
+            list(debt["debt"].keys()),
+            list(vaccinated["vaccinated"].keys()),
+        )
+    ]
+
+    countries = list(set([item for sublist in countries for item in sublist]))
+
     summary = {**inflation, **growth, **poverty, **food, **debt, **vaccinated}
 
+    text_summary = {country: {"indicator": ""} for country in countries}
+    for indicator, country in summary.items():
+        for country_name in country.keys():
+            text_summary[country_name][indicator] = country[country_name]
+
+    for country, indicators in text_summary.items():
+        for individual_indicator, text in indicators.items():
+            text_summary[country]["indicator"] += text
+
+        text_summary[country] = text_summary[country]["indicator"]
+
     update_key_number(
-        path=f"{PATHS.charts}/country_page/overview_summary.json", new_dict=summary
+        path=f"{PATHS.charts}/country_page/overview_summary.json", new_dict=text_summary
     )
