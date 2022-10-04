@@ -27,7 +27,7 @@ def build_summary() -> None:
     for indicator, country_data in data.items():
         for country in df:
             if country not in country_data.keys():
-                data[indicator][country] = {"info": "display:none;"}
+                data[indicator][country] = {"info": "display-none"}
             else:
                 data[indicator][country]["info"] = ""
 
