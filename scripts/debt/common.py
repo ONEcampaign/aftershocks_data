@@ -9,8 +9,6 @@ from bblocks.import_tools.world_bank import WorldBankData
 from scripts.config import PATHS
 from scripts.logger import logger
 
-# BASE_TRACKER: str = "https://onecampaign.github.io/project_covid-19_tracker/"
-
 DEBT_SERVICE = {
     "DT.AMT.BLAT.CD": "Bilateral",
     "DT.AMT.MLAT.CD": "Multilateral",
@@ -103,6 +101,7 @@ def get_indicator_data(
     start_year: int = 2017,
     end_year: int = 2025,
     source: int = 6,
+    try_again: bool = True,
 ) -> pd.DataFrame:
     # Get API url
     url = _api_url(indicator, countries, start_year, end_year, source)
@@ -127,15 +126,16 @@ def get_indicator_data(
     except Exception as e:
         print("Ran into other trouble: ", e)
 
-    time.sleep(300)
-
-    get_indicator_data(
-        indicator=indicator,
-        countries=countries,
-        start_year=start_year,
-        end_year=end_year,
-        source=source,
-    )
+    if try_again:
+        time.sleep(300)
+        get_indicator_data(
+            indicator=indicator,
+            countries=countries,
+            start_year=start_year,
+            end_year=end_year,
+            source=source,
+            try_again=False,
+        )
 
 
 def read_dservice_data() -> pd.DataFrame:
