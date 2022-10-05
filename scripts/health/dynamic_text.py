@@ -75,13 +75,23 @@ def vaccination_dynamic() -> dict:
         "vaccination_date": vaccination_date,
     }
 
+def malaria_dynamic() -> dict:
+    """Create dynamic text for malaria"""
+
+    malaria = get_malaria_data()
+    malaria['malaria_africa_total'] = f"{malaria['malaria_africa_total']/1000:.0f} thousand"
+    malaria['malaria_world_total'] = f"{malaria['malaria_world_total']/1000:.0f} thousand"
+    malaria['malaria_rest_of_world_total'] = f"{malaria['malaria_rest_of_world_total']/1000:.0f} thousand"
+
+    return malaria
+
 
 def update_dynamic_text() -> None:
     """ "Update dynamic text for health topic page"""
     dynamic_text = {}
 
     dynamic_text.update(vaccination_dynamic())
-    dynamic_text.update(get_malaria_data())
+    dynamic_text.update(malaria_dynamic())
     dynamic_text.update(spending_dynamic())
 
     with open(f"{PATHS.charts}/health/key_numbers.json", "w") as file:
