@@ -25,9 +25,9 @@ def hiv_topic_chart() -> None:
     )
 
     regions = {
+        "UNAESA": "East and Southern Africa",
         "UNAAP": "Asia and the Pacific",
         "UNACAR": "Caribbean",
-        "UNAESA": "East and Southern Africa",
         "UNAEECA": "Eastern Europe and Central Asia",
         "UNALA": "Latin America",
         "UNAMENA": "Middle East and North Africa",
@@ -48,10 +48,15 @@ def hiv_topic_chart() -> None:
         .reset_index()
     )
 
-    df.to_csv(f"{PATHS.charts}/health/hiv_topic_chart.csv", index=False)
+    df_africa_region = df.loc[df.region == "East and Southern Africa"].copy()
+    df_without_africa = df.loc[df.region != "East and Southern Africa"].copy()
+
+    df_merged = pd.concat([df_africa_region, df_without_africa])
+
+    df_merged.to_csv(f"{PATHS.charts}/health/hiv_topic_chart.csv", index=False)
     logger.debug("Saved live version of 'hiv_topic_chart.csv'")
 
-    df.to_csv(f"{PATHS.download}/health/hiv_topic_chart.csv", index=False)
+    df_merged.to_csv(f"{PATHS.download}/health/hiv_topic_chart.csv", index=False)
     logger.debug("Saved download version of 'hiv_topic_chart.csv'")
 
 
