@@ -39,8 +39,8 @@ def ipc_dynamic(ipc) -> dict:
     """IPC hunger phases dynamic text"""
 
     return {
-        "phase3plus_world_value": f'{sum(ipc.phase_3plus)/ 1000000:.2f}',
-        "phase5_world_millions": f'{sum(ipc.phase_5) / 1000000:.2f}',
+        "phase3plus_world_value": f'{sum(ipc.phase_3plus)/ 1000000:.0f} million',
+        "phase5_world_millions": f'{sum(ipc.phase_5) / 1000:.0f} thousand',
     }
 
 
@@ -56,8 +56,8 @@ def insufficient_food_dynamic() -> dict:
     change = ((latest_value - month_value) / month_value) * 100
 
     return {
-        "insufficient_food_latest_value": f'{latest_value / 1000000:.2f}',
-        "insufficient_food_month_change": f'{change:.2f}',
+        "insufficient_food_latest_value": f'{latest_value / 1000000:.0f} million',
+        "insufficient_food_month_change": f'{change:.1f}%',
         "insufficient_food_date": latest_date.strftime("%d %b %Y"),
     }
 
