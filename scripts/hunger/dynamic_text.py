@@ -1,12 +1,10 @@
 """Create dynamic text for the hunger topic"""
-
+import pandas as pd
 from bblocks.import_tools.world_bank import WorldBankData
-from scripts.hunger.ipc import IPC
-from scripts.hunger.common import get_insufficient_food, aggregate_insufficient_food
+from scripts.hunger.common import aggregate_insufficient_food
 import datetime
 from scripts.config import PATHS
 import json
-import os
 
 
 def stunting() -> dict:
@@ -15,16 +13,21 @@ def stunting() -> dict:
     wb = WorldBankData()
     wb.load_indicator("SH.STA.STNT.ME.ZS")
 
+    df = pd.read_csv(
+        f"{PATHS.raw_data}/hunger/SH.STA.STNT.ME.ZS.csv", parse_dates=["date"]
+    )
+
     df = (
-        wb.get_data("SH.STA.STNT.ME.ZS")
-        .dropna(subset=["value"])
+        df.dropna(subset=["value"])
         .assign(date=lambda d: d.date.dt.year)
         .round({"value": 0})
     )
 
     ssa_value = f'{df.loc[df.iso_code == "SSA", "value"].iloc[-1]:.0f}'
     ssa_date = f'{df.loc[df.iso_code == "SSA", "date"].iloc[-1]}'
-    ssa_value_2000 = f'{df.loc[(df.iso_code == "SSA") & (df.date == 2000), "value"].iloc[-1]:.0f}'
+    ssa_value_2000 = (
+        f'{df.loc[(df.iso_code == "SSA") & (df.date == 2000), "value"].iloc[-1]:.0f}'
+    )
     world_value = f'{df.loc[df.iso_code == "WLD", "value"].iloc[-1]:.0f}'
 
     return {
@@ -35,19 +38,21 @@ def stunting() -> dict:
     }
 
 
-def ipc_dynamic(ipc) -> dict:
+def ipc_dynamic() -> dict:
     """IPC hunger phases dynamic text"""
 
+    ipc = pd.read_csv(f"{PATHS.raw_data}/hunger/ipc.csv")
+
     return {
-        "phase3plus_world_value": f'{sum(ipc.phase_3plus)/ 1000000:.0f} million',
-        "phase5_world_millions": f'{sum(ipc.phase_5) / 1000:.0f} thousand',
+        "phase3plus_world_value": f"{sum(ipc.phase_3plus) / 1000000:.0f} million",
+        "phase5_world_millions": f"{sum(ipc.phase_5) / 1000:.0f} thousand",
     }
 
 
 def insufficient_food_dynamic() -> dict:
     """Insufficient food dynamic text"""
 
-    wfp_data = get_insufficient_food()
+    wfp_data = pd.read_csv(f"{PATHS.raw_data}/hunger/wfp.csv", parse_dates=["date"])
     latest_date = wfp_data["date"].max()
     month_date = latest_date - datetime.timedelta(days=30)
 
@@ -56,8 +61,8 @@ def insufficient_food_dynamic() -> dict:
     change = ((latest_value - month_value) / month_value) * 100
 
     return {
-        "insufficient_food_latest_value": f'{latest_value / 1000000:.0f} million',
-        "insufficient_food_month_change": f'{change:.1f}%',
+        "insufficient_food_latest_value": f"{latest_value / 1000000:.0f} million",
+        "insufficient_food_month_change": f"{change:.1f}%",
         "insufficient_food_date": latest_date.strftime("%d %b %Y"),
     }
 
@@ -67,10 +72,7 @@ def update_hunger_dynamic_text() -> None:
 
     d = {}
 
-    ipc = IPC(api_key=os.environ.get('IPC_API'))
-    ipc_df = ipc.get_ipc_ch_data()
-    d.update(ipc_dynamic(ipc_df))
-
+    d.update(ipc_dynamic())
     d.update(stunting())
     d.update(insufficient_food_dynamic())
 

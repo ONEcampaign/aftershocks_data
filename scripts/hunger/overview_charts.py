@@ -1,27 +1,19 @@
 """Create hunger overview charts for the topic carrousel"""
 
 import pandas as pd
-from bblocks.import_tools.world_bank import WorldBankData
 from scripts.config import PATHS
 from scripts.common import clean_wb_overview
-from scripts.hunger.common import get_insufficient_food, aggregate_insufficient_food
+from scripts.hunger.common import wb_indicators
+from scripts.hunger.common import aggregate_insufficient_food
 import datetime
 
-wb_indicators = {
-    "SH.STA.STNT.ME.ZS": "Stunting prevalence, height for age (% of children under 5)",
-    "SN.ITK.DEFC.ZS": "Prevalence of undernourishment",
-    "SN.ITK.SVFI.ZS": "Prevalence of severe food insecurity",
-}
 
-
-def wb_charts() -> None:
+def wb_charts(indicators: dict) -> None:
     """Create world bank overview charts"""
 
-    wb = WorldBankData()
-    for code, name in wb_indicators.items():
+    for code, name in indicators.items():
         (
-            wb.load_indicator(code)
-            .get_data(code)
+            pd.read_csv(f"{PATHS.raw_data}/hunger/{code}.csv")
             .pipe(clean_wb_overview)
             .to_csv(f"{PATHS.charts}/hunger_topic/{name}.csv", index=False)
         )
@@ -30,7 +22,7 @@ def wb_charts() -> None:
 def insufficient_food_single_measure() -> None:
     """Create insufficient food single measure chart"""
 
-    wfp_data = get_insufficient_food()
+    wfp_data = pd.read_csv(f"{PATHS.raw_data}/hunger/wfp.csv", parse_dates=["date"])
     latest_date = wfp_data["date"].max()
     month_date = latest_date - datetime.timedelta(days=30)
 
@@ -56,5 +48,5 @@ def insufficient_food_single_measure() -> None:
 def update_hunger_overview_charts() -> None:
     """Update overview charts"""
 
-    wb_charts()
+    wb_charts(wb_indicators)
     insufficient_food_single_measure()

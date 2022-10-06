@@ -2,6 +2,7 @@ from scripts.health import update as health_topic_update
 from scripts.country_page import update as update_country_page
 from scripts.logger import logger
 from scripts.debt import update as update_debt
+from scripts.hunger import update as hunger_topic_update
 
 
 def health_monthly():
@@ -10,6 +11,13 @@ def health_monthly():
     # Run update scripts
     health_topic_update.update_monthly()
     logger.info("Updated monthly charts in health page")
+
+
+def hunger_update():
+    """Update monthly hunger data"""
+
+    hunger_topic_update.update_monthly_hunger_data()
+    logger.info("Updated monthly hunger data")
 
 
 def country_page_monthly():
@@ -30,5 +38,6 @@ def debt_monthly():
 
 if __name__ == "__main__":
     health_monthly()
+    hunger_update()
     debt_monthly()
     country_page_monthly()

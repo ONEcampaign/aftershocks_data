@@ -1,16 +1,16 @@
 """Create hunger topic charts"""
 
 import pandas as pd
-from scripts.hunger.ipc import IPC
 from scripts.config import PATHS
-from bblocks.import_tools.world_bank import WorldBankData, WorldBankPinkSheet
 import country_converter as coco
 import datetime
-import os
+import numpy as np
 
 
-def ipc_chart(df: pd.DataFrame) -> None:
+def ipc_chart() -> None:
     """Create IPC bar chart"""
+
+    df = pd.read_csv(f"{PATHS.raw_data}/hunger/ipc.csv")
 
     df = (
         df.drop(["phase_3plus", "phase_1", "iso_code"], axis=1)
@@ -40,11 +40,9 @@ def stunting_chart() -> None:
         coco.CountryConverter().data.loc[lambda d: d.continent == "Africa", "ISO3"]
     ) + ["SSA"]
 
-    wb = WorldBankData()
-    wb.load_indicator("SH.STA.STNT.ME.ZS")
+    df = pd.read_csv(f"{PATHS.raw_data}/hunger/SH.STA.STNT.ME.ZS.csv")
     df = (
-        wb.get_data("SH.STA.STNT.ME.ZS")
-        .dropna(subset="value")
+        df.dropna(subset="value")
         .loc[lambda d: d.iso_code.isin(country_list), ["date", "iso_code", "value"]]
         .groupby("iso_code", as_index=False)
     )
@@ -96,21 +94,24 @@ def price_table() -> None:
         "Sugar, world": ["sugar", "USD/kg"],
     }
 
-    pink_sheet = WorldBankPinkSheet(sheet="Monthly Prices")
+    pink_sheet = pd.read_csv(f"{PATHS.raw_data}/hunger/pink_sheet.csv")
     df = (
-        pink_sheet.get_data()
-        .assign(period=lambda d: pd.to_datetime(d.period))
-        .melt(id_vars="period")
+        pink_sheet.replace("…", np.nan)
+        .dropna(subset=["value"])
+        .assign(
+            period=lambda d: pd.to_datetime(d.period),
+            value=lambda d: pd.to_numeric(d.value),
+        )
         .dropna(subset=["value"])
         .loc[
-            lambda d: (d.variable.isin(commodities))
+            lambda d: (d.indicator.isin(commodities))
             & (d.period >= d.period.max() - datetime.timedelta(days=365))
         ]
         .reset_index(drop=True)
     )
 
     main_values_df = (
-        df.groupby("variable")
+        df.groupby("indicator")
         .agg(["first", "last"])
         .assign(
             change=lambda d: (
@@ -120,25 +121,26 @@ def price_table() -> None:
         )
         .reset_index()
         .loc[
-            :, [("variable", ""), ("period", "last"), ("value", "last"), ("change", "")]
+            :,
+            [("indicator", ""), ("period", "last"), ("value", "last"), ("change", "")],
         ]
         .droplevel(0, axis=1)
     )
 
-    main_values_df.columns = ["variable", "latest_date", "latest_value", "change"]
+    main_values_df.columns = ["indicator", "latest_date", "latest_value", "change"]
     main_values_df = main_values_df.assign(
-        category=lambda d: d.variable.map(lambda x: commodities[x][0]),
-        units=lambda d: d.variable.map(lambda x: commodities[x][1]),
+        category=lambda d: d.indicator.map(lambda x: commodities[x][0]),
+        units=lambda d: d.indicator.map(lambda x: commodities[x][1]),
         latest_date=lambda d: d.latest_date.dt.strftime("%B %Y"),
     ).round({"latest_value": 2, "change": 0})
 
-    line_chart_df = df.pivot(index="variable", columns="period", values="value")
+    line_chart_df = df.pivot(index="indicator", columns="period", values="value")
     line_chart_df.columns = range(len(line_chart_df.columns))
     line_chart_df = line_chart_df.reset_index()
 
-    final = pd.merge(main_values_df, line_chart_df, on="variable", how="left").rename(
+    final = pd.merge(main_values_df, line_chart_df, on="indicator", how="left").rename(
         columns={
-            "variable": "commodity",
+            "indicator": "commodity",
             "latest_date": "as of",
             "latest_value": "price",
             "change": "1 year change",
@@ -154,10 +156,6 @@ def price_table() -> None:
 def update_hunger_topic_charts() -> None:
     """Update all charts for the hunger topic"""
 
-    ipc = IPC(api_key=os.environ.get('IPC_API'))
-    df = ipc.get_ipc_ch_data()
-    ipc_chart(df)
-
-    price_table()
-
+    ipc_chart()
     stunting_chart()
+    price_table()
