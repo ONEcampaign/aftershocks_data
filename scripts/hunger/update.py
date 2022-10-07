@@ -17,11 +17,11 @@ from scripts.hunger.common import get_insufficient_food, wb_indicators
 def update_daily_hunger_data() -> None:
     """Update daily data for hunger topic"""
 
-    # update IPC data
-    ipc = IPC(api_key=os.environ.get("IPC_API"))
-    df = ipc.get_ipc_ch_data()
-    df.to_csv(f"{PATHS.raw_data}/hunger/ipc.csv", index=False)
-    logger.info("Updated IPC data")
+    # update IPC data - temporarily switch off
+    #ipc = IPC(api_key=os.environ.get("IPC_API"))
+    #df = ipc.get_ipc_ch_data()
+    #df.to_csv(f"{PATHS.raw_data}/hunger/ipc.csv", index=False)
+    #logger.info("Updated IPC data")
 
     # update pink sheet
     pink_sheet = (
