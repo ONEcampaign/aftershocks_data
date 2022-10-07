@@ -65,7 +65,8 @@ class IPC:
 
     def __post_init__(self):
         if self.api_key is None:
-            self.api_key = os.environ["IPC_WEB_API"]
+            #self.api_key = os.environ["IPC_WEB_API"]
+            raise ValueError("IPC API key not provided")
 
     def _get_request_url(
             self, call_type: str = "population", format: str = "csv", **parameters
