@@ -54,6 +54,7 @@ Angola,2022-04-30,Inflation Rate,25.79
 Angola,2022-05-31,Inflation Rate,24.42
 Angola,2022-06-30,Inflation Rate,22.96
 Angola,2022-07-31,Inflation Rate,21.4
+Angola,2022-08-31,Inflation Rate,19.78
 Burundi,2018-01-31,Inflation Rate,6.1
 Burundi,2018-02-28,Inflation Rate,-1.3
 Burundi,2018-03-31,Inflation Rate,-2.6
@@ -109,6 +110,7 @@ Burundi,2022-04-30,Inflation Rate,16.091
 Burundi,2022-05-31,Inflation Rate,18.565
 Burundi,2022-06-30,Inflation Rate,17.574
 Burundi,2022-07-31,Inflation Rate,19.055
+Burundi,2022-08-31,Inflation Rate,19.569
 Benin,2018-01-31,Inflation Rate,0.9
 Benin,2018-02-28,Inflation Rate,1.5
 Benin,2018-03-31,Inflation Rate,1.0
@@ -275,7 +277,6 @@ Botswana,2022-04-30,Inflation Rate,9.6
 Botswana,2022-05-31,Inflation Rate,11.9
 Botswana,2022-06-30,Inflation Rate,12.7
 Botswana,2022-07-31,Inflation Rate,14.3
-Botswana,2022-08-31,Inflation Rate,14.6
 Central African Republic,2018-01-31,Inflation Rate,3.0
 Central African Republic,2018-02-28,Inflation Rate,2.2
 Central African Republic,2018-03-31,Inflation Rate,1.8
@@ -763,7 +764,6 @@ Egypt,2022-04-30,Inflation Rate,13.1
 Egypt,2022-05-31,Inflation Rate,13.5
 Egypt,2022-06-30,Inflation Rate,13.2
 Egypt,2022-07-31,Inflation Rate,13.6
-Egypt,2022-08-31,Inflation Rate,14.6
 Eritrea,2018-12-31,Inflation Rate,-14.4
 Eritrea,2019-12-31,Inflation Rate,-16.4
 Eritrea,2020-12-31,Inflation Rate,4.8
@@ -928,6 +928,7 @@ Ghana,2022-04-30,Inflation Rate,23.6
 Ghana,2022-05-31,Inflation Rate,27.6
 Ghana,2022-06-30,Inflation Rate,29.8
 Ghana,2022-07-31,Inflation Rate,31.7
+Ghana,2022-08-31,Inflation Rate,33.9
 Guinea,2018-01-31,Inflation Rate,9.6
 Guinea,2018-02-28,Inflation Rate,9.7
 Guinea,2018-03-31,Inflation Rate,9.7
@@ -1366,7 +1367,6 @@ Morocco,2022-04-30,Inflation Rate,5.9
 Morocco,2022-05-31,Inflation Rate,5.9
 Morocco,2022-06-30,Inflation Rate,7.2
 Morocco,2022-07-31,Inflation Rate,7.7
-Morocco,2022-08-31,Inflation Rate,8.0
 Madagascar,2018-01-31,Inflation Rate,10.3
 Madagascar,2018-02-28,Inflation Rate,9.7
 Madagascar,2018-03-31,Inflation Rate,9.0
@@ -1853,7 +1853,6 @@ Nigeria,2022-04-30,Inflation Rate,16.82
 Nigeria,2022-05-31,Inflation Rate,17.71
 Nigeria,2022-06-30,Inflation Rate,18.6
 Nigeria,2022-07-31,Inflation Rate,19.64
-Nigeria,2022-08-31,Inflation Rate,20.52
 Rwanda,2018-01-31,Inflation Rate,0.1
 Rwanda,2018-02-28,Inflation Rate,-1.3
 Rwanda,2018-03-31,Inflation Rate,-1.4
@@ -1909,7 +1908,6 @@ Rwanda,2022-04-30,Inflation Rate,10.5
 Rwanda,2022-05-31,Inflation Rate,14.8
 Rwanda,2022-06-30,Inflation Rate,16.1
 Rwanda,2022-07-31,Inflation Rate,19.6
-Rwanda,2022-08-31,Inflation Rate,20.4
 Sudan,2018-01-31,Inflation Rate,52.4
 Sudan,2018-02-28,Inflation Rate,54.3
 Sudan,2018-03-31,Inflation Rate,55.6
@@ -2018,6 +2016,7 @@ Senegal,2022-04-30,Inflation Rate,7.0
 Senegal,2022-05-31,Inflation Rate,7.4
 Senegal,2022-06-30,Inflation Rate,8.9
 Senegal,2022-07-31,Inflation Rate,11.0
+Senegal,2022-08-31,Inflation Rate,11.3
 Sierra Leone,2018-01-31,Inflation Rate,14.7
 Sierra Leone,2018-02-28,Inflation Rate,14.4
 Sierra Leone,2018-03-31,Inflation Rate,14.9
@@ -2128,7 +2127,6 @@ Somalia,2022-04-30,Inflation Rate,6.5
 Somalia,2022-05-31,Inflation Rate,6.7
 Somalia,2022-06-30,Inflation Rate,7.0
 Somalia,2022-07-31,Inflation Rate,7.7
-Somalia,2022-08-31,Inflation Rate,7.6
 South Sudan,2018-01-31,Inflation Rate,125.0
 South Sudan,2018-02-28,Inflation Rate,112.7
 South Sudan,2018-03-31,Inflation Rate,161.2
@@ -2567,7 +2565,6 @@ Tanzania,2022-04-30,Inflation Rate,3.8
 Tanzania,2022-05-31,Inflation Rate,4.0
 Tanzania,2022-06-30,Inflation Rate,4.4
 Tanzania,2022-07-31,Inflation Rate,4.5
-Tanzania,2022-08-31,Inflation Rate,4.6
 Uganda,2018-01-31,Inflation Rate,3.0
 Uganda,2018-02-28,Inflation Rate,2.1
 Uganda,2018-03-31,Inflation Rate,2.0
@@ -2624,7 +2621,6 @@ Uganda,2022-05-31,Inflation Rate,6.3
 Uganda,2022-06-30,Inflation Rate,6.8
 Uganda,2022-07-31,Inflation Rate,7.9
 Uganda,2022-08-31,Inflation Rate,9.0
-Uganda,2022-09-30,Inflation Rate,10.0
 South Africa,2018-01-31,Inflation Rate,4.3
 South Africa,2018-02-28,Inflation Rate,4.0
 South Africa,2018-03-31,Inflation Rate,3.8
