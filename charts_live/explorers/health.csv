@@ -8,7 +8,7 @@ AGO,Angola,Africa,Middle Africa,Lower middle income,33933611.0,31.1,LDC,1712.903
 ATG,Antigua and Barbuda,America,Caribbean,High income,98728.0,,Non-LDC,17097.479944899118,2.59645534,42.0,6.4,68.97,,,
 ARG,Argentina,America,South America,Upper middle income,45808747.0,1.1,Non-LDC,9863.072657280934,5.93055725,39.0,8.6,91.29,0.0,1316.0,71.942957
 ARM,Armenia,Asia,Western Asia,Upper middle income,2968128.0,0.4,Non-LDC,4258.913362226966,1.40614879,26.0,10.9,40.48,0.0,,
-ABW,Aruba,America,Caribbean,High income,107195.0,,Non-LDC,24348.150566724195,,,,84.38,,,
+ABW,Aruba,America,Caribbean,High income,107195.0,,Non-LDC,24348.150566724195,,,,84.39,,,
 AUS,Australia,Oceania,Australia and New Zealand,High income,25739256.0,0.5,Non-LDC,52745.852483070994,7.10425138,6.0,3.7,86.58,,50.0,83.158834
 AUT,Austria,Europe,Western Europe,High income,8956279.0,0.6,Non-LDC,48336.14495484118,7.6176486,5.0,3.6,77.22,,,
 AZE,Azerbaijan,Asia,Western Asia,Upper middle income,10145212.0,0.0,Non-LDC,4208.192002296256,1.28157103,26.0,19.4,52.1,0.0,159.0,61.388094
@@ -47,9 +47,9 @@ CRI,Costa Rica,America,Central America,Upper middle income,5139053.0,2.2,Non-LDC
 CIV,Cote d'Ivoire,Africa,Western Africa,Lower middle income,27053629.0,11.4,Non-LDC,2144.2964269229833,0.95927447,617.0,77.9,39.02,15913.0,8837.0,76.239634
 HRV,Croatia,Europe,Southern Europe,High income,3899000.0,0.3,Non-LDC,14671.19774301103,5.69058323,8.0,4.6,57.12,,10.0,76.997717
 CUB,Cuba,America,Caribbean,Upper middle income,11317498.0,,Non-LDC,,10.12506104,36.0,5.1,95.12,,230.0,72.288157
-CUW,Curacao,America,Caribbean,High income,152369.0,,Non-LDC,,,,,57.01,,,
+CUW,Curacao,America,Caribbean,High income,152369.0,,Non-LDC,,,,,57.02,,,
 CYP,Cyprus,Asia,Western Asia,High income,1215588.0,0.2,Non-LDC,20296.350408197515,3.92549944,6.0,2.8,74.77,,7.0,81.344411
-CZE,Czech Republic,Europe,Eastern Europe,High income,10703446.0,0.0,Non-LDC,22980.916613210364,6.38516235,3.0,2.9,66.36,,,
+CZE,Czech Republic,Europe,Eastern Europe,High income,10703446.0,0.0,Non-LDC,22980.916613210364,6.38516235,3.0,2.9,66.37,,,
 DNK,Denmark,Europe,Northern Europe,High income,5856733.0,0.3,Non-LDC,60652.07343411421,8.29217625,4.0,3.6,82.18,,42.0,86.77723
 DJI,Djibouti,Africa,Eastern Africa,Lower middle income,1002197.0,19.1,LDC,3082.2283443275123,0.96505356,248.0,55.9,22.36,126.0,385.0,30.932625
 DMA,Dominica,America,Caribbean,Upper middle income,72172.0,,Non-LDC,8479.742836557114,3.51960874,,35.4,45.57,,,
@@ -64,10 +64,10 @@ EST,Estonia,Europe,Northern Europe,High income,1329254.0,0.6,Non-LDC,23580.89575
 SWZ,Eswatini,Africa,Southern Africa,Lower middle income,1172369.0,36.1,Non-LDC,3834.1170740611533,3.44011402,437.0,46.6,41.29,0.0,2570.0,91.008275
 ETH,Ethiopia,Africa,Eastern Africa,Low income,117876226.0,27.0,LDC,819.5969898120084,0.73514652,401.0,48.7,35.84,9433.0,11629.0,78.356335
 FRO,Faeroe Islands,Europe,Northern Europe,High income,49053.0,,Non-LDC,,,,,78.87,,,
-FJI,Fiji,Oceania,Melanesia,Upper middle income,902899.0,1.3,Non-LDC,4958.472653087444,2.49526525,34.0,27.4,76.83,,30.0,45.499297
+FJI,Fiji,Oceania,Melanesia,Upper middle income,902899.0,1.3,Non-LDC,4958.472653087444,2.49526525,34.0,27.4,76.84,,30.0,45.499297
 FIN,Finland,Europe,Northern Europe,High income,5541696.0,0.0,Non-LDC,49012.07139474991,7.33806992,3.0,2.3,81.69,,,
 FRA,France,Europe,Western Europe,High income,67499343.0,0.0,Non-LDC,39052.55788934123,8.32757092,8.0,4.4,80.95,,721.0,85.157898
-PYF,French Polynesia,Oceania,Polynesia,High income,282534.0,,Non-LDC,,,,,62.77,,,
+PYF,French Polynesia,Oceania,Polynesia,High income,282534.0,,Non-LDC,,,,,62.81,,,
 GAB,Gabon,Africa,Middle Africa,Upper middle income,2278829.0,2.5,Non-LDC,6731.088642456279,1.66962504,252.0,41.7,13.27,424.0,2037.0,54.361798
 GMB,Gambia,Africa,Western Africa,Low income,2486937.0,13.4,LDC,726.1945115618128,1.04134357,597.0,49.4,17.14,615.0,1264.0,33.405048
 GEO,Georgia,Asia,Western Asia,Upper middle income,3708610.0,5.8,Non-LDC,4272.759874993596,2.7172761,25.0,9.3,44.03,0.0,69.0,71.105061
@@ -96,14 +96,14 @@ IMN,Isle of Man,Europe,Northern Europe,High income,85410.0,,Non-LDC,,,,,82.55,,,
 ISR,Israel,Asia,Western Asia,High income,9364000.0,0.5,Non-LDC,44133.70354549338,4.83341503,3.0,3.6,72.31,,,
 ITA,Italy,Europe,Southern Europe,High income,59066225.0,1.5,Non-LDC,32015.894024038273,6.40774679,2.0,2.9,85.83,,414.0,87.357801
 JAM,Jamaica,America,Caribbean,Upper middle income,2973462.0,1.2,Non-LDC,5316.361870439239,3.97862124,80.0,13.3,29.52,,774.0,47.009493
-JPN,Japan,Asia,Eastern Asia,High income,125681593.0,0.7,Non-LDC,40034.66124112542,9.00933933,5.0,2.5,83.65,,,
+JPN,Japan,Asia,Eastern Asia,High income,125681593.0,0.7,Non-LDC,40034.66124112542,9.00933933,5.0,2.5,83.66,,,
 JOR,Jordan,Asia,Western Asia,Upper middle income,10269022.0,0.0,Non-LDC,4339.848526958069,3.8803432,46.0,15.0,43.25,,,
 KAZ,Kazakhstan,Asia,Central Asia,Upper middle income,19002586.0,0.0,Non-LDC,9003.090421482633,1.67075253,10.0,10.0,56.46,0.0,152.0,63.521207
 KEN,Kenya,Africa,Eastern Africa,Lower middle income,54985702.0,29.4,Non-LDC,1835.586276592413,2.11127639,342.0,41.9,25.68,12646.0,22373.0,78.088066
 KIR,Kiribati,Oceania,Micronesia,Lower middle income,121388.0,1.7,LDC,1466.3722938016938,8.44735909,92.0,49.6,72.7,,,
 XKX,Kosovo,Europe,Southern Europe,Upper middle income,1806279.0,0.4,Non-LDC,,,,,,,,
 KWT,Kuwait,Asia,Western Asia,High income,4328553.0,,Non-LDC,31463.63230391311,4.77939463,12.0,8.9,81.08,,,
-KGZ,Kyrgyz Republic,Asia,Central Asia,Lower middle income,6694200.0,1.3,Non-LDC,1163.992710107257,2.31117272,60.0,17.5,24.68,0.0,208.0,50.269085
+KGZ,Kyrgyz Republic,Asia,Central Asia,Lower middle income,6694200.0,1.3,Non-LDC,1163.992710107257,2.31117272,60.0,17.5,24.69,0.0,208.0,50.269085
 LAO,Laos,Asia,South-Eastern Asia,Lower middle income,7379358.0,7.1,LDC,2546.4274805477658,0.9597249,185.0,44.1,79.31,7.0,325.0,55.289987
 LVA,Latvia,Europe,Northern Europe,High income,1883162.0,0.2,Non-LDC,17852.420556489564,3.98357701,19.0,4.0,71.84,,77.0,39.40792
 LBN,Lebanon,Asia,Western Asia,Lower middle income,6769151.0,0.0,Non-LDC,7516.452210919803,4.23522329,29.0,7.0,48.83,,49.0,65.790361
@@ -134,10 +134,10 @@ MAR,Morocco,Africa,Northern Africa,Lower middle income,37344787.0,1.4,Non-LDC,32
 MOZ,Mozambique,Africa,Eastern Africa,Low income,32163045.0,64.6,LDC,440.1635479476523,1.66722643,289.0,70.6,42.18,23766.0,,
 MMR,Myanmar,Asia,Eastern Asia,Lower middle income,54806014.0,2.0,LDC,1255.3731785712423,0.73722625,250.0,43.7,64.64,77.0,6640.0,69.890238
 NAM,Namibia,Africa,Southern Africa,Upper middle income,2587344.0,15.6,Non-LDC,4089.521919002653,3.98512077,195.0,40.2,23.46,51.0,2948.0,90.744914
-NRU,Nauru,Oceania,Polynesia,High income,10873.0,1.4,Non-LDC,11404.396210797388,8.44230652,,28.5,83.86,,,
+NRU,Nauru,Oceania,Polynesia,High income,10873.0,1.4,Non-LDC,11404.396210797388,8.44230652,,28.5,92.09,,,
 NPL,Nepal,Asia,Southern Asia,Lower middle income,29674920.0,8.2,LDC,1152.0165850489234,1.10280871,186.0,28.2,90.53,0.0,508.0,71.655232
 NLD,Netherlands,Europe,Western Europe,High income,17533405.0,0.1,Non-LDC,51847.60176360496,6.67556286,5.0,4.2,73.0,,99.0,87.535906
-NCL,New Caledonia,Oceania,Melanesia,High income,272620.0,,Non-LDC,,,,,66.57,,,
+NCL,New Caledonia,Oceania,Melanesia,High income,272620.0,,Non-LDC,,,,,66.58,,,
 NZL,New Zealand,Oceania,Australia and New Zealand,High income,5122600.0,,Non-LDC,41094.366142193416,7.36054611,9.0,4.7,83.78,,13.0,81.378742
 NIC,Nicaragua,America,Central America,Lower middle income,6702379.0,3.9,Non-LDC,1877.8406891045702,5.11949444,98.0,16.0,88.91,0.0,223.0,52.582202
 NER,Niger,Africa,Western Africa,Low income,25130810.0,50.6,LDC,513.7916366404426,2.02315378,509.0,77.5,14.81,17435.0,910.0,80.817087
@@ -150,7 +150,7 @@ PAK,Pakistan,Asia,Southern Asia,Lower middle income,225199929.0,4.9,Non-LDC,1333
 PLW,Palau,Oceania,Micronesia,Upper middle income,18174.0,,Non-LDC,13865.962363816441,6.81600857,,16.9,,,,
 PSE,Palestine,Asia,Western Asia,Lower middle income,4922749.0,0.5,Non-LDC,,,27.0,16.5,39.16,,,
 PAN,Panama,America,Central America,High income,4381583.0,1.0,Non-LDC,12319.063680866026,5.01409578,52.0,14.3,80.6,0.0,,
-PNG,Papua New Guinea,Oceania,Melanesia,Lower middle income,9119005.0,39.7,Non-LDC,2643.928805829145,1.32699835,145.0,43.9,3.55,2962.0,525.0,64.988992
+PNG,Papua New Guinea,Oceania,Melanesia,Lower middle income,9119005.0,39.7,Non-LDC,2643.928805829145,1.32699835,145.0,43.9,3.56,2962.0,525.0,64.988992
 PRY,Paraguay,America,South America,Upper middle income,7219641.0,0.8,Non-LDC,5250.5380807716065,3.29943347,129.0,18.9,59.16,0.0,263.0,66.414095
 PER,Peru,America,South America,Upper middle income,33359416.0,5.8,Non-LDC,6169.772276589015,3.27981329,88.0,12.8,88.73,23.0,940.0,80.38851
 PHL,Philippines,Asia,South-Eastern Asia,Lower middle income,111046910.0,3.0,Non-LDC,3257.6412977182345,1.65507495,121.0,26.4,68.23,97.0,1217.0,41.285311
@@ -159,10 +159,10 @@ PRT,Portugal,Europe,Southern Europe,High income,10299423.0,0.1,Non-LDC,22171.727
 PRI,Puerto Rico,America,Caribbean,High income,3263584.0,,Non-LDC,32147.173169129397,,21.0,,,,,
 QAT,Qatar,Asia,Western Asia,High income,2930524.0,,Non-LDC,60184.117243196095,2.11784458,9.0,5.8,105.1,,6.0,58.181818
 ROU,Romania,Europe,Eastern Europe,High income,19115146.0,2.2,Non-LDC,13053.104590464545,4.60361433,19.0,6.9,42.34,,284.0,66.328862
-RUS,Russia,Europe,Eastern Europe,Upper middle income,143446060.0,0.0,Non-LDC,10348.252158337427,3.45416021,17.0,5.4,58.86,,,
+RUS,Russia,Europe,Eastern Europe,Upper middle income,143446060.0,0.0,Non-LDC,10348.252158337427,3.45416021,17.0,5.4,59.09,,,
 RWA,Rwanda,Africa,Eastern Africa,Low income,13276517.0,52.0,LDC,767.1439730766737,2.56083989,248.0,40.5,68.17,3046.0,2442.0,92.580953
 MAF,Saint-Martin,America,Caribbean,High income,39239.0,,Non-LDC,,,,,,,,
-WSM,Samoa,Oceania,Polynesia,Lower middle income,200144.0,1.2,Non-LDC,4341.873850827405,4.62225151,43.0,17.0,87.35,,,
+WSM,Samoa,Oceania,Polynesia,Lower middle income,200144.0,1.2,Non-LDC,4341.873850827405,4.62225151,43.0,17.0,87.36,,,
 SMR,San Marino,Europe,Southern Europe,High income,34010.0,,Non-LDC,47515.43663628345,5.2539835,,1.8,78.1,,,
 STP,Sao Tome and Principe,Africa,Middle Africa,Lower middle income,223364.0,15.6,LDC,1929.585788220125,2.615448,130.0,16.1,57.1,0.0,17.0,100.0
 SAU,Saudi Arabia,Asia,Western Asia,High income,35340680.0,,Non-LDC,19902.503290825192,3.93484879,17.0,7.0,74.81,0.0,,
@@ -174,7 +174,7 @@ SGP,Singapore,Asia,South-Eastern Asia,High income,5453566.0,,Non-LDC,63313.80238
 SXM,Sint Maarten,America,Caribbean,High income,42846.0,,Non-LDC,,,,,67.64,,,
 SVK,Slovakia,Europe,Eastern Europe,High income,5447247.0,0.1,Non-LDC,19291.94692291354,5.48452091,5.0,5.8,47.65,,5.0,67.567568
 SVN,Slovenia,Europe,Southern Europe,High income,2107007.0,0.0,Non-LDC,25469.303139476993,6.16875267,7.0,2.2,59.72,,,87.576127
-SLB,Solomon Islands,Oceania,Melanesia,Lower middle income,703995.0,26.6,LDC,2299.7322424164945,3.56772232,104.0,19.4,44.05,124.0,,
+SLB,Solomon Islands,Oceania,Melanesia,Lower middle income,703995.0,26.6,LDC,2299.7322424164945,3.56772232,104.0,19.4,44.5,124.0,,
 SOM,Somalia,Africa,Eastern Africa,Low income,16359500.0,70.7,LDC,420.73413001619855,,829.0,114.6,36.35,2123.0,360.0,50.193648
 ZAF,South Africa,Africa,Southern Africa,Upper middle income,60041996.0,20.5,Non-LDC,5621.415383992231,5.35265827,119.0,32.2,37.65,38.0,51266.0,73.82042
 KOR,South Korea,Asia,Eastern Asia,High income,51744876.0,0.2,Non-LDC,31784.32585286319,4.8600049,11.0,3.0,87.05,0.0,,
@@ -186,7 +186,7 @@ LCA,St. Lucia,America,Caribbean,Upper middle income,184401.0,5.1,Non-LDC,8221.21
 VCT,St. Vincent and the Grenadines,America,Caribbean,Upper middle income,111269.0,,Non-LDC,8178.378524117229,3.15172291,68.0,14.1,35.73,,,
 SDN,Sudan,Africa,Northern Africa,Low income,44909351.0,15.3,LDC,744.4329355817233,1.03762662,295.0,56.6,14.57,7533.0,1913.0,26.796262
 SUR,Suriname,America,South America,Upper middle income,591798.0,18.4,Non-LDC,6732.026806444091,7.01218414,120.0,17.6,43.69,0.0,115.0,49.973863
-SWE,Sweden,Europe,Northern Europe,High income,10415811.0,0.3,Non-LDC,52521.498325958484,9.22483444,4.0,2.6,74.72,,,
+SWE,Sweden,Europe,Northern Europe,High income,10415811.0,0.3,Non-LDC,52521.498325958484,9.22483444,4.0,2.6,74.73,,,
 CHE,Switzerland,Europe,Western Europe,High income,8697723.0,0.0,Non-LDC,84964.53612054557,3.62563658,5.0,4.0,70.11,,131.0,89.954179
 SYR,Syria,Asia,Western Asia,Low income,18275704.0,1.1,Non-LDC,2951.4047721499537,1.61476171,31.0,22.4,14.14,0.0,21.0,37.654321
 TWN,Taiwan,Asia,Eastern Asia,High income,,,Non-LDC,,,,,91.17,,,
@@ -210,7 +210,7 @@ USA,United States,America,Northern America,High income,331893745.0,1.0,Non-LDC,6
 VIR,United States Virgin Islands,America,Caribbean,High income,105870.0,,Non-LDC,,,,,,,,
 URY,Uruguay,America,South America,High income,3485152.0,0.2,Non-LDC,17507.701242298757,6.22570753,17.0,6.2,87.61,,219.0,63.897465
 UZB,Uzbekistan,Asia,Central Asia,Lower middle income,34915100.0,82.2,Non-LDC,1715.3896165269468,2.3361671,29.0,13.9,61.77,0.0,681.0,51.238329
-VUT,Vanuatu,Oceania,Melanesia,Lower middle income,314464.0,10.0,Non-LDC,2954.2332349648927,1.91707087,72.0,24.9,44.91,0.0,,
+VUT,Vanuatu,Oceania,Melanesia,Lower middle income,314464.0,10.0,Non-LDC,2954.2332349648927,1.91707087,72.0,24.9,45.21,0.0,,
 VEN,Venezuela,America,South America,Not classified,28704947.0,7.1,Non-LDC,4037.0393298409504,2.47110105,125.0,24.2,78.57,203.0,2281.0,58.277324
 VNM,Vietnam,Asia,South-Eastern Asia,Lower middle income,98168829.0,1.2,Non-LDC,3493.379757030615,2.29924917,43.0,20.9,92.37,2.0,3471.0,72.381896
 YEM,Yemen,Asia,Western Asia,Low income,30490639.0,19.8,LDC,717.8596683395189,0.43304482,164.0,59.6,2.61,1979.0,401.0,30.807106
