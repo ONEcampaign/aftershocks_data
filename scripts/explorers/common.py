@@ -30,7 +30,8 @@ class ExplorerSchema:
     CONTINENT = "Continent"
     INCOME = "Income Group"
     LDC = "Least Developed Countries"
-    GDP = "GDP per capita (USD)"
+    GDP = "GDP (USD)"
+    GDP_PER_CAPITA = "GDP per capita (USD)"
     POP = "Population"
     POVERTY = "Poverty rate (%)"
     GDP_GROWTH = "GDP growth (%)"
@@ -106,6 +107,7 @@ LDC: list = [
 ]
 
 ECONOMICS_WEO_INDICATORS: dict = {
+    "NGDPDPC": ExplorerSchema.GDP_PER_CAPITA,
     "NGDP_RPCH": ExplorerSchema.GDP_GROWTH,
     "LUR": ExplorerSchema.UNEMPLOYMENT,
     "GGR_NGDP": ExplorerSchema.GOV_REVENUE,
@@ -158,22 +160,12 @@ def basic_info() -> pd.DataFrame:
             data_path=PATHS.bblocks_data,
         )
         .pipe(
-            add.add_gdp_column,
-            id_column="ISO3",
-            id_type="ISO3",
-            usd=True,
-            include_estimates=False,
-            data_path=PATHS.bblocks_data,
-        )
-        .pipe(
             add.add_poverty_ratio_column,
             id_column="ISO3",
             id_type="ISO3",
             data_path=PATHS.bblocks_data,
         )
         .assign(ldc=lambda d: d.ISO3.apply(lambda x: "LDC" if x in LDC else "Non-LDC"))
-        .assign(gdp_per_capita=lambda d: d.gdp / d.population)
-        .drop("gdp", axis=1)
         .dropna(thresh=6)
         .fillna({"income_level": "Not classified"})
         .rename(
@@ -186,7 +178,6 @@ def basic_info() -> pd.DataFrame:
                 "population": ExplorerSchema.POP,
                 "poverty_ratio": ExplorerSchema.POVERTY,
                 "ldc": ExplorerSchema.LDC,
-                "gdp_per_capita": ExplorerSchema.GDP,
             }
         )
     )
