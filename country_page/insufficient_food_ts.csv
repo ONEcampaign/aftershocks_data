@@ -1,5 +1,4 @@
 date,value,iso_code,name_short,source
-2022-07-23,22.42,Africa (median),,WFP HungerMapLive
 2022-07-24,22.26,Africa (median),,WFP HungerMapLive
 2022-07-25,22.26,Africa (median),,WFP HungerMapLive
 2022-07-26,22.7,Africa (median),,WFP HungerMapLive
@@ -90,9 +89,9 @@ date,value,iso_code,name_short,source
 2022-10-19,24.380000000000003,Africa (median),,WFP HungerMapLive
 2022-10-20,24.415,Africa (median),,WFP HungerMapLive
 2022-10-21,24.424999999999997,Africa (median),,WFP HungerMapLive
-2022-10-22,22.58,Africa (median),,WFP HungerMapLive
-2022-10-23,22.58,Africa (median),,WFP HungerMapLive
-2022-07-23,22.42,,Africa (median),WFP HungerMapLive
+2022-10-22,24.435,Africa (median),,WFP HungerMapLive
+2022-10-23,24.435,Africa (median),,WFP HungerMapLive
+2022-10-24,24.439999999999998,Africa (median),,WFP HungerMapLive
 2022-07-24,22.26,,Africa (median),WFP HungerMapLive
 2022-07-25,22.26,,Africa (median),WFP HungerMapLive
 2022-07-26,22.7,,Africa (median),WFP HungerMapLive
@@ -183,9 +182,9 @@ date,value,iso_code,name_short,source
 2022-10-19,24.380000000000003,,Africa (median),WFP HungerMapLive
 2022-10-20,24.415,,Africa (median),WFP HungerMapLive
 2022-10-21,24.424999999999997,,Africa (median),WFP HungerMapLive
-2022-10-22,22.58,,Africa (median),WFP HungerMapLive
-2022-10-23,22.58,,Africa (median),WFP HungerMapLive
-2022-07-23,11.64,,Angola,WFP HungerMapLive
+2022-10-22,24.435,,Africa (median),WFP HungerMapLive
+2022-10-23,24.435,,Africa (median),WFP HungerMapLive
+2022-10-24,24.439999999999998,,Africa (median),WFP HungerMapLive
 2022-07-24,11.34,,Angola,WFP HungerMapLive
 2022-07-25,11.19,,Angola,WFP HungerMapLive
 2022-07-26,11.49,,Angola,WFP HungerMapLive
@@ -278,7 +277,7 @@ date,value,iso_code,name_short,source
 2022-10-21,11.28,,Angola,WFP HungerMapLive
 2022-10-22,11.27,,Angola,WFP HungerMapLive
 2022-10-23,11.26,,Angola,WFP HungerMapLive
-2022-07-23,34.0,,Burundi,WFP HungerMapLive
+2022-10-24,11.44,,Angola,WFP HungerMapLive
 2022-07-24,34.0,,Burundi,WFP HungerMapLive
 2022-07-25,34.0,,Burundi,WFP HungerMapLive
 2022-07-26,34.0,,Burundi,WFP HungerMapLive
@@ -371,7 +370,7 @@ date,value,iso_code,name_short,source
 2022-10-21,33.87,,Burundi,WFP HungerMapLive
 2022-10-22,33.86,,Burundi,WFP HungerMapLive
 2022-10-23,33.87,,Burundi,WFP HungerMapLive
-2022-07-23,48.49,,Burkina Faso,WFP HungerMapLive
+2022-10-24,33.87,,Burundi,WFP HungerMapLive
 2022-07-24,48.93,,Burkina Faso,WFP HungerMapLive
 2022-07-25,49.19,,Burkina Faso,WFP HungerMapLive
 2022-07-26,49.97,,Burkina Faso,WFP HungerMapLive
@@ -464,7 +463,7 @@ date,value,iso_code,name_short,source
 2022-10-21,57.84,,Burkina Faso,WFP HungerMapLive
 2022-10-22,57.62,,Burkina Faso,WFP HungerMapLive
 2022-10-23,57.26,,Burkina Faso,WFP HungerMapLive
-2022-07-23,10.32,,Botswana,WFP HungerMapLive
+2022-10-24,56.59,,Burkina Faso,WFP HungerMapLive
 2022-07-24,10.32,,Botswana,WFP HungerMapLive
 2022-07-25,10.32,,Botswana,WFP HungerMapLive
 2022-07-26,10.32,,Botswana,WFP HungerMapLive
@@ -557,7 +556,7 @@ date,value,iso_code,name_short,source
 2022-10-21,10.34,,Botswana,WFP HungerMapLive
 2022-10-22,10.34,,Botswana,WFP HungerMapLive
 2022-10-23,10.34,,Botswana,WFP HungerMapLive
-2022-07-23,34.36,,Central African Republic,WFP HungerMapLive
+2022-10-24,10.34,,Botswana,WFP HungerMapLive
 2022-07-24,34.46,,Central African Republic,WFP HungerMapLive
 2022-07-25,34.37,,Central African Republic,WFP HungerMapLive
 2022-07-26,34.39,,Central African Republic,WFP HungerMapLive
@@ -650,7 +649,7 @@ date,value,iso_code,name_short,source
 2022-10-21,33.07,,Central African Republic,WFP HungerMapLive
 2022-10-22,33.24,,Central African Republic,WFP HungerMapLive
 2022-10-23,33.35,,Central African Republic,WFP HungerMapLive
-2022-07-23,18.77,,Cote d'Ivoire,WFP HungerMapLive
+2022-10-24,33.69,,Central African Republic,WFP HungerMapLive
 2022-07-24,18.79,,Cote d'Ivoire,WFP HungerMapLive
 2022-07-25,18.67,,Cote d'Ivoire,WFP HungerMapLive
 2022-07-26,18.76,,Cote d'Ivoire,WFP HungerMapLive
@@ -743,7 +742,7 @@ date,value,iso_code,name_short,source
 2022-10-21,18.21,,Cote d'Ivoire,WFP HungerMapLive
 2022-10-22,18.26,,Cote d'Ivoire,WFP HungerMapLive
 2022-10-23,18.37,,Cote d'Ivoire,WFP HungerMapLive
-2022-07-23,31.96,,Cameroon,WFP HungerMapLive
+2022-10-24,18.26,,Cote d'Ivoire,WFP HungerMapLive
 2022-07-24,32.05,,Cameroon,WFP HungerMapLive
 2022-07-25,31.97,,Cameroon,WFP HungerMapLive
 2022-07-26,32.43,,Cameroon,WFP HungerMapLive
@@ -836,7 +835,7 @@ date,value,iso_code,name_short,source
 2022-10-21,37.2,,Cameroon,WFP HungerMapLive
 2022-10-22,36.09,,Cameroon,WFP HungerMapLive
 2022-10-23,35.92,,Cameroon,WFP HungerMapLive
-2022-07-23,53.94,,DR Congo,WFP HungerMapLive
+2022-10-24,34.71,,Cameroon,WFP HungerMapLive
 2022-07-24,54.02,,DR Congo,WFP HungerMapLive
 2022-07-25,53.94,,DR Congo,WFP HungerMapLive
 2022-07-26,53.87,,DR Congo,WFP HungerMapLive
@@ -929,7 +928,7 @@ date,value,iso_code,name_short,source
 2022-10-21,54.96,,DR Congo,WFP HungerMapLive
 2022-10-22,54.81,,DR Congo,WFP HungerMapLive
 2022-10-23,54.3,,DR Congo,WFP HungerMapLive
-2022-07-23,27.71,,Congo Republic,WFP HungerMapLive
+2022-10-24,54.74,,DR Congo,WFP HungerMapLive
 2022-07-24,28.08,,Congo Republic,WFP HungerMapLive
 2022-07-25,28.04,,Congo Republic,WFP HungerMapLive
 2022-07-26,27.8,,Congo Republic,WFP HungerMapLive
@@ -1022,7 +1021,7 @@ date,value,iso_code,name_short,source
 2022-10-21,35.05,,Congo Republic,WFP HungerMapLive
 2022-10-22,35.25,,Congo Republic,WFP HungerMapLive
 2022-10-23,34.67,,Congo Republic,WFP HungerMapLive
-2022-07-23,22.26,,Comoros,WFP HungerMapLive
+2022-10-24,35.22,,Congo Republic,WFP HungerMapLive
 2022-07-24,22.26,,Comoros,WFP HungerMapLive
 2022-07-25,22.26,,Comoros,WFP HungerMapLive
 2022-07-26,22.26,,Comoros,WFP HungerMapLive
@@ -1115,7 +1114,7 @@ date,value,iso_code,name_short,source
 2022-10-21,18.3,,Comoros,WFP HungerMapLive
 2022-10-22,18.3,,Comoros,WFP HungerMapLive
 2022-10-23,18.3,,Comoros,WFP HungerMapLive
-2022-07-23,19.91,,Cabo Verde,WFP HungerMapLive
+2022-10-24,18.3,,Comoros,WFP HungerMapLive
 2022-07-24,19.91,,Cabo Verde,WFP HungerMapLive
 2022-07-25,19.91,,Cabo Verde,WFP HungerMapLive
 2022-07-26,19.91,,Cabo Verde,WFP HungerMapLive
@@ -1208,7 +1207,7 @@ date,value,iso_code,name_short,source
 2022-10-21,14.69,,Cabo Verde,WFP HungerMapLive
 2022-10-22,14.69,,Cabo Verde,WFP HungerMapLive
 2022-10-23,14.76,,Cabo Verde,WFP HungerMapLive
-2022-07-23,17.57,,Djibouti,WFP HungerMapLive
+2022-10-24,14.76,,Cabo Verde,WFP HungerMapLive
 2022-07-24,17.57,,Djibouti,WFP HungerMapLive
 2022-07-25,17.57,,Djibouti,WFP HungerMapLive
 2022-07-26,17.57,,Djibouti,WFP HungerMapLive
@@ -1301,7 +1300,7 @@ date,value,iso_code,name_short,source
 2022-10-21,16.78,,Djibouti,WFP HungerMapLive
 2022-10-22,16.78,,Djibouti,WFP HungerMapLive
 2022-10-23,16.78,,Djibouti,WFP HungerMapLive
-2022-07-23,10.17,,Algeria,WFP HungerMapLive
+2022-10-24,16.78,,Djibouti,WFP HungerMapLive
 2022-07-24,10.18,,Algeria,WFP HungerMapLive
 2022-07-25,10.18,,Algeria,WFP HungerMapLive
 2022-07-26,10.18,,Algeria,WFP HungerMapLive
@@ -1394,7 +1393,7 @@ date,value,iso_code,name_short,source
 2022-10-21,11.51,,Algeria,WFP HungerMapLive
 2022-10-22,11.51,,Algeria,WFP HungerMapLive
 2022-10-23,11.51,,Algeria,WFP HungerMapLive
-2022-07-23,10.7,,Egypt,WFP HungerMapLive
+2022-10-24,11.51,,Algeria,WFP HungerMapLive
 2022-07-24,10.7,,Egypt,WFP HungerMapLive
 2022-07-25,10.59,,Egypt,WFP HungerMapLive
 2022-07-26,10.56,,Egypt,WFP HungerMapLive
@@ -1487,7 +1486,7 @@ date,value,iso_code,name_short,source
 2022-10-21,10.76,,Egypt,WFP HungerMapLive
 2022-10-22,10.76,,Egypt,WFP HungerMapLive
 2022-10-23,10.76,,Egypt,WFP HungerMapLive
-2022-07-23,18.72,,Ethiopia,WFP HungerMapLive
+2022-10-24,10.76,,Egypt,WFP HungerMapLive
 2022-07-24,18.55,,Ethiopia,WFP HungerMapLive
 2022-07-25,19.0,,Ethiopia,WFP HungerMapLive
 2022-07-26,19.12,,Ethiopia,WFP HungerMapLive
@@ -1580,7 +1579,7 @@ date,value,iso_code,name_short,source
 2022-10-21,15.18,,Ethiopia,WFP HungerMapLive
 2022-10-22,15.18,,Ethiopia,WFP HungerMapLive
 2022-10-23,15.44,,Ethiopia,WFP HungerMapLive
-2022-07-23,20.86,,Ghana,WFP HungerMapLive
+2022-10-24,15.46,,Ethiopia,WFP HungerMapLive
 2022-07-24,20.86,,Ghana,WFP HungerMapLive
 2022-07-25,20.85,,Ghana,WFP HungerMapLive
 2022-07-26,20.85,,Ghana,WFP HungerMapLive
@@ -1673,7 +1672,7 @@ date,value,iso_code,name_short,source
 2022-10-21,21.53,,Ghana,WFP HungerMapLive
 2022-10-22,21.53,,Ghana,WFP HungerMapLive
 2022-10-23,21.53,,Ghana,WFP HungerMapLive
-2022-07-23,39.32,,Guinea,WFP HungerMapLive
+2022-10-24,21.53,,Ghana,WFP HungerMapLive
 2022-07-24,40.42,,Guinea,WFP HungerMapLive
 2022-07-25,40.76,,Guinea,WFP HungerMapLive
 2022-07-26,42.06,,Guinea,WFP HungerMapLive
@@ -1766,7 +1765,7 @@ date,value,iso_code,name_short,source
 2022-10-21,62.7,,Guinea,WFP HungerMapLive
 2022-10-22,62.64,,Guinea,WFP HungerMapLive
 2022-10-23,62.12,,Guinea,WFP HungerMapLive
-2022-07-23,15.17,,Gambia,WFP HungerMapLive
+2022-10-24,62.01,,Guinea,WFP HungerMapLive
 2022-07-24,15.17,,Gambia,WFP HungerMapLive
 2022-07-25,15.17,,Gambia,WFP HungerMapLive
 2022-07-26,15.17,,Gambia,WFP HungerMapLive
@@ -1859,7 +1858,7 @@ date,value,iso_code,name_short,source
 2022-10-21,14.54,,Gambia,WFP HungerMapLive
 2022-10-22,14.54,,Gambia,WFP HungerMapLive
 2022-10-23,14.62,,Gambia,WFP HungerMapLive
-2022-07-23,31.61,,Guinea-Bissau,WFP HungerMapLive
+2022-10-24,14.62,,Gambia,WFP HungerMapLive
 2022-07-24,31.61,,Guinea-Bissau,WFP HungerMapLive
 2022-07-25,31.61,,Guinea-Bissau,WFP HungerMapLive
 2022-07-26,31.61,,Guinea-Bissau,WFP HungerMapLive
@@ -1952,7 +1951,7 @@ date,value,iso_code,name_short,source
 2022-10-21,31.81,,Guinea-Bissau,WFP HungerMapLive
 2022-10-22,31.81,,Guinea-Bissau,WFP HungerMapLive
 2022-10-23,31.81,,Guinea-Bissau,WFP HungerMapLive
-2022-07-23,20.02,,Kenya,WFP HungerMapLive
+2022-10-24,31.81,,Guinea-Bissau,WFP HungerMapLive
 2022-07-24,20.14,,Kenya,WFP HungerMapLive
 2022-07-25,20.22,,Kenya,WFP HungerMapLive
 2022-07-26,20.7,,Kenya,WFP HungerMapLive
@@ -2045,7 +2044,7 @@ date,value,iso_code,name_short,source
 2022-10-21,21.72,,Kenya,WFP HungerMapLive
 2022-10-22,21.54,,Kenya,WFP HungerMapLive
 2022-10-23,21.21,,Kenya,WFP HungerMapLive
-2022-07-23,30.06,,Liberia,WFP HungerMapLive
+2022-10-24,21.41,,Kenya,WFP HungerMapLive
 2022-07-24,30.06,,Liberia,WFP HungerMapLive
 2022-07-25,30.06,,Liberia,WFP HungerMapLive
 2022-07-26,30.06,,Liberia,WFP HungerMapLive
@@ -2138,7 +2137,7 @@ date,value,iso_code,name_short,source
 2022-10-21,32.81,,Liberia,WFP HungerMapLive
 2022-10-22,32.81,,Liberia,WFP HungerMapLive
 2022-10-23,32.81,,Liberia,WFP HungerMapLive
-2022-07-23,18.78,,Libya,WFP HungerMapLive
+2022-10-24,32.82,,Liberia,WFP HungerMapLive
 2022-07-24,18.78,,Libya,WFP HungerMapLive
 2022-07-25,18.78,,Libya,WFP HungerMapLive
 2022-07-26,18.78,,Libya,WFP HungerMapLive
@@ -2231,7 +2230,7 @@ date,value,iso_code,name_short,source
 2022-10-21,17.01,,Libya,WFP HungerMapLive
 2022-10-22,17.01,,Libya,WFP HungerMapLive
 2022-10-23,17.01,,Libya,WFP HungerMapLive
-2022-07-23,43.12,,Lesotho,WFP HungerMapLive
+2022-10-24,17.04,,Libya,WFP HungerMapLive
 2022-07-24,43.12,,Lesotho,WFP HungerMapLive
 2022-07-25,43.12,,Lesotho,WFP HungerMapLive
 2022-07-26,43.12,,Lesotho,WFP HungerMapLive
@@ -2324,7 +2323,7 @@ date,value,iso_code,name_short,source
 2022-10-21,43.9,,Lesotho,WFP HungerMapLive
 2022-10-22,43.9,,Lesotho,WFP HungerMapLive
 2022-10-23,43.9,,Lesotho,WFP HungerMapLive
-2022-07-23,13.07,,Morocco,WFP HungerMapLive
+2022-10-24,43.9,,Lesotho,WFP HungerMapLive
 2022-07-24,13.07,,Morocco,WFP HungerMapLive
 2022-07-25,13.07,,Morocco,WFP HungerMapLive
 2022-07-26,13.07,,Morocco,WFP HungerMapLive
@@ -2417,7 +2416,7 @@ date,value,iso_code,name_short,source
 2022-10-21,13.04,,Morocco,WFP HungerMapLive
 2022-10-22,13.02,,Morocco,WFP HungerMapLive
 2022-10-23,13.02,,Morocco,WFP HungerMapLive
-2022-07-23,27.38,,Madagascar,WFP HungerMapLive
+2022-10-24,13.02,,Morocco,WFP HungerMapLive
 2022-07-24,27.29,,Madagascar,WFP HungerMapLive
 2022-07-25,27.33,,Madagascar,WFP HungerMapLive
 2022-07-26,27.59,,Madagascar,WFP HungerMapLive
@@ -2510,7 +2509,7 @@ date,value,iso_code,name_short,source
 2022-10-21,32.98,,Madagascar,WFP HungerMapLive
 2022-10-22,33.04,,Madagascar,WFP HungerMapLive
 2022-10-23,33.29,,Madagascar,WFP HungerMapLive
-2022-07-23,56.39,,Mali,WFP HungerMapLive
+2022-10-24,33.25,,Madagascar,WFP HungerMapLive
 2022-07-24,56.08,,Mali,WFP HungerMapLive
 2022-07-25,56.23,,Mali,WFP HungerMapLive
 2022-07-26,56.76,,Mali,WFP HungerMapLive
@@ -2603,7 +2602,7 @@ date,value,iso_code,name_short,source
 2022-10-21,65.69,,Mali,WFP HungerMapLive
 2022-10-22,64.98,,Mali,WFP HungerMapLive
 2022-10-23,64.51,,Mali,WFP HungerMapLive
-2022-07-23,22.42,,Mozambique,WFP HungerMapLive
+2022-10-24,64.48,,Mali,WFP HungerMapLive
 2022-07-24,22.03,,Mozambique,WFP HungerMapLive
 2022-07-25,22.1,,Mozambique,WFP HungerMapLive
 2022-07-26,22.7,,Mozambique,WFP HungerMapLive
@@ -2696,7 +2695,7 @@ date,value,iso_code,name_short,source
 2022-10-21,27.8,,Mozambique,WFP HungerMapLive
 2022-10-22,28.43,,Mozambique,WFP HungerMapLive
 2022-10-23,29.35,,Mozambique,WFP HungerMapLive
-2022-07-23,53.18,,Mauritania,WFP HungerMapLive
+2022-10-24,28.95,,Mozambique,WFP HungerMapLive
 2022-07-24,52.83,,Mauritania,WFP HungerMapLive
 2022-07-25,53.5,,Mauritania,WFP HungerMapLive
 2022-07-26,53.31,,Mauritania,WFP HungerMapLive
@@ -2758,7 +2757,6 @@ date,value,iso_code,name_short,source
 2022-09-20,46.81,,Mauritania,WFP HungerMapLive
 2022-09-21,46.75,,Mauritania,WFP HungerMapLive
 2022-09-22,46.52,,Mauritania,WFP HungerMapLive
-2022-07-23,18.14,,Malawi,WFP HungerMapLive
 2022-07-24,18.01,,Malawi,WFP HungerMapLive
 2022-07-25,18.07,,Malawi,WFP HungerMapLive
 2022-07-26,18.36,,Malawi,WFP HungerMapLive
@@ -2851,7 +2849,7 @@ date,value,iso_code,name_short,source
 2022-10-21,17.71,,Malawi,WFP HungerMapLive
 2022-10-22,18.11,,Malawi,WFP HungerMapLive
 2022-10-23,17.61,,Malawi,WFP HungerMapLive
-2022-07-23,15.84,,Namibia,WFP HungerMapLive
+2022-10-24,16.57,,Malawi,WFP HungerMapLive
 2022-07-24,15.98,,Namibia,WFP HungerMapLive
 2022-07-25,16.05,,Namibia,WFP HungerMapLive
 2022-07-26,15.81,,Namibia,WFP HungerMapLive
@@ -2944,7 +2942,7 @@ date,value,iso_code,name_short,source
 2022-10-21,13.07,,Namibia,WFP HungerMapLive
 2022-10-22,12.97,,Namibia,WFP HungerMapLive
 2022-10-23,12.72,,Namibia,WFP HungerMapLive
-2022-07-23,71.32,,Niger,WFP HungerMapLive
+2022-10-24,12.69,,Namibia,WFP HungerMapLive
 2022-07-24,70.61,,Niger,WFP HungerMapLive
 2022-07-25,70.33,,Niger,WFP HungerMapLive
 2022-07-26,69.59,,Niger,WFP HungerMapLive
@@ -3037,7 +3035,7 @@ date,value,iso_code,name_short,source
 2022-10-21,66.66,,Niger,WFP HungerMapLive
 2022-10-22,66.34,,Niger,WFP HungerMapLive
 2022-10-23,66.37,,Niger,WFP HungerMapLive
-2022-07-23,25.89,,Nigeria,WFP HungerMapLive
+2022-10-24,66.48,,Niger,WFP HungerMapLive
 2022-07-24,25.97,,Nigeria,WFP HungerMapLive
 2022-07-25,25.96,,Nigeria,WFP HungerMapLive
 2022-07-26,26.01,,Nigeria,WFP HungerMapLive
@@ -3128,7 +3126,9 @@ date,value,iso_code,name_short,source
 2022-10-19,26.19,,Nigeria,WFP HungerMapLive
 2022-10-20,26.26,,Nigeria,WFP HungerMapLive
 2022-10-21,26.27,,Nigeria,WFP HungerMapLive
-2022-07-23,21.01,,Rwanda,WFP HungerMapLive
+2022-10-22,26.29,,Nigeria,WFP HungerMapLive
+2022-10-23,26.29,,Nigeria,WFP HungerMapLive
+2022-10-24,26.3,,Nigeria,WFP HungerMapLive
 2022-07-24,21.01,,Rwanda,WFP HungerMapLive
 2022-07-25,21.01,,Rwanda,WFP HungerMapLive
 2022-07-26,21.01,,Rwanda,WFP HungerMapLive
@@ -3221,7 +3221,7 @@ date,value,iso_code,name_short,source
 2022-10-21,22.58,,Rwanda,WFP HungerMapLive
 2022-10-22,22.58,,Rwanda,WFP HungerMapLive
 2022-10-23,22.58,,Rwanda,WFP HungerMapLive
-2022-07-23,22.78,,Sudan,WFP HungerMapLive
+2022-10-24,22.58,,Rwanda,WFP HungerMapLive
 2022-07-24,22.78,,Sudan,WFP HungerMapLive
 2022-07-25,22.78,,Sudan,WFP HungerMapLive
 2022-07-26,22.78,,Sudan,WFP HungerMapLive
@@ -3314,7 +3314,7 @@ date,value,iso_code,name_short,source
 2022-10-21,21.41,,Sudan,WFP HungerMapLive
 2022-10-22,21.41,,Sudan,WFP HungerMapLive
 2022-10-23,21.41,,Sudan,WFP HungerMapLive
-2022-07-23,14.66,,Senegal,WFP HungerMapLive
+2022-10-24,21.41,,Sudan,WFP HungerMapLive
 2022-07-24,14.66,,Senegal,WFP HungerMapLive
 2022-07-25,14.66,,Senegal,WFP HungerMapLive
 2022-07-26,14.66,,Senegal,WFP HungerMapLive
@@ -3407,7 +3407,7 @@ date,value,iso_code,name_short,source
 2022-10-21,14.32,,Senegal,WFP HungerMapLive
 2022-10-22,14.32,,Senegal,WFP HungerMapLive
 2022-10-23,14.32,,Senegal,WFP HungerMapLive
-2022-07-23,55.53,,Sierra Leone,WFP HungerMapLive
+2022-10-24,14.32,,Senegal,WFP HungerMapLive
 2022-07-24,55.46,,Sierra Leone,WFP HungerMapLive
 2022-07-25,54.34,,Sierra Leone,WFP HungerMapLive
 2022-07-26,54.47,,Sierra Leone,WFP HungerMapLive
@@ -3500,7 +3500,7 @@ date,value,iso_code,name_short,source
 2022-10-21,51.44,,Sierra Leone,WFP HungerMapLive
 2022-10-22,51.89,,Sierra Leone,WFP HungerMapLive
 2022-10-23,51.4,,Sierra Leone,WFP HungerMapLive
-2022-07-23,67.44,,Somalia,WFP HungerMapLive
+2022-10-24,51.83,,Sierra Leone,WFP HungerMapLive
 2022-07-24,67.4,,Somalia,WFP HungerMapLive
 2022-07-25,67.47,,Somalia,WFP HungerMapLive
 2022-07-26,67.4,,Somalia,WFP HungerMapLive
@@ -3593,7 +3593,7 @@ date,value,iso_code,name_short,source
 2022-10-21,68.07,,Somalia,WFP HungerMapLive
 2022-10-22,68.12,,Somalia,WFP HungerMapLive
 2022-10-23,68.2,,Somalia,WFP HungerMapLive
-2022-07-23,56.9,,South Sudan,WFP HungerMapLive
+2022-10-24,68.25,,Somalia,WFP HungerMapLive
 2022-07-24,56.9,,South Sudan,WFP HungerMapLive
 2022-07-25,56.62,,South Sudan,WFP HungerMapLive
 2022-07-26,56.62,,South Sudan,WFP HungerMapLive
@@ -3686,7 +3686,7 @@ date,value,iso_code,name_short,source
 2022-10-21,57.79,,South Sudan,WFP HungerMapLive
 2022-10-22,57.79,,South Sudan,WFP HungerMapLive
 2022-10-23,57.78,,South Sudan,WFP HungerMapLive
-2022-07-23,13.87,,Sao Tome and Principe,WFP HungerMapLive
+2022-10-24,57.78,,South Sudan,WFP HungerMapLive
 2022-07-24,13.87,,Sao Tome and Principe,WFP HungerMapLive
 2022-07-25,13.87,,Sao Tome and Principe,WFP HungerMapLive
 2022-07-26,13.87,,Sao Tome and Principe,WFP HungerMapLive
@@ -3779,7 +3779,7 @@ date,value,iso_code,name_short,source
 2022-10-21,15.94,,Sao Tome and Principe,WFP HungerMapLive
 2022-10-22,15.94,,Sao Tome and Principe,WFP HungerMapLive
 2022-10-23,15.94,,Sao Tome and Principe,WFP HungerMapLive
-2022-07-23,25.03,,Eswatini,WFP HungerMapLive
+2022-10-24,15.94,,Sao Tome and Principe,WFP HungerMapLive
 2022-07-24,25.03,,Eswatini,WFP HungerMapLive
 2022-07-25,25.03,,Eswatini,WFP HungerMapLive
 2022-07-26,25.03,,Eswatini,WFP HungerMapLive
@@ -3872,7 +3872,7 @@ date,value,iso_code,name_short,source
 2022-10-21,28.75,,Eswatini,WFP HungerMapLive
 2022-10-22,28.74,,Eswatini,WFP HungerMapLive
 2022-10-23,28.75,,Eswatini,WFP HungerMapLive
-2022-07-23,18.89,,Chad,WFP HungerMapLive
+2022-10-24,28.75,,Eswatini,WFP HungerMapLive
 2022-07-24,19.2,,Chad,WFP HungerMapLive
 2022-07-25,19.75,,Chad,WFP HungerMapLive
 2022-07-26,20.03,,Chad,WFP HungerMapLive
@@ -3965,7 +3965,7 @@ date,value,iso_code,name_short,source
 2022-10-21,32.75,,Chad,WFP HungerMapLive
 2022-10-22,32.79,,Chad,WFP HungerMapLive
 2022-10-23,32.54,,Chad,WFP HungerMapLive
-2022-07-23,28.97,,Togo,WFP HungerMapLive
+2022-10-24,32.53,,Chad,WFP HungerMapLive
 2022-07-24,28.97,,Togo,WFP HungerMapLive
 2022-07-25,28.97,,Togo,WFP HungerMapLive
 2022-07-26,28.97,,Togo,WFP HungerMapLive
@@ -4058,7 +4058,7 @@ date,value,iso_code,name_short,source
 2022-10-21,30.03,,Togo,WFP HungerMapLive
 2022-10-22,30.03,,Togo,WFP HungerMapLive
 2022-10-23,30.04,,Togo,WFP HungerMapLive
-2022-07-23,11.2,,Tunisia,WFP HungerMapLive
+2022-10-24,30.04,,Togo,WFP HungerMapLive
 2022-07-24,11.2,,Tunisia,WFP HungerMapLive
 2022-07-25,11.2,,Tunisia,WFP HungerMapLive
 2022-07-26,11.2,,Tunisia,WFP HungerMapLive
@@ -4151,7 +4151,7 @@ date,value,iso_code,name_short,source
 2022-10-21,11.2,,Tunisia,WFP HungerMapLive
 2022-10-22,11.2,,Tunisia,WFP HungerMapLive
 2022-10-23,11.19,,Tunisia,WFP HungerMapLive
-2022-07-23,8.58,,Tanzania,WFP HungerMapLive
+2022-10-24,11.19,,Tunisia,WFP HungerMapLive
 2022-07-24,8.86,,Tanzania,WFP HungerMapLive
 2022-07-25,8.98,,Tanzania,WFP HungerMapLive
 2022-07-26,8.83,,Tanzania,WFP HungerMapLive
@@ -4244,7 +4244,7 @@ date,value,iso_code,name_short,source
 2022-10-21,10.66,,Tanzania,WFP HungerMapLive
 2022-10-22,10.67,,Tanzania,WFP HungerMapLive
 2022-10-23,10.64,,Tanzania,WFP HungerMapLive
-2022-07-23,32.38,,Uganda,WFP HungerMapLive
+2022-10-24,10.68,,Tanzania,WFP HungerMapLive
 2022-07-24,32.38,,Uganda,WFP HungerMapLive
 2022-07-25,32.38,,Uganda,WFP HungerMapLive
 2022-07-26,32.44,,Uganda,WFP HungerMapLive
@@ -4337,7 +4337,7 @@ date,value,iso_code,name_short,source
 2022-10-21,31.91,,Uganda,WFP HungerMapLive
 2022-10-22,31.91,,Uganda,WFP HungerMapLive
 2022-10-23,31.91,,Uganda,WFP HungerMapLive
-2022-07-23,12.89,,Zambia,WFP HungerMapLive
+2022-10-24,31.91,,Uganda,WFP HungerMapLive
 2022-07-24,12.71,,Zambia,WFP HungerMapLive
 2022-07-25,12.57,,Zambia,WFP HungerMapLive
 2022-07-26,12.31,,Zambia,WFP HungerMapLive
@@ -4430,7 +4430,7 @@ date,value,iso_code,name_short,source
 2022-10-21,10.88,,Zambia,WFP HungerMapLive
 2022-10-22,11.02,,Zambia,WFP HungerMapLive
 2022-10-23,11.51,,Zambia,WFP HungerMapLive
-2022-07-23,35.1,,Zimbabwe,WFP HungerMapLive
+2022-10-24,11.15,,Zambia,WFP HungerMapLive
 2022-07-24,35.34,,Zimbabwe,WFP HungerMapLive
 2022-07-25,35.28,,Zimbabwe,WFP HungerMapLive
 2022-07-26,35.1,,Zimbabwe,WFP HungerMapLive
@@ -4523,3 +4523,4 @@ date,value,iso_code,name_short,source
 2022-10-21,36.09,,Zimbabwe,WFP HungerMapLive
 2022-10-22,36.18,,Zimbabwe,WFP HungerMapLive
 2022-10-23,36.46,,Zimbabwe,WFP HungerMapLive
+2022-10-24,36.89,,Zimbabwe,WFP HungerMapLive
