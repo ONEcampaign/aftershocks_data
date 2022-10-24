@@ -1,4 +1,5 @@
 import pandas as pd
+from bblocks.cleaning_tools.clean import format_number
 from bblocks.dataframe_tools.add import (
     add_short_names_column,
     add_iso_codes_column,
@@ -6,9 +7,9 @@ from bblocks.dataframe_tools.add import (
     add_gov_expenditure_column,
 )
 
+from scripts.common import update_key_number, df_to_key_number
 from scripts.config import PATHS
 from scripts.logger import logger
-from scripts.common import update_key_number, df_to_key_number
 
 
 def _read_debt_data() -> pd.DataFrame:
@@ -58,13 +59,19 @@ def debt_chart_country() -> None:
     logger.debug("Saved live version of 'overview_debt_sm.csv'")
 
     # Key number version
-    kn = debt.rename(
-        columns={"value": "debt_service", "note": "debt_service_share"}
-    ).pipe(
-        df_to_key_number,
-        indicator_name="debt_service",
-        id_column="name_short",
-        value_columns=["debt_service", "debt_service_share"],
+    kn = (
+        debt.rename(columns={"value": "debt_service", "note": "debt_service_share"})
+        .assign(
+            debt_service=lambda d: format_number(
+                d.debt_service, as_units=True, decimals=1
+            )
+        )
+        .pipe(
+            df_to_key_number,
+            indicator_name="debt_service",
+            id_column="name_short",
+            value_columns=["debt_service", "debt_service_share"],
+        )
     )
 
     update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)

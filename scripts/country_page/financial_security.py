@@ -100,6 +100,7 @@ def inflation_overview_regions() -> None:
         .dropna(subset=["value"])
         .drop_duplicates(["name_short"], keep="last")
         .assign(date=lambda d: d.date.dt.strftime("%d %B %Y"))
+        .round(1)
         .pipe(
             common.df_to_key_number,
             indicator_name="inflation",
