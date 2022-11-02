@@ -166,7 +166,6 @@ def sector_totals() -> None:
     logger.debug("Saved download chart sector_totals.csv")
 
 
-
 def key_sector_shares() -> None:
     key_sectors = [
         "Humanitarian",
@@ -202,10 +201,10 @@ def key_sector_shares() -> None:
     logger.debug("Saved download chart key_sector_shares.csv")
 
 
-
 def aid_to_regions_ts() -> None:
     df = (
         common.read_oda_by_region()
+        .loc[lambda d: d.recipient != "Middle East"]
         .pipe(common.total_by_region)
         .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
