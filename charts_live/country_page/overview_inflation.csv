@@ -111,6 +111,7 @@ Burundi,2022-05-31,Inflation Rate,18.565
 Burundi,2022-06-30,Inflation Rate,17.574
 Burundi,2022-07-31,Inflation Rate,19.055
 Burundi,2022-08-31,Inflation Rate,19.569
+Burundi,2022-09-30,Inflation Rate,20.92
 Benin,2018-01-31,Inflation Rate,0.9
 Benin,2018-02-28,Inflation Rate,1.5
 Benin,2018-03-31,Inflation Rate,1.0
@@ -223,7 +224,6 @@ Burkina Faso,2022-05-31,Inflation Rate,15.3
 Burkina Faso,2022-06-30,Inflation Rate,17.8
 Burkina Faso,2022-07-31,Inflation Rate,18.2
 Burkina Faso,2022-08-31,Inflation Rate,18.1
-Burkina Faso,2022-09-30,Inflation Rate,16.5
 Botswana,2018-01-31,Inflation Rate,3.2
 Botswana,2018-02-28,Inflation Rate,3.2
 Botswana,2018-03-31,Inflation Rate,2.9
@@ -281,7 +281,6 @@ Botswana,2022-05-31,Inflation Rate,11.9
 Botswana,2022-06-30,Inflation Rate,12.7
 Botswana,2022-07-31,Inflation Rate,14.3
 Botswana,2022-08-31,Inflation Rate,14.6
-Botswana,2022-09-30,Inflation Rate,13.8
 Central African Republic,2018-01-31,Inflation Rate,3.0
 Central African Republic,2018-02-28,Inflation Rate,2.2
 Central African Republic,2018-03-31,Inflation Rate,1.8
@@ -494,6 +493,8 @@ DR Congo,2022-03-31,Inflation Rate,5.94
 DR Congo,2022-04-30,Inflation Rate,7.07
 DR Congo,2022-05-31,Inflation Rate,7.8
 DR Congo,2022-06-30,Inflation Rate,8.98
+DR Congo,2022-07-31,Inflation Rate,9.43
+DR Congo,2022-08-31,Inflation Rate,9.86
 Congo Republic,2018-01-31,Inflation Rate,1.9
 Congo Republic,2018-02-28,Inflation Rate,1.7
 Congo Republic,2018-03-31,Inflation Rate,1.4
@@ -608,7 +609,6 @@ Cabo Verde,2022-05-31,Inflation Rate,7.8
 Cabo Verde,2022-06-30,Inflation Rate,8.2
 Cabo Verde,2022-07-31,Inflation Rate,9.0
 Cabo Verde,2022-08-31,Inflation Rate,8.6
-Cabo Verde,2022-09-30,Inflation Rate,8.7
 Djibouti,2018-01-31,Inflation Rate,-0.4
 Djibouti,2018-02-28,Inflation Rate,-0.2
 Djibouti,2018-03-31,Inflation Rate,-2.4
@@ -664,6 +664,7 @@ Djibouti,2022-04-30,Inflation Rate,5.3
 Djibouti,2022-05-31,Inflation Rate,5.3
 Djibouti,2022-06-30,Inflation Rate,11.6
 Djibouti,2022-07-31,Inflation Rate,5.3
+Djibouti,2022-08-31,Inflation Rate,5.9
 Algeria,2018-01-31,Inflation Rate,3.6
 Algeria,2018-02-28,Inflation Rate,3.6
 Algeria,2018-03-31,Inflation Rate,3.2
@@ -777,6 +778,7 @@ Egypt,2022-05-31,Inflation Rate,13.5
 Egypt,2022-06-30,Inflation Rate,13.2
 Egypt,2022-07-31,Inflation Rate,13.6
 Egypt,2022-08-31,Inflation Rate,14.6
+Egypt,2022-09-30,Inflation Rate,15.0
 Eritrea,2018-12-31,Inflation Rate,-14.4
 Eritrea,2019-12-31,Inflation Rate,-16.4
 Eritrea,2020-12-31,Inflation Rate,4.8
@@ -836,6 +838,7 @@ Ethiopia,2022-05-31,Inflation Rate,37.7
 Ethiopia,2022-06-30,Inflation Rate,34.0
 Ethiopia,2022-07-31,Inflation Rate,33.5
 Ethiopia,2022-08-31,Inflation Rate,32.5
+Ethiopia,2022-09-30,Inflation Rate,30.7
 Gabon,2018-01-31,Inflation Rate,1.7
 Gabon,2018-02-28,Inflation Rate,3.0
 Gabon,2018-03-31,Inflation Rate,3.4
@@ -943,6 +946,7 @@ Ghana,2022-05-31,Inflation Rate,27.6
 Ghana,2022-06-30,Inflation Rate,29.8
 Ghana,2022-07-31,Inflation Rate,31.7
 Ghana,2022-08-31,Inflation Rate,33.9
+Ghana,2022-09-30,Inflation Rate,37.2
 Guinea,2018-01-31,Inflation Rate,9.6
 Guinea,2018-02-28,Inflation Rate,9.7
 Guinea,2018-03-31,Inflation Rate,9.7
@@ -1108,6 +1112,7 @@ Guinea-Bissau,2022-04-30,Inflation Rate,6.7
 Guinea-Bissau,2022-05-31,Inflation Rate,7.1
 Guinea-Bissau,2022-06-30,Inflation Rate,8.3
 Guinea-Bissau,2022-07-31,Inflation Rate,7.5
+Guinea-Bissau,2022-08-31,Inflation Rate,9.1
 Equatorial Guinea,2018-12-31,Inflation Rate,1.3
 Equatorial Guinea,2019-12-31,Inflation Rate,1.2
 Equatorial Guinea,2020-12-31,Inflation Rate,3.0
@@ -1222,6 +1227,7 @@ Liberia,2022-03-31,Inflation Rate,9.51
 Liberia,2022-04-30,Inflation Rate,6.26
 Liberia,2022-05-31,Inflation Rate,6.23
 Liberia,2022-06-30,Inflation Rate,6.32
+Liberia,2022-07-31,Inflation Rate,6.48
 Libya,2018-01-31,Inflation Rate,28.0
 Libya,2018-02-28,Inflation Rate,21.7
 Libya,2018-03-31,Inflation Rate,16.9
@@ -1273,6 +1279,7 @@ Libya,2022-02-28,Inflation Rate,4.8
 Libya,2022-03-31,Inflation Rate,5.7
 Libya,2022-04-30,Inflation Rate,5.5
 Libya,2022-05-31,Inflation Rate,5.2
+Libya,2022-06-30,Inflation Rate,5.0
 Lesotho,2018-01-31,Inflation Rate,5.3
 Lesotho,2018-02-28,Inflation Rate,5.2
 Lesotho,2018-03-31,Inflation Rate,4.8
@@ -1385,7 +1392,6 @@ Morocco,2022-05-31,Inflation Rate,5.9
 Morocco,2022-06-30,Inflation Rate,7.2
 Morocco,2022-07-31,Inflation Rate,7.7
 Morocco,2022-08-31,Inflation Rate,8.0
-Morocco,2022-09-30,Inflation Rate,8.3
 Madagascar,2018-01-31,Inflation Rate,10.3
 Madagascar,2018-02-28,Inflation Rate,9.7
 Madagascar,2018-03-31,Inflation Rate,9.0
@@ -1441,6 +1447,7 @@ Madagascar,2022-04-30,Inflation Rate,6.17
 Madagascar,2022-05-31,Inflation Rate,6.4
 Madagascar,2022-06-30,Inflation Rate,6.91
 Madagascar,2022-07-31,Inflation Rate,8.41
+Madagascar,2022-08-31,Inflation Rate,9.31
 Mali,2018-01-31,Inflation Rate,1.7
 Mali,2018-02-28,Inflation Rate,2.4
 Mali,2018-03-31,Inflation Rate,2.4
@@ -1491,6 +1498,12 @@ Mali,2021-11-30,Inflation Rate,3.2
 Mali,2021-12-31,Inflation Rate,3.9
 Mali,2022-01-31,Inflation Rate,8.7
 Mali,2022-02-28,Inflation Rate,7.5
+Mali,2022-03-31,Inflation Rate,8.3
+Mali,2022-04-30,Inflation Rate,9.2
+Mali,2022-05-31,Inflation Rate,9.7
+Mali,2022-06-30,Inflation Rate,9.5
+Mali,2022-07-31,Inflation Rate,11.8
+Mali,2022-08-31,Inflation Rate,13.9
 Mozambique,2018-01-31,Inflation Rate,3.84
 Mozambique,2018-02-28,Inflation Rate,2.93
 Mozambique,2018-03-31,Inflation Rate,3.05
@@ -1547,7 +1560,6 @@ Mozambique,2022-05-31,Inflation Rate,9.31
 Mozambique,2022-06-30,Inflation Rate,10.81
 Mozambique,2022-07-31,Inflation Rate,11.77
 Mozambique,2022-08-31,Inflation Rate,12.1
-Mozambique,2022-09-30,Inflation Rate,12.01
 Mauritania,2018-01-31,Inflation Rate,2.5
 Mauritania,2018-02-28,Inflation Rate,2.7
 Mauritania,2018-03-31,Inflation Rate,3.3
@@ -1604,7 +1616,6 @@ Mauritania,2022-05-31,Inflation Rate,8.9
 Mauritania,2022-06-30,Inflation Rate,9.6
 Mauritania,2022-07-31,Inflation Rate,10.6
 Mauritania,2022-08-31,Inflation Rate,11.1
-Mauritania,2022-09-30,Inflation Rate,11.3
 Mauritius,2018-01-31,Inflation Rate,6.2
 Mauritius,2018-02-28,Inflation Rate,7.0
 Mauritius,2018-03-31,Inflation Rate,6.7
@@ -1774,7 +1785,6 @@ Namibia,2022-05-31,Inflation Rate,5.4
 Namibia,2022-06-30,Inflation Rate,6.0
 Namibia,2022-07-31,Inflation Rate,6.8
 Namibia,2022-08-31,Inflation Rate,7.3
-Namibia,2022-09-30,Inflation Rate,7.1
 Niger,2018-01-31,Inflation Rate,7.3
 Niger,2018-02-28,Inflation Rate,6.8
 Niger,2018-03-31,Inflation Rate,7.9
@@ -1938,6 +1948,7 @@ Rwanda,2022-05-31,Inflation Rate,14.8
 Rwanda,2022-06-30,Inflation Rate,16.1
 Rwanda,2022-07-31,Inflation Rate,19.6
 Rwanda,2022-08-31,Inflation Rate,20.4
+Rwanda,2022-09-30,Inflation Rate,23.9
 Sudan,2018-01-31,Inflation Rate,52.4
 Sudan,2018-02-28,Inflation Rate,54.3
 Sudan,2018-03-31,Inflation Rate,55.6
@@ -2049,6 +2060,7 @@ Senegal,2022-06-30,Inflation Rate,8.9
 Senegal,2022-07-31,Inflation Rate,11.0
 Senegal,2022-08-31,Inflation Rate,11.3
 Senegal,2022-09-30,Inflation Rate,11.9
+Senegal,2022-10-31,Inflation Rate,13.0
 Sierra Leone,2018-01-31,Inflation Rate,14.7
 Sierra Leone,2018-02-28,Inflation Rate,14.4
 Sierra Leone,2018-03-31,Inflation Rate,14.9
@@ -2105,6 +2117,7 @@ Sierra Leone,2022-05-31,Inflation Rate,24.9
 Sierra Leone,2022-06-30,Inflation Rate,28.0
 Sierra Leone,2022-07-31,Inflation Rate,29.5
 Sierra Leone,2022-08-31,Inflation Rate,28.2
+Sierra Leone,2022-09-30,Inflation Rate,29.1
 Somalia,2018-01-31,Inflation Rate,3.83
 Somalia,2018-02-28,Inflation Rate,5.63
 Somalia,2018-03-31,Inflation Rate,5.78
@@ -2217,6 +2230,7 @@ South Sudan,2022-04-30,Inflation Rate,-4.29
 South Sudan,2022-05-31,Inflation Rate,-6.56
 South Sudan,2022-06-30,Inflation Rate,3.2
 South Sudan,2022-07-31,Inflation Rate,6.43
+South Sudan,2022-08-31,Inflation Rate,-2.5
 Sao Tome and Principe,2018-01-31,Inflation Rate,7.7
 Sao Tome and Principe,2018-02-28,Inflation Rate,7.7
 Sao Tome and Principe,2018-03-31,Inflation Rate,7.2
@@ -2272,6 +2286,7 @@ Sao Tome and Principe,2022-04-30,Inflation Rate,14.4
 Sao Tome and Principe,2022-05-31,Inflation Rate,14.9
 Sao Tome and Principe,2022-06-30,Inflation Rate,16.7
 Sao Tome and Principe,2022-07-31,Inflation Rate,18.5
+Sao Tome and Principe,2022-08-31,Inflation Rate,19.5
 Eswatini,2018-01-31,Inflation Rate,4.6
 Eswatini,2018-02-28,Inflation Rate,4.0
 Eswatini,2018-03-31,Inflation Rate,4.0
@@ -2327,6 +2342,7 @@ Eswatini,2022-04-30,Inflation Rate,4.0
 Eswatini,2022-05-31,Inflation Rate,3.9
 Eswatini,2022-06-30,Inflation Rate,4.6
 Eswatini,2022-07-31,Inflation Rate,5.4
+Eswatini,2022-08-31,Inflation Rate,5.8
 Seychelles,2018-01-31,Inflation Rate,4.5
 Seychelles,2018-02-28,Inflation Rate,4.88
 Seychelles,2018-03-31,Inflation Rate,4.66
@@ -2383,6 +2399,8 @@ Seychelles,2022-05-31,Inflation Rate,2.08
 Seychelles,2022-06-30,Inflation Rate,2.05
 Seychelles,2022-07-31,Inflation Rate,3.53
 Seychelles,2022-08-31,Inflation Rate,2.82
+Seychelles,2022-09-30,Inflation Rate,2.96
+Seychelles,2022-10-31,Inflation Rate,2.92
 Chad,2018-01-31,Inflation Rate,2.0
 Chad,2018-02-28,Inflation Rate,0.9
 Chad,2018-04-30,Inflation Rate,1.3
@@ -2435,6 +2453,8 @@ Chad,2022-03-31,Inflation Rate,3.5
 Chad,2022-04-30,Inflation Rate,4.0
 Chad,2022-05-31,Inflation Rate,5.0
 Chad,2022-06-30,Inflation Rate,5.3
+Chad,2022-07-31,Inflation Rate,6.1
+Chad,2022-08-31,Inflation Rate,7.7
 Togo,2018-01-31,Inflation Rate,-0.1
 Togo,2018-02-28,Inflation Rate,-0.4
 Togo,2018-03-31,Inflation Rate,1.0
@@ -2491,6 +2511,7 @@ Togo,2022-05-31,Inflation Rate,8.0
 Togo,2022-06-30,Inflation Rate,6.8
 Togo,2022-07-31,Inflation Rate,6.0
 Togo,2022-08-31,Inflation Rate,7.0
+Togo,2022-09-30,Inflation Rate,7.9
 Tunisia,2018-01-31,Inflation Rate,6.6
 Tunisia,2018-02-28,Inflation Rate,6.8
 Tunisia,2018-03-31,Inflation Rate,7.2
@@ -2548,6 +2569,7 @@ Tunisia,2022-06-30,Inflation Rate,8.1
 Tunisia,2022-07-31,Inflation Rate,8.2
 Tunisia,2022-08-31,Inflation Rate,8.6
 Tunisia,2022-09-30,Inflation Rate,9.1
+Tunisia,2022-10-31,Inflation Rate,9.2
 Tanzania,2018-01-31,Inflation Rate,4.0
 Tanzania,2018-02-28,Inflation Rate,4.1
 Tanzania,2018-03-31,Inflation Rate,3.9
@@ -2605,6 +2627,7 @@ Tanzania,2022-06-30,Inflation Rate,4.4
 Tanzania,2022-07-31,Inflation Rate,4.5
 Tanzania,2022-08-31,Inflation Rate,4.6
 Tanzania,2022-09-30,Inflation Rate,4.8
+Tanzania,2022-10-31,Inflation Rate,4.9
 Uganda,2018-01-31,Inflation Rate,3.0
 Uganda,2018-02-28,Inflation Rate,2.1
 Uganda,2018-03-31,Inflation Rate,2.0
@@ -2718,6 +2741,7 @@ South Africa,2022-05-31,Inflation Rate,6.5
 South Africa,2022-06-30,Inflation Rate,7.4
 South Africa,2022-07-31,Inflation Rate,7.8
 South Africa,2022-08-31,Inflation Rate,7.6
+South Africa,2022-09-30,Inflation Rate,7.5
 Zambia,2018-01-31,Inflation Rate,6.2
 Zambia,2018-02-28,Inflation Rate,6.1
 Zambia,2018-03-31,Inflation Rate,7.1
