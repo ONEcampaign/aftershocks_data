@@ -5,6 +5,7 @@ from scripts.health import update as health_topic_update
 from scripts.hunger import update as hunger_topic_update
 from scripts.logger import logger
 from scripts.country_page import update as update_country_page
+from scripts.oda.ukraine_oda_tracker import dynamic_text as ukraine_oda_text
 
 
 def health_daily():
@@ -44,9 +45,14 @@ def update_explorers():
     health_explorer()
 
 
+def update_other_pages():
+    ukraine_oda_text.key_numbers()
+
+
 if __name__ == "__main__":
     health_daily()
     hunger_update()
     country_page_daily()
     update_economy_picker()
     update_explorers()
+    update_other_pages()
