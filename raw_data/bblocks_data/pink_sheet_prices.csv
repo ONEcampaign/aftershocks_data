@@ -1385,7 +1385,7 @@ period,indicator,value,units
 2012-08-01,"Crude oil, Brent",113.34,$/bbl
 2012-09-01,"Crude oil, Brent",113.3825,$/bbl
 2012-10-01,"Crude oil, Brent",111.97347826087,$/bbl
-2012-11-01,"Crude oil, Brent",109.71181818182,$/bbl
+2012-11-01,"Crude oil, Brent",109.71181818182001,$/bbl
 2012-12-01,"Crude oil, Brent",109.6765,$/bbl
 2013-01-01,"Crude oil, Brent",112.97363636364,$/bbl
 2013-02-01,"Crude oil, Brent",116.5195,$/bbl
@@ -5085,7 +5085,7 @@ period,indicator,value,units
 2007-03-01,"Natural gas, US",7.12318181818,$/mmbtu
 2007-04-01,"Natural gas, US",7.58738095238,$/mmbtu
 2007-05-01,"Natural gas, US",7.61347826087,$/mmbtu
-2007-06-01,"Natural gas, US",7.30414285714,$/mmbtu
+2007-06-01,"Natural gas, US",7.3041428571400004,$/mmbtu
 2007-07-01,"Natural gas, US",6.22090909091,$/mmbtu
 2007-08-01,"Natural gas, US",6.19543478261,$/mmbtu
 2007-09-01,"Natural gas, US",6.0965,$/mmbtu
@@ -6274,18 +6274,18 @@ period,indicator,value,units
 1980-10-01,"Liquefied natural gas, Japan",5.69622732832,$/mmbtu
 1980-11-01,"Liquefied natural gas, Japan",5.69622732832,$/mmbtu
 1980-12-01,"Liquefied natural gas, Japan",5.69622732832,$/mmbtu
-1981-01-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-02-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-03-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-04-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-05-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-06-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-07-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-08-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-09-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-10-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-11-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
-1981-12-01,"Liquefied natural gas, Japan",6.03034143534,$/mmbtu
+1981-01-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-02-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-03-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-04-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-05-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-06-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-07-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-08-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-09-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-10-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-11-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
+1981-12-01,"Liquefied natural gas, Japan",6.0303414353400004,$/mmbtu
 1982-01-01,"Liquefied natural gas, Japan",6.05162239889,$/mmbtu
 1982-02-01,"Liquefied natural gas, Japan",6.05162239889,$/mmbtu
 1982-03-01,"Liquefied natural gas, Japan",6.05162239889,$/mmbtu
@@ -9578,7 +9578,7 @@ period,indicator,value,units
 2005-02-01,"Coffee, Robusta",0.909185288,$/kg
 2005-03-01,"Coffee, Robusta",1.091507362,$/kg
 2005-04-01,"Coffee, Robusta",1.11884465,$/kg
-2005-05-01,"Coffee, Robusta",1.236130434,$/kg
+2005-05-01,"Coffee, Robusta",1.2361304340000001,$/kg
 2005-06-01,"Coffee, Robusta",1.323212924,$/kg
 2005-07-01,"Coffee, Robusta",1.276034056,$/kg
 2005-08-01,"Coffee, Robusta",1.145741014,$/kg
@@ -11687,7 +11687,7 @@ period,indicator,value,units
 1992-08-01,"Tea, Kolkata",1.804944,$/kg
 1992-09-01,"Tea, Kolkata",1.652762,$/kg
 1992-10-01,"Tea, Kolkata",1.662418,$/kg
-1992-11-01,"Tea, Kolkata",1.630745,$/kg
+1992-11-01,"Tea, Kolkata",1.6307450000000001,$/kg
 1992-12-01,"Tea, Kolkata",1.728475,$/kg
 1993-01-01,"Tea, Kolkata",1.870611,$/kg
 1993-02-01,"Tea, Kolkata",2.167557,$/kg

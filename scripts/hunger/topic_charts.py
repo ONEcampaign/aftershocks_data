@@ -96,11 +96,12 @@ def price_table() -> None:
 
     pink_sheet = pd.read_csv(f"{PATHS.raw_data}/hunger/pink_sheet.csv")
     df = (
-        pink_sheet.replace("…", np.nan)
+        pink_sheet.drop(
+            columns="units"
+        )  # temporary solutions: dropping to avoid having to extensively reformat the pipeline and the commodities list above
         .dropna(subset=["value"])
         .assign(
             period=lambda d: pd.to_datetime(d.period),
-            value=lambda d: pd.to_numeric(d.value),
         )
         .dropna(subset=["value"])
         .loc[
@@ -111,7 +112,7 @@ def price_table() -> None:
     )
 
     main_values_df = (
-        df.groupby("indicator")
+        df.groupby(["indicator"])
         .agg(["first", "last"])
         .assign(
             change=lambda d: (
