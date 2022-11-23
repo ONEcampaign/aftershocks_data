@@ -25,8 +25,8 @@ def update_daily_hunger_data() -> None:
 
     # update pink sheet
     pink_sheet = (
-        PinkSheet(sheet="Monthly Prices", data_path=PATHS.bblocks_data)
-        .load_indicator()
+        PinkSheet(data_path=PATHS.bblocks_data)
+        .load_indicator(indicator='prices')
         .get_data()
     )
     pink_sheet.to_csv(f"{PATHS.raw_data}/hunger/pink_sheet.csv", index=False)
