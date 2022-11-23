@@ -1,4 +1,4 @@
-name: special-weo-update
+name: special-ids-update
 'on':
   schedule:
     - cron: '11 9,12,18 7,8,10,11 10 *'
