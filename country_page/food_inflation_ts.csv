@@ -54,8 +54,8 @@ date,value,name_short,indicator_name,source
 2022-05-31,12.25,Africa (median),,Price inflation data from the WFP VAM resource centre
 2022-06-30,12.95,Africa (median),,Price inflation data from the WFP VAM resource centre
 2022-07-31,14.2,Africa (median),,Price inflation data from the WFP VAM resource centre
-2022-08-31,14.6,Africa (median),,Price inflation data from the WFP VAM resource centre
-2022-09-30,15.59,Africa (median),,Price inflation data from the WFP VAM resource centre
+2022-08-31,14.774999999999999,Africa (median),,Price inflation data from the WFP VAM resource centre
+2022-09-30,15.69,Africa (median),,Price inflation data from the WFP VAM resource centre
 2018-01-31,18.7,Angola,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,16.54,Angola,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,15.65,Angola,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -170,6 +170,7 @@ date,value,name_short,indicator_name,source
 2022-07-31,24.4,Burundi,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,24.2,Burundi,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,26.3,Burundi,Food Inflation,Price inflation data from the WFP VAM resource centre
+2022-10-31,29.5,Burundi,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,-0.1,Benin,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,1.4,Benin,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,1.9,Benin,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -454,6 +455,7 @@ date,value,name_short,indicator_name,source
 2022-06-30,12.0,Cameroon,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-07-31,15.9,Cameroon,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,14.4,Cameroon,Food Inflation,Price inflation data from the WFP VAM resource centre
+2022-09-30,15.7,Cameroon,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,52.8,DR Congo,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,49.9,DR Congo,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,47.4,DR Congo,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -523,6 +525,7 @@ date,value,name_short,indicator_name,source
 2022-07-31,16.7,Cabo Verde,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,17.6,Cabo Verde,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,17.9,Cabo Verde,Food Inflation,Price inflation data from the WFP VAM resource centre
+2022-10-31,17.8,Cabo Verde,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,-0.3,Djibouti,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,-0.2,Djibouti,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,-5.6,Djibouti,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -978,7 +981,6 @@ date,value,name_short,indicator_name,source
 2022-08-31,15.3,Kenya,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,15.5,Kenya,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-10-31,15.8,Kenya,Food Inflation,Price inflation data from the WFP VAM resource centre
-2022-11-30,15.4,Kenya,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,8.0,Liberia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,11.6,Liberia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,17.4,Liberia,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -1483,7 +1485,6 @@ date,value,name_short,indicator_name,source
 2022-07-31,13.2,Mauritius,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,15.6,Mauritius,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,17.9,Mauritius,Food Inflation,Price inflation data from the WFP VAM resource centre
-2022-10-31,17.2,Mauritius,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,7.6,Malawi,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,7.3,Malawi,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,10.6,Malawi,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -1600,7 +1601,6 @@ date,value,name_short,indicator_name,source
 2022-07-31,8.4,Namibia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,8.8,Namibia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,9.3,Namibia,Food Inflation,Price inflation data from the WFP VAM resource centre
-2022-10-31,9.1,Namibia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,7.2,Niger,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,4.0,Niger,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,4.2,Niger,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -1763,7 +1763,6 @@ date,value,name_short,indicator_name,source
 2022-07-31,32.7,Rwanda,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,34.4,Rwanda,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,41.2,Rwanda,Food Inflation,Price inflation data from the WFP VAM resource centre
-2022-10-31,56.9,Rwanda,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,1.3,Senegal,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,4.1,Senegal,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,-0.1,Senegal,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -1877,6 +1876,7 @@ date,value,name_short,indicator_name,source
 2022-06-30,28.5,Sierra Leone,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-07-31,30.6,Sierra Leone,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,31.6,Sierra Leone,Food Inflation,Price inflation data from the WFP VAM resource centre
+2022-09-30,35.2,Sierra Leone,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,6.71,Somalia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,11.03,Somalia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,10.7,Somalia,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -1989,7 +1989,6 @@ date,value,name_short,indicator_name,source
 2022-05-31,1.74,South Sudan,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-06-30,2.3,South Sudan,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-07-31,1.66,South Sudan,Food Inflation,Price inflation data from the WFP VAM resource centre
-2022-08-31,-5.3,South Sudan,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,2.5,Eswatini,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,1.1,Eswatini,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,0.9,Eswatini,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -2104,6 +2103,7 @@ date,value,name_short,indicator_name,source
 2022-07-31,0.7,Seychelles,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,1.0,Seychelles,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,1.6,Seychelles,Food Inflation,Price inflation data from the WFP VAM resource centre
+2022-10-31,2.45,Seychelles,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,2.6,Chad,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,1.4,Chad,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-04-30,0.9,Chad,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -2213,7 +2213,6 @@ date,value,name_short,indicator_name,source
 2022-07-31,7.6,Togo,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-08-31,7.2,Togo,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,8.6,Togo,Food Inflation,Price inflation data from the WFP VAM resource centre
-2022-10-31,6.1,Togo,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,7.9,Tunisia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,7.7,Tunisia,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,8.7,Tunisia,Food Inflation,Price inflation data from the WFP VAM resource centre
@@ -2387,7 +2386,6 @@ date,value,name_short,indicator_name,source
 2022-08-31,15.7,Uganda,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-09-30,18.4,Uganda,Food Inflation,Price inflation data from the WFP VAM resource centre
 2022-10-31,22.2,Uganda,Food Inflation,Price inflation data from the WFP VAM resource centre
-2022-11-30,22.7,Uganda,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-01-31,4.6,South Africa,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-02-28,3.9,South Africa,Food Inflation,Price inflation data from the WFP VAM resource centre
 2018-03-31,3.5,South Africa,Food Inflation,Price inflation data from the WFP VAM resource centre
