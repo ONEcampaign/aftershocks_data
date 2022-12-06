@@ -25,7 +25,7 @@ SERVICE_URL: str = (
 )
 
 SOURCE = "International Debt Statistics (IDS) Database"
-DATE = " (October 2021)"
+DATE = " (December 2022)"
 
 
 def debt_stocks_columns() -> None:
