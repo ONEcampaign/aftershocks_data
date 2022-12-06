@@ -7,7 +7,7 @@ from scripts.config import PATHS
 from scripts.logger import logger
 
 START_YEAR: int = 2009
-END_YEAR: int = 2026
+END_YEAR: int = 2027
 
 # ---------------------------------------------------------------------
 # Download
