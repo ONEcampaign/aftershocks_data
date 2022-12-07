@@ -47,31 +47,31 @@
     },
     "gdp_growth": {
         "North Africa (WB)": {
-            "value": "2.4%",
-            "year": "2022"
-        },
-        "Sub-Saharan Africa (WB)": {
-            "value": "4.3%",
-            "year": "2022"
-        },
-        "Africa": {
-            "value": "3.8%",
-            "year": "2022"
-        },
-        "Sub-Saharan Africa (UN)": {
-            "value": "4.3%",
-            "year": "2022"
-        },
-        "Eastern and Southern Africa": {
-            "value": "3.7%",
-            "year": "2022"
-        },
-        "Western and Central Africa": {
             "value": "4.7%",
             "year": "2022"
         },
+        "Sub-Saharan Africa (WB)": {
+            "value": "3.7%",
+            "year": "2022"
+        },
+        "Africa": {
+            "value": "3.7%",
+            "year": "2022"
+        },
+        "Sub-Saharan Africa (UN)": {
+            "value": "3.7%",
+            "year": "2022"
+        },
+        "Eastern and Southern Africa": {
+            "value": "3.1%",
+            "year": "2022"
+        },
+        "Western and Central Africa": {
+            "value": "3.9%",
+            "year": "2022"
+        },
         "Northern Africa": {
-            "value": "2.3%",
+            "value": "3.4%",
             "year": "2022"
         },
         "Middle Africa": {
@@ -79,15 +79,15 @@
             "year": "2022"
         },
         "Western Africa": {
-            "value": "5.0%",
+            "value": "4.0%",
             "year": "2022"
         },
         "Southern Africa": {
-            "value": "2.8%",
+            "value": "2.4%",
             "year": "2022"
         },
         "Eastern Africa": {
-            "value": "4.2%",
+            "value": "3.8%",
             "year": "2022"
         }
     },
