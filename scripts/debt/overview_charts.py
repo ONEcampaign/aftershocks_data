@@ -118,6 +118,7 @@ def debt_to_gdp_trend() -> None:
         .pipe(
             add_gdp_column,
             id_column="iso_code",
+            id_type="ISO3",
             date_column="year",
             usd=True,
             include_estimates=True,
