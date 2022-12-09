@@ -87,7 +87,7 @@ def debt_service_columns() -> None:
             ],
             axis=1,
         )
-        .loc[lambda d: d.year <= (CURRENT_YEAR + 2)]
+        .loc[lambda d: d.year <= (CURRENT_YEAR + 5)]
     )
 
     # chart version
