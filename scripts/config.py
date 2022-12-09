@@ -26,6 +26,10 @@ class Paths:
         return os.path.join(self.project_dir, "raw_data", "oda")
 
     @property
+    def raw_debt(self):
+        return os.path.join(self.project_dir, "raw_data", "debt")
+
+    @property
     def raw_drm(self):
         return os.path.join(self.project_dir, "raw_data", "drm")
 

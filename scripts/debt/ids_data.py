@@ -1,13 +1,14 @@
+import pandas as pd
 from bblocks.dataframe_tools.add import add_short_names_column
 
 from scripts import common
-from scripts.debt.common import get_indicator_data, DEBT_SERVICE, DEBT_STOCKS
-import pandas as pd
 from scripts.config import PATHS
+from scripts.debt.common import get_indicator_data, DEBT_SERVICE, DEBT_STOCKS
 from scripts.logger import logger
 
 START_YEAR: int = 2009
 END_YEAR: int = 2027
+
 
 # ---------------------------------------------------------------------
 # Download
@@ -22,9 +23,21 @@ def _download_ids_service() -> None:
         for i in DEBT_SERVICE
     ]
 
-    df = pd.concat(d_, ignore_index=True)
+    df = (
+        pd.concat(d_, ignore_index=True)
+        .astype(
+            {
+                "time": "Int16",
+                "country": "category",
+                "series_code": "category",
+                "counterpart-area": "category",
+                "series": "category",
+            }
+        )
+        .reset_index(drop=True)
+    )
 
-    df.to_csv(f"{PATHS.raw_data}/debt/ids_service_raw.csv", index=False)
+    df.to_feather(f"{PATHS.raw_debt}/ids_service_raw.feather")
     logger.info("Downloaded IDS debt service data")
 
 
@@ -36,9 +49,21 @@ def _download_ids_stocks() -> None:
         for i in DEBT_STOCKS
     ]
 
-    df = pd.concat(d_, ignore_index=True)
+    df = (
+        pd.concat(d_, ignore_index=True)
+        .astype(
+            {
+                "time": "Int16",
+                "country": "category",
+                "series_code": "category",
+                "counterpart-area": "category",
+                "series": "category",
+            }
+        )
+        .reset_index(drop=True)
+    )
 
-    df.to_csv(f"{PATHS.raw_data}/debt/ids_stocks_raw.csv", index=False)
+    df.to_feather(f"{PATHS.raw_debt}/ids_stocks_raw.feather")
     logger.info("Downloaded IDS debt stocks data")
 
 
@@ -55,7 +80,6 @@ def update_ids_data() -> None:
 def add_ids_iso(
     df: pd.DataFrame, name_col: str = "country", target_col: str = "iso_code"
 ):
-
     codes = pd.read_csv(f"{PATHS.raw_data}/debt/ids_country_codes.csv")
     codes = codes.rename(columns={"iso_code": target_col})
 
@@ -67,17 +91,16 @@ def add_ids_iso(
 def read_ids_service() -> pd.DataFrame:
     """Read IDS debt service data"""
 
-    return pd.read_csv(f"{PATHS.raw_data}/debt/ids_service_raw.csv")
+    return pd.read_feather(f"{PATHS.raw_data}/debt/ids_service_raw.feather")
 
 
 def read_ids_stocks() -> pd.DataFrame:
     """Read IDS debt service data"""
 
-    return pd.read_csv(f"{PATHS.raw_data}/debt/ids_stocks_raw.csv")
+    return pd.read_feather(f"{PATHS.raw_data}/debt/ids_stocks_raw.feather")
 
 
 def _clean_ids_data(df: pd.DataFrame, detail: bool = False) -> pd.DataFrame:
-
     """Avoid total duplication, add iso_codes, simplify series names"""
 
     dict_ = {**DEBT_STOCKS, **DEBT_SERVICE}
@@ -183,7 +206,11 @@ def _clean_ids_china_stocks(df: pd.DataFrame) -> pd.DataFrame:
         "Multilateral": "Multilateral",
     }
 
-    indicators_china = {"Bilateral": "Bilateral (China)", "Private": "Private (China)"}
+    indicators_china = {
+        "Bilateral": "Bilateral (China)",
+        "Private": "Private (China)",
+        "Multilateral": "Multilateral (China)",
+    }
 
     df.indicator = df.indicator.map(indicators_other)
     china.indicator = china.indicator.map(indicators_china)
@@ -235,10 +262,15 @@ def flourish_ids_debt_stocks() -> None:
         .assign(value=lambda d: d.value / 1e6)  # in millions
         .pipe(_flourish_pivot_debt)
         .round(1)
+        .reset_index(drop=True)
     )
 
-    df.to_csv(f"{PATHS.raw_data}/debt/debt_stocks-ts.csv", index=False)
-    logger.debug("Saved debt file debt_stocks-ts.csv (tracker version)")
+    for column in df.columns:
+        if df[column].sum() == 0:
+            df = df.drop(column, axis=1)
+
+    df.to_feather(f"{PATHS.raw_debt}/debt_stocks-ts.feather")
+    logger.debug("Saved debt file debt_stocks-ts.feather (tracker version)")
 
 
 def flourish_ids_debt_service() -> None:
@@ -256,6 +288,17 @@ def flourish_ids_debt_service() -> None:
             target_column="iso_code",
         )
         .round(1)
+        .reset_index(drop=True)
     )
-    df.to_csv(f"{PATHS.raw_data}/debt/debt_service_ts.csv", index=False)
+    for column in df.columns:
+        if df[column].sum() == 0:
+            df = df.drop(column, axis=1)
+
+    df.to_feather(f"{PATHS.raw_debt}/debt_service_ts.feather")
     logger.debug("Saved debt file debt_service_ts.csv (tracker version)")
+
+
+def update_flourish_charts() -> None:
+    """Update Flourish charts with new data"""
+    flourish_ids_debt_stocks()
+    flourish_ids_debt_service()

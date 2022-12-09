@@ -124,16 +124,6 @@ def update_monthly_wb_data() -> None:
     wb_recent.update()
 
 
-def update_monthly_debt_data() -> None:
-    url: str = (
-        "https://onecampaign.github.io/project_covid-19_tracker/c07_debt_service_ts.csv"
-    )
-
-    debt = pd.read_csv(url, usecols=["year", "country_name", "Total"])
-
-    debt.to_csv(f"{PATHS.raw_data}/debt/tracker_debt_service.csv", index=False)
-
-
 def update_daily() -> None:
     """Update all data that is updated daily"""
 

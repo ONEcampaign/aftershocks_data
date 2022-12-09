@@ -13,7 +13,9 @@ from scripts.logger import logger
 
 
 def _read_debt_data() -> pd.DataFrame:
-    return pd.read_csv(f"{PATHS.raw_data}/debt/tracker_debt_service.csv")
+    return pd.read_feather(f"{PATHS.raw_debt}/debt_service_ts.feather").filter(
+        ["year", "country_name", "Total"], axis=1
+    )
 
 
 def _clean_debt_data(df: pd.DataFrame) -> pd.DataFrame:

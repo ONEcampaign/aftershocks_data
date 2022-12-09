@@ -16,14 +16,6 @@ from scripts.debt.common import (
 )
 from scripts.debt.overview_charts import CURRENT_YEAR
 
-STOCKS_URL: str = (
-    "https://onecampaign.github.io/project_covid-19_tracker/c08_debt_stocks-ts.csv"
-)
-
-SERVICE_URL: str = (
-    "https://onecampaign.github.io/project_covid-19_tracker/c07_debt_service_ts.csv"
-)
-
 SOURCE = "International Debt Statistics (IDS) Database"
 DATE = " (December 2022)"
 
@@ -32,7 +24,7 @@ def debt_stocks_columns() -> None:
     """Bar chart of debt stocks by country"""
 
     df = (
-        pd.read_csv(STOCKS_URL)
+        pd.read_feather(PATHS.raw_debt + r"/debt_stocks-ts.feather")
         .replace("C.A.R", "Central African Republic")
         .replace("D.R.C", "Democratic Republic of the Congo")
         .assign(
@@ -71,7 +63,7 @@ def debt_service_columns() -> None:
     """Bar chart of debt stocks by country"""
 
     df = (
-        pd.read_csv(SERVICE_URL)
+        pd.read_feather(PATHS.raw_debt + r"/debt_service_ts.feather")
         .replace("C.A.R", "Central African Republic")
         .replace("D.R.C", "Democratic Republic of the Congo")
         .assign(
@@ -147,7 +139,7 @@ def debt_to_gdp_ts() -> None:
 
 def read_debt_chart_data() -> pd.DataFrame:
     return (
-        pd.read_csv(f"{PATHS.raw_data}/debt/ids_tableau.csv")
+        pd.read_feather(f"{PATHS.raw_debt}/ids_tableau.feather")
         .assign(
             stocks_type=lambda d: d["Series Id"].map(common.DEBT_STOCKS),
             service_type=lambda d: d["Series Id"].map(common.DEBT_SERVICE),

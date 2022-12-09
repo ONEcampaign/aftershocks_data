@@ -139,10 +139,10 @@ def get_indicator_data(
 
 
 def read_dservice_data() -> pd.DataFrame:
-    file: str = "debt_service_ts.csv"
+    file: str = "debt_service_ts.feather"
 
     return (
-        pd.read_csv(f"{PATHS.raw_data}/debt/{file}")
+        pd.read_feather(f"{PATHS.raw_data}/debt/{file}")
         .replace("C.A.R", "Central African Republic")
         .replace("D.R.C", "Democratic Republic of the Congo")
         .pipe(add_iso_codes_column, id_column="iso_code", id_type="regex")
@@ -150,10 +150,10 @@ def read_dservice_data() -> pd.DataFrame:
 
 
 def read_dstocks_data() -> pd.DataFrame:
-    file: str = "debt_stocks-ts.csv"
+    file: str = "debt_stocks-ts.feather"
 
     return (
-        pd.read_csv(f"{PATHS.raw_data}/debt/{file}")
+        pd.read_feather(f"{PATHS.raw_data}/debt/{file}")
         .replace("C.A.R", "Central African Republic")
         .replace("D.R.C", "Democratic Republic of the Congo")
         .pipe(add_iso_codes_column, id_column="iso_code", id_type="regex")
