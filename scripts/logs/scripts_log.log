@@ -1361,3 +1361,17 @@ INFO (2022-12-12 15:46:47,942): Updated OWID data
 INFO (2022-12-12 15:49:06,241): Updated DTP data from WHO.
 INFO (2022-12-12 15:49:08,169): Updated IHME health spending data
 INFO (2022-12-12 15:49:08,873): Updated IHME health spending codes
+INFO (2022-12-13 11:15:18,467): Updated OWID data
+INFO (2022-12-13 11:15:19,574): Updated daily charts in health page
+INFO (2022-12-13 11:15:19,732): Updated Pink Sheet data
+INFO (2022-12-13 11:15:20,000): Updated WFP data
+INFO (2022-12-13 11:15:20,426): Updated hunger topic charts
+INFO (2022-12-13 11:15:20,486): Updated hunger overview charts
+INFO (2022-12-13 11:15:37,439): Updated hunger dynamic text
+INFO (2022-12-13 11:15:37,439): Updated daily hunger data and all charts and text
+INFO (2022-12-13 11:17:21,296): Updated WFP data (insufficient food)
+INFO (2022-12-13 11:17:27,095): Updated WFP insufficient food charts
+INFO (2022-12-13 11:17:30,390): Updated vaccination rate chart
+INFO (2022-12-13 11:17:30,637): Updated overview text (summary) json
+INFO (2022-12-13 11:17:30,637): Updated daily charts in country page
+INFO (2022-12-13 11:17:39,029): Updated economy picker
