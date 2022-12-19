@@ -1064,13 +1064,13 @@
             "value": "4.2",
             "date": "30 November 2021"
         },
-        "Liberia": {
-            "value": "6.32",
-            "date": "30 June 2022"
-        },
         "Guinea": {
             "value": "12.5",
             "date": "30 June 2022"
+        },
+        "Liberia": {
+            "value": "6.48",
+            "date": "31 July 2022"
         },
         "Comoros": {
             "value": "18.2",
@@ -1086,10 +1086,6 @@
         },
         "South Sudan": {
             "value": "-2.5",
-            "date": "31 August 2022"
-        },
-        "Sao Tome and Principe": {
-            "value": "19.5",
             "date": "31 August 2022"
         },
         "Algeria": {
@@ -1117,7 +1113,7 @@
             "date": "30 September 2022"
         },
         "Sudan": {
-            "value": "107.0",
+            "value": "107.3",
             "date": "30 September 2022"
         },
         "DR Congo": {
@@ -1128,8 +1124,16 @@
             "value": "16.5",
             "date": "30 September 2022"
         },
-        "Ethiopia": {
-            "value": "30.7",
+        "Sao Tome and Principe": {
+            "value": "21.9",
+            "date": "30 September 2022"
+        },
+        "Senegal": {
+            "value": "11.9",
+            "date": "30 September 2022"
+        },
+        "Cote d'Ivoire": {
+            "value": "6.3",
             "date": "30 September 2022"
         },
         "Chad": {
@@ -1144,24 +1148,12 @@
             "value": "9.71",
             "date": "30 September 2022"
         },
-        "Burundi": {
-            "value": "20.92",
-            "date": "30 September 2022"
-        },
-        "Namibia": {
-            "value": "7.1",
-            "date": "30 September 2022"
-        },
-        "Ghana": {
-            "value": "37.2",
-            "date": "30 September 2022"
-        },
         "Africa (median)": {
-            "value": "9.95",
+            "value": "10.0",
             "date": "30 September 2022"
         },
-        "Benin": {
-            "value": "-1.6",
+        "Sierra Leone": {
+            "value": "29.1",
             "date": "30 September 2022"
         },
         "Mauritania": {
@@ -1172,16 +1164,8 @@
             "value": "3.165",
             "date": "30 September 2022"
         },
-        "Angola": {
-            "value": "18.16",
-            "date": "30 September 2022"
-        },
-        "Libya": {
-            "value": "4.3",
-            "date": "30 September 2022"
-        },
-        "Tanzania": {
-            "value": "4.8",
+        "Morocco": {
+            "value": "8.3",
             "date": "30 September 2022"
         },
         "Zimbabwe": {
@@ -1192,32 +1176,48 @@
             "value": "31.0",
             "date": "31 October 2022"
         },
-        "Cote d'Ivoire": {
-            "value": "6.2",
+        "Ethiopia": {
+            "value": "31.7",
             "date": "31 October 2022"
         },
         "Togo": {
             "value": "7.2",
             "date": "31 October 2022"
         },
-        "Botswana": {
-            "value": "13.1",
+        "Tanzania": {
+            "value": "4.9",
             "date": "31 October 2022"
         },
-        "Somalia": {
-            "value": "6.9",
+        "Tunisia": {
+            "value": "9.2",
+            "date": "31 October 2022"
+        },
+        "Botswana": {
+            "value": "13.1",
             "date": "31 October 2022"
         },
         "Egypt": {
             "value": "16.2",
             "date": "31 October 2022"
         },
+        "Angola": {
+            "value": "16.68",
+            "date": "31 October 2022"
+        },
+        "Namibia": {
+            "value": "7.1",
+            "date": "31 October 2022"
+        },
+        "Ghana": {
+            "value": "40.4",
+            "date": "31 October 2022"
+        },
         "Mozambique": {
             "value": "11.83",
             "date": "31 October 2022"
         },
-        "Sierra Leone": {
-            "value": "32.98",
+        "Benin": {
+            "value": "2.1",
             "date": "31 October 2022"
         },
         "Malawi": {
@@ -1236,24 +1236,28 @@
             "value": "21.09",
             "date": "31 October 2022"
         },
-        "Senegal": {
-            "value": "13.0",
-            "date": "31 October 2022"
-        },
-        "Morocco": {
-            "value": "8.1",
+        "Libya": {
+            "value": "4.1",
             "date": "31 October 2022"
         },
         "Cabo Verde": {
             "value": "8.2",
             "date": "31 October 2022"
         },
-        "South Africa": {
-            "value": "7.6",
-            "date": "31 October 2022"
+        "Burundi": {
+            "value": "26.802",
+            "date": "30 November 2022"
         },
         "Zambia": {
             "value": "9.8",
+            "date": "30 November 2022"
+        },
+        "Somalia": {
+            "value": "6.4",
+            "date": "30 November 2022"
+        },
+        "South Africa": {
+            "value": "7.4",
             "date": "30 November 2022"
         },
         "Seychelles": {
@@ -1262,10 +1266,6 @@
         },
         "Uganda": {
             "value": "10.6",
-            "date": "30 November 2022"
-        },
-        "Tunisia": {
-            "value": "9.8",
             "date": "30 November 2022"
         }
     }
