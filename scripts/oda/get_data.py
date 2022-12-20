@@ -92,7 +92,7 @@ def get_gni():
     data.to_csv(f"{config.PATHS.raw_oda}/gni.csv", index=False)
 
 
-def oda_by_income():
+def get_oda_by_income():
     recipients = [10024, 10045, 10046, 10047, 10048, 10049]
     oda = ODAData(years=YEARS, donors=DAC, recipients=recipients)
     oda.load_indicator("recipient_total_flow_net")
@@ -114,8 +114,36 @@ def oda_by_income():
     ).to_csv(f"{config.PATHS.raw_oda}/total_oda_by_income.csv", index=False)
 
 
+def get_oda_to_africa() -> None:
+
+    total = [10100]
+    africa = [10001]
+
+    oda = ODAData(years=YEARS, donors=DAC, recipients=total + africa)
+
+    oda.load_indicator("recipient_total_flow_net")
+
+    data = oda.get_data().filter(
+        ["year", "donor_code", "recipient_code", "value"], axis=1
+    )
+
+    total_data = data.query(f"recipient_code in {total}").drop(
+        ["recipient_code"], axis=1
+    )
+    africa_data = data.query(f"recipient_code in {africa}").drop(
+        ["recipient_code"], axis=1
+    )
+
+    data = total_data.merge(
+        africa_data, on=["year", "donor_code"], suffixes=("_all", "_africa")
+    )
+
+    data.to_csv(f"{config.PATHS.raw_oda}/total_oda_to_africa.csv", index=False)
+
+
 if __name__ == "__main__":
     get_totals()
     get_oda_gni()
     get_gni()
-    oda_by_income()
+    get_oda_by_income()
+    get_oda_to_africa()

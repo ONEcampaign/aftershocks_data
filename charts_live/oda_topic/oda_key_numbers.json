@@ -4,28 +4,28 @@
     "latest_year": "2021",
     "oda_gni": "0.33%",
     "oda_gni_distance": "203 billion",
-    "aid_to_africa": "55.7 billion",
-    "aid_to_africa_share": "35.2%",
+    "aid_to_africa": "57.2 billion",
+    "aid_to_africa_share": "33.6%",
     "aid_to_incomes": {
         "High income": {
             "value": "0.2",
             "share": "0.1%"
         },
         "Low income": {
-            "value": "34.1",
-            "share": "21.6%"
+            "value": "37.4",
+            "share": "20.8%"
         },
         "Lower-middle income": {
-            "value": "47.0",
-            "share": "29.8%"
+            "value": "48.6",
+            "share": "27.0%"
         },
         "Not classified by income": {
-            "value": "55.1",
-            "share": "34.9%"
+            "value": "72.4",
+            "share": "40.3%"
         },
         "Upper-middle income": {
-            "value": "21.3",
-            "share": "13.5%"
+            "value": "21.1",
+            "share": "11.7%"
         }
     },
     "aid_to_health": "25.3 billion",
