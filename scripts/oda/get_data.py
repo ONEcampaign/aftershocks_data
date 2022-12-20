@@ -92,7 +92,30 @@ def get_gni():
     data.to_csv(f"{config.PATHS.raw_oda}/gni.csv", index=False)
 
 
+def oda_by_income():
+    recipients = [10024, 10045, 10046, 10047, 10048, 10049]
+    oda = ODAData(years=YEARS, donors=DAC, recipients=recipients)
+    oda.load_indicator("recipient_total_flow_net")
+    data = oda.get_data()
+
+    names = {
+        10024: "Not classified by income",
+        10045: "Low income",
+        10046: "Lower-middle income",
+        10047: "Upper-middle income",
+        10048: "High income",
+        10049: "Not classified by income",
+    }
+
+    data = data.assign(recipient=lambda d: d.recipient_code.map(names))
+
+    data.filter(
+        ["year", "donor_code", "recipient_code", "value", "recipient"], axis=1
+    ).to_csv(f"{config.PATHS.raw_oda}/total_oda_by_income.csv", index=False)
+
+
 if __name__ == "__main__":
     get_totals()
     get_oda_gni()
     get_gni()
+    oda_by_income()
