@@ -337,8 +337,9 @@ def oda_covid():
         .round(1)
         .reset_index()
         .assign(
-            other_oda=lambda d: d["Total ODA"].fillna(0)
-            - d["total_covid_oda_ge_linked"].fillna(0)
+            other_oda=lambda d: round(
+                d["Total ODA"].fillna(0) - d["total_covid_oda_ge_linked"].fillna(0), 1
+            )
         )
     )
 
