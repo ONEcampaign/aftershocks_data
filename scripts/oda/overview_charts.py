@@ -128,7 +128,7 @@ def aid_to_africa_ts() -> None:
         .loc[lambda d: d.name == "DAC Countries, Total"]
         .pipe(
             deflate,
-            base_year=common.CONSTANT_YEAR - 1,
+            base_year=common.CONSTANT_YEAR,
             date_column="year",
             source="oecd_dac",
             id_column="donor_code",
