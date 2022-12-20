@@ -295,3 +295,12 @@ def aid_to_incomes() -> None:
         f"{PATHS.download}/oda_topic/aid_to_income_ts.csv", index=False
     )
     logger.debug("Saved download version of aid_to_income_ts.csv")
+
+
+if __name__ == "__main__":
+    global_aid_ts()
+    oda_gni_single_year()
+    sector_totals()
+    key_sector_shares()
+    aid_to_regions_ts()
+    aid_to_incomes()
