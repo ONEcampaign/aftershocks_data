@@ -8,8 +8,42 @@ set_data_path(config.PATHS.raw_data)
 YEARS = range(2000, 2023)
 
 
+DAC = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    18,
+    20,
+    21,
+    22,
+    40,
+    50,
+    61,
+    68,
+    69,
+    75,
+    76,
+    301,
+    302,
+    701,
+    742,
+    801,
+    820,
+    918,
+]
+
+
 def get_totals():
-    oda = ODAData(years=YEARS)
+    oda = ODAData(years=YEARS, donors=DAC)
     oda.load_indicator(["total_oda_flow_net", "total_oda_ge"])
 
     flow = oda.get_data("total_oda_flow_net").assign(
@@ -31,7 +65,7 @@ def get_totals():
 
 
 def get_oda_gni():
-    oda = ODAData(years=YEARS)
+    oda = ODAData(years=YEARS, donors=DAC)
     oda.add_share_of_gni().load_indicator(["total_oda_flow_net", "total_oda_ge"])
 
     flow = oda.get_data("total_oda_flow_net").loc[lambda d: d.year < 2018]
@@ -48,7 +82,7 @@ def get_oda_gni():
 
 
 def get_gni():
-    oda = ODAData(years=YEARS)
+    oda = ODAData(years=YEARS, donors=DAC)
     oda.load_indicator("gni")
     data = (
         oda.get_data("gni")

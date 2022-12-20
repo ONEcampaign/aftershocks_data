@@ -244,7 +244,7 @@ def add_constant_change_column(df: pd.DataFrame, base: int) -> pd.DataFrame:
 
 def add_short_names(df: pd.DataFrame) -> pd.DataFrame:
     return df.assign(
-ß        name=lambda d: convert_id(
+        name=lambda d: convert_id(
             d.donor_code,
             from_type="DACcode",
             to_type="name_short",
