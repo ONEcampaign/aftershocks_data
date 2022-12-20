@@ -141,9 +141,46 @@ def get_oda_to_africa() -> None:
     data.to_csv(f"{config.PATHS.raw_oda}/total_oda_to_africa.csv", index=False)
 
 
+def get_oda_to_regions():
+
+    recipients = {
+        9998: "Developing countries, unspecified",
+        10001: "Africa",
+        10004: "America",
+        10007: "Asia",
+        10010: "Europe",
+        10011: "Middle East",
+        10012: "Oceania",
+    }
+
+    indicators = {
+        "recipient_imputed_multi_flow_net": "imputed_multilateral",
+        "recipient_bilateral_flow_net": "bilateral",
+    }
+
+    oda = ODAData(years=YEARS, donors=DAC, recipients=list(recipients))
+
+    oda.load_indicator(list(indicators))
+
+    data = (
+        oda.get_data()
+        .assign(
+            recipient=lambda d: d.recipient_code.map(recipients),
+            indicator=lambda d: d.indicator.map(indicators),
+        )
+        .filter(
+            ["year", "donor_code", "recipient_code", "value", "indicator", "recipient"],
+            axis=1,
+        )
+    )
+
+    data.to_csv(f"{config.PATHS.raw_oda}/total_oda_by_region.csv", index=False)
+
+
 if __name__ == "__main__":
     get_totals()
     get_oda_gni()
     get_gni()
     get_oda_by_income()
     get_oda_to_africa()
+    get_oda_to_regions()
