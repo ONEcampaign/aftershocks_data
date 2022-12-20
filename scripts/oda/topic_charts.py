@@ -334,6 +334,7 @@ def oda_covid():
             columns="indicator",
             values="value",
         )
+        .round(1)
         .reset_index()
         .assign(
             other_oda=lambda d: d["Total ODA"].fillna(0)
