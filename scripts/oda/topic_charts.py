@@ -1,5 +1,7 @@
 import pandas as pd
 from bblocks.cleaning_tools.clean import format_number
+from oda_data import set_data_path, ODAData
+from oda_data.tools.groupings import donor_groupings
 from pydeflate import deflate
 
 from scripts.config import PATHS
@@ -7,63 +9,85 @@ from scripts.logger import logger
 from scripts.oda import common
 
 
+set_data_path(PATHS.raw_oda)
+DacMembers = donor_groupings()["dac_members"] | {20001: "DAC Countries, Total"}
+
+
+def _ge_filter(ge_indicator: str, flow_indicator: str) -> str:
+    return (
+        f"(indicator=='{ge_indicator}' and year >=2018) | "
+        f"(indicator=='{flow_indicator}' and year <2018)"
+    )
+
+
 def global_aid_ts() -> None:
     """Create an overview chart which contains the latest total ODA value and
     the change in constant terms."""
 
-    gni = common.read_gni().filter(["year", "donor_code", "value"], axis=1)
-
-    df = (
-        common.read_total_oda(official_definition=True)
-        .merge(gni, on=["year", "donor_code"], how="left", suffixes=("", "_gni"))
-        .pipe(common.append_dac_total)
-        .assign(oda_gni=lambda d: round(100 * d.value / d.value_gni, 2))
-        .assign(
-            value=lambda d: deflate(
-                d,
-                base_year=common.CONSTANT_YEAR,
-                date_column="year",
-                source="oecd_dac",
-                id_column="donor_code",
-                id_type="DAC",
-                source_col="value",
-                target_col="const",
-            ).const.round(2)
-        )
-        .pipe(common.add_short_names)
-        .assign(
-            year=lambda d: d.year.dt.year,
-        )
-        .filter(["name", "year", "value", "oda_gni", "pct_change"], axis=1)
-        .sort_values(["name", "year"])
-        .rename(columns={"value": "ODA (left-axis)", "oda_gni": "ODA/GNI (right-axis)"})
+    oda = ODAData(
+        years=range(2000, 2024),
+        donors=list(DacMembers),
+        prices="constant",
+        base_year=common.CONSTANT_YEAR,
+        include_names=True,
     )
 
-    df = common.sort_dac_first(df, keep_current_sorting=True)
+    oda.load_indicator(["total_oda_ge", "total_oda_flow_net"]).add_share_of_gni()
+
+    data = (
+        oda.get_data()
+        .query(_ge_filter("total_oda_ge", "total_oda_flow_net"))
+        .assign(
+            value=lambda d: round(d.value, 2), gni_share=lambda d: round(d.gni_share, 2)
+        )
+        .sort_values(["donor_name", "year"])
+        .filter(["donor_name", "year", "value", "gni_share"], axis=1)
+        .rename(
+            columns={
+                "value": "ODA (left-axis)",
+                "gni_share": "ODA/GNI (right-axis)",
+                "donor_name": "name",
+            }
+        )
+        .pipe(common.sort_dac_first, keep_current_sorting=True)
+    )
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/oda_gni_ts.csv", index=False)
+    data.to_csv(f"{PATHS.charts}/oda_topic/oda_gni_ts.csv", index=False)
     logger.debug("Saved live chart oda_gni_ts.csv")
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
-    df.assign(source=source).to_csv(
+    data.assign(source=source).to_csv(
         f"{PATHS.download}/oda_topic/oda_gni_ts.csv", index=False
     )
     logger.debug("Saved download chart oda_gni_ts.csv")
 
 
 def oda_gni_single_year() -> None:
-    gni = common.read_gni().filter(["year", "donor_code", "value"], axis=1)
 
-    df = (
-        common.read_total_oda(official_definition=True)
-        .merge(gni, on=["year", "donor_code"], how="left", suffixes=("", "_gni"))
-        .pipe(common.append_dac_total, grouper=["year"])
+    oda = ODAData(
+        years=range(2000, 2024),
+        donors=list(DacMembers),
+        # prices="constant",
+        # base_year=common.CONSTANT_YEAR,
+        include_names=True,
+    )
+
+    oda.load_indicator(["total_oda_ge", "total_oda_flow_net", "gni"])
+
+    data = (
+        oda.get_data(["total_oda_ge", "total_oda_flow_net"])
+        .query(_ge_filter("total_oda_ge", "total_oda_flow_net"))
+        .merge(
+            oda.get_data("gni").filter(["year", "donor_code", "value"], axis=1),
+            on=["year", "donor_code"],
+            how="left",
+            suffixes=("", "_gni"),
+        )
         .assign(
+            oda_gni=lambda d: round(100 * d.value / d.value_gni, 3),
             missing=lambda d: round(d.value_gni * 0.007 - d.value, 1),
-            oda_gni=lambda d: round(100 * d.value / d.value_gni, 2),
-            year=lambda d: d.year.dt.year,
         )
         .assign(missing=lambda d: d.missing.apply(lambda v: v if v > 0 else 0))
         .assign(
@@ -75,14 +99,13 @@ def oda_gni_single_year() -> None:
             ),
         )
         .loc[lambda d: (d.donor_code != 918) & (d.year >= common.START_YEAR)]
-        .pipe(common.add_short_names)
-        .filter(["name", "year", "value", "missing", "oda_gni"], axis=1)
-        .sort_values(["year", "name"], ascending=[False, True])
+        .filter(["donor_name", "year", "value", "missing", "oda_gni"], axis=1)
+        .sort_values(["year", "donor_name"], ascending=[False, True])
         .rename(
             {
                 "value": "Total ODA",
                 "oda_gni": "ODA/GNI",
-                "name": "Donor",
+                "donor_name": "Donor",
                 "year": "Year",
                 "missing": "ODA short of 0.7% commitment",
             },
@@ -91,12 +114,12 @@ def oda_gni_single_year() -> None:
     )
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/oda_gni_single_year_ts.csv", index=False)
+    data.to_csv(f"{PATHS.charts}/oda_topic/oda_gni_single_year_ts.csv", index=False)
     logger.debug("Saved live chart oda_gni_single_year_ts.csv")
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
-    df.assign(source=source).to_csv(
+    data.assign(source=source).to_csv(
         f"{PATHS.download}/oda_topic/oda_gni_single_year_ts.csv", index=False
     )
     logger.debug("Saved download chart oda_gni_sing_year_ts.csv")
@@ -206,7 +229,7 @@ def aid_to_regions_ts() -> None:
         common.read_oda_by_region()
         .loc[lambda d: d.recipient != "Middle East"]
         .pipe(common.total_by_region)
-        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
+        # .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
         .assign(year=lambda d: d.year.dt.year)
         .assign(
@@ -260,7 +283,7 @@ def aid_to_regions_ts() -> None:
 def aid_to_incomes() -> None:
     df = (
         common.read_oda_by_income()
-        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
+        # .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
         .pipe(common.add_short_names)
         .assign(
             year=lambda d: d.year.dt.year, value=lambda d: round((d.value / 1e3), 2)
@@ -309,7 +332,7 @@ def oda_covid():
         years=range(2015, 2022),
         donors=list(dg["dac_countries"]) + [20001],
         prices="constant",
-        base_year=2021,
+        base_year=common.CONSTANT_YEAR,
         include_names=True,
     )
 

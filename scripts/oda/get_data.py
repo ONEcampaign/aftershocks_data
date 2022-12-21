@@ -94,7 +94,7 @@ def get_gni():
 
 def get_oda_by_income():
     recipients = [10024, 10045, 10046, 10047, 10048, 10049]
-    oda = ODAData(years=YEARS, donors=DAC, recipients=recipients)
+    oda = ODAData(years=YEARS, donors=DAC + [20001], recipients=recipients)
     oda.load_indicator("recipient_total_flow_net")
     data = oda.get_data()
 
@@ -158,7 +158,7 @@ def get_oda_to_regions():
         "recipient_bilateral_flow_net": "bilateral",
     }
 
-    oda = ODAData(years=YEARS, donors=DAC, recipients=list(recipients))
+    oda = ODAData(years=YEARS, donors=DAC + [20001], recipients=list(recipients))
 
     oda.load_indicator(list(indicators))
 

@@ -159,7 +159,7 @@ def read_oda_by_income() -> pd.DataFrame:
 
     return pd.read_csv(
         f"{PATHS.raw_oda}/total_oda_by_income.csv", parse_dates=["year"]
-    ).loc[lambda d: d.donor_code.isin(DAC)]
+    ).loc[lambda d: d.donor_code.isin(DAC + [20001])]
 
 
 def read_gni() -> pd.DataFrame:
@@ -191,7 +191,7 @@ def read_sectors() -> pd.DataFrame:
 def read_oda_by_region() -> pd.DataFrame:
     return pd.read_csv(
         f"{PATHS.raw_oda}/total_oda_by_region.csv", parse_dates=["year"]
-    ).loc[lambda d: d.donor_code.isin(DAC)]
+    ).loc[lambda d: d.donor_code.isin(DAC + [20001])]
 
 
 def total_by_region(df: pd.DataFrame) -> pd.DataFrame:
