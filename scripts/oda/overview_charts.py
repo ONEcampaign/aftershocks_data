@@ -152,49 +152,60 @@ def aid_to_africa_ts() -> None:
 
 
 def aid_to_incomes_latest() -> None:
-    df = (
-        common.read_oda_by_income()
-        .pipe(common.append_dac_total, grouper=["year", "recipient", "recipient_code"])
-        .pipe(common.add_short_names)
-        .loc[lambda d: d.name == "DAC Countries, Total"]
+
+    recipients = {
+        10024: "Not classified by income",
+        10045: "Low income",
+        10046: "Lower-middle income",
+        10047: "Upper-middle income",
+        10048: "High income",
+        10049: "Not classified by income",
+        10100: "Developing Countries, Total",
+    }
+    oda = ODAData(
+        years=range(common.START_YEAR, 2025),
+        donors=20001,
+        recipients=list(recipients),
+        include_names=True,
+    )
+    oda.load_indicator("recipient_total_flow_net")
+
+    data = (
+        oda.get_data()
+        .assign(recipient=lambda d: d.recipient_code.map(recipients))
+        .groupby(["year", "donor_code", "donor_name", "recipient"], as_index=False)
+        .sum(numeric_only=True)
+        .pivot(index=["year", "donor_name"], columns="recipient", values="value")
+        .reset_index()
+        .melt(id_vars=["year", "donor_name", "Developing Countries, Total"])
+        .query("year == year.max()")
+        .rename(columns={"donor_name": "name"})
         .assign(
-            year=lambda d: d.year.dt.year,
+            share=lambda d: format_number(
+                d.value / d["Developing Countries, Total"],
+                decimals=1,
+                as_percentage=True,
+            ),
             value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1),
-        )
-        .pipe(filter_latest_by, date_column="year", group_by=["name", "recipient"])
-        .filter(
-            [
-                "name",
-                "year",
-                "recipient",
-                "value",
-            ],
-            axis=1,
-        )
-        .astype({"value": "float"})
-        .assign(
-            share=lambda d: d.groupby("year")["value"].transform(lambda x: x / x.sum())
-        )
-        .assign(
-            share=lambda d: format_number(d.share, decimals=1, as_percentage=True),
             lable=lambda d: d["recipient"] + ": " + d["share"],
         )
+        .filter(["name", "year", "recipient", "value", "share", "lable"], axis=1)
     )
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_income_latest.csv", index=False)
+    data.to_csv(f"{PATHS.charts}/oda_topic/aid_to_income_latest.csv", index=False)
     logger.debug("Saved chart version of aid_to_income_latest.csv")
 
     # download version
     source = "OECD DAC Creditor Reporting System (CRS)"
-    df.assign(source=source).to_csv(
+    data.assign(source=source).to_csv(
         f"{PATHS.download}/oda_topic/aid_to_income_latest.csv", index=False
     )
     logger.debug("Saved download version of aid_to_income_latest.csv")
 
     # Dynamic text version
     income_dict = df_to_key_number(
-        df,
+        data,
         indicator_name="aid_to_incomes",
         id_column="recipient",
         value_columns=["value", "share"],
