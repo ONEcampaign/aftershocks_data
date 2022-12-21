@@ -242,6 +242,26 @@ def add_constant_change_column(df: pd.DataFrame, base: int) -> pd.DataFrame:
     return df_constant
 
 
+def add_change(
+    df: pd.DataFrame, grouper: list = None, as_formatted_str: bool = False
+) -> pd.DataFrame:
+    if grouper is None:
+        grouper = ["donor_code", "indicator"]
+
+    df["pct_change"] = df.groupby(grouper)["value"].pct_change()
+
+    if not as_formatted_str:
+        return df
+
+    df["pct_change"] = format_number(
+        df["pct_change"],
+        as_percentage=True,
+        decimals=1,
+    ).replace("nan%", "")
+
+    return df
+
+
 def add_short_names(df: pd.DataFrame) -> pd.DataFrame:
     return df.assign(
         name=lambda d: convert_id(

@@ -1,5 +1,8 @@
+import pandas as pd
 from bblocks.cleaning_tools.clean import format_number
 from bblocks.cleaning_tools.filter import filter_latest_by
+from oda_data import ODAData, set_data_path
+from oda_data.tools.groupings import donor_groupings
 from pydeflate import deflate
 
 from scripts.config import PATHS
@@ -8,29 +11,29 @@ from scripts.oda import common
 
 from scripts.common import update_key_number, df_to_key_number
 
+set_data_path(PATHS.raw_oda)
+DacCountries = donor_groupings()["dac_countries"] | {20001: "DAC Countries, Total"}
+
 
 def global_aid_key_number() -> None:
-    """Create an overview chart whi§ch contains the latest total ODA value and
-    the change in constant terms."""
 
-    df = (
-        common.read_total_oda(official_definition=True)
-        .assign(value=lambda d: d.value * 1e6)
-        .pipe(common.append_dac_total)
-        .pipe(common.add_constant_change_column, base=common.CONSTANT_YEAR)
-        .pipe(common.add_short_names)
-        .loc[lambda d: d.name == "DAC Countries, Total"]
+    oda = ODAData(
+        years=range(2020, 2024),
+        donors=20001,
+        prices="constant",
+        base_year=common.CONSTANT_YEAR,
+        include_names=True,
+    )
+
+    data = (
+        oda.load_indicator(indicator="total_oda_ge")
+        .get_data()
+        .pipe(common.add_change, as_formatted_str=True)
+        .query("year == year.max()")
         .assign(
-            year=lambda d: d.year.dt.year,
+            name=lambda d: d.donor_name,
+            value=lambda d: d.value * 1e6,
             pct_change=lambda d: d["pct_change"].str.replace("%", ""),
-        )
-        .pipe(
-            filter_latest_by,
-            date_column="year",
-            group_by=["name"],
-            value_columns=["value", "pct_change"],
-        )
-        .assign(
             first_line=lambda d: f"As of {d.year.item()}",
             second_line=lambda d: f"real change from {d.year.item() - 1}",
             centre=lambda d: round(d["pct_change"].astype(float) / 10, 2),
@@ -42,14 +45,14 @@ def global_aid_key_number() -> None:
     )
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/sm_total_oda.csv", index=False)
+    data.to_csv(f"{PATHS.charts}/oda_topic/sm_total_oda.csv", index=False)
     logger.debug("Saved chart version of sm_total_oda.csv")
 
     # Dynamic text version
     kn = {
-        "total_oda": f"{df['value'].item()/1e9:,.1f} billion",
-        "total_oda_change": f"{float(df['pct_change'].item()):.1f} %",
-        "latest_year": f"{df['first_line'].item().split(' ')[-1]}",
+        "total_oda": f"{data['value'].item()/1e9:,.1f} billion",
+        "total_oda_change": f"{float(data['pct_change'].item()):.1f} %",
+        "latest_year": f"{data['first_line'].item().split(' ')[-1]}",
     }
 
     update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
@@ -60,43 +63,22 @@ def aid_gni_key_number() -> None:
     """Create an overview chart which contains the latest ODA/GNI value and
     the change in constant terms."""
 
-    gni = (
-        common.read_gni()
-        .pipe(
-            filter_latest_by,
-            date_column="year",
-            group_by=["donor_code", "flows_code", "indicator"],
-            value_columns=["value"],
-        )
-        .loc[lambda d: d.donor_code.isin(common.DAC)]
-        .pipe(common.append_dac_total)
-        .rename(columns={"value": "gni"})
-        .filter(["year", "donor_code", "gni"], axis=1)
+    oda = ODAData(
+        years=range(2020, 2024),
+        donors=20001,
+        include_names=True,
     )
 
-    oda = (
-        common.read_total_oda(official_definition=True)
-        .pipe(common.append_dac_total)
-        .pipe(
-            filter_latest_by,
-            date_column="year",
-            group_by=["donor_code"],
-            value_columns=["value"],
-        )
-        .rename(columns={"value": "oda"})
-        .filter(["year", "donor_code", "oda"], axis=1)
-    )
-
-    df = (
-        oda.merge(gni, on=["year", "donor_code"], how="left")
+    data = (
+        oda.load_indicator(indicator=["total_oda_ge", "gni"])
+        .get_data()
+        .query("year == year.max()")
+        .assign(value=lambda d: d.value * 1e6, name=lambda d: d.donor_name)
+        .pivot(index=["year", "name"], columns="indicator", values="value")
+        .reset_index()
         .assign(
-            oda_gni=lambda d: d.oda / d.gni,
-            distance=lambda d: round(d.gni * 0.007 - d.oda, 1),
-        )
-        .pipe(common.add_short_names)
-        .loc[lambda d: d.name == "DAC Countries, Total"]
-        .assign(
-            year=lambda d: d.year.dt.year,
+            oda_gni=lambda d: round(d.total_oda_ge / d.gni, 6),
+            distance=lambda d: round(d.gni * 0.007 - d.total_oda_ge, 1),
             first_line=lambda d: f"As of {d.year.item()}",
             second_line="Additional required to get to 0.7%",
             centre="",
@@ -104,16 +86,17 @@ def aid_gni_key_number() -> None:
         .filter(
             ["name", "first_line", "oda_gni", "second_line", "distance", "centre"],
         )
+        .assign(distance=lambda d: round(d.distance / 1e6, 2))
     )
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/oda_gni_sm.csv", index=False)
+    data.to_csv(f"{PATHS.charts}/oda_topic/oda_gni_sm.csv", index=False)
     logger.debug("Saved chart version of oda_gni_sm.csv")
 
     # Dynamic text version
     kn = {
-        "oda_gni": f"{100*df.oda_gni.item():,.2f}%",
-        "oda_gni_distance": f"{df.distance.item()/1e3:,.0f} billion",
+        "oda_gni": f"{100*data.oda_gni.item():,.2f}%",
+        "oda_gni_distance": f"{data.distance.item()/1e3:,.0f} billion",
     }
 
     update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
@@ -121,46 +104,52 @@ def aid_gni_key_number() -> None:
 
 
 def aid_to_africa_ts() -> None:
-    df = (
-        common.read_oda_africa()
-        .pipe(common.append_dac_total, grouper=["year"])
-        .pipe(common.add_short_names)
-        .loc[lambda d: d.name == "DAC Countries, Total"]
-        .pipe(
-            deflate,
-            base_year=common.CONSTANT_YEAR,
-            date_column="year",
-            source="oecd_dac",
-            id_column="donor_code",
-            id_type="DAC",
-            source_col="value_africa",
-            target_col="africa_constant",
-        )
+
+    oda = ODAData(
+        years=range(common.START_YEAR, 2024),
+        donors=20001,
+        recipients=[10001, 10100],
+        include_names=True,
+        prices="constant",
+        base_year=common.CONSTANT_YEAR,
+    )
+
+    data = (
+        oda.load_indicator(indicator=["recipient_total_flow_net"])
+        .add_share_of_total(True)
+        .get_data()
+        .pivot(index=["year", "donor_name"], columns="recipient_name", values="value")
+        .reset_index()
         .assign(
-            year=lambda d: d.year.dt.year,
             share=lambda d: format_number(
-                d.value_africa / d.value_all, as_percentage=True, decimals=1
-            ),
-            value=lambda d: format_number(
-                d.africa_constant * 1e6, as_billions=True, decimals=1
-            ),
+                (d["Africa, Total"] / d["Developing Countries, Total"]),
+                as_percentage=True,
+                decimals=1,
+            )
         )
-        .loc[lambda d: d.year.isin(range(common.START_YEAR, 2030))]
-        .filter(["name", "year", "value", "share"], axis=1)
+        .rename(columns={"Africa, Total": "value"})
+        .filter(["year", "donor_name", "value", "share"], axis=1)
+        .pipe(common.add_change, as_formatted_str=True, grouper="donor_name")
+        .assign(
+            value=lambda d: format_number(d.value * 1e6, as_billions=True, decimals=1),
+            name=lambda d: d.donor_name,
+        )
         .rename(columns={"value": "Aid to Africa", "share": "Share of total ODA"})
+        .filter(["name", "year", "Aid to Africa", "Share of total ODA"], axis=1)
     )
 
     # chart version
-    df.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
+    data.to_csv(f"{PATHS.charts}/oda_topic/aid_to_africa_ts.csv", index=False)
     logger.debug("Saved chart version of aid_to_africa_ts.csv")
 
     # Dynamic text version
     kn = {
-        "aid_to_africa": f"{df['Aid to Africa'].values[-1]} billion",
-        "aid_to_africa_share": f"{df['Share of total ODA'].values[-1]}",
+        "aid_to_africa": f"{data['Aid to Africa'].values[-1]} billion",
+        "aid_to_africa_share": f"{data['Share of total ODA'].values[-1]}",
     }
     update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
     logger.debug(f"Updated dynamic text ODA topic page oda_key_numbers.json")
+
 
 def aid_to_incomes_latest() -> None:
     df = (
@@ -290,3 +279,4 @@ if __name__ == "__main__":
     aid_to_health_ts()
     aid_to_food()
     aid_to_humanitarian_ts()
+    ...
