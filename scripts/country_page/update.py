@@ -165,7 +165,7 @@ def update_monthly() -> None:
     # Financial
     update_monthly_weo_data()
     update_monthly_wb_data()
-    update_monthly_debt_data()
+    # update_monthly_debt_data()
 
     # Health
     update_monthly_leading_causes_of_death()
