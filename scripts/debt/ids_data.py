@@ -159,8 +159,12 @@ def _clean_ids_china_service(df: pd.DataFrame) -> pd.DataFrame:
     china = df.loc[df["counterpart"] == "China"].copy()
     df = df.loc[df["counterpart"] != "China"]
 
-    df = df.groupby(["iso_code", "year", "indicator"], as_index=False).sum()
-    china = china.groupby(["iso_code", "year", "indicator"], as_index=False).sum()
+    df = df.groupby(["iso_code", "year", "indicator"], as_index=False).sum(
+        numeric_only=True
+    )
+    china = china.groupby(["iso_code", "year", "indicator"], as_index=False).sum(
+        numeric_only=True
+    )
 
     indicators_other = {
         "Bilateral": "Bilateral (excl. China)",
@@ -197,8 +201,12 @@ def _clean_ids_china_stocks(df: pd.DataFrame) -> pd.DataFrame:
     china = df.loc[df["counterpart"] == "China"].copy()
     df = df.loc[df["counterpart"] != "China"]
 
-    df = df.groupby(["iso_code", "year", "indicator"], as_index=False).sum()
-    china = china.groupby(["iso_code", "year", "indicator"], as_index=False).sum()
+    df = df.groupby(["iso_code", "year", "indicator"], as_index=False).sum(
+        numeric_only=True
+    )
+    china = china.groupby(["iso_code", "year", "indicator"], as_index=False).sum(
+        numeric_only=True
+    )
 
     indicators_other = {
         "Bilateral": "Bilateral (excl. China)",

@@ -17,7 +17,7 @@ from scripts.logger import logger
 KEY_NUMBERS: dict = {}
 
 CURRENT_YEAR = datetime.datetime.now().year
-STOCKS_YEAR = CURRENT_YEAR - 1
+STOCKS_YEAR = CURRENT_YEAR - 2
 
 
 def debt_distress() -> None:
@@ -47,7 +47,7 @@ def debt_service_africa_trend() -> None:
         read_dservice_data()
         .filter(["year", "iso_code", "Total"], axis=1)
         .groupby(["year"], as_index=False)
-        .sum()
+        .sum(numeric_only=True)
         .assign(Total=lambda d: d.Total * 1e6)
     )
 
@@ -87,7 +87,11 @@ def debt_service_gov_spending() -> None:
     )
 
     # Regional view
-    africa = df.groupby(["year"], as_index=False).sum().assign(iso_code="Africa")
+    africa = (
+        df.groupby(["year"], as_index=False)
+        .sum(numeric_only=True)
+        .assign(iso_code="Africa")
+    )
 
     df = (
         pd.concat([africa, df], ignore_index=True)
@@ -125,7 +129,7 @@ def debt_to_gdp_trend() -> None:
             data_path=PATHS.bblocks_data,
         )
         .groupby(["year"], as_index=False)
-        .sum()
+        .sum(numeric_only=True)
         .assign(
             Total=lambda d: d.Total * 1e6, gdp_share=lambda d: round(d.Total / d.gdp, 5)
         )
@@ -155,7 +159,7 @@ def debt_stocks_africa_trend() -> None:
         read_dstocks_data()
         .filter(["year", "iso_code", "Total"], axis=1)
         .groupby(["year"], as_index=False)
-        .sum()
+        .sum(numeric_only=True)
         .assign(Total=lambda d: d.Total * 1e6)
     )
 
