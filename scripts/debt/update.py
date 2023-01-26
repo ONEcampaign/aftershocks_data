@@ -15,6 +15,10 @@ def update_weekly_data() -> None:
     _ = get_dsa(update=True, local_path=f"{PATHS.raw_data}/debt/dsa_list.pdf")
     logger.info("Updated DSA list data")
 
+    from bblocks.cleaning_tools.clean import convert_id
+
+    _ = _.assign(continent=lambda d: convert_id(d.country, to_type="continent"))
+
     # Update IDS data
     ids_data.update_ids_data()
 

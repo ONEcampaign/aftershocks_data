@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from bblocks.cleaning_tools.clean import format_number, convert_id
 from pydeflate import deflate
@@ -46,12 +47,30 @@ DAC = [
 
 # How to group sectors into more aggregated categories
 SECTORS_MAPPING: dict = {
+    "Action Relating to Debt": ["Action Relating to Debt"],
     "Other Sectors": [
-        "Action Relating to Debt",
-        "General Budget Support",
         "Other Commodity Assistance",
+        np.nan,
+        "Administrative Costs of Donors",
+        "Disaster Risk Reduction",
+        "Multi-Sector",
+        "Other multi-sector Aid",
+        "Rural Development",
+        "Urban Development",
+        "Government & Civil Society",
     ],
-    "Administrative Costs of Donors": ["Administrative Costs of Donors"],
+    "Government": [
+        "General Budget Support",
+        "Decentralization & Subnational government",
+        "Domestic resource mobilisation",
+        "Legal & Judicial Development",
+        "Legislature & Political Parties",
+        "Macroeconomic policy",
+        "Migration",
+        "Public finance management",
+        "Public procurement",
+        "Public sector policy & management",
+    ],
     "Agriculture & Forestry and Fishing": [
         "Agriculture",
         "Forestry & Fishing",
@@ -59,12 +78,13 @@ SECTORS_MAPPING: dict = {
     "Other Economic Infrastructure": [
         "Banking & Financial Services",
         "Business & Other Services",
+        "Transport & Storage",
         "Communications",
-        "Energy",
-        "Industry, Mining & Construction",
         "Industry, Mining, Construction",
         "Trade Policies & Regulations",
-        "Transport & Storage",
+    ],
+    "Conflict Peace & Security": [
+        "Conflict Peace and Security",
     ],
     "Education": [
         "Education, Level Unspecified",
@@ -87,11 +107,15 @@ SECTORS_MAPPING: dict = {
         "Site-Preservation",
         "Site- Preservation",
     ],
-    "Other Social Infrastructure": [
-        "Conflict, Peace & Security",
-        "Conflict Peace and Security",
-        "Government & Civil Society",
-        "Other Social Infrastructure & Services",
+    "Civil Society": [
+        "Anti-corruption organisations and institutions",
+        "Democratic participation and civil society",
+        "Media & Free Flow of Information",
+        "Ending violence against women and girls",
+        "Human Rights",
+        "Women's rights organisations, movements, and institutions",
+    ],
+    "Water Supply & Sanitation": [
         "Water Supply & Sanitation",
     ],
     "Developmental Food Aid/Food Security Assistance": [
@@ -102,14 +126,17 @@ SECTORS_MAPPING: dict = {
         "Emergency Response",
         "Reconstruction, Relief & Rehabilitation",
     ],
-    "Multisector": [
-        "Disaster Risk Reduction",
-        "Multi-Sector",
-        "Other multi-sector Aid",
-        "Rural Development",
-        "Urban Development",
+    "Energy": [
+        "Energy",
+        "Energy Distribution",
+        "Energy Generation, Non-renewable",
+        "Energy Generation, Renewable",
+        "Energy Policy",
+        "Hybrid Energy Plants",
+        "Nuclear Energy Plants",
     ],
     "Social Protection": [
+        "Other Social Infrastructure & Services",
         "Multi-Sector Aid for Basic Social Services",
         "Social Protection",
     ],
@@ -171,9 +198,11 @@ def read_gni() -> pd.DataFrame:
 
 
 def read_sectors() -> pd.DataFrame:
-    df = pd.read_csv(f"{PATHS.raw_oda}/sectors_view.csv", parse_dates=["year"]).loc[
-        lambda d: d.donor_code.isin(DAC)
-    ]
+    df = (
+        pd.read_csv(f"{PATHS.raw_oda}/sectors_view.csv", parse_dates=["year"])
+        .astype({"donor_code": "Int16"})
+        .loc[lambda d: d.donor_code.isin(DAC)]
+    )
 
     # df = df.loc[
     #    lambda d: (d.currency == "usd")
@@ -327,7 +356,7 @@ def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
         .assign(
             value=lambda d: deflate(
                 d,
-                base_year=CONSTANT_YEAR - 1,
+                base_year=CONSTANT_YEAR,
                 date_column="year",
                 source="oecd_dac",
                 id_column="donor_code",

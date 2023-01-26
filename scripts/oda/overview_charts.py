@@ -1,22 +1,17 @@
-import pandas as pd
 from bblocks.cleaning_tools.clean import format_number
-from bblocks.cleaning_tools.filter import filter_latest_by
 from oda_data import ODAData, set_data_path
 from oda_data.tools.groupings import donor_groupings
-from pydeflate import deflate
 
+from scripts.common import update_key_number, df_to_key_number
 from scripts.config import PATHS
 from scripts.logger import logger
 from scripts.oda import common
-
-from scripts.common import update_key_number, df_to_key_number
 
 set_data_path(PATHS.raw_oda)
 DacCountries = donor_groupings()["dac_countries"] | {20001: "DAC Countries, Total"}
 
 
 def global_aid_key_number() -> None:
-
     oda = ODAData(
         years=range(2020, 2024),
         donors=20001,
@@ -50,7 +45,7 @@ def global_aid_key_number() -> None:
 
     # Dynamic text version
     kn = {
-        "total_oda": f"{data['value'].item()/1e9:,.1f} billion",
+        "total_oda": f"{data['value'].item() / 1e9:,.1f} billion",
         "total_oda_change": f"{float(data['pct_change'].item()):.1f} %",
         "latest_year": f"{data['first_line'].item().split(' ')[-1]}",
     }
@@ -95,8 +90,8 @@ def aid_gni_key_number() -> None:
 
     # Dynamic text version
     kn = {
-        "oda_gni": f"{100*data.oda_gni.item():,.2f}%",
-        "oda_gni_distance": f"{data.distance.item()/1e3:,.0f} billion",
+        "oda_gni": f"{100 * data.oda_gni.item():,.2f}%",
+        "oda_gni_distance": f"{data.distance.item() / 1e3:,.0f} billion",
     }
 
     update_key_number(f"{PATHS.charts}/oda_topic/oda_key_numbers.json", kn)
@@ -104,7 +99,6 @@ def aid_gni_key_number() -> None:
 
 
 def aid_to_africa_ts() -> None:
-
     oda = ODAData(
         years=range(common.START_YEAR, 2024),
         donors=20001,
@@ -152,7 +146,6 @@ def aid_to_africa_ts() -> None:
 
 
 def aid_to_incomes_latest() -> None:
-
     recipients = {
         10024: "Not classified by income",
         10045: "Low income",
