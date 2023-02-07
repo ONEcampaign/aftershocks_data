@@ -1,4 +1,5 @@
 from bblocks.cleaning_tools.clean import format_number
+from bblocks import set_bblocks_data_path
 from oda_data import ODAData, set_data_path
 from oda_data.tools.groupings import donor_groupings
 
@@ -8,6 +9,8 @@ from scripts.logger import logger
 from scripts.oda import common
 
 set_data_path(PATHS.raw_oda)
+set_bblocks_data_path(PATHS.bblocks_data)
+
 DacCountries = donor_groupings()["dac_countries"] | {20001: "DAC Countries, Total"}
 
 
@@ -21,7 +24,7 @@ def global_aid_key_number() -> None:
     )
 
     data = (
-        oda.load_indicator(indicator="total_oda_ge")
+        oda.load_indicator(indicators="total_oda_ge")
         .get_data()
         .pipe(common.add_change, as_formatted_str=True)
         .query("year == year.max()")
@@ -65,7 +68,7 @@ def aid_gni_key_number() -> None:
     )
 
     data = (
-        oda.load_indicator(indicator=["total_oda_ge", "gni"])
+        oda.load_indicator(indicators=["total_oda_ge", "gni"])
         .get_data()
         .query("year == year.max()")
         .assign(value=lambda d: d.value * 1e6, name=lambda d: d.donor_name)
@@ -109,7 +112,7 @@ def aid_to_africa_ts() -> None:
     )
 
     data = (
-        oda.load_indicator(indicator=["recipient_total_flow_net"])
+        oda.load_indicator(indicators=["recipient_total_flow_net"])
         .add_share_of_total(True)
         .get_data()
         .pivot(index=["year", "donor_name"], columns="recipient_name", values="value")

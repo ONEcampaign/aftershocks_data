@@ -1,8 +1,7 @@
 import pandas as pd
 import requests
-from bblocks.import_tools.imf import WorldEconomicOutlook
-from bblocks.import_tools.wfp import WFPData
-from bblocks.import_tools.world_bank import WorldBankData
+from bblocks import set_bblocks_data_path, WorldEconomicOutlook, WFPData, WorldBankData
+
 
 from scripts.common import CAUSES_OF_DEATH_YEAR
 from scripts.config import PATHS
@@ -16,6 +15,8 @@ from scripts.country_page.debt import debt_chart_country, debt_chart_region
 from scripts.country_page.overview_text import build_summary
 from scripts.explorers.common import base_africa_map
 from scripts.logger import logger
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def update_monthly_leading_causes_of_death() -> None:
@@ -68,34 +69,34 @@ def update_monthly_malaria_data() -> None:
 
 def update_daily_wfp_data() -> None:
     # Create a wfp object
-    wfp = WFPData(data_path=PATHS.bblocks_data)
+    wfp = WFPData()
 
     # Load daily indicator
-    wfp.load_indicator("insufficient_food")
+    wfp.load_data("insufficient_food")
 
     # Update data
-    wfp.update()
+    wfp.update_data()
 
 
 def update_weekly_wfp_data() -> None:
     # Create a wfp object
-    wfp = WFPData(data_path=PATHS.bblocks_data)
+    wfp = WFPData()
 
     # Load weekly indicator
-    wfp.load_indicator("inflation")
+    wfp.load_data("inflation")
 
     # Update data
-    wfp.update()
+    wfp.update_data()
 
 
 def update_monthly_weo_data() -> None:
     """Update the WEO data. Monthly schedule though it updates twice a year"""
 
     # create object
-    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
+    weo = WorldEconomicOutlook()
 
     # update data
-    weo.update()
+    weo.update_data()
 
 
 def update_monthly_wb_data() -> None:
@@ -103,25 +104,21 @@ def update_monthly_wb_data() -> None:
     import time
 
     # create object
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
+    wb = WorldBankData()
 
     # Load indicators
-    for _ in financial_security.WB_INDICATORS:
-        wb.load_indicator(_)
-
-    # update full timeseries data
-    wb.update()
+    wb.load_data(list(financial_security.WB_INDICATORS))
+    wb.update_data()
 
     time.sleep(180)
 
     # create new object
-    wb_recent = WorldBankData(data_path=PATHS.bblocks_data)
+    wb_recent = WorldBankData()
 
     # Load only most recent data
-    for _ in financial_security.WB_INDICATORS:
-        wb_recent.load_indicator(_, most_recent_only=True)
+    wb_recent.load_data(list(financial_security.WB_INDICATORS), most_recent_only=True)
 
-    wb_recent.update()
+    wb_recent.update_data()
 
 
 def update_daily() -> None:

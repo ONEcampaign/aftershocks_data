@@ -1,15 +1,18 @@
 import pandas as pd
+from bblocks import set_bblocks_data_path
 from bblocks.cleaning_tools.clean import format_number
 from bblocks.dataframe_tools.add import (
-    add_short_names_column,
-    add_iso_codes_column,
     add_gov_exp_share_column,
     add_gov_expenditure_column,
+    add_iso_codes_column,
+    add_short_names_column,
 )
 
-from scripts.common import update_key_number, df_to_key_number
+from scripts.common import df_to_key_number, update_key_number
 from scripts.config import PATHS
 from scripts.logger import logger
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def _read_debt_data() -> pd.DataFrame:
@@ -47,7 +50,6 @@ def debt_chart_country() -> None:
             target_column="note",
             usd=True,
             include_estimates=True,
-            data_path=PATHS.bblocks_data,
         )
         .drop(columns=["value_units", "iso_code"])
         .assign(
@@ -91,8 +93,7 @@ def debt_chart_region() -> None:
             id_type="ISO3",
             target_column="gov_exp",
             usd=True,
-            include_estimates=True,
-            data_path=PATHS.bblocks_data,
+            include_estimates=True
         )
         .dropna(subset=["value"])
         .groupby(["As of"], as_index=False)[["value", "value_units", "gov_exp"]]

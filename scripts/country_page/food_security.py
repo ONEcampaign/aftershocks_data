@@ -1,19 +1,22 @@
 from functools import reduce
 
 import pandas as pd
+from bblocks import set_bblocks_data_path
 from bblocks.analysis_tools.get import change_from_date
 from bblocks.cleaning_tools.clean import date_to_str
 from bblocks.cleaning_tools.filter import filter_african_countries
 from bblocks.dataframe_tools.add import (
+    add_iso_codes_column,
     add_population_column,
     add_short_names_column,
-    add_iso_codes_column,
 )
 from dateutil.relativedelta import relativedelta
 
 from scripts import common
 from scripts.config import PATHS
 from scripts.country_page.financial_security import _read_wfp, _wfp_inflation
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 # ------------------------------------------------------------------------------

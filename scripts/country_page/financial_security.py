@@ -1,14 +1,14 @@
 import pandas as pd
 from bblocks.cleaning_tools.filter import filter_african_countries
 from bblocks.dataframe_tools.add import add_short_names_column, add_iso_codes_column
-from bblocks.import_tools.imf import WorldEconomicOutlook
-from bblocks.import_tools.wfp import WFPData
-from bblocks.import_tools.world_bank import WorldBankData
+from bblocks import set_bblocks_data_path, WorldEconomicOutlook, WFPData, WorldBankData
 
 from scripts import common
 from scripts.common import WEO_YEAR
 from scripts.config import PATHS
 from scripts.logger import logger
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 # ------------------------------------------------------------------------------
@@ -18,10 +18,10 @@ from scripts.logger import logger
 
 def _read_wfp() -> WFPData:
     """Read all available WFP indicators"""
-    wfp = WFPData(data_path=PATHS.bblocks_data)
+    wfp = WFPData()
 
     for indicator in wfp.available_indicators:
-        wfp.load_indicator(indicator)
+        wfp.load_data(indicator)
 
     return wfp
 
@@ -193,10 +193,9 @@ def __weo_center(df: pd.DataFrame) -> pd.DataFrame:
 
 def _read_weo() -> pd.DataFrame:
     """Read the WEO data and return a dataframe with the last 10 years of data"""
-    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
+    weo = WorldEconomicOutlook()
 
-    for c, n in WEO_INDICATORS.items():
-        weo.load_indicator(indicator_code=c, indicator_name=n)
+    weo.load_data(indicator=list(WEO_INDICATORS))
 
     return (
         weo.get_data(indicators="all", keep_metadata=True)
@@ -328,13 +327,11 @@ WB_INDICATORS = {
 
 
 def _read_wb_ts() -> dict:
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
-
-    for code, name in WB_INDICATORS.items():
-        wb.load_indicator(code, indicator_name=name)
+    wb = WorldBankData()
+    wb.load_data(list(WB_INDICATORS))
 
     dfs = {}
-    for indicator in wb.indicators:
+    for indicator in WB_INDICATORS:
         dfs[indicator] = (
             wb.get_data(indicator)
             .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
@@ -357,10 +354,8 @@ def poverty_chart() -> None:
 
     source = "World Bank Open Data: SI.POV.DDAY"
 
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
-
-    for _ in WB_INDICATORS:
-        wb.load_indicator(_)
+    wb = WorldBankData()
+    wb.load_data(list(WB_INDICATORS))
 
     cols = ["date", "iso_code", "value"]
 

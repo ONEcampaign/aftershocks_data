@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
-from bblocks.cleaning_tools.clean import format_number, convert_id
-from bblocks.cleaning_tools.filter import filter_latest_by, filter_african_countries
+from bblocks import set_bblocks_data_path
+from bblocks.cleaning_tools.clean import convert_id, format_number
+from bblocks.cleaning_tools.filter import filter_african_countries, filter_latest_by
 from bblocks.dataframe_tools.add import add_short_names_column
 from bblocks.import_tools.world_bank import WorldBankData
 
@@ -11,6 +12,8 @@ from scripts.config import PATHS
 from scripts.country_page.food_security import _group_monthly_change
 from scripts.country_page.health_update import read_dpt_data
 from scripts.owid_covid import tools as ot
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 CAUSES_YEAR_COMPARISON = 2000
 
@@ -223,8 +226,8 @@ def leading_causes_of_death_column_chart() -> None:
 
 
 def _get_life_expectancy() -> pd.DataFrame:
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
-    wb.load_indicator("SP.DYN.LE00.IN")
+    wb = WorldBankData()
+    wb.load_data("SP.DYN.LE00.IN")
 
     return (
         wb.get_data()
@@ -339,8 +342,8 @@ def _read_malaria_data() -> pd.DataFrame:
 
 
 def malaria_chart() -> None:
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
-    wb.load_indicator("SP.POP.TOTL")
+    wb = WorldBankData()
+    wb.load_data("SP.POP.TOTL")
     population = (
         wb.get_data().drop("indicator", axis=1).rename(columns={"value": "population"})
     )
