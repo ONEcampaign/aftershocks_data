@@ -45,12 +45,11 @@ def update_daily_hunger_data() -> None:
 def update_monthly_hunger_data() -> None:
     """Update monthly data for hunger topic"""
 
-    # world bank
-    wb = WorldBankData()
     for code in wb_indicators:
-        wb.load_data(code).update_data(reload_data=False)
+        WorldBankData().load_data(code).update_data(reload_data=False)
+        _ = WorldBankData()
         (
-            wb.load_data(code)
+            _.load_data(code)
             .get_data(code)
             .to_csv(f"{PATHS.raw_data}/hunger/{code}.csv", index=False)
         )

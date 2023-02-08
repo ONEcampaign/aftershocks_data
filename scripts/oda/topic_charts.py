@@ -1,13 +1,11 @@
 import pandas as pd
-from bblocks.cleaning_tools.clean import format_number
-from oda_data import set_data_path, ODAData
+from bblocks import format_number
+from oda_data import ODAData, set_data_path
 from oda_data.tools.groupings import donor_groupings
-from pydeflate import deflate
 
 from scripts.config import PATHS
 from scripts.logger import logger
 from scripts.oda import common
-
 
 set_data_path(PATHS.raw_oda)
 DacMembers = donor_groupings()["dac_members"] | {20001: "DAC Countries, Total"}
@@ -69,8 +67,6 @@ def oda_gni_single_year() -> None:
     oda = ODAData(
         years=range(2000, 2024),
         donors=list(DacMembers),
-        # prices="constant",
-        # base_year=common.CONSTANT_YEAR,
         include_names=True,
     )
 
