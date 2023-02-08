@@ -21,6 +21,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run monthly update
+        env:
+          IPC_API: ${{ secrets.IPC_API }}
         run:  |
           python update_monthly.py
       - name: Save changes
