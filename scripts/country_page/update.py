@@ -1,7 +1,8 @@
+import time
+
 import pandas as pd
 import requests
-from bblocks import set_bblocks_data_path, WorldEconomicOutlook, WFPData, WorldBankData
-
+from bblocks import WFPData, WorldBankData, WorldEconomicOutlook, set_bblocks_data_path
 
 from scripts.common import CAUSES_OF_DEATH_YEAR
 from scripts.config import PATHS
@@ -20,6 +21,11 @@ set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def update_monthly_leading_causes_of_death() -> None:
+    def __download_country(country_code: str) -> None:
+        d = requests.get(hu.get_ghe_url(country_code, request_year)).json()["value"]
+        dfs.append(hu.unpack_ghe_country(country_code, d, request_year))
+        time.sleep(5)
+
     # Define year for data update
     request_year = CAUSES_OF_DEATH_YEAR
 
@@ -27,8 +33,11 @@ def update_monthly_leading_causes_of_death() -> None:
     africa = base_africa_map().iso_code.to_list()
 
     for country in africa:
-        d = requests.get(hu.get_ghe_url(country, request_year)).json()["value"]
-        dfs.append(hu.unpack_ghe_country(country, d, request_year))
+        try:
+            __download_country(country_code=country)
+        except requests.exceptions.JSONDecodeError:
+            logger.info(f"Error downloading data for {country}")
+            continue
 
     df = pd.concat(dfs, ignore_index=True)
 
