@@ -2,21 +2,26 @@ import datetime
 
 import country_converter as coco
 import pandas as pd
-from bblocks.cleaning_tools.clean import clean_numeric_series
+from bblocks import (
+    WFPData,
+    WorldBankData,
+    WorldEconomicOutlook,
+    add_iso_codes_column,
+    clean_numeric_series,
+    set_bblocks_data_path,
+)
 from bblocks.dataframe_tools.add import (
-    add_population_share_column,
     add_flourish_geometries,
     add_population_column,
-    add_iso_codes_column,
+    add_population_share_column,
 )
-from bblocks.import_tools.imf import WorldEconomicOutlook
-from bblocks.import_tools.wfp import WFPData
-from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.config import PATHS
-from scripts.owid_covid import tools as owid_tools
-from scripts.schemas import MapDataSchema, BubbleDataSchema
 from scripts.explorers.common import base_africa_map
+from scripts.owid_covid import tools as owid_tools
+from scripts.schemas import BubbleDataSchema, MapDataSchema
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def _core_data() -> pd.DataFrame:
@@ -88,11 +93,10 @@ def weo_indicators() -> pd.DataFrame:
     }
 
     # Create a WEO object to import the data
-    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
+    weo = WorldEconomicOutlook()
 
     # Load the data for the relevant indicators
-    for indicator in indicators:
-        weo.load_indicator(indicator_code=indicator)
+    weo.load_data(list(indicators))
 
     # Return a dataframe which filters for the most recent year,
     # maps the right indicator names, and fixes the formatting and structure
@@ -144,10 +148,9 @@ def wb_indicators() -> pd.DataFrame:
         "HD.HCI.OVRL": "Human Capital Index",
     }
 
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
+    wb = WorldBankData()
 
-    for indicator in indicators:
-        wb.load_indicator(indicator_code=indicator, most_recent_only=True)
+    wb.load_data(list(indicators), most_recent_only=True)
 
     return (
         wb.get_data()
@@ -161,10 +164,8 @@ def wb_indicators() -> pd.DataFrame:
 
 
 def latest_inflation_data() -> pd.DataFrame:
-    wfp = WFPData(data_path=PATHS.bblocks_data)
-
-    for indicator in wfp.available_indicators:
-        wfp.load_indicator(indicator)
+    wfp = WFPData()
+    wfp.load_data(list(wfp.available_indicators))
 
     return (
         wfp.get_data("inflation")
@@ -180,10 +181,9 @@ def latest_inflation_data() -> pd.DataFrame:
 
 
 def latest_food_data() -> pd.DataFrame:
-    wfp = WFPData(data_path=PATHS.bblocks_data)
+    wfp = WFPData()
 
-    for indicator in wfp.available_indicators:
-        wfp.load_indicator(indicator)
+    wfp.load_data(list(wfp.available_indicators))
 
     food = wfp.get_data("insufficient_food")
 
@@ -198,7 +198,6 @@ def latest_food_data() -> pd.DataFrame:
             id_column="iso_code",
             id_type="ISO3",
             target_column="Population with Insufficient Food (%)",
-            data_path=PATHS.bblocks_data,
         )
         .rename(columns={"iso_code": MapDataSchema.ISO_CODE})
         .drop(["value", "date"], axis=1)
