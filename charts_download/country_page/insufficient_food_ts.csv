@@ -90,9 +90,9 @@ date,value,iso_code,name_short,source
 2023-02-03,23.69,Africa (median),,WFP HungerMapLive
 2023-02-04,23.595,Africa (median),,WFP HungerMapLive
 2023-02-05,23.915,Africa (median),,WFP HungerMapLive
-2023-02-06,25.66,Africa (median),,WFP HungerMapLive
-2023-02-07,25.42,Africa (median),,WFP HungerMapLive
-2023-02-08,26.04,Africa (median),,WFP HungerMapLive
+2023-02-06,24.175,Africa (median),,WFP HungerMapLive
+2023-02-07,23.975,Africa (median),,WFP HungerMapLive
+2023-02-08,24.595,Africa (median),,WFP HungerMapLive
 2022-11-07,26.27,,Africa (median),WFP HungerMapLive
 2022-11-08,26.29,,Africa (median),WFP HungerMapLive
 2022-11-09,26.18,,Africa (median),WFP HungerMapLive
@@ -184,9 +184,9 @@ date,value,iso_code,name_short,source
 2023-02-03,23.69,,Africa (median),WFP HungerMapLive
 2023-02-04,23.595,,Africa (median),WFP HungerMapLive
 2023-02-05,23.915,,Africa (median),WFP HungerMapLive
-2023-02-06,25.66,,Africa (median),WFP HungerMapLive
-2023-02-07,25.42,,Africa (median),WFP HungerMapLive
-2023-02-08,26.04,,Africa (median),WFP HungerMapLive
+2023-02-06,24.175,,Africa (median),WFP HungerMapLive
+2023-02-07,23.975,,Africa (median),WFP HungerMapLive
+2023-02-08,24.595,,Africa (median),WFP HungerMapLive
 2022-11-07,9.7,,Angola,WFP HungerMapLive
 2022-11-08,9.93,,Angola,WFP HungerMapLive
 2022-11-09,9.65,,Angola,WFP HungerMapLive
@@ -4501,6 +4501,9 @@ date,value,iso_code,name_short,source
 2023-02-03,9.12,,Zambia,WFP HungerMapLive
 2023-02-04,9.21,,Zambia,WFP HungerMapLive
 2023-02-05,9.59,,Zambia,WFP HungerMapLive
+2023-02-06,9.9,,Zambia,WFP HungerMapLive
+2023-02-07,10.23,,Zambia,WFP HungerMapLive
+2023-02-08,10.39,,Zambia,WFP HungerMapLive
 2022-11-07,34.39,,Zimbabwe,WFP HungerMapLive
 2022-11-08,35.4,,Zimbabwe,WFP HungerMapLive
 2022-11-09,34.57,,Zimbabwe,WFP HungerMapLive
