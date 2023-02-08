@@ -2,12 +2,13 @@ import time
 
 import pandas as pd
 import requests
+from bblocks import WorldBankData, add_iso_codes_column, set_bblocks_data_path
 from pyjstat import pyjstat
-from bblocks.dataframe_tools.add import add_iso_codes_column
-from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.config import PATHS
 from scripts.logger import logger
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 DEBT_SERVICE = {
     "DT.AMT.BLAT.CD": "Bilateral",
@@ -37,11 +38,10 @@ WORLD_BANK_INDICATORS = {
 
 
 def update_debt_world_bank() -> None:
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
-    for indicator in WORLD_BANK_INDICATORS:
-        wb.load_indicator(indicator)
+    wb = WorldBankData()
+    wb.load_data(indicator=list(WORLD_BANK_INDICATORS))
 
-    wb.update()
+    wb.update_data(reload_data=False)
 
 
 def _time_period(start_year: int, end_year: int) -> str:
@@ -164,8 +164,8 @@ def education_expenditure_share() -> pd.DataFrame:
     indicator = "SE.XPD.TOTL.GB.ZS"
 
     return (
-        WorldBankData(data_path=PATHS.bblocks_data)
-        .load_indicator(indicator)
+        WorldBankData()
+        .load_data(indicator)
         .get_data()
         .dropna(subset="value")
         .assign(year=lambda d: d.date.dt.year)
@@ -177,8 +177,8 @@ def health_expenditure_share() -> pd.DataFrame:
     indicator = "SH.XPD.GHED.GE.ZS"
 
     return (
-        WorldBankData(data_path=PATHS.bblocks_data)
-        .load_indicator(indicator)
+        WorldBankData()
+        .load_data(indicator)
         .get_data()
         .dropna(subset="value")
         .assign(year=lambda d: d.date.dt.year)

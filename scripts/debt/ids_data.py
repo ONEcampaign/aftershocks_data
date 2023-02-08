@@ -1,5 +1,5 @@
 import pandas as pd
-from bblocks.dataframe_tools.add import add_short_names_column
+from bblocks import add_short_names_column
 
 from scripts import common
 from scripts.config import PATHS

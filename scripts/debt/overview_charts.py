@@ -1,11 +1,15 @@
 import datetime
 
 import pandas as pd
-from bblocks.cleaning_tools.clean import convert_id, format_number
+from bblocks import (
+    add_short_names_column,
+    convert_id,
+    format_number,
+    set_bblocks_data_path,
+)
 from bblocks.dataframe_tools.add import (
     add_gdp_column,
     add_gov_expenditure_column,
-    add_short_names_column,
 )
 from bblocks.import_tools.debt.common import get_dsa
 
@@ -13,6 +17,8 @@ from scripts.common import update_key_number
 from scripts.config import PATHS
 from scripts.debt.common import read_dservice_data, read_dstocks_data
 from scripts.logger import logger
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 KEY_NUMBERS: dict = {}
 
@@ -80,7 +86,6 @@ def debt_service_gov_spending() -> None:
             date_column="year",
             usd=True,
             include_estimates=True,
-            data_path=PATHS.bblocks_data,
         )
         .dropna(subset=["Total", "gov_exp"], how="any")
         .assign(Total=lambda d: d.Total * 1e6)
@@ -126,7 +131,6 @@ def debt_to_gdp_trend() -> None:
             date_column="year",
             usd=True,
             include_estimates=True,
-            data_path=PATHS.bblocks_data,
         )
         .groupby(["year"], as_index=False)
         .sum(numeric_only=True)

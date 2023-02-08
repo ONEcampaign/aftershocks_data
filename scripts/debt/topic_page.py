@@ -1,20 +1,18 @@
 import pandas as pd
-from bblocks.cleaning_tools.clean import convert_id
-from bblocks.dataframe_tools.add import (
-    add_gdp_column,
-    add_short_names_column,
-    add_gov_expenditure_column,
-)
+from bblocks import add_short_names_column, convert_id, set_bblocks_data_path
+from bblocks.dataframe_tools.add import add_gdp_column, add_gov_expenditure_column
 
 from scripts.config import PATHS
 from scripts.debt import common
 from scripts.debt.common import (
-    read_dstocks_data,
-    read_dservice_data,
     education_expenditure_share,
     health_expenditure_share,
+    read_dservice_data,
+    read_dstocks_data,
 )
 from scripts.debt.overview_charts import CURRENT_YEAR
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 SOURCE = "International Debt Statistics (IDS) Database"
 DATE = " (December 2022)"
@@ -34,7 +32,11 @@ def debt_stocks_columns() -> None:
         )
     )
 
-    africa = df.groupby(["year"], as_index=False).sum().assign(iso_code="Africa")
+    africa = (
+        df.groupby(["year"], as_index=False)
+        .sum(numeric_only=True)
+        .assign(iso_code="Africa")
+    )
 
     df = pd.concat([africa, df], ignore_index=True).filter(
         [
@@ -73,7 +75,11 @@ def debt_service_columns() -> None:
         )
     )
 
-    africa = df.groupby(["year"], as_index=False).sum().assign(iso_code="Africa")
+    africa = (
+        df.groupby(["year"], as_index=False)
+        .sum(numeric_only=True)
+        .assign(iso_code="Africa")
+    )
 
     df = (
         pd.concat([africa, df], ignore_index=True)
@@ -111,12 +117,15 @@ def debt_to_gdp_ts() -> None:
             date_column="year",
             usd=True,
             include_estimates=True,
-            data_path=PATHS.bblocks_data,
         )
         .assign(Total=lambda d: d.Total * 1e6)
     )
 
-    africa = df.groupby(["year"], as_index=False).sum().assign(iso_code="Africa")
+    africa = (
+        df.groupby(["year"], as_index=False)
+        .sum(numeric_only=True)
+        .assign(iso_code="Africa")
+    )
 
     df = (
         pd.concat([africa, df], ignore_index=True)
@@ -163,7 +172,7 @@ def debt_composition_chart() -> None:
         .loc[lambda d: d.time == 2021]
         .dropna(subset=["stocks_type"])
         .groupby(["time", "Country", "Creditors", "stocks_type"], as_index=False)
-        .sum()
+        .sum(numeric_only=True)
         .filter(["Country", "Creditors", "stocks_type", "value"], axis=1)
         .rename(
             columns={
@@ -188,7 +197,7 @@ def debt_to_china_chart() -> None:
         read_debt_chart_data()
         .dropna(subset=["stocks_type"])
         .groupby(["time", "Country", "Creditors", "stocks_type"], as_index=False)
-        .sum()
+        .sum(numeric_only=True)
         .filter(["time", "Country", "Creditors", "stocks_type", "value"], axis=1)
         .loc[lambda d: d.Creditors == "China"]
         .rename(
@@ -203,7 +212,11 @@ def debt_to_china_chart() -> None:
         .reset_index()
     )
 
-    africa = df.groupby(["Year"], as_index=False).sum().assign(Country="Africa")
+    africa = (
+        df.groupby(["Year"], as_index=False)
+        .sum(numeric_only=True)
+        .assign(Country="Africa")
+    )
 
     df = pd.concat([africa, df], ignore_index=True).loc[
         lambda d: d[["Bilateral", "Private"]].sum(axis=1) > 0
@@ -235,7 +248,6 @@ def debt_service_comparison_chart() -> None:
             date_column="year",
             usd=True,
             include_estimates=True,
-            data_path=PATHS.bblocks_data,
         )
         .dropna(subset=["Total", "gov_exp"], how="any")
         .assign(Total=lambda d: d.Total * 1e6)
@@ -249,7 +261,7 @@ def debt_service_comparison_chart() -> None:
 
     africa = (
         df.groupby(["year"], as_index=False)
-        .median()
+        .median(numeric_only=True)
         .assign(name_short="Africa (median)")
     )
 

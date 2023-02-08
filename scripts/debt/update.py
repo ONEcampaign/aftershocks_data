@@ -1,12 +1,17 @@
+from bblocks import set_bblocks_data_path, convert_id
 from bblocks.import_tools.debt.common import get_dsa
-from scripts.debt.common import update_debt_world_bank
-
-from scripts.debt import overview_charts as debt_overview
-from scripts.debt import ids_data, topic_page, dashboard
-
 
 from scripts.config import PATHS
+from scripts.debt import (
+    dashboard,
+    ids_data,
+    overview_charts as debt_overview,
+    topic_page,
+)
+from scripts.debt.common import update_debt_world_bank
 from scripts.logger import logger
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def update_weekly_data() -> None:
@@ -14,8 +19,6 @@ def update_weekly_data() -> None:
     # Update DSA list
     _ = get_dsa(update=True, local_path=f"{PATHS.raw_data}/debt/dsa_list.pdf")
     logger.info("Updated DSA list data")
-
-    from bblocks.cleaning_tools.clean import convert_id
 
     _ = _.assign(continent=lambda d: convert_id(d.country, to_type="continent"))
 
