@@ -1,28 +1,27 @@
 import pandas as pd
-from bblocks.import_tools.world_bank import WorldBankData
+from bblocks import WorldBankData, set_bblocks_data_path
 
 from scripts.config import PATHS
 from scripts.explorers.common import (
     ExplorerSchema,
-    indicators_metadata,
-    basic_info,
     HEALTH_WB_INDICATORS,
     OWID_INDICATORS,
+    basic_info,
+    indicators_metadata,
+)
+from scripts.owid_covid.tools import (
+    filter_countries_only,
+    get_indicators_ts,
+    read_owid_data,
 )
 
-from scripts.owid_covid.tools import (
-    read_owid_data,
-    get_indicators_ts,
-    filter_countries_only,
-)
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def _base_wb_health() -> pd.DataFrame:
 
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
-
-    for indicator in HEALTH_WB_INDICATORS:
-        wb.load_indicator(indicator, most_recent_only=True)
+    wb = WorldBankData()
+    wb.load_data(indicator=list(HEALTH_WB_INDICATORS), most_recent_only=True)
 
     return (
         wb.get_data()

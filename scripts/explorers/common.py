@@ -1,24 +1,26 @@
 import country_converter
 import pandas as pd
 import requests
-from bblocks.cleaning_tools.clean import convert_id, clean_numeric_series
-from bblocks.dataframe_tools import add
-from bblocks.dataframe_tools.add import (
-    add_flourish_geometries,
+from bblocks import (
+    WorldBankData,
+    WorldEconomicOutlook,
     add_short_names_column,
+    clean_numeric_series,
+    convert_id,
+    set_bblocks_data_path,
 )
-from bblocks.dataframe_tools.common import get_poverty_ratio_df, get_population_df
-from bblocks.import_tools.imf import WorldEconomicOutlook
-from bblocks.import_tools.world_bank import WorldBankData
+from bblocks.dataframe_tools import add
+from bblocks.dataframe_tools.add import add_flourish_geometries
+from bblocks.dataframe_tools.common import get_population_df, get_poverty_ratio_df
 
 from scripts.config import PATHS
-
-
 from scripts.owid_covid.tools import (
-    read_owid_data,
-    get_indicators_ts,
     filter_countries_only,
+    get_indicators_ts,
+    read_owid_data,
 )
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 # Data structure
@@ -153,18 +155,8 @@ def basic_info() -> pd.DataFrame:
     return (
         _base_df()
         .pipe(add.add_income_level_column, id_column="ISO3", id_type="ISO3")
-        .pipe(
-            add.add_population_column,
-            id_column="ISO3",
-            id_type="ISO3",
-            data_path=PATHS.bblocks_data,
-        )
-        .pipe(
-            add.add_poverty_ratio_column,
-            id_column="ISO3",
-            id_type="ISO3",
-            data_path=PATHS.bblocks_data,
-        )
+        .pipe(add.add_population_column, id_column="ISO3", id_type="ISO3")
+        .pipe(add.add_poverty_ratio_column, id_column="ISO3", id_type="ISO3")
         .assign(ldc=lambda d: d.ISO3.apply(lambda x: "LDC" if x in LDC else "Non-LDC"))
         .dropna(thresh=6)
         .fillna({"income_level": "Not classified"})
@@ -220,10 +212,8 @@ def add_hdi_column(df: pd.DataFrame, iso_column="iso_code") -> pd.DataFrame:
 
 
 def _weo_meta() -> pd.DataFrame:
-    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
-
-    for indicator in ECONOMICS_WEO_INDICATORS:
-        weo.load_indicator(indicator)
+    weo = WorldEconomicOutlook()
+    weo.load_data(indicator=list(ECONOMICS_WEO_INDICATORS))
 
     return (
         weo.get_data(keep_metadata=True)
@@ -241,22 +231,14 @@ def _weo_meta() -> pd.DataFrame:
 def _wb_econ_meta() -> pd.DataFrame:
     # population
     population = (
-        get_population_df(
-            most_recent_only=True,
-            update_population_data=False,
-            data_path=PATHS.bblocks_data,
-        )
+        get_population_df(most_recent_only=True, update=False)
         .filter(["iso_code", "year"])
         .assign(indicator=ExplorerSchema.POP, source="World Bank Open Data")
     )
 
     # poverty
     poverty = (
-        get_poverty_ratio_df(
-            most_recent_only=True,
-            update_poverty_data=False,
-            data_path=PATHS.bblocks_data,
-        )
+        get_poverty_ratio_df(most_recent_only=True, update=False)
         .filter(["iso_code", "year", "poverty_ratio"])
         .assign(indicator=ExplorerSchema.POVERTY, source="World Bank Open Data")
     )
@@ -267,10 +249,9 @@ def _wb_econ_meta() -> pd.DataFrame:
 
 
 def _wb_health_meta() -> pd.DataFrame:
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
+    wb = WorldBankData()
 
-    for indicator in HEALTH_WB_INDICATORS:
-        wb.load_indicator(indicator, most_recent_only=True)
+    wb.load_data(indicator=list(HEALTH_WB_INDICATORS), most_recent_only=True)
 
     return (
         wb.get_data()

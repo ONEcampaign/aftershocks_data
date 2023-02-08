@@ -1,22 +1,22 @@
 import pandas as pd
-from bblocks.import_tools.imf import WorldEconomicOutlook
+from bblocks import WorldEconomicOutlook, set_bblocks_data_path
 
 from scripts.config import PATHS
 from scripts.explorers.common import (
+    ECONOMICS_WEO_INDICATORS,
     ExplorerSchema,
     WEO_YEAR,
     add_hdi_column,
     basic_info,
-    ECONOMICS_WEO_INDICATORS,
     indicators_metadata,
 )
 
+set_bblocks_data_path(PATHS.bblocks_data)
+
 
 def _base_weo_economics() -> pd.DataFrame:
-    weo = WorldEconomicOutlook(data_path=PATHS.bblocks_data)
-
-    for indicator in ECONOMICS_WEO_INDICATORS:
-        weo.load_indicator(indicator)
+    weo = WorldEconomicOutlook()
+    weo.load_data(list(ECONOMICS_WEO_INDICATORS))
 
     return (
         weo.get_data(keep_metadata=False)
