@@ -1,11 +1,17 @@
-import pandas as pd
-
-from scripts.drm import common
-from bblocks.import_tools.imf import WorldEconomicOutlook
 from datetime import datetime
-from bblocks.cleaning_tools.clean import convert_id, format_number
-from scripts.config import PATHS
 
+import pandas as pd
+from bblocks import (
+    WorldEconomicOutlook,
+    convert_id,
+    format_number,
+    set_bblocks_data_path,
+)
+
+from scripts.config import PATHS
+from scripts.drm import common
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 WEO = WorldEconomicOutlook()
 
@@ -58,7 +64,7 @@ def _latest_unu_ssa_with_yoy_change(
         .query("region == 'Africa' and iso_code not in @common.north_africa")
         .sort_values(["iso_code", "year"])
         .groupby(df_grouper, as_index=False)
-        .sum()
+        .sum(numeric_only=True)
         .assign(
             yoy_change=lambda d: d.groupby(change_grouper)["value"].pct_change(),
             region="Sub-Saharan Africa",
@@ -67,7 +73,7 @@ def _latest_unu_ssa_with_yoy_change(
     )
 
 
-def revenue_key_number(summary:bool=True) -> None:
+def revenue_key_number(summary: bool = True) -> None:
 
     df = common.gov_revenue(WEO)
     df = (

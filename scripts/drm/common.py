@@ -1,8 +1,10 @@
-from bblocks.import_tools.imf import WorldEconomicOutlook
-from bblocks.dataframe_tools.add import add_gdp_column
 import pandas as pd
+from bblocks import WorldEconomicOutlook, set_bblocks_data_path
+from bblocks.dataframe_tools.add import add_gdp_column
 
 from scripts.config import PATHS
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 UNU_NAME = "UNUWIDERGRD_2022_0.xlsx"
 
@@ -13,7 +15,7 @@ def gov_revenue(weo: WorldEconomicOutlook) -> pd.DataFrame:
     rev: str = "GGR_NGDP"
 
     return (
-        weo.load_indicator(rev)
+        weo.load_data(rev)
         .get_data(keep_metadata=True)
         .filter(["iso_code", "indicator_name", "year", "value", "estimate"])
         .pipe(
