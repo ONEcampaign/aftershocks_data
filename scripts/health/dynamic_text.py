@@ -1,11 +1,15 @@
 """ """
-import pandas as pd
 import json
-from scripts.config import PATHS
-from scripts.owid_covid import tools as owid_tools
-from bblocks.import_tools.world_bank import WorldBankData
+
 import country_converter as coco
+import pandas as pd
+from bblocks import WorldBankData, set_bblocks_data_path
+
+from scripts.config import PATHS
 from scripts.health.common import get_malaria_data
+from scripts.owid_covid import tools as owid_tools
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def _format_wb_df(df: pd.DataFrame, indicator_name: str):
@@ -27,9 +31,8 @@ def _format_wb_df(df: pd.DataFrame, indicator_name: str):
 
 
 def spending_dynamic() -> dict:
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
-    wb.load_indicator("SH.XPD.CHEX.PC.CD")
-    wb.load_indicator("SH.XPD.CHEX.GD.ZS")
+    wb = WorldBankData()
+    wb.load_data(["SH.XPD.CHEX.PC.CD", "SH.XPD.CHEX.GD.ZS"])
 
     # TODO: Explain the cut-offs
     pc = (
@@ -75,13 +78,20 @@ def vaccination_dynamic() -> dict:
         "vaccination_date": vaccination_date,
     }
 
+
 def malaria_dynamic() -> dict:
     """Create dynamic text for malaria"""
 
     malaria = get_malaria_data()
-    malaria['malaria_africa_total'] = f"{malaria['malaria_africa_total']/1000:.0f} thousand"
-    malaria['malaria_world_total'] = f"{malaria['malaria_world_total']/1000:.0f} thousand"
-    malaria['malaria_rest_of_world_total'] = f"{malaria['malaria_rest_of_world_total']/1000:.0f} thousand"
+    malaria[
+        "malaria_africa_total"
+    ] = f"{malaria['malaria_africa_total'] / 1000:.0f} thousand"
+    malaria[
+        "malaria_world_total"
+    ] = f"{malaria['malaria_world_total'] / 1000:.0f} thousand"
+    malaria[
+        "malaria_rest_of_world_total"
+    ] = f"{malaria['malaria_rest_of_world_total'] / 1000:.0f} thousand"
 
     return malaria
 

@@ -4,13 +4,14 @@ from zipfile import ZipFile
 import country_converter as coco
 import pandas as pd
 import requests
+from bblocks import WorldBankData, set_bblocks_data_path
 from bblocks.dataframe_tools import add
-from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts.config import PATHS
 from scripts.health.common import query_who
 from scripts.logger import logger
 
+set_bblocks_data_path(PATHS.bblocks_data)
 DTP_CODE = "WHS4_100"
 
 
@@ -250,8 +251,8 @@ def wb_spending_topic_chart() -> None:
 
     cc = coco.CountryConverter()
 
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
-    wb.load_indicator("SH.XPD.CHEX.PC.CD")
+    wb = WorldBankData()
+    wb.load_data("SH.XPD.CHEX.PC.CD")
 
     df = (
         wb.get_data()
@@ -259,18 +260,20 @@ def wb_spending_topic_chart() -> None:
         .sort_values("date")
         .groupby("iso_code", as_index=False)
         .last()
-        .loc[:, ["iso_code", "indicator", "value"]]
+        .filter(["iso_code", "indicator_code", "value"], axis=1)
         .round(2)
         .assign(
-            country_name=lambda d: coco.convert(
-                d.iso_code, to="name_short", not_found=None
+            country_name=lambda d: coco.CountryConverter().pandas_convert(
+                series=d.iso_code, src="ISO3", to="name_short", not_found=None
             )
         )
         .loc[lambda d: d.iso_code.isin(cc.data.ISO3), :]
         .assign(
-            continent=lambda d: coco.convert(d.iso_code, to="continent", not_found=None)
+            continent=lambda d: coco.CountryConverter().pandas_convert(
+                d.iso_code, to="continent", not_found=None
+            )
         )
-        .pipe(add.add_income_level_column, "iso_code")
+        .pipe(add.add_income_level_column, "iso_code", id_type="ISO3")
         .loc[
             lambda d: (d.continent == "Africa")
             & (d.income_level.isin(["Lower middle income", "Low income"])),

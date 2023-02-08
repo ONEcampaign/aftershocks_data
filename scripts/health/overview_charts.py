@@ -1,12 +1,13 @@
 import pandas as pd
-from bblocks.import_tools.world_bank import WorldBankData
+from bblocks import WorldBankData, set_bblocks_data_path
 
 from scripts.common import clean_wb_overview
 from scripts.config import PATHS
 from scripts.health.common import get_malaria_data
+from scripts.logger import logger
 from scripts.owid_covid import tools as owid_tools
 
-from scripts.logger import logger
+set_bblocks_data_path(PATHS.bblocks_data)
 
 WORLD_BANK_INDICATORS = {
     "life_expectancy_overview": "SP.DYN.LE00.IN",
@@ -21,24 +22,22 @@ def update_wb_health_data() -> None:
     """Update World Bank health overview charts"""
 
     # Create object
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
+    wb = WorldBankData()
 
-    # Load indicators
-    for code in WORLD_BANK_INDICATORS.values():
-        wb.load_indicator(code)
+    wb.load_data(list(WORLD_BANK_INDICATORS.values()))
 
     # Update charts
-    wb.update()
+    wb.update_data(reload_data=False)
 
 
 def wb_health_charts() -> None:
     """Create World Bank overview charts"""
 
-    wb = WorldBankData(data_path=PATHS.bblocks_data)
+    wb = WorldBankData()
 
     for name, code in WORLD_BANK_INDICATORS.items():
         (
-            wb.load_indicator(code)
+            wb.load_data(code)
             .get_data(code)
             .pipe(clean_wb_overview)
             .to_csv(f"{PATHS.charts}/health/{name}.csv", index=False)
