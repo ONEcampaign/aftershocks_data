@@ -1,17 +1,21 @@
 """Create dynamic text for the hunger topic"""
-import pandas as pd
-from bblocks.import_tools.world_bank import WorldBankData
-from scripts.hunger.common import aggregate_insufficient_food
 import datetime
-from scripts.config import PATHS
 import json
+
+import pandas as pd
+from bblocks import WorldBankData, set_bblocks_data_path
+
+from scripts.config import PATHS
+from scripts.hunger.common import aggregate_insufficient_food
+
+set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def stunting() -> dict:
     """Stunting dynamic text"""
 
     wb = WorldBankData()
-    wb.load_indicator("SH.STA.STNT.ME.ZS")
+    wb.load_data("SH.STA.STNT.ME.ZS")
 
     df = pd.read_csv(
         f"{PATHS.raw_data}/hunger/SH.STA.STNT.ME.ZS.csv", parse_dates=["date"]

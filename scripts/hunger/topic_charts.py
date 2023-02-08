@@ -1,10 +1,13 @@
 """Create hunger topic charts"""
 
-import pandas as pd
-from scripts.config import PATHS
-import country_converter as coco
 import datetime
-import numpy as np
+
+import pandas as pd
+from country_converter import CountryConverter
+
+from scripts.config import PATHS
+
+coco = CountryConverter()
 
 
 def ipc_chart() -> None:
@@ -36,9 +39,9 @@ def ipc_chart() -> None:
 def stunting_chart() -> None:
     """Create stunting connected dot chart"""
 
-    country_list = list(
-        coco.CountryConverter().data.loc[lambda d: d.continent == "Africa", "ISO3"]
-    ) + ["SSA"]
+    country_list = list(coco.data.loc[lambda d: d.continent == "Africa", "ISO3"]) + [
+        "SSA"
+    ]
 
     df = pd.read_csv(f"{PATHS.raw_data}/hunger/SH.STA.STNT.ME.ZS.csv")
     df = (
@@ -98,7 +101,8 @@ def price_table() -> None:
     df = (
         pink_sheet.drop(
             columns="units"
-        )  # temporary solutions: dropping to avoid having to extensively reformat the pipeline and the commodities list above
+        )  # temporary solutions: dropping to avoid having to extensively reformat the pipeline
+        # and the commodities list above
         .dropna(subset=["value"])
         .assign(
             period=lambda d: pd.to_datetime(d.period),

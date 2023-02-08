@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from bblocks.cleaning_tools.clean import format_number, convert_id
+from bblocks import convert_id, format_number
 from pydeflate import deflate
 
 from scripts.config import PATHS

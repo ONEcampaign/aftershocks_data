@@ -1,12 +1,13 @@
 import json
-import os
 from dataclasses import dataclass
 from datetime import datetime
+
 import pandas as pd
 import requests
-from country_converter import convert
+from country_converter import CountryConverter
 from dateutil.relativedelta import relativedelta
 
+convert = CountryConverter()
 
 BASE_URL: str = "https://api.ipcinfo.org/"
 WEB_URL: str = "https://fsr2av3qi2.execute-api.us-east-1.amazonaws.com/ch/"
@@ -19,12 +20,12 @@ def _build_country_df(data: dict, variables: list):
     """Take dictionary and build dataframe"""
     return (
         pd.DataFrame.from_dict(data, orient="index", columns=["value"])
-            .loc[variables]
-            .reset_index()
-            .rename(columns={"index": "indicator"})
-            .assign(country=lambda d: d.loc[d.indicator == "country", "value"][0])
-            .loc[lambda d: d.indicator != "country"]
-            .reset_index(drop=True)
+        .loc[variables]
+        .reset_index()
+        .rename(columns={"index": "indicator"})
+        .assign(country=lambda d: d.loc[d.indicator == "country", "value"][0])
+        .loc[lambda d: d.indicator != "country"]
+        .reset_index(drop=True)
     )
 
 
@@ -50,8 +51,8 @@ def _build_table(data: list):
         df = pd.concat([df, pd.DataFrame(data_, index=[r])], ignore_index=False)
 
     df = df.assign(
-        country_name=convert(df.iso2, to="name_short", not_found=None),
-        iso_code=convert(df.iso2, to="ISO3", not_found=None),
+        country_name=convert.pandas_convert(df.iso2, to="name_short", not_found=None),
+        iso_code=convert.pandas_convert(df.iso2, to="ISO3", not_found=None),
         from_date=pd.to_datetime(df.from_date, format="%b %Y"),
         to_date=pd.to_datetime(df.to_date, format="%b %Y"),
     )
@@ -65,11 +66,11 @@ class IPC:
 
     def __post_init__(self):
         if self.api_key is None:
-            #self.api_key = os.environ["IPC_WEB_API"]
+            # self.api_key = os.environ["IPC_WEB_API"]
             raise ValueError("IPC API key not provided")
 
     def _get_request_url(
-            self, call_type: str = "population", format: str = "csv", **parameters
+        self, call_type: str = "population", format: str = "csv", **parameters
     ) -> str:
         """Get the WHO_API_URL for the API request"""
 
@@ -87,7 +88,7 @@ class IPC:
         return requests.get(url).json()
 
     def get_ipc_ch_data(
-            self, latest: bool = True, only_valid: bool = False
+        self, latest: bool = True, only_valid: bool = False
     ) -> pd.DataFrame:
 
         raw_table = self.get_website_table()
@@ -97,8 +98,8 @@ class IPC:
         if latest:
             df = (
                 df.sort_values(["iso_code", "year", "to_date"])
-                    .drop_duplicates(["iso_code"], keep="last")
-                    .reset_index(drop=True)
+                .drop_duplicates(["iso_code"], keep="last")
+                .reset_index(drop=True)
             )
 
         if only_valid:
@@ -106,15 +107,15 @@ class IPC:
                 df.assign(
                     validity=lambda d: d.apply(
                         lambda r: current_date
-                                  + relativedelta(
+                        + relativedelta(
                             months=CH_VALIDITY if r.source == "CH" else IPC_VALIDITY
                         ),
                         axis=1,
                     )
                 )
-                    .loc[lambda d: d.to_date >= d.validity]
-                    .drop(["validity"], axis=1)
-                    .reset_index(drop=True)
+                .loc[lambda d: d.to_date >= d.validity]
+                .drop(["validity"], axis=1)
+                .reset_index(drop=True)
             )
 
         return df.assign(
@@ -137,7 +138,7 @@ class IPC:
         )
 
     def get_population(
-            self, start_year: int = 2022, end_year: int = 2022, countries: list = None
+        self, start_year: int = 2022, end_year: int = 2022, countries: list = None
     ) -> json:
         """Get IPC classification population data"""
 
