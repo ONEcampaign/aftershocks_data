@@ -96,7 +96,7 @@ def update_monthly_weo_data() -> None:
     weo = WorldEconomicOutlook()
 
     # update data
-    weo.update_data()
+    weo.update_data(year=None, release=None)
 
 
 def update_monthly_wb_data() -> None:
@@ -118,7 +118,7 @@ def update_monthly_wb_data() -> None:
     # Load only most recent data
     wb_recent.load_data(list(financial_security.WB_INDICATORS), most_recent_only=True)
 
-    wb_recent.update_data()
+    wb_recent.update_data(reload_data=False)
 
 
 def update_daily() -> None:
