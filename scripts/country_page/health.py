@@ -129,6 +129,12 @@ def _combined_causes_of_death_data(sort_indicator: str) -> pd.DataFrame:
     for country in df_latest.iso_code.unique():
         causes[country] = df_latest.query("iso_code == @country").cause.unique()
 
+    def __causes(iso: str) -> list:
+        try:
+            return causes[iso]
+        except KeyError:
+            return []
+
     # get 2000 data
     df_comparison = _read_leading_causes_of_death(CAUSES_YEAR_COMPARISON)
 
@@ -136,7 +142,7 @@ def _combined_causes_of_death_data(sort_indicator: str) -> pd.DataFrame:
     return (
         pd.concat([df_latest, df_comparison], ignore_index=True)
         .groupby(["iso_code", "year", "cause"], as_index=False)
-        .apply(lambda d: d.loc[d.cause.isin(causes[d.iso_code.item()])])
+        .apply(lambda d: d.loc[d.cause.isin(__causes(d.iso_code.item()))])
         .sort_values(
             by=["iso_code", "year", sort_indicator], ascending=(True, True, True)
         )
@@ -345,7 +351,9 @@ def malaria_chart() -> None:
     wb = WorldBankData()
     wb.load_data("SP.POP.TOTL")
     population = (
-        wb.get_data().drop("indicator_code", axis=1).rename(columns={"value": "population"})
+        wb.get_data()
+        .drop("indicator_code", axis=1)
+        .rename(columns={"value": "population"})
     )
 
     df = (

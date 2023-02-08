@@ -738,8 +738,8 @@
             "info": ""
         },
         "Mozambique": {
-            "value": "6,018,211",
-            "date": "06 February",
+            "value": "6,091,041",
+            "date": "08 February",
             "info": ""
         },
         "Namibia": {
@@ -1641,6 +1641,11 @@
             "date": "31 August 2022",
             "info": ""
         },
+        "Eswatini": {
+            "value": "6.7",
+            "date": "30 September 2022",
+            "info": ""
+        },
         "Cameroon": {
             "value": "7.69",
             "date": "30 September 2022",
@@ -1663,11 +1668,6 @@
         },
         "Sao Tome and Principe": {
             "value": "23.5",
-            "date": "31 October 2022",
-            "info": ""
-        },
-        "Eswatini": {
-            "value": "5.5",
             "date": "31 October 2022",
             "info": ""
         },
@@ -1696,27 +1696,17 @@
             "date": "31 October 2022",
             "info": ""
         },
-        "Mali": {
-            "value": "10.2",
-            "date": "31 October 2022",
-            "info": ""
-        },
         "Sudan": {
             "value": "88.8",
             "date": "30 November 2022",
             "info": ""
         },
         "Africa (median)": {
-            "value": "10.6",
+            "value": "10.2",
             "date": "30 November 2022"
         },
         "Cote d'Ivoire": {
             "value": "5.7",
-            "date": "30 November 2022",
-            "info": ""
-        },
-        "Mozambique": {
-            "value": "11.25",
             "date": "30 November 2022",
             "info": ""
         },
@@ -1725,8 +1715,13 @@
             "date": "30 November 2022",
             "info": ""
         },
-        "Seychelles": {
-            "value": "2.62",
+        "Mauritius": {
+            "value": "12.1",
+            "date": "30 November 2022",
+            "info": ""
+        },
+        "Tanzania": {
+            "value": "4.9",
             "date": "30 November 2022",
             "info": ""
         },
@@ -1740,18 +1735,13 @@
             "date": "30 November 2022",
             "info": ""
         },
-        "South Africa": {
-            "value": "7.4",
+        "Botswana": {
+            "value": "12.2",
             "date": "30 November 2022",
             "info": ""
         },
-        "Algeria": {
-            "value": "8.2",
-            "date": "30 November 2022",
-            "info": ""
-        },
-        "Nigeria": {
-            "value": "21.47",
+        "Niger": {
+            "value": "3.486",
             "date": "30 November 2022",
             "info": ""
         },
@@ -1790,18 +1780,13 @@
             "date": "30 November 2022",
             "info": ""
         },
-        "Sierra Leone": {
-            "value": "35.05",
-            "date": "30 November 2022",
-            "info": ""
-        },
         "Burkina Faso": {
             "value": "12.2",
             "date": "30 November 2022",
             "info": ""
         },
-        "Togo": {
-            "value": "8.7",
+        "Mali": {
+            "value": "8.0",
             "date": "30 November 2022",
             "info": ""
         },
@@ -1810,19 +1795,14 @@
             "date": "30 November 2022",
             "info": ""
         },
-        "Senegal": {
-            "value": "14.1",
+        "Somalia": {
+            "value": "6.4",
             "date": "30 November 2022",
             "info": ""
         },
-        "Angola": {
-            "value": "15.24",
+        "Morocco": {
+            "value": "8.3",
             "date": "30 November 2022",
-            "info": ""
-        },
-        "Lesotho": {
-            "value": "8.0",
-            "date": "30 December 2022",
             "info": ""
         },
         "Kenya": {
@@ -1830,23 +1810,33 @@
             "date": "31 December 2022",
             "info": ""
         },
-        "Mauritius": {
-            "value": "12.2",
+        "Uganda": {
+            "value": "10.2",
             "date": "31 December 2022",
             "info": ""
         },
-        "Niger": {
-            "value": "3.1",
+        "Sierra Leone": {
+            "value": "37.09",
             "date": "31 December 2022",
             "info": ""
         },
-        "Morocco": {
-            "value": "8.3",
+        "Mozambique": {
+            "value": "10.91",
             "date": "31 December 2022",
             "info": ""
         },
-        "Somalia": {
-            "value": "6.1",
+        "Senegal": {
+            "value": "12.8",
+            "date": "31 December 2022",
+            "info": ""
+        },
+        "Nigeria": {
+            "value": "21.34",
+            "date": "31 December 2022",
+            "info": ""
+        },
+        "Algeria": {
+            "value": "9.3",
             "date": "31 December 2022",
             "info": ""
         },
@@ -1855,18 +1845,23 @@
             "date": "31 December 2022",
             "info": ""
         },
+        "Lesotho": {
+            "value": "8.0",
+            "date": "31 December 2022",
+            "info": ""
+        },
         "Tunisia": {
             "value": "10.1",
             "date": "31 December 2022",
             "info": ""
         },
-        "Botswana": {
-            "value": "12.4",
+        "Angola": {
+            "value": "13.86",
             "date": "31 December 2022",
             "info": ""
         },
-        "Tanzania": {
-            "value": "4.8",
+        "Togo": {
+            "value": "7.7",
             "date": "31 December 2022",
             "info": ""
         },
@@ -1875,13 +1870,18 @@
             "date": "31 December 2022",
             "info": ""
         },
+        "South Africa": {
+            "value": "7.2",
+            "date": "31 December 2022",
+            "info": ""
+        },
         "South Sudan": {
             "value": "-11.57",
             "date": "31 December 2022",
             "info": ""
         },
-        "Uganda": {
-            "value": "10.4",
+        "Seychelles": {
+            "value": "2.39",
             "date": "31 January 2023",
             "info": ""
         },
