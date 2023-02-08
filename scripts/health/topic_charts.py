@@ -267,7 +267,7 @@ def wb_spending_topic_chart() -> None:
                 series=d.iso_code, src="ISO3", to="name_short", not_found=None
             )
         )
-        .loc[lambda d: d.iso_code.isin(cc.data.ISO3), :]
+        .loc[lambda d: d.iso_code.isin(cc.data.ISO3)]
         .assign(
             continent=lambda d: coco.CountryConverter().pandas_convert(
                 d.iso_code, to="continent", not_found=None
