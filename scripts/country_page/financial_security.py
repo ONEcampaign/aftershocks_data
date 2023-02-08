@@ -283,7 +283,7 @@ def gdp_growth_regions_single_measure() -> None:
         _ = (
             gdp_growth.loc[lambda d: d.iso_code.isin(common.regions()[region])]
             .groupby(["indicator_name", "lower"], as_index=False)
-            .median()
+            .median(numeric_only=True)
             .assign(name_short=common.region_names()[region])
             .assign(indicator_name=f"{WEO_YEAR} estimate (median)")
         )

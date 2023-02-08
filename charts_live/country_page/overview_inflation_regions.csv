@@ -114,9 +114,9 @@ Sub-Saharan Africa (WB),2022-05-31,Inflation Rate (median),7.6
 Sub-Saharan Africa (WB),2022-06-30,Inflation Rate (median),8.850000000000001
 Sub-Saharan Africa (WB),2022-07-31,Inflation Rate (median),9.415
 Sub-Saharan Africa (WB),2022-08-31,Inflation Rate (median),9.355
-Sub-Saharan Africa (WB),2022-09-30,Inflation Rate (median),9.805
-Sub-Saharan Africa (WB),2022-10-31,Inflation Rate (median),10.309999999999999
-Sub-Saharan Africa (WB),2022-11-30,Inflation Rate (median),11.25
+Sub-Saharan Africa (WB),2022-09-30,Inflation Rate (median),9.9
+Sub-Saharan Africa (WB),2022-10-31,Inflation Rate (median),10.42
+Sub-Saharan Africa (WB),2022-11-30,Inflation Rate (median),11.04
 Africa,2018-01-31,Inflation Rate (median),4.175
 Africa,2018-02-28,Inflation Rate (median),4.0
 Africa,2018-03-31,Inflation Rate (median),3.9
@@ -173,9 +173,9 @@ Africa,2022-05-31,Inflation Rate (median),7.8
 Africa,2022-06-30,Inflation Rate (median),8.8
 Africa,2022-07-31,Inflation Rate (median),9.215
 Africa,2022-08-31,Inflation Rate (median),9.355
-Africa,2022-09-30,Inflation Rate (median),9.2
-Africa,2022-10-31,Inflation Rate (median),9.7
-Africa,2022-11-30,Inflation Rate (median),10.6
+Africa,2022-09-30,Inflation Rate (median),9.455
+Africa,2022-10-31,Inflation Rate (median),9.95
+Africa,2022-11-30,Inflation Rate (median),10.715
 Sub-Saharan Africa (UN),2018-01-31,Inflation Rate (median),4.025
 Sub-Saharan Africa (UN),2018-02-28,Inflation Rate (median),3.75
 Sub-Saharan Africa (UN),2018-03-31,Inflation Rate (median),3.8
@@ -232,9 +232,9 @@ Sub-Saharan Africa (UN),2022-05-31,Inflation Rate (median),7.4
 Sub-Saharan Africa (UN),2022-06-30,Inflation Rate (median),8.8
 Sub-Saharan Africa (UN),2022-07-31,Inflation Rate (median),9.03
 Sub-Saharan Africa (UN),2022-08-31,Inflation Rate (median),9.31
-Sub-Saharan Africa (UN),2022-09-30,Inflation Rate (median),9.71
-Sub-Saharan Africa (UN),2022-10-31,Inflation Rate (median),10.2
-Sub-Saharan Africa (UN),2022-11-30,Inflation Rate (median),10.925
+Sub-Saharan Africa (UN),2022-09-30,Inflation Rate (median),9.805
+Sub-Saharan Africa (UN),2022-10-31,Inflation Rate (median),10.309999999999999
+Sub-Saharan Africa (UN),2022-11-30,Inflation Rate (median),10.83
 Eastern and Southern Africa,2018-01-31,Inflation Rate (median),4.83
 Eastern and Southern Africa,2018-02-28,Inflation Rate (median),4.88
 Eastern and Southern Africa,2018-03-31,Inflation Rate (median),4.66
@@ -292,8 +292,8 @@ Eastern and Southern Africa,2022-06-30,Inflation Rate (median),9.6
 Eastern and Southern Africa,2022-07-31,Inflation Rate (median),9.9
 Eastern and Southern Africa,2022-08-31,Inflation Rate (median),9.99
 Eastern and Southern Africa,2022-09-30,Inflation Rate (median),10.690000000000001
-Eastern and Southern Africa,2022-10-31,Inflation Rate (median),11.265
-Eastern and Southern Africa,2022-11-30,Inflation Rate (median),10.925
+Eastern and Southern Africa,2022-10-31,Inflation Rate (median),11.83
+Eastern and Southern Africa,2022-11-30,Inflation Rate (median),10.83
 Western and Central Africa,2018-01-31,Inflation Rate (median),2.0
 Western and Central Africa,2018-02-28,Inflation Rate (median),2.4
 Western and Central Africa,2018-03-31,Inflation Rate (median),2.1
@@ -350,7 +350,7 @@ Western and Central Africa,2022-05-31,Inflation Rate (median),7.6
 Western and Central Africa,2022-06-30,Inflation Rate (median),8.25
 Western and Central Africa,2022-07-31,Inflation Rate (median),8.25
 Western and Central Africa,2022-08-31,Inflation Rate (median),8.530000000000001
-Western and Central Africa,2022-09-30,Inflation Rate (median),8.46
+Western and Central Africa,2022-09-30,Inflation Rate (median),8.52
 Western and Central Africa,2022-10-31,Inflation Rate (median),8.89
 Western and Central Africa,2022-11-30,Inflation Rate (median),12.1
 Northern Africa,2018-01-31,Inflation Rate (median),11.850000000000001
@@ -468,7 +468,7 @@ Middle Africa,2022-05-31,Inflation Rate (median),5.93
 Middle Africa,2022-06-30,Inflation Rate (median),5.99
 Middle Africa,2022-07-31,Inflation Rate (median),6.2
 Middle Africa,2022-08-31,Inflation Rate (median),7.7
-Middle Africa,2022-09-30,Inflation Rate (median),7.69
+Middle Africa,2022-09-30,Inflation Rate (median),9.290000000000001
 Middle Africa,2022-10-31,Inflation Rate (median),12.19
 Middle Africa,2022-11-30,Inflation Rate (median),15.24
 Western Africa,2018-01-31,Inflation Rate (median),2.25
@@ -587,7 +587,7 @@ Southern Africa,2022-06-30,Inflation Rate (median),7.4
 Southern Africa,2022-07-31,Inflation Rate (median),7.8
 Southern Africa,2022-08-31,Inflation Rate (median),7.6
 Southern Africa,2022-09-30,Inflation Rate (median),7.5
-Southern Africa,2022-10-31,Inflation Rate (median),7.6
+Southern Africa,2022-10-31,Inflation Rate (median),8.05
 Southern Africa,2022-11-30,Inflation Rate (median),7.75
 Eastern Africa,2018-01-31,Inflation Rate (median),4.5
 Eastern Africa,2018-02-28,Inflation Rate (median),4.46
@@ -647,4 +647,4 @@ Eastern Africa,2022-07-31,Inflation Rate (median),9.9
 Eastern Africa,2022-08-31,Inflation Rate (median),9.8
 Eastern Africa,2022-09-30,Inflation Rate (median),10.0
 Eastern Africa,2022-10-31,Inflation Rate (median),10.7
-Eastern Africa,2022-11-30,Inflation Rate (median),10.925
+Eastern Africa,2022-11-30,Inflation Rate (median),10.83

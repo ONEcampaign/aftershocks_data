@@ -108,7 +108,7 @@ def update_monthly_wb_data() -> None:
 
     # Load indicators
     wb.load_data(list(financial_security.WB_INDICATORS))
-    wb.update_data()
+    wb.update_data(reload_data=False)
 
     time.sleep(180)
 

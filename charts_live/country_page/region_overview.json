@@ -5,7 +5,7 @@
             "date": "30 November 2022"
         },
         "Africa": {
-            "value": "10.6",
+            "value": "10.7",
             "date": "30 November 2022"
         },
         "Southern Africa": {
@@ -21,7 +21,7 @@
             "date": "30 November 2022"
         },
         "Sub-Saharan Africa (UN)": {
-            "value": "10.9",
+            "value": "10.8",
             "date": "30 November 2022"
         },
         "Northern Africa": {
@@ -29,11 +29,11 @@
             "date": "30 November 2022"
         },
         "Eastern and Southern Africa": {
-            "value": "10.9",
+            "value": "10.8",
             "date": "30 November 2022"
         },
         "Sub-Saharan Africa (WB)": {
-            "value": "11.2",
+            "value": "11.0",
             "date": "30 November 2022"
         },
         "Western Africa": {
@@ -41,7 +41,7 @@
             "date": "30 November 2022"
         },
         "Eastern Africa": {
-            "value": "10.9",
+            "value": "10.8",
             "date": "30 November 2022"
         }
     },
@@ -93,48 +93,48 @@
     },
     "insufficient_food": {
         "North Africa (WB)": {
-            "value": "24,961,297",
-            "date": "07 February"
+            "value": "24,956,628",
+            "date": "08 February"
         },
         "Sub-Saharan Africa (WB)": {
-            "value": "334,499,686",
-            "date": "07 February"
+            "value": "334,951,789",
+            "date": "08 February"
         },
         "Africa": {
-            "value": "359,460,983",
-            "date": "07 February"
+            "value": "359,908,417",
+            "date": "08 February"
         },
         "Sub-Saharan Africa (UN)": {
-            "value": "324,821,961",
-            "date": "07 February"
+            "value": "325,274,064",
+            "date": "08 February"
         },
         "Eastern and Southern Africa": {
-            "value": "166,968,686",
-            "date": "07 February"
+            "value": "167,126,003",
+            "date": "08 February"
         },
         "Western and Central Africa": {
-            "value": "167,353,832",
-            "date": "07 February"
+            "value": "167,650,205",
+            "date": "08 February"
         },
         "Northern Africa": {
-            "value": "34,639,022",
-            "date": "07 February"
+            "value": "34,634,353",
+            "date": "08 February"
         },
         "Middle Africa": {
-            "value": "72,957,195",
-            "date": "07 February"
+            "value": "73,029,335",
+            "date": "08 February"
         },
         "Western Africa": {
-            "value": "144,005,049",
-            "date": "07 February"
+            "value": "144,351,149",
+            "date": "08 February"
         },
         "Southern Africa": {
-            "value": "1,715,470",
-            "date": "07 February"
+            "value": "1,715,182",
+            "date": "08 February"
         },
         "Eastern Africa": {
-            "value": "106,144,247",
-            "date": "07 February"
+            "value": "106,178,398",
+            "date": "08 February"
         }
     }
 }

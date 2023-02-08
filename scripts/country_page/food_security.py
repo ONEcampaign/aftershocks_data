@@ -57,7 +57,7 @@ def wfp_insufficient_food_single_measure() -> None:
     change = (
         food.groupby(["name_short"])
         .apply(_group_monthly_change, value_columns=["value"], percentage=True)
-        .reset_index(drop=True)
+        .reset_index(drop=False)
         .filter(["name_short", "value"], axis=1)
         .rename(columns={"value": "change"})
     )

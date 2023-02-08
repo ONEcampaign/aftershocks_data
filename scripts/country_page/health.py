@@ -60,7 +60,7 @@ def vaccination_rate_single_measure() -> None:
         .apply(
             _group_monthly_change, value_columns=["value"], percentage=False, months=3
         )
-        .reset_index(drop=True)
+        .reset_index(drop=False)
         .filter(["iso_code", "value"], axis=1)
         .rename(columns={"value": "note"})
         .assign(note=lambda d: round(d.note, 3))
@@ -345,7 +345,7 @@ def malaria_chart() -> None:
     wb = WorldBankData()
     wb.load_data("SP.POP.TOTL")
     population = (
-        wb.get_data().drop("indicator", axis=1).rename(columns={"value": "population"})
+        wb.get_data().drop("indicator_code", axis=1).rename(columns={"value": "population"})
     )
 
     df = (
