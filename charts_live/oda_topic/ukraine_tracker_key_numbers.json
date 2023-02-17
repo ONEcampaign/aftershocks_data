@@ -8,14 +8,14 @@
         "Germany": "1,055,323",
         "Denmark": "39,756",
         "Spain": "166,832",
-        "Finland": "47,067",
+        "Finland": "47,111",
         "France": "118,994",
         "United Kingdom": "161,400",
         "Greece": "20,955",
         "Hungary": "34,248",
         "Ireland": "73,002",
         "Iceland": "2,239",
-        "Italy": "169,837",
+        "Italy": "175,143",
         "Japan": "1,800",
         "Luxembourg": "6,756",
         "Netherlands": "85,210",
@@ -24,10 +24,10 @@
         "Poland": "1,563,386",
         "Portugal": "57,859",
         "Slovakia": "109,185",
-        "Slovenia": "9,076",
+        "Slovenia": "9,081",
         "Sweden": "50,740",
         "United States": "85,000",
-        "DAC Countries": "5,126,108"
+        "DAC Countries": "5,131,463"
     },
     "cost22": {
         "Austria": "129.80",
@@ -45,7 +45,7 @@
         "Hungary": "142.19",
         "Ireland": "437.02",
         "Iceland": "6.00",
-        "Italy": "1,458.80",
+        "Italy": "1,465.44",
         "Japan": "0.02",
         "Luxembourg": "0.56",
         "Netherlands": "1,196.59",
@@ -57,7 +57,7 @@
         "Slovenia": "3.39",
         "Sweden": "268.97",
         "United States": "485.68",
-        "DAC Countries": "22,310.47"
+        "DAC Countries": "22,317.11"
     },
     "cost23": {
         "Austria": "93.16",
@@ -68,14 +68,14 @@
         "Germany": "7,289.37",
         "Denmark": "335.42",
         "Spain": "227.02",
-        "Finland": "401.95",
+        "Finland": "402.72",
         "France": "327.53",
         "United Kingdom": "1,346.58",
         "Greece": "10.21",
         "Hungary": "105.47",
         "Ireland": "500.18",
         "Iceland": "6.84",
-        "Italy": "1,091.28",
+        "Italy": "1,164.31",
         "Japan": "0.02",
         "Luxembourg": "0.33",
         "Netherlands": "838.84",
@@ -87,7 +87,7 @@
         "Slovenia": "2.58",
         "Sweden": "180.08",
         "United States": "345.51",
-        "DAC Countries": "22,190.65"
+        "DAC Countries": "22,264.45"
     },
     "cost24": {
         "Austria": "0.39",
@@ -114,7 +114,7 @@
         "Poland": "0.00",
         "Portugal": "0.51",
         "Slovakia": "1.08",
-        "Slovenia": "-0.00",
+        "Slovenia": "0.00",
         "Sweden": "0.15",
         "United States": "0.00",
         "DAC Countries": "30.44"
@@ -195,7 +195,7 @@
         "Hungary": 32.7,
         "Ireland": 37.8,
         "Iceland": 8.5,
-        "Italy": 24.0,
+        "Italy": 24.1,
         "Japan": 0.0,
         "Luxembourg": 0.1,
         "Netherlands": 22.6,
@@ -225,7 +225,7 @@
         "Hungary": 24.2,
         "Ireland": 43.3,
         "Iceland": 9.7,
-        "Italy": 17.9,
+        "Italy": 19.1,
         "Japan": 0.0,
         "Luxembourg": 0.1,
         "Netherlands": 15.9,
@@ -264,11 +264,11 @@
         "Poland": 0.0,
         "Portugal": 0.1,
         "Slovakia": 0.7,
-        "Slovenia": -0.0,
+        "Slovenia": 0.0,
         "Sweden": 0.0,
         "United States": 0.0,
         "DAC Countries": 0.0
     },
-    "total_refugees_total": "8,072,198",
-    "total_refugees_date": "13 February"
+    "total_refugees_total": "8,073,182",
+    "total_refugees_date": "15 February"
 }
