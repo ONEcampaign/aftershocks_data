@@ -66,7 +66,20 @@ def _add_dac_total(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _add_oda_shares(df: pd.DataFrame) -> pd.DataFrame:
-    return df.assign(
+
+    dac = df.loc[lambda d: d.name_short == "DAC Countries"]
+    df = df.loc[lambda d: d.name_short != "DAC Countries"]
+
+    dac = dac.assign(
+        total_refugees=lambda d: format_number(
+            d.total_refugees, as_units=True, decimals=0
+        ),
+        share22=lambda d: round(100 * (d.cost22 / 1e3) / d.oda, 1),
+        share23=lambda d: round(100 * (d.cost23 / 1e3) / d.oda, 1),
+        share24=lambda d: round(100 * (d.cost24 / 1e3) / d.oda, 1),
+    )
+
+    df = df.assign(
         total_refugees=lambda d: format_number(
             d.total_refugees, as_units=True, decimals=0
         ),
@@ -74,6 +87,8 @@ def _add_oda_shares(df: pd.DataFrame) -> pd.DataFrame:
         share23=lambda d: round(100 * (d.cost23 / 1e6) / d.oda, 1),
         share24=lambda d: round(100 * (d.cost24 / 1e6) / d.oda, 1),
     )
+
+    return pd.concat([df, dac], ignore_index=True)
 
 
 def _format_cost(df: pd.DataFrame) -> pd.DataFrame:
