@@ -12,6 +12,11 @@ ODA_URL: str = (
     "main/output/latest_oda.csv"
 )
 
+TOTAL_IDRC: str = (
+    "https://raw.githubusercontent.com/ONEcampaign/ukraine_oda_tracker/main/"
+    "output/idrc_over_time_constant.csv"
+)
+
 
 def total_refugees() -> dict:
 
@@ -35,19 +40,25 @@ def _clean_cost_data(df: pd.DataFrame) -> pd.DataFrame:
 
 def _add_dac_total(df: pd.DataFrame) -> pd.DataFrame:
     dac_total = (
+        pd.read_csv(TOTAL_IDRC)
+        .astype({"year": "Int16", "DAC Countries, Total": "float"})
+        .filter(["year", "DAC Countries, Total"])
+        .rename(columns={"DAC Countries, Total": "value"})
+        .assign(name_short="DAC Countries", value=lambda d: d.value * 1e3)
+        .loc[lambda d: d.year > 2021]
+        .pivot(index="name_short", columns="year", values="value")
+        .rename(columns={2022: "cost22", 2023: "cost23", 2024: "cost24"})
+        .reset_index(drop=False)
+    )
+
+    oda_total = (
         df.assign(name_short="DAC Countries")
         .groupby("name_short", as_index=False)
-        .agg(
-            {
-                "total_refugees": sum,
-                "cost22": sum,
-                "cost23": sum,
-                "cost24": sum,
-                "oda": sum,
-                "year": "max",
-            }
-        )
+        .agg({"total_refugees": sum, "oda": sum, "year": "max"})
+        .filter(["name_short", "total_refugees", "oda", "year"])
     )
+
+    dac_total = dac_total.merge(oda_total, on="name_short", how="left")
 
     return pd.concat([df, dac_total], ignore_index=True).drop(
         columns=["indicator", "currency", "prices"]
