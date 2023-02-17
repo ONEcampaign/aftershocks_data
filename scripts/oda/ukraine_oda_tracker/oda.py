@@ -37,6 +37,14 @@ def total_refugees() -> dict:
 
 
 def hcr_totals() -> dict:
+    countries = [
+        "Poland",
+        "Romania",
+        "Slovakia",
+        "Germany",
+        "Czech Republic",
+        "Republic of Moldova",
+    ]
     return (
         pd.read_csv(HCR_TOTALS)
         .assign(date=lambda d: pd.to_datetime(d["Data Date"], format="%m-%Y"))
@@ -56,6 +64,7 @@ def hcr_totals() -> dict:
                 d.latest_refugees, as_units=True, decimals=0
             )
         )
+        .loc[lambda d: d.Country.isin(countries)]
         .set_index("Country")
         .to_dict()
     )
