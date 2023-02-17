@@ -17,6 +17,11 @@ TOTAL_IDRC: str = (
     "output/idrc_over_time_constant.csv"
 )
 
+HCR_TOTALS: str = (
+    "https://raw.githubusercontent.com/ONEcampaign/ukraine_oda_tracker/"
+    "main/output/hcr_data.csv"
+)
+
 
 def total_refugees() -> dict:
 
@@ -29,6 +34,31 @@ def total_refugees() -> dict:
         "total_refugees_total": read_refugee_data(),
         "total_refugees_date": read_refugee_date(),
     }
+
+
+def hcr_totals() -> dict:
+    return (
+        pd.read_csv(HCR_TOTALS)
+        .assign(date=lambda d: pd.to_datetime(d["Data Date"], format="%m-%Y"))
+        .sort_values(["Country", "date"])
+        .drop_duplicates(subset=["Country"], keep="last")
+        .filter(
+            ["Country", "Individual refugees from Ukraine recorded across Europe"],
+            axis=1,
+        )
+        .rename(
+            columns={
+                "Individual refugees from Ukraine recorded across Europe": "latest_refugees"
+            }
+        )
+        .assign(
+            latest_refugees=lambda d: format_number(
+                d.latest_refugees, as_units=True, decimals=0
+            )
+        )
+        .set_index("Country")
+        .to_dict()
+    )
 
 
 def _clean_cost_data(df: pd.DataFrame) -> pd.DataFrame:
@@ -134,6 +164,6 @@ def refugee_data() -> dict:
     data = data.set_index("name_short").to_dict()
 
     # Add total data
-    data = data | total_refugees()
+    data = data | total_refugees() | hcr_totals()
 
     return data
