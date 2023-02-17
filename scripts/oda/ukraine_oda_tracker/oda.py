@@ -1,42 +1,109 @@
 import pandas as pd
+from bblocks import add_short_names_column, format_number
 
-URL: str = (
-    "https://docs.google.com/spreadsheets/d/e/"
-    "2PACX-1vSqAIxjSZ78fE93CP1K9K0t8rLM2wi0z_nc60ezrUeDEIOPz-vr01SmmS_5nNnq"
-    "_uPE0dM26m0V3rQK/pub?gid=388051861&single=true&output=csv"
+from scripts.oda.ukraine_oda_tracker.unhcr import read_refugee_data, read_refugee_date
+
+YEARLY_COSTS_URL: str = (
+    "https://raw.githubusercontent.com/ONEcampaign/"
+    "ukraine_oda_tracker/main/output/ukraine_refugee_cost_estimates.csv"
 )
 
-URL_REF = (
-    "https://docs.google.com/spreadsheets/d/e/"
-    "2PACX-1vSqAIxjSZ78fE93CP1K9K0t8rLM2wi0z_nc60ezrUeDEIOPz-vr01SmmS"
-    "_5nNnq_uPE0dM26m0V3rQK/pub?gid=967116072&single=true&output=csv"
+ODA_URL: str = (
+    "https://raw.githubusercontent.com/ONEcampaign/ukraine_oda_tracker/"
+    "main/output/latest_oda.csv"
 )
 
-SHEET: pd.DataFrame = pd.read_csv(URL, header=None)
 
-REFUGEES_SHEET: pd.DataFrame = pd.read_csv(URL_REF)
+def total_refugees() -> dict:
 
-
-def total_reported_oda() -> str:
-    """Get our estimated total ODA to Ukraine"""
-
-    return f"{round(float(SHEET.iloc[0,1]),1)}"
+    return {
+        "total_refugees_total": read_refugee_data(),
+        "total_refugees_date": read_refugee_date(),
+    }
 
 
-def total_idrc() -> str:
-    """Get our estimated total ODA to Ukraine"""
+def _clean_cost_data(df: pd.DataFrame) -> pd.DataFrame:
 
-    return f"{round(float(SHEET.iloc[1,1]),1)}"
-
-
-def refugees_in_countries() -> dict:
-    """Get our estimated total ODA to Ukraine"""
-    return REFUGEES_SHEET.set_index("iso_code")[
-        "Individual refugees from Ukraine recorded across Europe"
-    ].to_dict()
+    return df.pipe(add_short_names_column, id_column="iso_code", id_type="ISO3").drop(
+        columns="iso_code", axis=1
+    )
 
 
-def idrc_share() -> str:
-    """Get our estimated total IDRC as a share of ODA"""
+def _add_dac_total(df: pd.DataFrame) -> pd.DataFrame:
+    dac_total = (
+        df.assign(name_short="DAC Countries")
+        .groupby("name_short", as_index=False)
+        .agg(
+            {
+                "total_refugees": sum,
+                "cost22": sum,
+                "cost23": sum,
+                "cost24": sum,
+                "oda": sum,
+                "year": "max",
+            }
+        )
+    )
 
-    return f"{round(100*float(SHEET.iloc[2,1]),1)}"
+    return pd.concat([df, dac_total], ignore_index=True).drop(
+        columns=["indicator", "currency", "prices"]
+    )
+
+
+def _add_oda_shares(df: pd.DataFrame) -> pd.DataFrame:
+    return df.assign(
+        total_refugees=lambda d: format_number(
+            d.total_refugees, as_units=True, decimals=0
+        ),
+        share22=lambda d: round(100 * (d.cost22 / 1e6) / d.oda, 1),
+        share23=lambda d: round(100 * (d.cost23 / 1e6) / d.oda, 1),
+        share24=lambda d: round(100 * (d.cost24 / 1e6) / d.oda, 1),
+    )
+
+
+def _format_cost(df: pd.DataFrame) -> pd.DataFrame:
+
+    return df.assign(
+        cost22=lambda d: format_number(d.cost22, as_millions=True, decimals=2),
+        cost23=lambda d: format_number(d.cost23, as_millions=True, decimals=2),
+        cost24=lambda d: format_number(d.cost24, as_millions=True, decimals=2),
+    )
+
+
+def latest_oda() -> pd.DataFrame:
+
+    return (
+        pd.read_csv(ODA_URL)
+        .pipe(add_short_names_column, id_column="donor_name", id_type="regex")
+        .drop(columns=["donor_name", "donor_code"])
+        .loc[lambda d: d.year == d.year.max()]
+        .rename(columns={"value": "oda"})
+    )
+
+
+def refugee_data() -> dict:
+    df = pd.read_csv(YEARLY_COSTS_URL).pipe(_clean_cost_data)
+
+    oda = latest_oda()
+
+    # merge datasets
+    data = df.merge(oda, on="name_short", how="left").astype(
+        {"total_refugees": "Int32"}
+    )
+
+    # add DAC
+    data = _add_dac_total(data)
+
+    # calculate shares
+    data = _add_oda_shares(data)
+
+    # format costs
+    data = _format_cost(data)
+
+    # convert to dict
+    data = data.set_index("name_short").to_dict()
+
+    # Add total data
+    data = data | total_refugees()
+
+    return data
