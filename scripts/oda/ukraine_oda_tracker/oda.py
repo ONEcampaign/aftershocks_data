@@ -47,6 +47,11 @@ def _add_dac_total(df: pd.DataFrame) -> pd.DataFrame:
                 "year": "max",
             }
         )
+        .assign(
+            cost22=lambda d: d.cost22 / 1e3,
+            cost23=lambda d: d.cost23 / 1e3,
+            cost24=lambda d: d.cost24 / 1e3,
+        )
     )
 
     return pd.concat([df, dac_total], ignore_index=True).drop(
@@ -68,9 +73,9 @@ def _add_oda_shares(df: pd.DataFrame) -> pd.DataFrame:
 def _format_cost(df: pd.DataFrame) -> pd.DataFrame:
 
     return df.assign(
-        cost22=lambda d: format_number(d.cost22, as_millions=True, decimals=2),
-        cost23=lambda d: format_number(d.cost23, as_millions=True, decimals=2),
-        cost24=lambda d: format_number(d.cost24, as_millions=True, decimals=2),
+        cost22=lambda d: format_number(d.cost22, as_millions=True, decimals=1),
+        cost23=lambda d: format_number(d.cost23, as_millions=True, decimals=1),
+        cost24=lambda d: format_number(d.cost24, as_millions=True, decimals=1),
     )
 
 
