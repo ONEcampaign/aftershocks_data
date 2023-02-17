@@ -13,3 +13,7 @@ def key_numbers() -> None:
     logger.debug(
         f"Updated dynamic text Ukraine ODA tracker page ukraine_tracker_key_numbers.json"
     )
+
+
+if __name__ == '__main__':
+    key_numbers()

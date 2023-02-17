@@ -1,7 +1,6 @@
 import pandas as pd
 from bblocks import add_short_names_column, format_number
 
-from scripts.oda.ukraine_oda_tracker.unhcr import read_refugee_data, read_refugee_date
 
 YEARLY_COSTS_URL: str = (
     "https://raw.githubusercontent.com/ONEcampaign/"
@@ -15,6 +14,11 @@ ODA_URL: str = (
 
 
 def total_refugees() -> dict:
+
+    from scripts.oda.ukraine_oda_tracker.unhcr import (
+        read_refugee_data,
+        read_refugee_date,
+    )
 
     return {
         "total_refugees_total": read_refugee_data(),
