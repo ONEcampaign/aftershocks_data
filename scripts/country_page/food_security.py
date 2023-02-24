@@ -178,6 +178,8 @@ def insufficient_food_chart() -> None:
         pd.concat([median, food], ignore_index=True)
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
         .drop("iso_code", axis=1)
+        .sort_values(["date", "name_short"], ascending=(False, True))
+        .drop_duplicates(subset=["date","name_short"], keep="first")
     )
 
     food_pivot = food.pivot(
