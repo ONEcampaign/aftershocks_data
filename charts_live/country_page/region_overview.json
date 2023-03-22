@@ -1,11 +1,11 @@
 {
     "inflation": {
         "Middle Africa": {
-            "value": "10.5",
+            "value": "12.6",
             "date": "31 January 2023"
         },
         "North Africa (WB)": {
-            "value": "10.2",
+            "value": "18.0",
             "date": "31 January 2023"
         },
         "Sub-Saharan Africa (UN)": {
@@ -13,11 +13,11 @@
             "date": "31 January 2023"
         },
         "Northern Africa": {
-            "value": "10.2",
+            "value": "25.8",
             "date": "31 January 2023"
         },
         "Southern Africa": {
-            "value": "8.2",
+            "value": "7.0",
             "date": "31 January 2023"
         },
         "Eastern and Southern Africa": {
@@ -29,19 +29,19 @@
             "date": "31 January 2023"
         },
         "Western Africa": {
-            "value": "10.4",
-            "date": "31 January 2023"
-        },
-        "Sub-Saharan Africa (WB)": {
             "value": "10.3",
             "date": "31 January 2023"
         },
+        "Sub-Saharan Africa (WB)": {
+            "value": "10.4",
+            "date": "31 January 2023"
+        },
         "Africa": {
-            "value": "10.2",
+            "value": "10.4",
             "date": "31 January 2023"
         },
         "Eastern Africa": {
-            "value": "10.4",
+            "value": "11.1",
             "date": "31 January 2023"
         }
     },
