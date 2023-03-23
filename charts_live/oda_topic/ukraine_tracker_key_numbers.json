@@ -10,7 +10,7 @@
         "Spain": "170,973",
         "Finland": "47,111",
         "France": "118,994",
-        "United Kingdom": "166,800",
+        "United Kingdom": "191,000",
         "Greece": "20,955",
         "Hungary": "34,248",
         "Ireland": "78,121",
@@ -27,7 +27,7 @@
         "Slovenia": "9,119",
         "Sweden": "52,325",
         "United States": "85,000",
-        "DAC Countries": "4,873,964"
+        "DAC Countries": "4,898,164"
     },
     "cost22": {
         "Austria": "129.80",
@@ -70,7 +70,7 @@
         "Spain": "236.51",
         "Finland": "402.72",
         "France": "327.53",
-        "United Kingdom": "1,416.36",
+        "United Kingdom": "1,767.44",
         "Greece": "10.21",
         "Hungary": "104.99",
         "Ireland": "550.94",
@@ -87,7 +87,7 @@
         "Slovenia": "2.60",
         "Sweden": "192.94",
         "United States": "345.51",
-        "DAC Countries": "31.87"
+        "DAC Countries": "32.01"
     },
     "cost24": {
         "Austria": "1.50",
@@ -100,7 +100,7 @@
         "Spain": "5.31",
         "Finland": "0.00",
         "France": "0.00",
-        "United Kingdom": "32.79",
+        "United Kingdom": "103.00",
         "Greece": "0.00",
         "Hungary": "0.97",
         "Ireland": "14.96",
@@ -117,7 +117,7 @@
         "Slovenia": "0.00",
         "Sweden": "1.32",
         "United States": "0.00",
-        "DAC Countries": "4.09"
+        "DAC Countries": "4.24"
     },
     "year": {
         "Austria": 2021,
@@ -220,7 +220,7 @@
         "Spain": 6.5,
         "Finland": 27.9,
         "France": 2.1,
-        "United Kingdom": 9.0,
+        "United Kingdom": 11.2,
         "Greece": 3.0,
         "Hungary": 24.1,
         "Ireland": 47.7,
@@ -250,7 +250,7 @@
         "Spain": 0.1,
         "Finland": 0.0,
         "France": 0.0,
-        "United Kingdom": 0.2,
+        "United Kingdom": 0.7,
         "Greece": 0.0,
         "Hungary": 0.2,
         "Ireland": 1.3,
@@ -267,9 +267,9 @@
         "Slovenia": 0.0,
         "Sweden": 0.0,
         "United States": 0.0,
-        "DAC Countries": 2.3
+        "DAC Countries": 2.4
     },
-    "total_refugees_total": "8,132,760",
+    "total_refugees_total": "8,156,960",
     "total_refugees_date": "20 March",
     "latest_refugees": {
         "Czech Republic": "501,540",
