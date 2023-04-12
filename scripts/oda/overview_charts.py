@@ -10,7 +10,11 @@ from scripts.oda import common
 set_data_path(PATHS.raw_oda)
 set_bblocks_data_path(PATHS.bblocks_data)
 
-DacCountries = donor_groupings()["dac_countries"] | {20001: "DAC Countries, Total"}
+DacCountries = (
+    donor_groupings()["dac_countries"]
+    | {84: "Lithuania"}
+    | {20001: "DAC Countries, Total"}
+)
 
 
 def global_aid_key_number() -> None:

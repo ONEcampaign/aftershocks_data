@@ -1,9 +1,12 @@
 import pandas as pd
 from oda_data import set_data_path, ODAData
+from pydeflate import set_pydeflate_path, update_dac1
 
 from scripts import config
 
 set_data_path(config.PATHS.raw_data)
+set_pydeflate_path(config.PATHS.raw_data)
+
 
 YEARS = range(2000, 2023)
 
@@ -32,6 +35,7 @@ DAC = [
     69,
     75,
     76,
+    84,
     301,
     302,
     701,
@@ -115,7 +119,6 @@ def get_oda_by_income():
 
 
 def get_oda_to_africa() -> None:
-
     total = [10100]
     africa = [10001]
 
@@ -142,7 +145,6 @@ def get_oda_to_africa() -> None:
 
 
 def get_oda_to_regions():
-
     recipients = {
         9998: "Developing countries, unspecified",
         10001: "Africa",

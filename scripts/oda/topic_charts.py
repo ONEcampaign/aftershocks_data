@@ -8,7 +8,11 @@ from scripts.logger import logger
 from scripts.oda import common
 
 set_data_path(PATHS.raw_oda)
-DacMembers = donor_groupings()["dac_members"] | {20001: "DAC Countries, Total"}
+DacMembers = (
+    donor_groupings()["dac_members"]
+    | {84: "Lithuania"}
+    | {20001: "DAC Countries, Total"}
+)
 
 
 def _ge_filter(ge_indicator: str, flow_indicator: str) -> str:
@@ -63,7 +67,6 @@ def global_aid_ts() -> None:
 
 
 def oda_gni_single_year() -> None:
-
     oda = ODAData(
         years=range(2000, 2024),
         donors=list(DacMembers),
@@ -325,8 +328,8 @@ def oda_covid():
     dg = donor_groupings()
 
     oda = ODAData(
-        years=range(2015, 2022),
-        donors=list(dg["dac_countries"]) + [20001],
+        years=range(2015, 2023),
+        donors=list(dg["dac_countries"]) + [20001, 84],
         prices="constant",
         base_year=common.CONSTANT_YEAR,
         include_names=True,

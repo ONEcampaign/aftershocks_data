@@ -6,7 +6,7 @@ from pydeflate import deflate
 from scripts.config import PATHS
 
 # Define a year for the constant price calculations
-CONSTANT_YEAR: int = 2021
+CONSTANT_YEAR: int = 2022
 
 # Start year for the timeseries charts
 START_YEAR: int = 2010
@@ -36,6 +36,7 @@ DAC = [
     69,
     75,
     76,
+    84,
     301,
     302,
     701,
