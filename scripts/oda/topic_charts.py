@@ -319,81 +319,7 @@ def aid_to_incomes() -> None:
     logger.debug("Saved download version of aid_to_income_ts.csv")
 
 
-def oda_covid():
-    from oda_data import ODAData, set_data_path
-    from oda_data.tools.groupings import donor_groupings
-
-    set_data_path(PATHS.raw_oda)
-
-    dg = donor_groupings()
-
-    oda = ODAData(
-        years=range(2015, 2023),
-        donors=list(dg["dac_countries"]) + [20001, 84],
-        prices="constant",
-        base_year=common.CONSTANT_YEAR,
-        include_names=True,
-    )
-
-    indicators = ["total_covid_oda_ge_linked", "total_oda_ge", "total_oda_flow_net"]
-
-    data = (
-        oda.load_indicator(indicators)
-        .get_data()
-        .loc[
-            lambda d: ~((d.year < 2018) & (d.indicator == "total_oda_ge"))
-            & ~((d.year >= 2018) & (d.indicator == "total_oda_flow_net"))
-        ]
-    )
-
-    data.indicator = data.indicator.replace(
-        {"total_oda_ge": "Total ODA", "total_oda_flow_net": "Total ODA"}
-    )
-
-    data = (
-        data.pivot(
-            index=["year", "donor_code", "donor_name"],
-            columns="indicator",
-            values="value",
-        )
-        .round(1)
-        .reset_index()
-        .assign(
-            other_oda=lambda d: round(
-                d["Total ODA"].fillna(0) - d["total_covid_oda_ge_linked"].fillna(0), 1
-            )
-        )
-    )
-
-    dac_total = data.loc[lambda d: d.donor_code == 20001]
-    other = data.loc[lambda d: d.donor_code != 20001]
-
-    df = (
-        pd.concat([dac_total, other], ignore_index=True)
-        .rename(
-            columns={
-                "year": "Year",
-                "donor_name": "Donor",
-                "total_covid_oda_ge_linked": "COVID ODA",
-                "other_oda": "Other ODA",
-            }
-        )
-        .filter(["Year", "Donor", "COVID ODA", "Other ODA", "Total ODA"], axis=1)
-    )
-
-    # live version
-    df.to_csv(f"{PATHS.charts}/oda_topic/oda_covid.csv", index=False)
-    logger.debug("Saved live chart oda_covid.csv")
-
-    # download version
-    source = "OECD DAC Table1"
-    df.assign(source=source).to_csv(
-        f"{PATHS.download}/oda_topic/oda_covid.csv", index=False
-    )
-    logger.debug("Saved download version of oda_covid.csv")
-
-
-def oda_ukraine():
+def oda_covid_idrc():
     from oda_data import ODAData, set_data_path
     from oda_data.tools.groupings import donor_groupings
 
@@ -502,5 +428,4 @@ if __name__ == "__main__":
     key_sector_shares()
     aid_to_regions_ts()
     aid_to_incomes()
-    oda_covid()
-    oda_ukraine()
+    oda_covid_idrc()
