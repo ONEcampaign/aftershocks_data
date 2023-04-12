@@ -28,6 +28,8 @@
         "Slovenia": "9,222",
         "Sweden": "53,957",
         "United States": "85,000",
+        "South Korea": "<NA>",
+        "Australia": "<NA>",
         "DAC Countries": "5,007,428"
     },
     "cost22": {
@@ -59,6 +61,8 @@
         "Slovenia": "3.40",
         "Sweden": "269.88",
         "United States": "487.09",
+        "South Korea": "nan",
+        "Australia": "nan",
         "DAC Countries": "29.30"
     },
     "cost23": {
@@ -90,6 +94,8 @@
         "Slovenia": "2.65",
         "Sweden": "201.81",
         "United States": "346.52",
+        "South Korea": "nan",
+        "Australia": "nan",
         "DAC Countries": "32.36"
     },
     "cost24": {
@@ -121,6 +127,8 @@
         "Slovenia": "0.02",
         "Sweden": "7.61",
         "United States": "0.00",
+        "South Korea": "nan",
+        "Australia": "nan",
         "DAC Countries": "6.58"
     },
     "year": {
@@ -152,6 +160,8 @@
         "Slovenia": 2022,
         "Sweden": 2022,
         "United States": 2022,
+        "South Korea": 2022,
+        "Australia": 2022,
         "DAC Countries": 2022
     },
     "oda": {
@@ -183,7 +193,9 @@
         "Slovenia": 163.83,
         "Sweden": 5455.61,
         "United States": 55277.04,
-        "DAC Countries": 198170.08000000002
+        "South Korea": 2785.63,
+        "Australia": 3039.62,
+        "DAC Countries": 203995.33000000002
     },
     "share22": {
         "Austria": 7.0,
@@ -214,7 +226,9 @@
         "Slovenia": 2.1,
         "Sweden": 4.9,
         "United States": 0.9,
-        "DAC Countries": 14.8
+        "South Korea": NaN,
+        "Australia": NaN,
+        "DAC Countries": 14.4
     },
     "share23": {
         "Austria": 5.3,
@@ -245,7 +259,9 @@
         "Slovenia": 1.6,
         "Sweden": 3.7,
         "United States": 0.6,
-        "DAC Countries": 16.3
+        "South Korea": NaN,
+        "Australia": NaN,
+        "DAC Countries": 15.9
     },
     "share24": {
         "Austria": 0.1,
@@ -276,7 +292,9 @@
         "Slovenia": 0.0,
         "Sweden": 0.1,
         "United States": 0.0,
-        "DAC Countries": 3.3
+        "South Korea": NaN,
+        "Australia": NaN,
+        "DAC Countries": 3.2
     },
     "total_refugees_total": "8,167,986",
     "total_refugees_date": "11 April",

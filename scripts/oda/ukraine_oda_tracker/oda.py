@@ -156,7 +156,7 @@ def refugee_data() -> dict:
     oda = latest_oda()
 
     # merge datasets
-    data = df.merge(oda, on="name_short", how="left").astype(
+    data = df.merge(oda, on="name_short", how="outer").astype(
         {"total_refugees": "Int32"}
     )
 
