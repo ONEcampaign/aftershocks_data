@@ -456,7 +456,10 @@ def oda_ukraine():
         .reset_index()
         .assign(
             other_oda=lambda d: round(
-                d["Total ODA"].fillna(0) - d["total_covid_oda_ge_linked"].fillna(0), 1
+                d["Total ODA"].fillna(0)
+                - d["total_covid_oda_ge_linked"].fillna(0)
+                - d["idrc_ge_linked"].fillna(0),
+                1,
             )
         )
     )
@@ -471,10 +474,13 @@ def oda_ukraine():
                 "year": "Year",
                 "donor_name": "Donor",
                 "total_covid_oda_ge_linked": "COVID ODA",
+                "idrc_ge_linked": "IDRC",
                 "other_oda": "Other ODA",
             }
         )
-        .filter(["Year", "Donor", "COVID ODA", "Other ODA", "Total ODA"], axis=1)
+        .filter(
+            ["Year", "Donor", "COVID ODA", "IDRC", "Other ODA", "Total ODA"], axis=1
+        )
     )
 
     # live version
@@ -497,3 +503,4 @@ if __name__ == "__main__":
     aid_to_regions_ts()
     aid_to_incomes()
     oda_covid()
+    oda_ukraine()
