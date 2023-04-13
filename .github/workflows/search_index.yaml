@@ -1,0 +1,12 @@
+name: Trigger Reindex Posts
+
+on:
+  schedule:
+    - cron: '0 2,4,6,8,10,12,14,16,18,20,22 * * *'
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger URL
+        run: |
+          curl -X GET 'https://data.one.org/?algolia=reindex_posts'
