@@ -24,7 +24,6 @@ HCR_TOTALS: str = (
 
 
 def total_refugees() -> dict:
-
     from scripts.oda.ukraine_oda_tracker.unhcr import (
         read_refugee_data,
         read_refugee_date,
@@ -71,7 +70,6 @@ def hcr_totals() -> dict:
 
 
 def _clean_cost_data(df: pd.DataFrame) -> pd.DataFrame:
-
     return df.pipe(add_short_names_column, id_column="iso_code", id_type="ISO3").drop(
         columns="iso_code", axis=1
     )
@@ -105,7 +103,6 @@ def _add_dac_total(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _add_oda_shares(df: pd.DataFrame) -> pd.DataFrame:
-
     dac = df.loc[lambda d: d.name_short == "DAC Countries"]
     df = df.loc[lambda d: d.name_short != "DAC Countries"]
 
@@ -131,7 +128,6 @@ def _add_oda_shares(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _format_cost(df: pd.DataFrame) -> pd.DataFrame:
-
     return df.assign(
         cost22=lambda d: format_number(d.cost22, as_millions=True, decimals=2),
         cost23=lambda d: format_number(d.cost23, as_millions=True, decimals=2),
@@ -140,7 +136,6 @@ def _format_cost(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def latest_oda() -> pd.DataFrame:
-
     return (
         pd.read_csv(ODA_URL)
         .pipe(add_short_names_column, id_column="donor_name", id_type="regex")
@@ -168,6 +163,9 @@ def refugee_data() -> dict:
 
     # format costs
     data = _format_cost(data)
+
+    # Fill in missing values
+    data = data.fillna("").replace({"nan": "", "<NA>": ""})
 
     # convert to dict
     data = data.set_index("name_short").to_dict()
