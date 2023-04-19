@@ -1,6 +1,6 @@
 import pandas as pd
 from bblocks import set_bblocks_data_path, DebtIDS
-from bblocks.cleaning_tools.clean import format_number
+from bblocks.cleaning_tools.clean import convert_id, format_number
 from bblocks.dataframe_tools.add import (
     add_gov_exp_share_column,
     add_gov_expenditure_column,
@@ -124,6 +124,13 @@ def debt_chart_region() -> None:
             include_estimates=True,
         )
         .dropna(subset=["value"])
+        .assign(
+            continent=lambda d: convert_id(
+                d.iso_code, from_type="ISO3", to_type="continent"
+            )
+        )
+        .query("continent == 'Africa'")
+        .drop(columns=["continent"])
         .groupby(["As of"], as_index=False)[["value", "value_units", "gov_exp"]]
         .sum()
         .assign(
@@ -152,6 +159,3 @@ def debt_chart_region() -> None:
 
     update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
     logger.debug("Updated 'overview.json'")
-
-
-debt_chart_country()
