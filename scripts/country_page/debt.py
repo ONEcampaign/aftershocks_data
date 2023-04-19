@@ -1,5 +1,5 @@
 import pandas as pd
-from bblocks import set_bblocks_data_path
+from bblocks import set_bblocks_data_path, DebtIDS
 from bblocks.cleaning_tools.clean import format_number
 from bblocks.dataframe_tools.add import (
     add_gov_exp_share_column,
@@ -8,14 +8,35 @@ from bblocks.dataframe_tools.add import (
     add_short_names_column,
 )
 
-from scripts.common import df_to_key_number, update_key_number
+from scripts.common import DEBT_YEAR, df_to_key_number, update_key_number
 from scripts.config import PATHS
 from scripts.logger import logger
 
 set_bblocks_data_path(PATHS.bblocks_data)
 
 
-def _read_debt_data() -> pd.DataFrame:
+def _update_debt_data() -> None:
+    debt = DebtIDS()
+
+    service = debt.debt_service_indicators()
+    stocks = debt.debt_stocks_indicators()
+
+    debt.load_data(
+        indicators=list(service) + list(stocks), start_year=2009, end_year=DEBT_YEAR + 5
+    )
+
+    debt.update_data()
+
+
+def _read_debt_service_data() -> pd.DataFrame:
+    debt = DebtIDS()
+
+    service = debt.debt_service_indicators()
+
+    debt.load_data(list(service), start_year=2009, end_year=DEBT_YEAR + 5)
+
+
+def _read_debt_service_data() -> pd.DataFrame:
     return pd.read_feather(f"{PATHS.raw_debt}/debt_service_ts.feather").filter(
         ["year", "country_name", "Total"], axis=1
     )
@@ -38,7 +59,7 @@ def _clean_debt_data(df: pd.DataFrame) -> pd.DataFrame:
 def debt_chart_country() -> None:
     """Data for the Debt Service key number"""
 
-    df = _read_debt_data()
+    df = _read_debt_service_data()
     df = _clean_debt_data(df)
 
     debt = (
@@ -83,7 +104,7 @@ def debt_chart_country() -> None:
 
 
 def debt_chart_region() -> None:
-    df = _read_debt_data()
+    df = _read_debt_service_data()
     df = _clean_debt_data(df)
 
     debt = (
@@ -93,7 +114,7 @@ def debt_chart_region() -> None:
             id_type="ISO3",
             target_column="gov_exp",
             usd=True,
-            include_estimates=True
+            include_estimates=True,
         )
         .dropna(subset=["value"])
         .groupby(["As of"], as_index=False)[["value", "value_units", "gov_exp"]]
