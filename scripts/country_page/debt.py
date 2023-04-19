@@ -28,29 +28,35 @@ def _update_debt_data() -> None:
     debt.update_data()
 
 
-def _read_debt_service_data() -> pd.DataFrame:
+def _read_debt_service_total_data() -> pd.DataFrame:
     debt = DebtIDS()
 
     service = debt.debt_service_indicators()
 
     debt.load_data(list(service), start_year=2009, end_year=DEBT_YEAR + 5)
 
+    df = debt.get_data()
 
-def _read_debt_service_data() -> pd.DataFrame:
-    return pd.read_feather(f"{PATHS.raw_debt}/debt_service_ts.feather").filter(
-        ["year", "country_name", "Total"], axis=1
+    return (
+        df.query("counterpart_area == 'World'")
+        .groupby(["year", "country"])["value"]
+        .sum()
+        .reset_index()
+        .assign(year=lambda d: d.year.dt.year)
+        .rename(columns={"country": "country_name", "value": "Total"})
     )
 
 
 def _clean_debt_data(df: pd.DataFrame) -> pd.DataFrame:
     return (
-        df.replace("C.A.R", "Central African Republic")
-        .pipe(add_short_names_column, id_column="country_name")
-        .loc[lambda d: d.year == 2022]
+        df.pipe(add_short_names_column, id_column="country_name")
+        .query(f"year == {DEBT_YEAR}")
         .filter(["name_short", "year", "Total"], axis=1)
-        .assign(year=lambda d: d["year"].astype(str) + " estimate")
-        .rename(columns={"year": "As of", "Total": "value"})
-        .assign(value_units=lambda d: d.value * 1e6)
+        .assign(
+            year=lambda d: d["year"].astype(str) + " estimate",
+            value=lambda d: round(d.Total / 1e6, 1),
+        )
+        .rename(columns={"year": "As of", "Total": "value_units"})
         .filter(["name_short", "As of", "indicator", "value", "value_units"], axis=1)
         .pipe(add_iso_codes_column, id_column="name_short", id_type="short_name")
     )
@@ -59,7 +65,7 @@ def _clean_debt_data(df: pd.DataFrame) -> pd.DataFrame:
 def debt_chart_country() -> None:
     """Data for the Debt Service key number"""
 
-    df = _read_debt_service_data()
+    df = _read_debt_service_total_data()
     df = _clean_debt_data(df)
 
     debt = (
@@ -77,6 +83,7 @@ def debt_chart_country() -> None:
             note=lambda d: d.note.round(1), center="", lower="of government spending"
         )
         .filter(["name_short", "As of", "value", "lower", "note", "center"], axis=1)
+        .dropna(subset="note")
     )
 
     # Chart version
@@ -104,7 +111,7 @@ def debt_chart_country() -> None:
 
 
 def debt_chart_region() -> None:
-    df = _read_debt_service_data()
+    df = _read_debt_service_total_data()
     df = _clean_debt_data(df)
 
     debt = (
@@ -145,3 +152,6 @@ def debt_chart_region() -> None:
 
     update_key_number(f"{PATHS.charts}/country_page/overview.json", kn)
     logger.debug("Updated 'overview.json'")
+
+
+debt_chart_country()
