@@ -2,6 +2,7 @@ import pandas as pd
 from bblocks.cleaning_tools.filter import filter_african_countries
 from bblocks.dataframe_tools.add import add_short_names_column, add_iso_codes_column
 from bblocks import set_bblocks_data_path, WorldEconomicOutlook, WFPData, WorldBankData
+from pydeflate import deflate, set_pydeflate_path
 
 from scripts import common
 from scripts.common import WEO_YEAR
@@ -9,6 +10,7 @@ from scripts.config import PATHS
 from scripts.logger import logger
 
 set_bblocks_data_path(PATHS.bblocks_data)
+set_pydeflate_path(PATHS.raw_data)
 
 
 # ------------------------------------------------------------------------------
@@ -468,3 +470,97 @@ def wb_poverty_single_measure() -> None:
     # chart version
     data.to_csv(f"{PATHS.charts}/country_page/poverty_single_measure.csv", index=False)
     logger.debug("Saved live version of 'poverty_single_measure.csv'")
+
+
+def _financial_weo() -> pd.DataFrame:
+    indicators = ["GGX_NGDP"]
+
+    return WorldEconomicOutlook().load_data(indicators).get_data()
+
+
+def _financial_gdp_usd_current() -> pd.DataFrame:
+    indicators = ["NGDPD"]
+
+    return WorldEconomicOutlook().load_data(indicators).get_data()
+
+
+def _financial_wb(update: bool = False) -> pd.DataFrame:
+    wb_indicators = ["DT.ODA.ODAT.CD", "BX.TRF.PWKR.CD.DT", "BX.KLT.DINV.CD.WD"]
+
+    wb = WorldBankData().load_data(wb_indicators)
+
+    if update:
+        wb.update_data(reload_data=True)
+
+    return wb.get_data().rename(columns={"indicator_code": "indicator", "date": "year"})
+
+
+def _financial_gdp_to_usd(df: pd.DataFrame) -> pd.DataFrame:
+    gdp = _financial_gdp_usd_current()
+
+    return (
+        df.merge(
+            gdp.drop("indicator", axis=1),
+            on=["year", "iso_code"],
+            suffixes=("", "_gdp"),
+            how="left",
+        )
+        .assign(value=lambda d: (d.value / 100) * (d.value_gdp * 1e9))
+        .drop("value_gdp", axis=1)
+    )
+
+
+def financial_overview() -> None:
+    indicators = {
+        "GGX_NGDP": "Government Expenditure",
+        "DT.ODA.ODAT.CD": "ODA",
+        "BX.TRF.PWKR.CD.DT": "Remittances",
+        "BX.KLT.DINV.CD.WD": "FDI",
+    }
+
+    order = {
+        "Government Expenditure": 1,
+        "ODA": 2,
+        "Remittances": 3,
+        "FDI": 4,
+    }
+
+    gov_spending = _financial_weo().pipe(_financial_gdp_to_usd)
+    wb_indicators = _financial_wb()
+
+    data = pd.concat([gov_spending, wb_indicators], ignore_index=True)
+
+    data = (
+        data.query(f"year.dt.year >=2008 and year.dt.year <= {WEO_YEAR}")
+        .pipe(
+            deflate,
+            base_year=WEO_YEAR,
+            deflator_source="imf",
+            deflator_method="gdp",
+            exchange_source="imf",
+            exchange_method="implied",
+            date_column="year",
+        )
+        .assign(indicator=lambda d: d.indicator.map(indicators))
+        .pipe(filter_african_countries, id_type="ISO3")
+        .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
+        .drop("iso_code", axis=1)
+        .assign(value=lambda d: round(d.value, 1))
+        .pivot(index=["year", "indicator"], columns="name_short", values="value")
+        .reset_index()
+        .assign(year=lambda d: d.year.dt.year, order=lambda d: d.indicator.map(order))
+        .sort_values(["year", "order"])
+        .drop("order", axis=1)
+        .reset_index(drop=True)
+    )
+
+    # chart version
+    data.to_csv(
+        f"{PATHS.charts}/country_page/country_financial_overview.csv", index=False
+    )
+
+    # download version
+    data.to_csv(
+        f"{PATHS.download}/country_page/country_financial_overview_download.csv",
+        index=False,
+    )
