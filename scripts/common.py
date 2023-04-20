@@ -9,6 +9,7 @@ from scripts.config import PATHS
 
 WEO_YEAR: int = 2023
 CAUSES_OF_DEATH_YEAR = 2019
+DEBT_YEAR: int = 2023
 
 
 def get_full_africa_iso3() -> list:
@@ -44,7 +45,6 @@ def sort_name_first(
     date_column: str,
     keep_current_sorting=True,
 ):
-
     if not keep_current_sorting:
         df = df.sort_values([date_column, name_column], ascending=[True, False])
 
@@ -92,7 +92,6 @@ def read_wb_regions(region_code: str) -> dict:
 
 
 def regions() -> dict:
-
     north_africa_wb = [
         "DZA",
         "EGY",
@@ -134,7 +133,6 @@ def regions() -> dict:
 
 
 def region_names() -> dict:
-
     return {
         "NAF_WB": "North Africa (WB)",
         "SSA_WB": "Sub-Saharan Africa (WB)",
@@ -177,7 +175,6 @@ def df_to_key_number(
     id_column: str,
     value_columns: str | list[str],
 ) -> dict:
-
     if isinstance(value_columns, str):
         value_columns = [value_columns]
 
