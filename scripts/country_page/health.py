@@ -3,7 +3,7 @@ import pandas as pd
 from bblocks import set_bblocks_data_path
 from bblocks.cleaning_tools.clean import convert_id, format_number
 from bblocks.cleaning_tools.filter import filter_african_countries, filter_latest_by
-from bblocks.dataframe_tools.add import add_short_names_column
+from bblocks.dataframe_tools.add import add_iso_codes_column, add_short_names_column
 from bblocks.import_tools.world_bank import WorldBankData
 
 from scripts import common
@@ -267,12 +267,13 @@ def life_expectancy_chart() -> None:
     # dynamic version
     kn = (
         df.sort_values("year")
+        .pipe(add_iso_codes_column, id_column="name_short", id_type="regex")
         .dropna(subset=["value"])
-        .drop_duplicates("name_short", keep="last")
+        .drop_duplicates("iso_code", keep="last")
         .assign(value=lambda d: round(d.value, 1))
         .pipe(
             common.df_to_key_number,
-            id_column="name_short",
+            id_column="iso_code",
             indicator_name="life_expectancy",
             value_columns="value",
         )

@@ -1,1152 +1,1152 @@
 {
     "gdp_growth": {
-        "Angola": {
+        "DZA": {
+            "value": "2.6%",
+            "year": "2023",
+            "info": ""
+        },
+        "AGO": {
             "value": "3.4%",
             "year": "2023",
             "info": ""
         },
-        "Burundi": {
+        "BEN": {
+            "value": "6.2%",
+            "year": "2023",
+            "info": ""
+        },
+        "BWA": {
+            "value": "4.0%",
+            "year": "2023",
+            "info": ""
+        },
+        "IOT": {
+            "info": "display-none"
+        },
+        "BFA": {
+            "value": "4.8%",
+            "year": "2023",
+            "info": ""
+        },
+        "BDI": {
             "value": "4.1%",
             "year": "2023",
             "info": ""
         },
-        "Benin": {
-            "value": "6.2%",
-            "year": "2023",
-            "info": ""
-        },
-        "Burkina Faso": {
+        "CPV": {
             "value": "4.8%",
             "year": "2023",
             "info": ""
         },
-        "Botswana": {
-            "value": "4.0%",
+        "CMR": {
+            "value": "4.6%",
             "year": "2023",
             "info": ""
         },
-        "Central African Republic": {
+        "CAF": {
             "value": "3.0%",
             "year": "2023",
             "info": ""
         },
-        "Cote d'Ivoire": {
+        "TCD": {
+            "value": "3.4%",
+            "year": "2023",
+            "info": ""
+        },
+        "COM": {
+            "value": "3.4%",
+            "year": "2023",
+            "info": ""
+        },
+        "COG": {
+            "value": "4.6%",
+            "year": "2023",
+            "info": ""
+        },
+        "CIV": {
             "value": "6.4%",
             "year": "2023",
             "info": ""
         },
-        "Cameroon": {
-            "value": "4.6%",
-            "year": "2023",
-            "info": ""
-        },
-        "DR Congo": {
-            "value": "6.7%",
-            "year": "2023",
-            "info": ""
-        },
-        "Congo Republic": {
-            "value": "4.6%",
-            "year": "2023",
-            "info": ""
-        },
-        "Comoros": {
-            "value": "3.4%",
-            "year": "2023",
-            "info": ""
-        },
-        "Cabo Verde": {
-            "value": "4.8%",
-            "year": "2023",
-            "info": ""
-        },
-        "Djibouti": {
+        "DJI": {
             "value": "5.0%",
             "year": "2023",
             "info": ""
         },
-        "Algeria": {
-            "value": "2.6%",
-            "year": "2023",
-            "info": ""
-        },
-        "Egypt": {
-            "value": "4.4%",
-            "year": "2023",
-            "info": ""
-        },
-        "Eritrea": {
-            "value": "2.8%",
-            "year": "2023",
-            "info": ""
-        },
-        "Ethiopia": {
-            "value": "5.3%",
-            "year": "2023",
-            "info": ""
-        },
-        "Gabon": {
-            "value": "3.7%",
-            "year": "2023",
-            "info": ""
-        },
-        "Ghana": {
-            "value": "2.8%",
-            "year": "2023",
-            "info": ""
-        },
-        "Guinea": {
-            "value": "5.1%",
-            "year": "2023",
-            "info": ""
-        },
-        "Gambia": {
-            "value": "6.0%",
-            "year": "2023",
-            "info": ""
-        },
-        "Guinea-Bissau": {
-            "value": "4.5%",
-            "year": "2023",
-            "info": ""
-        },
-        "Equatorial Guinea": {
-            "value": "3.1%",
-            "year": "2023",
-            "info": ""
-        },
-        "Kenya": {
-            "value": "5.1%",
-            "year": "2023",
-            "info": ""
-        },
-        "Liberia": {
-            "value": "4.2%",
-            "year": "2023",
-            "info": ""
-        },
-        "Libya": {
-            "value": "17.9%",
-            "year": "2023",
-            "info": ""
-        },
-        "Lesotho": {
-            "value": "1.6%",
-            "year": "2023",
-            "info": ""
-        },
-        "Morocco": {
-            "value": "3.1%",
-            "year": "2023",
-            "info": ""
-        },
-        "Madagascar": {
-            "value": "5.2%",
-            "year": "2023",
-            "info": ""
-        },
-        "Mali": {
-            "value": "5.3%",
-            "year": "2023",
-            "info": ""
-        },
-        "Mozambique": {
-            "value": "4.9%",
-            "year": "2023",
-            "info": ""
-        },
-        "Mauritania": {
-            "value": "4.8%",
-            "year": "2023",
-            "info": ""
-        },
-        "Mauritius": {
-            "value": "5.4%",
-            "year": "2023",
-            "info": ""
-        },
-        "Malawi": {
-            "value": "2.5%",
-            "year": "2023",
-            "info": ""
-        },
-        "Namibia": {
-            "value": "3.2%",
-            "year": "2023",
-            "info": ""
-        },
-        "Niger": {
-            "value": "7.3%",
-            "year": "2023",
-            "info": ""
-        },
-        "Nigeria": {
-            "value": "3.0%",
-            "year": "2023",
-            "info": ""
-        },
-        "Rwanda": {
+        "COD": {
             "value": "6.7%",
             "year": "2023",
             "info": ""
         },
-        "Sudan": {
-            "value": "2.6%",
+        "EGY": {
+            "value": "4.4%",
             "year": "2023",
             "info": ""
         },
-        "Senegal": {
-            "value": "8.1%",
-            "year": "2023",
-            "info": ""
-        },
-        "Sierra Leone": {
-            "value": "3.3%",
-            "year": "2023",
-            "info": ""
-        },
-        "Somalia": {
+        "GNQ": {
             "value": "3.1%",
             "year": "2023",
             "info": ""
         },
-        "South Sudan": {
-            "value": "5.6%",
-            "year": "2023",
-            "info": ""
-        },
-        "Sao Tome and Principe": {
-            "value": "2.6%",
-            "year": "2023",
-            "info": ""
-        },
-        "Eswatini": {
-            "value": "1.8%",
-            "year": "2023",
-            "info": ""
-        },
-        "Seychelles": {
-            "value": "5.2%",
-            "year": "2023",
-            "info": ""
-        },
-        "Chad": {
-            "value": "3.4%",
-            "year": "2023",
-            "info": ""
-        },
-        "Togo": {
-            "value": "6.2%",
-            "year": "2023",
-            "info": ""
-        },
-        "Tunisia": {
-            "value": "1.6%",
-            "year": "2023",
-            "info": ""
-        },
-        "Tanzania": {
-            "value": "5.2%",
-            "year": "2023",
-            "info": ""
-        },
-        "Uganda": {
-            "value": "5.9%",
-            "year": "2023",
-            "info": ""
-        },
-        "South Africa": {
-            "value": "1.1%",
-            "year": "2023",
-            "info": ""
-        },
-        "Zambia": {
-            "value": "4.0%",
-            "year": "2023",
-            "info": ""
-        },
-        "Zimbabwe": {
+        "ERI": {
             "value": "2.8%",
             "year": "2023",
             "info": ""
         },
-        "British Indian Ocean Territory": {
+        "SWZ": {
+            "value": "1.8%",
+            "year": "2023",
+            "info": ""
+        },
+        "ETH": {
+            "value": "5.3%",
+            "year": "2023",
+            "info": ""
+        },
+        "ATF": {
             "info": "display-none"
         },
-        "French Southern Territories": {
+        "GAB": {
+            "value": "3.7%",
+            "year": "2023",
+            "info": ""
+        },
+        "GMB": {
+            "value": "6.0%",
+            "year": "2023",
+            "info": ""
+        },
+        "GHA": {
+            "value": "2.8%",
+            "year": "2023",
+            "info": ""
+        },
+        "GIN": {
+            "value": "5.1%",
+            "year": "2023",
+            "info": ""
+        },
+        "GNB": {
+            "value": "4.5%",
+            "year": "2023",
+            "info": ""
+        },
+        "KEN": {
+            "value": "5.1%",
+            "year": "2023",
+            "info": ""
+        },
+        "LSO": {
+            "value": "1.6%",
+            "year": "2023",
+            "info": ""
+        },
+        "LBR": {
+            "value": "4.2%",
+            "year": "2023",
+            "info": ""
+        },
+        "LBY": {
+            "value": "17.9%",
+            "year": "2023",
+            "info": ""
+        },
+        "MDG": {
+            "value": "5.2%",
+            "year": "2023",
+            "info": ""
+        },
+        "MWI": {
+            "value": "2.5%",
+            "year": "2023",
+            "info": ""
+        },
+        "MLI": {
+            "value": "5.3%",
+            "year": "2023",
+            "info": ""
+        },
+        "MRT": {
+            "value": "4.8%",
+            "year": "2023",
+            "info": ""
+        },
+        "MUS": {
+            "value": "5.4%",
+            "year": "2023",
+            "info": ""
+        },
+        "MYT": {
             "info": "display-none"
         },
-        "Mayotte": {
+        "MAR": {
+            "value": "3.1%",
+            "year": "2023",
+            "info": ""
+        },
+        "MOZ": {
+            "value": "4.9%",
+            "year": "2023",
+            "info": ""
+        },
+        "NAM": {
+            "value": "3.2%",
+            "year": "2023",
+            "info": ""
+        },
+        "NER": {
+            "value": "7.3%",
+            "year": "2023",
+            "info": ""
+        },
+        "NGA": {
+            "value": "3.0%",
+            "year": "2023",
+            "info": ""
+        },
+        "REU": {
             "info": "display-none"
         },
-        "Reunion": {
+        "RWA": {
+            "value": "6.7%",
+            "year": "2023",
+            "info": ""
+        },
+        "STP": {
+            "value": "2.6%",
+            "year": "2023",
+            "info": ""
+        },
+        "SEN": {
+            "value": "8.1%",
+            "year": "2023",
+            "info": ""
+        },
+        "SYC": {
+            "value": "5.2%",
+            "year": "2023",
+            "info": ""
+        },
+        "SLE": {
+            "value": "3.3%",
+            "year": "2023",
+            "info": ""
+        },
+        "SOM": {
+            "value": "3.1%",
+            "year": "2023",
+            "info": ""
+        },
+        "ZAF": {
+            "value": "1.1%",
+            "year": "2023",
+            "info": ""
+        },
+        "SSD": {
+            "value": "5.6%",
+            "year": "2023",
+            "info": ""
+        },
+        "SHN": {
             "info": "display-none"
         },
-        "St. Helena": {
+        "SDN": {
+            "value": "2.6%",
+            "year": "2023",
+            "info": ""
+        },
+        "TZA": {
+            "value": "5.2%",
+            "year": "2023",
+            "info": ""
+        },
+        "TGO": {
+            "value": "6.2%",
+            "year": "2023",
+            "info": ""
+        },
+        "TUN": {
+            "value": "1.6%",
+            "year": "2023",
+            "info": ""
+        },
+        "UGA": {
+            "value": "5.9%",
+            "year": "2023",
+            "info": ""
+        },
+        "ESH": {
             "info": "display-none"
         },
-        "Western Sahara": {
-            "info": "display-none"
+        "ZMB": {
+            "value": "4.0%",
+            "year": "2023",
+            "info": ""
+        },
+        "ZWE": {
+            "value": "2.8%",
+            "year": "2023",
+            "info": ""
         }
     },
     "poverty": {
-        "Central African Republic": {
-            "value": "61.9",
-            "Year": "2008",
-            "info": ""
-        },
-        "Congo Republic": {
-            "value": "35.4",
-            "Year": "2011",
-            "info": ""
-        },
-        "Algeria": {
-            "value": "0.5",
-            "Year": "2011",
-            "info": ""
-        },
-        "DR Congo": {
-            "value": "69.7",
-            "Year": "2012",
-            "info": ""
-        },
-        "Madagascar": {
-            "value": "80.7",
-            "Year": "2012",
-            "info": ""
-        },
-        "Morocco": {
-            "value": "1.4",
-            "Year": "2013",
-            "info": ""
-        },
-        "Burundi": {
-            "value": "65.1",
-            "Year": "2013",
-            "info": ""
-        },
-        "Comoros": {
-            "value": "18.6",
-            "Year": "2014",
-            "info": ""
-        },
-        "Mauritania": {
-            "value": "6.5",
-            "Year": "2014",
-            "info": ""
-        },
-        "South Africa": {
-            "value": "20.5",
-            "Year": "2014",
-            "info": ""
-        },
-        "Sudan": {
-            "value": "15.3",
-            "Year": "2014",
-            "info": ""
-        },
-        "Cameroon": {
-            "value": "25.7",
-            "Year": "2014",
-            "info": ""
-        },
-        "Mozambique": {
-            "value": "64.6",
-            "Year": "2014",
-            "info": ""
-        },
-        "Kenya": {
-            "value": "29.4",
-            "Year": "2015",
-            "info": ""
-        },
-        "Gambia": {
-            "value": "13.4",
-            "Year": "2015",
-            "info": ""
-        },
-        "Tunisia": {
-            "value": "0.1",
-            "Year": "2015",
-            "info": ""
-        },
-        "Ethiopia": {
-            "value": "27.0",
-            "Year": "2015",
-            "info": ""
-        },
-        "Namibia": {
-            "value": "15.6",
-            "Year": "2015",
-            "info": ""
-        },
-        "Zambia": {
-            "value": "61.4",
-            "Year": "2015",
-            "info": ""
-        },
-        "Cabo Verde": {
-            "value": "4.6",
-            "Year": "2015",
-            "info": ""
-        },
-        "Botswana": {
-            "value": "15.4",
-            "Year": "2015",
-            "info": ""
-        },
-        "Rwanda": {
-            "value": "52.0",
-            "Year": "2016",
-            "info": ""
-        },
-        "Ghana": {
-            "value": "25.3",
-            "Year": "2016",
-            "info": ""
-        },
-        "South Sudan": {
-            "value": "67.3",
-            "Year": "2016",
-            "info": ""
-        },
-        "Liberia": {
-            "value": "27.6",
-            "Year": "2016",
-            "info": ""
-        },
-        "Eswatini": {
-            "value": "36.1",
-            "Year": "2016",
-            "info": ""
-        },
-        "Djibouti": {
-            "value": "19.1",
-            "Year": "2017",
-            "info": ""
-        },
-        "Sao Tome and Principe": {
-            "value": "15.6",
-            "Year": "2017",
-            "info": ""
-        },
-        "Somalia": {
-            "value": "70.7",
-            "Year": "2017",
-            "info": ""
-        },
-        "Mauritius": {
-            "value": "0.1",
-            "Year": "2017",
-            "info": ""
-        },
-        "Gabon": {
-            "value": "2.5",
-            "Year": "2017",
-            "info": ""
-        },
-        "Egypt": {
-            "value": "2.5",
-            "Year": "2017",
-            "info": ""
-        },
-        "Lesotho": {
-            "value": "32.4",
-            "Year": "2017",
-            "info": ""
-        },
-        "Guinea": {
-            "value": "13.8",
-            "Year": "2018",
-            "info": ""
-        },
-        "Sierra Leone": {
-            "value": "26.1",
-            "Year": "2018",
-            "info": ""
-        },
-        "Cote d'Ivoire": {
-            "value": "11.4",
-            "Year": "2018",
-            "info": ""
-        },
-        "Chad": {
-            "value": "30.9",
-            "Year": "2018",
-            "info": ""
-        },
-        "Nigeria": {
-            "value": "30.9",
-            "Year": "2018",
-            "info": ""
-        },
-        "Niger": {
-            "value": "50.6",
-            "Year": "2018",
-            "info": ""
-        },
-        "Senegal": {
-            "value": "9.3",
-            "Year": "2018",
-            "info": ""
-        },
-        "Seychelles": {
-            "value": "0.5",
-            "Year": "2018",
-            "info": ""
-        },
-        "Togo": {
-            "value": "28.1",
-            "Year": "2018",
-            "info": ""
-        },
-        "Benin": {
-            "value": "19.9",
-            "Year": "2018",
-            "info": ""
-        },
-        "Angola": {
-            "value": "31.1",
-            "Year": "2018",
-            "info": ""
-        },
-        "Guinea-Bissau": {
-            "value": "21.7",
-            "Year": "2018",
-            "info": ""
-        },
-        "Mali": {
-            "value": "14.8",
-            "Year": "2018",
-            "info": ""
-        },
-        "Burkina Faso": {
-            "value": "30.5",
-            "Year": "2018",
-            "info": ""
-        },
-        "Tanzania": {
-            "value": "44.9",
-            "Year": "2018",
-            "info": ""
-        },
-        "Zimbabwe": {
-            "value": "39.8",
-            "Year": "2019",
-            "info": ""
-        },
         "Sub-Saharan Africa (WB)": {
             "value": "35.1",
             "Year": "2019"
-        },
-        "Uganda": {
-            "value": "42.2",
-            "Year": "2019",
-            "info": ""
         },
         "World": {
             "value": "8.4",
             "Year": "2019"
         },
-        "Malawi": {
+        "DZA": {
+            "value": "0.5",
+            "Year": "2011",
+            "info": ""
+        },
+        "AGO": {
+            "value": "31.1",
+            "Year": "2018",
+            "info": ""
+        },
+        "BEN": {
+            "value": "19.9",
+            "Year": "2018",
+            "info": ""
+        },
+        "BWA": {
+            "value": "15.4",
+            "Year": "2015",
+            "info": ""
+        },
+        "IOT": {
+            "info": "display-none"
+        },
+        "BFA": {
+            "value": "30.5",
+            "Year": "2018",
+            "info": ""
+        },
+        "BDI": {
+            "value": "65.1",
+            "Year": "2013",
+            "info": ""
+        },
+        "CPV": {
+            "value": "4.6",
+            "Year": "2015",
+            "info": ""
+        },
+        "CMR": {
+            "value": "25.7",
+            "Year": "2014",
+            "info": ""
+        },
+        "CAF": {
+            "value": "61.9",
+            "Year": "2008",
+            "info": ""
+        },
+        "TCD": {
+            "value": "30.9",
+            "Year": "2018",
+            "info": ""
+        },
+        "COM": {
+            "value": "18.6",
+            "Year": "2014",
+            "info": ""
+        },
+        "COG": {
+            "value": "35.4",
+            "Year": "2011",
+            "info": ""
+        },
+        "CIV": {
+            "value": "11.4",
+            "Year": "2018",
+            "info": ""
+        },
+        "DJI": {
+            "value": "19.1",
+            "Year": "2017",
+            "info": ""
+        },
+        "COD": {
+            "value": "69.7",
+            "Year": "2012",
+            "info": ""
+        },
+        "EGY": {
+            "value": "2.5",
+            "Year": "2017",
+            "info": ""
+        },
+        "GNQ": {
+            "info": "display-none"
+        },
+        "ERI": {
+            "info": "display-none"
+        },
+        "SWZ": {
+            "value": "36.1",
+            "Year": "2016",
+            "info": ""
+        },
+        "ETH": {
+            "value": "27.0",
+            "Year": "2015",
+            "info": ""
+        },
+        "ATF": {
+            "info": "display-none"
+        },
+        "GAB": {
+            "value": "2.5",
+            "Year": "2017",
+            "info": ""
+        },
+        "GMB": {
+            "value": "13.4",
+            "Year": "2015",
+            "info": ""
+        },
+        "GHA": {
+            "value": "25.3",
+            "Year": "2016",
+            "info": ""
+        },
+        "GIN": {
+            "value": "13.8",
+            "Year": "2018",
+            "info": ""
+        },
+        "GNB": {
+            "value": "21.7",
+            "Year": "2018",
+            "info": ""
+        },
+        "KEN": {
+            "value": "29.4",
+            "Year": "2015",
+            "info": ""
+        },
+        "LSO": {
+            "value": "32.4",
+            "Year": "2017",
+            "info": ""
+        },
+        "LBR": {
+            "value": "27.6",
+            "Year": "2016",
+            "info": ""
+        },
+        "LBY": {
+            "info": "display-none"
+        },
+        "MDG": {
+            "value": "80.7",
+            "Year": "2012",
+            "info": ""
+        },
+        "MWI": {
             "value": "70.1",
             "Year": "2019",
             "info": ""
         },
-        "British Indian Ocean Territory": {
+        "MLI": {
+            "value": "14.8",
+            "Year": "2018",
+            "info": ""
+        },
+        "MRT": {
+            "value": "6.5",
+            "Year": "2014",
+            "info": ""
+        },
+        "MUS": {
+            "value": "0.1",
+            "Year": "2017",
+            "info": ""
+        },
+        "MYT": {
             "info": "display-none"
         },
-        "Equatorial Guinea": {
+        "MAR": {
+            "value": "1.4",
+            "Year": "2013",
+            "info": ""
+        },
+        "MOZ": {
+            "value": "64.6",
+            "Year": "2014",
+            "info": ""
+        },
+        "NAM": {
+            "value": "15.6",
+            "Year": "2015",
+            "info": ""
+        },
+        "NER": {
+            "value": "50.6",
+            "Year": "2018",
+            "info": ""
+        },
+        "NGA": {
+            "value": "30.9",
+            "Year": "2018",
+            "info": ""
+        },
+        "REU": {
             "info": "display-none"
         },
-        "Eritrea": {
+        "RWA": {
+            "value": "52.0",
+            "Year": "2016",
+            "info": ""
+        },
+        "STP": {
+            "value": "15.6",
+            "Year": "2017",
+            "info": ""
+        },
+        "SEN": {
+            "value": "9.3",
+            "Year": "2018",
+            "info": ""
+        },
+        "SYC": {
+            "value": "0.5",
+            "Year": "2018",
+            "info": ""
+        },
+        "SLE": {
+            "value": "26.1",
+            "Year": "2018",
+            "info": ""
+        },
+        "SOM": {
+            "value": "70.7",
+            "Year": "2017",
+            "info": ""
+        },
+        "ZAF": {
+            "value": "20.5",
+            "Year": "2014",
+            "info": ""
+        },
+        "SSD": {
+            "value": "67.3",
+            "Year": "2016",
+            "info": ""
+        },
+        "SHN": {
             "info": "display-none"
         },
-        "French Southern Territories": {
+        "SDN": {
+            "value": "15.3",
+            "Year": "2014",
+            "info": ""
+        },
+        "TZA": {
+            "value": "44.9",
+            "Year": "2018",
+            "info": ""
+        },
+        "TGO": {
+            "value": "28.1",
+            "Year": "2018",
+            "info": ""
+        },
+        "TUN": {
+            "value": "0.1",
+            "Year": "2015",
+            "info": ""
+        },
+        "UGA": {
+            "value": "42.2",
+            "Year": "2019",
+            "info": ""
+        },
+        "ESH": {
             "info": "display-none"
         },
-        "Libya": {
-            "info": "display-none"
+        "ZMB": {
+            "value": "61.4",
+            "Year": "2015",
+            "info": ""
         },
-        "Mayotte": {
-            "info": "display-none"
-        },
-        "Reunion": {
-            "info": "display-none"
-        },
-        "St. Helena": {
-            "info": "display-none"
-        },
-        "Western Sahara": {
-            "info": "display-none"
+        "ZWE": {
+            "value": "39.8",
+            "Year": "2019",
+            "info": ""
         }
     },
     "insufficient_food": {
-        "Algeria": {
+        "DZA": {
             "value": "4,737,523",
             "date": "26 April",
             "info": ""
         },
-        "Angola": {
+        "AGO": {
             "value": "4,266,801",
             "date": "26 April",
             "info": ""
         },
-        "Benin": {
+        "BEN": {
             "value": "4,917,495",
             "date": "11 January",
             "info": ""
         },
-        "Botswana": {
+        "BWA": {
             "value": "250,326",
             "date": "26 April",
             "info": ""
         },
-        "Burkina Faso": {
+        "IOT": {
+            "info": "display-none"
+        },
+        "BFA": {
             "value": "11,062,318",
             "date": "26 April",
             "info": ""
         },
-        "Burundi": {
+        "BDI": {
             "value": "4,316,772",
             "date": "26 April",
             "info": ""
         },
-        "Cabo Verde": {
+        "CPV": {
             "value": "92,667",
             "date": "26 April",
             "info": ""
         },
-        "Cameroon": {
+        "CMR": {
             "value": "9,341,925",
             "date": "26 April",
             "info": ""
         },
-        "Central African Republic": {
+        "CAF": {
             "value": "1,554,609",
             "date": "26 April",
             "info": ""
         },
-        "Chad": {
+        "TCD": {
             "value": "8,463,560",
             "date": "26 April",
             "info": ""
         },
-        "Comoros": {
+        "COM": {
             "value": "178,867",
             "date": "26 April",
             "info": ""
         },
-        "Congo Republic": {
+        "COG": {
             "value": "2,826,380",
             "date": "26 April",
             "info": ""
         },
-        "Cote d'Ivoire": {
+        "CIV": {
             "value": "3,710,803",
             "date": "26 April",
             "info": ""
         },
-        "DR Congo": {
-            "value": "46,610,741",
-            "date": "26 April",
-            "info": ""
-        },
-        "Djibouti": {
+        "DJI": {
             "value": "173,759",
             "date": "26 April",
             "info": ""
         },
-        "Egypt": {
+        "COD": {
+            "value": "46,610,741",
+            "date": "26 April",
+            "info": ""
+        },
+        "EGY": {
             "value": "11,773,139",
             "date": "26 April",
             "info": ""
         },
-        "Eswatini": {
+        "GNQ": {
+            "info": "display-none"
+        },
+        "ERI": {
+            "info": "display-none"
+        },
+        "SWZ": {
             "value": "274,132",
             "date": "26 April",
             "info": ""
         },
-        "Ethiopia": {
+        "ETH": {
             "value": "23,382,870",
             "date": "26 April",
             "info": ""
         },
-        "Gambia": {
+        "ATF": {
+            "info": "display-none"
+        },
+        "GAB": {
+            "info": "display-none"
+        },
+        "GMB": {
             "value": "600,152",
             "date": "26 April",
             "info": ""
         },
-        "Ghana": {
+        "GHA": {
             "value": "7,711,761",
             "date": "26 April",
             "info": ""
         },
-        "Guinea": {
+        "GIN": {
             "value": "5,654,473",
             "date": "26 April",
             "info": ""
         },
-        "Guinea-Bissau": {
+        "GNB": {
             "value": "641,792",
             "date": "26 April",
             "info": ""
         },
-        "Kenya": {
+        "KEN": {
             "value": "12,719,046",
             "date": "26 April",
             "info": ""
         },
-        "Lesotho": {
+        "LSO": {
             "value": "871,524",
             "date": "26 April",
             "info": ""
         },
-        "Liberia": {
+        "LBR": {
             "value": "1,783,876",
             "date": "26 April",
             "info": ""
         },
-        "Libya": {
+        "LBY": {
             "value": "1,332,764",
             "date": "26 April",
             "info": ""
         },
-        "Madagascar": {
+        "MDG": {
             "value": "9,331,531",
             "date": "26 April",
             "info": ""
         },
-        "Malawi": {
+        "MWI": {
             "value": "5,640,228",
             "date": "26 April",
             "info": ""
         },
-        "Mali": {
+        "MLI": {
             "value": "13,607,077",
             "date": "26 April",
             "info": ""
         },
-        "Mauritania": {
+        "MRT": {
             "value": "1,321,446",
             "date": "26 April",
             "info": ""
         },
-        "Morocco": {
+        "MUS": {
+            "info": "display-none"
+        },
+        "MYT": {
+            "info": "display-none"
+        },
+        "MAR": {
             "value": "5,050,193",
             "date": "26 April",
             "info": ""
         },
-        "Mozambique": {
+        "MOZ": {
             "value": "8,276,217",
             "date": "26 April",
             "info": ""
         },
-        "Namibia": {
+        "NAM": {
             "value": "411,185",
             "date": "26 April",
             "info": ""
         },
-        "Niger": {
+        "NER": {
             "value": "14,914,776",
             "date": "26 April",
             "info": ""
         },
-        "Nigeria": {
+        "NGA": {
             "value": "66,048,786",
             "date": "26 April",
             "info": ""
         },
-        "Rwanda": {
+        "REU": {
+            "info": "display-none"
+        },
+        "RWA": {
             "value": "3,032,086",
             "date": "26 April",
             "info": ""
         },
-        "Sao Tome and Principe": {
+        "STP": {
             "value": "36,274",
             "date": "26 April",
             "info": ""
         },
-        "Senegal": {
+        "SEN": {
             "value": "3,483,325",
             "date": "26 April",
             "info": ""
         },
-        "Sierra Leone": {
+        "SYC": {
+            "info": "display-none"
+        },
+        "SLE": {
             "value": "3,779,115",
             "date": "26 April",
             "info": ""
         },
-        "Somalia": {
+        "SOM": {
             "value": "14,824,891",
             "date": "26 April",
             "info": ""
         },
-        "South Sudan": {
+        "ZAF": {
+            "info": "display-none"
+        },
+        "SSD": {
             "value": "6,386,569",
             "date": "26 April",
             "info": ""
         },
-        "Sudan": {
+        "SHN": {
+            "info": "display-none"
+        },
+        "SDN": {
             "value": "9,665,440",
             "date": "26 April",
             "info": ""
         },
-        "Tanzania": {
+        "TZA": {
             "value": "5,711,193",
             "date": "26 April",
             "info": ""
         },
-        "Togo": {
+        "TGO": {
             "value": "2,699,311",
             "date": "26 April",
             "info": ""
         },
-        "Tunisia": {
+        "TUN": {
             "value": "1,392,604",
             "date": "26 April",
             "info": ""
         },
-        "Uganda": {
+        "UGA": {
             "value": "15,708,083",
             "date": "26 April",
             "info": ""
         },
-        "Zambia": {
+        "ESH": {
+            "info": "display-none"
+        },
+        "ZMB": {
             "value": "3,701,501",
             "date": "25 April",
             "info": ""
         },
-        "Zimbabwe": {
+        "ZWE": {
             "value": "3,119,519",
             "date": "23 April",
             "info": ""
-        },
-        "British Indian Ocean Territory": {
-            "info": "display-none"
-        },
-        "Equatorial Guinea": {
-            "info": "display-none"
-        },
-        "Eritrea": {
-            "info": "display-none"
-        },
-        "French Southern Territories": {
-            "info": "display-none"
-        },
-        "Gabon": {
-            "info": "display-none"
-        },
-        "Mauritius": {
-            "info": "display-none"
-        },
-        "Mayotte": {
-            "info": "display-none"
-        },
-        "Reunion": {
-            "info": "display-none"
-        },
-        "Seychelles": {
-            "info": "display-none"
-        },
-        "South Africa": {
-            "info": "display-none"
-        },
-        "St. Helena": {
-            "info": "display-none"
-        },
-        "Western Sahara": {
-            "info": "display-none"
         }
     },
     "vaccination": {
-        "Angola": {
-            "value": "24.5",
-            "date": "16 April",
-            "info": ""
-        },
-        "Burundi": {
-            "value": "0.3",
-            "date": "16 April",
-            "info": ""
-        },
-        "Benin": {
-            "value": "20.5",
-            "date": "18 December",
-            "info": ""
-        },
-        "Burkina Faso": {
-            "value": "18.2",
-            "date": "19 March",
-            "info": ""
-        },
-        "Botswana": {
-            "value": "63.1",
-            "date": "09 April",
-            "info": ""
-        },
-        "Central African Republic": {
-            "value": "40.6",
-            "date": "26 March",
-            "info": ""
-        },
-        "Cote d'Ivoire": {
-            "value": "43.2",
-            "date": "19 February",
-            "info": ""
-        },
-        "Cameroon": {
-            "value": "11.1",
-            "date": "16 April",
-            "info": ""
-        },
-        "DR Congo": {
-            "value": "13.0",
-            "date": "16 April",
-            "info": ""
-        },
-        "Congo Republic": {
-            "value": "11.0",
-            "date": "31 July",
-            "info": ""
-        },
-        "Comoros": {
-            "value": "47.4",
-            "date": "02 October",
-            "info": ""
-        },
-        "Cabo Verde": {
-            "value": "52.0",
-            "date": "25 September",
-            "info": ""
-        },
-        "Djibouti": {
-            "value": "31.4",
-            "date": "18 April",
-            "info": ""
-        },
-        "Algeria": {
+        "DZA": {
             "value": "14.4",
             "date": "04 September",
             "info": ""
         },
-        "Egypt": {
-            "value": "37.9",
-            "date": "09 April",
-            "info": ""
-        },
-        "Ethiopia": {
-            "value": "30.4",
-            "date": "26 March",
-            "info": ""
-        },
-        "Gabon": {
-            "value": "10.8",
-            "date": "05 February",
-            "info": ""
-        },
-        "Ghana": {
-            "value": "30.4",
-            "date": "26 March",
-            "info": ""
-        },
-        "Guinea": {
-            "value": "34.1",
-            "date": "02 April",
-            "info": ""
-        },
-        "Gambia": {
-            "value": "19.9",
-            "date": "19 March",
-            "info": ""
-        },
-        "Guinea-Bissau": {
-            "value": "25.3",
+        "AGO": {
+            "value": "24.5",
             "date": "16 April",
             "info": ""
         },
-        "Equatorial Guinea": {
-            "value": "12.8",
-            "date": "24 July",
-            "info": ""
-        },
-        "Kenya": {
+        "BEN": {
             "value": "20.5",
-            "date": "02 April",
+            "date": "18 December",
             "info": ""
         },
-        "Liberia": {
-            "value": "70.4",
-            "date": "11 December",
+        "BWA": {
+            "value": "63.1",
+            "date": "09 April",
             "info": ""
         },
-        "Libya": {
+        "IOT": {
+            "info": "display-none"
+        },
+        "BFA": {
             "value": "18.2",
-            "date": "16 January",
-            "info": ""
-        },
-        "Lesotho": {
-            "value": "40.7",
             "date": "19 March",
             "info": ""
         },
-        "Morocco": {
-            "value": "62.8",
-            "date": "18 April",
-            "info": ""
-        },
-        "Madagascar": {
-            "value": "8.2",
+        "BDI": {
+            "value": "0.3",
             "date": "16 April",
             "info": ""
         },
-        "Mali": {
-            "value": "15.7",
+        "CPV": {
+            "value": "52.0",
+            "date": "25 September",
+            "info": ""
+        },
+        "CMR": {
+            "value": "11.1",
             "date": "16 April",
             "info": ""
         },
-        "Mozambique": {
-            "value": "56.0",
-            "date": "09 April",
-            "info": ""
-        },
-        "Mauritania": {
-            "value": "32.5",
-            "date": "16 April",
-            "info": ""
-        },
-        "Mauritius": {
-            "value": "83.7",
-            "date": "16 April",
-            "info": ""
-        },
-        "Malawi": {
-            "value": "18.5",
-            "date": "09 April",
-            "info": ""
-        },
-        "Namibia": {
-            "value": "20.9",
-            "date": "16 April",
-            "info": ""
-        },
-        "Niger": {
-            "value": "20.8",
-            "date": "12 March",
-            "info": ""
-        },
-        "Nigeria": {
-            "value": "31.9",
-            "date": "19 March",
-            "info": ""
-        },
-        "Rwanda": {
-            "value": "71.8",
-            "date": "01 January",
-            "info": ""
-        },
-        "Sudan": {
-            "value": "28.6",
-            "date": "02 April",
-            "info": ""
-        },
-        "Senegal": {
-            "value": "8.3",
-            "date": "09 April",
-            "info": ""
-        },
-        "St. Helena": {
-            "value": "65.4",
-            "date": "05 May",
-            "info": ""
-        },
-        "Sierra Leone": {
-            "value": "48.8",
+        "CAF": {
+            "value": "40.6",
             "date": "26 March",
             "info": ""
         },
-        "Somalia": {
-            "value": "37.1",
-            "date": "02 January",
-            "info": ""
-        },
-        "South Sudan": {
-            "value": "37.0",
-            "date": "16 April",
-            "info": ""
-        },
-        "Sao Tome and Principe": {
-            "value": "49.2",
-            "date": "02 April",
-            "info": ""
-        },
-        "Eswatini": {
-            "value": "35.1",
-            "date": "16 April",
-            "info": ""
-        },
-        "Seychelles": {
-            "value": "78.0",
-            "date": "09 April",
-            "info": ""
-        },
-        "Chad": {
+        "TCD": {
             "value": "34.6",
             "date": "02 April",
             "info": ""
         },
-        "Togo": {
-            "value": "17.6",
-            "date": "02 April",
+        "COM": {
+            "value": "47.4",
+            "date": "02 October",
             "info": ""
         },
-        "Tunisia": {
-            "value": "51.8",
+        "COG": {
+            "value": "11.0",
+            "date": "31 July",
+            "info": ""
+        },
+        "CIV": {
+            "value": "43.2",
+            "date": "19 February",
+            "info": ""
+        },
+        "DJI": {
+            "value": "31.4",
             "date": "18 April",
             "info": ""
         },
-        "Tanzania": {
-            "value": "49.1",
-            "date": "12 March",
+        "COD": {
+            "value": "13.0",
+            "date": "16 April",
             "info": ""
         },
-        "Uganda": {
-            "value": "27.6",
-            "date": "26 March",
+        "EGY": {
+            "value": "37.9",
+            "date": "09 April",
             "info": ""
         },
-        "South Africa": {
+        "GNQ": {
+            "value": "12.8",
+            "date": "24 July",
+            "info": ""
+        },
+        "ERI": {
+            "info": "display-none"
+        },
+        "SWZ": {
             "value": "35.1",
             "date": "16 April",
             "info": ""
         },
-        "Zambia": {
+        "ETH": {
+            "value": "30.4",
+            "date": "26 March",
+            "info": ""
+        },
+        "ATF": {
+            "info": "display-none"
+        },
+        "GAB": {
+            "value": "10.8",
+            "date": "05 February",
+            "info": ""
+        },
+        "GMB": {
+            "value": "19.9",
+            "date": "19 March",
+            "info": ""
+        },
+        "GHA": {
+            "value": "30.4",
+            "date": "26 March",
+            "info": ""
+        },
+        "GIN": {
+            "value": "34.1",
+            "date": "02 April",
+            "info": ""
+        },
+        "GNB": {
+            "value": "25.3",
+            "date": "16 April",
+            "info": ""
+        },
+        "KEN": {
+            "value": "20.5",
+            "date": "02 April",
+            "info": ""
+        },
+        "LSO": {
+            "value": "40.7",
+            "date": "19 March",
+            "info": ""
+        },
+        "LBR": {
+            "value": "70.4",
+            "date": "11 December",
+            "info": ""
+        },
+        "LBY": {
+            "value": "18.2",
+            "date": "16 January",
+            "info": ""
+        },
+        "MDG": {
+            "value": "8.2",
+            "date": "16 April",
+            "info": ""
+        },
+        "MWI": {
+            "value": "18.5",
+            "date": "09 April",
+            "info": ""
+        },
+        "MLI": {
+            "value": "15.7",
+            "date": "16 April",
+            "info": ""
+        },
+        "MRT": {
+            "value": "32.5",
+            "date": "16 April",
+            "info": ""
+        },
+        "MUS": {
+            "value": "83.7",
+            "date": "16 April",
+            "info": ""
+        },
+        "MYT": {
+            "info": "display-none"
+        },
+        "MAR": {
+            "value": "62.8",
+            "date": "18 April",
+            "info": ""
+        },
+        "MOZ": {
+            "value": "56.0",
+            "date": "09 April",
+            "info": ""
+        },
+        "NAM": {
+            "value": "20.9",
+            "date": "16 April",
+            "info": ""
+        },
+        "NER": {
+            "value": "20.8",
+            "date": "12 March",
+            "info": ""
+        },
+        "NGA": {
+            "value": "31.9",
+            "date": "19 March",
+            "info": ""
+        },
+        "REU": {
+            "info": "display-none"
+        },
+        "RWA": {
+            "value": "71.8",
+            "date": "01 January",
+            "info": ""
+        },
+        "STP": {
+            "value": "49.2",
+            "date": "02 April",
+            "info": ""
+        },
+        "SEN": {
+            "value": "8.3",
+            "date": "09 April",
+            "info": ""
+        },
+        "SYC": {
+            "value": "78.0",
+            "date": "09 April",
+            "info": ""
+        },
+        "SLE": {
+            "value": "48.8",
+            "date": "26 March",
+            "info": ""
+        },
+        "SOM": {
+            "value": "37.1",
+            "date": "02 January",
+            "info": ""
+        },
+        "ZAF": {
+            "value": "35.1",
+            "date": "16 April",
+            "info": ""
+        },
+        "SSD": {
+            "value": "37.0",
+            "date": "16 April",
+            "info": ""
+        },
+        "SHN": {
+            "value": "65.4",
+            "date": "05 May",
+            "info": ""
+        },
+        "SDN": {
+            "value": "28.6",
+            "date": "02 April",
+            "info": ""
+        },
+        "TZA": {
+            "value": "49.1",
+            "date": "12 March",
+            "info": ""
+        },
+        "TGO": {
+            "value": "17.6",
+            "date": "02 April",
+            "info": ""
+        },
+        "TUN": {
+            "value": "51.8",
+            "date": "18 April",
+            "info": ""
+        },
+        "UGA": {
+            "value": "27.6",
+            "date": "26 March",
+            "info": ""
+        },
+        "ESH": {
+            "info": "display-none"
+        },
+        "ZMB": {
             "value": "43.7",
             "date": "15 March",
             "info": ""
         },
-        "Zimbabwe": {
+        "ZWE": {
             "value": "29.1",
             "date": "09 October",
             "info": ""
-        },
-        "British Indian Ocean Territory": {
-            "info": "display-none"
-        },
-        "Eritrea": {
-            "info": "display-none"
-        },
-        "French Southern Territories": {
-            "info": "display-none"
-        },
-        "Mayotte": {
-            "info": "display-none"
-        },
-        "Reunion": {
-            "info": "display-none"
-        },
-        "Western Sahara": {
-            "info": "display-none"
         }
     },
     "debt_service": {
@@ -1157,16 +1157,6 @@
         "Albania": {
             "debt_service": "541.0",
             "debt_service_share": "8.8"
-        },
-        "Algeria": {
-            "debt_service": "105.2",
-            "debt_service_share": "0.1",
-            "info": ""
-        },
-        "Angola": {
-            "debt_service": "9,482.8",
-            "debt_service_share": "37.1",
-            "info": ""
         },
         "Argentina": {
             "debt_service": "21,439.8",
@@ -1192,11 +1182,6 @@
             "debt_service": "124.9",
             "debt_service_share": "17.0"
         },
-        "Benin": {
-            "debt_service": "732.0",
-            "debt_service_share": "20.3",
-            "info": ""
-        },
         "Bhutan": {
             "debt_service": "248.6",
             "debt_service_share": "27.0"
@@ -1209,11 +1194,6 @@
             "debt_service": "619.5",
             "debt_service_share": "5.6"
         },
-        "Botswana": {
-            "debt_service": "166.1",
-            "debt_service_share": "2.5",
-            "info": ""
-        },
         "Brazil": {
             "debt_service": "22,400.3",
             "debt_service_share": "2.4"
@@ -1222,39 +1202,9 @@
             "debt_service": "1,873.1",
             "debt_service_share": "4.6"
         },
-        "Burkina Faso": {
-            "debt_service": "347.0",
-            "debt_service_share": "5.8",
-            "info": ""
-        },
-        "Burundi": {
-            "debt_service": "61.7",
-            "debt_service_share": "5.5",
-            "info": ""
-        },
-        "Cabo Verde": {
-            "debt_service": "144.0",
-            "debt_service_share": "19.2",
-            "info": ""
-        },
         "Cambodia": {
             "debt_service": "655.8",
             "debt_service_share": "7.9"
-        },
-        "Cameroon": {
-            "debt_service": "1,524.4",
-            "debt_service_share": "19.3",
-            "info": ""
-        },
-        "Central African Republic": {
-            "debt_service": "21.9",
-            "debt_service_share": "4.8",
-            "info": ""
-        },
-        "Chad": {
-            "debt_service": "419.2",
-            "debt_service_share": "19.8",
-            "info": ""
         },
         "China": {
             "debt_service": "48,143.8",
@@ -1264,34 +1214,9 @@
             "debt_service": "10,782.7",
             "debt_service_share": "9.1"
         },
-        "Comoros": {
-            "debt_service": "31.0",
-            "debt_service_share": "11.1",
-            "info": ""
-        },
-        "DR Congo": {
-            "debt_service": "802.0",
-            "debt_service_share": "6.3",
-            "info": ""
-        },
-        "Congo Republic": {
-            "debt_service": "724.8",
-            "debt_service_share": "22.2",
-            "info": ""
-        },
         "Costa Rica": {
             "debt_service": "1,917.4",
             "debt_service_share": "12.9"
-        },
-        "Cote d'Ivoire": {
-            "debt_service": "2,525.5",
-            "debt_service_share": "15.7",
-            "info": ""
-        },
-        "Djibouti": {
-            "debt_service": "236.6",
-            "debt_service_share": "29.9",
-            "info": ""
         },
         "Dominica": {
             "debt_service": "182.5",
@@ -1301,52 +1226,17 @@
             "debt_service": "2,245.5",
             "debt_service_share": "10.4"
         },
-        "Egypt": {
-            "debt_service": "12,641.0",
-            "debt_service_share": "12.4",
-            "info": ""
-        },
         "El Salvador": {
             "debt_service": "2,635.0",
             "debt_service_share": "27.5"
-        },
-        "Eritrea": {
-            "debt_service": "35.5",
-            "debt_service_share": "3.7",
-            "info": ""
-        },
-        "Eswatini": {
-            "debt_service": "55.9",
-            "debt_service_share": "3.8",
-            "info": ""
-        },
-        "Ethiopia": {
-            "debt_service": "2,713.5",
-            "debt_service_share": "14.1",
-            "info": ""
         },
         "Fiji": {
             "debt_service": "94.2",
             "debt_service_share": "5.3"
         },
-        "Gabon": {
-            "debt_service": "622.1",
-            "debt_service_share": "17.8",
-            "info": ""
-        },
-        "Gambia": {
-            "debt_service": "108.6",
-            "debt_service_share": "21.9",
-            "info": ""
-        },
         "Georgia": {
             "debt_service": "549.7",
             "debt_service_share": "6.8"
-        },
-        "Ghana": {
-            "debt_service": "3,018.5",
-            "debt_service_share": "18.5",
-            "info": ""
         },
         "Grenada": {
             "debt_service": "53.2",
@@ -1355,16 +1245,6 @@
         "Guatemala": {
             "debt_service": "716.7",
             "debt_service_share": "5.0"
-        },
-        "Guinea": {
-            "debt_service": "583.7",
-            "debt_service_share": "16.1",
-            "info": ""
-        },
-        "Guinea-Bissau": {
-            "debt_service": "58.1",
-            "debt_service_share": "15.2",
-            "info": ""
         },
         "Guyana": {
             "debt_service": "100.9",
@@ -1402,11 +1282,6 @@
             "debt_service": "2,640.3",
             "debt_service_share": "4.9"
         },
-        "Kenya": {
-            "debt_service": "3,299.4",
-            "debt_service_share": "12.3",
-            "info": ""
-        },
         "Kyrgyz Republic": {
             "debt_service": "306.0",
             "debt_service_share": "6.6"
@@ -1419,44 +1294,9 @@
             "debt_service": "3,863.2",
             "debt_service_share": "80.7"
         },
-        "Lesotho": {
-            "debt_service": "81.8",
-            "debt_service_share": "6.5",
-            "info": ""
-        },
-        "Liberia": {
-            "debt_service": "81.2",
-            "debt_service_share": "6.7",
-            "info": ""
-        },
-        "Madagascar": {
-            "debt_service": "410.7",
-            "debt_service_share": "14.6",
-            "info": ""
-        },
-        "Malawi": {
-            "debt_service": "126.2",
-            "debt_service_share": "4.6",
-            "info": ""
-        },
         "Maldives": {
             "debt_service": "433.0",
             "debt_service_share": "16.2"
-        },
-        "Mali": {
-            "debt_service": "406.0",
-            "debt_service_share": "7.7",
-            "info": ""
-        },
-        "Mauritania": {
-            "debt_service": "608.3",
-            "debt_service_share": "23.0",
-            "info": ""
-        },
-        "Mauritius": {
-            "debt_service": "197.9",
-            "debt_service_share": "4.8",
-            "info": ""
         },
         "Mexico": {
             "debt_service": "31,939.7",
@@ -1474,16 +1314,6 @@
             "debt_service": "316.4",
             "debt_service_share": "10.4"
         },
-        "Morocco": {
-            "debt_service": "4,921.4",
-            "debt_service_share": "11.1",
-            "info": ""
-        },
-        "Mozambique": {
-            "debt_service": "1,694.9",
-            "debt_service_share": "25.5",
-            "info": ""
-        },
         "Myanmar": {
             "debt_service": "1,126.5",
             "debt_service_share": "9.4"
@@ -1495,16 +1325,6 @@
         "Nicaragua": {
             "debt_service": "512.3",
             "debt_service_share": "10.8"
-        },
-        "Niger": {
-            "debt_service": "341.1",
-            "debt_service_share": "8.9",
-            "info": ""
-        },
-        "Nigeria": {
-            "debt_service": "2,902.7",
-            "debt_service_share": "4.0",
-            "info": ""
         },
         "North Macedonia": {
             "debt_service": "1,064.8",
@@ -1530,56 +1350,21 @@
             "debt_service": "21,883.8",
             "debt_service_share": "2.8"
         },
-        "Rwanda": {
-            "debt_service": "255.2",
-            "debt_service_share": "6.8",
-            "info": ""
-        },
         "Samoa": {
             "debt_service": "36.5",
             "debt_service_share": "11.1"
-        },
-        "Sao Tome and Principe": {
-            "debt_service": "8.4",
-            "debt_service_share": "4.8",
-            "info": ""
-        },
-        "Senegal": {
-            "debt_service": "1,344.9",
-            "debt_service_share": "16.5",
-            "info": ""
         },
         "Serbia": {
             "debt_service": "1,381.7",
             "debt_service_share": "4.4"
         },
-        "Sierra Leone": {
-            "debt_service": "71.3",
-            "debt_service_share": "8.1",
-            "info": ""
-        },
         "Solomon Islands": {
             "debt_service": "7.0",
             "debt_service_share": "1.2"
         },
-        "Somalia": {
-            "debt_service": "54.0",
-            "debt_service_share": "7.4",
-            "info": ""
-        },
-        "South Africa": {
-            "debt_service": "6,647.6",
-            "debt_service_share": "5.0",
-            "info": ""
-        },
         "Sri Lanka": {
             "debt_service": "4,606.6",
             "debt_service_share": "32.4"
-        },
-        "Sudan": {
-            "debt_service": "425.2",
-            "debt_service_share": "7.2",
-            "info": ""
         },
         "Syria": {
             "debt_service": "79.9",
@@ -1589,11 +1374,6 @@
             "debt_service": "276.3",
             "debt_service_share": "7.0"
         },
-        "Tanzania": {
-            "debt_service": "1,547.1",
-            "debt_service_share": "10.0",
-            "info": ""
-        },
         "Thailand": {
             "debt_service": "1,266.6",
             "debt_service_share": "0.9"
@@ -1602,19 +1382,9 @@
             "debt_service": "26.6",
             "debt_service_share": "1.6"
         },
-        "Togo": {
-            "debt_service": "226.8",
-            "debt_service_share": "10.6",
-            "info": ""
-        },
         "Tonga": {
             "debt_service": "21.3",
             "debt_service_share": "8.4"
-        },
-        "Tunisia": {
-            "debt_service": "3,427.8",
-            "debt_service_share": "21.5",
-            "info": ""
         },
         "T\u00fcrkiye": {
             "debt_service": "20,824.3",
@@ -1623,11 +1393,6 @@
         "Turkmenistan": {
             "debt_service": "1,203.7",
             "debt_service_share": "14.4"
-        },
-        "Uganda": {
-            "debt_service": "831.7",
-            "debt_service_share": "8.6",
-            "info": ""
         },
         "Ukraine": {
             "debt_service": "4,590.0",
@@ -1649,48 +1414,283 @@
             "debt_service": "578.6",
             "debt_service_share": "28.2"
         },
-        "Zambia": {
+        "DZA": {
+            "debt_service": "105.2",
+            "debt_service_share": "0.1",
+            "info": ""
+        },
+        "AGO": {
+            "debt_service": "9,482.8",
+            "debt_service_share": "37.1",
+            "info": ""
+        },
+        "BEN": {
+            "debt_service": "732.0",
+            "debt_service_share": "20.3",
+            "info": ""
+        },
+        "BWA": {
+            "debt_service": "166.1",
+            "debt_service_share": "2.5",
+            "info": ""
+        },
+        "IOT": {
+            "info": "display-none"
+        },
+        "BFA": {
+            "debt_service": "347.0",
+            "debt_service_share": "5.8",
+            "info": ""
+        },
+        "BDI": {
+            "debt_service": "61.7",
+            "debt_service_share": "5.5",
+            "info": ""
+        },
+        "CPV": {
+            "debt_service": "144.0",
+            "debt_service_share": "19.2",
+            "info": ""
+        },
+        "CMR": {
+            "debt_service": "1,524.4",
+            "debt_service_share": "19.3",
+            "info": ""
+        },
+        "CAF": {
+            "debt_service": "21.9",
+            "debt_service_share": "4.8",
+            "info": ""
+        },
+        "TCD": {
+            "debt_service": "419.2",
+            "debt_service_share": "19.8",
+            "info": ""
+        },
+        "COM": {
+            "debt_service": "31.0",
+            "debt_service_share": "11.1",
+            "info": ""
+        },
+        "COG": {
+            "debt_service": "724.8",
+            "debt_service_share": "22.2",
+            "info": ""
+        },
+        "CIV": {
+            "debt_service": "2,525.5",
+            "debt_service_share": "15.7",
+            "info": ""
+        },
+        "DJI": {
+            "debt_service": "236.6",
+            "debt_service_share": "29.9",
+            "info": ""
+        },
+        "COD": {
+            "debt_service": "802.0",
+            "debt_service_share": "6.3",
+            "info": ""
+        },
+        "EGY": {
+            "debt_service": "12,641.0",
+            "debt_service_share": "12.4",
+            "info": ""
+        },
+        "GNQ": {
+            "info": "display-none"
+        },
+        "ERI": {
+            "debt_service": "35.5",
+            "debt_service_share": "3.7",
+            "info": ""
+        },
+        "SWZ": {
+            "debt_service": "55.9",
+            "debt_service_share": "3.8",
+            "info": ""
+        },
+        "ETH": {
+            "debt_service": "2,713.5",
+            "debt_service_share": "14.1",
+            "info": ""
+        },
+        "ATF": {
+            "info": "display-none"
+        },
+        "GAB": {
+            "debt_service": "622.1",
+            "debt_service_share": "17.8",
+            "info": ""
+        },
+        "GMB": {
+            "debt_service": "108.6",
+            "debt_service_share": "21.9",
+            "info": ""
+        },
+        "GHA": {
+            "debt_service": "3,018.5",
+            "debt_service_share": "18.5",
+            "info": ""
+        },
+        "GIN": {
+            "debt_service": "583.7",
+            "debt_service_share": "16.1",
+            "info": ""
+        },
+        "GNB": {
+            "debt_service": "58.1",
+            "debt_service_share": "15.2",
+            "info": ""
+        },
+        "KEN": {
+            "debt_service": "3,299.4",
+            "debt_service_share": "12.3",
+            "info": ""
+        },
+        "LSO": {
+            "debt_service": "81.8",
+            "debt_service_share": "6.5",
+            "info": ""
+        },
+        "LBR": {
+            "debt_service": "81.2",
+            "debt_service_share": "6.7",
+            "info": ""
+        },
+        "LBY": {
+            "info": "display-none"
+        },
+        "MDG": {
+            "debt_service": "410.7",
+            "debt_service_share": "14.6",
+            "info": ""
+        },
+        "MWI": {
+            "debt_service": "126.2",
+            "debt_service_share": "4.6",
+            "info": ""
+        },
+        "MLI": {
+            "debt_service": "406.0",
+            "debt_service_share": "7.7",
+            "info": ""
+        },
+        "MRT": {
+            "debt_service": "608.3",
+            "debt_service_share": "23.0",
+            "info": ""
+        },
+        "MUS": {
+            "debt_service": "197.9",
+            "debt_service_share": "4.8",
+            "info": ""
+        },
+        "MYT": {
+            "info": "display-none"
+        },
+        "MAR": {
+            "debt_service": "4,921.4",
+            "debt_service_share": "11.1",
+            "info": ""
+        },
+        "MOZ": {
+            "debt_service": "1,694.9",
+            "debt_service_share": "25.5",
+            "info": ""
+        },
+        "NAM": {
+            "info": "display-none"
+        },
+        "NER": {
+            "debt_service": "341.1",
+            "debt_service_share": "8.9",
+            "info": ""
+        },
+        "NGA": {
+            "debt_service": "2,902.7",
+            "debt_service_share": "4.0",
+            "info": ""
+        },
+        "REU": {
+            "info": "display-none"
+        },
+        "RWA": {
+            "debt_service": "255.2",
+            "debt_service_share": "6.8",
+            "info": ""
+        },
+        "STP": {
+            "debt_service": "8.4",
+            "debt_service_share": "4.8",
+            "info": ""
+        },
+        "SEN": {
+            "debt_service": "1,344.9",
+            "debt_service_share": "16.5",
+            "info": ""
+        },
+        "SYC": {
+            "info": "display-none"
+        },
+        "SLE": {
+            "debt_service": "71.3",
+            "debt_service_share": "8.1",
+            "info": ""
+        },
+        "SOM": {
+            "debt_service": "54.0",
+            "debt_service_share": "7.4",
+            "info": ""
+        },
+        "ZAF": {
+            "debt_service": "6,647.6",
+            "debt_service_share": "5.0",
+            "info": ""
+        },
+        "SSD": {
+            "info": "display-none"
+        },
+        "SHN": {
+            "info": "display-none"
+        },
+        "SDN": {
+            "debt_service": "425.2",
+            "debt_service_share": "7.2",
+            "info": ""
+        },
+        "TZA": {
+            "debt_service": "1,547.1",
+            "debt_service_share": "10.0",
+            "info": ""
+        },
+        "TGO": {
+            "debt_service": "226.8",
+            "debt_service_share": "10.6",
+            "info": ""
+        },
+        "TUN": {
+            "debt_service": "3,427.8",
+            "debt_service_share": "21.5",
+            "info": ""
+        },
+        "UGA": {
+            "debt_service": "831.7",
+            "debt_service_share": "8.6",
+            "info": ""
+        },
+        "ESH": {
+            "info": "display-none"
+        },
+        "ZMB": {
             "debt_service": "1,621.5",
             "debt_service_share": "19.6",
             "info": ""
         },
-        "Zimbabwe": {
+        "ZWE": {
             "debt_service": "158.3",
             "debt_service_share": "2.9",
             "info": ""
-        },
-        "British Indian Ocean Territory": {
-            "info": "display-none"
-        },
-        "Equatorial Guinea": {
-            "info": "display-none"
-        },
-        "French Southern Territories": {
-            "info": "display-none"
-        },
-        "Libya": {
-            "info": "display-none"
-        },
-        "Mayotte": {
-            "info": "display-none"
-        },
-        "Namibia": {
-            "info": "display-none"
-        },
-        "Reunion": {
-            "info": "display-none"
-        },
-        "Seychelles": {
-            "info": "display-none"
-        },
-        "South Sudan": {
-            "info": "display-none"
-        },
-        "St. Helena": {
-            "info": "display-none"
-        },
-        "Western Sahara": {
-            "info": "display-none"
         }
     },
     "debt_service_regions": {
@@ -1698,479 +1698,479 @@
             "debt_service": "68852.5",
             "debt_service_share": "9.9"
         },
-        "Algeria": {
+        "DZA": {
             "info": "display-none"
         },
-        "Angola": {
+        "AGO": {
             "info": "display-none"
         },
-        "Benin": {
+        "BEN": {
             "info": "display-none"
         },
-        "Botswana": {
+        "BWA": {
             "info": "display-none"
         },
-        "British Indian Ocean Territory": {
+        "IOT": {
             "info": "display-none"
         },
-        "Burkina Faso": {
+        "BFA": {
             "info": "display-none"
         },
-        "Burundi": {
+        "BDI": {
             "info": "display-none"
         },
-        "Cabo Verde": {
+        "CPV": {
             "info": "display-none"
         },
-        "Cameroon": {
+        "CMR": {
             "info": "display-none"
         },
-        "Central African Republic": {
+        "CAF": {
             "info": "display-none"
         },
-        "Chad": {
+        "TCD": {
             "info": "display-none"
         },
-        "Comoros": {
+        "COM": {
             "info": "display-none"
         },
-        "Congo Republic": {
+        "COG": {
             "info": "display-none"
         },
-        "Cote d'Ivoire": {
+        "CIV": {
             "info": "display-none"
         },
-        "Djibouti": {
+        "DJI": {
             "info": "display-none"
         },
-        "DR Congo": {
+        "COD": {
             "info": "display-none"
         },
-        "Egypt": {
+        "EGY": {
             "info": "display-none"
         },
-        "Equatorial Guinea": {
+        "GNQ": {
             "info": "display-none"
         },
-        "Eritrea": {
+        "ERI": {
             "info": "display-none"
         },
-        "Eswatini": {
+        "SWZ": {
             "info": "display-none"
         },
-        "Ethiopia": {
+        "ETH": {
             "info": "display-none"
         },
-        "French Southern Territories": {
+        "ATF": {
             "info": "display-none"
         },
-        "Gabon": {
+        "GAB": {
             "info": "display-none"
         },
-        "Gambia": {
+        "GMB": {
             "info": "display-none"
         },
-        "Ghana": {
+        "GHA": {
             "info": "display-none"
         },
-        "Guinea": {
+        "GIN": {
             "info": "display-none"
         },
-        "Guinea-Bissau": {
+        "GNB": {
             "info": "display-none"
         },
-        "Kenya": {
+        "KEN": {
             "info": "display-none"
         },
-        "Lesotho": {
+        "LSO": {
             "info": "display-none"
         },
-        "Liberia": {
+        "LBR": {
             "info": "display-none"
         },
-        "Libya": {
+        "LBY": {
             "info": "display-none"
         },
-        "Madagascar": {
+        "MDG": {
             "info": "display-none"
         },
-        "Malawi": {
+        "MWI": {
             "info": "display-none"
         },
-        "Mali": {
+        "MLI": {
             "info": "display-none"
         },
-        "Mauritania": {
+        "MRT": {
             "info": "display-none"
         },
-        "Mauritius": {
+        "MUS": {
             "info": "display-none"
         },
-        "Mayotte": {
+        "MYT": {
             "info": "display-none"
         },
-        "Morocco": {
+        "MAR": {
             "info": "display-none"
         },
-        "Mozambique": {
+        "MOZ": {
             "info": "display-none"
         },
-        "Namibia": {
+        "NAM": {
             "info": "display-none"
         },
-        "Niger": {
+        "NER": {
             "info": "display-none"
         },
-        "Nigeria": {
+        "NGA": {
             "info": "display-none"
         },
-        "Reunion": {
+        "REU": {
             "info": "display-none"
         },
-        "Rwanda": {
+        "RWA": {
             "info": "display-none"
         },
-        "Sao Tome and Principe": {
+        "STP": {
             "info": "display-none"
         },
-        "Senegal": {
+        "SEN": {
             "info": "display-none"
         },
-        "Seychelles": {
+        "SYC": {
             "info": "display-none"
         },
-        "Sierra Leone": {
+        "SLE": {
             "info": "display-none"
         },
-        "Somalia": {
+        "SOM": {
             "info": "display-none"
         },
-        "South Africa": {
+        "ZAF": {
             "info": "display-none"
         },
-        "South Sudan": {
+        "SSD": {
             "info": "display-none"
         },
-        "St. Helena": {
+        "SHN": {
             "info": "display-none"
         },
-        "Sudan": {
+        "SDN": {
             "info": "display-none"
         },
-        "Tanzania": {
+        "TZA": {
             "info": "display-none"
         },
-        "Togo": {
+        "TGO": {
             "info": "display-none"
         },
-        "Tunisia": {
+        "TUN": {
             "info": "display-none"
         },
-        "Uganda": {
+        "UGA": {
             "info": "display-none"
         },
-        "Western Sahara": {
+        "ESH": {
             "info": "display-none"
         },
-        "Zambia": {
+        "ZMB": {
             "info": "display-none"
         },
-        "Zimbabwe": {
+        "ZWE": {
             "info": "display-none"
         }
     },
     "inflation": {
-        "Congo Republic": {
-            "value": "1.2",
-            "date": "30 April 2018",
-            "info": ""
-        },
-        "Equatorial Guinea": {
-            "value": "3.0",
-            "date": "31 December 2020",
-            "info": ""
-        },
-        "Eritrea": {
-            "value": "4.8",
-            "date": "31 December 2020",
-            "info": ""
-        },
-        "Liberia": {
-            "value": "7.23",
-            "date": "30 September 2022",
-            "info": ""
-        },
-        "Cameroon": {
-            "value": "8.18",
-            "date": "30 November 2022",
-            "info": ""
-        },
-        "Comoros": {
-            "value": "17.7",
-            "date": "30 November 2022",
-            "info": ""
-        },
-        "Libya": {
-            "value": "2.9",
-            "date": "30 November 2022",
-            "info": ""
-        },
-        "Gabon": {
-            "value": "5.6",
-            "date": "30 November 2022",
-            "info": ""
-        },
-        "Guinea": {
-            "value": "8.6",
-            "date": "31 December 2022",
-            "info": ""
-        },
-        "DR Congo": {
-            "value": "14.06",
-            "date": "31 December 2022",
-            "info": ""
-        },
-        "Djibouti": {
-            "value": "3.5",
-            "date": "31 December 2022",
-            "info": ""
-        },
-        "Gambia": {
-            "value": "13.144",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Mali": {
-            "value": "6.1",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Algeria": {
-            "value": "9.3",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Eswatini": {
-            "value": "5.3",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Madagascar": {
-            "value": "11.44",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Sao Tome and Principe": {
-            "value": "25.5",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Guinea-Bissau": {
-            "value": "9.7",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Cote d'Ivoire": {
-            "value": "4.8",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Sierra Leone": {
-            "value": "38.48",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Sudan": {
-            "value": "83.6",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Niger": {
-            "value": "2.0",
-            "date": "31 January 2023",
-            "info": ""
-        },
-        "Lesotho": {
-            "value": "7.4",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Zambia": {
-            "value": "9.6",
-            "date": "28 February 2023",
-            "info": ""
-        },
         "Africa (median)": {
             "value": "9.3",
             "date": "28 February 2023"
         },
-        "Burkina Faso": {
-            "value": "6.1",
-            "date": "28 February 2023",
+        "DZA": {
+            "value": "9.3",
+            "date": "31 January 2023",
             "info": ""
         },
-        "Mauritania": {
-            "value": "9.0",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Seychelles": {
-            "value": "1.13",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Ethiopia": {
-            "value": "32.0",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Chad": {
-            "value": "8.6",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Mauritius": {
-            "value": "11.0",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Cabo Verde": {
-            "value": "7.3",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Morocco": {
-            "value": "10.1",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Mozambique": {
-            "value": "10.3",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Tanzania": {
-            "value": "4.8",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Central African Republic": {
-            "value": "8.1",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Senegal": {
-            "value": "9.4",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Rwanda": {
-            "value": "30.3",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Angola": {
+        "AGO": {
             "value": "11.54",
             "date": "28 February 2023",
             "info": ""
         },
-        "Malawi": {
-            "value": "26.7",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Botswana": {
-            "value": "9.1",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Togo": {
-            "value": "5.2",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Nigeria": {
-            "value": "21.91",
-            "date": "28 February 2023",
-            "info": ""
-        },
-        "Benin": {
+        "BEN": {
             "value": "6.7",
             "date": "28 February 2023",
             "info": ""
         },
-        "Kenya": {
-            "value": "9.2",
-            "date": "31 March 2023",
+        "BWA": {
+            "value": "9.1",
+            "date": "28 February 2023",
             "info": ""
         },
-        "Namibia": {
-            "value": "7.2",
-            "date": "31 March 2023",
+        "IOT": {
+            "info": "display-none"
+        },
+        "BFA": {
+            "value": "6.1",
+            "date": "28 February 2023",
             "info": ""
         },
-        "Egypt": {
-            "value": "32.7",
-            "date": "31 March 2023",
-            "info": ""
-        },
-        "Ghana": {
-            "value": "45.0",
-            "date": "31 March 2023",
-            "info": ""
-        },
-        "Uganda": {
-            "value": "9.0",
-            "date": "31 March 2023",
-            "info": ""
-        },
-        "Tunisia": {
-            "value": "10.3",
-            "date": "31 March 2023",
-            "info": ""
-        },
-        "Somalia": {
-            "value": "5.7",
-            "date": "31 March 2023",
-            "info": ""
-        },
-        "South Africa": {
-            "value": "7.1",
-            "date": "31 March 2023",
-            "info": ""
-        },
-        "Burundi": {
+        "BDI": {
             "value": "32.606",
             "date": "31 March 2023",
             "info": ""
         },
-        "South Sudan": {
+        "CPV": {
+            "value": "7.3",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "CMR": {
+            "value": "8.18",
+            "date": "30 November 2022",
+            "info": ""
+        },
+        "CAF": {
+            "value": "8.1",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "TCD": {
+            "value": "8.6",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "COM": {
+            "value": "17.7",
+            "date": "30 November 2022",
+            "info": ""
+        },
+        "COG": {
+            "value": "1.2",
+            "date": "30 April 2018",
+            "info": ""
+        },
+        "CIV": {
+            "value": "4.8",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "DJI": {
+            "value": "3.5",
+            "date": "31 December 2022",
+            "info": ""
+        },
+        "COD": {
+            "value": "14.06",
+            "date": "31 December 2022",
+            "info": ""
+        },
+        "EGY": {
+            "value": "32.7",
+            "date": "31 March 2023",
+            "info": ""
+        },
+        "GNQ": {
+            "value": "3.0",
+            "date": "31 December 2020",
+            "info": ""
+        },
+        "ERI": {
+            "value": "4.8",
+            "date": "31 December 2020",
+            "info": ""
+        },
+        "SWZ": {
+            "value": "5.3",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "ETH": {
+            "value": "32.0",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "ATF": {
+            "info": "display-none"
+        },
+        "GAB": {
+            "value": "5.6",
+            "date": "30 November 2022",
+            "info": ""
+        },
+        "GMB": {
+            "value": "13.144",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "GHA": {
+            "value": "45.0",
+            "date": "31 March 2023",
+            "info": ""
+        },
+        "GIN": {
+            "value": "8.6",
+            "date": "31 December 2022",
+            "info": ""
+        },
+        "GNB": {
+            "value": "9.7",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "KEN": {
+            "value": "9.2",
+            "date": "31 March 2023",
+            "info": ""
+        },
+        "LSO": {
+            "value": "7.4",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "LBR": {
+            "value": "7.23",
+            "date": "30 September 2022",
+            "info": ""
+        },
+        "LBY": {
+            "value": "2.9",
+            "date": "30 November 2022",
+            "info": ""
+        },
+        "MDG": {
+            "value": "11.44",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "MWI": {
+            "value": "26.7",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "MLI": {
+            "value": "6.1",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "MRT": {
+            "value": "9.0",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "MUS": {
+            "value": "11.0",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "MYT": {
+            "info": "display-none"
+        },
+        "MAR": {
+            "value": "10.1",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "MOZ": {
+            "value": "10.3",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "NAM": {
+            "value": "7.2",
+            "date": "31 March 2023",
+            "info": ""
+        },
+        "NER": {
+            "value": "2.0",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "NGA": {
+            "value": "21.91",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "REU": {
+            "info": "display-none"
+        },
+        "RWA": {
+            "value": "30.3",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "STP": {
+            "value": "25.5",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "SEN": {
+            "value": "9.4",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "SYC": {
+            "value": "1.13",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "SLE": {
+            "value": "38.48",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "SOM": {
+            "value": "5.7",
+            "date": "31 March 2023",
+            "info": ""
+        },
+        "ZAF": {
+            "value": "7.1",
+            "date": "31 March 2023",
+            "info": ""
+        },
+        "SSD": {
             "value": "1.3",
             "date": "31 March 2023",
             "info": ""
         },
-        "Zimbabwe": {
-            "value": "87.6",
+        "SHN": {
+            "info": "display-none"
+        },
+        "SDN": {
+            "value": "83.6",
+            "date": "31 January 2023",
+            "info": ""
+        },
+        "TZA": {
+            "value": "4.8",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "TGO": {
+            "value": "5.2",
+            "date": "28 February 2023",
+            "info": ""
+        },
+        "TUN": {
+            "value": "10.3",
             "date": "31 March 2023",
             "info": ""
         },
-        "British Indian Ocean Territory": {
+        "UGA": {
+            "value": "9.0",
+            "date": "31 March 2023",
+            "info": ""
+        },
+        "ESH": {
             "info": "display-none"
         },
-        "French Southern Territories": {
-            "info": "display-none"
+        "ZMB": {
+            "value": "9.6",
+            "date": "28 February 2023",
+            "info": ""
         },
-        "Mayotte": {
-            "info": "display-none"
-        },
-        "Reunion": {
-            "info": "display-none"
-        },
-        "St. Helena": {
-            "info": "display-none"
-        },
-        "Western Sahara": {
-            "info": "display-none"
+        "ZWE": {
+            "value": "87.6",
+            "date": "31 March 2023",
+            "info": ""
         }
     }
 }
