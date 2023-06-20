@@ -39,8 +39,8 @@ EGY,2000,26.9,Egypt
 CMR,2020,27.2,Cameroon
 SOM,2020,27.4,Somalia
 UGA,2020,27.9,Uganda
-LBR,2020,28.0,Liberia
 GNB,2020,28.0,Guinea-Bissau
+LBR,2020,28.0,Liberia
 ZAF,2000,28.1,South Africa
 GIN,2020,29.4,Guinea
 GMB,2000,29.8,Gambia
@@ -65,11 +65,11 @@ DJI,2020,34.0,Djibouti
 GIN,2000,34.2,Guinea
 TCD,2020,35.0,Chad
 TGO,2000,35.2,Togo
-NGA,2020,35.3,Nigeria
 ETH,2020,35.3,Ethiopia
+NGA,2020,35.3,Nigeria
 COG,2000,36.4,Congo Republic
-BEN,2000,36.8,Benin
 SWZ,2000,36.8,Eswatini
+BEN,2000,36.8,Benin
 MWI,2020,37.0,Malawi
 CMR,2000,37.3,Cameroon
 AGO,2020,37.7,Angola
@@ -82,8 +82,8 @@ MLI,2000,40.0,Mali
 CAF,2020,40.1,Central African Rep.
 MDG,2020,40.2,Madagascar
 MRT,2000,40.4,Mauritania
-COD,2020,40.8,DR Congo
 SDN,2000,40.8,Sudan
+COD,2020,40.8,DR Congo
 LSO,2000,41.0,Lesotho
 BFA,2000,41.5,Burkina Faso
 NGA,2000,42.3,Nigeria
@@ -95,12 +95,12 @@ SSA,2000,43.9061023171762,Sub-Saharan Africa
 UGA,2000,44.0,Uganda
 LBR,2000,45.1,Liberia
 NER,2020,46.7,Niger
-TZA,2000,47.7,Tanzania
 ERI,2000,47.7,Eritrea
-COD,2000,47.8,DR Congo
+TZA,2000,47.7,Tanzania
 AGO,2000,47.8,Angola
-RWA,2000,49.1,Rwanda
+COD,2000,47.8,DR Congo
 ERI,2020,49.1,Eritrea
+RWA,2000,49.1,Rwanda
 MOZ,2000,50.5,Mozambique
 NER,2000,52.1,Niger
 ZMB,2000,54.0,Zambia
