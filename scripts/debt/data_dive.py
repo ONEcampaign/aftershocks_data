@@ -12,7 +12,7 @@ from scripts.debt.topic_page import DATE, SOURCE
 
 
 def update_long_ids_stocks() -> None:
-    download_ids_stocks(start_year=2000, end_year=2027, file_name="ids_stocks_raw_long")
+    download_ids_stocks(start_year=1990, end_year=2027, file_name="ids_stocks_raw_long")
 
 
 def get_long_stocks_clean() -> pd.DataFrame:
