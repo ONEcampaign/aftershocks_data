@@ -41,11 +41,15 @@ def _download_ids_service() -> None:
     logger.info("Downloaded IDS debt service data")
 
 
-def _download_ids_stocks() -> None:
+def download_ids_stocks(
+    start_year: int = START_YEAR,
+    end_year: int = END_YEAR,
+    file_name: str = "ids_stocks_raw",
+) -> None:
     """Use API to download IDS debt stocks"""
 
     d_ = [
-        get_indicator_data(i, start_year=START_YEAR, end_year=END_YEAR)
+        get_indicator_data(i, start_year=start_year, end_year=end_year)
         for i in DEBT_STOCKS
     ]
 
@@ -63,13 +67,13 @@ def _download_ids_stocks() -> None:
         .reset_index(drop=True)
     )
 
-    df.to_feather(f"{PATHS.raw_debt}/ids_stocks_raw.feather")
-    logger.info("Downloaded IDS debt stocks data")
+    df.to_feather(f"{PATHS.raw_debt}/{file_name}.feather")
+    logger.info(f"Downloaded IDS debt stocks data: {file_name}")
 
 
 def update_ids_data() -> None:
     _download_ids_service()
-    _download_ids_stocks()
+    download_ids_stocks()
 
 
 # ---------------------------------------------------------------------
@@ -94,13 +98,13 @@ def read_ids_service() -> pd.DataFrame:
     return pd.read_feather(f"{PATHS.raw_data}/debt/ids_service_raw.feather")
 
 
-def read_ids_stocks() -> pd.DataFrame:
+def read_ids_stocks(file_name: str = "ids_stocks_raw") -> pd.DataFrame:
     """Read IDS debt service data"""
 
-    return pd.read_feather(f"{PATHS.raw_data}/debt/ids_stocks_raw.feather")
+    return pd.read_feather(f"{PATHS.raw_data}/debt/{file_name}.feather")
 
 
-def _clean_ids_data(df: pd.DataFrame, detail: bool = False) -> pd.DataFrame:
+def clean_ids_data(df: pd.DataFrame, detail: bool = False) -> pd.DataFrame:
     """Avoid total duplication, add iso_codes, simplify series names"""
 
     dict_ = {**DEBT_STOCKS, **DEBT_SERVICE}
@@ -195,7 +199,7 @@ def _clean_ids_china_service(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def _clean_ids_china_stocks(df: pd.DataFrame) -> pd.DataFrame:
+def clean_ids_china_stocks(df: pd.DataFrame) -> pd.DataFrame:
     """Clean dataframe for Flourish"""
 
     china = df.loc[df["counterpart"] == "China"].copy()
@@ -252,7 +256,7 @@ def _clean_ids_china_stocks(df: pd.DataFrame) -> pd.DataFrame:
 # ---------------------------------------------------------------------
 
 
-def _flourish_pivot_debt(df: pd.DataFrame) -> pd.DataFrame:
+def flourish_pivot_debt(df: pd.DataFrame) -> pd.DataFrame:
     return (
         df.pivot(index=["iso_code", "year"], columns=["indicator"], values="value")
         .assign(Total=lambda d: d.fillna(0).sum(axis=1).round(1))
@@ -265,10 +269,10 @@ def flourish_ids_debt_stocks() -> None:
     """Debt Stocks data for Flourish in Millions"""
     df = (
         read_ids_stocks()
-        .pipe(_clean_ids_data, detail=True)
-        .pipe(_clean_ids_china_stocks)
+        .pipe(clean_ids_data, detail=True)
+        .pipe(clean_ids_china_stocks)
         .assign(value=lambda d: d.value / 1e6)  # in millions
-        .pipe(_flourish_pivot_debt)
+        .pipe(flourish_pivot_debt)
         .round(1)
         .reset_index(drop=True)
     )
@@ -286,7 +290,7 @@ def flourish_ids_debt_service() -> None:
 
     df = (
         read_ids_service()
-        .pipe(_clean_ids_data, detail=False)
+        .pipe(clean_ids_data, detail=False)
         .assign(value=lambda d: (d.value / 1e6))  # In millions
         .pipe(_flourish_clean_ids)
         .pipe(
