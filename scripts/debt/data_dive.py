@@ -1,5 +1,4 @@
 import pandas as pd
-from bblocks import convert_id
 
 from scripts.config import PATHS
 from scripts.debt.ids_data import (
@@ -25,38 +24,20 @@ def get_long_stocks_clean() -> pd.DataFrame:
         .pipe(flourish_pivot_debt)
         .round(1)
         .reset_index(drop=True)
+        .groupby(["year"])
+        .sum(numeric_only=True)
+        .round(2)
+        .reset_index(drop=False)
+        .assign(Name="Africa")
     )
 
     for column in df.columns:
         if df[column].sum() == 0:
             df = df.drop(column, axis=1)
 
-    return df
-
-
-def debt_stocks_columns() -> None:
-    """Bar chart of debt stocks by country"""
-
-    df = (
-        pd.read_feather(PATHS.raw_debt + r"/debt_stocks-ts.feather")
-        .replace("C.A.R", "Central African Republic")
-        .replace("D.R.C", "Democratic Republic of the Congo")
-        .assign(
-            iso_code=lambda d: convert_id(
-                d.iso_code, from_type="regex", to_type="name_short"
-            )
-        )
-    )
-
-    africa = (
-        df.groupby(["year"], as_index=False)
-        .sum(numeric_only=True)
-        .assign(iso_code="Africa")
-    )
-
-    df = pd.concat([africa, df], ignore_index=True).filter(
+    return df.filter(
         [
-            "iso_code",
+            "Name",
             "year",
             "Bilateral (China)",
             "Bilateral (excl. China)",
@@ -68,15 +49,20 @@ def debt_stocks_columns() -> None:
         axis=1,
     )
 
+
+def africa_long_debt_stocks_columns() -> None:
+    """Bar chart of debt stocks by country"""
+
+    df = get_long_stocks_clean().drop(columns=["Total"])
+
     # chart version
-    df.to_csv(f"{PATHS.charts}/debt_topic/debt_stocks_ts.csv", index=False)
+    df.to_csv(f"{PATHS.charts}/debt_topic/africa_long_debt_stocks_ts.csv", index=False)
 
     # download version
     df.assign(source=f"{SOURCE}{DATE}").to_csv(
-        f"{PATHS.download}/debt_topic/debt_stocks_ts.csv", index=False
+        f"{PATHS.download}/debt_topic/africa_long_debt_stocks_ts.csv", index=False
     )
 
 
 if __name__ == "__main__":
-    update_long_ids_stocks()
-    df = get_long_stocks_clean()
+    africa_long_debt_stocks_columns()

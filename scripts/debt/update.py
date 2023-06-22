@@ -9,13 +9,16 @@ from scripts.debt import (
     topic_page,
 )
 from scripts.debt.common import update_debt_world_bank
+from scripts.debt.data_dive import (
+    africa_long_debt_stocks_columns,
+    update_long_ids_stocks,
+)
 from scripts.logger import logger
 
 set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def update_weekly_data() -> None:
-
     # Update DSA list
     _ = get_dsa(update=True, local_path=f"{PATHS.raw_data}/debt/dsa_list.pdf")
     logger.info("Updated DSA list data")
@@ -31,9 +34,11 @@ def update_weekly_data() -> None:
     # Update other charts
     ids_data.update_flourish_charts()
 
+    # Update long stocks africa
+    update_long_ids_stocks()
+
 
 def update_weekly_charts() -> None:
-
     # update DSA chart
     debt_overview.debt_distress()
 
@@ -46,9 +51,11 @@ def update_weekly_charts() -> None:
     # Topic page
     topic_page.update_debt_country_charts()
 
+    # Data dive
+    africa_long_debt_stocks_columns()
+
 
 def update_monthly_data() -> None:
-
     update_debt_world_bank()
     logger.info("Updated World Bank Health and Education spending data")
 
