@@ -1,48 +1,48 @@
 {
     "inflation": {
-        "Southern Africa": {
-            "value": "7.1",
-            "date": "31 March 2023"
-        },
-        "Western Africa": {
-            "value": "8.0",
-            "date": "31 March 2023"
-        },
-        "Sub-Saharan Africa (WB)": {
-            "value": "9.1",
-            "date": "31 March 2023"
-        },
-        "Northern Africa": {
-            "value": "10.0",
-            "date": "31 March 2023"
-        },
-        "Eastern and Southern Africa": {
-            "value": "9.9",
-            "date": "31 March 2023"
-        },
         "Western and Central Africa": {
-            "value": "8.0",
-            "date": "31 March 2023"
-        },
-        "North Africa (WB)": {
-            "value": "10.0",
-            "date": "31 March 2023"
-        },
-        "Africa": {
-            "value": "9.2",
-            "date": "31 March 2023"
-        },
-        "Middle Africa": {
-            "value": "10.8",
-            "date": "31 March 2023"
+            "value": "5.2",
+            "date": "30 April 2023"
         },
         "Sub-Saharan Africa (UN)": {
-            "value": "9.1",
-            "date": "31 March 2023"
+            "value": "7.4",
+            "date": "30 April 2023"
+        },
+        "Southern Africa": {
+            "value": "6.8",
+            "date": "30 April 2023"
+        },
+        "Africa": {
+            "value": "7.9",
+            "date": "30 April 2023"
+        },
+        "Middle Africa": {
+            "value": "7.2",
+            "date": "30 April 2023"
+        },
+        "Eastern and Southern Africa": {
+            "value": "8.0",
+            "date": "30 April 2023"
+        },
+        "Sub-Saharan Africa (WB)": {
+            "value": "7.4",
+            "date": "30 April 2023"
+        },
+        "Western Africa": {
+            "value": "5.9",
+            "date": "30 April 2023"
+        },
+        "North Africa (WB)": {
+            "value": "10.1",
+            "date": "30 April 2023"
+        },
+        "Northern Africa": {
+            "value": "10.1",
+            "date": "30 April 2023"
         },
         "Eastern Africa": {
-            "value": "9.6",
-            "date": "31 March 2023"
+            "value": "9.0",
+            "date": "30 April 2023"
         }
     },
     "gdp_growth": {
