@@ -123,6 +123,13 @@ def wfp_insufficient_food_single_measure() -> None:
 
     regions = pd.concat(regions, ignore_index=True)
 
+    if pd.api.types.is_array_like(
+        regions.query("name_short == 'Africa'")["date"].values[0]
+    ):
+        regions.loc[lambda d: d.name_short == "Africa", "date"] = regions.loc[
+            lambda d: d.name_short == "Africa"
+        ]["date"].values[0][0]
+
     regions.to_csv(
         f"{PATHS.charts}/country_page/overview_food_sm_region.csv", index=False
     )
@@ -179,7 +186,7 @@ def insufficient_food_chart() -> None:
         .pipe(add_short_names_column, id_column="iso_code", id_type="ISO3")
         .drop("iso_code", axis=1)
         .sort_values(["date", "name_short"], ascending=(False, True))
-        .drop_duplicates(subset=["date","name_short"], keep="first")
+        .drop_duplicates(subset=["date", "name_short"], keep="first")
     )
 
     food_pivot = food.pivot(
