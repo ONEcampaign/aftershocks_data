@@ -4,7 +4,7 @@ name: daily-update
     - cron: '11 11 * * *'
   workflow_dispatch:
 jobs:
-  run-all:
+  update-data:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,10 +16,14 @@ jobs:
         uses: actions/setup-python@v4.6.0
         with:
           python-version: "3.10"
-      - name: Install dependencies
+      - name: Install Poetry
         run:  |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install poetry
+          poetry --version
+      - name: Install dependencies
+        run:  |
+          poetry install
       - name: Run daily update
         env:
           IPC_API: ${{ secrets.IPC_API }}
