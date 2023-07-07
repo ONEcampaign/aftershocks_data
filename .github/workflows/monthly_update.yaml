@@ -23,7 +23,7 @@ jobs:
           poetry --version
       - name: Install dependencies
         run: |
-          poetry install
+          pip install -r requirements.txt
       - name: Run monthly update
         env:
           IPC_API: ${{ secrets.IPC_API }}

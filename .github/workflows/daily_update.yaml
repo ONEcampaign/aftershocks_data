@@ -19,10 +19,9 @@ jobs:
       - name: Install Poetry
         run:  |
           pip install poetry
-          poetry --version
       - name: Install dependencies
         run:  |
-          poetry install
+          pip install -r requirements.txt
       - name: Run daily update
         env:
           IPC_API: ${{ secrets.IPC_API }}
