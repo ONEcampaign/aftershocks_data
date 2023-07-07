@@ -1,6 +1,6 @@
 import datetime
 
-import country_converter as coco
+
 import pandas as pd
 from bblocks import (
     WFPData,
@@ -27,7 +27,8 @@ set_bblocks_data_path(PATHS.bblocks_data)
 def _core_data() -> pd.DataFrame:
     """Generate a basic table with African countries, formal names, short names,
     and geometries"""
-    cc = coco.CountryConverter()
+    from country_converter.country_converter import CountryConverter
+    cc = CountryConverter()
 
     return (
         cc.data[["ISO3", "name_short", "name_official", "continent"]]
@@ -139,7 +140,6 @@ def owid_covid_indicators() -> pd.DataFrame:
 
 
 def wb_indicators() -> pd.DataFrame:
-
     indicators = {
         "SP.DYN.LE00.IN": "Life Expectancy",
         "SP.DYN.IMRT.IN": "Infant Mortality Rate",
@@ -205,7 +205,6 @@ def latest_food_data() -> pd.DataFrame:
 
 
 def latest_debt_service() -> pd.DataFrame:
-
     return (
         pd.read_csv(
             f"{PATHS.charts}/country_page/overview_debt_sm.csv",
