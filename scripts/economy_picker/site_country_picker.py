@@ -1,6 +1,5 @@
 import datetime
 
-
 import pandas as pd
 from bblocks import (
     WFPData,
@@ -28,6 +27,7 @@ def _core_data() -> pd.DataFrame:
     """Generate a basic table with African countries, formal names, short names,
     and geometries"""
     from country_converter.country_converter import CountryConverter
+
     cc = CountryConverter()
 
     return (
