@@ -1,12 +1,12 @@
 iso_code,Country Name,Continent,UN Region,Income Group,Population,Poverty rate (%),Least Developed Countries,General Gov. Health expenditure (% of GDP),"Maternal mortality (per 100,000)","Under 5 mortality rate (per 1,000)",Pop. vaccinated against COVID-19 (%),Malaria deaths,AIDS related deaths,Share Receiving ART (of ppl living with HIV)
-AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,41.9,110.0,527.0,10.436294
+AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,42.02,110.0,527.0,10.436294
 ALB,Albania,Europe,Southern Europe,Upper middle income,2775634.0,0.0,Non-LDC,2.82499456,15.0,9.8,47.44,,24.0,53.342716
 DZA,Algeria,Africa,Northern Africa,Lower middle income,44903225.0,0.5,Non-LDC,4.05817795,112.0,22.7,17.46,0.0,279.0,81.677444
 ASM,American Samoa,Oceania,Polynesia,Upper middle income,44273.0,,Non-LDC,,,,,,,
 AND,Andorra,Europe,Southern Europe,High income,79824.0,,Non-LDC,4.66368246,,2.5,72.53,,,
 AGO,Angola,Africa,Middle Africa,Lower middle income,35588987.0,31.1,LDC,1.04434741,241.0,71.5,44.9,15989.0,14708.0,40.716374
 ATG,Antigua and Barbuda,America,Caribbean,High income,93763.0,,Non-LDC,2.59645534,42.0,6.4,68.56,,,
-ARG,Argentina,America,South America,Upper middle income,46234830.0,1.0,Non-LDC,5.93055725,39.0,8.6,91.18,0.0,1316.0,71.942957
+ARG,Argentina,America,South America,Upper middle income,46234830.0,1.0,Non-LDC,5.93055725,39.0,8.6,91.19,0.0,1316.0,71.942957
 ARM,Armenia,Asia,Western Asia,Upper middle income,2780469.0,0.5,Non-LDC,1.40614879,26.0,10.9,40.38,0.0,,
 ABW,Aruba,America,Caribbean,High income,106445.0,,Non-LDC,,,,84.97,,,
 AUS,Australia,Oceania,Australia and New Zealand,High income,25978935.0,0.5,Non-LDC,7.10425138,6.0,3.7,84.93,,50.0,83.158834
@@ -102,7 +102,7 @@ KAZ,Kazakhstan,Asia,Central Asia,Upper middle income,19621972.0,0.0,Non-LDC,1.67
 KEN,Kenya,Africa,Eastern Africa,Lower middle income,54027487.0,29.4,Non-LDC,2.11127639,342.0,41.9,26.83,12646.0,22373.0,78.088066
 KIR,Kiribati,Oceania,Micronesia,Lower middle income,131232.0,1.7,LDC,8.44735909,92.0,49.6,76.88,,,
 XKX,Kosovo,Europe,Southern Europe,Upper middle income,1761985.0,0.4,Non-LDC,,,,,,,
-KWT,Kuwait,Asia,Western Asia,High income,4268873.0,,Non-LDC,4.77939463,12.0,8.9,80.98,,,
+KWT,Kuwait,Asia,Western Asia,High income,4268873.0,,Non-LDC,4.77939463,12.0,8.9,80.99,,,
 KGZ,Kyrgyz Republic,Asia,Central Asia,Lower middle income,6803300.0,1.3,Non-LDC,2.31117272,60.0,17.5,25.79,0.0,208.0,50.269085
 LAO,Laos,Asia,South-eastern Asia,Lower middle income,7529475.0,7.1,LDC,0.9597249,185.0,44.1,78.21,7.0,325.0,55.289987
 LVA,Latvia,Europe,Northern Europe,High income,1883379.0,0.5,Non-LDC,3.98357701,19.0,4.0,72.74,,77.0,39.40792
@@ -117,7 +117,7 @@ MAC,Macau,Asia,Eastern Asia,High income,695168.0,,Non-LDC,,,,97.77,,,
 MKD,North Macedonia,Europe,Southern Europe,Upper middle income,2057679.0,2.7,Non-LDC,4.27757454,7.0,5.9,40.82,,,
 MDG,Madagascar,Africa,Eastern Africa,Low income,29611714.0,80.7,LDC,1.18677306,335.0,50.2,8.93,9459.0,2876.0,14.914361
 MWI,Malawi,Africa,Eastern Africa,Low income,20405317.0,70.1,LDC,2.40971565,349.0,38.6,26.19,7165.0,12531.0,90.877255
-MYS,Malaysia,Asia,South-eastern Asia,Upper middle income,33938221.0,0.0,Non-LDC,1.99659598,29.0,8.6,82.9,0.0,1592.0,54.837134
+MYS,Malaysia,Asia,South-eastern Asia,Upper middle income,33938221.0,0.0,Non-LDC,1.99659598,29.0,8.6,82.89,0.0,1592.0,54.837134
 MDV,Maldives,Asia,Southern Asia,Upper middle income,523787.0,0.0,Non-LDC,6.39314747,53.0,6.5,76.23,,,
 MLI,Mali,Africa,Western Africa,Low income,22593590.0,14.8,LDC,1.31026745,562.0,91.0,19.27,19316.0,4135.0,53.100372
 MLT,Malta,Europe,Southern Europe,High income,523417.0,0.3,Non-LDC,5.1835227,6.0,6.5,89.78,,,

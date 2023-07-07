@@ -49,7 +49,12 @@ def download_owid_data() -> None:
 
     try:
         df = pd.read_csv(
-            url, usecols=columns.keys(), dtype=columns, parse_dates=["date"]
+            url,
+            usecols=columns.keys(),
+            dtype=columns,
+            parse_dates=["date"],
+            encoding=None,
+            engine="python",
         )
 
         print("Downloaded OWID data successfully")
@@ -57,6 +62,9 @@ def download_owid_data() -> None:
 
     except ConnectionError:
         raise ConnectionError("Data could not be updated")
+
+    except UnicodeError:
+        raise UnicodeError("Wrong encoding. Data could not be updated")
 
 
 def read_owid_data() -> pd.DataFrame:

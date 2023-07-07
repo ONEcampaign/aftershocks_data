@@ -116,7 +116,7 @@ python-versions = ">=3.7.0"
 
 [[package]]
 name = "click"
-version = "8.1.3"
+version = "8.1.4"
 description = "Composable command line interface toolkit"
 category = "main"
 optional = false
@@ -539,7 +539,7 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "81ed5e13660dd00bde48d3137b919eb459bce2b4c882d2446b8a8661d7786d31"
+content-hash = "6e2846a738d3ff32b64f9b9cbc24f7e0183ee4ee94c55a3ea2891070bc249cb1"
 
 [metadata.files]
 anyio = []
@@ -615,10 +615,7 @@ cffi = [
 ]
 chardet = []
 charset-normalizer = []
-click = [
-    {file = "click-8.1.3-py3-none-any.whl", hash = "sha256:bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"},
-    {file = "click-8.1.3.tar.gz", hash = "sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"},
-]
+click = []
 colorama = []
 country-converter = []
 cryptography = []
