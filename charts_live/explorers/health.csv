@@ -1,5 +1,5 @@
 iso_code,Country Name,Continent,UN Region,Income Group,Population,Poverty rate (%),Least Developed Countries,General Gov. Health expenditure (% of GDP),"Maternal mortality (per 100,000)","Under 5 mortality rate (per 1,000)",Pop. vaccinated against COVID-19 (%),Malaria deaths,AIDS related deaths,Share Receiving ART (of ppl living with HIV)
-AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,42.02,110.0,527.0,10.436294
+AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,42.16,110.0,527.0,10.436294
 ALB,Albania,Europe,Southern Europe,Upper middle income,2775634.0,0.0,Non-LDC,2.82499456,15.0,9.8,47.44,,24.0,53.342716
 DZA,Algeria,Africa,Northern Africa,Lower middle income,44903225.0,0.5,Non-LDC,4.05817795,112.0,22.7,17.46,0.0,279.0,81.677444
 ASM,American Samoa,Oceania,Polynesia,Upper middle income,44273.0,,Non-LDC,,,,,,,
@@ -146,7 +146,7 @@ PRK,North Korea,Asia,Eastern Asia,Low income,26069416.0,,Non-LDC,,89.0,16.5,,0.0
 MNP,Northern Mariana Islands,Oceania,Micronesia,High income,49551.0,,Non-LDC,,,,,,,
 NOR,Norway,Europe,Northern Europe,High income,5457127.0,0.2,Non-LDC,9.02942657,2.0,2.2,79.99,,23.0,93.304253
 OMN,Oman,Asia,Western Asia,High income,4576298.0,,Non-LDC,3.51993251,19.0,11.0,71.18,0.0,45.0,64.550898
-PAK,Pakistan,Asia,Southern Asia,Lower middle income,235824862.0,4.9,Non-LDC,1.08106327,140.0,65.2,70.2,454.0,9640.0,14.007499
+PAK,Pakistan,Asia,Southern Asia,Lower middle income,235824862.0,4.9,Non-LDC,1.08106327,140.0,65.2,70.21,454.0,9640.0,14.007499
 PLW,Palau,Oceania,Micronesia,Upper middle income,18055.0,,Non-LDC,6.81600857,,16.9,,,,
 PSE,Palestine,Asia,Western Asia,Lower middle income,5043612.0,0.5,Non-LDC,,27.0,16.5,38.34,,,
 PAN,Panama,America,Central America,High income,4408581.0,1.1,Non-LDC,5.01409578,52.0,14.3,80.15,0.0,,
@@ -189,7 +189,7 @@ SUR,Suriname,America,South America,Upper middle income,618040.0,18.4,Non-LDC,7.0
 SWE,Sweden,Europe,Northern Europe,High income,10486941.0,0.4,Non-LDC,9.22483444,4.0,2.6,73.71,,,
 CHE,Switzerland,Europe,Western Europe,High income,8769741.0,0.0,Non-LDC,3.62563658,5.0,4.0,69.75,,131.0,89.954179
 SYR,Syria,Asia,Western Asia,Low income,22125249.0,1.1,Non-LDC,1.61476171,31.0,22.4,14.9,0.0,21.0,37.654321
-TWN,Taiwan,Asia,Eastern Asia,High income,,,Non-LDC,,,,91.63,,,
+TWN,Taiwan,Asia,Eastern Asia,High income,,,Non-LDC,,,,91.64,,,
 TJK,Tajikistan,Asia,Central Asia,Lower middle income,9952787.0,6.1,Non-LDC,1.94083118,17.0,32.3,53.37,0.0,157.0,65.044281
 TZA,Tanzania,Africa,Eastern Africa,Lower middle income,65497748.0,44.9,LDC,1.56490099,524.0,48.9,52.57,25972.0,28797.0,85.524769
 THA,Thailand,Asia,South-eastern Asia,Upper middle income,71697030.0,0.0,Non-LDC,2.7152462,37.0,8.7,79.51,3.0,9322.0,85.916267
