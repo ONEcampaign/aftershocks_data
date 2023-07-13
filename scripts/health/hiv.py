@@ -12,22 +12,33 @@ INDICATORS = {'unaids_new_hiv_infections': 'New HIV infections',
               'unaids_people_living_with_hiv_receiving_art': 'People accessing treatment'}
 
 
-def _significant_rounding(number: int, significance: int) -> int
+def _significant_rounding(number: int, significance: int) -> int:
     """round a number to the nearest significance
 
     Args:
-        number (int): number to round
+        number: number to round
         significance (int): significance to round to
 
     Returns:
-        int: rounded number
+        rounded number
     """
 
     return round(number, -(len(str(number)) - significance))
 
 
-def unaids_rounding(number) -> int | str:
-    """Simulate UNAIDS rounding"""
+def unaids_rounding(number) -> str:
+    """Simulate UNAIDS rounding
+
+    returns a formatted string for a number rounded to a significance of 2 digits,
+    either separated by commas or rounded as <100, <500 or <1000
+
+    Args:
+        number: number to round
+
+    Returns:
+        rounded number
+
+    """
 
     # if number is nan, return nan
     if np.isnan(number):
@@ -43,6 +54,18 @@ def unaids_rounding(number) -> int | str:
 
     return '{:,.0f}'.format(number)
 
+
+def format_value(value) -> str:
+    """format value to a string separated by commas"""
+
+    if np.isnan(value):
+        return value
+
+    # if value is already a string, return it
+    if isinstance(value, str):
+        return value
+
+    return '{:,.0f}'.format(value)
 
 def create_topic_chart(df: pd.DataFrame) -> None:
     """Create HIV topic chart"""
@@ -61,7 +84,12 @@ def create_topic_chart(df: pd.DataFrame) -> None:
           .rename(columns={'indicator_code': 'indicator'})
           .assign(indicator=lambda x: x.indicator.map(INDICATORS))
 
+    # change treatement indicator values to string deparated by comma
+          .drop(columns=['country'])
+
           )
+
+    df.loc[df.indicator == 'People accessing treatment', 'value_rounded'] = df.loc[df.indicator == 'People accessing treatment', 'value_rounded'].apply(format_value)
 
     df.to_csv(f"{PATHS.charts}/health/hiv_topic_chart_v2.csv", index=False)
     logger.debug("Saved live version of 'hiv_topic_chart_v2.csv'")
