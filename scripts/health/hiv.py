@@ -28,7 +28,7 @@ def _significant_rounding(number: int, significance: int) -> int:
     return round(number, -(len(str(number)) - significance))
 
 
-def unaids_rounding(number) -> str:
+def unaids_rounding(number):
     """Simulate UNAIDS rounding
 
     returns a formatted string for a number rounded to a significance of 2 digits,
@@ -47,27 +47,14 @@ def unaids_rounding(number) -> str:
         return number
 
     number = _significant_rounding(int(number), 2)
-    if number < 100:
-        return "<100"
-    if number < 500:
-        return "<500"
-    if number < 1000:
-        return "<1000"
+    if number <= 100:
+        return 100
+    if number <= 500:
+        return 500
+    if number <= 1000:
+        return 1000
 
-    return "{:,.0f}".format(number)
-
-
-def format_value(value) -> str:
-    """format value to a string separated by commas"""
-
-    if np.isnan(value):
-        return value
-
-    # if value is already a string, return it
-    if isinstance(value, str):
-        return value
-
-    return "{:,.0f}".format(value)
+    return number
 
 
 def create_topic_chart(df: pd.DataFrame) -> None:
@@ -80,32 +67,28 @@ def create_topic_chart(df: pd.DataFrame) -> None:
             & (df.age == "all ages")
             & (df.units == "people")
             & (df.value_type == "value"),
+
             ["entity_name", "indicator_code", "year", "value"],
         ]
-        .assign(
-            value_rounded=lambda d: d.loc[
+        .dropna(subset=["value"]) # drop rows with no value
+        .assign(value_rounded=lambda d: d.loc[
                 d.indicator_code.isin(
                     ["unaids_new_hiv_infections", "unaids_aids_related_deaths"]
                 )
             ]["value"].apply(unaids_rounding),
-            country=lambda d: d.entity_name,
         )
         .assign(value_rounded=lambda d: d.value_rounded.fillna(d.value))
+
         .pivot(
-            index=["year", "indicator_code", "country", "value_rounded"],
+            index=["year", "indicator_code"],
             columns="entity_name",
-            values="value",
+            values="value_rounded",
         )
         .reset_index()
         .rename(columns={"indicator_code": "indicator"})
         .assign(indicator=lambda x: x.indicator.map(INDICATORS))
-        # change treatement indicator values to string deparated by comma
-        .drop(columns=["country"])
-    )
 
-    df.loc[df.indicator == "People accessing treatment", "value_rounded"] = df.loc[
-        df.indicator == "People accessing treatment", "value_rounded"
-    ].apply(format_value)
+    )
 
     df.to_csv(f"{PATHS.charts}/health/hiv_topic_chart_v2.csv", index=False)
     logger.debug("Saved live version of 'hiv_topic_chart_v2.csv'")
