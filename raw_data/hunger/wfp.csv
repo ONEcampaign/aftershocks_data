@@ -564,6 +564,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4123226,4123226,4123226,AGO,people_with_insufficient_food_consumption
 2023-07-26,4015954,4015954,4015954,AGO,people_with_insufficient_food_consumption
 2023-07-27,3955530,3955530,3955530,AGO,people_with_insufficient_food_consumption
+2023-07-28,4033394,4033394,4033394,AGO,people_with_insufficient_food_consumption
 2022-11-07,481634,694794,366127,ARM,people_with_insufficient_food_consumption
 2022-11-08,482222,695246,366449,ARM,people_with_insufficient_food_consumption
 2022-11-09,482222,695246,366449,ARM,people_with_insufficient_food_consumption
@@ -939,6 +940,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,487359,539872,441207,ARM,people_with_insufficient_food_consumption
 2023-07-26,487392,539279,440487,ARM,people_with_insufficient_food_consumption
 2023-07-27,487392,539279,440487,ARM,people_with_insufficient_food_consumption
+2023-07-28,487847,539208,439862,ARM,people_with_insufficient_food_consumption
 2022-11-07,4226796,4661106,3705506,BDI,people_with_insufficient_food_consumption
 2022-11-08,4226796,4661106,3705506,BDI,people_with_insufficient_food_consumption
 2022-11-09,4226796,4661106,3705506,BDI,people_with_insufficient_food_consumption
@@ -1314,6 +1316,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4260101,4638631,3870592,BDI,people_with_insufficient_food_consumption
 2023-07-26,4267587,4643578,3870363,BDI,people_with_insufficient_food_consumption
 2023-07-27,4265705,4641303,3868694,BDI,people_with_insufficient_food_consumption
+2023-07-28,4268767,4649465,3870909,BDI,people_with_insufficient_food_consumption
 2021-12-08,4975178,4975178,4975178,BEN,people_with_insufficient_food_consumption
 2021-12-09,4976575,4976575,4976575,BEN,people_with_insufficient_food_consumption
 2021-12-10,4986300,4986300,4986300,BEN,people_with_insufficient_food_consumption
@@ -1612,6 +1615,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,10867466,10867466,10867466,BFA,people_with_insufficient_food_consumption
 2023-07-26,10790746,10790746,10790746,BFA,people_with_insufficient_food_consumption
 2023-07-27,10803169,10803169,10803169,BFA,people_with_insufficient_food_consumption
+2023-07-28,10738657,10738657,10738657,BFA,people_with_insufficient_food_consumption
 2022-11-07,38106444,44412775,33045242,BGD,people_with_insufficient_food_consumption
 2022-11-08,38169491,44448156,33223347,BGD,people_with_insufficient_food_consumption
 2022-11-09,38389202,45059326,33306599,BGD,people_with_insufficient_food_consumption
@@ -1987,6 +1991,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,41050060,44435782,37980061,BGD,people_with_insufficient_food_consumption
 2023-07-26,41029399,44466131,38064337,BGD,people_with_insufficient_food_consumption
 2023-07-27,41104326,44609962,38217728,BGD,people_with_insufficient_food_consumption
+2023-07-28,41103272,44602433,38217728,BGD,people_with_insufficient_food_consumption
 2022-11-07,1936103,2194087,1691080,BOL,people_with_insufficient_food_consumption
 2022-11-08,1937198,2194222,1691080,BOL,people_with_insufficient_food_consumption
 2022-11-09,1937198,2194222,1691080,BOL,people_with_insufficient_food_consumption
@@ -2362,6 +2367,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1871797,2273085,1610588,BOL,people_with_insufficient_food_consumption
 2023-07-26,1872596,2273051,1608938,BOL,people_with_insufficient_food_consumption
 2023-07-27,1872596,2273264,1610459,BOL,people_with_insufficient_food_consumption
+2023-07-28,1872596,2273264,1610459,BOL,people_with_insufficient_food_consumption
 2022-11-07,188021,215365,161190,BTN,people_with_insufficient_food_consumption
 2022-11-08,188021,215365,161190,BTN,people_with_insufficient_food_consumption
 2022-11-09,188021,215365,161190,BTN,people_with_insufficient_food_consumption
@@ -2737,6 +2743,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,240910,268725,214811,BTN,people_with_insufficient_food_consumption
 2023-07-26,241150,268629,214547,BTN,people_with_insufficient_food_consumption
 2023-07-27,241150,268629,214539,BTN,people_with_insufficient_food_consumption
+2023-07-28,241150,268629,214539,BTN,people_with_insufficient_food_consumption
 2022-11-07,244504,355356,191137,BWA,people_with_insufficient_food_consumption
 2022-11-08,244504,355356,191137,BWA,people_with_insufficient_food_consumption
 2022-11-09,244504,355356,191137,BWA,people_with_insufficient_food_consumption
@@ -3111,6 +3118,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,562114,644927,489509,BWA,people_with_insufficient_food_consumption
 2023-07-26,561108,644534,488633,BWA,people_with_insufficient_food_consumption
 2023-07-27,561108,644534,488633,BWA,people_with_insufficient_food_consumption
+2023-07-28,561108,644534,488633,BWA,people_with_insufficient_food_consumption
 2022-11-07,1769301,1842874,1698566,CAF,people_with_insufficient_food_consumption
 2022-11-08,1760391,1833964,1689656,CAF,people_with_insufficient_food_consumption
 2022-11-09,1764127,1837700,1693392,CAF,people_with_insufficient_food_consumption
@@ -3493,6 +3501,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1821425,1845748,1798332,CAF,people_with_insufficient_food_consumption
 2023-07-26,1822474,1846797,1799381,CAF,people_with_insufficient_food_consumption
 2023-07-27,1807735,1832067,1784651,CAF,people_with_insufficient_food_consumption
+2023-07-28,1817668,1842688,1794987,CAF,people_with_insufficient_food_consumption
 2022-11-07,4835405,4835405,4835405,CIV,people_with_insufficient_food_consumption
 2022-11-08,4907962,4907962,4907962,CIV,people_with_insufficient_food_consumption
 2022-11-09,4889659,4889659,4889659,CIV,people_with_insufficient_food_consumption
@@ -3756,6 +3765,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,3440494,3440494,3440494,CIV,people_with_insufficient_food_consumption
 2023-07-26,3505883,3505883,3505883,CIV,people_with_insufficient_food_consumption
 2023-07-27,3573751,3573751,3573751,CIV,people_with_insufficient_food_consumption
+2023-07-28,3586280,3586280,3586280,CIV,people_with_insufficient_food_consumption
 2022-11-07,8652022,8652022,8652022,CMR,people_with_insufficient_food_consumption
 2022-11-08,8787579,8787579,8787579,CMR,people_with_insufficient_food_consumption
 2022-11-09,8802692,8802692,8802692,CMR,people_with_insufficient_food_consumption
@@ -4021,6 +4031,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,8773783,8773783,8773783,CMR,people_with_insufficient_food_consumption
 2023-07-26,8660194,8660194,8660194,CMR,people_with_insufficient_food_consumption
 2023-07-27,8627669,8627669,8627669,CMR,people_with_insufficient_food_consumption
+2023-07-28,8748080,8748080,8748080,CMR,people_with_insufficient_food_consumption
 2022-11-07,50416731,50416731,50416731,COD,people_with_insufficient_food_consumption
 2022-11-08,50424257,50424257,50424257,COD,people_with_insufficient_food_consumption
 2022-11-09,50571514,50571514,50571514,COD,people_with_insufficient_food_consumption
@@ -4286,6 +4297,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,46342349,46342349,46342349,COD,people_with_insufficient_food_consumption
 2023-07-26,46042325,46042325,46042325,COD,people_with_insufficient_food_consumption
 2023-07-27,45955242,45955242,45955242,COD,people_with_insufficient_food_consumption
+2023-07-28,45591371,45591371,45591371,COD,people_with_insufficient_food_consumption
 2022-11-07,2103985,2179902,2037714,COG,people_with_insufficient_food_consumption
 2022-11-08,2126020,2202022,2059800,COG,people_with_insufficient_food_consumption
 2022-11-09,2123479,2199092,2056870,COG,people_with_insufficient_food_consumption
@@ -4666,6 +4678,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1787696,1854196,1731234,COG,people_with_insufficient_food_consumption
 2023-07-26,1758212,1824895,1702009,COG,people_with_insufficient_food_consumption
 2023-07-27,1734454,1801118,1679531,COG,people_with_insufficient_food_consumption
+2023-07-28,1686699,1754267,1631274,COG,people_with_insufficient_food_consumption
 2022-11-07,12862361,12862361,12862361,COL,people_with_insufficient_food_consumption
 2022-11-08,12828484,12828484,12828484,COL,people_with_insufficient_food_consumption
 2022-11-09,13207818,13207818,13207818,COL,people_with_insufficient_food_consumption
@@ -4929,6 +4942,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,15335878,15335878,15335878,COL,people_with_insufficient_food_consumption
 2023-07-26,15929017,15929017,15929017,COL,people_with_insufficient_food_consumption
 2023-07-27,16252102,16252102,16252102,COL,people_with_insufficient_food_consumption
+2023-07-28,16466982,16466982,16466982,COL,people_with_insufficient_food_consumption
 2022-11-07,162880,205114,132718,COM,people_with_insufficient_food_consumption
 2022-11-08,162880,205114,132718,COM,people_with_insufficient_food_consumption
 2022-11-09,162880,205114,132718,COM,people_with_insufficient_food_consumption
@@ -5303,6 +5317,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,202632,242000,167886,COM,people_with_insufficient_food_consumption
 2023-07-26,201786,241121,167813,COM,people_with_insufficient_food_consumption
 2023-07-27,201786,241121,167813,COM,people_with_insufficient_food_consumption
+2023-07-28,201786,241121,167813,COM,people_with_insufficient_food_consumption
 2022-11-07,80947,97861,63860,CPV,people_with_insufficient_food_consumption
 2022-11-08,80947,97861,63860,CPV,people_with_insufficient_food_consumption
 2022-11-09,80947,97861,63860,CPV,people_with_insufficient_food_consumption
@@ -5677,6 +5692,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,129200,146004,114035,CPV,people_with_insufficient_food_consumption
 2023-07-26,129117,146016,113981,CPV,people_with_insufficient_food_consumption
 2023-07-27,129117,146016,113981,CPV,people_with_insufficient_food_consumption
+2023-07-28,129117,146016,113981,CPV,people_with_insufficient_food_consumption
 2022-11-07,1330132,1679750,1125553,CUB,people_with_insufficient_food_consumption
 2022-11-08,1330132,1679750,1125553,CUB,people_with_insufficient_food_consumption
 2022-11-09,1330132,1679750,1125553,CUB,people_with_insufficient_food_consumption
@@ -6051,6 +6067,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1786347,2088965,1506448,CUB,people_with_insufficient_food_consumption
 2023-07-26,1790503,2092764,1507663,CUB,people_with_insufficient_food_consumption
 2023-07-27,1790503,2092764,1507663,CUB,people_with_insufficient_food_consumption
+2023-07-28,1790503,2092764,1507663,CUB,people_with_insufficient_food_consumption
 2022-11-07,169283,206487,139660,DJI,people_with_insufficient_food_consumption
 2022-11-08,169283,206487,139660,DJI,people_with_insufficient_food_consumption
 2022-11-09,169283,206487,139660,DJI,people_with_insufficient_food_consumption
@@ -6425,6 +6442,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,226383,256518,202242,DJI,people_with_insufficient_food_consumption
 2023-07-26,226453,257143,202242,DJI,people_with_insufficient_food_consumption
 2023-07-27,226453,257143,202242,DJI,people_with_insufficient_food_consumption
+2023-07-28,226453,257143,202242,DJI,people_with_insufficient_food_consumption
 2022-11-07,2211549,2582043,1877249,DOM,people_with_insufficient_food_consumption
 2022-11-08,2211151,2582043,1877249,DOM,people_with_insufficient_food_consumption
 2022-11-09,2210873,2582043,1877224,DOM,people_with_insufficient_food_consumption
@@ -6799,6 +6817,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1748284,1973363,1555832,DOM,people_with_insufficient_food_consumption
 2023-07-26,1745402,1971632,1549142,DOM,people_with_insufficient_food_consumption
 2023-07-27,1727272,1956007,1536069,DOM,people_with_insufficient_food_consumption
+2023-07-28,1727272,1956007,1536069,DOM,people_with_insufficient_food_consumption
 2022-11-07,5141716,6673361,4324764,DZA,people_with_insufficient_food_consumption
 2022-11-08,5141716,6673361,4324764,DZA,people_with_insufficient_food_consumption
 2022-11-09,5141716,6673361,4324764,DZA,people_with_insufficient_food_consumption
@@ -7174,6 +7193,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,8643788,10050166,7618078,DZA,people_with_insufficient_food_consumption
 2023-07-26,8619944,10022050,7579529,DZA,people_with_insufficient_food_consumption
 2023-07-27,8629470,10016871,7588115,DZA,people_with_insufficient_food_consumption
+2023-07-28,8629470,10016871,7588115,DZA,people_with_insufficient_food_consumption
 2022-11-07,2526349,2844400,2265815,ECU,people_with_insufficient_food_consumption
 2022-11-08,2526349,2844400,2265815,ECU,people_with_insufficient_food_consumption
 2022-11-09,2526349,2844400,2265815,ECU,people_with_insufficient_food_consumption
@@ -7548,6 +7568,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,2169063,2566437,1851034,ECU,people_with_insufficient_food_consumption
 2023-07-26,2168600,2562149,1852554,ECU,people_with_insufficient_food_consumption
 2023-07-27,2168600,2562149,1852554,ECU,people_with_insufficient_food_consumption
+2023-07-28,2168600,2562149,1852554,ECU,people_with_insufficient_food_consumption
 2022-11-07,11446718,14495800,9200659,EGY,people_with_insufficient_food_consumption
 2022-11-08,11425206,14478173,9219353,EGY,people_with_insufficient_food_consumption
 2022-11-09,11344961,14474481,9203063,EGY,people_with_insufficient_food_consumption
@@ -7922,6 +7943,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,14753964,17770227,12201832,EGY,people_with_insufficient_food_consumption
 2023-07-26,14784824,17872046,12209624,EGY,people_with_insufficient_food_consumption
 2023-07-27,14757973,17858529,12199453,EGY,people_with_insufficient_food_consumption
+2023-07-28,14752006,17870283,12199453,EGY,people_with_insufficient_food_consumption
 2022-11-07,23148293,23148293,23148293,ETH,people_with_insufficient_food_consumption
 2022-11-08,23519348,23519348,23519348,ETH,people_with_insufficient_food_consumption
 2022-11-09,23117179,23117179,23117179,ETH,people_with_insufficient_food_consumption
@@ -8516,6 +8538,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,133179,146587,118387,FJI,people_with_insufficient_food_consumption
 2023-07-26,133014,146020,118354,FJI,people_with_insufficient_food_consumption
 2023-07-27,132991,146020,118354,FJI,people_with_insufficient_food_consumption
+2023-07-28,132991,146020,118354,FJI,people_with_insufficient_food_consumption
 2022-11-07,6717502,8520131,5231206,GHA,people_with_insufficient_food_consumption
 2022-11-08,6717502,8520131,5231206,GHA,people_with_insufficient_food_consumption
 2022-11-09,6711903,8511817,5230764,GHA,people_with_insufficient_food_consumption
@@ -8891,6 +8914,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4987174,5666723,4429891,GHA,people_with_insufficient_food_consumption
 2023-07-26,4987297,5665815,4430963,GHA,people_with_insufficient_food_consumption
 2023-07-27,4987354,5665815,4432252,GHA,people_with_insufficient_food_consumption
+2023-07-28,4980084,5651131,4425255,GHA,people_with_insufficient_food_consumption
 2022-11-07,8317272,8317272,8317272,GIN,people_with_insufficient_food_consumption
 2022-11-08,8436354,8436354,8436354,GIN,people_with_insufficient_food_consumption
 2022-11-09,8428325,8428325,8428325,GIN,people_with_insufficient_food_consumption
@@ -9154,6 +9178,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,6560605,6560605,6560605,GIN,people_with_insufficient_food_consumption
 2023-07-26,6597183,6597183,6597183,GIN,people_with_insufficient_food_consumption
 2023-07-27,6595963,6595963,6595963,GIN,people_with_insufficient_food_consumption
+2023-07-28,6650406,6650406,6650406,GIN,people_with_insufficient_food_consumption
 2022-11-07,360334,431759,305297,GMB,people_with_insufficient_food_consumption
 2022-11-08,360334,431759,305297,GMB,people_with_insufficient_food_consumption
 2022-11-09,360334,431759,305297,GMB,people_with_insufficient_food_consumption
@@ -9528,6 +9553,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,637709,694230,579887,GMB,people_with_insufficient_food_consumption
 2023-07-26,637991,694230,580136,GMB,people_with_insufficient_food_consumption
 2023-07-27,637991,694230,580136,GMB,people_with_insufficient_food_consumption
+2023-07-28,639359,694865,580491,GMB,people_with_insufficient_food_consumption
 2022-11-07,630114,721255,549790,GNB,people_with_insufficient_food_consumption
 2022-11-08,630114,721255,549790,GNB,people_with_insufficient_food_consumption
 2022-11-09,630114,721255,549790,GNB,people_with_insufficient_food_consumption
@@ -9903,6 +9929,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,771558,832814,706202,GNB,people_with_insufficient_food_consumption
 2023-07-26,771386,832898,706085,GNB,people_with_insufficient_food_consumption
 2023-07-27,771386,832898,706085,GNB,people_with_insufficient_food_consumption
+2023-07-28,771285,832898,706085,GNB,people_with_insufficient_food_consumption
 2022-11-04,1156270,1156270,1156270,GTM,people_with_insufficient_food_consumption
 2022-11-05,1160320,1160320,1160320,GTM,people_with_insufficient_food_consumption
 2022-11-06,1158945,1158945,1158945,GTM,people_with_insufficient_food_consumption
@@ -10169,6 +10196,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,2585262,2585262,2585262,GTM,people_with_insufficient_food_consumption
 2023-07-26,2554421,2554421,2554421,GTM,people_with_insufficient_food_consumption
 2023-07-27,2496911,2496911,2496911,GTM,people_with_insufficient_food_consumption
+2023-07-28,2505516,2505516,2505516,GTM,people_with_insufficient_food_consumption
 2022-11-07,712239,712239,712239,HND,people_with_insufficient_food_consumption
 2022-11-08,709593,709593,709593,HND,people_with_insufficient_food_consumption
 2022-11-09,713374,713374,713374,HND,people_with_insufficient_food_consumption
@@ -10432,6 +10460,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,783015,783015,783015,HND,people_with_insufficient_food_consumption
 2023-07-26,811027,811027,811027,HND,people_with_insufficient_food_consumption
 2023-07-27,787756,787756,787756,HND,people_with_insufficient_food_consumption
+2023-07-28,769434,769434,769434,HND,people_with_insufficient_food_consumption
 2022-11-05,7367987,7367987,7367987,HTI,people_with_insufficient_food_consumption
 2022-11-06,7321658,7321658,7321658,HTI,people_with_insufficient_food_consumption
 2022-11-07,7312843,7312843,7312843,HTI,people_with_insufficient_food_consumption
@@ -10697,6 +10726,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,6489548,6489548,6489548,HTI,people_with_insufficient_food_consumption
 2023-07-26,6539736,6539736,6539736,HTI,people_with_insufficient_food_consumption
 2023-07-27,6581117,6581117,6581117,HTI,people_with_insufficient_food_consumption
+2023-07-28,6594915,6594915,6594915,HTI,people_with_insufficient_food_consumption
 2022-11-07,32985286,39642381,28470011,IDN,people_with_insufficient_food_consumption
 2022-11-08,32984677,39748373,28470011,IDN,people_with_insufficient_food_consumption
 2022-11-09,32992545,39748373,28470011,IDN,people_with_insufficient_food_consumption
@@ -11071,6 +11101,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,32765536,38137589,26404005,IDN,people_with_insufficient_food_consumption
 2023-07-26,32635446,38060172,26403720,IDN,people_with_insufficient_food_consumption
 2023-07-27,32571982,37975448,26385086,IDN,people_with_insufficient_food_consumption
+2023-07-28,32728012,38306114,26460716,IDN,people_with_insufficient_food_consumption
 2022-11-07,8485132,10309701,6892667,IRN,people_with_insufficient_food_consumption
 2022-11-08,8484955,10309701,6892667,IRN,people_with_insufficient_food_consumption
 2022-11-09,8484955,10309701,6892667,IRN,people_with_insufficient_food_consumption
@@ -11445,6 +11476,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,12911823,15480349,11310208,IRN,people_with_insufficient_food_consumption
 2023-07-26,12915720,15486805,11310082,IRN,people_with_insufficient_food_consumption
 2023-07-27,12915720,15486805,11310082,IRN,people_with_insufficient_food_consumption
+2023-07-28,12915720,15486805,11310082,IRN,people_with_insufficient_food_consumption
 2022-11-07,2341447,2341447,2341447,IRQ,people_with_insufficient_food_consumption
 2022-11-08,2418490,2418490,2418490,IRQ,people_with_insufficient_food_consumption
 2022-11-09,2394149,2394149,2394149,IRQ,people_with_insufficient_food_consumption
@@ -12003,6 +12035,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1285612,1535590,1141016,JOR,people_with_insufficient_food_consumption
 2023-07-26,1285484,1535590,1141016,JOR,people_with_insufficient_food_consumption
 2023-07-27,1285484,1535590,1141016,JOR,people_with_insufficient_food_consumption
+2023-07-28,1319702,1580239,1172762,JOR,people_with_insufficient_food_consumption
 2022-11-07,11494892,11494892,11494892,KEN,people_with_insufficient_food_consumption
 2022-11-08,11251454,11251454,11251454,KEN,people_with_insufficient_food_consumption
 2022-11-09,11130362,11130362,11130362,KEN,people_with_insufficient_food_consumption
@@ -12268,6 +12301,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,12851956,12851956,12851956,KEN,people_with_insufficient_food_consumption
 2023-07-26,12655181,12655181,12655181,KEN,people_with_insufficient_food_consumption
 2023-07-27,12505647,12505647,12505647,KEN,people_with_insufficient_food_consumption
+2023-07-28,12939640,12939640,12939640,KEN,people_with_insufficient_food_consumption
 2022-11-07,1577721,1984843,1226812,KGZ,people_with_insufficient_food_consumption
 2022-11-08,1576243,1983236,1226812,KGZ,people_with_insufficient_food_consumption
 2022-11-09,1576243,1983236,1226812,KGZ,people_with_insufficient_food_consumption
@@ -12642,6 +12676,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,2379124,2660156,2130885,KGZ,people_with_insufficient_food_consumption
 2023-07-26,2380010,2660156,2130885,KGZ,people_with_insufficient_food_consumption
 2023-07-27,2380010,2660156,2130885,KGZ,people_with_insufficient_food_consumption
+2023-07-28,2375482,2656922,2130878,KGZ,people_with_insufficient_food_consumption
 2022-11-07,2812750,3577081,2228651,KHM,people_with_insufficient_food_consumption
 2022-11-08,2812750,3577081,2228651,KHM,people_with_insufficient_food_consumption
 2022-11-09,2812750,3577081,2228651,KHM,people_with_insufficient_food_consumption
@@ -13016,6 +13051,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1742219,2020711,1533936,KHM,people_with_insufficient_food_consumption
 2023-07-26,1743364,2021213,1533182,KHM,people_with_insufficient_food_consumption
 2023-07-27,1743357,2021213,1533182,KHM,people_with_insufficient_food_consumption
+2023-07-28,1738811,2029556,1536295,KHM,people_with_insufficient_food_consumption
 2022-11-07,1020194,1423261,723620,LAO,people_with_insufficient_food_consumption
 2022-11-08,1020063,1423261,723620,LAO,people_with_insufficient_food_consumption
 2022-11-09,1020063,1423261,723620,LAO,people_with_insufficient_food_consumption
@@ -13837,6 +13873,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1846794,2116741,1616417,LBN,people_with_insufficient_food_consumption
 2023-07-26,1860197,2129542,1625489,LBN,people_with_insufficient_food_consumption
 2023-07-27,1860316,2129542,1623394,LBN,people_with_insufficient_food_consumption
+2023-07-28,1860102,2131357,1624003,LBN,people_with_insufficient_food_consumption
 2022-11-07,1683701,1893047,1471945,LBR,people_with_insufficient_food_consumption
 2022-11-08,1683582,1886739,1471945,LBR,people_with_insufficient_food_consumption
 2022-11-09,1681411,1882565,1468509,LBR,people_with_insufficient_food_consumption
@@ -14212,6 +14249,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1664424,1825973,1532717,LBR,people_with_insufficient_food_consumption
 2023-07-26,1791613,1936367,1661315,LBR,people_with_insufficient_food_consumption
 2023-07-27,1791705,1936367,1661248,LBR,people_with_insufficient_food_consumption
+2023-07-28,1791705,1936367,1661248,LBR,people_with_insufficient_food_consumption
 2022-11-07,1158602,1388184,969377,LBY,people_with_insufficient_food_consumption
 2022-11-08,1156826,1383796,969377,LBY,people_with_insufficient_food_consumption
 2022-11-09,1156826,1383796,969377,LBY,people_with_insufficient_food_consumption
@@ -14580,6 +14618,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1017633,1132461,929129,LBY,people_with_insufficient_food_consumption
 2023-07-26,1017633,1134577,929936,LBY,people_with_insufficient_food_consumption
 2023-07-27,1017942,1134577,930296,LBY,people_with_insufficient_food_consumption
+2023-07-28,1017942,1134577,930296,LBY,people_with_insufficient_food_consumption
 2022-11-07,5672680,6905956,4751530,LKA,people_with_insufficient_food_consumption
 2022-11-08,5673205,6905956,4751530,LKA,people_with_insufficient_food_consumption
 2022-11-09,5666875,6905956,4751530,LKA,people_with_insufficient_food_consumption
@@ -14954,6 +14993,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4014619,4540830,3540056,LKA,people_with_insufficient_food_consumption
 2023-07-26,3999319,4521986,3537674,LKA,people_with_insufficient_food_consumption
 2023-07-27,3998434,4519334,3536007,LKA,people_with_insufficient_food_consumption
+2023-07-28,3998434,4519334,3536007,LKA,people_with_insufficient_food_consumption
 2022-11-07,963805,1070760,876678,LSO,people_with_insufficient_food_consumption
 2022-11-08,962315,1069110,876771,LSO,people_with_insufficient_food_consumption
 2022-11-09,962646,1069110,876771,LSO,people_with_insufficient_food_consumption
@@ -15329,6 +15369,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,714438,783998,646777,LSO,people_with_insufficient_food_consumption
 2023-07-26,714295,783617,646699,LSO,people_with_insufficient_food_consumption
 2023-07-27,714169,783559,646637,LSO,people_with_insufficient_food_consumption
+2023-07-28,714169,783559,646637,LSO,people_with_insufficient_food_consumption
 2022-11-07,4868631,5914568,3864463,MAR,people_with_insufficient_food_consumption
 2022-11-08,4868631,5914568,3864463,MAR,people_with_insufficient_food_consumption
 2022-11-09,4868631,5914568,3864463,MAR,people_with_insufficient_food_consumption
@@ -15703,6 +15744,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,5882822,6921375,5007443,MAR,people_with_insufficient_food_consumption
 2023-07-26,5858846,6878187,4990110,MAR,people_with_insufficient_food_consumption
 2023-07-27,5833460,6854810,4969184,MAR,people_with_insufficient_food_consumption
+2023-07-28,5833460,6854810,4969184,MAR,people_with_insufficient_food_consumption
 2022-11-07,299431,350296,251697,MDA,people_with_insufficient_food_consumption
 2022-11-08,299688,350076,251697,MDA,people_with_insufficient_food_consumption
 2022-11-09,299688,350076,251697,MDA,people_with_insufficient_food_consumption
@@ -16077,6 +16119,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,580846,657883,502162,MDA,people_with_insufficient_food_consumption
 2023-07-26,576245,653470,499543,MDA,people_with_insufficient_food_consumption
 2023-07-27,576187,653470,499695,MDA,people_with_insufficient_food_consumption
+2023-07-28,576187,653470,499695,MDA,people_with_insufficient_food_consumption
 2022-11-07,9772900,9772900,9772900,MDG,people_with_insufficient_food_consumption
 2022-11-08,9810643,9810643,9810643,MDG,people_with_insufficient_food_consumption
 2022-11-09,9787137,9787137,9787137,MDG,people_with_insufficient_food_consumption
@@ -16430,7 +16473,10 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-24,8214770,8214770,8214770,MDG,people_with_insufficient_food_consumption
 2023-07-25,8187687,8187687,8187687,MDG,people_with_insufficient_food_consumption
 2023-07-26,8157181,8157181,8157181,MDG,people_with_insufficient_food_consumption
+2023-07-26,8140411,8140411,8140411,MDG,people_with_insufficient_food_consumption
 2023-07-27,8076501,8076501,8076501,MDG,people_with_insufficient_food_consumption
+2023-07-27,8063602,8063602,8063602,MDG,people_with_insufficient_food_consumption
+2023-07-28,8125092,8125092,8125092,MDG,people_with_insufficient_food_consumption
 2022-11-07,13435363,13435363,13435363,MLI,people_with_insufficient_food_consumption
 2022-11-08,13470356,13470356,13470356,MLI,people_with_insufficient_food_consumption
 2022-11-09,13514641,13514641,13514641,MLI,people_with_insufficient_food_consumption
@@ -16696,6 +16742,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,12401802,12401802,12401802,MLI,people_with_insufficient_food_consumption
 2023-07-26,12471681,12471681,12471681,MLI,people_with_insufficient_food_consumption
 2023-07-27,12568876,12568876,12568876,MLI,people_with_insufficient_food_consumption
+2023-07-28,12646408,12646408,12646408,MLI,people_with_insufficient_food_consumption
 2022-11-07,15678499,18854810,12315747,MMR,people_with_insufficient_food_consumption
 2022-11-08,15678831,18854810,12315747,MMR,people_with_insufficient_food_consumption
 2022-11-09,15680956,18846590,12318733,MMR,people_with_insufficient_food_consumption
@@ -17070,6 +17117,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,9974889,11319368,8760453,MMR,people_with_insufficient_food_consumption
 2023-07-26,9971149,11313658,8758421,MMR,people_with_insufficient_food_consumption
 2023-07-27,9968372,11311907,8757984,MMR,people_with_insufficient_food_consumption
+2023-07-28,9979382,11336328,8759860,MMR,people_with_insufficient_food_consumption
 2022-11-07,349560,453074,276303,MNG,people_with_insufficient_food_consumption
 2022-11-08,349560,453074,276303,MNG,people_with_insufficient_food_consumption
 2022-11-09,349560,453219,276303,MNG,people_with_insufficient_food_consumption
@@ -17445,6 +17493,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,684998,778094,588188,MNG,people_with_insufficient_food_consumption
 2023-07-26,687344,785549,590506,MNG,people_with_insufficient_food_consumption
 2023-07-27,687344,785646,590499,MNG,people_with_insufficient_food_consumption
+2023-07-28,687344,785646,590499,MNG,people_with_insufficient_food_consumption
 2022-11-06,8849422,8849422,8849422,MOZ,people_with_insufficient_food_consumption
 2022-11-07,8920278,8920278,8920278,MOZ,people_with_insufficient_food_consumption
 2022-11-08,8949125,8949125,8949125,MOZ,people_with_insufficient_food_consumption
@@ -17710,6 +17759,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,7777594,7777594,7777594,MOZ,people_with_insufficient_food_consumption
 2023-07-26,7838879,7838879,7838879,MOZ,people_with_insufficient_food_consumption
 2023-07-27,7918108,7918108,7918108,MOZ,people_with_insufficient_food_consumption
+2023-07-28,7974119,7974119,7974119,MOZ,people_with_insufficient_food_consumption
 2022-11-01,1993492,1993492,1993492,MRT,people_with_insufficient_food_consumption
 2022-11-02,1958795,1958795,1958795,MRT,people_with_insufficient_food_consumption
 2022-11-03,1949527,1949527,1949527,MRT,people_with_insufficient_food_consumption
@@ -18319,6 +18369,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4474902,4474902,4474902,MWI,people_with_insufficient_food_consumption
 2023-07-26,4529744,4529744,4529744,MWI,people_with_insufficient_food_consumption
 2023-07-27,4496254,4496254,4496254,MWI,people_with_insufficient_food_consumption
+2023-07-28,4469607,4469607,4469607,MWI,people_with_insufficient_food_consumption
 2022-11-07,327597,327597,327597,NAM,people_with_insufficient_food_consumption
 2022-11-08,328590,328590,328590,NAM,people_with_insufficient_food_consumption
 2022-11-09,321010,321010,321010,NAM,people_with_insufficient_food_consumption
@@ -18582,6 +18633,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,243428,243428,243428,NAM,people_with_insufficient_food_consumption
 2023-07-26,238359,238359,238359,NAM,people_with_insufficient_food_consumption
 2023-07-27,237355,237355,237355,NAM,people_with_insufficient_food_consumption
+2023-07-28,235853,235853,235853,NAM,people_with_insufficient_food_consumption
 2022-11-07,17270926,17270926,17270926,NER,people_with_insufficient_food_consumption
 2022-11-08,17407423,17407423,17407423,NER,people_with_insufficient_food_consumption
 2022-11-09,17521919,17521919,17521919,NER,people_with_insufficient_food_consumption
@@ -18847,6 +18899,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,16842036,16842036,16842036,NER,people_with_insufficient_food_consumption
 2023-07-26,16920480,16920480,16920480,NER,people_with_insufficient_food_consumption
 2023-07-27,16870160,16870160,16870160,NER,people_with_insufficient_food_consumption
+2023-07-28,16898423,16898423,16898423,NER,people_with_insufficient_food_consumption
 2022-11-05,56258624,58461313,54290607,NGA,people_with_insufficient_food_consumption
 2022-11-06,56095721,58306847,54134621,NGA,people_with_insufficient_food_consumption
 2022-11-07,56050762,58261888,54079561,NGA,people_with_insufficient_food_consumption
@@ -19320,6 +19373,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,73769955,74848426,72981396,NGA,people_with_insufficient_food_consumption
 2023-07-26,73991154,75034904,73192189,NGA,people_with_insufficient_food_consumption
 2023-07-27,74123188,75156626,73322438,NGA,people_with_insufficient_food_consumption
+2023-07-28,74439139,75450677,73631014,NGA,people_with_insufficient_food_consumption
 2022-11-07,498718,498718,498718,NIC,people_with_insufficient_food_consumption
 2022-11-08,499889,499889,499889,NIC,people_with_insufficient_food_consumption
 2022-11-09,495783,495783,495783,NIC,people_with_insufficient_food_consumption
@@ -19903,6 +19957,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,6416650,6944874,5940415,NPL,people_with_insufficient_food_consumption
 2023-07-26,6418777,6945121,5939706,NPL,people_with_insufficient_food_consumption
 2023-07-27,6418777,6945121,5939706,NPL,people_with_insufficient_food_consumption
+2023-07-28,6417792,6941629,5944964,NPL,people_with_insufficient_food_consumption
 2022-11-07,4421207,5404863,3622031,PER,people_with_insufficient_food_consumption
 2022-11-08,4421522,5404863,3622031,PER,people_with_insufficient_food_consumption
 2022-11-09,4421522,5404863,3622031,PER,people_with_insufficient_food_consumption
@@ -20278,6 +20333,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4048431,5069953,3392117,PER,people_with_insufficient_food_consumption
 2023-07-26,4051577,5083059,3389690,PER,people_with_insufficient_food_consumption
 2023-07-27,4051869,5083263,3385317,PER,people_with_insufficient_food_consumption
+2023-07-28,4051869,5083263,3385317,PER,people_with_insufficient_food_consumption
 2022-11-07,15913689,19377497,13290930,PHL,people_with_insufficient_food_consumption
 2022-11-08,15913689,19377497,13290930,PHL,people_with_insufficient_food_consumption
 2022-11-09,15918929,19394296,13263892,PHL,people_with_insufficient_food_consumption
@@ -20652,6 +20708,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,18085634,20296043,16102156,PHL,people_with_insufficient_food_consumption
 2023-07-26,18120300,20304290,16123817,PHL,people_with_insufficient_food_consumption
 2023-07-27,18121768,20320675,16141098,PHL,people_with_insufficient_food_consumption
+2023-07-28,18139135,20359804,16147923,PHL,people_with_insufficient_food_consumption
 2022-11-07,1322856,1509131,1123705,PNG,people_with_insufficient_food_consumption
 2022-11-08,1322856,1509131,1123705,PNG,people_with_insufficient_food_consumption
 2022-11-09,1322856,1509131,1123705,PNG,people_with_insufficient_food_consumption
@@ -21027,6 +21084,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,2238966,2873010,1751726,PNG,people_with_insufficient_food_consumption
 2023-07-26,1476021,1838674,1132087,PNG,people_with_insufficient_food_consumption
 2023-07-27,1476022,1838674,1132087,PNG,people_with_insufficient_food_consumption
+2023-07-28,1475162,1834500,1130474,PNG,people_with_insufficient_food_consumption
 2022-11-07,977755,1110419,842868,PSE,people_with_insufficient_food_consumption
 2022-11-08,983378,1118951,847785,PSE,people_with_insufficient_food_consumption
 2022-11-09,985343,1118951,847785,PSE,people_with_insufficient_food_consumption
@@ -21401,6 +21459,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1146922,1283409,1051616,PSE,people_with_insufficient_food_consumption
 2023-07-26,1146922,1283409,1051616,PSE,people_with_insufficient_food_consumption
 2023-07-27,1144622,1284036,1051575,PSE,people_with_insufficient_food_consumption
+2023-07-28,1144201,1284066,1051575,PSE,people_with_insufficient_food_consumption
 2022-11-07,3008274,3640576,2513607,RWA,people_with_insufficient_food_consumption
 2022-11-08,3005073,3640576,2512781,RWA,people_with_insufficient_food_consumption
 2022-11-09,3005073,3640576,2512781,RWA,people_with_insufficient_food_consumption
@@ -21775,6 +21834,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,3056469,3383279,2769271,RWA,people_with_insufficient_food_consumption
 2023-07-26,3055355,3381628,2767899,RWA,people_with_insufficient_food_consumption
 2023-07-27,3055558,3381628,2767899,RWA,people_with_insufficient_food_consumption
+2023-07-28,3052752,3379344,2766877,RWA,people_with_insufficient_food_consumption
 2022-11-07,9630821,11476867,7864811,SDN,people_with_insufficient_food_consumption
 2022-11-08,9630821,11476867,7864811,SDN,people_with_insufficient_food_consumption
 2022-11-09,9630821,11476867,7864811,SDN,people_with_insufficient_food_consumption
@@ -22324,6 +22384,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,15658864,17188196,14099959,SDN,people_with_insufficient_food_consumption
 2023-07-26,15659872,17181701,14098075,SDN,people_with_insufficient_food_consumption
 2023-07-27,15659872,17182204,14098075,SDN,people_with_insufficient_food_consumption
+2023-07-28,15634821,17176220,14096077,SDN,people_with_insufficient_food_consumption
 2022-11-07,2446042,3041810,2072557,SEN,people_with_insufficient_food_consumption
 2022-11-08,2446042,3041810,2072557,SEN,people_with_insufficient_food_consumption
 2022-11-09,2449563,3043926,2073464,SEN,people_with_insufficient_food_consumption
@@ -22699,6 +22760,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4714104,5174176,4284333,SEN,people_with_insufficient_food_consumption
 2023-07-26,4703808,5178779,4259746,SEN,people_with_insufficient_food_consumption
 2023-07-27,4706989,5180911,4263323,SEN,people_with_insufficient_food_consumption
+2023-07-28,4715464,5181696,4268080,SEN,people_with_insufficient_food_consumption
 2022-11-07,114488,134307,100194,SLB,people_with_insufficient_food_consumption
 2022-11-08,114488,134307,100194,SLB,people_with_insufficient_food_consumption
 2022-11-09,114508,134307,100194,SLB,people_with_insufficient_food_consumption
@@ -23073,6 +23135,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,76885,105078,59726,SLB,people_with_insufficient_food_consumption
 2023-07-26,77148,105055,59635,SLB,people_with_insufficient_food_consumption
 2023-07-27,77148,105055,59635,SLB,people_with_insufficient_food_consumption
+2023-07-28,77148,105055,59635,SLB,people_with_insufficient_food_consumption
 2022-11-07,4202829,4202829,4202829,SLE,people_with_insufficient_food_consumption
 2022-11-08,4154983,4154983,4154983,SLE,people_with_insufficient_food_consumption
 2022-11-09,4161263,4161263,4161263,SLE,people_with_insufficient_food_consumption
@@ -23338,6 +23401,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4603591,4603591,4603591,SLE,people_with_insufficient_food_consumption
 2023-07-26,4609645,4609645,4609645,SLE,people_with_insufficient_food_consumption
 2023-07-27,4598392,4598392,4598392,SLE,people_with_insufficient_food_consumption
+2023-07-28,4592725,4592725,4592725,SLE,people_with_insufficient_food_consumption
 2022-11-07,1009863,1009863,1009863,SLV,people_with_insufficient_food_consumption
 2022-11-08,1010724,1010724,1010724,SLV,people_with_insufficient_food_consumption
 2022-11-09,1023490,1023490,1023490,SLV,people_with_insufficient_food_consumption
@@ -23601,6 +23665,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,91619,91619,91619,SLV,people_with_insufficient_food_consumption
 2023-07-26,93307,93307,93307,SLV,people_with_insufficient_food_consumption
 2023-07-27,93116,93116,93116,SLV,people_with_insufficient_food_consumption
+2023-07-28,92643,92643,92643,SLV,people_with_insufficient_food_consumption
 2022-11-07,14574357,14574357,14574357,SOM,people_with_insufficient_food_consumption
 2022-11-08,14570726,14570726,14570726,SOM,people_with_insufficient_food_consumption
 2022-11-09,14579066,14579066,14579066,SOM,people_with_insufficient_food_consumption
@@ -23866,6 +23931,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,15428969,15428969,15428969,SOM,people_with_insufficient_food_consumption
 2023-07-26,15365591,15365591,15365591,SOM,people_with_insufficient_food_consumption
 2023-07-27,15292822,15292822,15292822,SOM,people_with_insufficient_food_consumption
+2023-07-28,15272217,15272217,15272217,SOM,people_with_insufficient_food_consumption
 2022-11-07,6616820,7282253,5842481,SSD,people_with_insufficient_food_consumption
 2022-11-08,6617174,7282253,5842481,SSD,people_with_insufficient_food_consumption
 2022-11-09,6617174,7282253,5842481,SSD,people_with_insufficient_food_consumption
@@ -24294,6 +24360,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,3943869,4390402,3510402,SSD,people_with_insufficient_food_consumption
 2023-07-26,3940908,4377446,3497067,SSD,people_with_insufficient_food_consumption
 2023-07-27,3892029,4336878,3456839,SSD,people_with_insufficient_food_consumption
+2023-07-28,3899698,4332963,3465029,SSD,people_with_insufficient_food_consumption
 2022-11-07,35752,41362,30508,STP,people_with_insufficient_food_consumption
 2022-11-08,35752,41362,30508,STP,people_with_insufficient_food_consumption
 2022-11-09,35752,41362,30508,STP,people_with_insufficient_food_consumption
@@ -24669,6 +24736,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,33801,40503,26442,STP,people_with_insufficient_food_consumption
 2023-07-26,33816,40520,26439,STP,people_with_insufficient_food_consumption
 2023-07-27,33816,40520,26439,STP,people_with_insufficient_food_consumption
+2023-07-28,33816,40520,26439,STP,people_with_insufficient_food_consumption
 2022-11-07,332617,392581,284178,SWZ,people_with_insufficient_food_consumption
 2022-11-08,332040,392510,283955,SWZ,people_with_insufficient_food_consumption
 2022-11-09,332096,392510,283955,SWZ,people_with_insufficient_food_consumption
@@ -25044,6 +25112,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,222588,260597,189716,SWZ,people_with_insufficient_food_consumption
 2023-07-26,229343,271481,191401,SWZ,people_with_insufficient_food_consumption
 2023-07-27,229343,271481,191401,SWZ,people_with_insufficient_food_consumption
+2023-07-28,229426,271764,191367,SWZ,people_with_insufficient_food_consumption
 2022-11-07,10205480,10205480,10205480,SYR,people_with_insufficient_food_consumption
 2022-11-08,10077466,10077466,10077466,SYR,people_with_insufficient_food_consumption
 2022-11-09,9986409,9986409,9986409,SYR,people_with_insufficient_food_consumption
@@ -25307,6 +25376,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,11437346,11437346,11437346,SYR,people_with_insufficient_food_consumption
 2023-07-26,11363043,11363043,11363043,SYR,people_with_insufficient_food_consumption
 2023-07-27,11401001,11401001,11401001,SYR,people_with_insufficient_food_consumption
+2023-07-28,11429583,11429583,11429583,SYR,people_with_insufficient_food_consumption
 2022-11-07,5494033,5494033,5494033,TCD,people_with_insufficient_food_consumption
 2022-11-08,5502436,5502436,5502436,TCD,people_with_insufficient_food_consumption
 2022-11-09,5531985,5531985,5531985,TCD,people_with_insufficient_food_consumption
@@ -25572,6 +25642,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,9429795,9429795,9429795,TCD,people_with_insufficient_food_consumption
 2023-07-26,9431780,9431780,9431780,TCD,people_with_insufficient_food_consumption
 2023-07-27,9424021,9424021,9424021,TCD,people_with_insufficient_food_consumption
+2023-07-28,9422672,9422672,9422672,TCD,people_with_insufficient_food_consumption
 2022-11-07,2556450,2893054,2218306,TGO,people_with_insufficient_food_consumption
 2022-11-08,2556450,2893054,2218306,TGO,people_with_insufficient_food_consumption
 2022-11-09,2556450,2893054,2218306,TGO,people_with_insufficient_food_consumption
@@ -25952,6 +26023,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1507656,1748026,1280866,TGO,people_with_insufficient_food_consumption
 2023-07-26,1527116,1773886,1287968,TGO,people_with_insufficient_food_consumption
 2023-07-27,1533385,1772493,1288648,TGO,people_with_insufficient_food_consumption
+2023-07-28,1533385,1772493,1288648,TGO,people_with_insufficient_food_consumption
 2022-11-07,2368044,2844637,2022191,TJK,people_with_insufficient_food_consumption
 2022-11-08,2368044,2844637,2022191,TJK,people_with_insufficient_food_consumption
 2022-11-09,2368044,2844637,2022191,TJK,people_with_insufficient_food_consumption
@@ -26326,6 +26398,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,2093232,2258125,1902547,TJK,people_with_insufficient_food_consumption
 2023-07-26,2094368,2250706,1900194,TJK,people_with_insufficient_food_consumption
 2023-07-27,2093607,2250706,1899141,TJK,people_with_insufficient_food_consumption
+2023-07-28,2093607,2250706,1899141,TJK,people_with_insufficient_food_consumption
 2022-11-07,555511,653698,444765,TLS,people_with_insufficient_food_consumption
 2022-11-08,555511,653698,444765,TLS,people_with_insufficient_food_consumption
 2022-11-09,555511,653698,444765,TLS,people_with_insufficient_food_consumption
@@ -26700,6 +26773,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,312884,376664,263037,TLS,people_with_insufficient_food_consumption
 2023-07-26,318152,378882,272375,TLS,people_with_insufficient_food_consumption
 2023-07-27,318152,378882,272375,TLS,people_with_insufficient_food_consumption
+2023-07-28,318357,379573,272394,TLS,people_with_insufficient_food_consumption
 2022-11-07,1337131,1676156,1106742,TUN,people_with_insufficient_food_consumption
 2022-11-08,1337131,1676156,1106742,TUN,people_with_insufficient_food_consumption
 2022-11-09,1337131,1676156,1106742,TUN,people_with_insufficient_food_consumption
@@ -27075,6 +27149,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,1613834,1972325,1331159,TUN,people_with_insufficient_food_consumption
 2023-07-26,1606815,1963924,1323027,TUN,people_with_insufficient_food_consumption
 2023-07-27,1602561,1960631,1320357,TUN,people_with_insufficient_food_consumption
+2023-07-28,1602561,1960631,1320357,TUN,people_with_insufficient_food_consumption
 2022-11-07,6837899,6837899,6837899,TZA,people_with_insufficient_food_consumption
 2022-11-08,6897506,6897506,6897506,TZA,people_with_insufficient_food_consumption
 2022-11-09,6927187,6927187,6927187,TZA,people_with_insufficient_food_consumption
@@ -27340,6 +27415,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4861547,4861547,4861547,TZA,people_with_insufficient_food_consumption
 2023-07-26,4845542,4845542,4845542,TZA,people_with_insufficient_food_consumption
 2023-07-27,4819620,4819620,4819620,TZA,people_with_insufficient_food_consumption
+2023-07-28,4931834,4931834,4931834,TZA,people_with_insufficient_food_consumption
 2022-11-07,15074762,17497281,12925392,UGA,people_with_insufficient_food_consumption
 2022-11-08,15122529,17529306,12956251,UGA,people_with_insufficient_food_consumption
 2022-11-09,15135888,17529759,12971211,UGA,people_with_insufficient_food_consumption
@@ -27715,6 +27791,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,9602296,10957628,8189940,UGA,people_with_insufficient_food_consumption
 2023-07-26,9610558,10992263,8200343,UGA,people_with_insufficient_food_consumption
 2023-07-27,9837413,11309050,8523860,UGA,people_with_insufficient_food_consumption
+2023-07-28,9857940,11351092,8519153,UGA,people_with_insufficient_food_consumption
 2022-11-07,8311206,8311206,8311206,UKR,people_with_insufficient_food_consumption
 2022-11-08,9013867,9013867,9013867,UKR,people_with_insufficient_food_consumption
 2022-11-09,8924179,8924179,8924179,UKR,people_with_insufficient_food_consumption
@@ -27983,6 +28060,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,7943792,8430599,7495568,UKR,people_with_insufficient_food_consumption
 2023-07-26,7894843,8381680,7449240,UKR,people_with_insufficient_food_consumption
 2023-07-27,7937557,8424394,7491954,UKR,people_with_insufficient_food_consumption
+2023-07-28,7817179,8310123,7369764,UKR,people_with_insufficient_food_consumption
 2022-11-07,3661914,4436962,3124803,UZB,people_with_insufficient_food_consumption
 2022-11-08,3659937,4436962,3124803,UZB,people_with_insufficient_food_consumption
 2022-11-09,3658166,4436962,3124803,UZB,people_with_insufficient_food_consumption
@@ -28358,6 +28436,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,7010016,8344080,5745759,UZB,people_with_insufficient_food_consumption
 2023-07-26,7017425,8362073,5736667,UZB,people_with_insufficient_food_consumption
 2023-07-27,7014019,8354125,5739703,UZB,people_with_insufficient_food_consumption
+2023-07-28,7014019,8354125,5739703,UZB,people_with_insufficient_food_consumption
 2022-11-07,11301193,13476817,9494695,VNM,people_with_insufficient_food_consumption
 2022-11-08,11290632,13445346,9494695,VNM,people_with_insufficient_food_consumption
 2022-11-09,11292273,13445346,9494695,VNM,people_with_insufficient_food_consumption
@@ -28733,6 +28812,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,10389407,12456155,8590158,VNM,people_with_insufficient_food_consumption
 2023-07-26,10372782,12442445,8580431,VNM,people_with_insufficient_food_consumption
 2023-07-27,10345951,12442173,8580431,VNM,people_with_insufficient_food_consumption
+2023-07-28,10345951,12442173,8580431,VNM,people_with_insufficient_food_consumption
 2022-11-07,94248,111666,78069,VUT,people_with_insufficient_food_consumption
 2022-11-08,94252,111666,78069,VUT,people_with_insufficient_food_consumption
 2022-11-09,94270,111836,78069,VUT,people_with_insufficient_food_consumption
@@ -29108,6 +29188,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,106844,120139,96801,VUT,people_with_insufficient_food_consumption
 2023-07-26,106844,120285,96801,VUT,people_with_insufficient_food_consumption
 2023-07-27,106875,120285,96801,VUT,people_with_insufficient_food_consumption
+2023-07-28,106875,120285,96801,VUT,people_with_insufficient_food_consumption
 2022-11-07,15651905,15651905,15651905,YEM,people_with_insufficient_food_consumption
 2022-11-08,15632219,15632219,15632219,YEM,people_with_insufficient_food_consumption
 2022-11-09,15581170,15581170,15581170,YEM,people_with_insufficient_food_consumption
@@ -29371,6 +29452,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,14863423,14863423,14863423,YEM,people_with_insufficient_food_consumption
 2023-07-26,15007734,15007734,15007734,YEM,people_with_insufficient_food_consumption
 2023-07-27,14941233,14941233,14941233,YEM,people_with_insufficient_food_consumption
+2023-07-28,15159824,15159824,15159824,YEM,people_with_insufficient_food_consumption
 2022-11-05,2243315,2243315,2243315,ZMB,people_with_insufficient_food_consumption
 2022-11-06,2254749,2254749,2254749,ZMB,people_with_insufficient_food_consumption
 2022-11-07,2279874,2279874,2279874,ZMB,people_with_insufficient_food_consumption
@@ -29638,6 +29720,7 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4387982,4387982,4387982,ZMB,people_with_insufficient_food_consumption
 2023-07-26,4412002,4412002,4412002,ZMB,people_with_insufficient_food_consumption
 2023-07-27,4399402,4399402,4399402,ZMB,people_with_insufficient_food_consumption
+2023-07-28,4445368,4445368,4445368,ZMB,people_with_insufficient_food_consumption
 2022-11-07,5499954,5499954,5499954,ZWE,people_with_insufficient_food_consumption
 2022-11-08,5661888,5661888,5661888,ZWE,people_with_insufficient_food_consumption
 2022-11-09,5529555,5529555,5529555,ZWE,people_with_insufficient_food_consumption
@@ -29903,3 +29986,4 @@ date,value,value_high,value_low,iso_code,indicator
 2023-07-25,4000629,4000629,4000629,ZWE,people_with_insufficient_food_consumption
 2023-07-26,4014644,4014644,4014644,ZWE,people_with_insufficient_food_consumption
 2023-07-27,3893809,3893809,3893809,ZWE,people_with_insufficient_food_consumption
+2023-07-28,3864492,3864492,3864492,ZWE,people_with_insufficient_food_consumption
