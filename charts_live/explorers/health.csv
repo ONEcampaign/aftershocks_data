@@ -1,5 +1,5 @@
 iso_code,Country Name,Continent,UN Region,Income Group,Population,Poverty rate (%),Least Developed Countries,General Gov. Health expenditure (% of GDP),"Maternal mortality (per 100,000)","Under 5 mortality rate (per 1,000)",Pop. vaccinated against COVID-19 (%),Malaria deaths,AIDS related deaths,Share Receiving ART (of ppl living with HIV)
-AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,42.36,110.0,527.0,10.436294
+AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,42.52,110.0,527.0,10.436294
 ALB,Albania,Europe,Southern Europe,Upper middle income,2775634.0,0.0,Non-LDC,2.82499456,15.0,9.8,47.44,,24.0,53.342716
 DZA,Algeria,Africa,Northern Africa,Lower middle income,44903225.0,0.5,Non-LDC,4.05817795,112.0,22.7,17.46,0.0,279.0,81.677444
 ASM,American Samoa,Oceania,Polynesia,Upper middle income,44273.0,,Non-LDC,,,,,,,
@@ -175,7 +175,7 @@ SXM,Sint Maarten,America,Caribbean,High income,43389.0,,Non-LDC,,,,67.41,,,
 SVK,Slovakia,Europe,Eastern Europe,High income,5431752.0,0.1,Non-LDC,5.48452091,5.0,5.8,46.0,,5.0,67.567568
 SVN,Slovenia,Europe,Southern Europe,High income,2108732.0,0.0,Non-LDC,6.16875267,7.0,2.2,59.71,,,87.576127
 SLB,Solomon Islands,Oceania,Melanesia,Lower middle income,724273.0,26.6,LDC,3.56772232,104.0,19.4,47.47,124.0,,
-SOM,Somalia,Africa,Eastern Africa,Low income,17597511.0,,LDC,,829.0,114.6,47.57,2123.0,360.0,50.193648
+SOM,Somalia,Africa,Eastern Africa,Low income,17597511.0,,LDC,,829.0,114.6,50.99,2123.0,360.0,50.193648
 ZAF,South Africa,Africa,Southern Africa,Upper middle income,59893885.0,20.5,Non-LDC,5.35265827,119.0,32.2,40.42,38.0,51266.0,73.82042
 KOR,South Korea,Asia,Eastern Asia,High income,51628117.0,0.2,Non-LDC,4.8600049,11.0,3.0,86.43,0.0,,
 SSD,South Sudan,Africa,Eastern Africa,Low income,10913164.0,67.3,LDC,0.98501509,1150.0,97.9,39.06,7431.0,8010.0,27.294643
