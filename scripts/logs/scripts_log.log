@@ -5111,3 +5111,18 @@ INFO (2023-08-07 07:15:16,079): Downloaded IDS debt stocks data: ids_stocks_raw
 INFO (2023-08-07 07:17:58,600): Downloaded IDS debt stocks data: ids_stocks_raw_long
 INFO (2023-08-07 07:18:15,243): Updated weekly charts in debt page
 INFO (2023-08-07 07:20:29,764): Updated weekly charts in country page
+INFO (2023-08-07 11:15:15,684): Updated OWID data
+INFO (2023-08-07 11:15:17,067): Updated daily charts in health page
+INFO (2023-08-07 11:15:21,465): Updated IPC data
+INFO (2023-08-07 11:15:21,644): Updated Pink Sheet data
+INFO (2023-08-07 11:15:22,134): Updated WFP data
+INFO (2023-08-07 11:15:22,416): Updated hunger topic charts
+INFO (2023-08-07 11:15:22,508): Updated hunger overview charts
+INFO (2023-08-07 11:15:22,586): Updated hunger dynamic text
+INFO (2023-08-07 11:15:22,586): Updated daily hunger data and all charts and text
+INFO (2023-08-07 11:17:34,738): Updated WFP data (insufficient food)
+INFO (2023-08-07 11:17:41,961): Updated WFP insufficient food charts
+INFO (2023-08-07 11:17:45,543): Updated vaccination rate chart
+INFO (2023-08-07 11:17:45,846): Updated overview text (summary) json
+INFO (2023-08-07 11:17:45,846): Updated daily charts in country page
+INFO (2023-08-07 11:17:51,822): Updated economy picker
