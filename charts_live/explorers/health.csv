@@ -1,5 +1,5 @@
 iso_code,Country Name,Continent,UN Region,Income Group,Population,Poverty rate (%),Least Developed Countries,General Gov. Health expenditure (% of GDP),"Maternal mortality (per 100,000)","Under 5 mortality rate (per 1,000)",Pop. vaccinated against COVID-19 (%),Malaria deaths,AIDS related deaths,Share Receiving ART (of ppl living with HIV)
-AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,42.63,110.0,527.0,10.436294
+AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,42.74,110.0,527.0,10.436294
 ALB,Albania,Europe,Southern Europe,Upper middle income,2775634.0,0.0,Non-LDC,2.82499456,15.0,9.8,47.44,,24.0,53.342716
 DZA,Algeria,Africa,Northern Africa,Lower middle income,44903225.0,0.5,Non-LDC,4.05817795,112.0,22.7,17.46,0.0,279.0,81.677444
 ASM,American Samoa,Oceania,Polynesia,Upper middle income,44273.0,,Non-LDC,,,,,,,
@@ -95,7 +95,7 @@ IRL,Ireland,Europe,Northern Europe,High income,5086988.0,0.1,Non-LDC,4.98130083,
 IMN,Isle of Man,Europe,Northern Europe,High income,84519.0,,Non-LDC,,,,82.29,,,
 ISR,Israel,Asia,Western Asia,High income,9550600.0,0.5,Non-LDC,4.83341503,3.0,3.6,71.15,,,
 ITA,Italy,Europe,Southern Europe,High income,58856847.0,0.8,Non-LDC,6.40774679,2.0,2.9,86.25,,414.0,87.357801
-JAM,Jamaica,America,Caribbean,Upper middle income,2827377.0,1.2,Non-LDC,3.97862124,80.0,13.3,30.38,,774.0,47.009493
+JAM,Jamaica,America,Caribbean,Upper middle income,2827377.0,1.2,Non-LDC,3.97862124,80.0,13.3,30.39,,774.0,47.009493
 JPN,Japan,Asia,Eastern Asia,High income,125124989.0,0.7,Non-LDC,9.00933933,5.0,2.5,84.47,,,
 JOR,Jordan,Asia,Western Asia,Upper middle income,11285869.0,0.0,Non-LDC,3.8803432,46.0,15.0,42.72,,,
 KAZ,Kazakhstan,Asia,Central Asia,Upper middle income,19621972.0,0.0,Non-LDC,1.67075253,10.0,10.0,55.98,0.0,152.0,63.521207
@@ -117,7 +117,7 @@ MAC,Macau,Asia,Eastern Asia,High income,695168.0,,Non-LDC,,,,97.77,,,
 MKD,North Macedonia,Europe,Southern Europe,Upper middle income,2057679.0,2.7,Non-LDC,4.27757454,7.0,5.9,40.82,,,
 MDG,Madagascar,Africa,Eastern Africa,Low income,29611714.0,80.7,LDC,1.18677306,335.0,50.2,9.12,9459.0,2876.0,14.914361
 MWI,Malawi,Africa,Eastern Africa,Low income,20405317.0,70.1,LDC,2.40971565,349.0,38.6,26.31,7165.0,12531.0,90.877255
-MYS,Malaysia,Asia,South-eastern Asia,Upper middle income,33938221.0,0.0,Non-LDC,1.99659598,29.0,8.6,82.85,0.0,1592.0,54.837134
+MYS,Malaysia,Asia,South-eastern Asia,Upper middle income,33938221.0,0.0,Non-LDC,1.99659598,29.0,8.6,82.84,0.0,1592.0,54.837134
 MDV,Maldives,Asia,Southern Asia,Upper middle income,523787.0,0.0,Non-LDC,6.39314747,53.0,6.5,76.23,,,
 MLI,Mali,Africa,Western Africa,Low income,22593590.0,14.8,LDC,1.31026745,562.0,91.0,19.27,19316.0,4135.0,53.100372
 MLT,Malta,Europe,Southern Europe,High income,523417.0,0.3,Non-LDC,5.1835227,6.0,6.5,89.78,,,
@@ -209,7 +209,7 @@ GBR,United Kingdom,Europe,Northern Europe,High income,66971411.0,0.5,Non-LDC,8.0
 USA,United States,America,Northern America,High income,333287557.0,0.2,Non-LDC,8.52492332,19.0,6.3,81.39,,7854.0,
 VIR,United States Virgin Islands,America,Caribbean,High income,105413.0,,Non-LDC,,,,,,,
 URY,Uruguay,America,South America,High income,3422794.0,0.1,Non-LDC,6.22570753,17.0,6.2,87.94,,219.0,63.897465
-UZB,Uzbekistan,Asia,Central Asia,Lower middle income,35648100.0,81.5,Non-LDC,2.3361671,29.0,13.9,63.97,0.0,681.0,51.238329
+UZB,Uzbekistan,Asia,Central Asia,Lower middle income,35648100.0,81.5,Non-LDC,2.3361671,29.0,13.9,63.76,0.0,681.0,51.238329
 VUT,Vanuatu,Oceania,Melanesia,Lower middle income,326740.0,10.0,Non-LDC,1.91707087,72.0,24.9,54.06,0.0,,
 VEN,Venezuela,America,South America,Not classified,28301696.0,7.1,Non-LDC,2.47110105,125.0,24.2,78.29,203.0,2281.0,58.277324
 VNM,Vietnam,Asia,South-eastern Asia,Lower middle income,98186856.0,0.7,Non-LDC,2.29924917,43.0,20.9,91.94,2.0,3471.0,72.381896
