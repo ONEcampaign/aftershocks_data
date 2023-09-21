@@ -1,5 +1,5 @@
 iso_code,Country Name,Continent,UN Region,Income Group,Population,Poverty rate (%),Least Developed Countries,General Gov. Health expenditure (% of GDP),"Maternal mortality (per 100,000)","Under 5 mortality rate (per 1,000)",Pop. vaccinated against COVID-19 (%),Malaria deaths,AIDS related deaths,Share Receiving ART (of ppl living with HIV)
-AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,43.8,110.0,527.0,10.436294
+AFG,Afghanistan,Asia,Southern Asia,Low income,41128771.0,,LDC,1.08443093,638.0,58.0,43.95,110.0,527.0,10.436294
 ALB,Albania,Europe,Southern Europe,Upper middle income,2775634.0,0.0,Non-LDC,2.82499456,15.0,9.8,47.44,,24.0,53.342716
 DZA,Algeria,Africa,Northern Africa,Lower middle income,44903225.0,0.5,Non-LDC,4.05817795,112.0,22.7,17.46,0.0,279.0,81.677444
 ASM,American Samoa,Oceania,Polynesia,Upper middle income,44273.0,,Non-LDC,,,,,,,
@@ -213,6 +213,6 @@ UZB,Uzbekistan,Asia,Central Asia,Lower middle income,35648100.0,81.5,Non-LDC,2.3
 VUT,Vanuatu,Oceania,Melanesia,Lower middle income,326740.0,10.0,Non-LDC,1.91707087,72.0,24.9,54.06,0.0,,
 VEN,Venezuela,America,South America,Not classified,28301696.0,7.1,Non-LDC,2.47110105,125.0,24.2,78.29,203.0,2281.0,58.277324
 VNM,Vietnam,Asia,South-eastern Asia,Lower middle income,98186856.0,0.7,Non-LDC,2.29924917,43.0,20.9,91.94,2.0,3471.0,72.381896
-YEM,Yemen,Asia,Western Asia,Low income,33696614.0,19.8,LDC,0.43304482,164.0,59.6,3.08,1979.0,401.0,30.807106
+YEM,Yemen,Asia,Western Asia,Low income,33696614.0,19.8,LDC,0.43304482,164.0,59.6,3.09,1979.0,401.0,30.807106
 ZMB,Zambia,Africa,Eastern Africa,Low income,20017675.0,61.4,LDC,2.12920475,213.0,61.4,58.51,8946.0,19327.0,90.290327
 ZWE,Zimbabwe,Africa,Eastern Africa,Lower middle income,16320537.0,39.8,Non-LDC,1.35826993,458.0,53.9,39.45,2951.0,20167.0,91.334967
