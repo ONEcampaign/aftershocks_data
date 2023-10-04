@@ -1,13 +1,13 @@
 iso_code,date,value,country
 SYC,2022,7.2,Seychelles
-DZA,2022,8.6,Algeria
-TUN,2022,8.6,Tunisia
 MUS,2022,8.6,Mauritius
+TUN,2022,8.6,Tunisia
+DZA,2022,8.6,Algeria
 CPV,2022,9.4,Cabo Verde
 STP,2022,10.0,Sao Tome
 SYC,2000,10.6,Seychelles
-TUN,2000,12.6,Tunisia
 MUS,2000,12.6,Mauritius
+TUN,2000,12.6,Tunisia
 GHA,2022,12.7,Ghana
 MAR,2022,12.8,Morocco
 GAB,2022,13.4,Gabon
@@ -29,8 +29,8 @@ ZWE,2022,21.6,Zimbabwe
 BWA,2022,21.6,Botswana
 BFA,2022,21.8,Burkina Faso
 MRT,2022,22.1,Mauritania
-TGO,2022,22.3,Togo
 DZA,2000,22.3,Algeria
+TGO,2022,22.3,Togo
 ZAF,2022,22.8,South Africa
 UGA,2022,23.4,Uganda
 MLI,2022,23.8,Mali
@@ -39,8 +39,8 @@ MAR,2000,25.2,Morocco
 GAB,2000,25.5,Gabon
 EGY,2000,25.9,Egypt
 SLE,2022,26.0,Sierra Leone
-ZAF,2000,26.6,South Africa
 LBR,2022,26.6,Liberia
+ZAF,2000,26.6,South Africa
 CMR,2022,26.9,Cameroon
 GNB,2022,27.7,Guinea-Bissau
 GMB,2000,27.8,Gambia
@@ -57,8 +57,8 @@ SSA,2022,31.5207922422497,Sub-Saharan Africa
 LSO,2022,31.8,Lesotho
 TGO,2000,32.1,Togo
 TCD,2022,32.3,Chad
-GHA,2000,32.6,Ghana
 CIV,2000,32.6,Cote d'Ivoire
+GHA,2000,32.6,Ghana
 ZWE,2000,32.8,Zimbabwe
 GIN,2000,33.0,Guinea
 SOM,2000,33.0,Somalia
@@ -78,8 +78,8 @@ KEN,2000,38.5,Kenya
 MDG,2022,38.6,Madagascar
 GNQ,2000,38.8,Equatorial Guinea
 SSD,2000,39.0,South Sudan
-SDN,2000,39.3,Sudan
 MRT,2000,39.3,Mauritania
+SDN,2000,39.3,Sudan
 MLI,2000,39.5,Mali
 CAF,2022,39.8,Central African Rep.
 COD,2022,40.3,DR Congo
