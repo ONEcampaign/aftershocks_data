@@ -1,6 +1,6 @@
 year,iso_code,name,"Among people living with HIV, the percent who know their status (First 90 of 90-90-90 target) -All ages","Among people living with HIV, the percent on ART -All ages","Among people who know their HIV status, the percent on ART (Second 90 of 90-90-90 target) -All ages","Among people living with HIV, the percent with suppressed viral load -All ages","Among people on ART, the percent with suppressed viral load (Third 90 of 90-90-90 target) -All ages",Number who know their HIV status -All ages
-2010,03M49WLD,Global,,24.0,,,,
-2010,UNAAP,Asia and the Pacific,,17.0,,,,
+2010,,Global,,24.0,,,,
+2010,,Asia and the Pacific,,17.0,,,,
 2010,AFG,Afghanistan,,1.0,,,,
 2010,AUS,Australia,89.0,61.0,69.0,56.0,92.0,17730.0
 2010,BGD,Bangladesh,,6.0,,,,
@@ -30,7 +30,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2010,THA,Thailand,,33.0,,,,
 2010,TLS,Timor-Leste,,6.0,,,,
 2010,VNM,Viet Nam,,25.0,,,,
-2010,UNACAR,Caribbean,,20.0,,,,
+2010,,Caribbean,,20.0,,,,
 2010,BHS,Bahamas,90.0,32.0,35.0,,,3856.0
 2010,BRB,Barbados,85.0,42.0,50.0,,,1749.0
 2010,BLZ,Belize,60.0,27.0,44.0,,,1755.0
@@ -41,7 +41,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2010,JAM,Jamaica,69.0,22.0,32.0,,,18147.0
 2010,SUR,Suriname,,22.0,,,,
 2010,TTO,Trinidad and Tobago,,39.0,,,,
-2010,UNAESA,Eastern and southern Africa,59.0,25.0,43.0,19.0,75.0,9.9
+2010,,Eastern and southern Africa,59.0,25.0,43.0,19.0,75.0,9.9
 2010,AGO,Angola,31.0,9.0,27.0,,,80159.0
 2010,BWA,Botswana,79.0,51.0,64.0,,,247834.0
 2010,COM,Comoros,,17.0,,,,
@@ -62,7 +62,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2010,TZA,United Republic of Tanzania,53.0,18.0,33.0,,,731854.0
 2010,ZMB,Zambia,66.0,33.0,50.0,,,693593.0
 2010,ZWE,Zimbabwe,55.0,28.0,51.0,,,711807.0
-2010,UNAEECA,Eastern Europe and central Asia,,12.0,,,,
+2010,,Eastern Europe and central Asia,,12.0,,,,
 2010,ALB,Albania,,17.0,,,,
 2010,ARM,Armenia,41.0,14.0,35.0,,,707.0
 2010,AZE,Azerbaijan,26.0,6.0,22.0,,,1960.0
@@ -78,8 +78,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2010,TJK,Tajikistan,27.0,16.0,61.0,,,721.0
 2010,TKM,Turkmenistan,,,,,,
 2010,UKR,Ukraine,,,22.0,,86.0,103902.0
-2010,UZB,Uzbekistan,76.0,12.0,16.0,,,18758.0
-2010,UNALA,Latin America,,35.0,,,,
+2010,UZB,Uzbekistan,,,16.0,,,18758.0
+2010,,Latin America,,35.0,,,,
 2010,ARG,Argentina,,,,,,
 2010,BOL,Bolivia,,6.0,,,,
 2010,BRA,Brazil,,38.0,,,,
@@ -97,7 +97,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2010,PER,Peru,,29.0,,,,
 2010,URY,Uruguay,50.0,34.0,69.0,29.0,86.0,4405.0
 2010,VEN,Venezuela,,41.0,,,,
-2010,UNAMENA,Middle East and North Africa,,15.0,,,,
+2010,,Middle East and North Africa,,15.0,,,,
 2010,DZA,Algeria,42.0,23.0,54.0,,,4077.0
 2010,BHR,Bahrain,,,,,,
 2010,DJI,Djibouti,,,,,,
@@ -117,7 +117,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2010,ARE,United Arab Emirates,28.0,18.0,65.0,,,277.0
 2010,YEM,Yemen,42.0,11.0,26.0,,,1897.0
 2010,IRQ,Iraq,,15.0,,,,
-2010,UNAWCA,Western and central Africa,33.0,18.0,55.0,11.0,62.0,1.5
+2010,,Western and central Africa,33.0,18.0,55.0,11.0,62.0,1.5
 2010,BEN,Benin,32.0,28.0,88.0,,,22979.0
 2010,BFA,Burkina Faso,35.0,26.0,76.0,,,41566.0
 2010,BDI,Burundi,45.0,23.0,52.0,,,43509.0
@@ -143,7 +143,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2010,SLE,Sierra Leone,18.0,9.0,52.0,,,11424.0
 2010,TGO,Togo,,20.0,,,,
 2010,STP,Sao Tome and Principe,13.0,13.0,98.0,,,208.0
-2010,UNAWCENA,Western and central Europe and North America,,57.0,,,,
+2010,,Western and central Europe and North America,,57.0,,,,
 2010,AUT,Austria,,,,,,
 2010,BEL,Belgium,,60.0,,,,
 2010,BGR,Bulgaria,47.0,19.0,41.0,14.0,70.0,940.0
@@ -180,8 +180,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2010,TUR,Türkiye,,,,,,
 2010,GBR,United Kingdom,,,,,,
 2010,USA,United States of America,,,,,,
-2011,03M49WLD,Global,,29.0,,,,
-2011,UNAAP,Asia and the Pacific,,20.0,,,,
+2011,,Global,,29.0,,,,
+2011,,Asia and the Pacific,,20.0,,,,
 2011,AFG,Afghanistan,,1.0,,,,
 2011,AUS,Australia,89.0,64.0,71.0,59.0,92.0,18603.0
 2011,BGD,Bangladesh,,8.0,,,,
@@ -211,7 +211,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2011,THA,Thailand,,38.0,,,,
 2011,TLS,Timor-Leste,,6.0,,,,
 2011,VNM,Viet Nam,,30.0,,,,
-2011,UNACAR,Caribbean,,23.0,,,,
+2011,,Caribbean,,23.0,,,,
 2011,BHS,Bahamas,91.0,32.0,35.0,,,3867.0
 2011,BRB,Barbados,86.0,45.0,52.0,,,1797.0
 2011,BLZ,Belize,62.0,30.0,49.0,,,1878.0
@@ -222,7 +222,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2011,JAM,Jamaica,73.0,25.0,34.0,14.0,57.0,19476.0
 2011,SUR,Suriname,,25.0,,,,
 2011,TTO,Trinidad and Tobago,,42.0,,,,
-2011,UNAESA,Eastern and southern Africa,65.0,31.0,48.0,23.0,76.0,11.2
+2011,,Eastern and southern Africa,65.0,31.0,48.0,23.0,76.0,11.2
 2011,AGO,Angola,33.0,10.0,30.0,,,89657.0
 2011,BWA,Botswana,80.0,55.0,69.0,,,256453.0
 2011,COM,Comoros,,18.0,,,,
@@ -243,7 +243,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2011,TZA,United Republic of Tanzania,55.0,19.0,35.0,,,776370.0
 2011,ZMB,Zambia,69.0,39.0,56.0,,,751904.0
 2011,ZWE,Zimbabwe,64.0,37.0,58.0,,,830710.0
-2011,UNAEECA,Eastern Europe and central Asia,,14.0,,,,
+2011,,Eastern Europe and central Asia,,14.0,,,,
 2011,ALB,Albania,,21.0,,,,
 2011,ARM,Armenia,42.0,16.0,37.0,,,858.0
 2011,AZE,Azerbaijan,31.0,9.0,29.0,,,2409.0
@@ -259,8 +259,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2011,TJK,Tajikistan,53.0,19.0,36.0,,,1839.0
 2011,TKM,Turkmenistan,,,,,,
 2011,UKR,Ukraine,,,24.0,,86.0,113413.0
-2011,UZB,Uzbekistan,66.0,14.0,22.0,,,19242.0
-2011,UNALA,Latin America,,37.0,,,,
+2011,UZB,Uzbekistan,,,22.0,,,19242.0
+2011,,Latin America,,37.0,,,,
 2011,ARG,Argentina,,,,,,
 2011,BOL,Bolivia,,6.0,,,,
 2011,BRA,Brazil,,41.0,,,,
@@ -278,7 +278,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2011,PER,Peru,,31.0,,,,
 2011,URY,Uruguay,55.0,36.0,65.0,30.0,85.0,5127.0
 2011,VEN,Venezuela,,43.0,,,,
-2011,UNAMENA,Middle East and North Africa,,17.0,,,,
+2011,,Middle East and North Africa,,17.0,,,,
 2011,DZA,Algeria,43.0,25.0,58.0,,,4648.0
 2011,BHR,Bahrain,,,,,,
 2011,DJI,Djibouti,,,,,,
@@ -298,7 +298,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2011,ARE,United Arab Emirates,29.0,19.0,66.0,,,305.0
 2011,YEM,Yemen,42.0,13.0,30.0,,,2066.0
 2011,IRQ,Iraq,,15.0,,,,
-2011,UNAWCA,Western and central Africa,36.0,22.0,59.0,14.0,64.0,1.7
+2011,,Western and central Africa,36.0,22.0,59.0,14.0,64.0,1.7
 2011,BEN,Benin,39.0,35.0,88.0,,,28972.0
 2011,BFA,Burkina Faso,41.0,31.0,75.0,,,48654.0
 2011,BDI,Burundi,50.0,28.0,55.0,,,47719.0
@@ -324,7 +324,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2011,SLE,Sierra Leone,22.0,12.0,55.0,,,14662.0
 2011,TGO,Togo,,24.0,,,,
 2011,STP,Sao Tome and Principe,17.0,17.0,98.0,,,260.0
-2011,UNAWCENA,Western and central Europe and North America,,59.0,,,,
+2011,,Western and central Europe and North America,,59.0,,,,
 2011,AUT,Austria,,,,,,
 2011,BEL,Belgium,,65.0,,,,
 2011,BGR,Bulgaria,52.0,22.0,42.0,15.0,70.0,1090.0
@@ -361,8 +361,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2011,TUR,Türkiye,,,,,,
 2011,GBR,United Kingdom,,,,,,
 2011,USA,United States of America,,,,,,
-2012,03M49WLD,Global,,34.0,,,,
-2012,UNAAP,Asia and the Pacific,,24.0,,,,
+2012,,Global,,34.0,,,,
+2012,,Asia and the Pacific,,24.0,,,,
 2012,AFG,Afghanistan,,2.0,,,,
 2012,AUS,Australia,89.0,66.0,74.0,62.0,94.0,19561.0
 2012,BGD,Bangladesh,,9.0,,,,
@@ -392,7 +392,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2012,THA,Thailand,,41.0,,,,
 2012,TLS,Timor-Leste,,9.0,,,,
 2012,VNM,Viet Nam,,35.0,,,,
-2012,UNACAR,Caribbean,,27.0,,,,
+2012,,Caribbean,,27.0,,,,
 2012,BHS,Bahamas,92.0,39.0,43.0,,,3875.0
 2012,BRB,Barbados,88.0,48.0,55.0,,,1845.0
 2012,BLZ,Belize,64.0,31.0,49.0,,,1995.0
@@ -403,7 +403,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2012,JAM,Jamaica,77.0,28.0,36.0,16.0,58.0,20689.0
 2012,SUR,Suriname,,31.0,,,,
 2012,TTO,Trinidad and Tobago,,47.0,,,,
-2012,UNAESA,Eastern and southern Africa,69.0,37.0,53.0,28.0,78.0,12.2
+2012,,Eastern and southern Africa,69.0,37.0,53.0,28.0,78.0,12.2
 2012,AGO,Angola,34.0,11.0,34.0,,,94336.0
 2012,BWA,Botswana,81.0,63.0,78.0,,,264399.0
 2012,COM,Comoros,,22.0,,,,
@@ -424,7 +424,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2012,TZA,United Republic of Tanzania,57.0,30.0,53.0,,,818270.0
 2012,ZMB,Zambia,72.0,42.0,59.0,,,811915.0
 2012,ZWE,Zimbabwe,70.0,43.0,61.0,,,924252.0
-2012,UNAEECA,Eastern Europe and central Asia,,17.0,,,,
+2012,,Eastern Europe and central Asia,,17.0,,,,
 2012,ALB,Albania,,26.0,,,,
 2012,ARM,Armenia,45.0,19.0,42.0,,,1081.0
 2012,AZE,Azerbaijan,36.0,12.0,32.0,,,2840.0
@@ -440,8 +440,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2012,TJK,Tajikistan,55.0,20.0,37.0,,,2352.0
 2012,TKM,Turkmenistan,,,,,,
 2012,UKR,Ukraine,,,34.0,,85.0,122237.0
-2012,UZB,Uzbekistan,65.0,5.0,8.0,,,22102.0
-2012,UNALA,Latin America,,41.0,,,,
+2012,UZB,Uzbekistan,,,8.0,,,22102.0
+2012,,Latin America,,41.0,,,,
 2012,ARG,Argentina,,,,,,
 2012,BOL,Bolivia,,11.0,,,,
 2012,BRA,Brazil,71.0,44.0,62.0,39.0,88.0,491000.0
@@ -459,7 +459,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2012,PER,Peru,,39.0,,,,
 2012,URY,Uruguay,64.0,34.0,53.0,29.0,86.0,6242.0
 2012,VEN,Venezuela,,46.0,,,,
-2012,UNAMENA,Middle East and North Africa,,19.0,,,,
+2012,,Middle East and North Africa,,19.0,,,,
 2012,DZA,Algeria,46.0,28.0,61.0,25.0,87.0,5547.0
 2012,BHR,Bahrain,,,,,,
 2012,DJI,Djibouti,,,,,,
@@ -479,7 +479,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2012,ARE,United Arab Emirates,32.0,24.0,77.0,,,349.0
 2012,YEM,Yemen,43.0,14.0,32.0,,,2264.0
 2012,IRQ,Iraq,,15.0,,,,
-2012,UNAWCA,Western and central Africa,41.0,26.0,63.0,17.0,67.0,1.9
+2012,,Western and central Africa,41.0,26.0,63.0,17.0,67.0,1.9
 2012,BEN,Benin,46.0,37.0,81.0,,,34494.0
 2012,BFA,Burkina Faso,46.0,33.0,72.0,,,53845.0
 2012,BDI,Burundi,55.0,31.0,56.0,,,52229.0
@@ -505,7 +505,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2012,SLE,Sierra Leone,27.0,12.0,45.0,,,18317.0
 2012,TGO,Togo,48.0,26.0,55.0,,,55392.0
 2012,STP,Sao Tome and Principe,21.0,21.0,98.0,,,309.0
-2012,UNAWCENA,Western and central Europe and North America,,61.0,,,,
+2012,,Western and central Europe and North America,,61.0,,,,
 2012,AUT,Austria,,,,,,
 2012,BEL,Belgium,92.0,69.0,75.0,65.0,94.0,13734.0
 2012,BGR,Bulgaria,,25.0,,18.0,73.0,
@@ -542,8 +542,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2012,TUR,Türkiye,,,,,,
 2012,GBR,United Kingdom,,,,,,
 2012,USA,United States of America,,,,,,
-2013,03M49WLD,Global,,39.0,,,,
-2013,UNAAP,Asia and the Pacific,,29.0,,,,
+2013,,Global,,39.0,,,,
+2013,,Asia and the Pacific,,29.0,,,,
 2013,AFG,Afghanistan,18.0,2.0,13.0,,,1664.0
 2013,AUS,Australia,89.0,74.0,83.0,71.0,96.0,20431.0
 2013,BGD,Bangladesh,,11.0,,,,
@@ -573,7 +573,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2013,THA,Thailand,,46.0,,,,
 2013,TLS,Timor-Leste,,15.0,,,,
 2013,VNM,Viet Nam,,39.0,,,,
-2013,UNACAR,Caribbean,,31.0,,,,
+2013,,Caribbean,,31.0,,,,
 2013,BHS,Bahamas,93.0,48.0,51.0,,,3879.0
 2013,BRB,Barbados,88.0,51.0,57.0,,,1883.0
 2013,BLZ,Belize,65.0,34.0,52.0,,,2109.0
@@ -584,7 +584,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2013,JAM,Jamaica,79.0,32.0,40.0,19.0,60.0,21764.0
 2013,SUR,Suriname,54.0,35.0,64.0,23.0,67.0,3027.0
 2013,TTO,Trinidad and Tobago,,52.0,,,,
-2013,UNAESA,Eastern and southern Africa,72.0,42.0,59.0,34.0,80.0,13.1
+2013,,Eastern and southern Africa,72.0,42.0,59.0,34.0,80.0,13.1
 2013,AGO,Angola,34.0,17.0,50.0,,,96400.0
 2013,BWA,Botswana,83.0,68.0,82.0,,,273973.0
 2013,COM,Comoros,,24.0,,,,
@@ -605,7 +605,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2013,TZA,United Republic of Tanzania,58.0,35.0,60.0,,,859242.0
 2013,ZMB,Zambia,74.0,48.0,64.0,,,870510.0
 2013,ZWE,Zimbabwe,74.0,50.0,67.0,,,988675.0
-2013,UNAEECA,Eastern Europe and central Asia,,20.0,,,,
+2013,,Eastern Europe and central Asia,,20.0,,,,
 2013,ALB,Albania,,33.0,,,,
 2013,ARM,Armenia,48.0,21.0,44.0,18.0,87.0,1304.0
 2013,AZE,Azerbaijan,41.0,16.0,38.0,,,3284.0
@@ -621,8 +621,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2013,TJK,Tajikistan,56.0,23.0,42.0,,,2926.0
 2013,TKM,Turkmenistan,,,,,,
 2013,UKR,Ukraine,,,42.0,,85.0,132658.0
-2013,UZB,Uzbekistan,64.0,11.0,17.0,,,24963.0
-2013,UNALA,Latin America,,44.0,,,,
+2013,UZB,Uzbekistan,,,17.0,,,24963.0
+2013,,Latin America,,44.0,,,,
 2013,ARG,Argentina,,,,,,
 2013,BOL,Bolivia,,14.0,,,,
 2013,BRA,Brazil,74.0,47.0,64.0,41.0,87.0,535000.0
@@ -640,7 +640,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2013,PER,Peru,,39.0,,,,
 2013,URY,Uruguay,68.0,52.0,76.0,44.0,85.0,7024.0
 2013,VEN,Venezuela,,46.0,,,,
-2013,UNAMENA,Middle East and North Africa,,22.0,,,,
+2013,,Middle East and North Africa,,22.0,,,,
 2013,DZA,Algeria,51.0,35.0,69.0,30.0,87.0,6757.0
 2013,BHR,Bahrain,,,,,,
 2013,DJI,Djibouti,,,,,,
@@ -660,7 +660,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2013,ARE,United Arab Emirates,31.0,24.0,77.0,,,359.0
 2013,YEM,Yemen,44.0,16.0,36.0,,,2502.0
 2013,IRQ,Iraq,,16.0,,,,
-2013,UNAWCA,Western and central Africa,44.0,29.0,67.0,21.0,70.0,2.1
+2013,,Western and central Africa,44.0,29.0,67.0,21.0,70.0,2.1
 2013,BEN,Benin,49.0,33.0,66.0,,,37397.0
 2013,BFA,Burkina Faso,51.0,37.0,72.0,,,58765.0
 2013,BDI,Burundi,61.0,35.0,58.0,,,56335.0
@@ -686,7 +686,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2013,SLE,Sierra Leone,32.0,13.0,42.0,,,21687.0
 2013,TGO,Togo,53.0,30.0,57.0,,,60148.0
 2013,STP,Sao Tome and Principe,24.0,24.0,98.0,,,343.0
-2013,UNAWCENA,Western and central Europe and North America,,63.0,,,,
+2013,,Western and central Europe and North America,,63.0,,,,
 2013,AUT,Austria,,,,,,
 2013,BEL,Belgium,93.0,73.0,78.0,68.0,94.0,14499.0
 2013,BGR,Bulgaria,61.0,27.0,45.0,20.0,73.0,1413.0
@@ -723,8 +723,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2013,TUR,Türkiye,,,,,,
 2013,GBR,United Kingdom,,,,,,
 2013,USA,United States of America,,,,,,
-2014,03M49WLD,Global,,43.0,,,,
-2014,UNAAP,Asia and the Pacific,,32.0,,,,
+2014,,Global,,43.0,,,,
+2014,,Asia and the Pacific,,32.0,,,,
 2014,AFG,Afghanistan,19.0,3.0,15.0,,,1843.0
 2014,AUS,Australia,90.0,78.0,87.0,75.0,96.0,21326.0
 2014,BGD,Bangladesh,3.0,12.0,98.0,,,352.0
@@ -754,7 +754,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2014,THA,Thailand,,50.0,,,,
 2014,TLS,Timor-Leste,39.0,18.0,45.0,,,388.0
 2014,VNM,Viet Nam,,42.0,,,,
-2014,UNACAR,Caribbean,,34.0,,,,
+2014,,Caribbean,,34.0,,,,
 2014,BHS,Bahamas,93.0,57.0,61.0,,,3872.0
 2014,BRB,Barbados,89.0,51.0,58.0,,,1911.0
 2014,BLZ,Belize,67.0,36.0,53.0,,,2219.0
@@ -765,7 +765,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2014,JAM,Jamaica,82.0,34.0,42.0,22.0,64.0,22712.0
 2014,SUR,Suriname,56.0,38.0,67.0,28.0,75.0,3250.0
 2014,TTO,Trinidad and Tobago,,54.0,,,,
-2014,UNAESA,Eastern and southern Africa,75.0,48.0,64.0,40.0,82.0,14.0
+2014,,Eastern and southern Africa,75.0,48.0,64.0,40.0,82.0,14.0
 2014,AGO,Angola,33.0,21.0,64.0,,,97942.0
 2014,BWA,Botswana,84.0,69.0,82.0,,,282531.0
 2014,COM,Comoros,,27.0,,,,
@@ -786,7 +786,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2014,TZA,United Republic of Tanzania,62.0,43.0,69.0,,,937486.0
 2014,ZMB,Zambia,77.0,54.0,70.0,,,932155.0
 2014,ZWE,Zimbabwe,78.0,56.0,73.0,,,1043412.0
-2014,UNAEECA,Eastern Europe and central Asia,,23.0,,,,
+2014,,Eastern Europe and central Asia,,23.0,,,,
 2014,ALB,Albania,,35.0,,,,
 2014,ARM,Armenia,50.0,24.0,48.0,20.0,84.0,1528.0
 2014,AZE,Azerbaijan,46.0,22.0,46.0,,,3821.0
@@ -802,8 +802,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2014,TJK,Tajikistan,59.0,31.0,52.0,,,3671.0
 2014,TKM,Turkmenistan,,,,,,
 2014,UKR,Ukraine,,,47.0,,,141351.0
-2014,UZB,Uzbekistan,63.0,15.0,24.0,,,27823.0
-2014,UNALA,Latin America,,47.0,,,,
+2014,UZB,Uzbekistan,,,24.0,,,27823.0
+2014,,Latin America,,47.0,,,,
 2014,ARG,Argentina,,,,,,
 2014,BOL,Bolivia,,17.0,,,,
 2014,BRA,Brazil,77.0,52.0,68.0,46.0,88.0,581000.0
@@ -821,7 +821,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2014,PER,Peru,,44.0,,,,
 2014,URY,Uruguay,73.0,53.0,73.0,45.0,85.0,7936.0
 2014,VEN,Venezuela,,46.0,,,,
-2014,UNAMENA,Middle East and North Africa,,25.0,,,,
+2014,,Middle East and North Africa,,25.0,,,,
 2014,DZA,Algeria,54.0,40.0,75.0,35.0,87.0,8076.0
 2014,BHR,Bahrain,,,,,,
 2014,DJI,Djibouti,,,,,,
@@ -841,7 +841,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2014,ARE,United Arab Emirates,27.0,16.0,61.0,,,320.0
 2014,YEM,Yemen,46.0,20.0,44.0,,,2785.0
 2014,IRQ,Iraq,,16.0,,,,
-2014,UNAWCA,Western and central Africa,48.0,33.0,70.0,24.0,72.0,2.2
+2014,,Western and central Africa,48.0,33.0,70.0,24.0,72.0,2.2
 2014,BEN,Benin,52.0,38.0,73.0,,,39538.0
 2014,BFA,Burkina Faso,56.0,42.0,74.0,,,62834.0
 2014,BDI,Burundi,65.0,40.0,62.0,,,59532.0
@@ -867,7 +867,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2014,SLE,Sierra Leone,35.0,16.0,45.0,,,23782.0
 2014,TGO,Togo,57.0,33.0,59.0,,,64032.0
 2014,STP,Sao Tome and Principe,31.0,31.0,98.0,,,417.0
-2014,UNAWCENA,Western and central Europe and North America,,65.0,,,,
+2014,,Western and central Europe and North America,,65.0,,,,
 2014,AUT,Austria,,,,,,
 2014,BEL,Belgium,94.0,75.0,81.0,72.0,95.0,15089.0
 2014,BGR,Bulgaria,65.0,29.0,46.0,26.0,87.0,1582.0
@@ -904,8 +904,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2014,TUR,Türkiye,,,,,,
 2014,GBR,United Kingdom,,,,,,
 2014,USA,United States of America,,,,,,
-2015,03M49WLD,Global,71.0,48.0,67.0,40.0,83.0,25.1
-2015,UNAAP,Asia and the Pacific,65.0,37.0,56.0,31.0,83.0,3.8
+2015,,Global,71.0,48.0,67.0,40.0,83.0,25.1
+2015,,Asia and the Pacific,65.0,37.0,56.0,31.0,83.0,3.8
 2015,AFG,Afghanistan,21.0,4.0,17.0,,,2054.0
 2015,AUS,Australia,90.0,80.0,89.0,78.0,97.0,22335.0
 2015,BGD,Bangladesh,31.0,13.0,43.0,,,3485.0
@@ -935,7 +935,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2015,THA,Thailand,,56.0,,,,
 2015,TLS,Timor-Leste,39.0,19.0,48.0,,,415.0
 2015,VNM,Viet Nam,,48.0,,,,
-2015,UNACAR,Caribbean,63.0,37.0,59.0,26.0,69.0,180000.0
+2015,,Caribbean,63.0,37.0,59.0,26.0,69.0,180000.0
 2015,BHS,Bahamas,94.0,56.0,60.0,,,3868.0
 2015,BRB,Barbados,90.0,53.0,59.0,,,1932.0
 2015,BLZ,Belize,69.0,38.0,55.0,,,2336.0
@@ -946,7 +946,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2015,JAM,Jamaica,84.0,36.0,43.0,23.0,63.0,23592.0
 2015,SUR,Suriname,54.0,39.0,71.0,31.0,81.0,3235.0
 2015,TTO,Trinidad and Tobago,,57.0,,,,
-2015,UNAESA,Eastern and southern Africa,78.0,54.0,69.0,45.0,83.0,15.0
+2015,,Eastern and southern Africa,78.0,54.0,69.0,45.0,83.0,15.0
 2015,AGO,Angola,33.0,24.0,72.0,,,99713.0
 2015,BWA,Botswana,86.0,75.0,88.0,,,290195.0
 2015,COM,Comoros,,35.0,,,,
@@ -967,7 +967,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2015,TZA,United Republic of Tanzania,68.0,48.0,70.0,,,1055812.0
 2015,ZMB,Zambia,80.0,61.0,76.0,,,1000798.0
 2015,ZWE,Zimbabwe,81.0,62.0,76.0,,,1098503.0
-2015,UNAEECA,Eastern Europe and central Asia,51.0,25.0,49.0,21.0,82.0,660000.0
+2015,,Eastern Europe and central Asia,51.0,25.0,49.0,21.0,82.0,660000.0
 2015,ALB,Albania,61.0,39.0,63.0,,,694.0
 2015,ARM,Armenia,51.0,28.0,54.0,21.0,77.0,1751.0
 2015,AZE,Azerbaijan,53.0,27.0,51.0,,,4481.0
@@ -983,8 +983,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2015,TJK,Tajikistan,63.0,39.0,63.0,,,4608.0
 2015,TKM,Turkmenistan,,,,,,
 2015,UKR,Ukraine,,,44.0,,88.0,150220.0
-2015,UZB,Uzbekistan,62.0,27.0,43.0,,,30684.0
-2015,UNALA,Latin America,73.0,53.0,72.0,45.0,84.0,1.3
+2015,UZB,Uzbekistan,,,43.0,,,30684.0
+2015,,Latin America,73.0,53.0,72.0,45.0,84.0,1.3
 2015,ARG,Argentina,,,,,,
 2015,BOL,Bolivia,,23.0,,,,
 2015,BRA,Brazil,82.0,58.0,71.0,52.0,90.0,636000.0
@@ -1002,7 +1002,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2015,PER,Peru,,48.0,,,,
 2015,URY,Uruguay,79.0,54.0,68.0,46.0,85.0,9016.0
 2015,VEN,Venezuela,,60.0,,,,
-2015,UNAMENA,Middle East and North Africa,47.0,29.0,62.0,24.0,82.0,63000.0
+2015,,Middle East and North Africa,47.0,29.0,62.0,24.0,82.0,63000.0
 2015,DZA,Algeria,59.0,47.0,79.0,41.0,87.0,9773.0
 2015,BHR,Bahrain,,,,,,
 2015,DJI,Djibouti,,,,,,
@@ -1022,7 +1022,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2015,ARE,United Arab Emirates,29.0,16.0,55.0,,,361.0
 2015,YEM,Yemen,46.0,21.0,47.0,,,2985.0
 2015,IRQ,Iraq,17.0,16.0,98.0,,,268.0
-2015,UNAWCA,Western and central Africa,51.0,34.0,68.0,25.0,74.0,2.4
+2015,,Western and central Africa,51.0,34.0,68.0,25.0,74.0,2.4
 2015,BEN,Benin,55.0,44.0,80.0,,,42079.0
 2015,BFA,Burkina Faso,61.0,47.0,78.0,,,66837.0
 2015,BDI,Burundi,70.0,48.0,69.0,,,61299.0
@@ -1048,7 +1048,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2015,SLE,Sierra Leone,38.0,20.0,54.0,,,26391.0
 2015,TGO,Togo,60.0,39.0,65.0,,,67167.0
 2015,STP,Sao Tome and Principe,41.0,41.0,98.0,,,527.0
-2015,UNAWCENA,Western and central Europe and North America,85.0,68.0,80.0,61.0,91.0,1.7
+2015,,Western and central Europe and North America,85.0,68.0,80.0,61.0,91.0,1.7
 2015,AUT,Austria,,,,,,
 2015,BEL,Belgium,95.0,79.0,83.0,77.0,98.0,15756.0
 2015,BGR,Bulgaria,68.0,32.0,47.0,29.0,90.0,1761.0
@@ -1085,8 +1085,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2015,TUR,Türkiye,,,,,,
 2015,GBR,United Kingdom,,,,,,
 2015,USA,United States of America,,,,,,
-2016,03M49WLD,Global,74.0,53.0,72.0,45.0,84.0,26.6
-2016,UNAAP,Asia and the Pacific,67.0,42.0,62.0,36.0,85.0,4.0
+2016,,Global,74.0,53.0,72.0,45.0,84.0,26.6
+2016,,Asia and the Pacific,67.0,42.0,62.0,36.0,85.0,4.0
 2016,AFG,Afghanistan,22.0,5.0,24.0,,,2264.0
 2016,AUS,Australia,91.0,82.0,90.0,80.0,97.0,23256.0
 2016,BGD,Bangladesh,32.0,15.0,46.0,,,3922.0
@@ -1116,7 +1116,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2016,THA,Thailand,,61.0,,,,
 2016,TLS,Timor-Leste,41.0,22.0,54.0,,,459.0
 2016,VNM,Viet Nam,,52.0,,,,
-2016,UNACAR,Caribbean,66.0,38.0,57.0,27.0,70.0,190000.0
+2016,,Caribbean,66.0,38.0,57.0,27.0,70.0,190000.0
 2016,BHS,Bahamas,93.0,56.0,60.0,,,3820.0
 2016,BRB,Barbados,90.0,55.0,61.0,,,1956.0
 2016,BLZ,Belize,71.0,40.0,57.0,24.0,59.0,2432.0
@@ -1127,7 +1127,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2016,JAM,Jamaica,87.0,39.0,45.0,24.0,63.0,24531.0
 2016,SUR,Suriname,55.0,42.0,76.0,33.0,78.0,3372.0
 2016,TTO,Trinidad and Tobago,,57.0,,,,
-2016,UNAESA,Eastern and southern Africa,81.0,60.0,73.0,50.0,84.0,15.9
+2016,,Eastern and southern Africa,81.0,60.0,73.0,50.0,84.0,15.9
 2016,AGO,Angola,33.0,23.0,69.0,,,101743.0
 2016,BWA,Botswana,87.0,80.0,91.0,,,300032.0
 2016,COM,Comoros,,39.0,,,,
@@ -1148,7 +1148,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2016,TZA,United Republic of Tanzania,73.0,53.0,72.0,,,1182743.0
 2016,ZMB,Zambia,82.0,62.0,76.0,,,1055039.0
 2016,ZWE,Zimbabwe,84.0,68.0,80.0,,,1149449.0
-2016,UNAEECA,Eastern Europe and central Asia,55.0,32.0,58.0,26.0,82.0,750000.0
+2016,,Eastern Europe and central Asia,55.0,32.0,58.0,26.0,82.0,750000.0
 2016,ALB,Albania,67.0,43.0,64.0,,,800.0
 2016,ARM,Armenia,52.0,32.0,60.0,22.0,70.0,1974.0
 2016,AZE,Azerbaijan,58.0,32.0,56.0,,,5003.0
@@ -1164,8 +1164,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2016,TJK,Tajikistan,64.0,46.0,71.0,,,5466.0
 2016,TKM,Turkmenistan,,,,,,
 2016,UKR,Ukraine,,,58.0,,86.0,157472.0
-2016,UZB,Uzbekistan,61.0,31.0,51.0,,,33544.0
-2016,UNALA,Latin America,76.0,56.0,74.0,48.0,86.0,1.4
+2016,UZB,Uzbekistan,,,51.0,,,33544.0
+2016,,Latin America,76.0,56.0,74.0,48.0,86.0,1.4
 2016,ARG,Argentina,,,,,,
 2016,BOL,Bolivia,,27.0,,19.0,70.0,
 2016,BRA,Brazil,85.0,61.0,72.0,56.0,91.0,690000.0
@@ -1183,7 +1183,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2016,PER,Peru,,54.0,,,,
 2016,URY,Uruguay,83.0,54.0,65.0,49.0,91.0,9946.0
 2016,VEN,Venezuela,,55.0,,,,
-2016,UNAMENA,Middle East and North Africa,51.0,34.0,66.0,28.0,83.0,72000.0
+2016,,Middle East and North Africa,51.0,34.0,66.0,28.0,83.0,72000.0
 2016,DZA,Algeria,65.0,53.0,82.0,46.0,87.0,11650.0
 2016,BHR,Bahrain,,,,,,
 2016,DJI,Djibouti,,,,,62.0,
@@ -1203,7 +1203,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2016,ARE,United Arab Emirates,30.0,14.0,49.0,,,379.0
 2016,YEM,Yemen,47.0,25.0,53.0,,,3287.0
 2016,IRQ,Iraq,18.0,17.0,97.0,,,324.0
-2016,UNAWCA,Western and central Africa,54.0,40.0,74.0,30.0,76.0,2.5
+2016,,Western and central Africa,54.0,40.0,74.0,30.0,76.0,2.5
 2016,BEN,Benin,59.0,50.0,85.0,,,44794.0
 2016,BFA,Burkina Faso,65.0,53.0,81.0,,,70828.0
 2016,BDI,Burundi,74.0,61.0,82.0,,,62875.0
@@ -1229,7 +1229,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2016,SLE,Sierra Leone,42.0,25.0,61.0,,,29324.0
 2016,TGO,Togo,64.0,46.0,73.0,,,70462.0
 2016,STP,Sao Tome and Principe,50.0,50.0,98.0,,,614.0
-2016,UNAWCENA,Western and central Europe and North America,86.0,69.0,81.0,64.0,92.0,1.8
+2016,,Western and central Europe and North America,86.0,69.0,81.0,64.0,92.0,1.8
 2016,AUT,Austria,,,,,,
 2016,BEL,Belgium,94.0,81.0,86.0,80.0,98.0,16135.0
 2016,BGR,Bulgaria,72.0,36.0,50.0,34.0,93.0,1952.0
@@ -1266,8 +1266,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2016,TUR,Türkiye,,,,,,
 2016,GBR,United Kingdom,,,,,,
 2016,USA,United States of America,,,,,,
-2017,03M49WLD,Global,76.0,58.0,77.0,50.0,85.0,27.8
-2017,UNAAP,Asia and the Pacific,65.0,46.0,71.0,40.0,87.0,3.9
+2017,,Global,76.0,58.0,77.0,50.0,85.0,27.8
+2017,,Asia and the Pacific,65.0,46.0,71.0,40.0,87.0,3.9
 2017,AFG,Afghanistan,24.0,7.0,31.0,,,2520.0
 2017,AUS,Australia,90.0,82.0,91.0,81.0,98.0,24125.0
 2017,BGD,Bangladesh,36.0,19.0,53.0,,,4662.0
@@ -1297,7 +1297,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2017,THA,Thailand,,66.0,,,,
 2017,TLS,Timor-Leste,42.0,25.0,58.0,,,493.0
 2017,VNM,Viet Nam,,54.0,,,,
-2017,UNACAR,Caribbean,70.0,48.0,68.0,33.0,70.0,210000.0
+2017,,Caribbean,70.0,48.0,68.0,33.0,70.0,210000.0
 2017,BHS,Bahamas,95.0,73.0,77.0,,,3862.0
 2017,BRB,Barbados,91.0,59.0,64.0,52.0,88.0,1975.0
 2017,BLZ,Belize,72.0,40.0,56.0,,,2524.0
@@ -1308,7 +1308,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2017,JAM,Jamaica,89.0,42.0,47.0,28.0,67.0,25393.0
 2017,SUR,Suriname,55.0,43.0,78.0,36.0,85.0,3471.0
 2017,TTO,Trinidad and Tobago,,57.0,,51.0,90.0,
-2017,UNAESA,Eastern and southern Africa,84.0,66.0,78.0,56.0,85.0,16.8
+2017,,Eastern and southern Africa,84.0,66.0,78.0,56.0,85.0,16.8
 2017,AGO,Angola,36.0,25.0,70.0,,,112625.0
 2017,BWA,Botswana,89.0,83.0,92.0,,,309622.0
 2017,COM,Comoros,,43.0,,,,
@@ -1329,7 +1329,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2017,TZA,United Republic of Tanzania,79.0,62.0,78.0,46.0,74.0,1311958.0
 2017,ZMB,Zambia,85.0,64.0,75.0,,,1126108.0
 2017,ZWE,Zimbabwe,88.0,77.0,87.0,,,1196172.0
-2017,UNAEECA,Eastern Europe and central Asia,57.0,35.0,62.0,31.0,86.0,840000.0
+2017,,Eastern Europe and central Asia,57.0,35.0,62.0,31.0,86.0,840000.0
 2017,ALB,Albania,70.0,45.0,65.0,,,880.0
 2017,ARM,Armenia,55.0,37.0,68.0,32.0,85.0,2265.0
 2017,AZE,Azerbaijan,62.0,38.0,61.0,28.0,75.0,5536.0
@@ -1345,8 +1345,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2017,TJK,Tajikistan,67.0,51.0,75.0,33.0,65.0,6498.0
 2017,TKM,Turkmenistan,,,,,,
 2017,UKR,Ukraine,,,63.0,,87.0,166836.0
-2017,UZB,Uzbekistan,60.0,36.0,59.0,,,36404.0
-2017,UNALA,Latin America,78.0,58.0,75.0,51.0,88.0,1.4
+2017,UZB,Uzbekistan,,,59.0,,,36404.0
+2017,,Latin America,78.0,58.0,75.0,51.0,88.0,1.4
 2017,ARG,Argentina,,,,,,
 2017,BOL,Bolivia,,31.0,,21.0,69.0,
 2017,BRA,Brazil,87.0,65.0,75.0,60.0,92.0,729000.0
@@ -1364,7 +1364,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2017,PER,Peru,67.0,58.0,87.0,45.0,77.0,56037.0
 2017,URY,Uruguay,84.0,57.0,67.0,54.0,94.0,10530.0
 2017,VEN,Venezuela,,43.0,,,,
-2017,UNAMENA,Middle East and North Africa,56.0,38.0,68.0,31.0,84.0,82000.0
+2017,,Middle East and North Africa,56.0,38.0,68.0,31.0,84.0,82000.0
 2017,DZA,Algeria,69.0,56.0,82.0,49.0,87.0,13454.0
 2017,BHR,Bahrain,,,,,,
 2017,DJI,Djibouti,,,,,61.0,
@@ -1384,7 +1384,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2017,ARE,United Arab Emirates,32.0,16.0,49.0,,,424.0
 2017,YEM,Yemen,47.0,27.0,58.0,,,3514.0
 2017,IRQ,Iraq,21.0,20.0,96.0,,,426.0
-2017,UNAWCA,Western and central Africa,57.0,45.0,79.0,35.0,78.0,2.7
+2017,,Western and central Africa,57.0,45.0,79.0,35.0,78.0,2.7
 2017,BEN,Benin,61.0,50.0,82.0,,,46717.0
 2017,BFA,Burkina Faso,69.0,58.0,83.0,,,73732.0
 2017,BDI,Burundi,77.0,67.0,87.0,,,63966.0
@@ -1410,7 +1410,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2017,SLE,Sierra Leone,47.0,33.0,72.0,,,33078.0
 2017,TGO,Togo,67.0,54.0,81.0,,,73944.0
 2017,STP,Sao Tome and Principe,60.0,60.0,98.0,,,732.0
-2017,UNAWCENA,Western and central Europe and North America,86.0,71.0,82.0,66.0,92.0,1.8
+2017,,Western and central Europe and North America,86.0,71.0,82.0,66.0,92.0,1.8
 2017,AUT,Austria,,,,,,
 2017,BEL,Belgium,95.0,82.0,87.0,81.0,98.0,16593.0
 2017,BGR,Bulgaria,76.0,42.0,56.0,34.0,80.0,2161.0
@@ -1447,8 +1447,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2017,TUR,Türkiye,,,,,,
 2017,GBR,United Kingdom,,,,,,
 2017,USA,United States of America,,,,,,
-2018,03M49WLD,Global,78.0,62.0,79.0,54.0,87.0,29.1
-2018,UNAAP,Asia and the Pacific,68.0,52.0,77.0,46.0,89.0,4.1
+2018,,Global,78.0,62.0,79.0,54.0,87.0,29.1
+2018,,Asia and the Pacific,68.0,52.0,77.0,46.0,89.0,4.1
 2018,AFG,Afghanistan,25.0,8.0,34.0,,,2704.0
 2018,AUS,Australia,90.0,82.0,91.0,81.0,98.0,24925.0
 2018,BGD,Bangladesh,38.0,22.0,59.0,,,5205.0
@@ -1478,7 +1478,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2018,THA,Thailand,77.0,69.0,89.0,67.0,97.0,451384.0
 2018,TLS,Timor-Leste,48.0,32.0,67.0,,,581.0
 2018,VNM,Viet Nam,,60.0,,,,
-2018,UNACAR,Caribbean,73.0,50.0,67.0,39.0,79.0,220000.0
+2018,,Caribbean,73.0,50.0,67.0,39.0,79.0,220000.0
 2018,BHS,Bahamas,95.0,76.0,80.0,,,3867.0
 2018,BRB,Barbados,92.0,61.0,66.0,55.0,90.0,1990.0
 2018,BLZ,Belize,73.0,43.0,59.0,28.0,65.0,2583.0
@@ -1489,7 +1489,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2018,JAM,Jamaica,90.0,44.0,49.0,32.0,73.0,25839.0
 2018,SUR,Suriname,53.0,44.0,83.0,38.0,86.0,3451.0
 2018,TTO,Trinidad and Tobago,,61.0,,53.0,87.0,
-2018,UNAESA,Eastern and southern Africa,87.0,69.0,80.0,60.0,87.0,17.4
+2018,,Eastern and southern Africa,87.0,69.0,80.0,60.0,87.0,17.4
 2018,AGO,Angola,40.0,28.0,70.0,,,126513.0
 2018,BWA,Botswana,94.0,88.0,94.0,86.0,97.0,325295.0
 2018,COM,Comoros,,52.0,,,,
@@ -1510,7 +1510,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2018,TZA,United Republic of Tanzania,85.0,66.0,78.0,53.0,80.0,1427363.0
 2018,ZMB,Zambia,88.0,71.0,80.0,,,1201245.0
 2018,ZWE,Zimbabwe,89.0,80.0,90.0,,,1208684.0
-2018,UNAEECA,Eastern Europe and central Asia,62.0,41.0,66.0,37.0,90.0,980000.0
+2018,,Eastern Europe and central Asia,62.0,41.0,66.0,37.0,90.0,980000.0
 2018,ALB,Albania,73.0,44.0,61.0,,,955.0
 2018,ARM,Armenia,58.0,42.0,72.0,36.0,86.0,2589.0
 2018,AZE,Azerbaijan,67.0,44.0,66.0,37.0,83.0,6151.0
@@ -1526,8 +1526,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2018,TJK,Tajikistan,72.0,55.0,77.0,38.0,69.0,7812.0
 2018,TKM,Turkmenistan,,,,,,
 2018,UKR,Ukraine,,,72.0,,93.0,169433.0
-2018,UZB,Uzbekistan,60.0,41.0,68.0,,,39265.0
-2018,UNALA,Latin America,80.0,61.0,77.0,55.0,89.0,1.5
+2018,UZB,Uzbekistan,,,68.0,,,39265.0
+2018,,Latin America,80.0,61.0,77.0,55.0,89.0,1.5
 2018,ARG,Argentina,,,,,,
 2018,BOL,Bolivia,,39.0,,29.0,74.0,
 2018,BRA,Brazil,88.0,68.0,77.0,64.0,93.0,766000.0
@@ -1545,7 +1545,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2018,PER,Peru,77.0,65.0,85.0,51.0,78.0,67892.0
 2018,URY,Uruguay,87.0,63.0,72.0,59.0,95.0,11343.0
 2018,VEN,Venezuela,59.0,31.0,54.0,,,52803.0
-2018,UNAMENA,Middle East and North Africa,60.0,42.0,70.0,36.0,86.0,92000.0
+2018,,Middle East and North Africa,60.0,42.0,70.0,36.0,86.0,92000.0
 2018,DZA,Algeria,73.0,60.0,82.0,52.0,87.0,15477.0
 2018,BHR,Bahrain,,,,,,
 2018,DJI,Djibouti,,,,,76.0,
@@ -1565,7 +1565,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2018,ARE,United Arab Emirates,34.0,16.0,48.0,,,451.0
 2018,YEM,Yemen,48.0,30.0,62.0,,,3778.0
 2018,IRQ,Iraq,23.0,21.0,92.0,,,528.0
-2018,UNAWCA,Western and central Africa,59.0,48.0,80.0,38.0,80.0,2.8
+2018,,Western and central Africa,59.0,48.0,80.0,38.0,80.0,2.8
 2018,BEN,Benin,65.0,58.0,90.0,,,49285.0
 2018,BFA,Burkina Faso,72.0,57.0,80.0,,,75471.0
 2018,BDI,Burundi,80.0,72.0,90.0,,,67062.0
@@ -1591,7 +1591,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2018,SLE,Sierra Leone,50.0,39.0,78.0,,,36206.0
 2018,TGO,Togo,71.0,60.0,84.0,,,77901.0
 2018,STP,Sao Tome and Principe,69.0,69.0,98.0,,,820.0
-2018,UNAWCENA,Western and central Europe and North America,87.0,72.0,83.0,68.0,94.0,1.9
+2018,,Western and central Europe and North America,87.0,72.0,83.0,68.0,94.0,1.9
 2018,AUT,Austria,,,97.0,,,7036.0
 2018,BEL,Belgium,95.0,83.0,88.0,82.0,98.0,17037.0
 2018,BGR,Bulgaria,79.0,48.0,61.0,42.0,87.0,2367.0
@@ -1628,8 +1628,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2018,TUR,Türkiye,,,,,,
 2018,GBR,United Kingdom,,,,,,
 2018,USA,United States of America,,,,,,
-2019,03M49WLD,Global,80.0,66.0,82.0,58.0,88.0,30.3
-2019,UNAAP,Asia and the Pacific,70.0,58.0,82.0,52.0,90.0,4.3
+2019,,Global,80.0,66.0,82.0,58.0,88.0,30.3
+2019,,Asia and the Pacific,70.0,58.0,82.0,52.0,90.0,4.3
 2019,AFG,Afghanistan,26.0,9.0,36.0,,,2886.0
 2019,AUS,Australia,91.0,83.0,92.0,82.0,98.0,25793.0
 2019,BGD,Bangladesh,49.0,24.0,48.0,,,7011.0
@@ -1659,7 +1659,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2019,THA,Thailand,82.0,73.0,89.0,71.0,97.0,470007.0
 2019,TLS,Timor-Leste,58.0,41.0,71.0,,,740.0
 2019,VNM,Viet Nam,,63.0,,,,
-2019,UNACAR,Caribbean,77.0,57.0,74.0,45.0,79.0,240000.0
+2019,,Caribbean,77.0,57.0,74.0,45.0,79.0,240000.0
 2019,BHS,Bahamas,95.0,75.0,79.0,,,3849.0
 2019,BRB,Barbados,92.0,65.0,70.0,57.0,89.0,2008.0
 2019,BLZ,Belize,78.0,44.0,56.0,23.0,52.0,2800.0
@@ -1670,7 +1670,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2019,JAM,Jamaica,93.0,49.0,53.0,38.0,79.0,26929.0
 2019,SUR,Suriname,52.0,43.0,83.0,39.0,90.0,3443.0
 2019,TTO,Trinidad and Tobago,,67.0,,61.0,91.0,
-2019,UNAESA,Eastern and southern Africa,88.0,73.0,83.0,64.0,88.0,18.0
+2019,,Eastern and southern Africa,88.0,73.0,83.0,64.0,88.0,18.0
 2019,AGO,Angola,45.0,30.0,67.0,,,140093.0
 2019,BWA,Botswana,95.0,90.0,95.0,87.0,96.0,329616.0
 2019,COM,Comoros,,66.0,,,,
@@ -1691,7 +1691,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2019,TZA,United Republic of Tanzania,88.0,75.0,86.0,65.0,87.0,1493143.0
 2019,ZMB,Zambia,90.0,77.0,86.0,70.0,90.0,1249083.0
 2019,ZWE,Zimbabwe,92.0,85.0,93.0,74.0,86.0,1235306.0
-2019,UNAEECA,Eastern Europe and central Asia,64.0,43.0,68.0,40.0,93.0,1.1
+2019,,Eastern Europe and central Asia,64.0,43.0,68.0,40.0,93.0,1.1
 2019,ALB,Albania,76.0,45.0,59.0,35.0,79.0,1030.0
 2019,ARM,Armenia,55.0,46.0,82.0,40.0,88.0,2670.0
 2019,AZE,Azerbaijan,71.0,53.0,74.0,43.0,81.0,6831.0
@@ -1707,8 +1707,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2019,TJK,Tajikistan,73.0,58.0,81.0,43.0,73.0,8756.0
 2019,TKM,Turkmenistan,,,,,,
 2019,UKR,Ukraine,,,80.0,,95.0,169559.0
-2019,UZB,Uzbekistan,60.0,39.0,64.0,,,42125.0
-2019,UNALA,Latin America,82.0,66.0,80.0,59.0,90.0,1.6
+2019,UZB,Uzbekistan,,,64.0,,,42125.0
+2019,,Latin America,82.0,66.0,80.0,59.0,90.0,1.6
 2019,ARG,Argentina,,,,,,
 2019,BOL,Bolivia,,44.0,,34.0,76.0,
 2019,BRA,Brazil,92.0,71.0,77.0,66.0,94.0,821000.0
@@ -1726,7 +1726,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2019,PER,Peru,80.0,73.0,90.0,56.0,77.0,74900.0
 2019,URY,Uruguay,90.0,64.0,71.0,60.0,94.0,12182.0
 2019,VEN,Venezuela,66.0,52.0,79.0,,,57186.0
-2019,UNAMENA,Middle East and North Africa,62.0,45.0,72.0,39.0,88.0,100000.0
+2019,,Middle East and North Africa,62.0,45.0,72.0,39.0,88.0,100000.0
 2019,DZA,Algeria,76.0,63.0,83.0,57.0,90.0,17429.0
 2019,BHR,Bahrain,,,,,,
 2019,DJI,Djibouti,,,,,63.0,
@@ -1746,7 +1746,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2019,ARE,United Arab Emirates,34.0,17.0,48.0,,,475.0
 2019,YEM,Yemen,49.0,32.0,66.0,,,4056.0
 2019,IRQ,Iraq,27.0,22.0,82.0,,,696.0
-2019,UNAWCA,Western and central Africa,62.0,53.0,86.0,43.0,82.0,3.0
+2019,,Western and central Africa,62.0,53.0,86.0,43.0,82.0,3.0
 2019,BEN,Benin,69.0,65.0,94.0,,,51909.0
 2019,BFA,Burkina Faso,75.0,67.0,90.0,,,76678.0
 2019,BDI,Burundi,82.0,78.0,94.0,,,68506.0
@@ -1772,7 +1772,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2019,SLE,Sierra Leone,53.0,45.0,86.0,,,38909.0
 2019,TGO,Togo,75.0,69.0,92.0,,,81546.0
 2019,STP,Sao Tome and Principe,72.0,72.0,98.0,,,842.0
-2019,UNAWCENA,Western and central Europe and North America,88.0,73.0,83.0,69.0,94.0,1.9
+2019,,Western and central Europe and North America,88.0,73.0,83.0,69.0,94.0,1.9
 2019,AUT,Austria,,,91.0,,,7216.0
 2019,BEL,Belgium,94.0,84.0,89.0,83.0,98.0,17224.0
 2019,BGR,Bulgaria,81.0,53.0,65.0,49.0,93.0,2558.0
@@ -1809,8 +1809,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2019,TUR,Türkiye,,,,,,
 2019,GBR,United Kingdom,,,,,,
 2019,USA,United States of America,,,,,,
-2020,03M49WLD,Global,82.0,69.0,85.0,63.0,90.0,31.4
-2020,UNAAP,Asia and the Pacific,,60.0,,,,
+2020,,Global,82.0,69.0,85.0,63.0,90.0,31.4
+2020,,Asia and the Pacific,,60.0,,,,
 2020,AFG,Afghanistan,26.0,9.0,36.0,,,3030.0
 2020,AUS,Australia,91.0,83.0,92.0,82.0,98.0,26452.0
 2020,BGD,Bangladesh,53.0,28.0,53.0,,,7888.0
@@ -1840,7 +1840,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2020,THA,Thailand,83.0,76.0,92.0,74.0,97.0,472445.0
 2020,TLS,Timor-Leste,60.0,47.0,78.0,,,802.0
 2020,VNM,Viet Nam,,68.0,,66.0,97.0,
-2020,UNACAR,Caribbean,80.0,63.0,79.0,53.0,85.0,250000.0
+2020,,Caribbean,80.0,63.0,79.0,53.0,85.0,250000.0
 2020,BHS,Bahamas,95.0,74.0,78.0,55.0,75.0,3818.0
 2020,BRB,Barbados,92.0,65.0,70.0,60.0,93.0,2014.0
 2020,BLZ,Belize,82.0,44.0,54.0,29.0,65.0,2977.0
@@ -1851,7 +1851,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2020,JAM,Jamaica,95.0,44.0,47.0,37.0,82.0,27803.0
 2020,SUR,Suriname,58.0,50.0,86.0,,,3979.0
 2020,TTO,Trinidad and Tobago,,62.0,,58.0,93.0,
-2020,UNAESA,Eastern and southern Africa,89.0,75.0,85.0,68.0,91.0,18.4
+2020,,Eastern and southern Africa,89.0,75.0,85.0,68.0,91.0,18.4
 2020,AGO,Angola,49.0,35.0,72.0,,,153747.0
 2020,BWA,Botswana,95.0,89.0,93.0,87.0,98.0,330364.0
 2020,COM,Comoros,,73.0,,57.0,78.0,
@@ -1872,7 +1872,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2020,TZA,United Republic of Tanzania,89.0,83.0,93.0,77.0,92.0,1529234.0
 2020,ZMB,Zambia,91.0,84.0,93.0,79.0,93.0,1273015.0
 2020,ZWE,Zimbabwe,93.0,89.0,96.0,79.0,89.0,1242673.0
-2020,UNAEECA,Eastern Europe and central Asia,63.0,48.0,76.0,45.0,94.0,1.1
+2020,,Eastern Europe and central Asia,63.0,48.0,76.0,45.0,94.0,1.1
 2020,ALB,Albania,80.0,49.0,61.0,40.0,83.0,1117.0
 2020,ARM,Armenia,62.0,45.0,72.0,37.0,82.0,3223.0
 2020,AZE,Azerbaijan,74.0,57.0,77.0,49.0,86.0,7302.0
@@ -1888,8 +1888,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2020,TJK,Tajikistan,72.0,61.0,84.0,52.0,86.0,9459.0
 2020,TKM,Turkmenistan,,,,,,
 2020,UKR,Ukraine,,,83.0,,94.0,176871.0
-2020,UZB,Uzbekistan,59.0,42.0,71.0,,,43606.0
-2020,UNALA,Latin America,82.0,68.0,83.0,62.0,91.0,1.7
+2020,UZB,Uzbekistan,,,71.0,,,43606.0
+2020,,Latin America,82.0,68.0,83.0,62.0,91.0,1.7
 2020,ARG,Argentina,,,,,,
 2020,BOL,Bolivia,,47.0,,38.0,80.0,
 2020,BRA,Brazil,89.0,72.0,81.0,68.0,95.0,821000.0
@@ -1907,7 +1907,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2020,PER,Peru,82.0,73.0,90.0,59.0,81.0,79967.0
 2020,URY,Uruguay,91.0,63.0,69.0,62.0,98.0,12906.0
 2020,VEN,Venezuela,73.0,65.0,89.0,,,63147.0
-2020,UNAMENA,Middle East and North Africa,64.0,47.0,74.0,42.0,88.0,110000.0
+2020,,Middle East and North Africa,64.0,47.0,74.0,42.0,88.0,110000.0
 2020,DZA,Algeria,78.0,64.0,82.0,,,19034.0
 2020,BHR,Bahrain,,,,,,
 2020,DJI,Djibouti,,,,,62.0,
@@ -1927,7 +1927,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2020,ARE,United Arab Emirates,42.0,32.0,76.0,,,609.0
 2020,YEM,Yemen,49.0,34.0,68.0,,,4289.0
 2020,IRQ,Iraq,31.0,22.0,71.0,,,925.0
-2020,UNAWCA,Western and central Africa,68.0,63.0,92.0,53.0,83.0,3.3
+2020,,Western and central Africa,68.0,63.0,92.0,53.0,83.0,3.3
 2020,BEN,Benin,73.0,67.0,92.0,54.0,81.0,53909.0
 2020,BFA,Burkina Faso,77.0,69.0,89.0,,,77791.0
 2020,BDI,Burundi,84.0,80.0,96.0,72.0,90.0,68971.0
@@ -1953,7 +1953,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2020,SLE,Sierra Leone,56.0,51.0,90.0,,,42064.0
 2020,TGO,Togo,79.0,74.0,95.0,,,84643.0
 2020,STP,Sao Tome and Principe,76.0,76.0,98.0,58.0,77.0,871.0
-2020,UNAWCENA,Western and central Europe and North America,,74.0,,,,
+2020,,Western and central Europe and North America,,74.0,,,,
 2020,AUT,Austria,,,91.0,,,7365.0
 2020,BEL,Belgium,93.0,83.0,89.0,82.0,98.0,17400.0
 2020,BGR,Bulgaria,83.0,54.0,66.0,50.0,92.0,2734.0
@@ -1990,8 +1990,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2020,TUR,Türkiye,,,,,,
 2020,GBR,United Kingdom,,,,,,
 2020,USA,United States of America,,,,,,
-2021,03M49WLD,Global,84.0,73.0,87.0,67.0,92.0,32.4
-2021,UNAAP,Asia and the Pacific,75.0,62.0,83.0,56.0,91.0,4.8
+2021,,Global,84.0,73.0,87.0,67.0,92.0,32.4
+2021,,Asia and the Pacific,75.0,62.0,83.0,56.0,91.0,4.8
 2021,AFG,Afghanistan,27.0,10.0,36.0,,,3169.0
 2021,AUS,Australia,91.0,83.0,92.0,82.0,98.0,26705.0
 2021,BGD,Bangladesh,52.0,30.0,57.0,,,8002.0
@@ -2021,7 +2021,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2021,THA,Thailand,87.0,79.0,91.0,77.0,97.0,491017.0
 2021,TLS,Timor-Leste,68.0,55.0,81.0,42.0,77.0,961.0
 2021,VNM,Viet Nam,,71.0,,,,
-2021,UNACAR,Caribbean,82.0,65.0,79.0,54.0,84.0,270000.0
+2021,,Caribbean,82.0,65.0,79.0,54.0,84.0,270000.0
 2021,BHS,Bahamas,95.0,76.0,80.0,62.0,81.0,3788.0
 2021,BRB,Barbados,93.0,66.0,71.0,61.0,92.0,2022.0
 2021,BLZ,Belize,86.0,46.0,53.0,27.0,60.0,3157.0
@@ -2032,7 +2032,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2021,JAM,Jamaica,93.0,47.0,51.0,47.0,98.0,27458.0
 2021,SUR,Suriname,54.0,47.0,87.0,,,3831.0
 2021,TTO,Trinidad and Tobago,,61.0,,56.0,92.0,
-2021,UNAESA,Eastern and southern Africa,90.0,79.0,88.0,73.0,93.0,18.7
+2021,,Eastern and southern Africa,90.0,79.0,88.0,73.0,93.0,18.7
 2021,AGO,Angola,54.0,41.0,76.0,,,168352.0
 2021,BWA,Botswana,96.0,92.0,96.0,91.0,98.0,330504.0
 2021,COM,Comoros,,77.0,,,,
@@ -2053,7 +2053,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2021,TZA,United Republic of Tanzania,91.0,88.0,97.0,86.0,98.0,1556966.0
 2021,ZMB,Zambia,91.0,85.0,93.0,82.0,96.0,1285985.0
 2021,ZWE,Zimbabwe,94.0,90.0,96.0,84.0,93.0,1241257.0
-2021,UNAEECA,Eastern Europe and central Asia,61.0,49.0,81.0,46.0,92.0,1.2
+2021,,Eastern Europe and central Asia,61.0,49.0,81.0,46.0,92.0,1.2
 2021,ALB,Albania,84.0,53.0,63.0,,,1207.0
 2021,ARM,Armenia,59.0,48.0,81.0,34.0,72.0,3246.0
 2021,AZE,Azerbaijan,77.0,61.0,79.0,50.0,83.0,7896.0
@@ -2069,8 +2069,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2021,TJK,Tajikistan,71.0,62.0,87.0,54.0,88.0,10077.0
 2021,TKM,Turkmenistan,,,,,,
 2021,UKR,Ukraine,,,83.0,,94.0,184029.0
-2021,UZB,Uzbekistan,58.0,41.0,71.0,,,45296.0
-2021,UNALA,Latin America,82.0,70.0,85.0,64.0,92.0,1.8
+2021,UZB,Uzbekistan,,,71.0,,,45296.0
+2021,,Latin America,82.0,70.0,85.0,64.0,92.0,1.8
 2021,ARG,Argentina,,,,,,
 2021,BOL,Bolivia,,52.0,,42.0,82.0,
 2021,BRA,Brazil,88.0,73.0,83.0,69.0,95.0,841000.0
@@ -2088,7 +2088,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2021,PER,Peru,84.0,78.0,93.0,62.0,79.0,85969.0
 2021,URY,Uruguay,92.0,70.0,76.0,70.0,98.0,13529.0
 2021,VEN,Venezuela,76.0,66.0,86.0,,,66609.0
-2021,UNAMENA,Middle East and North Africa,66.0,48.0,73.0,44.0,90.0,120000.0
+2021,,Middle East and North Africa,66.0,48.0,73.0,44.0,90.0,120000.0
 2021,DZA,Algeria,80.0,66.0,82.0,,,20980.0
 2021,BHR,Bahrain,,,,,,
 2021,DJI,Djibouti,,,,,71.0,
@@ -2108,7 +2108,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2021,ARE,United Arab Emirates,48.0,46.0,98.0,,,723.0
 2021,YEM,Yemen,50.0,35.0,70.0,,,4561.0
 2021,IRQ,Iraq,37.0,26.0,69.0,,,1281.0
-2021,UNAWCA,Western and central Africa,75.0,71.0,95.0,64.0,89.0,3.6
+2021,,Western and central Africa,75.0,71.0,95.0,64.0,89.0,3.6
 2021,BEN,Benin,78.0,74.0,96.0,59.0,79.0,56883.0
 2021,BFA,Burkina Faso,82.0,75.0,91.0,,,81312.0
 2021,BDI,Burundi,86.0,83.0,97.0,77.0,93.0,69326.0
@@ -2134,7 +2134,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2021,SLE,Sierra Leone,63.0,61.0,97.0,,,48084.0
 2021,TGO,Togo,81.0,76.0,94.0,68.0,89.0,86338.0
 2021,STP,Sao Tome and Principe,80.0,80.0,98.0,67.0,84.0,904.0
-2021,UNAWCENA,Western and central Europe and North America,89.0,74.0,83.0,70.0,95.0,2.0
+2021,,Western and central Europe and North America,89.0,74.0,83.0,70.0,95.0,2.0
 2021,AUT,Austria,,,,,,
 2021,BEL,Belgium,95.0,84.0,89.0,84.0,98.0,18031.0
 2021,BGR,Bulgaria,85.0,56.0,66.0,55.0,97.0,2909.0
@@ -2171,8 +2171,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2021,TUR,Türkiye,,,,,,
 2021,GBR,United Kingdom,,,,,,
 2021,USA,United States of America,,,,,,
-2022,03M49WLD,Global,86.0,76.0,89.0,71.0,93.0,33.6
-2022,UNAAP,Asia and the Pacific,78.0,65.0,84.0,62.0,95.0,5.1
+2022,,Global,86.0,76.0,89.0,71.0,93.0,33.6
+2022,,Asia and the Pacific,78.0,65.0,84.0,62.0,95.0,5.1
 2022,AFG,Afghanistan,27.0,9.0,35.0,6.0,66.0,3309.0
 2022,AUS,Australia,,,,,,
 2022,BGD,Bangladesh,56.0,38.0,68.0,,,8949.0
@@ -2202,7 +2202,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2022,THA,Thailand,90.0,81.0,90.0,79.0,97.0,506290.0
 2022,TLS,Timor-Leste,80.0,69.0,86.0,,,1168.0
 2022,VNM,Viet Nam,89.0,73.0,,72.0,98.0,222388.0
-2022,UNACAR,Caribbean,83.0,68.0,81.0,57.0,84.0,280000.0
+2022,,Caribbean,83.0,68.0,81.0,57.0,84.0,280000.0
 2022,BHS,Bahamas,95.0,76.0,81.0,62.0,81.0,3747.0
 2022,BRB,Barbados,93.0,65.0,69.0,60.0,93.0,2014.0
 2022,BLZ,Belize,81.0,44.0,55.0,32.0,73.0,2971.0
@@ -2213,7 +2213,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2022,JAM,Jamaica,92.0,50.0,54.0,45.0,91.0,27214.0
 2022,SUR,Suriname,51.0,44.0,86.0,,,3637.0
 2022,TTO,Trinidad and Tobago,,60.0,,56.0,93.0,
-2022,UNAESA,Eastern and southern Africa,92.0,83.0,90.0,77.0,93.0,19.0
+2022,,Eastern and southern Africa,92.0,83.0,90.0,77.0,93.0,19.0
 2022,AGO,Angola,58.0,46.0,79.0,,,181669.0
 2022,BWA,Botswana,97.0,93.0,97.0,93.0,98.0,331999.0
 2022,COM,Comoros,,85.0,,73.0,86.0,
@@ -2234,7 +2234,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2022,TZA,United Republic of Tanzania,95.0,94.0,98.0,92.0,98.0,1631361.0
 2022,ZMB,Zambia,93.0,90.0,97.0,87.0,97.0,1306981.0
 2022,ZWE,Zimbabwe,95.0,94.0,98.0,89.0,95.0,1248773.0
-2022,UNAEECA,Eastern Europe and central Asia,62.0,51.0,82.0,48.0,94.0,1.2
+2022,,Eastern Europe and central Asia,62.0,51.0,82.0,48.0,94.0,1.2
 2022,ALB,Albania,88.0,57.0,65.0,,,1288.0
 2022,ARM,Armenia,62.0,53.0,85.0,37.0,70.0,3694.0
 2022,AZE,Azerbaijan,81.0,61.0,75.0,58.0,96.0,8563.0
@@ -2250,8 +2250,8 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2022,TJK,Tajikistan,72.0,63.0,88.0,55.0,87.0,10861.0
 2022,TKM,Turkmenistan,,,,,,
 2022,UKR,Ukraine,,,77.0,,95.0,191434.0
-2022,UZB,Uzbekistan,58.0,44.0,77.0,,,47672.0
-2022,UNALA,Latin America,85.0,72.0,85.0,66.0,92.0,1.9
+2022,UZB,Uzbekistan,,,77.0,,,47672.0
+2022,,Latin America,85.0,72.0,85.0,66.0,92.0,1.9
 2022,ARG,Argentina,,,,,,
 2022,BOL,Bolivia,,52.0,,43.0,82.0,
 2022,BRA,Brazil,91.0,74.0,81.0,70.0,95.0,899000.0
@@ -2269,7 +2269,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2022,PER,Peru,86.0,82.0,95.0,61.0,74.0,91209.0
 2022,URY,Uruguay,93.0,74.0,79.0,68.0,93.0,14213.0
 2022,VEN,Venezuela,76.0,67.0,88.0,,,70170.0
-2022,UNAMENA,Middle East and North Africa,67.0,50.0,75.0,45.0,90.0,130000.0
+2022,,Middle East and North Africa,67.0,50.0,75.0,45.0,90.0,130000.0
 2022,DZA,Algeria,79.0,63.0,79.0,,,22150.0
 2022,BHR,Bahrain,,,,,,
 2022,DJI,Djibouti,,,,,75.0,
@@ -2289,7 +2289,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2022,ARE,United Arab Emirates,49.0,47.0,96.0,,,789.0
 2022,YEM,Yemen,52.0,39.0,75.0,,,4945.0
 2022,IRQ,Iraq,43.0,30.0,71.0,,,1706.0
-2022,UNAWCA,Western and central Africa,82.0,78.0,96.0,71.0,90.0,3.9
+2022,,Western and central Africa,82.0,78.0,96.0,71.0,90.0,3.9
 2022,BEN,Benin,85.0,81.0,96.0,66.0,82.0,61163.0
 2022,BFA,Burkina Faso,86.0,81.0,94.0,69.0,86.0,83496.0
 2022,BDI,Burundi,87.0,85.0,98.0,79.0,93.0,69730.0
@@ -2315,7 +2315,7 @@ year,iso_code,name,"Among people living with HIV, the percent who know their sta
 2022,SLE,Sierra Leone,76.0,76.0,98.0,,,58544.0
 2022,TGO,Togo,84.0,82.0,97.0,74.0,90.0,89766.0
 2022,STP,Sao Tome and Principe,89.0,89.0,98.0,76.0,85.0,985.0
-2022,UNAWCENA,Western and central Europe and North America,,76.0,,,,
+2022,,Western and central Europe and North America,,76.0,,,,
 2022,AUT,Austria,,,,,,
 2022,BEL,Belgium,,,,,,
 2022,BGR,Bulgaria,86.0,60.0,70.0,58.0,95.0,3108.0
