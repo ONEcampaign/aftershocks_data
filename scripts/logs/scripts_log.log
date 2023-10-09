@@ -6023,3 +6023,18 @@ INFO (2023-10-09 07:15:27,653): Downloaded IDS debt stocks data: ids_stocks_raw
 INFO (2023-10-09 07:17:47,578): Downloaded IDS debt stocks data: ids_stocks_raw_long
 INFO (2023-10-09 07:18:20,166): Updated weekly charts in debt page
 INFO (2023-10-09 07:20:59,629): Updated weekly charts in country page
+INFO (2023-10-09 11:15:29,268): Updated OWID data
+INFO (2023-10-09 11:15:30,601): Updated daily charts in health page
+INFO (2023-10-09 11:15:35,586): Updated IPC data
+INFO (2023-10-09 11:15:35,774): Updated Pink Sheet data
+INFO (2023-10-09 11:15:36,376): Updated WFP data
+INFO (2023-10-09 11:15:36,671): Updated hunger topic charts
+INFO (2023-10-09 11:15:36,781): Updated hunger overview charts
+INFO (2023-10-09 11:15:36,875): Updated hunger dynamic text
+INFO (2023-10-09 11:15:36,875): Updated daily hunger data and all charts and text
+INFO (2023-10-09 11:18:23,645): Updated WFP data (insufficient food)
+INFO (2023-10-09 11:18:30,752): Updated WFP insufficient food charts
+INFO (2023-10-09 11:18:34,199): Updated vaccination rate chart
+INFO (2023-10-09 11:18:34,484): Updated overview text (summary) json
+INFO (2023-10-09 11:18:34,485): Updated daily charts in country page
+INFO (2023-10-09 11:18:43,706): Updated economy picker
