@@ -6781,3 +6781,9 @@ INFO (2023-12-01 11:17:17,011): Updated vaccination rate chart
 INFO (2023-12-01 11:17:17,203): Updated overview text (summary) json
 INFO (2023-12-01 11:17:17,203): Updated daily charts in country page
 INFO (2023-12-01 11:17:20,891): Updated economy picker
+INFO (2023-12-04 07:11:32,350): Updated DSA list data
+INFO (2023-12-04 07:14:00,027): Downloaded IDS debt service data
+INFO (2023-12-04 07:15:13,785): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2023-12-04 07:17:37,181): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2023-12-04 07:17:49,450): Updated weekly charts in debt page
+INFO (2023-12-04 07:20:51,424): Updated weekly charts in country page
