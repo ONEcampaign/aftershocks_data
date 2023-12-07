@@ -11,8 +11,8 @@ DZA,2019,Diabetes mellitus,2,4678.24,43100000.0,10.85
 DZA,2019,Chronic obstructive pulmonary disease,2,4668.11,43100000.0,10.83
 DZA,2019,Congenital anomalies,2,4357.46,43100000.0,10.11
 DZA,2019,"Trachea, bronchus, lung cancers",2,3931.13,43100000.0,9.12
-DZA,2019,Breast cancer,2,3465.04,43100000.0,8.04
 DZA,2019,Cirrhosis of the liver,2,3464.38,43100000.0,8.04
+DZA,2019,Breast cancer,2,3465.04,43100000.0,8.04
 DZA,2019,Colon and rectum cancers,2,3139.43,43100000.0,7.28
 DZA,2019,Tuberculosis,1,2840.42,43100000.0,6.59
 DZA,2019,Asthma,2,2040.01,43100000.0,4.73
@@ -34,8 +34,8 @@ DZA,2019,"Cardiomyopathy, myocarditis, endocarditis",2,825.09,43100000.0,1.91
 DZA,2019,Larynx cancer,2,797.79,43100000.0,1.85
 DZA,2019,Gallbladder and biliary tract cancer,2,753.28,43100000.0,1.75
 DZA,2019,Peptic ulcer disease,2,720.97,43100000.0,1.67
-DZA,2019,Interpersonal violence,3,713.23,43100000.0,1.65
 DZA,2019,Melanoma and other skin cancers,2,711.44,43100000.0,1.65
+DZA,2019,Interpersonal violence,3,713.23,43100000.0,1.65
 DZA,2019,Mouth and oropharynx cancers,2,695.06,43100000.0,1.61
 DZA,2019,Exposure to mechanical forces,3,661.04,43100000.0,1.53
 DZA,2019,"Fire, heat and hot substances",3,636.37,43100000.0,1.48
@@ -69,26 +69,48 @@ DZA,2019,Tetanus,1,51.56,43100000.0,0.12
 DZA,2019,Echinococcosis,1,50.52,43100000.0,0.12
 DZA,2019,Thalassaemias,2,48.91,43100000.0,0.11
 DZA,2019,Inflammatory bowel disease,2,44.62,43100000.0,0.1
-DZA,2019,Collective violence and legal intervention,3,40.74,43100000.0,0.09
 DZA,2019,Sickle cell disorders and trait,2,37.39,43100000.0,0.09
 DZA,2019,Syphilis,1,40.88,43100000.0,0.09
+DZA,2019,Collective violence and legal intervention,3,40.74,43100000.0,0.09
+DZA,2019,Acute hepatitis A,1,25.59,43100000.0,0.06
 DZA,2019,Testicular cancer,2,26.67,43100000.0,0.06
 DZA,2019,Gastritis and duodenitis,2,25.57,43100000.0,0.06
-DZA,2019,Acute hepatitis A,1,25.59,43100000.0,0.06
-DZA,2019,Schistosomiasis,1,22.08,43100000.0,0.05
 DZA,2019,Rheumatoid arthritis,2,21.67,43100000.0,0.05
-DZA,2019,Urolithiasis,2,3.98,43100000.0,0.01
-DZA,2019,Gonorrhoea,1,2.46,43100000.0,0.01
+DZA,2019,Schistosomiasis,1,22.08,43100000.0,0.05
 DZA,2019,Leishmaniasis,1,3.45,43100000.0,0.01
 DZA,2019,Acute hepatitis C,1,4.39,43100000.0,0.01
 DZA,2019,Acute hepatitis E,1,2.7,43100000.0,0.01
 DZA,2019,Rabies,1,2.36,43100000.0,0.01
+DZA,2019,Gonorrhoea,1,2.46,43100000.0,0.01
+DZA,2019,Urolithiasis,2,3.98,43100000.0,0.01
+DZA,2019,Infertility,2,0.0,43100000.0,0.0
+DZA,2019,Gynecological diseases,2,1.06,43100000.0,0.0
+DZA,2019,Oral conditions,2,0.0,43100000.0,0.0
+DZA,2019,Osteoarthritis,2,0.0,43100000.0,0.0
+DZA,2019,Gout,2,0.0,43100000.0,0.0
+DZA,2019,Back and neck pain,2,0.0,43100000.0,0.0
+DZA,2019,Benign prostatic hyperplasia,2,0.0,43100000.0,0.0
+DZA,2019,Anxiety disorders,2,0.0,43100000.0,0.0
+DZA,2019,Eating disorders,2,0.12,43100000.0,0.0
+DZA,2019,Autism and Asperger syndrome,2,0.0,43100000.0,0.0
+DZA,2019,Childhood behavioural disorders,2,0.0,43100000.0,0.0
+DZA,2019,Idiopathic intellectual disability,2,0.0,43100000.0,0.0
+DZA,2019,Natural disasters,3,0.0,43100000.0,0.0
+DZA,2019,Trichuriasis,1,0.0,43100000.0,0.0
+DZA,2019,Hookworm disease,1,0.0,43100000.0,0.0
+DZA,2019,Food-bourne trematodes,1,0.0,43100000.0,0.0
+DZA,2019,Leprosy,1,0.0,43100000.0,0.0
 DZA,2019,Ascariasis,1,2.13,43100000.0,0.0
 DZA,2019,Dengue,1,0.0,43100000.0,0.0
 DZA,2019,Trachoma,1,0.0,43100000.0,0.0
 DZA,2019,Yellow fever,1,0.0,43100000.0,0.0
 DZA,2019,Diphtheria,1,0.76,43100000.0,0.0
 DZA,2019,Malaria,1,0.01,43100000.0,0.0
+DZA,2019,African trypanosomiasis,1,0.0,43100000.0,0.0
+DZA,2019,Chagas disease,1,0.0,43100000.0,0.0
+DZA,2019,Lymphatic filariasis,1,0.0,43100000.0,0.0
+DZA,2019,Onchocerciasis,1,0.0,43100000.0,0.0
+DZA,2019,Cysticercosis,1,0.0,43100000.0,0.0
 DZA,2019,Depressive disorders,2,0.0,43100000.0,0.0
 DZA,2019,Bipolar disorder,2,0.0,43100000.0,0.0
 DZA,2019,Schizophrenia,2,0.0,43100000.0,0.0
@@ -108,28 +130,6 @@ DZA,2019,Iron-deficiency anaemia,1,0.0,43100000.0,0.0
 DZA,2019,Trichomoniasis,1,0.0,43100000.0,0.0
 DZA,2019,Genital herpes,1,0.0,43100000.0,0.0
 DZA,2019,Chlamydia,1,0.81,43100000.0,0.0
-DZA,2019,Cysticercosis,1,0.0,43100000.0,0.0
-DZA,2019,Onchocerciasis,1,0.0,43100000.0,0.0
-DZA,2019,African trypanosomiasis,1,0.0,43100000.0,0.0
-DZA,2019,Chagas disease,1,0.0,43100000.0,0.0
-DZA,2019,Lymphatic filariasis,1,0.0,43100000.0,0.0
-DZA,2019,Trichuriasis,1,0.0,43100000.0,0.0
-DZA,2019,Hookworm disease,1,0.0,43100000.0,0.0
-DZA,2019,Food-bourne trematodes,1,0.0,43100000.0,0.0
-DZA,2019,Leprosy,1,0.0,43100000.0,0.0
-DZA,2019,Infertility,2,0.0,43100000.0,0.0
-DZA,2019,Gynecological diseases,2,1.06,43100000.0,0.0
-DZA,2019,Oral conditions,2,0.0,43100000.0,0.0
-DZA,2019,Osteoarthritis,2,0.0,43100000.0,0.0
-DZA,2019,Gout,2,0.0,43100000.0,0.0
-DZA,2019,Back and neck pain,2,0.0,43100000.0,0.0
-DZA,2019,Benign prostatic hyperplasia,2,0.0,43100000.0,0.0
-DZA,2019,Anxiety disorders,2,0.0,43100000.0,0.0
-DZA,2019,Eating disorders,2,0.12,43100000.0,0.0
-DZA,2019,Autism and Asperger syndrome,2,0.0,43100000.0,0.0
-DZA,2019,Childhood behavioural disorders,2,0.0,43100000.0,0.0
-DZA,2019,Idiopathic intellectual disability,2,0.0,43100000.0,0.0
-DZA,2019,Natural disasters,3,0.0,43100000.0,0.0
 AGO,2019,Neonatal conditions,1,31044.15,31800000.0,97.62
 AGO,2019,Lower respiratory infections,1,24897.49,31800000.0,78.29
 AGO,2019,Tuberculosis,1,16990.72,31800000.0,53.43
@@ -209,8 +209,8 @@ AGO,2019,Echinococcosis,1,88.83,31800000.0,0.28
 AGO,2019,Corpus uteri cancer,2,76.37,31800000.0,0.24
 AGO,2019,Rheumatoid arthritis,2,61.48,31800000.0,0.19
 AGO,2019,Ascariasis,1,40.41,31800000.0,0.13
-AGO,2019,Gynecological diseases,2,32.9,31800000.0,0.1
 AGO,2019,Natural disasters,3,31.83,31800000.0,0.1
+AGO,2019,Gynecological diseases,2,32.9,31800000.0,0.1
 AGO,2019,Gallbladder and biliary tract cancer,2,25.14,31800000.0,0.08
 AGO,2019,Collective violence and legal intervention,3,22.85,31800000.0,0.07
 AGO,2019,Thyroid cancer,2,20.01,31800000.0,0.06
@@ -225,10 +225,6 @@ AGO,2019,Mesothelioma,2,10.36,31800000.0,0.03
 AGO,2019,Acute hepatitis E,1,4.78,31800000.0,0.02
 AGO,2019,Chlamydia,1,5.28,31800000.0,0.02
 AGO,2019,Thalassaemias,2,1.69,31800000.0,0.01
-AGO,2019,Migraine,2,0.0,31800000.0,0.0
-AGO,2019,Non-migraine headache,2,0.0,31800000.0,0.0
-AGO,2019,Glaucoma,2,0.0,31800000.0,0.0
-AGO,2019,Schizophrenia,2,0.0,31800000.0,0.0
 AGO,2019,Cataracts,2,0.0,31800000.0,0.0
 AGO,2019,Uncorrected refractive errors,2,0.0,31800000.0,0.0
 AGO,2019,Macular degeneration,2,0.0,31800000.0,0.0
@@ -237,8 +233,10 @@ AGO,2019,Other hearing loss,2,0.0,31800000.0,0.0
 AGO,2019,Osteoarthritis,2,0.0,31800000.0,0.0
 AGO,2019,Gout,2,0.0,31800000.0,0.0
 AGO,2019,Back and neck pain,2,0.0,31800000.0,0.0
-AGO,2019,Benign prostatic hyperplasia,2,0.0,31800000.0,0.0
 AGO,2019,Infertility,2,0.0,31800000.0,0.0
+AGO,2019,Benign prostatic hyperplasia,2,0.0,31800000.0,0.0
+AGO,2019,Depressive disorders,2,0.0,31800000.0,0.0
+AGO,2019,Bipolar disorder,2,0.0,31800000.0,0.0
 AGO,2019,Oral conditions,2,0.0,31800000.0,0.0
 AGO,2019,Trichomoniasis,1,0.0,31800000.0,0.0
 AGO,2019,Genital herpes,1,0.0,31800000.0,0.0
@@ -254,13 +252,15 @@ AGO,2019,Dengue,1,0.29,31800000.0,0.0
 AGO,2019,Trachoma,1,0.0,31800000.0,0.0
 AGO,2019,Lymphatic filariasis,1,0.0,31800000.0,0.0
 AGO,2019,Onchocerciasis,1,0.0,31800000.0,0.0
-AGO,2019,Anxiety disorders,2,0.0,31800000.0,0.0
 AGO,2019,Eating disorders,2,0.26,31800000.0,0.0
 AGO,2019,Autism and Asperger syndrome,2,0.0,31800000.0,0.0
 AGO,2019,Childhood behavioural disorders,2,0.0,31800000.0,0.0
+AGO,2019,Migraine,2,0.0,31800000.0,0.0
+AGO,2019,Anxiety disorders,2,0.0,31800000.0,0.0
+AGO,2019,Non-migraine headache,2,0.0,31800000.0,0.0
 AGO,2019,Idiopathic intellectual disability,2,0.0,31800000.0,0.0
-AGO,2019,Depressive disorders,2,0.0,31800000.0,0.0
-AGO,2019,Bipolar disorder,2,0.0,31800000.0,0.0
+AGO,2019,Glaucoma,2,0.0,31800000.0,0.0
+AGO,2019,Schizophrenia,2,0.0,31800000.0,0.0
 BEN,2019,Neonatal conditions,1,12033.01,11800000.0,101.97
 BEN,2019,Lower respiratory infections,1,10204.62,11800000.0,86.48
 BEN,2019,Malaria,1,7037.0,11800000.0,59.64
@@ -415,8 +415,8 @@ BWA,2019,Cervix uteri cancer,2,163.99,2303703.0,7.12
 BWA,2019,Alzheimer disease and other dementias,2,163.69,2303703.0,7.11
 BWA,2019,Paralytic ileus and intestinal obstruction,2,123.12,2303703.0,5.34
 BWA,2019,Maternal conditions,1,117.76,2303703.0,5.11
-BWA,2019,Meningitis,1,108.37,2303703.0,4.7
 BWA,2019,"Fire, heat and hot substances",3,108.34,2303703.0,4.7
+BWA,2019,Meningitis,1,108.37,2303703.0,4.7
 BWA,2019,Oesophagus cancer,2,102.66,2303703.0,4.46
 BWA,2019,Peptic ulcer disease,2,90.08,2303703.0,3.91
 BWA,2019,Drowning,3,82.55,2303703.0,3.58
@@ -470,8 +470,8 @@ BWA,2019,Thyroid cancer,2,1.15,2303703.0,0.05
 BWA,2019,Thalassaemias,2,1.06,2303703.0,0.05
 BWA,2019,Rabies,1,0.91,2303703.0,0.04
 BWA,2019,Urolithiasis,2,0.9,2303703.0,0.04
-BWA,2019,Malaria,1,0.71,2303703.0,0.03
 BWA,2019,Sickle cell disorders and trait,2,0.75,2303703.0,0.03
+BWA,2019,Malaria,1,0.71,2303703.0,0.03
 BWA,2019,Acute hepatitis C,1,0.51,2303703.0,0.02
 BWA,2019,Measles,1,0.37,2303703.0,0.02
 BWA,2019,Chlamydia,1,0.53,2303703.0,0.02
@@ -491,16 +491,6 @@ BWA,2019,Autism and Asperger syndrome,2,0.0,2303703.0,0.0
 BWA,2019,Childhood behavioural disorders,2,0.0,2303703.0,0.0
 BWA,2019,Idiopathic intellectual disability,2,0.0,2303703.0,0.0
 BWA,2019,Mesothelioma,2,0.03,2303703.0,0.0
-BWA,2019,African trypanosomiasis,1,0.0,2303703.0,0.0
-BWA,2019,Chagas disease,1,0.0,2303703.0,0.0
-BWA,2019,Trichomoniasis,1,0.0,2303703.0,0.0
-BWA,2019,Genital herpes,1,0.0,2303703.0,0.0
-BWA,2019,Dengue,1,0.0,2303703.0,0.0
-BWA,2019,Trachoma,1,0.0,2303703.0,0.0
-BWA,2019,Yellow fever,1,0.0,2303703.0,0.0
-BWA,2019,Leishmaniasis,1,0.0,2303703.0,0.0
-BWA,2019,Lymphatic filariasis,1,0.0,2303703.0,0.0
-BWA,2019,Onchocerciasis,1,0.0,2303703.0,0.0
 BWA,2019,Trichuriasis,1,0.0,2303703.0,0.0
 BWA,2019,Hookworm disease,1,0.0,2303703.0,0.0
 BWA,2019,Food-bourne trematodes,1,0.0,2303703.0,0.0
@@ -523,6 +513,16 @@ BWA,2019,Uncorrected refractive errors,2,0.0,2303703.0,0.0
 BWA,2019,Macular degeneration,2,0.0,2303703.0,0.0
 BWA,2019,Other vision loss,2,0.0,2303703.0,0.0
 BWA,2019,Other hearing loss,2,0.0,2303703.0,0.0
+BWA,2019,Onchocerciasis,1,0.0,2303703.0,0.0
+BWA,2019,African trypanosomiasis,1,0.0,2303703.0,0.0
+BWA,2019,Chagas disease,1,0.0,2303703.0,0.0
+BWA,2019,Trichomoniasis,1,0.0,2303703.0,0.0
+BWA,2019,Genital herpes,1,0.0,2303703.0,0.0
+BWA,2019,Leishmaniasis,1,0.0,2303703.0,0.0
+BWA,2019,Lymphatic filariasis,1,0.0,2303703.0,0.0
+BWA,2019,Dengue,1,0.0,2303703.0,0.0
+BWA,2019,Trachoma,1,0.0,2303703.0,0.0
+BWA,2019,Yellow fever,1,0.0,2303703.0,0.0
 BFA,2019,Neonatal conditions,1,18414.46,20300000.0,90.71
 BFA,2019,Lower respiratory infections,1,16807.18,20300000.0,82.79
 BFA,2019,Malaria,1,14602.0,20300000.0,71.93
@@ -808,8 +808,8 @@ CPV,2019,Congenital anomalies,2,38.13,549936.0,6.93
 CPV,2019,HIV/AIDS,1,34.0,549936.0,6.18
 CPV,2019,Cervix uteri cancer,2,27.42,549936.0,4.99
 CPV,2019,Pancreas cancer,2,26.75,549936.0,4.86
-CPV,2019,Drowning,3,26.63,549936.0,4.84
 CPV,2019,Falls,3,26.6,549936.0,4.84
+CPV,2019,Drowning,3,26.63,549936.0,4.84
 CPV,2019,Breast cancer,2,23.95,549936.0,4.36
 CPV,2019,Tuberculosis,1,23.44,549936.0,4.26
 CPV,2019,Asthma,2,23.17,549936.0,4.21
@@ -966,8 +966,8 @@ CMR,2019,Sudden infant death syndrome,2,468.99,25900000.0,1.81
 CMR,2019,Stomach cancer,2,457.51,25900000.0,1.77
 CMR,2019,Parkinson disease,2,449.35,25900000.0,1.73
 CMR,2019,Acute hepatitis B,1,335.86,25900000.0,1.3
-CMR,2019,Rheumatic heart disease,2,323.2,25900000.0,1.25
 CMR,2019,Skin diseases,2,323.92,25900000.0,1.25
+CMR,2019,Rheumatic heart disease,2,323.2,25900000.0,1.25
 CMR,2019,Ovary cancer,2,302.65,25900000.0,1.17
 CMR,2019,"Trachea, bronchus, lung cancers",2,300.71,25900000.0,1.16
 CMR,2019,Pancreas cancer,2,289.68,25900000.0,1.12
@@ -1101,8 +1101,8 @@ CAF,2019,Acute hepatitis A,1,68.74,4745179.0,1.45
 CAF,2019,Parkinson disease,2,67.22,4745179.0,1.42
 CAF,2019,Stomach cancer,2,65.49,4745179.0,1.38
 CAF,2019,Ovary cancer,2,64.0,4745179.0,1.35
-CAF,2019,Appendicitis,2,61.82,4745179.0,1.3
 CAF,2019,Alcohol use disorders,2,61.74,4745179.0,1.3
+CAF,2019,Appendicitis,2,61.82,4745179.0,1.3
 CAF,2019,Pancreatitis,2,60.12,4745179.0,1.27
 CAF,2019,Sudden infant death syndrome,2,57.41,4745179.0,1.21
 CAF,2019,Oesophagus cancer,2,48.16,4745179.0,1.01
@@ -1148,11 +1148,6 @@ CAF,2019,Uncorrected refractive errors,2,0.0,4745179.0,0.0
 CAF,2019,Macular degeneration,2,0.0,4745179.0,0.0
 CAF,2019,Other vision loss,2,0.0,4745179.0,0.0
 CAF,2019,Other hearing loss,2,0.0,4745179.0,0.0
-CAF,2019,Osteoarthritis,2,0.0,4745179.0,0.0
-CAF,2019,Gout,2,0.0,4745179.0,0.0
-CAF,2019,Back and neck pain,2,0.0,4745179.0,0.0
-CAF,2019,Benign prostatic hyperplasia,2,0.0,4745179.0,0.0
-CAF,2019,Infertility,2,0.0,4745179.0,0.0
 CAF,2019,Oral conditions,2,0.0,4745179.0,0.0
 CAF,2019,Natural disasters,3,0.0,4745179.0,0.0
 CAF,2019,Chagas disease,1,0.0,4745179.0,0.0
@@ -1178,6 +1173,11 @@ CAF,2019,Schizophrenia,2,0.0,4745179.0,0.0
 CAF,2019,Iodine deficiency,1,0.0,4745179.0,0.0
 CAF,2019,Vitamin A deficiency,1,0.0,4745179.0,0.0
 CAF,2019,Iron-deficiency anaemia,1,0.0,4745179.0,0.0
+CAF,2019,Osteoarthritis,2,0.0,4745179.0,0.0
+CAF,2019,Gout,2,0.0,4745179.0,0.0
+CAF,2019,Back and neck pain,2,0.0,4745179.0,0.0
+CAF,2019,Benign prostatic hyperplasia,2,0.0,4745179.0,0.0
+CAF,2019,Infertility,2,0.0,4745179.0,0.0
 TCD,2019,Lower respiratory infections,1,23229.56,15900000.0,146.1
 TCD,2019,Neonatal conditions,1,19594.02,15900000.0,123.23
 TCD,2019,Diarrhoeal diseases,1,14841.58,15900000.0,93.34
@@ -1263,8 +1263,8 @@ TCD,2019,Gallbladder and biliary tract cancer,2,26.44,15900000.0,0.17
 TCD,2019,Thyroid cancer,2,23.49,15900000.0,0.15
 TCD,2019,Testicular cancer,2,16.11,15900000.0,0.1
 TCD,2019,Multiple sclerosis,2,15.29,15900000.0,0.1
-TCD,2019,African trypanosomiasis,1,13.08,15900000.0,0.08
 TCD,2019,Rheumatoid arthritis,2,12.39,15900000.0,0.08
+TCD,2019,African trypanosomiasis,1,13.08,15900000.0,0.08
 TCD,2019,Gynecological diseases,2,6.69,15900000.0,0.04
 TCD,2019,Acute hepatitis E,1,4.13,15900000.0,0.03
 TCD,2019,Gonorrhoea,1,4.9,15900000.0,0.03
@@ -1368,8 +1368,8 @@ COM,2019,Appendicitis,2,5.86,850891.0,0.69
 COM,2019,Alcohol use disorders,2,5.78,850891.0,0.68
 COM,2019,Larynx cancer,2,5.18,850891.0,0.61
 COM,2019,Acute hepatitis B,1,5.14,850891.0,0.6
-COM,2019,Upper respiratory infections,1,4.21,850891.0,0.49
 COM,2019,Encephalitis,1,4.16,850891.0,0.49
+COM,2019,Upper respiratory infections,1,4.21,850891.0,0.49
 COM,2019,Inflammatory bowel disease,2,3.78,850891.0,0.44
 COM,2019,Corpus uteri cancer,2,3.11,850891.0,0.37
 COM,2019,Ovary cancer,2,3.09,850891.0,0.36
@@ -1393,6 +1393,25 @@ COM,2019,Chlamydia,1,0.24,850891.0,0.03
 COM,2019,Collective violence and legal intervention,3,0.1,850891.0,0.01
 COM,2019,Infertility,2,0.0,850891.0,0.0
 COM,2019,Oral conditions,2,0.0,850891.0,0.0
+COM,2019,Migraine,2,0.0,850891.0,0.0
+COM,2019,Cataracts,2,0.0,850891.0,0.0
+COM,2019,Non-migraine headache,2,0.0,850891.0,0.0
+COM,2019,Glaucoma,2,0.0,850891.0,0.0
+COM,2019,Anxiety disorders,2,0.0,850891.0,0.0
+COM,2019,Eating disorders,2,0.01,850891.0,0.0
+COM,2019,Autism and Asperger syndrome,2,0.0,850891.0,0.0
+COM,2019,Childhood behavioural disorders,2,0.0,850891.0,0.0
+COM,2019,Idiopathic intellectual disability,2,0.0,850891.0,0.0
+COM,2019,Pancreas cancer,2,0.0,850891.0,0.0
+COM,2019,Testicular cancer,2,0.0,850891.0,0.0
+COM,2019,Kidney cancer,2,0.0,850891.0,0.0
+COM,2019,Iodine deficiency,1,0.0,850891.0,0.0
+COM,2019,Vitamin A deficiency,1,0.0,850891.0,0.0
+COM,2019,Iron-deficiency anaemia,1,0.0,850891.0,0.0
+COM,2019,Uncorrected refractive errors,2,0.0,850891.0,0.0
+COM,2019,Macular degeneration,2,0.0,850891.0,0.0
+COM,2019,Other vision loss,2,0.0,850891.0,0.0
+COM,2019,Other hearing loss,2,0.0,850891.0,0.0
 COM,2019,Osteoarthritis,2,0.0,850891.0,0.0
 COM,2019,Gout,2,0.0,850891.0,0.0
 COM,2019,Back and neck pain,2,0.0,850891.0,0.0
@@ -1421,25 +1440,6 @@ COM,2019,Gallbladder and biliary tract cancer,2,0.0,850891.0,0.0
 COM,2019,Depressive disorders,2,0.0,850891.0,0.0
 COM,2019,Bipolar disorder,2,0.0,850891.0,0.0
 COM,2019,Schizophrenia,2,0.0,850891.0,0.0
-COM,2019,Eating disorders,2,0.01,850891.0,0.0
-COM,2019,Autism and Asperger syndrome,2,0.0,850891.0,0.0
-COM,2019,Childhood behavioural disorders,2,0.0,850891.0,0.0
-COM,2019,Idiopathic intellectual disability,2,0.0,850891.0,0.0
-COM,2019,Pancreas cancer,2,0.0,850891.0,0.0
-COM,2019,Testicular cancer,2,0.0,850891.0,0.0
-COM,2019,Kidney cancer,2,0.0,850891.0,0.0
-COM,2019,Iodine deficiency,1,0.0,850891.0,0.0
-COM,2019,Vitamin A deficiency,1,0.0,850891.0,0.0
-COM,2019,Iron-deficiency anaemia,1,0.0,850891.0,0.0
-COM,2019,Migraine,2,0.0,850891.0,0.0
-COM,2019,Uncorrected refractive errors,2,0.0,850891.0,0.0
-COM,2019,Non-migraine headache,2,0.0,850891.0,0.0
-COM,2019,Glaucoma,2,0.0,850891.0,0.0
-COM,2019,Cataracts,2,0.0,850891.0,0.0
-COM,2019,Anxiety disorders,2,0.0,850891.0,0.0
-COM,2019,Macular degeneration,2,0.0,850891.0,0.0
-COM,2019,Other vision loss,2,0.0,850891.0,0.0
-COM,2019,Other hearing loss,2,0.0,850891.0,0.0
 COG,2019,HIV/AIDS,1,4509.41,5380504.0,83.81
 COG,2019,Neonatal conditions,1,2906.49,5380504.0,54.02
 COG,2019,Tuberculosis,1,2781.03,5380504.0,51.69
@@ -1505,8 +1505,8 @@ COG,2019,Encephalitis,1,19.82,5380504.0,0.37
 COG,2019,Oesophagus cancer,2,19.47,5380504.0,0.36
 COG,2019,Appendicitis,2,18.48,5380504.0,0.34
 COG,2019,Inflammatory bowel disease,2,14.94,5380504.0,0.28
-COG,2019,Rheumatoid arthritis,2,14.92,5380504.0,0.28
 COG,2019,Larynx cancer,2,15.05,5380504.0,0.28
+COG,2019,Rheumatoid arthritis,2,14.92,5380504.0,0.28
 COG,2019,Bladder cancer,2,14.56,5380504.0,0.27
 COG,2019,Corpus uteri cancer,2,14.63,5380504.0,0.27
 COG,2019,Acute hepatitis B,1,14.5,5380504.0,0.27
@@ -1517,8 +1517,8 @@ COG,2019,Acute hepatitis A,1,9.7,5380504.0,0.18
 COG,2019,African trypanosomiasis,1,6.69,5380504.0,0.12
 COG,2019,Upper respiratory infections,1,6.72,5380504.0,0.12
 COG,2019,Gynecological diseases,2,5.08,5380504.0,0.09
-COG,2019,Rabies,1,3.74,5380504.0,0.07
 COG,2019,Multiple sclerosis,2,3.8,5380504.0,0.07
+COG,2019,Rabies,1,3.74,5380504.0,0.07
 COG,2019,Gonorrhoea,1,3.16,5380504.0,0.06
 COG,2019,Acute hepatitis C,1,2.49,5380504.0,0.05
 COG,2019,Urolithiasis,2,2.54,5380504.0,0.05
@@ -1785,14 +1785,22 @@ DJI,2019,Urolithiasis,2,1.14,973557.0,0.12
 DJI,2019,Gynecological diseases,2,1.13,973557.0,0.12
 DJI,2019,Diphtheria,1,0.81,973557.0,0.08
 DJI,2019,Chlamydia,1,0.44,973557.0,0.05
+DJI,2019,Thalassaemias,2,0.38,973557.0,0.04
 DJI,2019,Ascariasis,1,0.41,973557.0,0.04
 DJI,2019,Echinococcosis,1,0.41,973557.0,0.04
-DJI,2019,Thalassaemias,2,0.38,973557.0,0.04
-DJI,2019,Otitis media,1,0.34,973557.0,0.03
 DJI,2019,Acute hepatitis E,1,0.32,973557.0,0.03
+DJI,2019,Otitis media,1,0.34,973557.0,0.03
+DJI,2019,Trichomoniasis,1,0.0,973557.0,0.0
 DJI,2019,African trypanosomiasis,1,0.0,973557.0,0.0
 DJI,2019,Chagas disease,1,0.0,973557.0,0.0
-DJI,2019,Trichomoniasis,1,0.0,973557.0,0.0
+DJI,2019,Other hearing loss,2,0.0,973557.0,0.0
+DJI,2019,Infertility,2,0.0,973557.0,0.0
+DJI,2019,Benign prostatic hyperplasia,2,0.0,973557.0,0.0
+DJI,2019,Osteoarthritis,2,0.0,973557.0,0.0
+DJI,2019,Gout,2,0.0,973557.0,0.0
+DJI,2019,Back and neck pain,2,0.0,973557.0,0.0
+DJI,2019,Oral conditions,2,0.0,973557.0,0.0
+DJI,2019,Natural disasters,3,0.0,973557.0,0.0
 DJI,2019,Genital herpes,1,0.0,973557.0,0.0
 DJI,2019,Trichuriasis,1,0.0,973557.0,0.0
 DJI,2019,Hookworm disease,1,0.0,973557.0,0.0
@@ -1825,14 +1833,6 @@ DJI,2019,Cataracts,2,0.0,973557.0,0.0
 DJI,2019,Uncorrected refractive errors,2,0.0,973557.0,0.0
 DJI,2019,Macular degeneration,2,0.0,973557.0,0.0
 DJI,2019,Other vision loss,2,0.0,973557.0,0.0
-DJI,2019,Other hearing loss,2,0.0,973557.0,0.0
-DJI,2019,Infertility,2,0.0,973557.0,0.0
-DJI,2019,Benign prostatic hyperplasia,2,0.0,973557.0,0.0
-DJI,2019,Osteoarthritis,2,0.0,973557.0,0.0
-DJI,2019,Gout,2,0.0,973557.0,0.0
-DJI,2019,Back and neck pain,2,0.0,973557.0,0.0
-DJI,2019,Oral conditions,2,0.0,973557.0,0.0
-DJI,2019,Natural disasters,3,0.0,973557.0,0.0
 COD,2019,Neonatal conditions,1,86324.26,86800000.0,99.45
 COD,2019,Lower respiratory infections,1,73545.8,86800000.0,84.73
 COD,2019,Tuberculosis,1,43759.36,86800000.0,50.41
@@ -2041,15 +2041,15 @@ EGY,2019,Gynecological diseases,2,62.52,100000000.0,0.06
 EGY,2019,Gastritis and duodenitis,2,41.39,100000000.0,0.04
 EGY,2019,Testicular cancer,2,42.36,100000000.0,0.04
 EGY,2019,Measles,1,43.12,100000000.0,0.04
-EGY,2019,Rabies,1,25.28,100000000.0,0.03
 EGY,2019,Thalassaemias,2,29.95,100000000.0,0.03
+EGY,2019,Rabies,1,25.28,100000000.0,0.03
 EGY,2019,Rheumatoid arthritis,2,25.91,100000000.0,0.03
 EGY,2019,Echinococcosis,1,15.75,100000000.0,0.02
 EGY,2019,Acute hepatitis E,1,24.82,100000000.0,0.02
-EGY,2019,Ascariasis,1,5.63,100000000.0,0.01
-EGY,2019,Upper respiratory infections,1,5.06,100000000.0,0.01
 EGY,2019,Dengue,1,5.02,100000000.0,0.01
 EGY,2019,Leishmaniasis,1,13.47,100000000.0,0.01
+EGY,2019,Ascariasis,1,5.63,100000000.0,0.01
+EGY,2019,Upper respiratory infections,1,5.06,100000000.0,0.01
 EGY,2019,Urolithiasis,2,5.37,100000000.0,0.01
 EGY,2019,Infertility,2,0.0,100000000.0,0.0
 EGY,2019,Benign prostatic hyperplasia,2,0.0,100000000.0,0.0
@@ -2067,10 +2067,6 @@ EGY,2019,Other vision loss,2,0.0,100000000.0,0.0
 EGY,2019,Other hearing loss,2,0.0,100000000.0,0.0
 EGY,2019,Natural disasters,3,0.0,100000000.0,0.0
 EGY,2019,Otitis media,1,0.27,100000000.0,0.0
-EGY,2019,Trichuriasis,1,0.0,100000000.0,0.0
-EGY,2019,Hookworm disease,1,0.0,100000000.0,0.0
-EGY,2019,Food-bourne trematodes,1,0.0,100000000.0,0.0
-EGY,2019,Leprosy,1,0.0,100000000.0,0.0
 EGY,2019,Anxiety disorders,2,0.0,100000000.0,0.0
 EGY,2019,Eating disorders,2,0.38,100000000.0,0.0
 EGY,2019,Autism and Asperger syndrome,2,0.0,100000000.0,0.0
@@ -2079,6 +2075,10 @@ EGY,2019,Idiopathic intellectual disability,2,0.0,100000000.0,0.0
 EGY,2019,Depressive disorders,2,0.0,100000000.0,0.0
 EGY,2019,Bipolar disorder,2,0.0,100000000.0,0.0
 EGY,2019,Schizophrenia,2,0.0,100000000.0,0.0
+EGY,2019,Trichuriasis,1,0.0,100000000.0,0.0
+EGY,2019,Hookworm disease,1,0.0,100000000.0,0.0
+EGY,2019,Food-bourne trematodes,1,0.0,100000000.0,0.0
+EGY,2019,Leprosy,1,0.0,100000000.0,0.0
 EGY,2019,Iodine deficiency,1,0.0,100000000.0,0.0
 EGY,2019,Vitamin A deficiency,1,0.0,100000000.0,0.0
 EGY,2019,Iron-deficiency anaemia,1,0.0,100000000.0,0.0
@@ -2186,10 +2186,6 @@ GNQ,2019,Acute hepatitis E,1,0.17,1355982.0,0.01
 GNQ,2019,Eating disorders,2,0.09,1355982.0,0.01
 GNQ,2019,Collective violence and legal intervention,3,0.17,1355982.0,0.01
 GNQ,2019,Natural disasters,3,0.0,1355982.0,0.0
-GNQ,2019,Anxiety disorders,2,0.0,1355982.0,0.0
-GNQ,2019,Depressive disorders,2,0.0,1355982.0,0.0
-GNQ,2019,Bipolar disorder,2,0.0,1355982.0,0.0
-GNQ,2019,Schizophrenia,2,0.0,1355982.0,0.0
 GNQ,2019,Thalassaemias,2,0.04,1355982.0,0.0
 GNQ,2019,Gallbladder and biliary tract cancer,2,0.03,1355982.0,0.0
 GNQ,2019,Thyroid cancer,2,0.03,1355982.0,0.0
@@ -2226,6 +2222,10 @@ GNQ,2019,Leprosy,1,0.0,1355982.0,0.0
 GNQ,2019,Iodine deficiency,1,0.0,1355982.0,0.0
 GNQ,2019,Vitamin A deficiency,1,0.0,1355982.0,0.0
 GNQ,2019,Iron-deficiency anaemia,1,0.0,1355982.0,0.0
+GNQ,2019,Anxiety disorders,2,0.0,1355982.0,0.0
+GNQ,2019,Depressive disorders,2,0.0,1355982.0,0.0
+GNQ,2019,Bipolar disorder,2,0.0,1355982.0,0.0
+GNQ,2019,Schizophrenia,2,0.0,1355982.0,0.0
 ERI,2019,Lower respiratory infections,1,3276.66,3497117.0,93.7
 ERI,2019,Stroke,2,2564.02,3497117.0,73.32
 ERI,2019,Diarrhoeal diseases,1,2292.09,3497117.0,65.54
@@ -2336,15 +2336,6 @@ ERI,2019,Other hearing loss,2,0.0,3497117.0,0.0
 ERI,2019,Trichomoniasis,1,0.0,3497117.0,0.0
 ERI,2019,Genital herpes,1,0.0,3497117.0,0.0
 ERI,2019,African trypanosomiasis,1,0.0,3497117.0,0.0
-ERI,2019,Chagas disease,1,0.0,3497117.0,0.0
-ERI,2019,Trichuriasis,1,0.0,3497117.0,0.0
-ERI,2019,Hookworm disease,1,0.0,3497117.0,0.0
-ERI,2019,Food-bourne trematodes,1,0.0,3497117.0,0.0
-ERI,2019,Leprosy,1,0.0,3497117.0,0.0
-ERI,2019,Iodine deficiency,1,0.0,3497117.0,0.0
-ERI,2019,Vitamin A deficiency,1,0.0,3497117.0,0.0
-ERI,2019,Iron-deficiency anaemia,1,0.0,3497117.0,0.0
-ERI,2019,Dengue,1,0.06,3497117.0,0.0
 ERI,2019,Trachoma,1,0.0,3497117.0,0.0
 ERI,2019,Lymphatic filariasis,1,0.0,3497117.0,0.0
 ERI,2019,Onchocerciasis,1,0.0,3497117.0,0.0
@@ -2357,6 +2348,15 @@ ERI,2019,Eating disorders,2,0.02,3497117.0,0.0
 ERI,2019,Autism and Asperger syndrome,2,0.0,3497117.0,0.0
 ERI,2019,Childhood behavioural disorders,2,0.0,3497117.0,0.0
 ERI,2019,Idiopathic intellectual disability,2,0.0,3497117.0,0.0
+ERI,2019,Trichuriasis,1,0.0,3497117.0,0.0
+ERI,2019,Hookworm disease,1,0.0,3497117.0,0.0
+ERI,2019,Food-bourne trematodes,1,0.0,3497117.0,0.0
+ERI,2019,Leprosy,1,0.0,3497117.0,0.0
+ERI,2019,Iodine deficiency,1,0.0,3497117.0,0.0
+ERI,2019,Vitamin A deficiency,1,0.0,3497117.0,0.0
+ERI,2019,Iron-deficiency anaemia,1,0.0,3497117.0,0.0
+ERI,2019,Chagas disease,1,0.0,3497117.0,0.0
+ERI,2019,Dengue,1,0.06,3497117.0,0.0
 SWZ,2019,HIV/AIDS,1,2313.66,1148133.0,201.51
 SWZ,2019,Lower respiratory infections,1,920.62,1148133.0,80.18
 SWZ,2019,Diabetes mellitus,2,891.97,1148133.0,77.69
@@ -2604,10 +2604,12 @@ ETH,2019,Eating disorders,2,0.49,112000000.0,0.0
 ETH,2019,Autism and Asperger syndrome,2,0.0,112000000.0,0.0
 ETH,2019,Childhood behavioural disorders,2,0.0,112000000.0,0.0
 ETH,2019,Idiopathic intellectual disability,2,0.0,112000000.0,0.0
+ETH,2019,Back and neck pain,2,0.0,112000000.0,0.0
+ETH,2019,Infertility,2,0.0,112000000.0,0.0
+ETH,2019,Osteoarthritis,2,0.0,112000000.0,0.0
+ETH,2019,Gout,2,0.0,112000000.0,0.0
 ETH,2019,Oral conditions,2,0.0,112000000.0,0.0
 ETH,2019,Natural disasters,3,0.0,112000000.0,0.0
-ETH,2019,Infertility,2,0.0,112000000.0,0.0
-ETH,2019,Benign prostatic hyperplasia,2,0.0,112000000.0,0.0
 ETH,2019,Migraine,2,0.0,112000000.0,0.0
 ETH,2019,Non-migraine headache,2,0.0,112000000.0,0.0
 ETH,2019,Glaucoma,2,0.0,112000000.0,0.0
@@ -2616,9 +2618,7 @@ ETH,2019,Uncorrected refractive errors,2,0.0,112000000.0,0.0
 ETH,2019,Macular degeneration,2,0.0,112000000.0,0.0
 ETH,2019,Other vision loss,2,0.0,112000000.0,0.0
 ETH,2019,Other hearing loss,2,0.0,112000000.0,0.0
-ETH,2019,Back and neck pain,2,0.0,112000000.0,0.0
-ETH,2019,Osteoarthritis,2,0.0,112000000.0,0.0
-ETH,2019,Gout,2,0.0,112000000.0,0.0
+ETH,2019,Benign prostatic hyperplasia,2,0.0,112000000.0,0.0
 GAB,2019,Tuberculosis,1,1818.95,2172578.0,83.72
 GAB,2019,HIV/AIDS,1,1127.99,2172578.0,51.92
 GAB,2019,Neonatal conditions,1,1111.64,2172578.0,51.17
@@ -2960,25 +2960,27 @@ GHA,2019,Gastritis and duodenitis,2,28.95,30400000.0,0.1
 GHA,2019,Collective violence and legal intervention,3,29.11,30400000.0,0.1
 GHA,2019,Acute hepatitis C,1,27.88,30400000.0,0.09
 GHA,2019,Acute hepatitis E,1,15.51,30400000.0,0.05
+GHA,2019,Rheumatoid arthritis,2,16.17,30400000.0,0.05
 GHA,2019,Upper respiratory infections,1,16.3,30400000.0,0.05
 GHA,2019,Cysticercosis,1,14.88,30400000.0,0.05
-GHA,2019,Rheumatoid arthritis,2,16.17,30400000.0,0.05
-GHA,2019,Ascariasis,1,12.3,30400000.0,0.04
 GHA,2019,Testicular cancer,2,10.93,30400000.0,0.04
+GHA,2019,Ascariasis,1,12.3,30400000.0,0.04
 GHA,2019,Gonorrhoea,1,9.39,30400000.0,0.03
-GHA,2019,Echinococcosis,1,6.25,30400000.0,0.02
 GHA,2019,Mesothelioma,2,6.5,30400000.0,0.02
 GHA,2019,Gynecological diseases,2,6.44,30400000.0,0.02
+GHA,2019,Echinococcosis,1,6.25,30400000.0,0.02
 GHA,2019,Thalassaemias,2,3.58,30400000.0,0.01
 GHA,2019,Chlamydia,1,3.22,30400000.0,0.01
 GHA,2019,Diphtheria,1,4.03,30400000.0,0.01
+GHA,2019,Trichomoniasis,1,0.0,30400000.0,0.0
 GHA,2019,Genital herpes,1,0.0,30400000.0,0.0
 GHA,2019,African trypanosomiasis,1,0.0,30400000.0,0.0
 GHA,2019,Chagas disease,1,0.0,30400000.0,0.0
-GHA,2019,Trichomoniasis,1,0.0,30400000.0,0.0
 GHA,2019,Leishmaniasis,1,0.0,30400000.0,0.0
 GHA,2019,Lymphatic filariasis,1,0.0,30400000.0,0.0
 GHA,2019,Onchocerciasis,1,0.0,30400000.0,0.0
+GHA,2019,Dengue,1,0.17,30400000.0,0.0
+GHA,2019,Trachoma,1,0.0,30400000.0,0.0
 GHA,2019,Trichuriasis,1,0.0,30400000.0,0.0
 GHA,2019,Hookworm disease,1,0.0,30400000.0,0.0
 GHA,2019,Food-bourne trematodes,1,0.0,30400000.0,0.0
@@ -3010,8 +3012,6 @@ GHA,2019,Eating disorders,2,0.41,30400000.0,0.0
 GHA,2019,Autism and Asperger syndrome,2,0.0,30400000.0,0.0
 GHA,2019,Childhood behavioural disorders,2,0.0,30400000.0,0.0
 GHA,2019,Idiopathic intellectual disability,2,0.0,30400000.0,0.0
-GHA,2019,Dengue,1,0.17,30400000.0,0.0
-GHA,2019,Trachoma,1,0.0,30400000.0,0.0
 GIN,2019,Lower respiratory infections,1,12790.18,12800000.0,99.92
 GIN,2019,Neonatal conditions,1,12225.2,12800000.0,95.51
 GIN,2019,Malaria,1,8180.0,12800000.0,63.91
@@ -3192,8 +3192,8 @@ GNB,2019,"Lymphomas, multiple myeloma",2,27.54,1920917.0,1.43
 GNB,2019,Parkinson disease,2,27.04,1920917.0,1.41
 GNB,2019,Rabies,1,20.92,1920917.0,1.09
 GNB,2019,Thalassaemias,2,20.64,1920917.0,1.07
-GNB,2019,Acute hepatitis B,1,20.38,1920917.0,1.06
 GNB,2019,Gallbladder and biliary diseases,2,20.29,1920917.0,1.06
+GNB,2019,Acute hepatitis B,1,20.38,1920917.0,1.06
 GNB,2019,Ovary cancer,2,19.03,1920917.0,0.99
 GNB,2019,Oesophagus cancer,2,18.9,1920917.0,0.98
 GNB,2019,"Trachea, bronchus, lung cancers",2,18.36,1920917.0,0.96
@@ -3234,14 +3234,6 @@ GNB,2019,Chlamydia,1,0.28,1920917.0,0.01
 GNB,2019,Mesothelioma,2,0.16,1920917.0,0.01
 GNB,2019,Gallbladder and biliary tract cancer,2,0.19,1920917.0,0.01
 GNB,2019,Testicular cancer,2,0.15,1920917.0,0.01
-GNB,2019,Hookworm disease,1,0.0,1920917.0,0.0
-GNB,2019,Food-bourne trematodes,1,0.0,1920917.0,0.0
-GNB,2019,Leprosy,1,0.0,1920917.0,0.0
-GNB,2019,Dengue,1,0.01,1920917.0,0.0
-GNB,2019,Trachoma,1,0.0,1920917.0,0.0
-GNB,2019,Leishmaniasis,1,0.0,1920917.0,0.0
-GNB,2019,Lymphatic filariasis,1,0.0,1920917.0,0.0
-GNB,2019,Onchocerciasis,1,0.0,1920917.0,0.0
 GNB,2019,Natural disasters,3,0.0,1920917.0,0.0
 GNB,2019,Osteoarthritis,2,0.0,1920917.0,0.0
 GNB,2019,Gout,2,0.0,1920917.0,0.0
@@ -3274,6 +3266,14 @@ GNB,2019,African trypanosomiasis,1,0.0,1920917.0,0.0
 GNB,2019,Chagas disease,1,0.0,1920917.0,0.0
 GNB,2019,Otitis media,1,0.03,1920917.0,0.0
 GNB,2019,Trichuriasis,1,0.0,1920917.0,0.0
+GNB,2019,Hookworm disease,1,0.0,1920917.0,0.0
+GNB,2019,Food-bourne trematodes,1,0.0,1920917.0,0.0
+GNB,2019,Leprosy,1,0.0,1920917.0,0.0
+GNB,2019,Dengue,1,0.01,1920917.0,0.0
+GNB,2019,Trachoma,1,0.0,1920917.0,0.0
+GNB,2019,Leishmaniasis,1,0.0,1920917.0,0.0
+GNB,2019,Lymphatic filariasis,1,0.0,1920917.0,0.0
+GNB,2019,Onchocerciasis,1,0.0,1920917.0,0.0
 KEN,2019,Neonatal conditions,1,25652.16,52600000.0,48.77
 KEN,2019,Lower respiratory infections,1,22571.26,52600000.0,42.91
 KEN,2019,HIV/AIDS,1,20884.83,52600000.0,39.71
@@ -3613,9 +3613,9 @@ LBR,2019,Inflammatory bowel disease,2,9.65,4937374.0,0.2
 LBR,2019,Gallbladder and biliary tract cancer,2,4.78,4937374.0,0.1
 LBR,2019,Thyroid cancer,2,4.76,4937374.0,0.1
 LBR,2019,Multiple sclerosis,2,4.21,4937374.0,0.09
-LBR,2019,Acute hepatitis C,1,3.76,4937374.0,0.08
 LBR,2019,Rheumatoid arthritis,2,4.01,4937374.0,0.08
 LBR,2019,Ascariasis,1,3.74,4937374.0,0.08
+LBR,2019,Acute hepatitis C,1,3.76,4937374.0,0.08
 LBR,2019,Upper respiratory infections,1,2.67,4937374.0,0.05
 LBR,2019,Echinococcosis,1,2.06,4937374.0,0.04
 LBR,2019,Mesothelioma,2,1.31,4937374.0,0.03
@@ -3624,17 +3624,11 @@ LBR,2019,Diphtheria,1,0.86,4937374.0,0.02
 LBR,2019,Gynecological diseases,2,1.1,4937374.0,0.02
 LBR,2019,Urolithiasis,2,1.18,4937374.0,0.02
 LBR,2019,Collective violence and legal intervention,3,0.51,4937374.0,0.01
-LBR,2019,Acute hepatitis E,1,0.71,4937374.0,0.01
 LBR,2019,Chlamydia,1,0.52,4937374.0,0.01
+LBR,2019,Acute hepatitis E,1,0.71,4937374.0,0.01
 LBR,2019,Testicular cancer,2,0.37,4937374.0,0.01
 LBR,2019,Depressive disorders,2,0.0,4937374.0,0.0
 LBR,2019,Bipolar disorder,2,0.0,4937374.0,0.0
-LBR,2019,Other hearing loss,2,0.0,4937374.0,0.0
-LBR,2019,Anxiety disorders,2,0.0,4937374.0,0.0
-LBR,2019,Eating disorders,2,0.03,4937374.0,0.0
-LBR,2019,Autism and Asperger syndrome,2,0.0,4937374.0,0.0
-LBR,2019,Childhood behavioural disorders,2,0.0,4937374.0,0.0
-LBR,2019,Idiopathic intellectual disability,2,0.0,4937374.0,0.0
 LBR,2019,Schizophrenia,2,0.0,4937374.0,0.0
 LBR,2019,Iodine deficiency,1,0.0,4937374.0,0.0
 LBR,2019,Vitamin A deficiency,1,0.0,4937374.0,0.0
@@ -3642,9 +3636,9 @@ LBR,2019,Iron-deficiency anaemia,1,0.0,4937374.0,0.0
 LBR,2019,African trypanosomiasis,1,0.0,4937374.0,0.0
 LBR,2019,Chagas disease,1,0.0,4937374.0,0.0
 LBR,2019,Trichomoniasis,1,0.0,4937374.0,0.0
-LBR,2019,Genital herpes,1,0.0,4937374.0,0.0
 LBR,2019,Dengue,1,0.02,4937374.0,0.0
 LBR,2019,Trachoma,1,0.0,4937374.0,0.0
+LBR,2019,Genital herpes,1,0.0,4937374.0,0.0
 LBR,2019,Leishmaniasis,1,0.0,4937374.0,0.0
 LBR,2019,Lymphatic filariasis,1,0.0,4937374.0,0.0
 LBR,2019,Onchocerciasis,1,0.0,4937374.0,0.0
@@ -3667,6 +3661,12 @@ LBR,2019,Cataracts,2,0.0,4937374.0,0.0
 LBR,2019,Uncorrected refractive errors,2,0.0,4937374.0,0.0
 LBR,2019,Macular degeneration,2,0.0,4937374.0,0.0
 LBR,2019,Other vision loss,2,0.0,4937374.0,0.0
+LBR,2019,Other hearing loss,2,0.0,4937374.0,0.0
+LBR,2019,Anxiety disorders,2,0.0,4937374.0,0.0
+LBR,2019,Eating disorders,2,0.03,4937374.0,0.0
+LBR,2019,Autism and Asperger syndrome,2,0.0,4937374.0,0.0
+LBR,2019,Childhood behavioural disorders,2,0.0,4937374.0,0.0
+LBR,2019,Idiopathic intellectual disability,2,0.0,4937374.0,0.0
 LBY,2019,Ischaemic heart disease,2,6610.22,6777453.0,97.53
 LBY,2019,Stroke,2,2603.02,6777453.0,38.41
 LBY,2019,Road injury,3,1443.62,6777453.0,21.3
@@ -3749,20 +3749,22 @@ LBY,2019,Gonorrhoea,1,0.45,6777453.0,0.01
 LBY,2019,Urolithiasis,2,0.78,6777453.0,0.01
 LBY,2019,Acute hepatitis C,1,0.62,6777453.0,0.01
 LBY,2019,Acute hepatitis E,1,0.65,6777453.0,0.01
-LBY,2019,Malaria,1,0.0,6777453.0,0.0
-LBY,2019,African trypanosomiasis,1,0.0,6777453.0,0.0
 LBY,2019,Hookworm disease,1,0.0,6777453.0,0.0
-LBY,2019,Chagas disease,1,0.0,6777453.0,0.0
+LBY,2019,Malaria,1,0.0,6777453.0,0.0
 LBY,2019,Food-bourne trematodes,1,0.0,6777453.0,0.0
-LBY,2019,Lymphatic filariasis,1,0.0,6777453.0,0.0
+LBY,2019,African trypanosomiasis,1,0.0,6777453.0,0.0
 LBY,2019,Leprosy,1,0.0,6777453.0,0.0
+LBY,2019,Chagas disease,1,0.0,6777453.0,0.0
+LBY,2019,Lymphatic filariasis,1,0.0,6777453.0,0.0
 LBY,2019,Onchocerciasis,1,0.0,6777453.0,0.0
 LBY,2019,Cysticercosis,1,0.0,6777453.0,0.0
 LBY,2019,Dengue,1,0.0,6777453.0,0.0
+LBY,2019,Upper respiratory infections,1,0.19,6777453.0,0.0
+LBY,2019,Otitis media,1,0.01,6777453.0,0.0
+LBY,2019,Iodine deficiency,1,0.0,6777453.0,0.0
+LBY,2019,Vitamin A deficiency,1,0.0,6777453.0,0.0
+LBY,2019,Iron-deficiency anaemia,1,0.0,6777453.0,0.0
 LBY,2019,Trachoma,1,0.0,6777453.0,0.0
-LBY,2019,Yellow fever,1,0.0,6777453.0,0.0
-LBY,2019,Ascariasis,1,0.22,6777453.0,0.0
-LBY,2019,Rabies,1,0.31,6777453.0,0.0
 LBY,2019,Depressive disorders,2,0.0,6777453.0,0.0
 LBY,2019,Bipolar disorder,2,0.0,6777453.0,0.0
 LBY,2019,Schizophrenia,2,0.0,6777453.0,0.0
@@ -3771,7 +3773,10 @@ LBY,2019,Eating disorders,2,0.05,6777453.0,0.0
 LBY,2019,Autism and Asperger syndrome,2,0.0,6777453.0,0.0
 LBY,2019,Childhood behavioural disorders,2,0.0,6777453.0,0.0
 LBY,2019,Idiopathic intellectual disability,2,0.0,6777453.0,0.0
+LBY,2019,Yellow fever,1,0.0,6777453.0,0.0
+LBY,2019,Rabies,1,0.31,6777453.0,0.0
 LBY,2019,Trichuriasis,1,0.0,6777453.0,0.0
+LBY,2019,Ascariasis,1,0.22,6777453.0,0.0
 LBY,2019,Infertility,2,0.0,6777453.0,0.0
 LBY,2019,Gynecological diseases,2,0.17,6777453.0,0.0
 LBY,2019,Oral conditions,2,0.0,6777453.0,0.0
@@ -3793,11 +3798,6 @@ LBY,2019,Genital herpes,1,0.0,6777453.0,0.0
 LBY,2019,Chlamydia,1,0.14,6777453.0,0.0
 LBY,2019,Diphtheria,1,0.16,6777453.0,0.0
 LBY,2019,Measles,1,0.0,6777453.0,0.0
-LBY,2019,Upper respiratory infections,1,0.19,6777453.0,0.0
-LBY,2019,Otitis media,1,0.01,6777453.0,0.0
-LBY,2019,Iodine deficiency,1,0.0,6777453.0,0.0
-LBY,2019,Vitamin A deficiency,1,0.0,6777453.0,0.0
-LBY,2019,Iron-deficiency anaemia,1,0.0,6777453.0,0.0
 MDG,2019,Stroke,2,17964.14,27000000.0,66.53
 MDG,2019,Lower respiratory infections,1,14604.7,27000000.0,54.09
 MDG,2019,Neonatal conditions,1,13908.1,27000000.0,51.51
@@ -3865,8 +3865,8 @@ MDG,2019,Ovary cancer,2,134.68,27000000.0,0.5
 MDG,2019,Acute hepatitis A,1,125.84,27000000.0,0.47
 MDG,2019,Brain and nervous system cancers,2,100.94,27000000.0,0.37
 MDG,2019,Acute hepatitis B,1,98.24,27000000.0,0.36
-MDG,2019,Encephalitis,1,93.7,27000000.0,0.35
 MDG,2019,Corpus uteri cancer,2,94.54,27000000.0,0.35
+MDG,2019,Encephalitis,1,93.7,27000000.0,0.35
 MDG,2019,Pancreas cancer,2,80.35,27000000.0,0.3
 MDG,2019,Inflammatory bowel disease,2,73.76,27000000.0,0.27
 MDG,2019,Kidney cancer,2,68.19,27000000.0,0.25
@@ -3876,8 +3876,8 @@ MDG,2019,Rheumatoid arthritis,2,47.3,27000000.0,0.18
 MDG,2019,Thyroid cancer,2,42.23,27000000.0,0.16
 MDG,2019,Mesothelioma,2,29.8,27000000.0,0.11
 MDG,2019,Gallbladder and biliary tract cancer,2,23.86,27000000.0,0.09
-MDG,2019,Multiple sclerosis,2,17.65,27000000.0,0.07
 MDG,2019,Gonorrhoea,1,19.27,27000000.0,0.07
+MDG,2019,Multiple sclerosis,2,17.65,27000000.0,0.07
 MDG,2019,Acute hepatitis C,1,15.86,27000000.0,0.06
 MDG,2019,Urolithiasis,2,13.55,27000000.0,0.05
 MDG,2019,Gynecological diseases,2,11.92,27000000.0,0.04
@@ -3889,17 +3889,6 @@ MDG,2019,Testicular cancer,2,6.46,27000000.0,0.02
 MDG,2019,Diphtheria,1,2.81,27000000.0,0.01
 MDG,2019,Acute hepatitis E,1,3.17,27000000.0,0.01
 MDG,2019,Thalassaemias,2,1.6,27000000.0,0.01
-MDG,2019,Anxiety disorders,2,0.0,27000000.0,0.0
-MDG,2019,Depressive disorders,2,0.0,27000000.0,0.0
-MDG,2019,Bipolar disorder,2,0.0,27000000.0,0.0
-MDG,2019,Schizophrenia,2,0.0,27000000.0,0.0
-MDG,2019,Eating disorders,2,0.18,27000000.0,0.0
-MDG,2019,Autism and Asperger syndrome,2,0.0,27000000.0,0.0
-MDG,2019,Childhood behavioural disorders,2,0.0,27000000.0,0.0
-MDG,2019,Idiopathic intellectual disability,2,0.0,27000000.0,0.0
-MDG,2019,Iodine deficiency,1,0.0,27000000.0,0.0
-MDG,2019,Vitamin A deficiency,1,0.0,27000000.0,0.0
-MDG,2019,Iron-deficiency anaemia,1,0.0,27000000.0,0.0
 MDG,2019,Migraine,2,0.0,27000000.0,0.0
 MDG,2019,Non-migraine headache,2,0.0,27000000.0,0.0
 MDG,2019,Glaucoma,2,0.0,27000000.0,0.0
@@ -3929,6 +3918,17 @@ MDG,2019,Yellow fever,1,0.0,27000000.0,0.0
 MDG,2019,Leishmaniasis,1,0.0,27000000.0,0.0
 MDG,2019,Lymphatic filariasis,1,0.0,27000000.0,0.0
 MDG,2019,Onchocerciasis,1,0.0,27000000.0,0.0
+MDG,2019,Anxiety disorders,2,0.0,27000000.0,0.0
+MDG,2019,Eating disorders,2,0.18,27000000.0,0.0
+MDG,2019,Autism and Asperger syndrome,2,0.0,27000000.0,0.0
+MDG,2019,Childhood behavioural disorders,2,0.0,27000000.0,0.0
+MDG,2019,Idiopathic intellectual disability,2,0.0,27000000.0,0.0
+MDG,2019,Depressive disorders,2,0.0,27000000.0,0.0
+MDG,2019,Bipolar disorder,2,0.0,27000000.0,0.0
+MDG,2019,Schizophrenia,2,0.0,27000000.0,0.0
+MDG,2019,Iodine deficiency,1,0.0,27000000.0,0.0
+MDG,2019,Vitamin A deficiency,1,0.0,27000000.0,0.0
+MDG,2019,Iron-deficiency anaemia,1,0.0,27000000.0,0.0
 MWI,2019,HIV/AIDS,1,12838.78,18600000.0,69.03
 MWI,2019,Neonatal conditions,1,10377.09,18600000.0,55.79
 MWI,2019,Lower respiratory infections,1,7738.65,18600000.0,41.61
@@ -4039,6 +4039,12 @@ MWI,2019,Eating disorders,2,0.12,18600000.0,0.0
 MWI,2019,Autism and Asperger syndrome,2,0.0,18600000.0,0.0
 MWI,2019,Childhood behavioural disorders,2,0.0,18600000.0,0.0
 MWI,2019,Idiopathic intellectual disability,2,0.0,18600000.0,0.0
+MWI,2019,Depressive disorders,2,0.0,18600000.0,0.0
+MWI,2019,Bipolar disorder,2,0.0,18600000.0,0.0
+MWI,2019,Schizophrenia,2,0.0,18600000.0,0.0
+MWI,2019,Iodine deficiency,1,0.0,18600000.0,0.0
+MWI,2019,Vitamin A deficiency,1,0.0,18600000.0,0.0
+MWI,2019,Iron-deficiency anaemia,1,0.0,18600000.0,0.0
 MWI,2019,Infertility,2,0.0,18600000.0,0.0
 MWI,2019,Benign prostatic hyperplasia,2,0.0,18600000.0,0.0
 MWI,2019,Trichomoniasis,1,0.0,18600000.0,0.0
@@ -4054,12 +4060,6 @@ MWI,2019,Yellow fever,1,0.0,18600000.0,0.0
 MWI,2019,Leishmaniasis,1,0.0,18600000.0,0.0
 MWI,2019,Lymphatic filariasis,1,0.0,18600000.0,0.0
 MWI,2019,Onchocerciasis,1,0.0,18600000.0,0.0
-MWI,2019,Depressive disorders,2,0.0,18600000.0,0.0
-MWI,2019,Bipolar disorder,2,0.0,18600000.0,0.0
-MWI,2019,Schizophrenia,2,0.0,18600000.0,0.0
-MWI,2019,Iodine deficiency,1,0.0,18600000.0,0.0
-MWI,2019,Vitamin A deficiency,1,0.0,18600000.0,0.0
-MWI,2019,Iron-deficiency anaemia,1,0.0,18600000.0,0.0
 MLI,2019,Neonatal conditions,1,23168.9,19700000.0,117.61
 MLI,2019,Lower respiratory infections,1,14884.82,19700000.0,75.56
 MLI,2019,Diarrhoeal diseases,1,13419.35,19700000.0,68.12
@@ -4271,12 +4271,12 @@ MRT,2019,Rheumatoid arthritis,2,4.39,4525698.0,0.1
 MRT,2019,Diphtheria,1,3.08,4525698.0,0.07
 MRT,2019,Echinococcosis,1,3.32,4525698.0,0.07
 MRT,2019,Ascariasis,1,2.65,4525698.0,0.06
-MRT,2019,Upper respiratory infections,1,2.54,4525698.0,0.06
 MRT,2019,Acute hepatitis C,1,2.64,4525698.0,0.06
+MRT,2019,Upper respiratory infections,1,2.54,4525698.0,0.06
 MRT,2019,Leishmaniasis,1,2.42,4525698.0,0.05
 MRT,2019,Collective violence and legal intervention,3,1.62,4525698.0,0.04
-MRT,2019,Urolithiasis,2,1.21,4525698.0,0.03
 MRT,2019,Testicular cancer,2,1.2,4525698.0,0.03
+MRT,2019,Urolithiasis,2,1.21,4525698.0,0.03
 MRT,2019,Gonorrhoea,1,0.86,4525698.0,0.02
 MRT,2019,Gynecological diseases,2,0.98,4525698.0,0.02
 MRT,2019,Chlamydia,1,0.31,4525698.0,0.01
@@ -4313,7 +4313,6 @@ MRT,2019,Infertility,2,0.0,4525698.0,0.0
 MRT,2019,Benign prostatic hyperplasia,2,0.0,4525698.0,0.0
 MRT,2019,Osteoarthritis,2,0.0,4525698.0,0.0
 MRT,2019,Gout,2,0.0,4525698.0,0.0
-MRT,2019,Back and neck pain,2,0.0,4525698.0,0.0
 MRT,2019,Migraine,2,0.0,4525698.0,0.0
 MRT,2019,Non-migraine headache,2,0.0,4525698.0,0.0
 MRT,2019,Glaucoma,2,0.0,4525698.0,0.0
@@ -4322,6 +4321,7 @@ MRT,2019,Uncorrected refractive errors,2,0.0,4525698.0,0.0
 MRT,2019,Macular degeneration,2,0.0,4525698.0,0.0
 MRT,2019,Other vision loss,2,0.0,4525698.0,0.0
 MRT,2019,Other hearing loss,2,0.0,4525698.0,0.0
+MRT,2019,Back and neck pain,2,0.0,4525698.0,0.0
 MUS,2019,Diabetes mellitus,2,1873.22,1269670.0,147.54
 MUS,2019,Ischaemic heart disease,2,1804.8,1269670.0,142.15
 MUS,2019,Stroke,2,984.97,1269670.0,77.58
@@ -4343,9 +4343,9 @@ MUS,2019,Asthma,2,106.96,1269670.0,8.42
 MUS,2019,Stomach cancer,2,104.44,1269670.0,8.23
 MUS,2019,Skin diseases,2,64.47,1269670.0,5.08
 MUS,2019,Mouth and oropharynx cancers,2,63.32,1269670.0,4.99
+MUS,2019,"Lymphomas, multiple myeloma",2,56.8,1269670.0,4.47
 MUS,2019,Falls,3,56.74,1269670.0,4.47
 MUS,2019,Congenital anomalies,2,56.75,1269670.0,4.47
-MUS,2019,"Lymphomas, multiple myeloma",2,56.8,1269670.0,4.47
 MUS,2019,Liver cancer,2,56.18,1269670.0,4.42
 MUS,2019,Pancreas cancer,2,54.58,1269670.0,4.3
 MUS,2019,Alcohol use disorders,2,53.29,1269670.0,4.2
@@ -4533,10 +4533,10 @@ MAR,2019,Collective violence and legal intervention,3,21.59,36500000.0,0.06
 MAR,2019,Leishmaniasis,1,15.32,36500000.0,0.04
 MAR,2019,Acute hepatitis C,1,7.2,36500000.0,0.02
 MAR,2019,Urolithiasis,2,6.5,36500000.0,0.02
+MAR,2019,Gonorrhoea,1,5.13,36500000.0,0.01
 MAR,2019,Upper respiratory infections,1,3.68,36500000.0,0.01
 MAR,2019,Acute hepatitis E,1,4.32,36500000.0,0.01
 MAR,2019,Ascariasis,1,4.87,36500000.0,0.01
-MAR,2019,Gonorrhoea,1,5.13,36500000.0,0.01
 MAR,2019,Trichuriasis,1,0.0,36500000.0,0.0
 MAR,2019,Hookworm disease,1,0.0,36500000.0,0.0
 MAR,2019,Food-bourne trematodes,1,0.0,36500000.0,0.0
@@ -4545,6 +4545,15 @@ MAR,2019,Onchocerciasis,1,0.0,36500000.0,0.0
 MAR,2019,Cysticercosis,1,0.0,36500000.0,0.0
 MAR,2019,Dengue,1,0.0,36500000.0,0.0
 MAR,2019,Trachoma,1,0.0,36500000.0,0.0
+MAR,2019,Yellow fever,1,0.0,36500000.0,0.0
+MAR,2019,Rabies,1,1.71,36500000.0,0.0
+MAR,2019,Trichomoniasis,1,0.0,36500000.0,0.0
+MAR,2019,Genital herpes,1,0.0,36500000.0,0.0
+MAR,2019,Chlamydia,1,1.67,36500000.0,0.0
+MAR,2019,Diphtheria,1,0.93,36500000.0,0.0
+MAR,2019,Measles,1,0.24,36500000.0,0.0
+MAR,2019,Malaria,1,0.0,36500000.0,0.0
+MAR,2019,African trypanosomiasis,1,0.0,36500000.0,0.0
 MAR,2019,Chagas disease,1,0.0,36500000.0,0.0
 MAR,2019,Infertility,2,0.0,36500000.0,0.0
 MAR,2019,Gynecological diseases,2,1.39,36500000.0,0.0
@@ -4562,15 +4571,6 @@ MAR,2019,Macular degeneration,2,0.0,36500000.0,0.0
 MAR,2019,Other vision loss,2,0.0,36500000.0,0.0
 MAR,2019,Other hearing loss,2,0.0,36500000.0,0.0
 MAR,2019,Natural disasters,3,0.0,36500000.0,0.0
-MAR,2019,Yellow fever,1,0.0,36500000.0,0.0
-MAR,2019,Rabies,1,1.71,36500000.0,0.0
-MAR,2019,Measles,1,0.24,36500000.0,0.0
-MAR,2019,Malaria,1,0.0,36500000.0,0.0
-MAR,2019,African trypanosomiasis,1,0.0,36500000.0,0.0
-MAR,2019,Trichomoniasis,1,0.0,36500000.0,0.0
-MAR,2019,Genital herpes,1,0.0,36500000.0,0.0
-MAR,2019,Chlamydia,1,1.67,36500000.0,0.0
-MAR,2019,Diphtheria,1,0.93,36500000.0,0.0
 MAR,2019,Otitis media,1,0.06,36500000.0,0.0
 MAR,2019,Depressive disorders,2,0.0,36500000.0,0.0
 MAR,2019,Bipolar disorder,2,0.0,36500000.0,0.0
@@ -4625,8 +4625,8 @@ MOZ,2019,Prostate cancer,2,804.92,30400000.0,2.65
 MOZ,2019,Gallbladder and biliary diseases,2,776.8,30400000.0,2.56
 MOZ,2019,Breast cancer,2,756.56,30400000.0,2.49
 MOZ,2019,Natural disasters,3,670.92,30400000.0,2.21
-MOZ,2019,Schistosomiasis,1,561.67,30400000.0,1.85
 MOZ,2019,Melanoma and other skin cancers,2,563.09,30400000.0,1.85
+MOZ,2019,Schistosomiasis,1,561.67,30400000.0,1.85
 MOZ,2019,Leukaemia,2,554.91,30400000.0,1.83
 MOZ,2019,Mouth and oropharynx cancers,2,544.92,30400000.0,1.79
 MOZ,2019,Rheumatic heart disease,2,515.68,30400000.0,1.7
@@ -5186,8 +5186,8 @@ RWA,2019,Yellow fever,1,16.12,12600000.0,0.13
 RWA,2019,Acute hepatitis C,1,12.28,12600000.0,0.1
 RWA,2019,Gallbladder and biliary tract cancer,2,10.61,12600000.0,0.08
 RWA,2019,Cysticercosis,1,8.87,12600000.0,0.07
-RWA,2019,Gonorrhoea,1,7.3,12600000.0,0.06
 RWA,2019,Multiple sclerosis,2,7.24,12600000.0,0.06
+RWA,2019,Gonorrhoea,1,7.3,12600000.0,0.06
 RWA,2019,Testicular cancer,2,6.15,12600000.0,0.05
 RWA,2019,Thalassaemias,2,6.9,12600000.0,0.05
 RWA,2019,Mesothelioma,2,5.33,12600000.0,0.04
@@ -5272,8 +5272,8 @@ STP,2019,Exposure to mechanical forces,3,4.78,215048.0,2.22
 STP,2019,Colon and rectum cancers,2,4.25,215048.0,1.98
 STP,2019,Rheumatic heart disease,2,4.22,215048.0,1.96
 STP,2019,Paralytic ileus and intestinal obstruction,2,4.2,215048.0,1.95
-STP,2019,Drowning,3,4.0,215048.0,1.86
 STP,2019,Parkinson disease,2,4.0,215048.0,1.86
+STP,2019,Drowning,3,4.0,215048.0,1.86
 STP,2019,Bladder cancer,2,3.87,215048.0,1.8
 STP,2019,Syphilis,1,3.41,215048.0,1.59
 STP,2019,Epilepsy,2,3.32,215048.0,1.54
@@ -5286,8 +5286,8 @@ STP,2019,Drug use disorders,2,1.75,215048.0,0.81
 STP,2019,Skin diseases,2,1.63,215048.0,0.76
 STP,2019,Tetanus,1,1.57,215048.0,0.73
 STP,2019,Kidney cancer,2,1.45,215048.0,0.67
-STP,2019,Alcohol use disorders,2,1.45,215048.0,0.67
 STP,2019,Poisonings,3,1.44,215048.0,0.67
+STP,2019,Alcohol use disorders,2,1.45,215048.0,0.67
 STP,2019,Acute hepatitis B,1,1.4,215048.0,0.65
 STP,2019,Measles,1,1.36,215048.0,0.63
 STP,2019,Leukaemia,2,1.36,215048.0,0.63
@@ -5302,8 +5302,8 @@ STP,2019,Malaria,1,0.45,215048.0,0.21
 STP,2019,Acute hepatitis A,1,0.39,215048.0,0.18
 STP,2019,Inflammatory bowel disease,2,0.3,215048.0,0.14
 STP,2019,Appendicitis,2,0.23,215048.0,0.11
-STP,2019,Multiple sclerosis,2,0.19,215048.0,0.09
 STP,2019,Gastritis and duodenitis,2,0.2,215048.0,0.09
+STP,2019,Multiple sclerosis,2,0.19,215048.0,0.09
 STP,2019,Rheumatoid arthritis,2,0.18,215048.0,0.08
 STP,2019,Gynecological diseases,2,0.15,215048.0,0.07
 STP,2019,"Lymphomas, multiple myeloma",2,0.14,215048.0,0.07
@@ -5311,8 +5311,8 @@ STP,2019,Acute hepatitis C,1,0.1,215048.0,0.05
 STP,2019,Schistosomiasis,1,0.11,215048.0,0.05
 STP,2019,Upper respiratory infections,1,0.08,215048.0,0.04
 STP,2019,Ascariasis,1,0.07,215048.0,0.03
-STP,2019,Urolithiasis,2,0.07,215048.0,0.03
 STP,2019,Thalassaemias,2,0.06,215048.0,0.03
+STP,2019,Urolithiasis,2,0.07,215048.0,0.03
 STP,2019,Gonorrhoea,1,0.04,215048.0,0.02
 STP,2019,Acute hepatitis E,1,0.03,215048.0,0.01
 STP,2019,Brain and nervous system cancers,2,0.02,215048.0,0.01
@@ -5321,10 +5321,6 @@ STP,2019,Pancreas cancer,2,0.02,215048.0,0.01
 STP,2019,Mouth and oropharynx cancers,2,0.02,215048.0,0.01
 STP,2019,Collective violence and legal intervention,3,0.03,215048.0,0.01
 STP,2019,Natural disasters,3,0.0,215048.0,0.0
-STP,2019,Osteoarthritis,2,0.0,215048.0,0.0
-STP,2019,Gout,2,0.0,215048.0,0.0
-STP,2019,Back and neck pain,2,0.0,215048.0,0.0
-STP,2019,Oral conditions,2,0.0,215048.0,0.0
 STP,2019,Anxiety disorders,2,0.0,215048.0,0.0
 STP,2019,Eating disorders,2,0.0,215048.0,0.0
 STP,2019,Autism and Asperger syndrome,2,0.0,215048.0,0.0
@@ -5338,8 +5334,9 @@ STP,2019,Uncorrected refractive errors,2,0.0,215048.0,0.0
 STP,2019,Macular degeneration,2,0.0,215048.0,0.0
 STP,2019,Other vision loss,2,0.0,215048.0,0.0
 STP,2019,Other hearing loss,2,0.0,215048.0,0.0
-STP,2019,Infertility,2,0.0,215048.0,0.0
-STP,2019,Benign prostatic hyperplasia,2,0.0,215048.0,0.0
+STP,2019,Osteoarthritis,2,0.0,215048.0,0.0
+STP,2019,Gout,2,0.0,215048.0,0.0
+STP,2019,Back and neck pain,2,0.0,215048.0,0.0
 STP,2019,Iodine deficiency,1,0.0,215048.0,0.0
 STP,2019,Vitamin A deficiency,1,0.0,215048.0,0.0
 STP,2019,Iron-deficiency anaemia,1,0.0,215048.0,0.0
@@ -5370,6 +5367,9 @@ STP,2019,Cysticercosis,1,0.0,215048.0,0.0
 STP,2019,Echinococcosis,1,0.0,215048.0,0.0
 STP,2019,Dengue,1,0.01,215048.0,0.0
 STP,2019,Trachoma,1,0.0,215048.0,0.0
+STP,2019,Oral conditions,2,0.0,215048.0,0.0
+STP,2019,Infertility,2,0.0,215048.0,0.0
+STP,2019,Benign prostatic hyperplasia,2,0.0,215048.0,0.0
 SEN,2019,Neonatal conditions,1,10263.74,16300000.0,62.97
 SEN,2019,Lower respiratory infections,1,7184.01,16300000.0,44.07
 SEN,2019,Ischaemic heart disease,2,6224.18,16300000.0,38.19
@@ -5408,8 +5408,8 @@ SEN,2019,"Cardiomyopathy, myocarditis, endocarditis",2,425.77,16300000.0,2.61
 SEN,2019,Colon and rectum cancers,2,384.4,16300000.0,2.36
 SEN,2019,Exposure to mechanical forces,3,364.93,16300000.0,2.24
 SEN,2019,Epilepsy,2,330.42,16300000.0,2.03
-SEN,2019,Poisonings,3,314.55,16300000.0,1.93
 SEN,2019,"Lymphomas, multiple myeloma",2,315.23,16300000.0,1.93
+SEN,2019,Poisonings,3,314.55,16300000.0,1.93
 SEN,2019,Parkinson disease,2,272.81,16300000.0,1.67
 SEN,2019,Pancreatitis,2,237.76,16300000.0,1.46
 SEN,2019,Ovary cancer,2,220.03,16300000.0,1.35
@@ -5427,8 +5427,8 @@ SEN,2019,Drug use disorders,2,138.34,16300000.0,0.85
 SEN,2019,Gallbladder and biliary diseases,2,137.09,16300000.0,0.84
 SEN,2019,Syphilis,1,122.11,16300000.0,0.75
 SEN,2019,Leukaemia,2,112.57,16300000.0,0.69
-SEN,2019,Oesophagus cancer,2,99.1,16300000.0,0.61
 SEN,2019,Rabies,1,98.91,16300000.0,0.61
+SEN,2019,Oesophagus cancer,2,99.1,16300000.0,0.61
 SEN,2019,Corpus uteri cancer,2,93.8,16300000.0,0.58
 SEN,2019,Tetanus,1,84.82,16300000.0,0.52
 SEN,2019,Encephalitis,1,85.4,16300000.0,0.52
@@ -5749,8 +5749,8 @@ SLE,2019,Idiopathic intellectual disability,2,0.0,7813207.0,0.0
 SLE,2019,Depressive disorders,2,0.0,7813207.0,0.0
 SLE,2019,Bipolar disorder,2,0.0,7813207.0,0.0
 SLE,2019,Schizophrenia,2,0.0,7813207.0,0.0
-SLE,2019,Benign prostatic hyperplasia,2,0.0,7813207.0,0.0
 SLE,2019,Infertility,2,0.0,7813207.0,0.0
+SLE,2019,Benign prostatic hyperplasia,2,0.0,7813207.0,0.0
 SLE,2019,Migraine,2,0.0,7813207.0,0.0
 SLE,2019,Non-migraine headache,2,0.0,7813207.0,0.0
 SLE,2019,Glaucoma,2,0.0,7813207.0,0.0
@@ -5759,10 +5759,10 @@ SLE,2019,Uncorrected refractive errors,2,0.0,7813207.0,0.0
 SLE,2019,Macular degeneration,2,0.0,7813207.0,0.0
 SLE,2019,Other vision loss,2,0.0,7813207.0,0.0
 SLE,2019,Other hearing loss,2,0.0,7813207.0,0.0
-SLE,2019,Osteoarthritis,2,0.0,7813207.0,0.0
 SLE,2019,Gout,2,0.0,7813207.0,0.0
 SLE,2019,Back and neck pain,2,0.0,7813207.0,0.0
 SLE,2019,Oral conditions,2,0.0,7813207.0,0.0
+SLE,2019,Osteoarthritis,2,0.0,7813207.0,0.0
 SOM,2019,Lower respiratory infections,1,21711.68,15400000.0,140.98
 SOM,2019,Neonatal conditions,1,19252.69,15400000.0,125.02
 SOM,2019,Diarrhoeal diseases,1,15362.67,15400000.0,99.76
@@ -5825,10 +5825,10 @@ SOM,2019,Appendicitis,2,187.77,15400000.0,1.22
 SOM,2019,Parkinson disease,2,183.81,15400000.0,1.19
 SOM,2019,Melanoma and other skin cancers,2,163.71,15400000.0,1.06
 SOM,2019,Kidney cancer,2,157.8,15400000.0,1.02
-SOM,2019,Alcohol use disorders,2,151.03,15400000.0,0.98
 SOM,2019,Skin diseases,2,151.16,15400000.0,0.98
-SOM,2019,Bladder cancer,2,149.3,15400000.0,0.97
+SOM,2019,Alcohol use disorders,2,151.03,15400000.0,0.98
 SOM,2019,Diphtheria,1,149.59,15400000.0,0.97
+SOM,2019,Bladder cancer,2,149.3,15400000.0,0.97
 SOM,2019,Yellow fever,1,136.55,15400000.0,0.89
 SOM,2019,Brain and nervous system cancers,2,113.62,15400000.0,0.74
 SOM,2019,Pancreas cancer,2,107.55,15400000.0,0.7
@@ -5853,29 +5853,15 @@ SOM,2019,Urolithiasis,2,10.73,15400000.0,0.07
 SOM,2019,Gynecological diseases,2,9.8,15400000.0,0.06
 SOM,2019,Multiple sclerosis,2,7.88,15400000.0,0.05
 SOM,2019,Mesothelioma,2,6.63,15400000.0,0.04
-SOM,2019,Chlamydia,1,4.88,15400000.0,0.03
 SOM,2019,Acute hepatitis E,1,4.04,15400000.0,0.03
-SOM,2019,African trypanosomiasis,1,0.0,15400000.0,0.0
-SOM,2019,Chagas disease,1,0.0,15400000.0,0.0
+SOM,2019,Chlamydia,1,4.88,15400000.0,0.03
 SOM,2019,Trichomoniasis,1,0.0,15400000.0,0.0
 SOM,2019,Genital herpes,1,0.0,15400000.0,0.0
-SOM,2019,Trichuriasis,1,0.0,15400000.0,0.0
-SOM,2019,Hookworm disease,1,0.0,15400000.0,0.0
-SOM,2019,Food-bourne trematodes,1,0.0,15400000.0,0.0
-SOM,2019,Leprosy,1,0.0,15400000.0,0.0
-SOM,2019,Iodine deficiency,1,0.0,15400000.0,0.0
-SOM,2019,Vitamin A deficiency,1,0.0,15400000.0,0.0
-SOM,2019,Iron-deficiency anaemia,1,0.0,15400000.0,0.0
-SOM,2019,Dengue,1,0.65,15400000.0,0.0
-SOM,2019,Trachoma,1,0.0,15400000.0,0.0
-SOM,2019,Lymphatic filariasis,1,0.0,15400000.0,0.0
-SOM,2019,Onchocerciasis,1,0.0,15400000.0,0.0
-SOM,2019,Cysticercosis,1,0.0,15400000.0,0.0
+SOM,2019,Idiopathic intellectual disability,2,0.0,15400000.0,0.0
 SOM,2019,Anxiety disorders,2,0.0,15400000.0,0.0
 SOM,2019,Eating disorders,2,0.08,15400000.0,0.0
 SOM,2019,Autism and Asperger syndrome,2,0.0,15400000.0,0.0
 SOM,2019,Childhood behavioural disorders,2,0.0,15400000.0,0.0
-SOM,2019,Idiopathic intellectual disability,2,0.0,15400000.0,0.0
 SOM,2019,Depressive disorders,2,0.0,15400000.0,0.0
 SOM,2019,Bipolar disorder,2,0.0,15400000.0,0.0
 SOM,2019,Schizophrenia,2,0.0,15400000.0,0.0
@@ -5894,6 +5880,20 @@ SOM,2019,Gout,2,0.0,15400000.0,0.0
 SOM,2019,Back and neck pain,2,0.0,15400000.0,0.0
 SOM,2019,Oral conditions,2,0.0,15400000.0,0.0
 SOM,2019,Natural disasters,3,0.0,15400000.0,0.0
+SOM,2019,African trypanosomiasis,1,0.0,15400000.0,0.0
+SOM,2019,Chagas disease,1,0.0,15400000.0,0.0
+SOM,2019,Trichuriasis,1,0.0,15400000.0,0.0
+SOM,2019,Hookworm disease,1,0.0,15400000.0,0.0
+SOM,2019,Food-bourne trematodes,1,0.0,15400000.0,0.0
+SOM,2019,Leprosy,1,0.0,15400000.0,0.0
+SOM,2019,Iodine deficiency,1,0.0,15400000.0,0.0
+SOM,2019,Vitamin A deficiency,1,0.0,15400000.0,0.0
+SOM,2019,Iron-deficiency anaemia,1,0.0,15400000.0,0.0
+SOM,2019,Dengue,1,0.65,15400000.0,0.0
+SOM,2019,Trachoma,1,0.0,15400000.0,0.0
+SOM,2019,Lymphatic filariasis,1,0.0,15400000.0,0.0
+SOM,2019,Onchocerciasis,1,0.0,15400000.0,0.0
+SOM,2019,Cysticercosis,1,0.0,15400000.0,0.0
 ZAF,2019,HIV/AIDS,1,71995.7,58600000.0,122.86
 ZAF,2019,Lower respiratory infections,1,39340.8,58600000.0,67.13
 ZAF,2019,Ischaemic heart disease,2,32738.85,58600000.0,55.87
@@ -5973,9 +5973,9 @@ ZAF,2019,Testicular cancer,2,76.98,58600000.0,0.13
 ZAF,2019,Natural disasters,3,70.38,58600000.0,0.12
 ZAF,2019,Collective violence and legal intervention,3,65.56,58600000.0,0.11
 ZAF,2019,Gonorrhoea,1,59.13,58600000.0,0.1
+ZAF,2019,Echinococcosis,1,37.2,58600000.0,0.06
 ZAF,2019,Acute hepatitis A,1,37.06,58600000.0,0.06
 ZAF,2019,Tetanus,1,37.85,58600000.0,0.06
-ZAF,2019,Echinococcosis,1,37.2,58600000.0,0.06
 ZAF,2019,Schistosomiasis,1,34.99,58600000.0,0.06
 ZAF,2019,Urolithiasis,2,29.65,58600000.0,0.05
 ZAF,2019,Otitis media,1,19.17,58600000.0,0.03
@@ -5983,16 +5983,13 @@ ZAF,2019,Thalassaemias,2,18.52,58600000.0,0.03
 ZAF,2019,Chlamydia,1,18.24,58600000.0,0.03
 ZAF,2019,Diphtheria,1,16.2,58600000.0,0.03
 ZAF,2019,Sickle cell disorders and trait,2,13.82,58600000.0,0.02
-ZAF,2019,Eating disorders,2,3.59,58600000.0,0.01
 ZAF,2019,Acute hepatitis C,1,7.89,58600000.0,0.01
+ZAF,2019,Eating disorders,2,3.59,58600000.0,0.01
 ZAF,2019,Acute hepatitis E,1,3.47,58600000.0,0.01
 ZAF,2019,African trypanosomiasis,1,0.0,58600000.0,0.0
-ZAF,2019,Genital herpes,1,0.0,58600000.0,0.0
 ZAF,2019,Chagas disease,1,0.0,58600000.0,0.0
 ZAF,2019,Trichomoniasis,1,0.0,58600000.0,0.0
-ZAF,2019,Other hearing loss,2,0.0,58600000.0,0.0
-ZAF,2019,Anxiety disorders,2,0.0,58600000.0,0.0
-ZAF,2019,Oral conditions,2,0.0,58600000.0,0.0
+ZAF,2019,Genital herpes,1,0.0,58600000.0,0.0
 ZAF,2019,Leishmaniasis,1,0.0,58600000.0,0.0
 ZAF,2019,Lymphatic filariasis,1,0.0,58600000.0,0.0
 ZAF,2019,Onchocerciasis,1,0.0,58600000.0,0.0
@@ -6007,9 +6004,19 @@ ZAF,2019,Leprosy,1,0.0,58600000.0,0.0
 ZAF,2019,Iodine deficiency,1,0.0,58600000.0,0.0
 ZAF,2019,Vitamin A deficiency,1,0.0,58600000.0,0.0
 ZAF,2019,Iron-deficiency anaemia,1,0.0,58600000.0,0.0
+ZAF,2019,Glaucoma,2,0.0,58600000.0,0.0
+ZAF,2019,Cataracts,2,0.0,58600000.0,0.0
+ZAF,2019,Uncorrected refractive errors,2,0.0,58600000.0,0.0
+ZAF,2019,Macular degeneration,2,0.0,58600000.0,0.0
+ZAF,2019,Other vision loss,2,0.0,58600000.0,0.0
+ZAF,2019,Other hearing loss,2,0.0,58600000.0,0.0
+ZAF,2019,Anxiety disorders,2,0.0,58600000.0,0.0
 ZAF,2019,Autism and Asperger syndrome,2,0.0,58600000.0,0.0
 ZAF,2019,Childhood behavioural disorders,2,0.0,58600000.0,0.0
 ZAF,2019,Idiopathic intellectual disability,2,0.0,58600000.0,0.0
+ZAF,2019,Migraine,2,0.0,58600000.0,0.0
+ZAF,2019,Non-migraine headache,2,0.0,58600000.0,0.0
+ZAF,2019,Oral conditions,2,0.0,58600000.0,0.0
 ZAF,2019,Depressive disorders,2,0.0,58600000.0,0.0
 ZAF,2019,Bipolar disorder,2,0.0,58600000.0,0.0
 ZAF,2019,Schizophrenia,2,0.0,58600000.0,0.0
@@ -6018,13 +6025,6 @@ ZAF,2019,Benign prostatic hyperplasia,2,0.0,58600000.0,0.0
 ZAF,2019,Osteoarthritis,2,0.0,58600000.0,0.0
 ZAF,2019,Gout,2,0.0,58600000.0,0.0
 ZAF,2019,Back and neck pain,2,0.0,58600000.0,0.0
-ZAF,2019,Migraine,2,0.0,58600000.0,0.0
-ZAF,2019,Non-migraine headache,2,0.0,58600000.0,0.0
-ZAF,2019,Glaucoma,2,0.0,58600000.0,0.0
-ZAF,2019,Cataracts,2,0.0,58600000.0,0.0
-ZAF,2019,Uncorrected refractive errors,2,0.0,58600000.0,0.0
-ZAF,2019,Macular degeneration,2,0.0,58600000.0,0.0
-ZAF,2019,Other vision loss,2,0.0,58600000.0,0.0
 SSD,2019,Neonatal conditions,1,11684.75,11100000.0,105.27
 SSD,2019,Lower respiratory infections,1,9917.86,11100000.0,89.35
 SSD,2019,HIV/AIDS,1,7914.85,11100000.0,71.3
@@ -6098,8 +6098,8 @@ SSD,2019,Appendicitis,2,64.89,11100000.0,0.58
 SSD,2019,Sickle cell disorders and trait,2,55.08,11100000.0,0.5
 SSD,2019,Alcohol use disorders,2,53.45,11100000.0,0.48
 SSD,2019,Larynx cancer,2,51.71,11100000.0,0.47
-SSD,2019,Echinococcosis,1,50.29,11100000.0,0.45
 SSD,2019,Pancreatitis,2,49.88,11100000.0,0.45
+SSD,2019,Echinococcosis,1,50.29,11100000.0,0.45
 SSD,2019,Gallbladder and biliary tract cancer,2,45.56,11100000.0,0.41
 SSD,2019,Thyroid cancer,2,33.79,11100000.0,0.3
 SSD,2019,Inflammatory bowel disease,2,33.65,11100000.0,0.3
@@ -6114,18 +6114,17 @@ SSD,2019,Thalassaemias,2,6.32,11100000.0,0.06
 SSD,2019,Gonorrhoea,1,6.29,11100000.0,0.06
 SSD,2019,Otitis media,1,5.79,11100000.0,0.05
 SSD,2019,Mesothelioma,2,3.91,11100000.0,0.04
-SSD,2019,Multiple sclerosis,2,4.24,11100000.0,0.04
-SSD,2019,African trypanosomiasis,1,4.83,11100000.0,0.04
 SSD,2019,Gynecological diseases,2,4.27,11100000.0,0.04
+SSD,2019,Multiple sclerosis,2,4.24,11100000.0,0.04
 SSD,2019,Urolithiasis,2,4.87,11100000.0,0.04
-SSD,2019,Chlamydia,1,1.96,11100000.0,0.02
+SSD,2019,African trypanosomiasis,1,4.83,11100000.0,0.04
 SSD,2019,Acute hepatitis E,1,1.94,11100000.0,0.02
+SSD,2019,Chlamydia,1,1.96,11100000.0,0.02
 SSD,2019,Trichomoniasis,1,0.0,11100000.0,0.0
 SSD,2019,Genital herpes,1,0.0,11100000.0,0.0
-SSD,2019,Chagas disease,1,0.0,11100000.0,0.0
-SSD,2019,Lymphatic filariasis,1,0.0,11100000.0,0.0
 SSD,2019,Onchocerciasis,1,0.0,11100000.0,0.0
 SSD,2019,Dengue,1,0.28,11100000.0,0.0
+SSD,2019,Lymphatic filariasis,1,0.0,11100000.0,0.0
 SSD,2019,Trachoma,1,0.0,11100000.0,0.0
 SSD,2019,Trichuriasis,1,0.0,11100000.0,0.0
 SSD,2019,Hookworm disease,1,0.0,11100000.0,0.0
@@ -6139,9 +6138,6 @@ SSD,2019,Vitamin A deficiency,1,0.0,11100000.0,0.0
 SSD,2019,Iron-deficiency anaemia,1,0.0,11100000.0,0.0
 SSD,2019,Infertility,2,0.0,11100000.0,0.0
 SSD,2019,Benign prostatic hyperplasia,2,0.0,11100000.0,0.0
-SSD,2019,Osteoarthritis,2,0.0,11100000.0,0.0
-SSD,2019,Gout,2,0.0,11100000.0,0.0
-SSD,2019,Back and neck pain,2,0.0,11100000.0,0.0
 SSD,2019,Migraine,2,0.0,11100000.0,0.0
 SSD,2019,Non-migraine headache,2,0.0,11100000.0,0.0
 SSD,2019,Glaucoma,2,0.0,11100000.0,0.0
@@ -6156,6 +6152,10 @@ SSD,2019,Autism and Asperger syndrome,2,0.0,11100000.0,0.0
 SSD,2019,Childhood behavioural disorders,2,0.0,11100000.0,0.0
 SSD,2019,Idiopathic intellectual disability,2,0.0,11100000.0,0.0
 SSD,2019,Oral conditions,2,0.0,11100000.0,0.0
+SSD,2019,Osteoarthritis,2,0.0,11100000.0,0.0
+SSD,2019,Gout,2,0.0,11100000.0,0.0
+SSD,2019,Back and neck pain,2,0.0,11100000.0,0.0
+SSD,2019,Chagas disease,1,0.0,11100000.0,0.0
 SDN,2019,Ischaemic heart disease,2,43966.06,42800000.0,102.72
 SDN,2019,Neonatal conditions,1,33644.6,42800000.0,78.61
 SDN,2019,Stroke,2,20582.32,42800000.0,48.09
@@ -6170,8 +6170,8 @@ SDN,2019,Kidney diseases,2,5095.15,42800000.0,11.9
 SDN,2019,Chronic obstructive pulmonary disease,2,4381.6,42800000.0,10.24
 SDN,2019,Cirrhosis of the liver,2,4347.98,42800000.0,10.16
 SDN,2019,Tuberculosis,1,4249.58,42800000.0,9.93
-SDN,2019,Diabetes mellitus,2,3070.23,42800000.0,7.17
 SDN,2019,Breast cancer,2,3070.77,42800000.0,7.17
+SDN,2019,Diabetes mellitus,2,3070.23,42800000.0,7.17
 SDN,2019,Asthma,2,2635.64,42800000.0,6.16
 SDN,2019,Alzheimer disease and other dementias,2,2583.94,42800000.0,6.04
 SDN,2019,Interpersonal violence,3,2477.91,42800000.0,5.79
@@ -6211,8 +6211,8 @@ SDN,2019,Leishmaniasis,1,448.35,42800000.0,1.05
 SDN,2019,Acute hepatitis A,1,436.93,42800000.0,1.02
 SDN,2019,Brain and nervous system cancers,2,437.03,42800000.0,1.02
 SDN,2019,Tetanus,1,377.84,42800000.0,0.88
-SDN,2019,Sudden infant death syndrome,2,371.49,42800000.0,0.87
 SDN,2019,Yellow fever,1,371.65,42800000.0,0.87
+SDN,2019,Sudden infant death syndrome,2,371.49,42800000.0,0.87
 SDN,2019,Bladder cancer,2,368.5,42800000.0,0.86
 SDN,2019,Kidney cancer,2,355.93,42800000.0,0.83
 SDN,2019,Melanoma and other skin cancers,2,356.36,42800000.0,0.83
@@ -6226,8 +6226,8 @@ SDN,2019,Gallbladder and biliary tract cancer,2,169.72,42800000.0,0.4
 SDN,2019,Pancreatitis,2,171.15,42800000.0,0.4
 SDN,2019,Appendicitis,2,154.69,42800000.0,0.36
 SDN,2019,Thyroid cancer,2,152.77,42800000.0,0.36
-SDN,2019,Thalassaemias,2,112.15,42800000.0,0.26
 SDN,2019,Skin diseases,2,112.04,42800000.0,0.26
+SDN,2019,Thalassaemias,2,112.15,42800000.0,0.26
 SDN,2019,Alcohol use disorders,2,84.49,42800000.0,0.2
 SDN,2019,Corpus uteri cancer,2,71.26,42800000.0,0.17
 SDN,2019,Schistosomiasis,1,68.33,42800000.0,0.16
@@ -6338,8 +6338,8 @@ TZA,2019,Parkinson disease,2,513.27,58000000.0,0.88
 TZA,2019,Peptic ulcer disease,2,462.0,58000000.0,0.8
 TZA,2019,Leukaemia,2,415.95,58000000.0,0.72
 TZA,2019,Drug use disorders,2,404.06,58000000.0,0.7
-TZA,2019,Tetanus,1,401.65,58000000.0,0.69
 TZA,2019,Rheumatic heart disease,2,400.6,58000000.0,0.69
+TZA,2019,Tetanus,1,401.65,58000000.0,0.69
 TZA,2019,Schistosomiasis,1,370.65,58000000.0,0.64
 TZA,2019,Larynx cancer,2,360.28,58000000.0,0.62
 TZA,2019,Skin diseases,2,359.46,58000000.0,0.62
@@ -6362,10 +6362,10 @@ TZA,2019,Kidney cancer,2,99.37,58000000.0,0.17
 TZA,2019,Rheumatoid arthritis,2,81.13,58000000.0,0.14
 TZA,2019,Yellow fever,1,65.79,58000000.0,0.11
 TZA,2019,Ascariasis,1,55.7,58000000.0,0.1
-TZA,2019,Cysticercosis,1,50.69,58000000.0,0.09
 TZA,2019,Thyroid cancer,2,54.95,58000000.0,0.09
-TZA,2019,Gallbladder and biliary tract cancer,2,42.65,58000000.0,0.07
+TZA,2019,Cysticercosis,1,50.69,58000000.0,0.09
 TZA,2019,Acute hepatitis C,1,39.83,58000000.0,0.07
+TZA,2019,Gallbladder and biliary tract cancer,2,42.65,58000000.0,0.07
 TZA,2019,Gonorrhoea,1,26.43,58000000.0,0.05
 TZA,2019,Echinococcosis,1,29.93,58000000.0,0.05
 TZA,2019,Collective violence and legal intervention,3,29.58,58000000.0,0.05
@@ -6494,8 +6494,8 @@ TGO,2019,Brain and nervous system cancers,2,14.27,8082359.0,0.18
 TGO,2019,Echinococcosis,1,14.95,8082359.0,0.18
 TGO,2019,Multiple sclerosis,2,12.82,8082359.0,0.16
 TGO,2019,Yellow fever,1,11.07,8082359.0,0.14
-TGO,2019,Acute hepatitis C,1,8.05,8082359.0,0.1
 TGO,2019,Mesothelioma,2,8.12,8082359.0,0.1
+TGO,2019,Acute hepatitis C,1,8.05,8082359.0,0.1
 TGO,2019,Testicular cancer,2,6.93,8082359.0,0.09
 TGO,2019,Rheumatoid arthritis,2,7.03,8082359.0,0.09
 TGO,2019,Ascariasis,1,6.15,8082359.0,0.08
@@ -6511,16 +6511,6 @@ TGO,2019,Acute hepatitis E,1,1.31,8082359.0,0.02
 TGO,2019,Chlamydia,1,1.06,8082359.0,0.01
 TGO,2019,Trichomoniasis,1,0.0,8082359.0,0.0
 TGO,2019,Genital herpes,1,0.0,8082359.0,0.0
-TGO,2019,Leishmaniasis,1,0.0,8082359.0,0.0
-TGO,2019,Lymphatic filariasis,1,0.0,8082359.0,0.0
-TGO,2019,Onchocerciasis,1,0.0,8082359.0,0.0
-TGO,2019,Trichuriasis,1,0.0,8082359.0,0.0
-TGO,2019,Hookworm disease,1,0.0,8082359.0,0.0
-TGO,2019,Food-bourne trematodes,1,0.0,8082359.0,0.0
-TGO,2019,Leprosy,1,0.0,8082359.0,0.0
-TGO,2019,Iodine deficiency,1,0.0,8082359.0,0.0
-TGO,2019,Vitamin A deficiency,1,0.0,8082359.0,0.0
-TGO,2019,Iron-deficiency anaemia,1,0.0,8082359.0,0.0
 TGO,2019,African trypanosomiasis,1,0.0,8082359.0,0.0
 TGO,2019,Chagas disease,1,0.0,8082359.0,0.0
 TGO,2019,Dengue,1,0.05,8082359.0,0.0
@@ -6549,6 +6539,16 @@ TGO,2019,Eating disorders,2,0.09,8082359.0,0.0
 TGO,2019,Autism and Asperger syndrome,2,0.0,8082359.0,0.0
 TGO,2019,Childhood behavioural disorders,2,0.0,8082359.0,0.0
 TGO,2019,Idiopathic intellectual disability,2,0.0,8082359.0,0.0
+TGO,2019,Leishmaniasis,1,0.0,8082359.0,0.0
+TGO,2019,Lymphatic filariasis,1,0.0,8082359.0,0.0
+TGO,2019,Onchocerciasis,1,0.0,8082359.0,0.0
+TGO,2019,Trichuriasis,1,0.0,8082359.0,0.0
+TGO,2019,Hookworm disease,1,0.0,8082359.0,0.0
+TGO,2019,Food-bourne trematodes,1,0.0,8082359.0,0.0
+TGO,2019,Leprosy,1,0.0,8082359.0,0.0
+TGO,2019,Iodine deficiency,1,0.0,8082359.0,0.0
+TGO,2019,Vitamin A deficiency,1,0.0,8082359.0,0.0
+TGO,2019,Iron-deficiency anaemia,1,0.0,8082359.0,0.0
 TUN,2019,Ischaemic heart disease,2,20658.05,11700000.0,176.56
 TUN,2019,Stroke,2,8509.44,11700000.0,72.73
 TUN,2019,Hypertensive heart disease,2,2823.88,11700000.0,24.14
@@ -6611,8 +6611,8 @@ TUN,2019,Encephalitis,1,37.63,11700000.0,0.32
 TUN,2019,Multiple sclerosis,2,33.45,11700000.0,0.29
 TUN,2019,Alcohol use disorders,2,30.92,11700000.0,0.26
 TUN,2019,Tetanus,1,25.55,11700000.0,0.22
-TUN,2019,Collective violence and legal intervention,3,24.89,11700000.0,0.21
 TUN,2019,Appendicitis,2,24.65,11700000.0,0.21
+TUN,2019,Collective violence and legal intervention,3,24.89,11700000.0,0.21
 TUN,2019,Protein-energy malnutrition,1,23.59,11700000.0,0.2
 TUN,2019,Sudden infant death syndrome,2,20.94,11700000.0,0.18
 TUN,2019,Echinococcosis,1,20.48,11700000.0,0.18
@@ -6627,10 +6627,10 @@ TUN,2019,Rheumatoid arthritis,2,9.14,11700000.0,0.08
 TUN,2019,Gastritis and duodenitis,2,9.65,11700000.0,0.08
 TUN,2019,Schistosomiasis,1,7.91,11700000.0,0.07
 TUN,2019,Leishmaniasis,1,3.47,11700000.0,0.03
-TUN,2019,Acute hepatitis C,1,1.2,11700000.0,0.01
-TUN,2019,Acute hepatitis E,1,1.11,11700000.0,0.01
-TUN,2019,Gonorrhoea,1,0.88,11700000.0,0.01
 TUN,2019,Rabies,1,0.76,11700000.0,0.01
+TUN,2019,Acute hepatitis E,1,1.11,11700000.0,0.01
+TUN,2019,Acute hepatitis C,1,1.2,11700000.0,0.01
+TUN,2019,Gonorrhoea,1,0.88,11700000.0,0.01
 TUN,2019,Upper respiratory infections,1,0.6,11700000.0,0.01
 TUN,2019,Urolithiasis,2,1.25,11700000.0,0.01
 TUN,2019,Infertility,2,0.0,11700000.0,0.0
@@ -6654,18 +6654,18 @@ TUN,2019,Trichuriasis,1,0.0,11700000.0,0.0
 TUN,2019,Hookworm disease,1,0.0,11700000.0,0.0
 TUN,2019,Food-bourne trematodes,1,0.0,11700000.0,0.0
 TUN,2019,Leprosy,1,0.0,11700000.0,0.0
-TUN,2019,Dengue,1,0.0,11700000.0,0.0
 TUN,2019,Trichomoniasis,1,0.0,11700000.0,0.0
-TUN,2019,Trachoma,1,0.0,11700000.0,0.0
-TUN,2019,Yellow fever,1,0.0,11700000.0,0.0
 TUN,2019,Genital herpes,1,0.0,11700000.0,0.0
 TUN,2019,Chlamydia,1,0.29,11700000.0,0.0
+TUN,2019,Diphtheria,1,0.18,11700000.0,0.0
+TUN,2019,Measles,1,0.0,11700000.0,0.0
+TUN,2019,Dengue,1,0.0,11700000.0,0.0
+TUN,2019,Trachoma,1,0.0,11700000.0,0.0
+TUN,2019,Yellow fever,1,0.0,11700000.0,0.0
 TUN,2019,Otitis media,1,0.01,11700000.0,0.0
 TUN,2019,Iodine deficiency,1,0.0,11700000.0,0.0
 TUN,2019,Vitamin A deficiency,1,0.0,11700000.0,0.0
 TUN,2019,Iron-deficiency anaemia,1,0.0,11700000.0,0.0
-TUN,2019,Diphtheria,1,0.18,11700000.0,0.0
-TUN,2019,Measles,1,0.0,11700000.0,0.0
 TUN,2019,Malaria,1,0.0,11700000.0,0.0
 TUN,2019,African trypanosomiasis,1,0.0,11700000.0,0.0
 TUN,2019,Chagas disease,1,0.0,11700000.0,0.0
@@ -6740,12 +6740,12 @@ UGA,2019,Tetanus,1,270.59,44300000.0,0.61
 UGA,2019,Alcohol use disorders,2,256.14,44300000.0,0.58
 UGA,2019,Gastritis and duodenitis,2,247.61,44300000.0,0.56
 UGA,2019,Skin diseases,2,242.34,44300000.0,0.55
-UGA,2019,Drug use disorders,2,232.8,44300000.0,0.53
 UGA,2019,Pancreatitis,2,235.25,44300000.0,0.53
 UGA,2019,Corpus uteri cancer,2,233.62,44300000.0,0.53
+UGA,2019,Drug use disorders,2,232.8,44300000.0,0.53
 UGA,2019,Kidney cancer,2,227.24,44300000.0,0.51
-UGA,2019,Acute hepatitis A,1,210.7,44300000.0,0.48
 UGA,2019,Appendicitis,2,211.04,44300000.0,0.48
+UGA,2019,Acute hepatitis A,1,210.7,44300000.0,0.48
 UGA,2019,Echinococcosis,1,187.23,44300000.0,0.42
 UGA,2019,Bladder cancer,2,180.85,44300000.0,0.41
 UGA,2019,Cysticercosis,1,166.71,44300000.0,0.38
@@ -6763,15 +6763,15 @@ UGA,2019,Gallbladder and biliary tract cancer,2,46.21,44300000.0,0.1
 UGA,2019,Testicular cancer,2,38.99,44300000.0,0.09
 UGA,2019,Acute hepatitis C,1,30.5,44300000.0,0.07
 UGA,2019,Leishmaniasis,1,28.1,44300000.0,0.06
-UGA,2019,Ascariasis,1,15.9,44300000.0,0.04
 UGA,2019,Gonorrhoea,1,17.38,44300000.0,0.04
 UGA,2019,Mesothelioma,2,19.2,44300000.0,0.04
 UGA,2019,Multiple sclerosis,2,16.01,44300000.0,0.04
+UGA,2019,Ascariasis,1,15.9,44300000.0,0.04
 UGA,2019,Urolithiasis,2,12.16,44300000.0,0.03
 UGA,2019,Gynecological diseases,2,14.4,44300000.0,0.03
 UGA,2019,Otitis media,1,11.34,44300000.0,0.03
-UGA,2019,Diphtheria,1,10.99,44300000.0,0.02
 UGA,2019,Acute hepatitis E,1,6.88,44300000.0,0.02
+UGA,2019,Diphtheria,1,10.99,44300000.0,0.02
 UGA,2019,Chlamydia,1,5.99,44300000.0,0.01
 UGA,2019,Thalassaemias,2,3.18,44300000.0,0.01
 UGA,2019,Depressive disorders,2,0.0,44300000.0,0.0
@@ -6803,14 +6803,14 @@ UGA,2019,Non-migraine headache,2,0.0,44300000.0,0.0
 UGA,2019,Glaucoma,2,0.0,44300000.0,0.0
 UGA,2019,Cataracts,2,0.0,44300000.0,0.0
 UGA,2019,Uncorrected refractive errors,2,0.0,44300000.0,0.0
+UGA,2019,Macular degeneration,2,0.0,44300000.0,0.0
+UGA,2019,Other vision loss,2,0.0,44300000.0,0.0
+UGA,2019,Other hearing loss,2,0.0,44300000.0,0.0
 UGA,2019,Anxiety disorders,2,0.0,44300000.0,0.0
 UGA,2019,Eating disorders,2,0.31,44300000.0,0.0
 UGA,2019,Autism and Asperger syndrome,2,0.0,44300000.0,0.0
 UGA,2019,Childhood behavioural disorders,2,0.0,44300000.0,0.0
 UGA,2019,Idiopathic intellectual disability,2,0.0,44300000.0,0.0
-UGA,2019,Macular degeneration,2,0.0,44300000.0,0.0
-UGA,2019,Other vision loss,2,0.0,44300000.0,0.0
-UGA,2019,Other hearing loss,2,0.0,44300000.0,0.0
 ZMB,2019,HIV/AIDS,1,17234.44,17900000.0,96.28
 ZMB,2019,Neonatal conditions,1,13001.03,17900000.0,72.63
 ZMB,2019,Lower respiratory infections,1,9516.88,17900000.0,53.17
@@ -6892,14 +6892,14 @@ ZMB,2019,Yellow fever,1,16.34,17900000.0,0.09
 ZMB,2019,Multiple sclerosis,2,13.44,17900000.0,0.08
 ZMB,2019,Echinococcosis,1,12.1,17900000.0,0.07
 ZMB,2019,Ascariasis,1,8.6,17900000.0,0.05
+ZMB,2019,Gonorrhoea,1,9.73,17900000.0,0.05
 ZMB,2019,Urolithiasis,2,9.24,17900000.0,0.05
 ZMB,2019,Gynecological diseases,2,8.25,17900000.0,0.05
-ZMB,2019,Gonorrhoea,1,9.73,17900000.0,0.05
 ZMB,2019,Collective violence and legal intervention,3,6.46,17900000.0,0.04
 ZMB,2019,Testicular cancer,2,7.44,17900000.0,0.04
 ZMB,2019,Gallbladder and biliary tract cancer,2,5.35,17900000.0,0.03
-ZMB,2019,Acute hepatitis E,1,5.48,17900000.0,0.03
 ZMB,2019,Otitis media,1,4.97,17900000.0,0.03
+ZMB,2019,Acute hepatitis E,1,5.48,17900000.0,0.03
 ZMB,2019,African trypanosomiasis,1,3.14,17900000.0,0.02
 ZMB,2019,Chlamydia,1,3.44,17900000.0,0.02
 ZMB,2019,Diphtheria,1,2.75,17900000.0,0.02
@@ -6907,14 +6907,12 @@ ZMB,2019,Mesothelioma,2,3.99,17900000.0,0.02
 ZMB,2019,Natural disasters,3,3.88,17900000.0,0.02
 ZMB,2019,Thalassaemias,2,0.96,17900000.0,0.01
 ZMB,2019,Dengue,1,1.05,17900000.0,0.01
-ZMB,2019,Trachoma,1,0.0,17900000.0,0.0
-ZMB,2019,Lymphatic filariasis,1,0.0,17900000.0,0.0
 ZMB,2019,Onchocerciasis,1,0.0,17900000.0,0.0
 ZMB,2019,Chagas disease,1,0.0,17900000.0,0.0
 ZMB,2019,Trichuriasis,1,0.0,17900000.0,0.0
 ZMB,2019,Hookworm disease,1,0.0,17900000.0,0.0
-ZMB,2019,Food-bourne trematodes,1,0.0,17900000.0,0.0
-ZMB,2019,Leprosy,1,0.0,17900000.0,0.0
+ZMB,2019,Trachoma,1,0.0,17900000.0,0.0
+ZMB,2019,Lymphatic filariasis,1,0.0,17900000.0,0.0
 ZMB,2019,Trichomoniasis,1,0.0,17900000.0,0.0
 ZMB,2019,Genital herpes,1,0.0,17900000.0,0.0
 ZMB,2019,Depressive disorders,2,0.0,17900000.0,0.0
@@ -6942,6 +6940,8 @@ ZMB,2019,Eating disorders,2,0.24,17900000.0,0.0
 ZMB,2019,Autism and Asperger syndrome,2,0.0,17900000.0,0.0
 ZMB,2019,Childhood behavioural disorders,2,0.0,17900000.0,0.0
 ZMB,2019,Idiopathic intellectual disability,2,0.0,17900000.0,0.0
+ZMB,2019,Food-bourne trematodes,1,0.0,17900000.0,0.0
+ZMB,2019,Leprosy,1,0.0,17900000.0,0.0
 ZWE,2019,HIV/AIDS,1,19988.25,14600000.0,136.91
 ZWE,2019,Lower respiratory infections,1,10779.44,14600000.0,73.83
 ZWE,2019,Neonatal conditions,1,9516.35,14600000.0,65.18
@@ -6998,9 +6998,9 @@ ZWE,2019,Skin diseases,2,173.03,14600000.0,1.19
 ZWE,2019,Schistosomiasis,1,172.02,14600000.0,1.18
 ZWE,2019,Sudden infant death syndrome,2,152.67,14600000.0,1.05
 ZWE,2019,Gastritis and duodenitis,2,124.51,14600000.0,0.85
-ZWE,2019,Syphilis,1,124.49,14600000.0,0.85
 ZWE,2019,Bladder cancer,2,124.75,14600000.0,0.85
 ZWE,2019,Sickle cell disorders and trait,2,124.56,14600000.0,0.85
+ZWE,2019,Syphilis,1,124.49,14600000.0,0.85
 ZWE,2019,Encephalitis,1,117.45,14600000.0,0.8
 ZWE,2019,Brain and nervous system cancers,2,110.15,14600000.0,0.75
 ZWE,2019,Tetanus,1,101.72,14600000.0,0.7
@@ -7022,43 +7022,20 @@ ZWE,2019,Measles,1,30.41,14600000.0,0.21
 ZWE,2019,Rheumatoid arthritis,2,26.24,14600000.0,0.18
 ZWE,2019,Collective violence and legal intervention,3,26.07,14600000.0,0.18
 ZWE,2019,Thalassaemias,2,15.5,14600000.0,0.11
-ZWE,2019,Mesothelioma,2,14.94,14600000.0,0.1
 ZWE,2019,Acute hepatitis C,1,14.26,14600000.0,0.1
+ZWE,2019,Mesothelioma,2,14.94,14600000.0,0.1
 ZWE,2019,Multiple sclerosis,2,14.08,14600000.0,0.1
-ZWE,2019,Acute hepatitis E,1,13.86,14600000.0,0.09
 ZWE,2019,Echinococcosis,1,12.47,14600000.0,0.09
+ZWE,2019,Acute hepatitis E,1,13.86,14600000.0,0.09
 ZWE,2019,Gonorrhoea,1,9.77,14600000.0,0.07
 ZWE,2019,Testicular cancer,2,7.53,14600000.0,0.05
 ZWE,2019,Urolithiasis,2,4.21,14600000.0,0.03
 ZWE,2019,Otitis media,1,3.3,14600000.0,0.02
 ZWE,2019,Chlamydia,1,3.12,14600000.0,0.02
 ZWE,2019,Ascariasis,1,2.22,14600000.0,0.02
-ZWE,2019,Diphtheria,1,1.96,14600000.0,0.01
 ZWE,2019,African trypanosomiasis,1,2.11,14600000.0,0.01
+ZWE,2019,Diphtheria,1,1.96,14600000.0,0.01
 ZWE,2019,Chagas disease,1,0.0,14600000.0,0.0
-ZWE,2019,Trichomoniasis,1,0.0,14600000.0,0.0
-ZWE,2019,Genital herpes,1,0.0,14600000.0,0.0
-ZWE,2019,Trichuriasis,1,0.0,14600000.0,0.0
-ZWE,2019,Hookworm disease,1,0.0,14600000.0,0.0
-ZWE,2019,Food-bourne trematodes,1,0.0,14600000.0,0.0
-ZWE,2019,Leprosy,1,0.0,14600000.0,0.0
-ZWE,2019,Iodine deficiency,1,0.0,14600000.0,0.0
-ZWE,2019,Vitamin A deficiency,1,0.0,14600000.0,0.0
-ZWE,2019,Iron-deficiency anaemia,1,0.0,14600000.0,0.0
-ZWE,2019,Dengue,1,0.18,14600000.0,0.0
-ZWE,2019,Trachoma,1,0.0,14600000.0,0.0
-ZWE,2019,Yellow fever,1,0.0,14600000.0,0.0
-ZWE,2019,Leishmaniasis,1,0.0,14600000.0,0.0
-ZWE,2019,Lymphatic filariasis,1,0.0,14600000.0,0.0
-ZWE,2019,Onchocerciasis,1,0.0,14600000.0,0.0
-ZWE,2019,Depressive disorders,2,0.0,14600000.0,0.0
-ZWE,2019,Bipolar disorder,2,0.0,14600000.0,0.0
-ZWE,2019,Schizophrenia,2,0.0,14600000.0,0.0
-ZWE,2019,Anxiety disorders,2,0.0,14600000.0,0.0
-ZWE,2019,Eating disorders,2,0.27,14600000.0,0.0
-ZWE,2019,Autism and Asperger syndrome,2,0.0,14600000.0,0.0
-ZWE,2019,Childhood behavioural disorders,2,0.0,14600000.0,0.0
-ZWE,2019,Idiopathic intellectual disability,2,0.0,14600000.0,0.0
 ZWE,2019,Infertility,2,0.0,14600000.0,0.0
 ZWE,2019,Oral conditions,2,0.0,14600000.0,0.0
 ZWE,2019,Migraine,2,0.0,14600000.0,0.0
@@ -7073,3 +7050,26 @@ ZWE,2019,Osteoarthritis,2,0.0,14600000.0,0.0
 ZWE,2019,Gout,2,0.0,14600000.0,0.0
 ZWE,2019,Back and neck pain,2,0.0,14600000.0,0.0
 ZWE,2019,Benign prostatic hyperplasia,2,0.0,14600000.0,0.0
+ZWE,2019,Depressive disorders,2,0.0,14600000.0,0.0
+ZWE,2019,Bipolar disorder,2,0.0,14600000.0,0.0
+ZWE,2019,Schizophrenia,2,0.0,14600000.0,0.0
+ZWE,2019,Eating disorders,2,0.27,14600000.0,0.0
+ZWE,2019,Autism and Asperger syndrome,2,0.0,14600000.0,0.0
+ZWE,2019,Childhood behavioural disorders,2,0.0,14600000.0,0.0
+ZWE,2019,Idiopathic intellectual disability,2,0.0,14600000.0,0.0
+ZWE,2019,Trichomoniasis,1,0.0,14600000.0,0.0
+ZWE,2019,Genital herpes,1,0.0,14600000.0,0.0
+ZWE,2019,Anxiety disorders,2,0.0,14600000.0,0.0
+ZWE,2019,Trichuriasis,1,0.0,14600000.0,0.0
+ZWE,2019,Hookworm disease,1,0.0,14600000.0,0.0
+ZWE,2019,Food-bourne trematodes,1,0.0,14600000.0,0.0
+ZWE,2019,Leprosy,1,0.0,14600000.0,0.0
+ZWE,2019,Iodine deficiency,1,0.0,14600000.0,0.0
+ZWE,2019,Vitamin A deficiency,1,0.0,14600000.0,0.0
+ZWE,2019,Iron-deficiency anaemia,1,0.0,14600000.0,0.0
+ZWE,2019,Dengue,1,0.18,14600000.0,0.0
+ZWE,2019,Trachoma,1,0.0,14600000.0,0.0
+ZWE,2019,Yellow fever,1,0.0,14600000.0,0.0
+ZWE,2019,Leishmaniasis,1,0.0,14600000.0,0.0
+ZWE,2019,Lymphatic filariasis,1,0.0,14600000.0,0.0
+ZWE,2019,Onchocerciasis,1,0.0,14600000.0,0.0
