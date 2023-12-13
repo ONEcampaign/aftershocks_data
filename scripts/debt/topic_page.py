@@ -169,7 +169,7 @@ def read_debt_chart_data() -> pd.DataFrame:
 def debt_composition_chart() -> None:
     df = (
         read_debt_chart_data()
-        .loc[lambda d: d.time == 2021]
+        .loc[lambda d: d.time == 2022]
         .dropna(subset=["stocks_type"])
         .groupby(["time", "Country", "Creditors", "stocks_type"], as_index=False)
         .sum(numeric_only=True)
