@@ -7,7 +7,7 @@ from scripts.debt.common import get_indicator_data, DEBT_SERVICE, DEBT_STOCKS
 from scripts.logger import logger
 
 START_YEAR: int = 2009
-END_YEAR: int = 2027
+END_YEAR: int = 2028
 
 
 # ---------------------------------------------------------------------
@@ -118,9 +118,12 @@ def clean_ids_data(df: pd.DataFrame, detail: bool = False) -> pd.DataFrame:
         df.rename(columns={"time": "year", "counterpart-area": "counterpart"})
         .pipe(add_ids_iso)
         .assign(indicator=lambda d: d.series_code.map(dict_))
-        .groupby(["iso_code", "year", "indicator", "counterpart"], as_index=False)[
-            "value"
-        ]
+        .groupby(
+            ["iso_code", "year", "indicator", "counterpart"],
+            as_index=False,
+            observed=True,
+            dropna=False,
+        )["value"]
         .sum()
     )
 

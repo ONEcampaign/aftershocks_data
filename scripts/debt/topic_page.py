@@ -15,7 +15,7 @@ from scripts.debt.overview_charts import CURRENT_YEAR
 set_bblocks_data_path(PATHS.bblocks_data)
 
 SOURCE = "International Debt Statistics (IDS) Database"
-DATE = " (December 2022)"
+DATE = " (December 2023)"
 
 
 def debt_stocks_columns() -> None:
