@@ -6915,3 +6915,13 @@ INFO (2023-12-13 21:19:09,343): Updated DSA list data
 INFO (2023-12-13 21:21:35,541): Downloaded IDS debt service data
 INFO (2023-12-13 21:22:50,582): Downloaded IDS debt stocks data: ids_stocks_raw
 INFO (2023-12-13 21:25:06,527): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2023-12-13 21:27:50,764): Updated OWID data
+INFO (2023-12-13 21:27:51,106): Updated daily charts in health page
+INFO (2023-12-13 21:29:17,692): Updated OWID data
+INFO (2023-12-13 21:29:18,039): Updated daily charts in health page
+INFO (2023-12-13 21:30:29,024): Updated WFP data (insufficient food)
+INFO (2023-12-13 21:30:31,160): Updated WFP insufficient food charts
+INFO (2023-12-13 21:30:32,136): Updated vaccination rate chart
+INFO (2023-12-13 21:30:32,198): Updated overview text (summary) json
+INFO (2023-12-13 21:30:32,198): Updated daily charts in country page
+INFO (2023-12-13 21:39:16,854): Updated economy picker

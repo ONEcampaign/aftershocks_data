@@ -91,7 +91,7 @@ def _add_dac_total(df: pd.DataFrame) -> pd.DataFrame:
     oda_total = (
         df.assign(name_short="DAC Countries")
         .groupby("name_short", as_index=False)
-        .agg({"total_refugees": sum, "oda": sum, "year": "max"})
+        .agg({"total_refugees": "sum", "oda": "sum", "year": "max"})
         .filter(["name_short", "total_refugees", "oda", "year"])
     )
 

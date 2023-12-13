@@ -211,7 +211,7 @@ def latest_debt_service() -> pd.DataFrame:
             usecols=["name_short", "value"],
         )
         .pipe(add_iso_codes_column, id_column="name_short")
-        .assign(value=lambda d: clean_numeric_series(d.value, to=int))
+        .assign(value=lambda d: clean_numeric_series(d.value.astype(str), to=int))
         .rename(
             columns={
                 "value": "Debt Service (US$ million)",
