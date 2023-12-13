@@ -6963,3 +6963,11 @@ INFO (2023-12-13 22:02:24,365): Updated overview text (summary) json
 INFO (2023-12-13 22:02:24,365): Updated daily charts in country page
 INFO (2023-12-13 22:02:26,472): Updated economy picker
 INFO (2023-12-13 22:04:35,597): Downloaded IDS debt service data
+INFO (2023-12-13 22:05:52,924): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2023-12-13 22:06:09,023): Updated OWID data
+INFO (2023-12-13 22:08:08,764): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2023-12-13 22:08:13,991): Updated weekly charts in debt page
+INFO (2023-12-13 22:08:27,685): Updated DTP data from WHO.
+INFO (2023-12-13 22:08:29,598): Updated IHME health spending data
+INFO (2023-12-13 22:08:30,326): Updated IHME health spending codes
+INFO (2023-12-13 22:09:22,311): Updated weekly charts in country page
