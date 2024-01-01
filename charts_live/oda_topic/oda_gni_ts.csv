@@ -1,27 +1,27 @@
 name,year,ODA (left-axis),ODA/GNI (right-axis)
-"DAC Countries, Total",2000,78408.89,0.22
-"DAC Countries, Total",2001,80720.7,0.21
-"DAC Countries, Total",2002,86646.22,0.23
-"DAC Countries, Total",2003,90915.05,0.24
-"DAC Countries, Total",2004,96537.81,0.25
-"DAC Countries, Total",2005,127001.39,0.32
-"DAC Countries, Total",2006,120108.2,0.29
-"DAC Countries, Total",2007,110902.1,0.27
-"DAC Countries, Total",2008,123769.17,0.3
-"DAC Countries, Total",2009,125765.58,0.31
-"DAC Countries, Total",2010,132724.6,0.31
-"DAC Countries, Total",2011,131588.55,0.31
-"DAC Countries, Total",2012,126705.76,0.28
-"DAC Countries, Total",2013,133269.39,0.3
-"DAC Countries, Total",2014,135556.2,0.3
-"DAC Countries, Total",2015,144031.5,0.3
-"DAC Countries, Total",2016,159707.34,0.32
-"DAC Countries, Total",2017,159206.16,0.31
-"DAC Countries, Total",2018,159058.44,0.3
-"DAC Countries, Total",2019,159794.72,0.3
-"DAC Countries, Total",2020,166343.75,0.33
-"DAC Countries, Total",2021,179574.01,0.33
-"DAC Countries, Total",2022,203995.33,0.36
+"DAC Countries, Total",2000,78591.53,0.22
+"DAC Countries, Total",2001,80908.53,0.21
+"DAC Countries, Total",2002,86849.62,0.23
+"DAC Countries, Total",2003,91127.29,0.24
+"DAC Countries, Total",2004,96769.68,0.25
+"DAC Countries, Total",2005,127311.24,0.32
+"DAC Countries, Total",2006,120407.82,0.29
+"DAC Countries, Total",2007,111179.02,0.27
+"DAC Countries, Total",2008,124080.01,0.3
+"DAC Countries, Total",2009,126078.21,0.31
+"DAC Countries, Total",2010,133054.32,0.31
+"DAC Countries, Total",2011,131919.44,0.31
+"DAC Countries, Total",2012,127025.33,0.28
+"DAC Countries, Total",2013,133610.26,0.3
+"DAC Countries, Total",2014,135908.55,0.3
+"DAC Countries, Total",2015,144406.32,0.3
+"DAC Countries, Total",2016,160129.18,0.32
+"DAC Countries, Total",2017,159623.47,0.31
+"DAC Countries, Total",2018,159477.1,0.3
+"DAC Countries, Total",2019,160215.81,0.3
+"DAC Countries, Total",2020,166780.88,0.33
+"DAC Countries, Total",2021,180048.63,0.33
+"DAC Countries, Total",2022,210660.21,0.37
 Australia,2000,2285.38,0.27
 Australia,2001,2189.38,0.25
 Australia,2002,2290.39,0.26
@@ -44,7 +44,7 @@ Australia,2018,3429.6,0.23
 Australia,2019,3274.71,0.21
 Australia,2020,3256.05,0.21
 Australia,2021,3498.37,0.22
-Australia,2022,3039.62,0.19
+Australia,2022,3045.98,0.19
 Austria,2000,761.75,0.23
 Austria,2001,1107.35,0.34
 Austria,2002,854.77,0.26
@@ -67,7 +67,7 @@ Austria,2018,1152.96,0.26
 Austria,2019,1260.13,0.28
 Austria,2020,1249.72,0.3
 Austria,2021,1360.79,0.31
-Austria,2022,1853.23,0.39
+Austria,2022,1847.06,0.39
 Belgium,2000,1438.76,0.36
 Belgium,2001,1536.19,0.37
 Belgium,2002,1774.5,0.43
@@ -90,7 +90,7 @@ Belgium,2018,2338.23,0.43
 Belgium,2019,2278.89,0.41
 Belgium,2020,2376.67,0.48
 Belgium,2021,2483.35,0.43
-Belgium,2022,2657.25,0.45
+Belgium,2022,2656.53,0.45
 Canada,2000,3361.73,0.25
 Canada,2001,3030.9,0.22
 Canada,2002,3969.18,0.28
@@ -113,7 +113,7 @@ Canada,2018,5572.49,0.28
 Canada,2019,5678.14,0.27
 Canada,2020,6089.71,0.31
 Canada,2021,6570.81,0.32
-Canada,2022,7832.46,0.37
+Canada,2022,7835.68,0.37
 Czech Republic,2000,44.53,0.03
 Czech Republic,2001,68.48,0.05
 Czech Republic,2002,98.43,0.07
@@ -136,7 +136,7 @@ Czech Republic,2018,345.94,0.13
 Czech Republic,2019,355.82,0.13
 Czech Republic,2020,334.03,0.13
 Czech Republic,2021,369.56,0.13
-Czech Republic,2022,987.12,0.36
+Czech Republic,2022,1051.26,0.38
 Denmark,2000,2992.32,1.06
 Denmark,2001,2949.15,1.03
 Denmark,2002,2744.99,0.96
@@ -159,7 +159,7 @@ Denmark,2018,2668.13,0.72
 Denmark,2019,2749.72,0.72
 Denmark,2020,2730.04,0.72
 Denmark,2021,2812.8,0.71
-Denmark,2022,2856.93,0.7
+Denmark,2022,2770.91,0.67
 EU Institutions,2000,8212.35,
 EU Institutions,2001,10009.19,
 EU Institutions,2002,8483.97,
@@ -182,7 +182,7 @@ EU Institutions,2018,16139.6,
 EU Institutions,2019,15251.47,
 EU Institutions,2020,19272.95,
 EU Institutions,2021,17715.0,
-EU Institutions,2022,23088.08,
+EU Institutions,2022,21308.97,
 Finland,2000,631.89,0.31
 Finland,2001,660.28,0.32
 Finland,2002,738.51,0.35
@@ -205,7 +205,7 @@ Finland,2018,981.96,0.36
 Finland,2019,1172.14,0.42
 Finland,2020,1282.51,0.47
 Finland,2021,1358.92,0.47
-Finland,2022,1613.54,0.58
+Finland,2022,1615.62,0.57
 France,2000,6437.21,0.3
 France,2001,6641.73,0.31
 France,2002,8081.36,0.37
@@ -228,7 +228,7 @@ France,2018,11674.92,0.43
 France,2019,12227.75,0.44
 France,2020,13517.62,0.53
 France,2021,14111.8,0.51
-France,2022,15876.1,0.56
+France,2022,16014.21,0.56
 Germany,2000,8263.55,0.27
 Germany,2001,8326.68,0.27
 Germany,2002,8328.92,0.27
@@ -251,7 +251,7 @@ Germany,2018,25204.1,0.61
 Germany,2019,25207.71,0.61
 Germany,2020,28856.26,0.73
 Germany,2021,31272.81,0.76
-Germany,2022,35024.76,0.83
+Germany,2022,35640.06,0.85
 Greece,2000,352.87,0.2
 Greece,2001,320.5,0.17
 Greece,2002,403.76,0.21
@@ -274,7 +274,7 @@ Greece,2018,283.42,0.13
 Greece,2019,377.39,0.18
 Greece,2020,331.08,0.17
 Greece,2021,327.12,0.16
-Greece,2022,305.4,0.14
+Greece,2022,360.44,0.17
 Hungary,2003,28.86,0.03
 Hungary,2004,81.96,0.07
 Hungary,2005,112.54,0.11
@@ -294,7 +294,7 @@ Hungary,2018,278.37,0.21
 Hungary,2019,312.93,0.21
 Hungary,2020,417.38,0.27
 Hungary,2021,402.36,0.28
-Hungary,2022,395.63,0.28
+Hungary,2022,371.28,0.26
 Iceland,2000,14.28,0.1
 Iceland,2001,18.4,0.13
 Iceland,2002,21.18,0.15
@@ -317,7 +317,7 @@ Iceland,2018,72.37,0.28
 Iceland,2019,64.93,0.25
 Iceland,2020,65.22,0.27
 Iceland,2021,70.59,0.28
-Iceland,2022,93.05,0.34
+Iceland,2022,94.38,0.34
 Ireland,2000,399.01,0.29
 Ireland,2001,472.91,0.33
 Ireland,2002,591.48,0.4
@@ -340,7 +340,7 @@ Ireland,2018,909.93,0.31
 Ireland,2019,969.14,0.32
 Ireland,2020,971.07,0.31
 Ireland,2021,1089.28,0.3
-Ireland,2022,2451.95,0.64
+Ireland,2022,2410.23,0.63
 Italy,2000,2301.63,0.13
 Italy,2001,2717.56,0.15
 Italy,2002,3584.35,0.2
@@ -363,7 +363,7 @@ Italy,2018,4922.18,0.25
 Italy,2019,4370.17,0.22
 Italy,2020,4068.65,0.22
 Italy,2021,5585.61,0.29
-Italy,2022,6467.83,0.32
+Italy,2022,6645.78,0.33
 Japan,2000,10062.41,0.28
 Japan,2001,8358.01,0.23
 Japan,2002,8233.88,0.23
@@ -385,8 +385,8 @@ Japan,2017,9824.83,0.23
 Japan,2018,11951.3,0.28
 Japan,2019,12905.3,0.29
 Japan,2020,13060.85,0.31
-Japan,2021,14690.29,0.34
-Japan,2022,17475.33,0.39
+Japan,2021,14691.73,0.34
+Japan,2022,17499.94,0.39
 Korea,2000,284.19,0.04
 Korea,2001,391.17,0.06
 Korea,2002,387.71,0.05
@@ -409,7 +409,7 @@ Korea,2018,2117.12,0.14
 Korea,2019,2362.01,0.15
 Korea,2020,2151.43,0.14
 Korea,2021,2598.72,0.16
-Korea,2022,2785.63,0.17
+Korea,2022,2809.54,0.17
 Lithuania,2001,4.59,
 Lithuania,2002,3.94,
 Lithuania,2003,3.85,0.01
@@ -431,7 +431,7 @@ Lithuania,2018,74.59,0.12
 Lithuania,2019,79.81,0.13
 Lithuania,2020,81.98,0.13
 Lithuania,2021,88.97,0.14
-Lithuania,2022,196.99,0.29
+Lithuania,2022,243.26,0.36
 Luxembourg,2000,273.33,0.7
 Luxembourg,2001,315.3,0.77
 Luxembourg,2002,312.0,0.78
@@ -454,7 +454,7 @@ Luxembourg,2018,503.38,0.98
 Luxembourg,2019,521.51,1.03
 Luxembourg,2020,469.57,1.03
 Luxembourg,2021,508.45,0.99
-Luxembourg,2022,530.98,1.0
+Luxembourg,2022,530.12,1.0
 Netherlands,2000,5451.09,0.84
 Netherlands,2001,5449.86,0.82
 Netherlands,2002,5251.59,0.81
@@ -477,7 +477,7 @@ Netherlands,2018,5739.66,0.62
 Netherlands,2019,5492.95,0.59
 Netherlands,2020,5361.51,0.59
 Netherlands,2021,4973.32,0.52
-Netherlands,2022,6470.7,0.67
+Netherlands,2022,6469.96,0.67
 New Zealand,2000,270.84,0.25
 New Zealand,2001,276.84,0.25
 New Zealand,2002,272.63,0.22
@@ -500,7 +500,7 @@ New Zealand,2018,579.59,0.28
 New Zealand,2019,593.03,0.28
 New Zealand,2020,562.46,0.26
 New Zealand,2021,648.98,0.28
-New Zealand,2022,537.61,0.23
+New Zealand,2022,515.23,0.22
 Norway,2000,2770.73,0.76
 Norway,2001,2967.5,0.8
 Norway,2002,3375.78,0.89
@@ -546,7 +546,7 @@ Poland,2018,780.94,0.14
 Poland,2019,816.9,0.14
 Poland,2020,849.78,0.14
 Poland,2021,949.91,0.15
-Poland,2022,3378.18,0.51
+Poland,2022,3496.23,0.53
 Portugal,2000,488.27,0.26
 Portugal,2001,480.57,0.25
 Portugal,2002,526.69,0.27
@@ -569,7 +569,7 @@ Portugal,2018,406.2,0.18
 Portugal,2019,419.91,0.17
 Portugal,2020,406.87,0.18
 Portugal,2021,429.69,0.18
-Portugal,2022,504.7,0.23
+Portugal,2022,522.75,0.21
 Slovak Republic,2000,15.32,0.03
 Slovak Republic,2001,21.52,0.04
 Slovak Republic,2002,15.66,0.02
@@ -592,7 +592,7 @@ Slovak Republic,2018,141.51,0.13
 Slovak Republic,2019,122.34,0.11
 Slovak Republic,2020,143.18,0.14
 Slovak Republic,2021,148.2,0.14
-Slovak Republic,2022,171.01,0.15
+Slovak Republic,2022,171.88,0.15
 Slovenia,2005,41.38,0.11
 Slovenia,2006,50.9,0.12
 Slovenia,2007,55.1,0.12
@@ -610,7 +610,7 @@ Slovenia,2018,84.3,0.16
 Slovenia,2019,91.31,0.17
 Slovenia,2020,91.6,0.17
 Slovenia,2021,110.17,0.19
-Slovenia,2022,163.83,0.27
+Slovenia,2022,168.71,0.29
 Spain,2000,2051.05,0.22
 Spain,2001,2947.39,0.3
 Spain,2002,2652.43,0.26
@@ -633,7 +633,7 @@ Spain,2018,2787.04,0.2
 Spain,2019,2949.74,0.21
 Spain,2020,2904.82,0.23
 Spain,2021,3336.14,0.26
-Spain,2022,4207.38,0.3
+Spain,2022,4271.88,0.3
 Sweden,2000,2532.82,0.8
 Sweden,2001,2583.46,0.77
 Sweden,2002,2889.47,0.84
@@ -656,7 +656,7 @@ Sweden,2018,5910.25,1.07
 Sweden,2019,5440.43,0.96
 Sweden,2020,6333.47,1.14
 Sweden,2021,5350.48,0.91
-Sweden,2022,5455.61,0.9
+Sweden,2022,5457.97,0.89
 Switzerland,2000,1753.37,0.32
 Switzerland,2001,1770.28,0.33
 Switzerland,2002,1692.89,0.32
@@ -679,7 +679,7 @@ Switzerland,2018,3277.27,0.44
 Switzerland,2019,3331.92,0.44
 Switzerland,2020,3647.4,0.49
 Switzerland,2021,3857.45,0.5
-Switzerland,2022,4476.89,0.56
+Switzerland,2022,4497.19,0.56
 United Kingdom,2000,6039.29,0.32
 United Kingdom,2001,6324.13,0.32
 United Kingdom,2002,6410.81,0.31
@@ -702,7 +702,7 @@ United Kingdom,2018,20406.05,0.7
 United Kingdom,2019,20625.91,0.7
 United Kingdom,2020,18780.84,0.7
 United Kingdom,2021,14763.3,0.5
-United Kingdom,2022,15747.6,0.51
+United Kingdom,2022,15761.81,0.51
 United States,2000,16217.26,0.1
 United States,2001,18209.03,0.11
 United States,2002,20848.57,0.13
@@ -725,4 +725,4 @@ United States,2018,39342.8,0.16
 United States,2019,37902.65,0.15
 United States,2020,39742.37,0.17
 United States,2021,51107.28,0.2
-United States,2022,55277.04,0.22
+United States,2022,60522.41,0.23

@@ -54,6 +54,7 @@ SECTORS_MAPPING: dict = {
     "Other Sectors": [
         "Other Commodity Assistance",
         np.nan,
+        "nan",
         "Administrative Costs of Donors",
         "Disaster Risk Reduction",
         "Multi-Sector",
@@ -70,6 +71,7 @@ SECTORS_MAPPING: dict = {
         "Legislature & Political Parties",
         "Macroeconomic policy",
         "Migration",
+        "Elections",
         "Public finance management",
         "Public procurement",
         "Public sector policy & management",
