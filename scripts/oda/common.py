@@ -1,9 +1,11 @@
 import numpy as np
 import pandas as pd
 from bblocks import convert_id, format_number
-from pydeflate import deflate
+from pydeflate import deflate, set_pydeflate_path
 
 from scripts.config import PATHS
+
+set_pydeflate_path(PATHS.raw_data)
 
 # Define a year for the constant price calculations
 CONSTANT_YEAR: int = 2022
@@ -359,7 +361,9 @@ def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
                 d,
                 base_year=CONSTANT_YEAR,
                 date_column="year",
-                source="oecd_dac",
+                deflator_source="oecd_dac",
+                deflator_method="dac_deflator",
+                exchange_source="oecd_dac",
                 id_column="donor_code",
                 id_type="DAC",
                 source_col="value",

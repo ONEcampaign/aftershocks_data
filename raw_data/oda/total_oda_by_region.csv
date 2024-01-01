@@ -265,9 +265,9 @@ year,donor_code,recipient_code,value,indicator,recipient
 2000,20001,10004,187.91,bilateral,America
 2000,20001,10004,3862.34,bilateral,America
 2000,20001,10007,625.06,bilateral,Asia
-2000,20001,10007,11075.68,bilateral,Asia
-2000,20001,10010,386.38,bilateral,Europe
-2000,20001,10010,2092.99,bilateral,Europe
+2000,20001,10007,11075.78,bilateral,Asia
+2000,20001,10010,386.4,bilateral,Europe
+2000,20001,10010,2093.11,bilateral,Europe
 2000,20001,10011,806.17,bilateral,Middle East
 2000,20001,10011,1311.72,bilateral,Middle East
 2000,20001,10012,712.47,bilateral,Oceania
@@ -669,17 +669,17 @@ year,donor_code,recipient_code,value,indicator,recipient
 2000,918,10011,45.1,imputed_multilateral,Middle East
 2000,918,10012,0.0,imputed_multilateral,Oceania
 2000,918,10012,0.46,imputed_multilateral,Oceania
-2000,20001,9998,1176.46,imputed_multilateral,"Developing countries, unspecified"
+2000,20001,9998,1176.5,imputed_multilateral,"Developing countries, unspecified"
 2000,20001,10001,0.0,imputed_multilateral,Africa
-2000,20001,10001,6799.75,imputed_multilateral,Africa
+2000,20001,10001,6799.77,imputed_multilateral,Africa
 2000,20001,10004,0.0,imputed_multilateral,America
-2000,20001,10004,1399.33,imputed_multilateral,America
+2000,20001,10004,1399.34,imputed_multilateral,America
 2000,20001,10007,0.0,imputed_multilateral,Asia
-2000,20001,10007,5387.68,imputed_multilateral,Asia
+2000,20001,10007,5387.73,imputed_multilateral,Asia
 2000,20001,10010,0.0,imputed_multilateral,Europe
-2000,20001,10010,1690.93,imputed_multilateral,Europe
+2000,20001,10010,1690.94,imputed_multilateral,Europe
 2000,20001,10011,0.0,imputed_multilateral,Middle East
-2000,20001,10011,833.18,imputed_multilateral,Middle East
+2000,20001,10011,833.19,imputed_multilateral,Middle East
 2000,20001,10012,0.0,imputed_multilateral,Oceania
 2000,20001,10012,157.93,imputed_multilateral,Oceania
 2001,1,9998,26.69,bilateral,"Developing countries, unspecified"
@@ -948,15 +948,15 @@ year,donor_code,recipient_code,value,indicator,recipient
 2001,918,10011,197.45,bilateral,Middle East
 2001,918,10012,3.75,bilateral,Oceania
 2001,918,10012,49.96,bilateral,Oceania
-2001,20001,9998,7456.62,bilateral,"Developing countries, unspecified"
+2001,20001,9998,7456.73,bilateral,"Developing countries, unspecified"
 2001,20001,10001,4.81,bilateral,Africa
 2001,20001,10001,10156.72,bilateral,Africa
 2001,20001,10004,61.51,bilateral,America
 2001,20001,10004,4471.36,bilateral,America
 2001,20001,10007,60.91,bilateral,Asia
-2001,20001,10007,10817.61,bilateral,Asia
-2001,20001,10010,392.62,bilateral,Europe
-2001,20001,10010,1732.15,bilateral,Europe
+2001,20001,10007,10817.71,bilateral,Asia
+2001,20001,10010,392.64,bilateral,Europe
+2001,20001,10010,1732.17,bilateral,Europe
 2001,20001,10011,154.67,bilateral,Middle East
 2001,20001,10011,1152.86,bilateral,Middle East
 2001,20001,10012,678.66,bilateral,Oceania
@@ -1358,15 +1358,15 @@ year,donor_code,recipient_code,value,indicator,recipient
 2001,918,10011,55.97,imputed_multilateral,Middle East
 2001,918,10012,0.0,imputed_multilateral,Oceania
 2001,918,10012,0.21,imputed_multilateral,Oceania
-2001,20001,9998,1482.02,imputed_multilateral,"Developing countries, unspecified"
+2001,20001,9998,1482.07,imputed_multilateral,"Developing countries, unspecified"
 2001,20001,10001,0.0,imputed_multilateral,Africa
-2001,20001,10001,6824.14,imputed_multilateral,Africa
+2001,20001,10001,6824.16,imputed_multilateral,Africa
 2001,20001,10004,0.0,imputed_multilateral,America
-2001,20001,10004,1423.15,imputed_multilateral,America
+2001,20001,10004,1423.16,imputed_multilateral,America
 2001,20001,10007,0.0,imputed_multilateral,Asia
-2001,20001,10007,5453.33,imputed_multilateral,Asia
+2001,20001,10007,5453.36,imputed_multilateral,Asia
 2001,20001,10010,0.0,imputed_multilateral,Europe
-2001,20001,10010,1443.21,imputed_multilateral,Europe
+2001,20001,10010,1443.22,imputed_multilateral,Europe
 2001,20001,10011,0.0,imputed_multilateral,Middle East
 2001,20001,10011,708.78,imputed_multilateral,Middle East
 2001,20001,10012,0.0,imputed_multilateral,Oceania
@@ -1647,15 +1647,15 @@ year,donor_code,recipient_code,value,indicator,recipient
 2002,918,10011,296.33,bilateral,Middle East
 2002,918,10012,1.61,bilateral,Oceania
 2002,918,10012,22.77,bilateral,Oceania
-2002,20001,9998,8165.0,bilateral,"Developing countries, unspecified"
+2002,20001,9998,8165.02,bilateral,"Developing countries, unspecified"
 2002,20001,10001,5.79,bilateral,Africa
 2002,20001,10001,13379.3,bilateral,Africa
 2002,20001,10004,111.55,bilateral,America
 2002,20001,10004,3913.55,bilateral,America
 2002,20001,10007,695.39,bilateral,Asia
-2002,20001,10007,11496.38,bilateral,Asia
-2002,20001,10010,413.77,bilateral,Europe
-2002,20001,10010,3398.53,bilateral,Europe
+2002,20001,10007,11496.53,bilateral,Asia
+2002,20001,10010,413.8,bilateral,Europe
+2002,20001,10010,3398.56,bilateral,Europe
 2002,20001,10011,758.2,bilateral,Middle East
 2002,20001,10011,1243.38,bilateral,Middle East
 2002,20001,10012,660.1,bilateral,Oceania
@@ -2057,17 +2057,17 @@ year,donor_code,recipient_code,value,indicator,recipient
 2002,918,10011,64.33,imputed_multilateral,Middle East
 2002,918,10012,0.0,imputed_multilateral,Oceania
 2002,918,10012,0.04,imputed_multilateral,Oceania
-2002,20001,9998,1292.3,imputed_multilateral,"Developing countries, unspecified"
+2002,20001,9998,1292.36,imputed_multilateral,"Developing countries, unspecified"
 2002,20001,10001,0.0,imputed_multilateral,Africa
-2002,20001,10001,7078.7,imputed_multilateral,Africa
+2002,20001,10001,7079.19,imputed_multilateral,Africa
 2002,20001,10004,0.0,imputed_multilateral,America
-2002,20001,10004,1087.17,imputed_multilateral,America
+2002,20001,10004,1087.2,imputed_multilateral,America
 2002,20001,10007,0.0,imputed_multilateral,Asia
-2002,20001,10007,5545.5,imputed_multilateral,Asia
+2002,20001,10007,5545.78,imputed_multilateral,Asia
 2002,20001,10010,0.0,imputed_multilateral,Europe
-2002,20001,10010,1516.74,imputed_multilateral,Europe
+2002,20001,10010,1516.75,imputed_multilateral,Europe
 2002,20001,10011,0.0,imputed_multilateral,Middle East
-2002,20001,10011,895.86,imputed_multilateral,Middle East
+2002,20001,10011,895.88,imputed_multilateral,Middle East
 2002,20001,10012,0.0,imputed_multilateral,Oceania
 2002,20001,10012,96.64,imputed_multilateral,Oceania
 2003,1,9998,34.65,bilateral,"Developing countries, unspecified"
@@ -2354,17 +2354,17 @@ year,donor_code,recipient_code,value,indicator,recipient
 2003,918,10011,502.15,bilateral,Middle East
 2003,918,10012,8.5,bilateral,Oceania
 2003,918,10012,36.24,bilateral,Oceania
-2003,20001,9998,9373.55,bilateral,"Developing countries, unspecified"
+2003,20001,9998,9373.6,bilateral,"Developing countries, unspecified"
 2003,20001,10001,6.43,bilateral,Africa
 2003,20001,10001,19170.95,bilateral,Africa
 2003,20001,10004,116.07,bilateral,America
 2003,20001,10004,4591.34,bilateral,America
 2003,20001,10007,10.16,bilateral,Asia
-2003,20001,10007,13925.18,bilateral,Asia
-2003,20001,10010,264.39,bilateral,Europe
-2003,20001,10010,2309.42,bilateral,Europe
+2003,20001,10007,13925.39,bilateral,Asia
+2003,20001,10010,264.44,bilateral,Europe
+2003,20001,10010,2309.61,bilateral,Europe
 2003,20001,10011,445.57,bilateral,Middle East
-2003,20001,10011,4215.09,bilateral,Middle East
+2003,20001,10011,4215.2,bilateral,Middle East
 2003,20001,10012,747.73,bilateral,Oceania
 2003,20001,10012,963.93,bilateral,Oceania
 2003,1,9998,24.85,imputed_multilateral,"Developing countries, unspecified"
@@ -2764,17 +2764,17 @@ year,donor_code,recipient_code,value,indicator,recipient
 2003,918,10011,87.37,imputed_multilateral,Middle East
 2003,918,10012,0.0,imputed_multilateral,Oceania
 2003,918,10012,3.92,imputed_multilateral,Oceania
-2003,20001,9998,1556.08,imputed_multilateral,"Developing countries, unspecified"
+2003,20001,9998,1556.14,imputed_multilateral,"Developing countries, unspecified"
 2003,20001,10001,0.0,imputed_multilateral,Africa
-2003,20001,10001,8369.89,imputed_multilateral,Africa
+2003,20001,10001,8370.01,imputed_multilateral,Africa
 2003,20001,10004,0.0,imputed_multilateral,America
-2003,20001,10004,1533.89,imputed_multilateral,America
+2003,20001,10004,1533.91,imputed_multilateral,America
 2003,20001,10007,0.0,imputed_multilateral,Asia
-2003,20001,10007,5777.21,imputed_multilateral,Asia
+2003,20001,10007,5777.38,imputed_multilateral,Asia
 2003,20001,10010,0.0,imputed_multilateral,Europe
-2003,20001,10010,1234.93,imputed_multilateral,Europe
+2003,20001,10010,1234.95,imputed_multilateral,Europe
 2003,20001,10011,0.0,imputed_multilateral,Middle East
-2003,20001,10011,1166.21,imputed_multilateral,Middle East
+2003,20001,10011,1166.24,imputed_multilateral,Middle East
 2003,20001,10012,0.0,imputed_multilateral,Oceania
 2003,20001,10012,115.09,imputed_multilateral,Oceania
 2004,1,9998,45.25,bilateral,"Developing countries, unspecified"
@@ -3068,17 +3068,17 @@ year,donor_code,recipient_code,value,indicator,recipient
 2004,918,10011,674.78,bilateral,Middle East
 2004,918,10012,19.18,bilateral,Oceania
 2004,918,10012,66.42,bilateral,Oceania
-2004,20001,9998,11714.28,bilateral,"Developing countries, unspecified"
+2004,20001,9998,11714.35,bilateral,"Developing countries, unspecified"
 2004,20001,10001,9.7,bilateral,Africa
-2004,20001,10001,19383.13,bilateral,Africa
+2004,20001,10001,19383.17,bilateral,Africa
 2004,20001,10004,13.96,bilateral,America
 2004,20001,10004,5147.24,bilateral,America
 2004,20001,10007,450.8,bilateral,Asia
-2004,20001,10007,15742.68,bilateral,Asia
-2004,20001,10010,304.54,bilateral,Europe
-2004,20001,10010,1964.48,bilateral,Europe
+2004,20001,10007,15742.99,bilateral,Asia
+2004,20001,10010,304.62,bilateral,Europe
+2004,20001,10010,1964.65,bilateral,Europe
 2004,20001,10011,487.59,bilateral,Middle East
-2004,20001,10011,6027.41,bilateral,Middle East
+2004,20001,10011,6027.52,bilateral,Middle East
 2004,20001,10012,834.7,bilateral,Oceania
 2004,20001,10012,1084.87,bilateral,Oceania
 2004,1,9998,29.73,imputed_multilateral,"Developing countries, unspecified"
@@ -3478,19 +3478,19 @@ year,donor_code,recipient_code,value,indicator,recipient
 2004,918,10011,87.78,imputed_multilateral,Middle East
 2004,918,10012,0.0,imputed_multilateral,Oceania
 2004,918,10012,1.1,imputed_multilateral,Oceania
-2004,20001,9998,1776.23,imputed_multilateral,"Developing countries, unspecified"
+2004,20001,9998,1776.73,imputed_multilateral,"Developing countries, unspecified"
 2004,20001,10001,0.0,imputed_multilateral,Africa
-2004,20001,10001,11101.71,imputed_multilateral,Africa
+2004,20001,10001,11103.49,imputed_multilateral,Africa
 2004,20001,10004,0.0,imputed_multilateral,America
-2004,20001,10004,1814.25,imputed_multilateral,America
+2004,20001,10004,1814.62,imputed_multilateral,America
 2004,20001,10007,0.0,imputed_multilateral,Asia
-2004,20001,10007,8105.42,imputed_multilateral,Asia
+2004,20001,10007,8106.43,imputed_multilateral,Asia
 2004,20001,10010,0.0,imputed_multilateral,Europe
-2004,20001,10010,1671.64,imputed_multilateral,Europe
+2004,20001,10010,1672.11,imputed_multilateral,Europe
 2004,20001,10011,0.0,imputed_multilateral,Middle East
-2004,20001,10011,1337.94,imputed_multilateral,Middle East
+2004,20001,10011,1338.3,imputed_multilateral,Middle East
 2004,20001,10012,0.0,imputed_multilateral,Oceania
-2004,20001,10012,186.02,imputed_multilateral,Oceania
+2004,20001,10012,186.05,imputed_multilateral,Oceania
 2005,1,9998,48.93,bilateral,"Developing countries, unspecified"
 2005,1,10001,148.03,bilateral,Africa
 2005,1,10004,22.6,bilateral,America
@@ -3685,12 +3685,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2005,918,10010,1090.29,bilateral,Europe
 2005,918,10011,515.62,bilateral,Middle East
 2005,918,10012,85.01,bilateral,Oceania
-2005,20001,9998,11920.98,bilateral,"Developing countries, unspecified"
-2005,20001,10001,24669.08,bilateral,Africa
+2005,20001,9998,11921.15,bilateral,"Developing countries, unspecified"
+2005,20001,10001,24669.13,bilateral,Africa
 2005,20001,10004,4867.0,bilateral,America
-2005,20001,10007,38242.36,bilateral,Asia
-2005,20001,10010,2440.39,bilateral,Europe
-2005,20001,10011,23566.38,bilateral,Middle East
+2005,20001,10007,38243.73,bilateral,Asia
+2005,20001,10010,2440.7,bilateral,Europe
+2005,20001,10011,23566.49,bilateral,Middle East
 2005,20001,10012,974.42,bilateral,Oceania
 2005,1,9998,29.66,imputed_multilateral,"Developing countries, unspecified"
 2005,1,10001,163.89,imputed_multilateral,Africa
@@ -4059,18 +4059,18 @@ year,donor_code,recipient_code,value,indicator,recipient
 2005,918,10011,101.75,imputed_multilateral,Middle East
 2005,918,10012,0.0,imputed_multilateral,Oceania
 2005,918,10012,6.85,imputed_multilateral,Oceania
-2005,20001,9998,2191.99,imputed_multilateral,"Developing countries, unspecified"
-2005,20001,10001,11382.69,imputed_multilateral,Africa
+2005,20001,9998,2192.88,imputed_multilateral,"Developing countries, unspecified"
+2005,20001,10001,11385.78,imputed_multilateral,Africa
 2005,20001,10004,0.0,imputed_multilateral,America
-2005,20001,10004,2057.16,imputed_multilateral,America
+2005,20001,10004,2057.82,imputed_multilateral,America
 2005,20001,10007,0.0,imputed_multilateral,Asia
-2005,20001,10007,7272.46,imputed_multilateral,Asia
+2005,20001,10007,7273.97,imputed_multilateral,Asia
 2005,20001,10010,0.0,imputed_multilateral,Europe
-2005,20001,10010,1586.63,imputed_multilateral,Europe
+2005,20001,10010,1587.43,imputed_multilateral,Europe
 2005,20001,10011,0.0,imputed_multilateral,Middle East
-2005,20001,10011,1074.95,imputed_multilateral,Middle East
+2005,20001,10011,1075.37,imputed_multilateral,Middle East
 2005,20001,10012,0.0,imputed_multilateral,Oceania
-2005,20001,10012,331.65,imputed_multilateral,Oceania
+2005,20001,10012,331.76,imputed_multilateral,Oceania
 2006,1,9998,93.75,bilateral,"Developing countries, unspecified"
 2006,1,10001,551.44,bilateral,Africa
 2006,1,10004,24.09,bilateral,America
@@ -4269,12 +4269,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2006,918,10010,1339.99,bilateral,Europe
 2006,918,10011,900.19,bilateral,Middle East
 2006,918,10012,78.15,bilateral,Oceania
-2006,20001,9998,13719.83,bilateral,"Developing countries, unspecified"
-2006,20001,10001,31666.06,bilateral,Africa
+2006,20001,9998,13720.13,bilateral,"Developing countries, unspecified"
+2006,20001,10001,31666.15,bilateral,Africa
 2006,20001,10004,5289.98,bilateral,America
-2006,20001,10007,22702.0,bilateral,Asia
-2006,20001,10010,3179.56,bilateral,Europe
-2006,20001,10011,10525.21,bilateral,Middle East
+2006,20001,10007,22702.97,bilateral,Asia
+2006,20001,10010,3180.14,bilateral,Europe
+2006,20001,10011,10525.31,bilateral,Middle East
 2006,20001,10012,1073.24,bilateral,Oceania
 2006,1,9998,28.77,imputed_multilateral,"Developing countries, unspecified"
 2006,1,10001,223.54,imputed_multilateral,Africa
@@ -4643,18 +4643,18 @@ year,donor_code,recipient_code,value,indicator,recipient
 2006,918,10011,119.58,imputed_multilateral,Middle East
 2006,918,10012,0.0,imputed_multilateral,Oceania
 2006,918,10012,0.72,imputed_multilateral,Oceania
-2006,20001,9998,2214.22,imputed_multilateral,"Developing countries, unspecified"
-2006,20001,10001,14988.66,imputed_multilateral,Africa
+2006,20001,9998,2215.48,imputed_multilateral,"Developing countries, unspecified"
+2006,20001,10001,14993.89,imputed_multilateral,Africa
 2006,20001,10004,0.0,imputed_multilateral,America
-2006,20001,10004,2514.96,imputed_multilateral,America
+2006,20001,10004,2515.96,imputed_multilateral,America
 2006,20001,10007,0.0,imputed_multilateral,Asia
-2006,20001,10007,6142.16,imputed_multilateral,Asia
+2006,20001,10007,6144.91,imputed_multilateral,Asia
 2006,20001,10010,0.0,imputed_multilateral,Europe
-2006,20001,10010,1772.29,imputed_multilateral,Europe
+2006,20001,10010,1773.86,imputed_multilateral,Europe
 2006,20001,10011,0.0,imputed_multilateral,Middle East
-2006,20001,10011,1400.52,imputed_multilateral,Middle East
+2006,20001,10011,1401.61,imputed_multilateral,Middle East
 2006,20001,10012,0.0,imputed_multilateral,Oceania
-2006,20001,10012,167.89,imputed_multilateral,Oceania
+2006,20001,10012,167.98,imputed_multilateral,Oceania
 2007,1,9998,119.85,bilateral,"Developing countries, unspecified"
 2007,1,10001,418.9,bilateral,Africa
 2007,1,10004,27.46,bilateral,America
@@ -4855,12 +4855,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2007,918,10010,1465.11,bilateral,Europe
 2007,918,10011,854.27,bilateral,Middle East
 2007,918,10012,71.27,bilateral,Oceania
-2007,20001,9998,16036.3,bilateral,"Developing countries, unspecified"
-2007,20001,10001,24662.61,bilateral,Africa
+2007,20001,9998,16036.87,bilateral,"Developing countries, unspecified"
+2007,20001,10001,24662.7,bilateral,Africa
 2007,20001,10004,4868.35,bilateral,America
-2007,20001,10007,24776.3,bilateral,Asia
-2007,20001,10010,2237.96,bilateral,Europe
-2007,20001,10011,11004.25,bilateral,Middle East
+2007,20001,10007,24777.26,bilateral,Asia
+2007,20001,10010,2238.95,bilateral,Europe
+2007,20001,10011,11004.29,bilateral,Middle East
 2007,20001,10012,1176.85,bilateral,Oceania
 2007,1,9998,40.31,imputed_multilateral,"Developing countries, unspecified"
 2007,1,10001,239.11,imputed_multilateral,Africa
@@ -5229,18 +5229,18 @@ year,donor_code,recipient_code,value,indicator,recipient
 2007,918,10011,91.3,imputed_multilateral,Middle East
 2007,918,10012,0.0,imputed_multilateral,Oceania
 2007,918,10012,1.2,imputed_multilateral,Oceania
-2007,20001,9998,2725.72,imputed_multilateral,"Developing countries, unspecified"
-2007,20001,10001,14456.02,imputed_multilateral,Africa
+2007,20001,9998,2727.35,imputed_multilateral,"Developing countries, unspecified"
+2007,20001,10001,14462.08,imputed_multilateral,Africa
 2007,20001,10004,0.0,imputed_multilateral,America
-2007,20001,10004,2194.4,imputed_multilateral,America
+2007,20001,10004,2195.67,imputed_multilateral,America
 2007,20001,10007,0.0,imputed_multilateral,Asia
-2007,20001,10007,8618.79,imputed_multilateral,Asia
+2007,20001,10007,8621.48,imputed_multilateral,Asia
 2007,20001,10010,0.0,imputed_multilateral,Europe
-2007,20001,10010,2060.05,imputed_multilateral,Europe
+2007,20001,10010,2061.7,imputed_multilateral,Europe
 2007,20001,10011,0.0,imputed_multilateral,Middle East
-2007,20001,10011,1472.4,imputed_multilateral,Middle East
+2007,20001,10011,1473.4,imputed_multilateral,Middle East
 2007,20001,10012,0.0,imputed_multilateral,Oceania
-2007,20001,10012,187.51,imputed_multilateral,Oceania
+2007,20001,10012,187.58,imputed_multilateral,Oceania
 2008,1,9998,121.04,bilateral,"Developing countries, unspecified"
 2008,1,10001,159.71,bilateral,Africa
 2008,1,10004,27.77,bilateral,America
@@ -5449,7 +5449,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2008,918,10010,1791.01,bilateral,Europe
 2008,918,10011,1023.05,bilateral,Middle East
 2008,918,10012,94.12,bilateral,Oceania
-2008,20001,9998,19077.85,bilateral,"Developing countries, unspecified"
+2008,20001,9998,19083.71,bilateral,"Developing countries, unspecified"
 2008,20001,10001,27378.62,bilateral,Africa
 2008,20001,10004,7015.59,bilateral,America
 2008,20001,10007,29283.22,bilateral,Asia
@@ -6043,7 +6043,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2009,918,10010,2344.04,bilateral,Europe
 2009,918,10011,839.19,bilateral,Middle East
 2009,918,10012,82.25,bilateral,Oceania
-2009,20001,9998,21129.48,bilateral,"Developing countries, unspecified"
+2009,20001,9998,21133.09,bilateral,"Developing countries, unspecified"
 2009,20001,10001,28192.4,bilateral,Africa
 2009,20001,10004,6579.71,bilateral,America
 2009,20001,10007,23663.68,bilateral,Asia
@@ -6528,12 +6528,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2010,918,10010,1990.28,bilateral,Europe
 2010,918,10011,788.01,bilateral,Middle East
 2010,918,10012,120.97,bilateral,Oceania
-2010,20001,9998,24653.72,bilateral,"Developing countries, unspecified"
-2010,20001,10001,29140.3,bilateral,Africa
-2010,20001,10004,7283.09,bilateral,America
-2010,20001,10007,24871.68,bilateral,Asia
-2010,20001,10010,3098.99,bilateral,Europe
-2010,20001,10011,4872.49,bilateral,Middle East
+2010,20001,9998,24654.85,bilateral,"Developing countries, unspecified"
+2010,20001,10001,29140.39,bilateral,Africa
+2010,20001,10004,7283.77,bilateral,America
+2010,20001,10007,24873.78,bilateral,Asia
+2010,20001,10010,3099.9,bilateral,Europe
+2010,20001,10011,4873.0,bilateral,Middle East
 2010,20001,10012,1616.18,bilateral,Oceania
 2010,1,9998,45.53,imputed_multilateral,"Developing countries, unspecified"
 2010,1,10001,301.68,imputed_multilateral,Africa
@@ -6759,14 +6759,14 @@ year,donor_code,recipient_code,value,indicator,recipient
 2010,918,10010,2.51,imputed_multilateral,Europe
 2010,918,10011,113.48,imputed_multilateral,Middle East
 2010,918,10012,0.55,imputed_multilateral,Oceania
-2010,20001,9998,3557.51,imputed_multilateral,"Developing countries, unspecified"
-2010,20001,10001,17611.97,imputed_multilateral,Africa
+2010,20001,9998,3559.37,imputed_multilateral,"Developing countries, unspecified"
+2010,20001,10001,17617.76,imputed_multilateral,Africa
 2010,20001,10004,0.0,imputed_multilateral,America
-2010,20001,10004,2833.38,imputed_multilateral,America
-2010,20001,10007,9723.45,imputed_multilateral,Asia
-2010,20001,10010,2762.79,imputed_multilateral,Europe
-2010,20001,10011,1584.46,imputed_multilateral,Middle East
-2010,20001,10012,267.37,imputed_multilateral,Oceania
+2010,20001,10004,2834.69,imputed_multilateral,America
+2010,20001,10007,9726.14,imputed_multilateral,Asia
+2010,20001,10010,2764.68,imputed_multilateral,Europe
+2010,20001,10011,1585.2,imputed_multilateral,Middle East
+2010,20001,10012,267.47,imputed_multilateral,Oceania
 2011,1,9998,132.1,bilateral,"Developing countries, unspecified"
 2011,1,10001,124.69,bilateral,Africa
 2011,1,10004,30.97,bilateral,America
@@ -6972,13 +6972,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2011,918,10010,5544.3,bilateral,Europe
 2011,918,10011,756.65,bilateral,Middle East
 2011,918,10012,112.64,bilateral,Oceania
-2011,20001,9998,26085.22,bilateral,"Developing countries, unspecified"
-2011,20001,10001,32523.1,bilateral,Africa
+2011,20001,9998,26087.23,bilateral,"Developing countries, unspecified"
+2011,20001,10001,32523.64,bilateral,Africa
 2011,20001,10004,7683.34,bilateral,America
-2011,20001,10007,23898.61,bilateral,Asia
+2011,20001,10007,23900.95,bilateral,Asia
 2011,20001,10010,0.28,bilateral,Europe
-2011,20001,10010,2677.92,bilateral,Europe
-2011,20001,10011,4723.57,bilateral,Middle East
+2011,20001,10010,2680.3,bilateral,Europe
+2011,20001,10011,4723.78,bilateral,Middle East
 2011,20001,10012,1979.24,bilateral,Oceania
 2011,1,9998,39.01,imputed_multilateral,"Developing countries, unspecified"
 2011,1,10001,273.12,imputed_multilateral,Africa
@@ -7197,13 +7197,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2011,918,10010,2.82,imputed_multilateral,Europe
 2011,918,10011,137.58,imputed_multilateral,Middle East
 2011,918,10012,0.57,imputed_multilateral,Oceania
-2011,20001,9998,3289.17,imputed_multilateral,"Developing countries, unspecified"
-2011,20001,10001,17066.3,imputed_multilateral,Africa
-2011,20001,10004,2411.5,imputed_multilateral,America
-2011,20001,10007,11211.4,imputed_multilateral,Asia
-2011,20001,10010,4958.98,imputed_multilateral,Europe
-2011,20001,10011,1090.51,imputed_multilateral,Middle East
-2011,20001,10012,287.64,imputed_multilateral,Oceania
+2011,20001,9998,3290.5,imputed_multilateral,"Developing countries, unspecified"
+2011,20001,10001,17072.54,imputed_multilateral,Africa
+2011,20001,10004,2412.71,imputed_multilateral,America
+2011,20001,10007,11214.55,imputed_multilateral,Asia
+2011,20001,10010,4963.84,imputed_multilateral,Europe
+2011,20001,10011,1091.28,imputed_multilateral,Middle East
+2011,20001,10012,287.75,imputed_multilateral,Oceania
 2012,1,9998,133.28,bilateral,"Developing countries, unspecified"
 2012,1,10001,172.39,bilateral,Africa
 2012,1,10004,26.45,bilateral,America
@@ -7257,12 +7257,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2012,8,10010,114.31,bilateral,Europe
 2012,8,10011,186.82,bilateral,Middle East
 2012,8,10012,1.56,bilateral,Oceania
-2012,9,9998,13.44,bilateral,"Developing countries, unspecified"
-2012,9,10001,343.22,bilateral,Africa
-2012,9,10004,8.12,bilateral,America
-2012,9,10007,32.05,bilateral,Asia
+2012,9,9998,14.0,bilateral,"Developing countries, unspecified"
+2012,9,10001,342.8,bilateral,Africa
+2012,9,10004,8.1,bilateral,America
+2012,9,10007,31.94,bilateral,Asia
 2012,9,10010,0.43,bilateral,Europe
-2012,9,10011,0.06,bilateral,Middle East
+2012,9,10011,0.01,bilateral,Middle East
 2012,10,9998,1609.29,bilateral,"Developing countries, unspecified"
 2012,10,10001,1201.49,bilateral,Africa
 2012,10,10004,129.78,bilateral,America
@@ -7406,12 +7406,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2012,918,10010,5342.8,bilateral,Europe
 2012,918,10011,736.75,bilateral,Middle East
 2012,918,10012,86.26,bilateral,Oceania
-2012,20001,9998,24837.12,bilateral,"Developing countries, unspecified"
-2012,20001,10001,30271.15,bilateral,Africa
-2012,20001,10004,6603.43,bilateral,America
-2012,20001,10007,22817.54,bilateral,Asia
-2012,20001,10010,2075.41,bilateral,Europe
-2012,20001,10011,4898.65,bilateral,Middle East
+2012,20001,9998,24840.07,bilateral,"Developing countries, unspecified"
+2012,20001,10001,30271.24,bilateral,Africa
+2012,20001,10004,6603.4,bilateral,America
+2012,20001,10007,22821.91,bilateral,Asia
+2012,20001,10010,2076.63,bilateral,Europe
+2012,20001,10011,4898.86,bilateral,Middle East
 2012,20001,10012,1875.7,bilateral,Oceania
 2012,1,9998,28.4,imputed_multilateral,"Developing countries, unspecified"
 2012,1,10001,284.34,imputed_multilateral,Africa
@@ -7630,13 +7630,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2012,918,10010,3.72,imputed_multilateral,Europe
 2012,918,10011,107.61,imputed_multilateral,Middle East
 2012,918,10012,1.28,imputed_multilateral,Oceania
-2012,20001,9998,3061.52,imputed_multilateral,"Developing countries, unspecified"
-2012,20001,10001,17213.36,imputed_multilateral,Africa
-2012,20001,10004,2109.84,imputed_multilateral,America
-2012,20001,10007,8991.86,imputed_multilateral,Asia
-2012,20001,10010,4269.59,imputed_multilateral,Europe
-2012,20001,10011,1124.28,imputed_multilateral,Middle East
-2012,20001,10012,289.44,imputed_multilateral,Oceania
+2012,20001,9998,3062.78,imputed_multilateral,"Developing countries, unspecified"
+2012,20001,10001,17219.72,imputed_multilateral,Africa
+2012,20001,10004,2110.71,imputed_multilateral,America
+2012,20001,10007,8994.43,imputed_multilateral,Asia
+2012,20001,10010,4272.99,imputed_multilateral,Europe
+2012,20001,10011,1124.88,imputed_multilateral,Middle East
+2012,20001,10012,289.51,imputed_multilateral,Oceania
 2013,1,9998,150.82,bilateral,"Developing countries, unspecified"
 2013,1,10001,94.69,bilateral,Africa
 2013,1,10004,25.7,bilateral,America
@@ -7690,12 +7690,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2013,8,10010,98.54,bilateral,Europe
 2013,8,10011,285.87,bilateral,Middle East
 2013,8,10012,1.59,bilateral,Oceania
-2013,9,9998,16.27,bilateral,"Developing countries, unspecified"
-2013,9,10001,246.7,bilateral,Africa
-2013,9,10004,7.17,bilateral,America
-2013,9,10007,31.53,bilateral,Asia
+2013,9,9998,16.92,bilateral,"Developing countries, unspecified"
+2013,9,10001,246.31,bilateral,Africa
+2013,9,10004,7.16,bilateral,America
+2013,9,10007,31.28,bilateral,Asia
 2013,9,10010,1.13,bilateral,Europe
-2013,9,10011,0.42,bilateral,Middle East
+2013,9,10011,0.18,bilateral,Middle East
 2013,10,9998,1827.32,bilateral,"Developing countries, unspecified"
 2013,10,10001,1167.47,bilateral,Africa
 2013,10,10004,138.82,bilateral,America
@@ -7842,12 +7842,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2013,918,10010,4817.38,bilateral,Europe
 2013,918,10011,1155.47,bilateral,Middle East
 2013,918,10012,93.94,bilateral,Oceania
-2013,20001,9998,26185.62,bilateral,"Developing countries, unspecified"
-2013,20001,10001,30054.87,bilateral,Africa
+2013,20001,9998,26188.61,bilateral,"Developing countries, unspecified"
+2013,20001,10001,30055.34,bilateral,Africa
 2013,20001,10004,6320.68,bilateral,America
-2013,20001,10007,27095.12,bilateral,Asia
-2013,20001,10010,2032.37,bilateral,Europe
-2013,20001,10011,7399.78,bilateral,Middle East
+2013,20001,10007,27100.35,bilateral,Asia
+2013,20001,10010,2035.11,bilateral,Europe
+2013,20001,10011,7400.6,bilateral,Middle East
 2013,20001,10012,1759.29,bilateral,Oceania
 2013,1,9998,33.82,imputed_multilateral,"Developing countries, unspecified"
 2013,1,10001,290.81,imputed_multilateral,Africa
@@ -8066,13 +8066,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2013,918,10010,1.88,imputed_multilateral,Europe
 2013,918,10011,122.97,imputed_multilateral,Middle East
 2013,918,10012,0.5,imputed_multilateral,Oceania
-2013,20001,9998,3205.57,imputed_multilateral,"Developing countries, unspecified"
-2013,20001,10001,17635.79,imputed_multilateral,Africa
-2013,20001,10004,2224.69,imputed_multilateral,America
-2013,20001,10007,10788.0,imputed_multilateral,Asia
-2013,20001,10010,4593.83,imputed_multilateral,Europe
-2013,20001,10011,1618.67,imputed_multilateral,Middle East
-2013,20001,10012,317.42,imputed_multilateral,Oceania
+2013,20001,9998,3207.33,imputed_multilateral,"Developing countries, unspecified"
+2013,20001,10001,17642.96,imputed_multilateral,Africa
+2013,20001,10004,2225.91,imputed_multilateral,America
+2013,20001,10007,10791.67,imputed_multilateral,Asia
+2013,20001,10010,4598.92,imputed_multilateral,Europe
+2013,20001,10011,1619.95,imputed_multilateral,Middle East
+2013,20001,10012,317.5,imputed_multilateral,Oceania
 2014,1,9998,203.78,bilateral,"Developing countries, unspecified"
 2014,1,10001,71.49,bilateral,Africa
 2014,1,10004,28.74,bilateral,America
@@ -8279,13 +8279,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2014,918,10010,4877.34,bilateral,Europe
 2014,918,10011,1248.46,bilateral,Middle East
 2014,918,10012,95.23,bilateral,Oceania
-2014,20001,9998,29787.93,bilateral,"Developing countries, unspecified"
-2014,20001,10001,29050.17,bilateral,Africa
-2014,20001,10004,6476.38,bilateral,America
-2014,20001,10007,24787.16,bilateral,Asia
-2014,20001,10010,3143.67,bilateral,Europe
-2014,20001,10011,7230.96,bilateral,Middle East
-2014,20001,10012,1566.78,bilateral,Oceania
+2014,20001,9998,29791.67,bilateral,"Developing countries, unspecified"
+2014,20001,10001,29051.45,bilateral,Africa
+2014,20001,10004,6476.39,bilateral,America
+2014,20001,10007,24793.26,bilateral,Asia
+2014,20001,10010,3147.39,bilateral,Europe
+2014,20001,10011,7232.55,bilateral,Middle East
+2014,20001,10012,1566.91,bilateral,Oceania
 2014,1,9998,32.1,imputed_multilateral,"Developing countries, unspecified"
 2014,1,10001,0.0,imputed_multilateral,Africa
 2014,1,10001,275.07,imputed_multilateral,Africa
@@ -8677,19 +8677,19 @@ year,donor_code,recipient_code,value,indicator,recipient
 2014,918,10011,6.53,imputed_multilateral,Middle East
 2014,918,10012,0.0,imputed_multilateral,Oceania
 2014,918,10012,0.19,imputed_multilateral,Oceania
-2014,20001,9998,3557.97,imputed_multilateral,"Developing countries, unspecified"
+2014,20001,9998,3560.0,imputed_multilateral,"Developing countries, unspecified"
 2014,20001,10001,0.0,imputed_multilateral,Africa
-2014,20001,10001,18923.5,imputed_multilateral,Africa
+2014,20001,10001,18931.59,imputed_multilateral,Africa
 2014,20001,10004,0.0,imputed_multilateral,America
-2014,20001,10004,2110.62,imputed_multilateral,America
+2014,20001,10004,2111.73,imputed_multilateral,America
 2014,20001,10007,0.0,imputed_multilateral,Asia
-2014,20001,10007,11735.59,imputed_multilateral,Asia
+2014,20001,10007,11739.67,imputed_multilateral,Asia
 2014,20001,10010,0.0,imputed_multilateral,Europe
-2014,20001,10010,4800.23,imputed_multilateral,Europe
+2014,20001,10010,4805.48,imputed_multilateral,Europe
 2014,20001,10011,0.0,imputed_multilateral,Middle East
-2014,20001,10011,1707.74,imputed_multilateral,Middle East
+2014,20001,10011,1709.09,imputed_multilateral,Middle East
 2014,20001,10012,0.0,imputed_multilateral,Oceania
-2014,20001,10012,278.44,imputed_multilateral,Oceania
+2014,20001,10012,278.55,imputed_multilateral,Oceania
 2015,1,9998,513.73,bilateral,"Developing countries, unspecified"
 2015,1,10001,55.87,bilateral,Africa
 2015,1,10004,17.58,bilateral,America
@@ -8724,7 +8724,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2015,5,10010,1110.1,bilateral,Europe
 2015,5,10011,872.92,bilateral,Middle East
 2015,5,10012,26.57,bilateral,Oceania
-2015,6,9998,1158.94,bilateral,"Developing countries, unspecified"
+2015,6,9998,1156.52,bilateral,"Developing countries, unspecified"
 2015,6,10001,254.42,bilateral,Africa
 2015,6,10004,38.99,bilateral,America
 2015,6,10007,256.62,bilateral,Asia
@@ -8897,13 +8897,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2015,918,10010,3308.74,bilateral,Europe
 2015,918,10011,1195.59,bilateral,Middle East
 2015,918,10012,110.77,bilateral,Oceania
-2015,20001,9998,33887.06,bilateral,"Developing countries, unspecified"
-2015,20001,10001,26877.35,bilateral,Africa
-2015,20001,10004,5881.67,bilateral,America
-2015,20001,10007,23095.34,bilateral,Asia
-2015,20001,10010,2920.94,bilateral,Europe
-2015,20001,10011,7200.5,bilateral,Middle East
-2015,20001,10012,1505.73,bilateral,Oceania
+2015,20001,9998,33889.12,bilateral,"Developing countries, unspecified"
+2015,20001,10001,26877.84,bilateral,Africa
+2015,20001,10004,5881.79,bilateral,America
+2015,20001,10007,23100.15,bilateral,Asia
+2015,20001,10010,2926.02,bilateral,Europe
+2015,20001,10011,7201.55,bilateral,Middle East
+2015,20001,10012,1505.79,bilateral,Oceania
 2015,1,9998,32.5,imputed_multilateral,"Developing countries, unspecified"
 2015,1,10001,239.04,imputed_multilateral,Africa
 2015,1,10004,0.0,imputed_multilateral,America
@@ -9152,14 +9152,14 @@ year,donor_code,recipient_code,value,indicator,recipient
 2015,918,10010,2.9,imputed_multilateral,Europe
 2015,918,10011,0.93,imputed_multilateral,Middle East
 2015,918,10012,1.02,imputed_multilateral,Oceania
-2015,20001,9998,3088.85,imputed_multilateral,"Developing countries, unspecified"
-2015,20001,10001,15853.94,imputed_multilateral,Africa
+2015,20001,9998,3090.52,imputed_multilateral,"Developing countries, unspecified"
+2015,20001,10001,15859.76,imputed_multilateral,Africa
 2015,20001,10004,0.0,imputed_multilateral,America
-2015,20001,10004,1991.18,imputed_multilateral,America
-2015,20001,10007,9590.02,imputed_multilateral,Asia
-2015,20001,10010,3926.38,imputed_multilateral,Europe
-2015,20001,10011,1502.29,imputed_multilateral,Middle East
-2015,20001,10012,289.63,imputed_multilateral,Oceania
+2015,20001,10004,1992.33,imputed_multilateral,America
+2015,20001,10007,9593.47,imputed_multilateral,Asia
+2015,20001,10010,3930.35,imputed_multilateral,Europe
+2015,20001,10011,1503.51,imputed_multilateral,Middle East
+2015,20001,10012,289.74,imputed_multilateral,Oceania
 2016,1,9998,670.17,bilateral,"Developing countries, unspecified"
 2016,1,10001,64.33,bilateral,Africa
 2016,1,10004,29.0,bilateral,America
@@ -9195,7 +9195,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2016,5,10010,715.24,bilateral,Europe
 2016,5,10011,2089.46,bilateral,Middle East
 2016,5,10012,15.27,bilateral,Oceania
-2016,6,9998,1786.75,bilateral,"Developing countries, unspecified"
+2016,6,9998,1785.94,bilateral,"Developing countries, unspecified"
 2016,6,10001,337.09,bilateral,Africa
 2016,6,10004,34.88,bilateral,America
 2016,6,10007,166.61,bilateral,Asia
@@ -9216,12 +9216,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2016,8,10010,55.25,bilateral,Europe
 2016,8,10011,396.37,bilateral,Middle East
 2016,8,10012,1.39,bilateral,Oceania
-2016,9,9998,15.11,bilateral,"Developing countries, unspecified"
-2016,9,10001,72.36,bilateral,Africa
-2016,9,10004,4.57,bilateral,America
-2016,9,10007,32.63,bilateral,Asia
+2016,9,9998,16.97,bilateral,"Developing countries, unspecified"
+2016,9,10001,70.57,bilateral,Africa
+2016,9,10004,4.55,bilateral,America
+2016,9,10007,32.58,bilateral,Asia
 2016,9,10010,0.1,bilateral,Europe
-2016,9,10011,7.83,bilateral,Middle East
+2016,9,10011,7.82,bilateral,Middle East
 2016,10,9998,1812.17,bilateral,"Developing countries, unspecified"
 2016,10,10001,842.14,bilateral,Africa
 2016,10,10004,114.62,bilateral,America
@@ -9368,13 +9368,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2016,918,10010,4490.86,bilateral,Europe
 2016,918,10011,1503.88,bilateral,Middle East
 2016,918,10012,71.31,bilateral,Oceania
-2016,20001,9998,38832.37,bilateral,"Developing countries, unspecified"
-2016,20001,10001,27213.46,bilateral,Africa
-2016,20001,10004,8249.43,bilateral,America
-2016,20001,10007,24470.83,bilateral,Asia
-2016,20001,10010,3024.81,bilateral,Europe
-2016,20001,10011,9717.61,bilateral,Middle East
-2016,20001,10012,1332.45,bilateral,Oceania
+2016,20001,9998,38839.78,bilateral,"Developing countries, unspecified"
+2016,20001,10001,27212.27,bilateral,Africa
+2016,20001,10004,8249.61,bilateral,America
+2016,20001,10007,24474.86,bilateral,Asia
+2016,20001,10010,3032.15,bilateral,Europe
+2016,20001,10011,9719.18,bilateral,Middle East
+2016,20001,10012,1332.47,bilateral,Oceania
 2016,1,9998,36.69,imputed_multilateral,"Developing countries, unspecified"
 2016,1,10001,272.19,imputed_multilateral,Africa
 2016,1,10004,0.0,imputed_multilateral,America
@@ -9622,14 +9622,14 @@ year,donor_code,recipient_code,value,indicator,recipient
 2016,918,10010,6.18,imputed_multilateral,Europe
 2016,918,10011,1.47,imputed_multilateral,Middle East
 2016,918,10012,2.23,imputed_multilateral,Oceania
-2016,20001,9998,3257.77,imputed_multilateral,"Developing countries, unspecified"
-2016,20001,10001,18373.63,imputed_multilateral,Africa
+2016,20001,9998,3259.74,imputed_multilateral,"Developing countries, unspecified"
+2016,20001,10001,18382.04,imputed_multilateral,Africa
 2016,20001,10004,0.0,imputed_multilateral,America
-2016,20001,10004,2287.27,imputed_multilateral,America
-2016,20001,10007,10542.8,imputed_multilateral,Asia
-2016,20001,10010,4703.38,imputed_multilateral,Europe
-2016,20001,10011,1682.17,imputed_multilateral,Middle East
-2016,20001,10012,446.53,imputed_multilateral,Oceania
+2016,20001,10004,2288.68,imputed_multilateral,America
+2016,20001,10007,10547.9,imputed_multilateral,Asia
+2016,20001,10010,4709.57,imputed_multilateral,Europe
+2016,20001,10011,1684.26,imputed_multilateral,Middle East
+2016,20001,10012,446.62,imputed_multilateral,Oceania
 2017,1,9998,224.46,bilateral,"Developing countries, unspecified"
 2017,1,10001,87.52,bilateral,Africa
 2017,1,10004,28.79,bilateral,America
@@ -9684,12 +9684,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2017,8,10010,66.84,bilateral,Europe
 2017,8,10011,439.27,bilateral,Middle East
 2017,8,10012,1.11,bilateral,Oceania
-2017,9,9998,15.97,bilateral,"Developing countries, unspecified"
-2017,9,10001,61.36,bilateral,Africa
-2017,9,10004,6.32,bilateral,America
-2017,9,10007,30.83,bilateral,Asia
-2017,9,10010,0.06,bilateral,Europe
-2017,9,10011,12.38,bilateral,Middle East
+2017,9,9998,17.66,bilateral,"Developing countries, unspecified"
+2017,9,10001,59.72,bilateral,Africa
+2017,9,10004,6.3,bilateral,America
+2017,9,10007,18.73,bilateral,Asia
+2017,9,10010,12.12,bilateral,Europe
+2017,9,10011,0.29,bilateral,Middle East
 2017,10,9998,1903.69,bilateral,"Developing countries, unspecified"
 2017,10,10001,1033.43,bilateral,Africa
 2017,10,10004,116.0,bilateral,America
@@ -9835,13 +9835,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2017,918,10010,3514.56,bilateral,Europe
 2017,918,10011,1427.64,bilateral,Middle East
 2017,918,10012,103.26,bilateral,Oceania
-2017,20001,9998,37769.49,bilateral,"Developing countries, unspecified"
-2017,20001,10001,29773.49,bilateral,Africa
-2017,20001,10004,5445.88,bilateral,America
-2017,20001,10007,27429.97,bilateral,Asia
-2017,20001,10010,3574.0,bilateral,Europe
-2017,20001,10011,10672.97,bilateral,Middle East
-2017,20001,10012,1582.35,bilateral,Oceania
+2017,20001,9998,37780.78,bilateral,"Developing countries, unspecified"
+2017,20001,10001,29773.36,bilateral,Africa
+2017,20001,10004,5445.97,bilateral,America
+2017,20001,10007,27421.45,bilateral,Asia
+2017,20001,10010,3591.45,bilateral,Europe
+2017,20001,10011,10661.76,bilateral,Middle East
+2017,20001,10012,1582.46,bilateral,Oceania
 2017,1,9998,43.9,imputed_multilateral,"Developing countries, unspecified"
 2017,1,10001,0.0,imputed_multilateral,Africa
 2017,1,10001,286.53,imputed_multilateral,Africa
@@ -10089,14 +10089,14 @@ year,donor_code,recipient_code,value,indicator,recipient
 2017,918,10010,3.75,imputed_multilateral,Europe
 2017,918,10011,116.26,imputed_multilateral,Middle East
 2017,918,10012,1.6,imputed_multilateral,Oceania
-2017,20001,9998,3386.49,imputed_multilateral,"Developing countries, unspecified"
+2017,20001,9998,3388.88,imputed_multilateral,"Developing countries, unspecified"
 2017,20001,10001,0.0,imputed_multilateral,Africa
-2017,20001,10001,18889.61,imputed_multilateral,Africa
-2017,20001,10004,2371.2,imputed_multilateral,America
-2017,20001,10007,10251.72,imputed_multilateral,Asia
-2017,20001,10010,4223.31,imputed_multilateral,Europe
-2017,20001,10011,2002.72,imputed_multilateral,Middle East
-2017,20001,10012,529.52,imputed_multilateral,Oceania
+2017,20001,10001,18897.19,imputed_multilateral,Africa
+2017,20001,10004,2372.76,imputed_multilateral,America
+2017,20001,10007,10256.2,imputed_multilateral,Asia
+2017,20001,10010,4228.37,imputed_multilateral,Europe
+2017,20001,10011,2004.61,imputed_multilateral,Middle East
+2017,20001,10012,529.66,imputed_multilateral,Oceania
 2018,1,9998,117.14,bilateral,"Developing countries, unspecified"
 2018,1,10001,87.68,bilateral,Africa
 2018,1,10004,34.04,bilateral,America
@@ -10131,7 +10131,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2018,5,10010,903.16,bilateral,Europe
 2018,5,10011,2557.82,bilateral,Middle East
 2018,5,10012,16.23,bilateral,Oceania
-2018,6,9998,1382.89,bilateral,"Developing countries, unspecified"
+2018,6,9998,1378.16,bilateral,"Developing countries, unspecified"
 2018,6,10001,377.14,bilateral,Africa
 2018,6,10004,-4.47,bilateral,America
 2018,6,10007,289.94,bilateral,Asia
@@ -10144,19 +10144,19 @@ year,donor_code,recipient_code,value,indicator,recipient
 2018,7,10007,401.15,bilateral,Asia
 2018,7,10010,26.6,bilateral,Europe
 2018,7,10011,301.15,bilateral,Middle East
-2018,8,9998,1504.17,bilateral,"Developing countries, unspecified"
+2018,8,9998,1499.87,bilateral,"Developing countries, unspecified"
 2018,8,10001,788.31,bilateral,Africa
 2018,8,10004,191.17,bilateral,America
 2018,8,10007,670.75,bilateral,Asia
 2018,8,10010,73.16,bilateral,Europe
 2018,8,10011,392.2,bilateral,Middle East
 2018,8,10012,1.74,bilateral,Oceania
-2018,9,9998,31.02,bilateral,"Developing countries, unspecified"
-2018,9,10001,68.38,bilateral,Africa
-2018,9,10004,6.81,bilateral,America
-2018,9,10007,25.58,bilateral,Asia
-2018,9,10010,0.13,bilateral,Europe
-2018,9,10011,6.61,bilateral,Middle East
+2018,9,9998,32.94,bilateral,"Developing countries, unspecified"
+2018,9,10001,66.65,bilateral,Africa
+2018,9,10004,6.78,bilateral,America
+2018,9,10007,19.32,bilateral,Asia
+2018,9,10010,6.24,bilateral,Europe
+2018,9,10011,0.42,bilateral,Middle East
 2018,10,9998,1684.37,bilateral,"Developing countries, unspecified"
 2018,10,10001,1188.68,bilateral,Africa
 2018,10,10004,122.98,bilateral,America
@@ -10303,13 +10303,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2018,918,10010,2569.29,bilateral,Europe
 2018,918,10011,1699.03,bilateral,Middle East
 2018,918,10012,136.58,bilateral,Oceania
-2018,20001,9998,37280.29,bilateral,"Developing countries, unspecified"
-2018,20001,10001,30421.34,bilateral,Africa
-2018,20001,10004,6860.27,bilateral,America
-2018,20001,10007,25935.85,bilateral,Asia
-2018,20001,10010,2999.81,bilateral,Europe
-2018,20001,10011,10490.51,bilateral,Middle East
-2018,20001,10012,1696.23,bilateral,Oceania
+2018,20001,9998,37281.15,bilateral,"Developing countries, unspecified"
+2018,20001,10001,30420.25,bilateral,Africa
+2018,20001,10004,6860.26,bilateral,America
+2018,20001,10007,25934.79,bilateral,Asia
+2018,20001,10010,3013.69,bilateral,Europe
+2018,20001,10011,10486.35,bilateral,Middle East
+2018,20001,10012,1696.3,bilateral,Oceania
 2018,1,9998,50.26,imputed_multilateral,"Developing countries, unspecified"
 2018,1,10001,307.09,imputed_multilateral,Africa
 2018,1,10004,35.59,imputed_multilateral,America
@@ -10527,13 +10527,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2018,918,10010,3.71,imputed_multilateral,Europe
 2018,918,10011,129.2,imputed_multilateral,Middle East
 2018,918,10012,1.48,imputed_multilateral,Oceania
-2018,20001,9998,3788.94,imputed_multilateral,"Developing countries, unspecified"
-2018,20001,10001,20276.5,imputed_multilateral,Africa
-2018,20001,10004,2465.95,imputed_multilateral,America
-2018,20001,10007,12442.78,imputed_multilateral,Asia
-2018,20001,10010,3807.98,imputed_multilateral,Europe
-2018,20001,10011,2290.68,imputed_multilateral,Middle East
-2018,20001,10012,595.65,imputed_multilateral,Oceania
+2018,20001,9998,3792.35,imputed_multilateral,"Developing countries, unspecified"
+2018,20001,10001,20285.68,imputed_multilateral,Africa
+2018,20001,10004,2467.78,imputed_multilateral,America
+2018,20001,10007,12448.08,imputed_multilateral,Asia
+2018,20001,10010,3813.15,imputed_multilateral,Europe
+2018,20001,10011,2292.81,imputed_multilateral,Middle East
+2018,20001,10012,595.84,imputed_multilateral,Oceania
 2019,1,9998,120.91,bilateral,"Developing countries, unspecified"
 2019,1,10001,82.79,bilateral,Africa
 2019,1,10004,21.85,bilateral,America
@@ -10560,7 +10560,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2019,4,10007,1329.54,bilateral,Asia
 2019,4,10010,77.67,bilateral,Europe
 2019,4,10011,236.69,bilateral,Middle East
-2019,4,10012,129.45,bilateral,Oceania
+2019,4,10012,129.46,bilateral,Oceania
 2019,5,9998,6658.81,bilateral,"Developing countries, unspecified"
 2019,5,10001,4549.19,bilateral,Africa
 2019,5,10004,1181.1,bilateral,America
@@ -10568,11 +10568,11 @@ year,donor_code,recipient_code,value,indicator,recipient
 2019,5,10010,732.42,bilateral,Europe
 2019,5,10011,2747.83,bilateral,Middle East
 2019,5,10012,11.09,bilateral,Oceania
-2019,6,9998,651.6,bilateral,"Developing countries, unspecified"
+2019,6,9998,651.57,bilateral,"Developing countries, unspecified"
 2019,6,10001,384.92,bilateral,Africa
 2019,6,10004,-12.3,bilateral,America
 2019,6,10007,221.6,bilateral,Asia
-2019,6,10010,74.31,bilateral,Europe
+2019,6,10010,73.79,bilateral,Europe
 2019,6,10011,136.52,bilateral,Middle East
 2019,6,10012,2.66,bilateral,Oceania
 2019,7,9998,2392.94,bilateral,"Developing countries, unspecified"
@@ -10581,19 +10581,19 @@ year,donor_code,recipient_code,value,indicator,recipient
 2019,7,10007,221.39,bilateral,Asia
 2019,7,10010,20.21,bilateral,Europe
 2019,7,10011,106.81,bilateral,Middle East
-2019,8,9998,1549.5,bilateral,"Developing countries, unspecified"
+2019,8,9998,1540.06,bilateral,"Developing countries, unspecified"
 2019,8,10001,800.54,bilateral,Africa
 2019,8,10004,196.34,bilateral,America
 2019,8,10007,688.72,bilateral,Asia
 2019,8,10010,78.49,bilateral,Europe
 2019,8,10011,398.71,bilateral,Middle East
 2019,8,10012,1.72,bilateral,Oceania
-2019,9,9998,21.59,bilateral,"Developing countries, unspecified"
-2019,9,10001,64.94,bilateral,Africa
-2019,9,10004,7.37,bilateral,America
-2019,9,10007,23.75,bilateral,Asia
-2019,9,10010,-0.03,bilateral,Europe
-2019,9,10011,4.77,bilateral,Middle East
+2019,9,9998,22.76,bilateral,"Developing countries, unspecified"
+2019,9,10001,64.43,bilateral,Africa
+2019,9,10004,7.36,bilateral,America
+2019,9,10007,18.99,bilateral,Asia
+2019,9,10010,4.07,bilateral,Europe
+2019,9,10011,0.49,bilateral,Middle East
 2019,10,9998,1404.04,bilateral,"Developing countries, unspecified"
 2019,10,10001,1130.96,bilateral,Africa
 2019,10,10004,119.98,bilateral,America
@@ -10742,13 +10742,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2019,918,10010,2099.99,bilateral,Europe
 2019,918,10011,1484.31,bilateral,Middle East
 2019,918,10012,142.32,bilateral,Oceania
-2019,20001,9998,37442.06,bilateral,"Developing countries, unspecified"
-2019,20001,10001,29618.5,bilateral,Africa
-2019,20001,10004,5921.95,bilateral,America
-2019,20001,10007,26359.87,bilateral,Asia
-2019,20001,10010,2468.62,bilateral,Europe
-2019,20001,10011,10188.0,bilateral,Middle East
-2019,20001,10012,1682.56,bilateral,Oceania
+2019,20001,9998,37439.46,bilateral,"Developing countries, unspecified"
+2019,20001,10001,29618.44,bilateral,Africa
+2019,20001,10004,5922.12,bilateral,America
+2019,20001,10007,26359.44,bilateral,Asia
+2019,20001,10010,2478.36,bilateral,Europe
+2019,20001,10011,10185.19,bilateral,Middle East
+2019,20001,10012,1682.63,bilateral,Oceania
 2019,1,9998,49.41,imputed_multilateral,"Developing countries, unspecified"
 2019,1,10001,348.52,imputed_multilateral,Africa
 2019,1,10004,53.81,imputed_multilateral,America
@@ -10966,13 +10966,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2019,918,10010,2.61,imputed_multilateral,Europe
 2019,918,10011,116.85,imputed_multilateral,Middle East
 2019,918,10012,1.68,imputed_multilateral,Oceania
-2019,20001,9998,2853.11,imputed_multilateral,"Developing countries, unspecified"
-2019,20001,10001,19514.68,imputed_multilateral,Africa
-2019,20001,10004,2502.13,imputed_multilateral,America
-2019,20001,10007,10373.21,imputed_multilateral,Asia
-2019,20001,10010,3919.69,imputed_multilateral,Europe
-2019,20001,10011,2307.57,imputed_multilateral,Middle East
-2019,20001,10012,347.52,imputed_multilateral,Oceania
+2019,20001,9998,2856.22,imputed_multilateral,"Developing countries, unspecified"
+2019,20001,10001,19527.38,imputed_multilateral,Africa
+2019,20001,10004,2503.65,imputed_multilateral,America
+2019,20001,10007,10379.26,imputed_multilateral,Asia
+2019,20001,10010,3925.61,imputed_multilateral,Europe
+2019,20001,10011,2310.08,imputed_multilateral,Middle East
+2019,20001,10012,347.76,imputed_multilateral,Oceania
 2020,1,9998,180.17,bilateral,"Developing countries, unspecified"
 2020,1,10001,106.8,bilateral,Africa
 2020,1,10004,36.11,bilateral,America
@@ -11007,7 +11007,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2020,5,10010,978.86,bilateral,Europe
 2020,5,10011,2782.48,bilateral,Middle East
 2020,5,10012,12.32,bilateral,Oceania
-2020,6,9998,407.3,bilateral,"Developing countries, unspecified"
+2020,6,9998,404.62,bilateral,"Developing countries, unspecified"
 2020,6,10001,455.73,bilateral,Africa
 2020,6,10004,167.88,bilateral,America
 2020,6,10007,211.98,bilateral,Asia
@@ -11020,7 +11020,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2020,7,10007,265.69,bilateral,Asia
 2020,7,10010,36.71,bilateral,Europe
 2020,7,10011,178.09,bilateral,Middle East
-2020,8,9998,1546.27,bilateral,"Developing countries, unspecified"
+2020,8,9998,1537.78,bilateral,"Developing countries, unspecified"
 2020,8,10001,749.24,bilateral,Africa
 2020,8,10004,121.33,bilateral,America
 2020,8,10007,627.43,bilateral,Asia
@@ -11030,9 +11030,9 @@ year,donor_code,recipient_code,value,indicator,recipient
 2020,9,9998,24.48,bilateral,"Developing countries, unspecified"
 2020,9,10001,66.21,bilateral,Africa
 2020,9,10004,10.85,bilateral,America
-2020,9,10007,65.14,bilateral,Asia
-2020,9,10010,0.4,bilateral,Europe
-2020,9,10011,4.72,bilateral,Middle East
+2020,9,10007,61.16,bilateral,Asia
+2020,9,10010,4.39,bilateral,Europe
+2020,9,10011,0.74,bilateral,Middle East
 2020,10,9998,1450.11,bilateral,"Developing countries, unspecified"
 2020,10,10001,1178.32,bilateral,Africa
 2020,10,10004,126.11,bilateral,America
@@ -11179,13 +11179,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2020,918,10010,3728.14,bilateral,Europe
 2020,918,10011,1711.44,bilateral,Middle East
 2020,918,10012,135.72,bilateral,Oceania
-2020,20001,9998,38935.31,bilateral,"Developing countries, unspecified"
-2020,20001,10001,33769.68,bilateral,Africa
-2020,20001,10004,7663.65,bilateral,America
-2020,20001,10007,29745.4,bilateral,Asia
-2020,20001,10010,2810.85,bilateral,Europe
-2020,20001,10011,10724.11,bilateral,Middle East
-2020,20001,10012,1879.82,bilateral,Oceania
+2020,20001,9998,38930.85,bilateral,"Developing countries, unspecified"
+2020,20001,10001,33770.86,bilateral,Africa
+2020,20001,10004,7663.71,bilateral,America
+2020,20001,10007,29745.17,bilateral,Asia
+2020,20001,10010,2819.78,bilateral,Europe
+2020,20001,10011,10721.63,bilateral,Middle East
+2020,20001,10012,1879.84,bilateral,Oceania
 2020,1,9998,44.64,imputed_multilateral,"Developing countries, unspecified"
 2020,1,10001,361.26,imputed_multilateral,Africa
 2020,1,10004,43.84,imputed_multilateral,America
@@ -11403,13 +11403,13 @@ year,donor_code,recipient_code,value,indicator,recipient
 2020,918,10010,0.25,imputed_multilateral,Europe
 2020,918,10011,99.97,imputed_multilateral,Middle East
 2020,918,10012,0.59,imputed_multilateral,Oceania
-2020,20001,9998,2822.74,imputed_multilateral,"Developing countries, unspecified"
-2020,20001,10001,21902.36,imputed_multilateral,Africa
-2020,20001,10004,3116.72,imputed_multilateral,America
-2020,20001,10007,10765.83,imputed_multilateral,Asia
-2020,20001,10010,4278.22,imputed_multilateral,Europe
-2020,20001,10011,1947.66,imputed_multilateral,Middle East
-2020,20001,10012,532.54,imputed_multilateral,Oceania
+2020,20001,9998,2825.59,imputed_multilateral,"Developing countries, unspecified"
+2020,20001,10001,21915.12,imputed_multilateral,Africa
+2020,20001,10004,3118.51,imputed_multilateral,America
+2020,20001,10007,10772.26,imputed_multilateral,Asia
+2020,20001,10010,4284.71,imputed_multilateral,Europe
+2020,20001,10011,1950.0,imputed_multilateral,Middle East
+2020,20001,10012,532.74,imputed_multilateral,Oceania
 2021,1,9998,167.26,bilateral,"Developing countries, unspecified"
 2021,1,10001,174.22,bilateral,Africa
 2021,1,10004,32.57,bilateral,America
@@ -11431,7 +11431,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2021,3,10010,48.79,bilateral,Europe
 2021,3,10011,213.32,bilateral,Middle East
 2021,3,10012,0.03,bilateral,Oceania
-2021,4,9998,3142.58,bilateral,"Developing countries, unspecified"
+2021,4,9998,3143.1,bilateral,"Developing countries, unspecified"
 2021,4,10001,3554.14,bilateral,Africa
 2021,4,10004,1759.42,bilateral,America
 2021,4,10007,1557.78,bilateral,Asia
@@ -11445,12 +11445,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2021,5,10010,883.0,bilateral,Europe
 2021,5,10011,2754.82,bilateral,Middle East
 2021,5,10012,9.27,bilateral,Oceania
-2021,6,9998,951.01,bilateral,"Developing countries, unspecified"
+2021,6,9998,950.1,bilateral,"Developing countries, unspecified"
 2021,6,10001,1030.29,bilateral,Africa
 2021,6,10004,173.17,bilateral,America
-2021,6,10007,284.59,bilateral,Asia
+2021,6,10007,284.58,bilateral,Asia
 2021,6,10010,49.34,bilateral,Europe
-2021,6,10011,160.07,bilateral,Middle East
+2021,6,10011,160.06,bilateral,Middle East
 2021,6,10012,0.76,bilateral,Oceania
 2021,7,9998,2648.55,bilateral,"Developing countries, unspecified"
 2021,7,10001,846.75,bilateral,Africa
@@ -11458,19 +11458,19 @@ year,donor_code,recipient_code,value,indicator,recipient
 2021,7,10007,225.88,bilateral,Asia
 2021,7,10010,32.13,bilateral,Europe
 2021,7,10011,153.79,bilateral,Middle East
-2021,8,9998,1839.14,bilateral,"Developing countries, unspecified"
+2021,8,9998,1830.41,bilateral,"Developing countries, unspecified"
 2021,8,10001,820.48,bilateral,Africa
 2021,8,10004,153.53,bilateral,America
 2021,8,10007,616.36,bilateral,Asia
 2021,8,10010,60.53,bilateral,Europe
 2021,8,10011,330.23,bilateral,Middle East
 2021,8,10012,1.39,bilateral,Oceania
-2021,9,9998,21.04,bilateral,"Developing countries, unspecified"
+2021,9,9998,23.98,bilateral,"Developing countries, unspecified"
 2021,9,10001,101.3,bilateral,Africa
 2021,9,10004,11.58,bilateral,America
-2021,9,10007,27.06,bilateral,Asia
-2021,9,10010,-5.65,bilateral,Europe
-2021,9,10011,3.31,bilateral,Middle East
+2021,9,10007,21.66,bilateral,Asia
+2021,9,10010,-3.19,bilateral,Europe
+2021,9,10011,0.86,bilateral,Middle East
 2021,9,10012,0.1,bilateral,Oceania
 2021,10,9998,1309.75,bilateral,"Developing countries, unspecified"
 2021,10,10001,1492.52,bilateral,Africa
@@ -11585,7 +11585,7 @@ year,donor_code,recipient_code,value,indicator,recipient
 2021,302,10010,802.42,bilateral,Europe
 2021,302,10011,3903.05,bilateral,Middle East
 2021,302,10012,266.2,bilateral,Oceania
-2021,701,9998,2220.96,bilateral,"Developing countries, unspecified"
+2021,701,9998,2222.69,bilateral,"Developing countries, unspecified"
 2021,701,10001,1981.13,bilateral,Africa
 2021,701,10004,477.78,bilateral,America
 2021,701,10007,6313.59,bilateral,Asia
@@ -11619,12 +11619,12 @@ year,donor_code,recipient_code,value,indicator,recipient
 2021,918,10010,4372.75,bilateral,Europe
 2021,918,10011,2065.95,bilateral,Middle East
 2021,918,10012,160.36,bilateral,Oceania
-2021,20001,9998,45313.04,bilateral,"Developing countries, unspecified"
-2021,20001,10001,38007.44,bilateral,Africa
-2021,20001,10004,8429.27,bilateral,America
-2021,20001,10007,31438.54,bilateral,Asia
-2021,20001,10010,3262.4,bilateral,Europe
-2021,20001,10011,10678.06,bilateral,Middle East
+2021,20001,9998,45316.75,bilateral,"Developing countries, unspecified"
+2021,20001,10001,38012.74,bilateral,Africa
+2021,20001,10004,8429.33,bilateral,America
+2021,20001,10007,31437.42,bilateral,Asia
+2021,20001,10010,3271.82,bilateral,Europe
+2021,20001,10011,10676.65,bilateral,Middle East
 2021,20001,10012,2887.73,bilateral,Oceania
 2021,1,9998,58.8,imputed_multilateral,"Developing countries, unspecified"
 2021,1,10001,0.0,imputed_multilateral,Africa
@@ -11930,13 +11930,453 @@ year,donor_code,recipient_code,value,indicator,recipient
 2021,918,10010,0.01,imputed_multilateral,Europe
 2021,918,10011,0.0,imputed_multilateral,Middle East
 2021,918,10012,0.0,imputed_multilateral,Oceania
-2021,20001,9998,9793.17,imputed_multilateral,"Developing countries, unspecified"
+2021,20001,9998,9797.0,imputed_multilateral,"Developing countries, unspecified"
 2021,20001,10001,0.04,imputed_multilateral,Africa
-2021,20001,10001,22514.63,imputed_multilateral,Africa
+2021,20001,10001,22526.91,imputed_multilateral,Africa
 2021,20001,10004,1.5,imputed_multilateral,America
-2021,20001,10004,3031.9,imputed_multilateral,America
-2021,20001,10007,10073.32,imputed_multilateral,Asia
-2021,20001,10010,4976.35,imputed_multilateral,Europe
-2021,20001,10011,2416.42,imputed_multilateral,Middle East
+2021,20001,10004,3034.06,imputed_multilateral,America
+2021,20001,10007,10080.36,imputed_multilateral,Asia
+2021,20001,10010,4984.18,imputed_multilateral,Europe
+2021,20001,10011,2419.15,imputed_multilateral,Middle East
 2021,20001,10012,0.01,imputed_multilateral,Oceania
-2021,20001,10012,498.68,imputed_multilateral,Oceania
+2021,20001,10012,498.91,imputed_multilateral,Oceania
+2022,1,9998,472.44,bilateral,"Developing countries, unspecified"
+2022,1,10001,133.16,bilateral,Africa
+2022,1,10004,32.93,bilateral,America
+2022,1,10007,148.0,bilateral,Asia
+2022,1,10010,281.63,bilateral,Europe
+2022,1,10011,46.53,bilateral,Middle East
+2022,1,10012,0.56,bilateral,Oceania
+2022,2,9998,656.21,bilateral,"Developing countries, unspecified"
+2022,2,10001,468.92,bilateral,Africa
+2022,2,10004,34.13,bilateral,America
+2022,2,10007,75.51,bilateral,Asia
+2022,2,10010,75.66,bilateral,Europe
+2022,2,10011,53.05,bilateral,Middle East
+2022,2,10012,0.27,bilateral,Oceania
+2022,3,9998,1042.23,bilateral,"Developing countries, unspecified"
+2022,3,10001,476.93,bilateral,Africa
+2022,3,10004,8.75,bilateral,America
+2022,3,10007,313.75,bilateral,Asia
+2022,3,10010,164.96,bilateral,Europe
+2022,3,10011,199.86,bilateral,Middle East
+2022,3,10012,0.22,bilateral,Oceania
+2022,4,9998,3176.41,bilateral,"Developing countries, unspecified"
+2022,4,10001,4259.7,bilateral,Africa
+2022,4,10004,774.35,bilateral,America
+2022,4,10007,1318.03,bilateral,Asia
+2022,4,10010,881.02,bilateral,Europe
+2022,4,10011,470.83,bilateral,Middle East
+2022,4,10012,123.95,bilateral,Oceania
+2022,5,9998,13964.21,bilateral,"Developing countries, unspecified"
+2022,5,10001,5023.25,bilateral,Africa
+2022,5,10004,1793.26,bilateral,America
+2022,5,10007,5571.15,bilateral,Asia
+2022,5,10010,2757.97,bilateral,Europe
+2022,5,10011,2539.54,bilateral,Middle East
+2022,5,10012,13.02,bilateral,Oceania
+2022,6,9998,1965.21,bilateral,"Developing countries, unspecified"
+2022,6,10001,515.53,bilateral,Africa
+2022,6,10004,110.89,bilateral,America
+2022,6,10007,327.6,bilateral,Asia
+2022,6,10010,465.68,bilateral,Europe
+2022,6,10011,189.06,bilateral,Middle East
+2022,6,10012,1.14,bilateral,Oceania
+2022,7,9998,3139.46,bilateral,"Developing countries, unspecified"
+2022,7,10001,731.45,bilateral,Africa
+2022,7,10004,13.72,bilateral,America
+2022,7,10007,197.61,bilateral,Asia
+2022,7,10010,201.36,bilateral,Europe
+2022,7,10011,140.03,bilateral,Middle East
+2022,8,9998,1940.05,bilateral,"Developing countries, unspecified"
+2022,8,10001,806.45,bilateral,Africa
+2022,8,10004,153.2,bilateral,America
+2022,8,10007,603.67,bilateral,Asia
+2022,8,10010,612.65,bilateral,Europe
+2022,8,10011,283.95,bilateral,Middle East
+2022,8,10012,2.4,bilateral,Oceania
+2022,9,9998,28.06,bilateral,"Developing countries, unspecified"
+2022,9,10001,32.31,bilateral,Africa
+2022,9,10004,15.75,bilateral,America
+2022,9,10007,14.86,bilateral,Asia
+2022,9,10010,36.88,bilateral,Europe
+2022,9,10011,0.4,bilateral,Middle East
+2022,9,10012,0.19,bilateral,Oceania
+2022,10,9998,1352.21,bilateral,"Developing countries, unspecified"
+2022,10,10001,1119.63,bilateral,Africa
+2022,10,10004,127.45,bilateral,America
+2022,10,10007,528.93,bilateral,Asia
+2022,10,10010,353.91,bilateral,Europe
+2022,10,10011,234.64,bilateral,Middle East
+2022,10,10012,6.52,bilateral,Oceania
+2022,11,9998,1940.08,bilateral,"Developing countries, unspecified"
+2022,11,10001,668.15,bilateral,Africa
+2022,11,10004,190.47,bilateral,America
+2022,11,10007,490.54,bilateral,Asia
+2022,11,10010,395.33,bilateral,Europe
+2022,11,10011,146.87,bilateral,Middle East
+2022,11,10012,0.62,bilateral,Oceania
+2022,12,9998,8279.04,bilateral,"Developing countries, unspecified"
+2022,12,10001,1508.88,bilateral,Africa
+2022,12,10004,231.22,bilateral,America
+2022,12,10007,1294.67,bilateral,Asia
+2022,12,10010,557.27,bilateral,Europe
+2022,12,10011,369.5,bilateral,Middle East
+2022,12,10012,12.04,bilateral,Oceania
+2022,18,9998,582.55,bilateral,"Developing countries, unspecified"
+2022,18,10001,187.78,bilateral,Africa
+2022,18,10004,61.33,bilateral,America
+2022,18,10007,124.16,bilateral,Asia
+2022,18,10010,63.13,bilateral,Europe
+2022,18,10011,33.74,bilateral,Middle East
+2022,20,9998,26.3,bilateral,"Developing countries, unspecified"
+2022,20,10001,26.82,bilateral,Africa
+2022,20,10004,0.62,bilateral,America
+2022,20,10007,5.85,bilateral,Asia
+2022,20,10010,12.82,bilateral,Europe
+2022,20,10011,3.27,bilateral,Middle East
+2022,21,9998,1379.57,bilateral,"Developing countries, unspecified"
+2022,21,10001,299.12,bilateral,Africa
+2022,21,10004,16.36,bilateral,America
+2022,21,10007,64.52,bilateral,Asia
+2022,21,10010,64.48,bilateral,Europe
+2022,21,10011,41.06,bilateral,Middle East
+2022,21,10012,0.44,bilateral,Oceania
+2022,22,9998,87.24,bilateral,"Developing countries, unspecified"
+2022,22,10001,180.89,bilateral,Africa
+2022,22,10004,16.67,bilateral,America
+2022,22,10007,68.46,bilateral,Asia
+2022,22,10010,20.0,bilateral,Europe
+2022,22,10011,12.99,bilateral,Middle East
+2022,40,9998,74.58,bilateral,"Developing countries, unspecified"
+2022,40,10001,16.84,bilateral,Africa
+2022,40,10004,0.0,bilateral,America
+2022,40,10007,4.56,bilateral,Asia
+2022,40,10010,3.98,bilateral,Europe
+2022,40,10011,1.64,bilateral,Middle East
+2022,50,9998,1306.26,bilateral,"Developing countries, unspecified"
+2022,50,10001,170.91,bilateral,Africa
+2022,50,10004,344.16,bilateral,America
+2022,50,10007,60.22,bilateral,Asia
+2022,50,10010,92.21,bilateral,Europe
+2022,50,10011,71.07,bilateral,Middle East
+2022,50,10012,0.1,bilateral,Oceania
+2022,61,9998,30.83,bilateral,"Developing countries, unspecified"
+2022,61,10001,24.21,bilateral,Africa
+2022,61,10004,2.24,bilateral,America
+2022,61,10007,3.7,bilateral,Asia
+2022,61,10010,26.33,bilateral,Europe
+2022,61,10011,1.32,bilateral,Middle East
+2022,61,10012,0.06,bilateral,Oceania
+2022,68,9998,652.5,bilateral,"Developing countries, unspecified"
+2022,68,10001,18.38,bilateral,Africa
+2022,68,10004,0.6,bilateral,America
+2022,68,10007,15.83,bilateral,Asia
+2022,68,10010,47.53,bilateral,Europe
+2022,68,10011,6.59,bilateral,Middle East
+2022,69,9998,13.24,bilateral,"Developing countries, unspecified"
+2022,69,10001,2.15,bilateral,Africa
+2022,69,10004,2.62,bilateral,America
+2022,69,10007,2.76,bilateral,Asia
+2022,69,10010,19.85,bilateral,Europe
+2022,69,10011,1.41,bilateral,Middle East
+2022,75,9998,5.3,bilateral,"Developing countries, unspecified"
+2022,75,10001,39.65,bilateral,Africa
+2022,75,10004,13.55,bilateral,America
+2022,75,10007,107.94,bilateral,Asia
+2022,75,10010,127.88,bilateral,Europe
+2022,75,10011,39.75,bilateral,Middle East
+2022,75,10012,0.01,bilateral,Oceania
+2022,76,9998,2197.9,bilateral,"Developing countries, unspecified"
+2022,76,10001,10.75,bilateral,Africa
+2022,76,10004,2.46,bilateral,America
+2022,76,10007,34.12,bilateral,Asia
+2022,76,10010,402.96,bilateral,Europe
+2022,76,10011,19.24,bilateral,Middle East
+2022,76,10012,0.03,bilateral,Oceania
+2022,84,9998,79.97,bilateral,"Developing countries, unspecified"
+2022,84,10001,1.88,bilateral,Africa
+2022,84,10004,0.07,bilateral,America
+2022,84,10007,3.3,bilateral,Asia
+2022,84,10010,55.45,bilateral,Europe
+2022,84,10011,0.47,bilateral,Middle East
+2022,301,9998,1045.34,bilateral,"Developing countries, unspecified"
+2022,301,10001,1893.18,bilateral,Africa
+2022,301,10004,533.01,bilateral,America
+2022,301,10007,1287.75,bilateral,Asia
+2022,301,10010,2279.44,bilateral,Europe
+2022,301,10011,383.67,bilateral,Middle East
+2022,301,10012,45.45,bilateral,Oceania
+2022,302,9998,19668.44,bilateral,"Developing countries, unspecified"
+2022,302,10001,12882.61,bilateral,Africa
+2022,302,10004,2751.56,bilateral,America
+2022,302,10007,6489.47,bilateral,Asia
+2022,302,10010,9961.29,bilateral,Europe
+2022,302,10011,2718.73,bilateral,Middle East
+2022,302,10012,248.59,bilateral,Oceania
+2022,701,9998,2632.14,bilateral,"Developing countries, unspecified"
+2022,701,10001,1937.7,bilateral,Africa
+2022,701,10004,689.9,bilateral,America
+2022,701,10007,7545.38,bilateral,Asia
+2022,701,10010,1085.7,bilateral,Europe
+2022,701,10011,862.51,bilateral,Middle East
+2022,701,10012,234.13,bilateral,Oceania
+2022,742,9998,353.28,bilateral,"Developing countries, unspecified"
+2022,742,10001,597.41,bilateral,Africa
+2022,742,10004,278.08,bilateral,America
+2022,742,10007,993.05,bilateral,Asia
+2022,742,10010,79.74,bilateral,Europe
+2022,742,10011,64.8,bilateral,Middle East
+2022,742,10012,16.17,bilateral,Oceania
+2022,801,9998,415.25,bilateral,"Developing countries, unspecified"
+2022,801,10001,63.79,bilateral,Africa
+2022,801,10004,0.76,bilateral,America
+2022,801,10007,1055.12,bilateral,Asia
+2022,801,10010,46.32,bilateral,Europe
+2022,801,10011,62.83,bilateral,Middle East
+2022,801,10012,1041.23,bilateral,Oceania
+2022,820,9998,103.94,bilateral,"Developing countries, unspecified"
+2022,820,10001,9.17,bilateral,Africa
+2022,820,10004,1.78,bilateral,America
+2022,820,10007,53.91,bilateral,Asia
+2022,820,10010,4.91,bilateral,Europe
+2022,820,10011,3.42,bilateral,Middle East
+2022,820,10012,241.72,bilateral,Oceania
+2022,918,9998,4573.15,bilateral,"Developing countries, unspecified"
+2022,918,10001,5551.53,bilateral,Africa
+2022,918,10004,905.5,bilateral,America
+2022,918,10007,3565.39,bilateral,Asia
+2022,918,10010,12443.07,bilateral,Europe
+2022,918,10011,1410.3,bilateral,Middle East
+2022,918,10012,110.58,bilateral,Oceania
+2022,20001,9998,68756.2,bilateral,"Developing countries, unspecified"
+2022,20001,10001,34109.11,bilateral,Africa
+2022,20001,10004,8201.89,bilateral,America
+2022,20001,10007,28806.05,bilateral,Asia
+2022,20001,10010,21185.7,bilateral,Europe
+2022,20001,10011,9003.37,bilateral,Middle East
+2022,20001,10012,1988.84,bilateral,Oceania
+2022,1,9998,80.71,imputed_multilateral,"Developing countries, unspecified"
+2022,1,10001,285.71,imputed_multilateral,Africa
+2022,1,10004,33.49,imputed_multilateral,America
+2022,1,10007,121.02,imputed_multilateral,Asia
+2022,1,10010,200.29,imputed_multilateral,Europe
+2022,1,10011,25.0,imputed_multilateral,Middle East
+2022,1,10012,7.05,imputed_multilateral,Oceania
+2022,2,9998,163.35,imputed_multilateral,"Developing countries, unspecified"
+2022,2,10001,456.97,imputed_multilateral,Africa
+2022,2,10004,63.16,imputed_multilateral,America
+2022,2,10007,225.13,imputed_multilateral,Asia
+2022,2,10010,381.68,imputed_multilateral,Europe
+2022,2,10011,57.72,imputed_multilateral,Middle East
+2022,2,10012,10.02,imputed_multilateral,Oceania
+2022,3,9998,104.35,imputed_multilateral,"Developing countries, unspecified"
+2022,3,10001,255.11,imputed_multilateral,Africa
+2022,3,10004,32.07,imputed_multilateral,America
+2022,3,10007,117.31,imputed_multilateral,Asia
+2022,3,10010,184.09,imputed_multilateral,Europe
+2022,3,10011,43.88,imputed_multilateral,Middle East
+2022,3,10012,3.73,imputed_multilateral,Oceania
+2022,4,9998,922.68,imputed_multilateral,"Developing countries, unspecified"
+2022,4,10001,2281.73,imputed_multilateral,Africa
+2022,4,10004,580.32,imputed_multilateral,America
+2022,4,10007,1063.52,imputed_multilateral,Asia
+2022,4,10010,1553.65,imputed_multilateral,Europe
+2022,4,10011,221.83,imputed_multilateral,Middle East
+2022,4,10012,102.29,imputed_multilateral,Oceania
+2022,5,9998,948.89,imputed_multilateral,"Developing countries, unspecified"
+2022,5,10001,2398.58,imputed_multilateral,Africa
+2022,5,10004,459.83,imputed_multilateral,America
+2022,5,10007,1132.28,imputed_multilateral,Asia
+2022,5,10010,1984.26,imputed_multilateral,Europe
+2022,5,10011,294.11,imputed_multilateral,Middle East
+2022,5,10012,65.03,imputed_multilateral,Oceania
+2022,6,9998,391.65,imputed_multilateral,"Developing countries, unspecified"
+2022,6,10001,941.15,imputed_multilateral,Africa
+2022,6,10004,119.76,imputed_multilateral,America
+2022,6,10007,462.6,imputed_multilateral,Asia
+2022,6,10010,1091.22,imputed_multilateral,Europe
+2022,6,10011,129.62,imputed_multilateral,Middle East
+2022,6,10012,16.23,imputed_multilateral,Oceania
+2022,7,9998,249.96,imputed_multilateral,"Developing countries, unspecified"
+2022,7,10001,796.3,imputed_multilateral,Africa
+2022,7,10004,90.69,imputed_multilateral,America
+2022,7,10007,354.95,imputed_multilateral,Asia
+2022,7,10010,505.38,imputed_multilateral,Europe
+2022,7,10011,110.75,imputed_multilateral,Middle East
+2022,7,10012,13.89,imputed_multilateral,Oceania
+2022,8,9998,136.33,imputed_multilateral,"Developing countries, unspecified"
+2022,8,10001,522.5,imputed_multilateral,Africa
+2022,8,10004,64.92,imputed_multilateral,America
+2022,8,10007,211.68,imputed_multilateral,Asia
+2022,8,10010,18.59,imputed_multilateral,Europe
+2022,8,10011,51.93,imputed_multilateral,Middle East
+2022,8,10012,9.96,imputed_multilateral,Oceania
+2022,9,9998,44.17,imputed_multilateral,"Developing countries, unspecified"
+2022,9,10001,82.5,imputed_multilateral,Africa
+2022,9,10004,10.62,imputed_multilateral,America
+2022,9,10007,37.67,imputed_multilateral,Asia
+2022,9,10010,124.56,imputed_multilateral,Europe
+2022,9,10011,13.14,imputed_multilateral,Middle East
+2022,9,10012,1.17,imputed_multilateral,Oceania
+2022,10,9998,209.59,imputed_multilateral,"Developing countries, unspecified"
+2022,10,10001,872.0,imputed_multilateral,Africa
+2022,10,10004,88.69,imputed_multilateral,America
+2022,10,10007,385.45,imputed_multilateral,Asia
+2022,10,10010,268.12,imputed_multilateral,Europe
+2022,10,10011,130.15,imputed_multilateral,Middle East
+2022,10,10012,11.88,imputed_multilateral,Oceania
+2022,11,9998,90.75,imputed_multilateral,"Developing countries, unspecified"
+2022,11,10001,413.81,imputed_multilateral,Africa
+2022,11,10004,47.51,imputed_multilateral,America
+2022,11,10007,163.18,imputed_multilateral,Asia
+2022,11,10010,15.42,imputed_multilateral,Europe
+2022,11,10011,42.85,imputed_multilateral,Middle East
+2022,11,10012,8.09,imputed_multilateral,Oceania
+2022,12,9998,393.12,imputed_multilateral,"Developing countries, unspecified"
+2022,12,10001,1543.45,imputed_multilateral,Africa
+2022,12,10004,244.99,imputed_multilateral,America
+2022,12,10007,568.51,imputed_multilateral,Asia
+2022,12,10010,529.72,imputed_multilateral,Europe
+2022,12,10011,112.94,imputed_multilateral,Middle East
+2022,12,10012,38.06,imputed_multilateral,Oceania
+2022,18,9998,74.17,imputed_multilateral,"Developing countries, unspecified"
+2022,18,10001,195.86,imputed_multilateral,Africa
+2022,18,10004,30.01,imputed_multilateral,America
+2022,18,10007,93.08,imputed_multilateral,Asia
+2022,18,10010,140.55,imputed_multilateral,Europe
+2022,18,10011,29.27,imputed_multilateral,Middle East
+2022,18,10012,4.03,imputed_multilateral,Oceania
+2022,20,9998,1.61,imputed_multilateral,"Developing countries, unspecified"
+2022,20,10001,9.93,imputed_multilateral,Africa
+2022,20,10004,1.22,imputed_multilateral,America
+2022,20,10007,4.52,imputed_multilateral,Asia
+2022,20,10010,0.57,imputed_multilateral,Europe
+2022,20,10011,1.22,imputed_multilateral,Middle East
+2022,20,10012,0.16,imputed_multilateral,Oceania
+2022,21,9998,80.01,imputed_multilateral,"Developing countries, unspecified"
+2022,21,10001,185.65,imputed_multilateral,Africa
+2022,21,10004,25.54,imputed_multilateral,America
+2022,21,10007,86.71,imputed_multilateral,Asia
+2022,21,10010,175.94,imputed_multilateral,Europe
+2022,21,10011,27.22,imputed_multilateral,Middle East
+2022,21,10012,2.81,imputed_multilateral,Oceania
+2022,22,9998,21.23,imputed_multilateral,"Developing countries, unspecified"
+2022,22,10001,58.91,imputed_multilateral,Africa
+2022,22,10004,6.01,imputed_multilateral,America
+2022,22,10007,25.52,imputed_multilateral,Asia
+2022,22,10010,30.41,imputed_multilateral,Europe
+2022,22,10011,6.46,imputed_multilateral,Middle East
+2022,22,10012,1.06,imputed_multilateral,Oceania
+2022,40,9998,40.05,imputed_multilateral,"Developing countries, unspecified"
+2022,40,10001,53.97,imputed_multilateral,Africa
+2022,40,10004,9.36,imputed_multilateral,America
+2022,40,10007,32.08,imputed_multilateral,Asia
+2022,40,10010,115.0,imputed_multilateral,Europe
+2022,40,10011,11.89,imputed_multilateral,Middle East
+2022,40,10012,0.96,imputed_multilateral,Oceania
+2022,50,9998,262.11,imputed_multilateral,"Developing countries, unspecified"
+2022,50,10001,564.93,imputed_multilateral,Africa
+2022,50,10004,92.91,imputed_multilateral,America
+2022,50,10007,277.05,imputed_multilateral,Asia
+2022,50,10010,728.1,imputed_multilateral,Europe
+2022,50,10011,78.31,imputed_multilateral,Middle East
+2022,50,10012,12.49,imputed_multilateral,Oceania
+2022,61,9998,12.35,imputed_multilateral,"Developing countries, unspecified"
+2022,61,10001,17.17,imputed_multilateral,Africa
+2022,61,10004,3.33,imputed_multilateral,America
+2022,61,10007,10.19,imputed_multilateral,Asia
+2022,61,10010,33.43,imputed_multilateral,Europe
+2022,61,10011,3.41,imputed_multilateral,Middle East
+2022,61,10012,0.35,imputed_multilateral,Oceania
+2022,68,9998,45.92,imputed_multilateral,"Developing countries, unspecified"
+2022,68,10001,66.21,imputed_multilateral,Africa
+2022,68,10004,12.68,imputed_multilateral,America
+2022,68,10007,39.55,imputed_multilateral,Asia
+2022,68,10010,133.05,imputed_multilateral,Europe
+2022,68,10011,13.72,imputed_multilateral,Middle East
+2022,68,10012,1.21,imputed_multilateral,Oceania
+2022,69,9998,19.49,imputed_multilateral,"Developing countries, unspecified"
+2022,69,10001,27.95,imputed_multilateral,Africa
+2022,69,10004,6.14,imputed_multilateral,America
+2022,69,10007,16.64,imputed_multilateral,Asia
+2022,69,10010,54.09,imputed_multilateral,Europe
+2022,69,10011,5.6,imputed_multilateral,Middle East
+2022,69,10012,0.76,imputed_multilateral,Oceania
+2022,75,9998,4.73,imputed_multilateral,"Developing countries, unspecified"
+2022,75,10001,12.92,imputed_multilateral,Africa
+2022,75,10004,4.63,imputed_multilateral,America
+2022,75,10007,9.19,imputed_multilateral,Asia
+2022,75,10010,13.08,imputed_multilateral,Europe
+2022,75,10011,1.76,imputed_multilateral,Middle East
+2022,75,10012,0.24,imputed_multilateral,Oceania
+2022,76,9998,124.42,imputed_multilateral,"Developing countries, unspecified"
+2022,76,10001,174.88,imputed_multilateral,Africa
+2022,76,10004,33.66,imputed_multilateral,America
+2022,76,10007,105.34,imputed_multilateral,Asia
+2022,76,10010,363.15,imputed_multilateral,Europe
+2022,76,10011,37.54,imputed_multilateral,Middle East
+2022,76,10012,3.06,imputed_multilateral,Oceania
+2022,84,9998,14.59,imputed_multilateral,"Developing countries, unspecified"
+2022,84,10001,21.77,imputed_multilateral,Africa
+2022,84,10004,4.24,imputed_multilateral,America
+2022,84,10007,12.92,imputed_multilateral,Asia
+2022,84,10010,43.1,imputed_multilateral,Europe
+2022,84,10011,4.42,imputed_multilateral,Middle East
+2022,84,10012,0.44,imputed_multilateral,Oceania
+2022,301,9998,133.43,imputed_multilateral,"Developing countries, unspecified"
+2022,301,10001,1137.46,imputed_multilateral,Africa
+2022,301,10004,134.1,imputed_multilateral,America
+2022,301,10007,375.53,imputed_multilateral,Asia
+2022,301,10010,32.04,imputed_multilateral,Europe
+2022,301,10011,51.24,imputed_multilateral,Middle East
+2022,301,10012,26.05,imputed_multilateral,Oceania
+2022,302,9998,418.33,imputed_multilateral,"Developing countries, unspecified"
+2022,302,10001,4533.91,imputed_multilateral,Africa
+2022,302,10004,324.01,imputed_multilateral,America
+2022,302,10007,1652.78,imputed_multilateral,Asia
+2022,302,10010,434.51,imputed_multilateral,Europe
+2022,302,10011,126.77,imputed_multilateral,Middle East
+2022,302,10012,71.65,imputed_multilateral,Oceania
+2022,701,9998,167.52,imputed_multilateral,"Developing countries, unspecified"
+2022,701,10001,1174.0,imputed_multilateral,Africa
+2022,701,10004,187.89,imputed_multilateral,America
+2022,701,10007,637.97,imputed_multilateral,Asia
+2022,701,10010,42.09,imputed_multilateral,Europe
+2022,701,10011,40.63,imputed_multilateral,Middle East
+2022,701,10012,40.41,imputed_multilateral,Oceania
+2022,742,9998,27.1,imputed_multilateral,"Developing countries, unspecified"
+2022,742,10001,207.35,imputed_multilateral,Africa
+2022,742,10004,73.83,imputed_multilateral,America
+2022,742,10007,123.07,imputed_multilateral,Asia
+2022,742,10010,14.96,imputed_multilateral,Europe
+2022,742,10011,9.18,imputed_multilateral,Middle East
+2022,742,10012,5.99,imputed_multilateral,Oceania
+2022,801,9998,29.32,imputed_multilateral,"Developing countries, unspecified"
+2022,801,10001,91.31,imputed_multilateral,Africa
+2022,801,10004,73.74,imputed_multilateral,America
+2022,801,10007,165.15,imputed_multilateral,Asia
+2022,801,10010,29.9,imputed_multilateral,Europe
+2022,801,10011,14.81,imputed_multilateral,Middle East
+2022,801,10012,4.0,imputed_multilateral,Oceania
+2022,820,9998,8.57,imputed_multilateral,"Developing countries, unspecified"
+2022,820,10001,26.5,imputed_multilateral,Africa
+2022,820,10004,4.53,imputed_multilateral,America
+2022,820,10007,16.41,imputed_multilateral,Asia
+2022,820,10010,1.75,imputed_multilateral,Europe
+2022,820,10011,3.09,imputed_multilateral,Middle East
+2022,820,10012,0.61,imputed_multilateral,Oceania
+2022,918,9998,3.08,imputed_multilateral,"Developing countries, unspecified"
+2022,918,10001,8.41,imputed_multilateral,Africa
+2022,918,10004,0.06,imputed_multilateral,America
+2022,918,10007,4.55,imputed_multilateral,Asia
+2022,918,10010,0.0,imputed_multilateral,Europe
+2022,918,10011,0.26,imputed_multilateral,Middle East
+2022,918,10012,0.03,imputed_multilateral,Oceania
+2022,20001,9998,5226.96,imputed_multilateral,"Developing countries, unspecified"
+2022,20001,10001,19420.46,imputed_multilateral,Africa
+2022,20001,10004,2865.89,imputed_multilateral,America
+2022,20001,10007,8532.98,imputed_multilateral,Asia
+2022,20001,10010,9260.78,imputed_multilateral,Europe
+2022,20001,10011,1702.46,imputed_multilateral,Middle East
+2022,20001,10012,463.89,imputed_multilateral,Oceania

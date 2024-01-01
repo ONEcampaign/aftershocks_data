@@ -1,35 +1,35 @@
 {
-    "total_oda": "204.0 billion",
-    "total_oda_change": "13.6 %",
+    "total_oda": "210.7 billion",
+    "total_oda_change": "17.0 %",
     "latest_year": "2022",
-    "oda_gni": "0.36%",
-    "oda_gni_distance": "189 billion",
-    "aid_to_africa": "58.4 billion",
-    "aid_to_africa_share": "33.6%",
+    "oda_gni": "0.37%",
+    "oda_gni_distance": "186 billion",
+    "aid_to_africa": "53.5 billion",
+    "aid_to_africa_share": "25.6%",
     "aid_to_incomes": {
         "High income": {
             "value": "0.2",
             "share": "0.1%"
         },
         "Low income": {
-            "value": "37.4",
-            "share": "20.7%"
+            "value": "32.0",
+            "share": "15.3%"
         },
         "Lower-middle income": {
-            "value": "48.6",
-            "share": "27.0%"
+            "value": "67.9",
+            "share": "32.5%"
         },
         "Not classified by income": {
-            "value": "72.9",
-            "share": "40.5%"
+            "value": "89.6",
+            "share": "42.9%"
         },
         "Upper-middle income": {
-            "value": "21.1",
-            "share": "11.7%"
+            "value": "19.1",
+            "share": "9.2%"
         }
     },
-    "aid_to_health": "34.9 billion",
-    "aid_to_health_share": "18.3%",
-    "aid_to_humanitarian": "26.5 billion",
-    "aid_to_humanitarian_share": "13.9%"
+    "aid_to_health": "34.0 billion",
+    "aid_to_health_share": "15.5%",
+    "aid_to_humanitarian": "29.1 billion",
+    "aid_to_humanitarian_share": "13.3%"
 }
