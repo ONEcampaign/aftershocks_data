@@ -336,7 +336,7 @@ def oda_covid_idrc():
     )
 
     indicators = [
-        # "total_covid_oda_ge_linked",
+        "total_covid_oda_ge",
         "total_oda_ge",
         "total_oda_flow_net",
         "idrc_ge_linked",
@@ -353,20 +353,20 @@ def oda_covid_idrc():
 
     dac = list(dg["dac_countries"]) + [84]
 
-    # dac2022 = (
-    #     data.loc[lambda d: d.donor_code.isin(dac) & (d.year == 2022)]
-    #     .query("indicator in ['idrc_ge_linked','total_covid_oda_ge_linked']")
-    #     .groupby(
-    #         ["year", "indicator", "currency", "prices"],
-    #         as_index=False,
-    #         observed=True,
-    #         dropna=False,
-    #     )["value"]
-    #     .sum(numeric_only=True)
-    #     .assign(donor_code=20001, donor_name="DAC Countries, Total")
-    # )
-    #
-    # data = pd.concat([data, dac2022], ignore_index=True)
+    dac2022 = (
+        data.loc[lambda d: d.donor_code.isin(dac) & (d.year == 2022)]
+        .query("indicator in ['total_covid_oda_ge']")
+        .groupby(
+            ["year", "indicator", "currency", "prices"],
+            as_index=False,
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum(numeric_only=True)
+        .assign(donor_code=20001, donor_name="DAC Countries, Total")
+    )
+
+    data = pd.concat([data, dac2022], ignore_index=True)
 
     data.indicator = data.indicator.replace(
         {"total_oda_ge": "Total ODA", "total_oda_flow_net": "Total ODA"}
@@ -383,7 +383,7 @@ def oda_covid_idrc():
         .assign(
             other_oda=lambda d: round(
                 d["Total ODA"].fillna(0)
-                # - d["total_covid_oda_ge_linked"].fillna(0)
+                - d["total_covid_oda_ge"].fillna(0)
                 - d["idrc_ge_linked"].fillna(0),
                 1,
             )
@@ -399,7 +399,7 @@ def oda_covid_idrc():
             columns={
                 "year": "Year",
                 "donor_name": "Donor",
-                # "total_covid_oda_ge_linked": "COVID ODA",
+                "total_covid_oda_ge": "COVID ODA",
                 "idrc_ge_linked": "IDRC",
                 "other_oda": "Other ODA",
             }
@@ -533,7 +533,7 @@ def flow_shares_idrc_covid():
     )
 
     indicators = [
-        # "total_covid_oda_ge_linked",
+        "total_covid_oda_ge",
         "total_oda_flow_net",
         "idrc_ge_linked",
     ]
@@ -551,20 +551,20 @@ def flow_shares_idrc_covid():
 
     dac = list(dg["dac_countries"]) + [84]
 
-    # dac2022 = (
-    #     data.loc[lambda d: d.donor_code.isin(dac) & (d.year == 2022)]
-    #     .query("indicator in ['idrc_ge_linked', 'total_covid_oda_ge_linked']")
-    #     .groupby(
-    #         ["year", "indicator", "currency", "prices"],
-    #         as_index=False,
-    #         observed=True,
-    #         dropna=False,
-    #     )["value"]
-    #     .sum(numeric_only=True)
-    #     .assign(donor_code=20001, donor_name="DAC Countries, Total")
-    # )
-    #
-    # data = pd.concat([data, dac2022], ignore_index=True)
+    dac2022 = (
+        data.loc[lambda d: d.donor_code.isin(dac) & (d.year == 2022)]
+        .query("indicator in [ 'total_covid_oda_ge']")
+        .groupby(
+            ["year", "indicator", "currency", "prices"],
+            as_index=False,
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum(numeric_only=True)
+        .assign(donor_code=20001, donor_name="DAC Countries, Total")
+    )
+
+    data = pd.concat([data, dac2022], ignore_index=True)
 
     data.indicator = data.indicator.replace(
         {"total_oda_ge": "Total ODA", "total_oda_flow_net": "Total ODA"}
@@ -589,8 +589,9 @@ def flow_shares_idrc_covid():
     data = data.assign(
         other_oda=lambda d: round(
             d["Total ODA"].fillna(0)
-            # - d["total_covid_oda_ge_linked"].fillna(0)
-            - d["idrc_ge_linked"].fillna(0) - d["Bilateral aid to Ukraine"].fillna(0),
+            - d["total_covid_oda_ge"].fillna(0)
+            - d["idrc_ge_linked"].fillna(0)
+            - d["Bilateral aid to Ukraine"].fillna(0),
             1,
         )
     )
@@ -599,7 +600,7 @@ def flow_shares_idrc_covid():
         columns={
             "year": "Year",
             "donor_name": "Donor",
-            # "total_covid_oda_ge_linked": "COVID ODA",
+            "total_covid_oda_ge": "COVID ODA",
             "idrc_ge_linked": "IDRC",
             "other_oda": "Other ODA",
         }
