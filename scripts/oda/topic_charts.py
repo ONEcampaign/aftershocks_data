@@ -353,8 +353,8 @@ def oda_covid_idrc():
 
     dac = list(dg["dac_countries"]) + [84]
 
-    dac2022 = (
-        data.loc[lambda d: d.donor_code.isin(dac) & (d.year == 2022)]
+    dac_covid = (
+        data.loc[lambda d: d.donor_code.isin(dac)]
         .query("indicator in ['total_covid_oda_ge']")
         .groupby(
             ["year", "indicator", "currency", "prices"],
@@ -366,7 +366,7 @@ def oda_covid_idrc():
         .assign(donor_code=20001, donor_name="DAC Countries, Total")
     )
 
-    data = pd.concat([data, dac2022], ignore_index=True)
+    data = pd.concat([data, dac_covid], ignore_index=True)
 
     data.indicator = data.indicator.replace(
         {"total_oda_ge": "Total ODA", "total_oda_flow_net": "Total ODA"}
@@ -546,13 +546,13 @@ def flow_shares_idrc_covid():
         .query("recipient_name == 'Ukraine' and donor_code == 20001")
     )
 
-    urkaine22 = ukraine.query("year == 2021").assign(value=16120.581863, year=2022)
-    ukraine = pd.concat([ukraine, urkaine22], ignore_index=True)
+    # urkaine22 = ukraine.query("year == 2021").assign(value=16120.581863, year=2022)
+    # ukraine = pd.concat([ukraine, urkaine22], ignore_index=True)
 
     dac = list(dg["dac_countries"]) + [84]
 
-    dac2022 = (
-        data.loc[lambda d: d.donor_code.isin(dac) & (d.year == 2022)]
+    dac_covid = (
+        data.loc[lambda d: d.donor_code.isin(dac)]
         .query("indicator in [ 'total_covid_oda_ge']")
         .groupby(
             ["year", "indicator", "currency", "prices"],
@@ -564,7 +564,7 @@ def flow_shares_idrc_covid():
         .assign(donor_code=20001, donor_name="DAC Countries, Total")
     )
 
-    data = pd.concat([data, dac2022], ignore_index=True)
+    data = pd.concat([data, dac_covid], ignore_index=True)
 
     data.indicator = data.indicator.replace(
         {"total_oda_ge": "Total ODA", "total_oda_flow_net": "Total ODA"}

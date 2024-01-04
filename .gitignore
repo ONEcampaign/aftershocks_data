@@ -130,3 +130,16 @@ dmypy.json
 # DataSpell
 .idea/
 .DS_Store
+/raw_data/oda/crs_2010_raw.feather
+/raw_data/oda/crs_2011_raw.feather
+/raw_data/oda/crs_2012_raw.feather
+/raw_data/oda/crs_2013_raw.feather
+/raw_data/oda/crs_2014_raw.feather
+/raw_data/oda/crs_2015_raw.feather
+/raw_data/oda/crs_2016_raw.feather
+/raw_data/oda/crs_2017_raw.feather
+/raw_data/oda/crs_2018_raw.feather
+/raw_data/oda/crs_2019_raw.feather
+/raw_data/oda/crs_2020_raw.feather
+/raw_data/oda/crs_2021_raw.feather
+/raw_data/oda/crs_2022_raw.feather
