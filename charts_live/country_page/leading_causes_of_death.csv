@@ -1,24 +1,4 @@
 Country,Cause,Type,Year,Deaths per 100K people,Deaths,missing
-Angola,HIV/AIDS,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,23.27,"3,817",False
-Angola,Road injury,Injuries,2000.0,25.06,"4,110",False
-Angola,Congenital anomalies,Noncommunicable diseases,2000.0,39.67,"6,505",False
-Angola,Ischaemic heart disease,Noncommunicable diseases,2000.0,41.5,"6,806",False
-Angola,Stroke,Noncommunicable diseases,2000.0,50.98,"8,361",False
-Angola,Tuberculosis,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,75.26,"12,343",False
-Angola,Malaria,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,113.74,"18,654",False
-Angola,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,207.53,"34,034",False
-Angola,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,242.72,"39,807",False
-Angola,Diarrhoeal diseases,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,252.15,"41,352",False
-Angola,Congenital anomalies,Noncommunicable diseases,2019.0,23.28,"7,402",False
-Angola,Road injury,Injuries,2019.0,26.15,"8,317",False
-Angola,Ischaemic heart disease,Noncommunicable diseases,2019.0,31.51,"10,020",False
-Angola,Stroke,Noncommunicable diseases,2019.0,33.61,"10,687",False
-Angola,HIV/AIDS,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,40.27,"12,805",False
-Angola,Malaria,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,42.79,"13,608",False
-Angola,Diarrhoeal diseases,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,47.94,"15,245",False
-Angola,Tuberculosis,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,53.43,"16,991",False
-Angola,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,78.29,"24,897",False
-Angola,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,97.62,"31,044",False
 Burundi,Road injury,Injuries,2000.0,30.35,"1,936",False
 Burundi,Protein-energy malnutrition,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,41.39,"2,640",False
 Burundi,Ischaemic heart disease,Noncommunicable diseases,2000.0,44.37,"2,830",False
@@ -1079,6 +1059,7 @@ Zimbabwe,Ischaemic heart disease,Noncommunicable diseases,2019.0,58.17,"8,493",F
 Zimbabwe,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,65.18,"9,516",False
 Zimbabwe,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,73.83,"10,779",False
 Zimbabwe,HIV/AIDS,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,136.91,"19,988",False
+Angola,,,,,nan,True
 British Indian Ocean Territory,,,,,nan,True
 French Southern Territories,,,,,nan,True
 Mayotte,,,,,nan,True
