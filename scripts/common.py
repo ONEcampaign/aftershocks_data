@@ -9,7 +9,7 @@ from scripts.config import PATHS
 
 WEO_YEAR: int = 2023
 CAUSES_OF_DEATH_YEAR = 2019
-DEBT_YEAR: int = 2023
+DEBT_YEAR: int = 2024
 
 
 def get_full_africa_iso3() -> list:

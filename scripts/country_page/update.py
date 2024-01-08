@@ -14,6 +14,7 @@ from scripts.country_page import (
 )
 from scripts.country_page.debt import debt_chart_country, debt_chart_region
 from scripts.country_page.overview_text import build_summary
+from scripts.country_page.world_bank import wb_support_chart
 from scripts.explorers.common import base_africa_map
 from scripts.logger import logger
 
@@ -161,6 +162,9 @@ def update_weekly() -> None:
 
     financial_security.inflation_ts_chart()
     food_security.food_inflation_chart()
+
+    # world bank support
+    wb_support_chart(download=True)
 
 
 def update_monthly() -> None:
