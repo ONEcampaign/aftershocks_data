@@ -182,7 +182,7 @@ def wb_support_chart(download: bool = False) -> None:
     )
 
     # Export
-    df.to_csv(config.PATHS.charts + r"/c06_wb_support_ts.csv", index=False)
+    df.to_csv(config.PATHS.charts + r"/country_page/c06_wb_support_ts.csv", index=False)
 
 
 if __name__ == "__main__":
