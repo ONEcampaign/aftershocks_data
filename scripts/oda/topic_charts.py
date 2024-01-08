@@ -366,7 +366,9 @@ def oda_covid_idrc():
         .assign(donor_code=20001, donor_name="DAC Countries, Total")
     )
 
-    data = pd.concat([data, dac_covid], ignore_index=True)
+    ukraine_aid = aid_to_ukraine().assign(indicator="aid_to_ukraine")
+
+    data = pd.concat([data, dac_covid, ukraine_aid], ignore_index=True)
 
     data.indicator = data.indicator.replace(
         {"total_oda_ge": "Total ODA", "total_oda_flow_net": "Total ODA"}
@@ -384,7 +386,8 @@ def oda_covid_idrc():
             other_oda=lambda d: round(
                 d["Total ODA"].fillna(0)
                 - d["total_covid_oda_ge"].fillna(0)
-                - d["idrc_ge_linked"].fillna(0),
+                - d["idrc_ge_linked"].fillna(0)
+                - d["aid_to_ukraine"].fillna(0),
                 1,
             )
         )
@@ -401,11 +404,21 @@ def oda_covid_idrc():
                 "donor_name": "Donor",
                 "total_covid_oda_ge": "COVID ODA",
                 "idrc_ge_linked": "IDRC",
+                "aid_to_ukraine": "Total ODA to Ukraine",
                 "other_oda": "Other ODA",
             }
         )
         .filter(
-            ["Year", "Donor", "COVID ODA", "IDRC", "Other ODA", "Total ODA"], axis=1
+            [
+                "Year",
+                "Donor",
+                "COVID ODA",
+                "IDRC",
+                "Total ODA to Ukraine",
+                "Other ODA",
+                "Total ODA",
+            ],
+            axis=1,
         )
     )
 
@@ -629,6 +642,29 @@ def flow_shares_idrc_covid():
     logger.debug("Saved download version of oda_covid.csv")
 
 
+def aid_to_ukraine() -> pd.DataFrame:
+    from oda_data import ODAData, set_data_path
+    from oda_data.tools.groupings import donor_groupings
+
+    set_data_path(PATHS.raw_oda)
+
+    dg = donor_groupings()
+
+    oda = ODAData(
+        years=range(2010, 2023),
+        donors=list(dg["dac_countries"]) + [20001, 84],
+        prices="constant",
+        base_year=common.CONSTANT_YEAR,
+        include_names=True,
+    )
+
+    oda.load_indicator("recipient_total_flow_net")
+
+    df = oda.get_data().loc[lambda d: d.recipient_name == "Ukraine"]
+
+    return df
+
+
 if __name__ == "__main__":
     global_aid_ts()
     oda_gni_single_year()
@@ -639,3 +675,4 @@ if __name__ == "__main__":
     oda_covid_idrc()
     oda_idrc_share()
     flow_shares_idrc_covid()
+    d = aid_to_ukraine()

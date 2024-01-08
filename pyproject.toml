@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "aftershocks_data"
+name = "scripts"
 version = "1"
 description = "Data and tools for data.one.org"
 authors = ["Jorge Rivera <jorge.rivera@one.org>","Luca Picci <luca.picci@one.org>" ]
@@ -15,6 +15,7 @@ pyjstat = "^2"
 requests = "^2"
 numpy = "^1"
 country-converter = "^1"
+oda-data = "^1.0.11"
 
 
 [tool.poetry.dev-dependencies]
