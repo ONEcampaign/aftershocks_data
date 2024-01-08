@@ -366,7 +366,11 @@ def oda_covid_idrc():
         .assign(donor_code=20001, donor_name="DAC Countries, Total")
     )
 
-    ukraine_aid = aid_to_ukraine().assign(indicator="aid_to_ukraine")
+    ukraine_aid = (
+        aid_to_ukraine()
+        .assign(indicator="aid_to_ukraine")
+        .loc[lambda d: d.year >= 2015]
+    )
 
     data = pd.concat([data, dac_covid, ukraine_aid], ignore_index=True)
 
@@ -404,7 +408,7 @@ def oda_covid_idrc():
                 "donor_name": "Donor",
                 "total_covid_oda_ge": "COVID ODA",
                 "idrc_ge_linked": "IDRC",
-                "aid_to_ukraine": "Total ODA to Ukraine",
+                "aid_to_ukraine": "ODA to Ukraine",
                 "other_oda": "Other ODA",
             }
         )
@@ -414,7 +418,7 @@ def oda_covid_idrc():
                 "Donor",
                 "COVID ODA",
                 "IDRC",
-                "Total ODA to Ukraine",
+                "ODA to Ukraine",
                 "Other ODA",
                 "Total ODA",
             ],
