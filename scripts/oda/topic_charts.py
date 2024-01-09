@@ -755,7 +755,7 @@ def aid_to_ukraine_comparison() -> None:
         aid_to_ukraine()
         .filter(["year", "donor_name", "recipient_name", "value"])
         .loc[lambda d: d.year > 2020]
-        .round(1)
+        .round(2)
         .loc[lambda d: d.donor_name != "DAC Countries, Total"]
     )
 
