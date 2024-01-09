@@ -655,16 +655,97 @@ def aid_to_ukraine() -> pd.DataFrame:
     dg = donor_groupings()
 
     oda = ODAData(
-        years=range(2010, 2023),
+        years=range(2015, 2023),
         donors=list(dg["dac_countries"]) + [20001, 84],
         prices="constant",
         base_year=common.CONSTANT_YEAR,
         include_names=True,
     )
 
-    oda.load_indicator("recipient_total_flow_net")
+    oda.load_indicator(
+        [
+            "recipient_imputed_multi_flow_net",
+            "crs_bilateral_ge",
+            "recipient_total_flow_net",
+        ]
+    )
 
-    df = oda.get_data().loc[lambda d: d.recipient_name == "Ukraine"]
+    dfb = (
+        oda.get_data("crs_bilateral_ge")
+        .loc[lambda d: d.recipient_name == "Ukraine"]
+        .loc[lambda d: d.year >= 2018]
+    )
+
+    dfb = (
+        dfb.groupby(
+            [
+                "year",
+                "indicator",
+                "donor_code",
+                "donor_name",
+                "recipient_code",
+                "recipient_name",
+                "currency",
+                "prices",
+            ],
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum()
+        .reset_index()
+    )
+
+    dacb = (
+        dfb.groupby(
+            [
+                "year",
+                "indicator",
+                "recipient_code",
+                "recipient_name",
+                "currency",
+                "prices",
+            ],
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum()
+        .reset_index()
+        .assign(donor_code=20001, donor_name="DAC Countries, Total")
+    )
+
+    dfb = pd.concat([dfb, dacb], ignore_index=True)
+
+    dfm = (
+        oda.get_data("recipient_imputed_multi_flow_net")
+        .loc[lambda d: d.recipient_name == "Ukraine"]
+        .loc[lambda d: d.year >= 2018]
+    )
+
+    df_flow = (
+        oda.get_data("recipient_total_flow_net")
+        .loc[lambda d: d.recipient_name == "Ukraine"]
+        .loc[lambda d: d.year < 2018]
+    )
+
+    df = (
+        pd.concat([dfb, dfm, df_flow], ignore_index=True)
+        .groupby(
+            [
+                "year",
+                "donor_code",
+                "donor_name",
+                "recipient_code",
+                "recipient_name",
+                "currency",
+                "prices",
+            ],
+            dropna=False,
+            observed=True,
+        )["value"]
+        .sum()
+        .reset_index()
+        .assign(indicator="aid_to_ukraine")
+    )
 
     return df
 
@@ -679,4 +760,5 @@ if __name__ == "__main__":
     oda_covid_idrc()
     oda_idrc_share()
     flow_shares_idrc_covid()
-    d = aid_to_ukraine()
+    ...
+    # d = aid_to_ukraine()
