@@ -750,6 +750,26 @@ def aid_to_ukraine() -> pd.DataFrame:
     return df
 
 
+def aid_to_ukraine_comparison() -> None:
+    data = (
+        aid_to_ukraine()
+        .filter(["year", "donor_name", "recipient_name", "value"])
+        .loc[lambda d: d.year > 2020]
+        .round(1)
+        .loc[lambda d: d.donor_name != "DAC Countries, Total"]
+    )
+
+    # chart version
+    data.to_csv(f"{PATHS.charts}/oda_topic/aid_to_ukraine_comparison.csv", index=False)
+
+    # download version
+    source = "OECD DAC Table2a and Credit Reporting System (CRS)"
+
+    data.assign(source=source).to_csv(
+        f"{PATHS.download}/oda_topic/aid_to_ukraine_comparison.csv", index=False
+    )
+
+
 if __name__ == "__main__":
     global_aid_ts()
     oda_gni_single_year()
@@ -760,5 +780,5 @@ if __name__ == "__main__":
     oda_covid_idrc()
     oda_idrc_share()
     flow_shares_idrc_covid()
+    aid_to_ukraine_comparison()
     ...
-    # d = aid_to_ukraine()
