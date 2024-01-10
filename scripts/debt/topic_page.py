@@ -11,6 +11,7 @@ from scripts.debt.common import (
     read_dstocks_data,
 )
 from scripts.debt.overview_charts import CURRENT_YEAR
+from scripts.logger import logger
 
 set_bblocks_data_path(PATHS.bblocks_data)
 
@@ -287,6 +288,15 @@ def debt_service_comparison_chart() -> None:
     )
 
 
+def flourish_ids_debt_service() -> None:
+    """Debt service data for Flourish, in million"""
+
+    df = pd.read_feather(f"{PATHS.raw_debt}/debt_service_ts.feather")
+    df.to_csv(PATHS.charts + r"/debt_topic/c07_debt_service_ts.csv", index=False)
+
+    logger.info("Successfully updated chart C07")
+
+
 def update_debt_country_charts() -> None:
     debt_stocks_columns()
     debt_service_columns()
@@ -294,6 +304,7 @@ def update_debt_country_charts() -> None:
     debt_composition_chart()
     debt_to_china_chart()
     debt_service_comparison_chart()
+    flourish_ids_debt_service()
 
 
 if __name__ == "__main__":
