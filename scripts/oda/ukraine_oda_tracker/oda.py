@@ -50,12 +50,12 @@ def hcr_totals() -> dict:
         .sort_values(["Country", "date"])
         .drop_duplicates(subset=["Country"], keep="last")
         .filter(
-            ["Country", "Individual refugees from Ukraine recorded across Europe"],
+            ["Country", "Refugees from Ukraine recorded in country as of date"],
             axis=1,
         )
         .rename(
             columns={
-                "Individual refugees from Ukraine recorded across Europe": "latest_refugees"
+                "Refugees from Ukraine recorded in country as of date": "latest_refugees"
             }
         )
         .assign(
