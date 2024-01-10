@@ -297,6 +297,15 @@ def flourish_ids_debt_service() -> None:
     logger.info("Successfully updated chart C07")
 
 
+def flourish_ids_debt_stocks() -> None:
+    """Debt Stocks data for Flourish in Millions"""
+
+    df = pd.read_feather(f"{PATHS.raw_debt}/debt_stocks-ts.feather")
+    df.to_csv(PATHS.charts + r"/debt_topic/c08_debt_stocks-ts.csv", index=False)
+
+    logger.info("Successfully updated chart C08")
+
+
 def update_debt_country_charts() -> None:
     debt_stocks_columns()
     debt_service_columns()
@@ -305,6 +314,7 @@ def update_debt_country_charts() -> None:
     debt_to_china_chart()
     debt_service_comparison_chart()
     flourish_ids_debt_service()
+    flourish_ids_debt_stocks()
 
 
 if __name__ == "__main__":
