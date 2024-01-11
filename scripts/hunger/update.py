@@ -8,6 +8,7 @@ from bblocks.import_tools.world_bank import PinkSheet
 from scripts.config import PATHS
 from scripts.hunger.common import get_insufficient_food, wb_indicators
 from scripts.hunger.dynamic_text import update_hunger_dynamic_text
+from scripts.hunger.insufficient_food import insufficient_food_map
 from scripts.hunger.ipc import IPC
 from scripts.hunger.overview_charts import update_hunger_overview_charts
 from scripts.hunger.topic_charts import update_hunger_topic_charts
@@ -37,6 +38,8 @@ def update_daily_hunger_data() -> None:
     wfp_data = get_insufficient_food()
     wfp_data.to_csv(f"{PATHS.raw_data}/hunger/wfp.csv", index=False)
     logger.info("Updated WFP data")
+
+    insufficient_food_map()
 
 
 # --- Monthly update ---
