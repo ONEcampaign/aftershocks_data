@@ -4,8 +4,12 @@ from datetime import datetime
 
 import pandas as pd
 import requests
+from bblocks import format_number
 from country_converter import CountryConverter
 from dateutil.relativedelta import relativedelta
+
+from scripts.common import update_key_number
+from scripts.config import PATHS
 
 convert = CountryConverter()
 
@@ -83,14 +87,12 @@ class IPC:
         return f"{WEB_URL}country?key={self.api_key}"
 
     def get_website_table(self) -> list:
-
         url = self._get_web_url()
         return requests.get(url).json()
 
     def get_ipc_ch_data(
         self, latest: bool = True, only_valid: bool = False
     ) -> pd.DataFrame:
-
         raw_table = self.get_website_table()
         df = _build_table(data=raw_table)
         current_date = datetime(datetime.today().year, datetime.today().month, 1)
@@ -179,3 +181,35 @@ class IPC:
             df = pd.concat([_, df], ignore_index=True)
 
         return df
+
+
+def read_data() -> pd.DataFrame:
+    url = (
+        "https://raw.githubusercontent.com/ONEcampaign/DataDive_Food_Security/"
+        "main/output/ipc_data.csv"
+    )
+
+    return pd.read_csv(url)
+
+
+def ipc_totals() -> dict:
+    """ """
+    df = read_data()
+    phases = {}
+
+    for phase in ("phase_1", "phase_2", "phase_3", "phase_4", "phase_5", "phase_3plus"):
+        _ = df[phase].sum()
+        _count = df.loc[lambda d: d[phase] > 0, phase].count()
+        phases[f"{phase}_total"] = f"{_:,.0f}"
+        phases[f"{phase}_count"] = f"{_count:,.0f}"
+
+    return phases
+
+
+def update_ipc_key_numbers():
+    ipc = ipc_totals()
+    update_key_number(PATHS.charts + r"/hunger_topic/ipc_key_numbers.json", ipc)
+
+
+if __name__ == "__main__":
+    update_ipc_key_numbers()
