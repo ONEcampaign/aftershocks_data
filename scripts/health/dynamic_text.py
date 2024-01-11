@@ -85,15 +85,23 @@ def vaccination_dynamic() -> dict:
 
 
 def _get_indicator_item(
-    data: pd.DataFrame, iso_code: str, indicator: str, as_type: str, decimals: int
+    data: pd.DataFrame,
+    iso_code: str,
+    indicator: str,
+    as_type: str,
+    decimals: int,
+    formatted: bool = True,
 ):
-    return format_number(
-        data.loc[data.iso_code == iso_code, indicator],
-        as_units=True if as_type == "units" else False,
-        as_millions=True if as_type == "millions" else False,
-        as_billions=True if as_type == "billions" else False,
-        decimals=decimals,
-    ).item()
+    if formatted:
+        return format_number(
+            data.loc[data.iso_code == iso_code, indicator],
+            as_units=True if as_type == "units" else False,
+            as_millions=True if as_type == "millions" else False,
+            as_billions=True if as_type == "billions" else False,
+            decimals=decimals,
+        ).item()
+    else:
+        return data.loc[data.iso_code == iso_code, indicator].item()
 
 
 def doses_dynamic() -> None:
@@ -166,6 +174,26 @@ def doses_dynamic() -> None:
         decimals=1,
     )
 
+    lic_doses_nf = _get_indicator_item(
+        data=df,
+        iso_code="OWID_LIC",
+        indicator="total_vaccinations",
+        as_type="units",
+        decimals=1,
+        formatted=False,
+    )
+
+    world_doses_nf = _get_indicator_item(
+        data=df,
+        iso_code="OWID_WRL",
+        indicator="total_vaccinations",
+        as_type="units",
+        decimals=1,
+        formatted=False,
+    )
+
+    lic_share_total = f"{lic_doses_nf / world_doses_nf:.1%}"
+
     lmic_doses = _get_indicator_item(
         data=df,
         iso_code="OWID_LMC",
@@ -228,6 +256,7 @@ def doses_dynamic() -> None:
         "lmic_share_fully_vaccinated": lmic_share_pop,
         "umic_share_fully_vaccinated": umic_share_pop,
         "hic_share_fully_vaccinated": hic_share_pop,
+        "lower_income_share": lic_share_total,
     }
 
     update_key_number(f"{PATHS.charts}/health/key_numbers_doses.json", numbers)
