@@ -1,6 +1,10 @@
 import pandas as pd
-from bblocks import add_short_names_column, convert_id, set_bblocks_data_path
-from bblocks.dataframe_tools.add import add_gdp_column, add_gov_expenditure_column
+from bblocks import add_short_names_column, convert_id, set_bblocks_data_path, get_dsa
+from bblocks.dataframe_tools.add import (
+    add_gdp_column,
+    add_gov_expenditure_column,
+    add_iso_codes_column,
+)
 
 from scripts.config import PATHS
 from scripts.debt import common
@@ -306,6 +310,20 @@ def flourish_ids_debt_stocks() -> None:
     logger.info("Successfully updated chart C08")
 
 
+def debt_distress_map() -> None:
+    df = (
+        get_dsa()
+        .pipe(add_short_names_column, id_column="country", id_type="regex")
+        .pipe(add_iso_codes_column, id_column="name_short", id_type="regex")
+        .filter(
+            ["iso_code", "name_short", "latest_publication", "risk_of_debt_distress"]
+        )
+        .dropna(subset=["risk_of_debt_distress"])
+    )
+
+    df.to_csv(f"{PATHS.charts}/debt_topic/debt_distress_map.csv", index=False)
+
+
 def update_debt_country_charts() -> None:
     debt_stocks_columns()
     debt_service_columns()
@@ -315,6 +333,7 @@ def update_debt_country_charts() -> None:
     debt_service_comparison_chart()
     flourish_ids_debt_service()
     flourish_ids_debt_stocks()
+    debt_distress_map()
 
 
 if __name__ == "__main__":
