@@ -1,5 +1,11 @@
 import pandas as pd
-from bblocks import add_short_names_column, convert_id, set_bblocks_data_path, get_dsa
+from bblocks import (
+    add_short_names_column,
+    convert_id,
+    set_bblocks_data_path,
+    get_dsa,
+    date_to_str,
+)
 from bblocks.dataframe_tools.add import (
     add_gdp_column,
     add_gov_expenditure_column,
@@ -319,9 +325,16 @@ def debt_distress_map() -> None:
             ["iso_code", "name_short", "latest_publication", "risk_of_debt_distress"]
         )
         .dropna(subset=["risk_of_debt_distress"])
+        .assign(latest_publication=lambda d: date_to_str(d.latest_publication))
     )
 
+    # chart version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_distress_map.csv", index=False)
+
+    # download version
+    df.assign(source=f"IMF DSA").to_csv(
+        f"{PATHS.download}/debt_topic/debt_distress_map.csv", index=False
+    )
 
 
 def update_debt_country_charts() -> None:
