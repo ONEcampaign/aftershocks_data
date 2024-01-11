@@ -133,7 +133,12 @@ def _flourish_clean_ids(df: pd.DataFrame) -> pd.DataFrame:
 
     return (
         df.loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
-        .groupby(["iso_code", "year", "indicator"], as_index=False)["value"]
+        .groupby(
+            ["iso_code", "year", "indicator"],
+            as_index=False,
+            observed=True,
+            dropna=False,
+        )["value"]
         .sum()
         .pivot(index=["iso_code", "year"], columns="indicator", values="value")
         .assign(Total=lambda d: d.fillna(0).sum(axis=1))
@@ -166,12 +171,12 @@ def _clean_ids_china_service(df: pd.DataFrame) -> pd.DataFrame:
     china = df.loc[df["counterpart"] == "China"].copy()
     df = df.loc[df["counterpart"] != "China"]
 
-    df = df.groupby(["iso_code", "year", "indicator"], as_index=False).sum(
-        numeric_only=True
-    )
-    china = china.groupby(["iso_code", "year", "indicator"], as_index=False).sum(
-        numeric_only=True
-    )
+    df = df.groupby(
+        ["iso_code", "year", "indicator"], as_index=False, dropna=False, observed=True
+    ).sum(numeric_only=True)
+    china = china.groupby(
+        ["iso_code", "year", "indicator"], as_index=False, dropna=False, observed=True
+    ).sum(numeric_only=True)
 
     indicators_other = {
         "Bilateral": "Bilateral (excl. China)",
@@ -288,6 +293,38 @@ def flourish_ids_debt_stocks() -> None:
     logger.debug("Saved debt file debt_stocks-ts.feather (tracker version)")
 
 
+def flourish_ids_debt_service_china() -> None:
+    df = (
+        read_ids_service()
+        .pipe(clean_ids_data, detail=True)
+        .pipe(_clean_ids_china_service)
+        .assign(value=lambda d: (d.value / 1e6))  # In millions
+        .loc[lambda d: d.iso_code.isin(common.get_full_africa_iso3())]
+        .groupby(
+            ["year", "indicator"],
+            as_index=False,
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum()
+        .pivot(index=["year"], columns="indicator", values="value")
+        .reset_index()
+        .sort_values(["year"])
+        .round(2)
+        .reset_index(drop=True)
+    )
+
+    file_name = "debt_service_china"
+
+    # chart version
+    df.to_csv(f"{PATHS.charts}/debt_topic/{file_name}.csv", index=False)
+    logger.debug("Saved debt file debt_service_ts.csv (tracker version)")
+
+    # download version
+    df = df.assign(source="World Bank IDS")
+    df.to_csv(f"{PATHS.download}/debt_topic/{file_name}.csv", index=False)
+
+
 def flourish_ids_debt_service() -> None:
     """Debt service data for Flourish, in millions"""
 
@@ -313,8 +350,13 @@ def flourish_ids_debt_service() -> None:
     logger.debug("Saved debt file debt_service_ts.csv (tracker version)")
 
 
-
 def update_flourish_charts() -> None:
     """Update Flourish charts with new data"""
     flourish_ids_debt_stocks()
     flourish_ids_debt_service()
+    flourish_ids_debt_service_china()
+
+
+if __name__ == "__main__":
+    # update_ids_data()
+    update_flourish_charts()
