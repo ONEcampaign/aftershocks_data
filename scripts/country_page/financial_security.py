@@ -35,7 +35,7 @@ def _wfp_inflation(wfp: WFPData, indicator="Inflation Rate") -> pd.DataFrame:
         wfp.get_data("inflation")
         .pipe(add_short_names_column, id_column="iso_code")
         .pipe(filter_african_countries, id_type="ISO3")
-        .loc[lambda d: d.date.dt.year.between(2018, 2023)]
+        .loc[lambda d: d.date.dt.year.between(2018, 2024)]
         .loc[lambda d: d.indicator == indicator]
         .filter(["name_short", "date", "indicator", "value"], axis=1)
         .rename(
@@ -120,6 +120,7 @@ def inflation_ts_chart() -> None:
     """Create a line chart with an overview of inflation data"""
     source = "Price inflation data from the WFP VAM resource centre"
 
+    set_bblocks_data_path(PATHS.bblocks_data)
     wfp = _read_wfp()
 
     inflation = _wfp_inflation(wfp)
@@ -564,3 +565,7 @@ def financial_overview() -> None:
         f"{PATHS.download}/country_page/country_financial_overview_download.csv",
         index=False,
     )
+
+
+if __name__ == "__main__":
+    inflation_ts_chart()

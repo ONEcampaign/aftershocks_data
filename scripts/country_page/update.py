@@ -147,6 +147,9 @@ def update_daily() -> None:
     health.vaccination_rate_single_measure()
     logger.info("Updated vaccination rate chart")
 
+    financial_security.inflation_ts_chart()
+    food_security.food_inflation_chart()
+
     # Update live text
     build_summary()
     logger.info("Updated overview text (summary) json")
