@@ -112,8 +112,9 @@ def doses_dynamic() -> None:
             "iso_code",
             "total_vaccinations",
             "total_vaccinations_per_hundred",
+            "people_vaccinated_per_hundred",
             "people_fully_vaccinated_per_hundred",
-            "population",
+            "total_deaths",
         ]
     )
 
@@ -142,12 +143,28 @@ def doses_dynamic() -> None:
         decimals=1,
     )
 
+    world_deaths = _get_indicator_item(
+        data=df,
+        iso_code="OWID_WRL",
+        indicator="total_deaths",
+        as_type="units",
+        decimals=0,
+    )
+
     africa_doses = _get_indicator_item(
         data=df,
         iso_code="OWID_AFR",
         indicator="total_vaccinations",
         as_type="millions",
         decimals=0,
+    )
+
+    africa_share_first_dose = _get_indicator_item(
+        data=df,
+        iso_code="OWID_AFR",
+        indicator="people_vaccinated_per_hundred",
+        as_type="units",
+        decimals=1,
     )
 
     africa_share_pop = _get_indicator_item(
@@ -251,7 +268,9 @@ def doses_dynamic() -> None:
         "hic_total_doses": hic_doses,
         "africa_total_doses": africa_doses,
         "africa_share_fully_vaccinated": africa_share_pop,
+        "africa_share_first_dose": africa_share_first_dose,
         "world_share_fully_vaccinated": world_share_pop,
+        "covid_world_deaths_total": world_deaths,
         "lic_share_fully_vaccinated": lic_share_pop,
         "lmic_share_fully_vaccinated": lmic_share_pop,
         "umic_share_fully_vaccinated": umic_share_pop,
