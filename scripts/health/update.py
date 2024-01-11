@@ -23,6 +23,9 @@ def update_daily_health_charts() -> None:
     # Overview chart
     health_dynamic_text.update_dynamic_text()
 
+    # doses
+    health_dynamic_text.doses_dynamic()
+
 
 # --- MONTHLY UPDATE ---
 def update_monthly_health_data() -> None:
