@@ -9,7 +9,7 @@ from scripts.config import PATHS
 from scripts.hunger.common import get_insufficient_food, wb_indicators
 from scripts.hunger.dynamic_text import update_hunger_dynamic_text
 from scripts.hunger.insufficient_food import insufficient_food_map
-from scripts.hunger.ipc import IPC
+from scripts.hunger.ipc import IPC, update_ipc_key_numbers
 from scripts.hunger.overview_charts import update_hunger_overview_charts
 from scripts.hunger.topic_charts import update_hunger_topic_charts
 from scripts.logger import logger
@@ -40,6 +40,7 @@ def update_daily_hunger_data() -> None:
     logger.info("Updated WFP data")
 
     insufficient_food_map()
+    update_ipc_key_numbers()
 
 
 # --- Monthly update ---
