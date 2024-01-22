@@ -23,7 +23,7 @@ set_bblocks_data_path(PATHS.bblocks_data)
 KEY_NUMBERS: dict = {}
 
 CURRENT_YEAR = datetime.datetime.now().year
-STOCKS_YEAR = CURRENT_YEAR - 1
+STOCKS_YEAR = CURRENT_YEAR - 2
 
 
 def debt_distress() -> None:
@@ -183,3 +183,7 @@ def debt_stocks_africa_trend() -> None:
 
     update_key_number(f"{PATHS.charts}/debt_topic/debt_key_numbers.json", kn)
     logger.debug("Updated debt file 'overview.json'")
+
+
+if __name__ == "__main__":
+    debt_stocks_africa_trend()

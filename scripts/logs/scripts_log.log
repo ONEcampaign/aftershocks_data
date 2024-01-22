@@ -7587,3 +7587,11 @@ INFO (2024-01-21 11:17:01,114): Updated vaccination rate chart
 INFO (2024-01-21 11:17:05,638): Updated overview text (summary) json
 INFO (2024-01-21 11:17:05,638): Updated daily charts in country page
 INFO (2024-01-21 11:17:08,780): Updated economy picker
+INFO (2024-01-22 09:26:49,822): Updated DSA list data
+INFO (2024-01-22 09:29:21,208): Downloaded IDS debt service data
+INFO (2024-01-22 09:30:49,741): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2024-01-22 09:33:06,318): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2024-01-22 09:33:11,570): Successfully updated chart C07
+INFO (2024-01-22 09:33:11,574): Successfully updated chart C08
+INFO (2024-01-22 09:33:12,184): Updated weekly charts in debt page
+INFO (2024-01-22 09:35:12,799): Updated weekly charts in country page
