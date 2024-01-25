@@ -54,6 +54,7 @@ def update_monthly_health_charts() -> None:
     # WHO charts
     health_topic.dtp_topic_chart()
     health_overview_charts.malaria_chart()
+    health_topic.malaria_topic_chart()
 
     # IHME
     health_topic.ihme_spending_topic_chart()
