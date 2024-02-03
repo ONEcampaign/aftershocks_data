@@ -406,53 +406,88 @@ date,value,iso_code,name_short,source
 2023-12-16,25.16,Africa (median),,WFP HungerMapLive
 2023-12-17,25.24,Africa (median),,WFP HungerMapLive
 2023-12-18,25.24,Africa (median),,WFP HungerMapLive
-2023-12-19,25.17,Africa (median),,WFP HungerMapLive
-2023-12-20,25.17,Africa (median),,WFP HungerMapLive
-2023-12-21,25.17,Africa (median),,WFP HungerMapLive
-2023-12-22,25.17,Africa (median),,WFP HungerMapLive
-2023-12-23,25.17,Africa (median),,WFP HungerMapLive
-2023-12-24,25.17,Africa (median),,WFP HungerMapLive
-2023-12-25,25.17,Africa (median),,WFP HungerMapLive
-2023-12-26,25.225,Africa (median),,WFP HungerMapLive
-2023-12-27,25.225,Africa (median),,WFP HungerMapLive
-2023-12-28,25.225,Africa (median),,WFP HungerMapLive
-2023-12-29,25.27,Africa (median),,WFP HungerMapLive
-2023-12-30,25.27,Africa (median),,WFP HungerMapLive
-2023-12-31,25.195,Africa (median),,WFP HungerMapLive
-2024-01-01,25.14,Africa (median),,WFP HungerMapLive
-2024-01-02,25.14,Africa (median),,WFP HungerMapLive
-2024-01-03,25.14,Africa (median),,WFP HungerMapLive
-2024-01-04,25.13,Africa (median),,WFP HungerMapLive
-2024-01-05,24.97,Africa (median),,WFP HungerMapLive
-2024-01-06,24.81,Africa (median),,WFP HungerMapLive
-2024-01-07,24.97,Africa (median),,WFP HungerMapLive
-2024-01-08,24.97,Africa (median),,WFP HungerMapLive
-2024-01-09,24.81,Africa (median),,WFP HungerMapLive
-2024-01-10,24.81,Africa (median),,WFP HungerMapLive
-2024-01-11,24.81,Africa (median),,WFP HungerMapLive
-2024-01-12,24.46,Africa (median),,WFP HungerMapLive
-2024-01-13,24.060000000000002,Africa (median),,WFP HungerMapLive
-2024-01-14,24.25,Africa (median),,WFP HungerMapLive
-2024-01-15,24.14,Africa (median),,WFP HungerMapLive
-2024-01-16,24.555,Africa (median),,WFP HungerMapLive
-2024-01-17,24.25,Africa (median),,WFP HungerMapLive
-2024-01-18,24.26,Africa (median),,WFP HungerMapLive
-2024-01-19,24.26,Africa (median),,WFP HungerMapLive
-2024-01-20,24.075000000000003,Africa (median),,WFP HungerMapLive
-2024-01-21,24.055,Africa (median),,WFP HungerMapLive
-2024-01-22,24.165,Africa (median),,WFP HungerMapLive
-2024-01-23,24.259999999999998,Africa (median),,WFP HungerMapLive
-2024-01-24,24.22,Africa (median),,WFP HungerMapLive
-2024-01-25,24.25,Africa (median),,WFP HungerMapLive
-2024-01-26,24.13,Africa (median),,WFP HungerMapLive
-2024-01-27,23.72,Africa (median),,WFP HungerMapLive
-2024-01-28,23.729999999999997,Africa (median),,WFP HungerMapLive
-2024-01-29,24.24,Africa (median),,WFP HungerMapLive
-2024-01-30,24.75,Africa (median),,WFP HungerMapLive
-2024-01-31,23.95,Africa (median),,WFP HungerMapLive
-2024-02-01,24.200000000000003,Africa (median),,WFP HungerMapLive
-2024-02-02,24.689999999999998,Africa (median),,WFP HungerMapLive
-2024-02-02,24.689999999999998,,Africa (median),WFP HungerMapLive
+2023-12-19,25.205,Africa (median),,WFP HungerMapLive
+2023-12-20,25.205,Africa (median),,WFP HungerMapLive
+2023-12-21,25.22,Africa (median),,WFP HungerMapLive
+2023-12-22,25.22,Africa (median),,WFP HungerMapLive
+2023-12-23,25.22,Africa (median),,WFP HungerMapLive
+2023-12-24,25.22,Africa (median),,WFP HungerMapLive
+2023-12-25,25.22,Africa (median),,WFP HungerMapLive
+2023-12-26,25.27,Africa (median),,WFP HungerMapLive
+2023-12-27,25.27,Africa (median),,WFP HungerMapLive
+2023-12-28,25.27,Africa (median),,WFP HungerMapLive
+2023-12-29,25.41,Africa (median),,WFP HungerMapLive
+2023-12-30,25.435000000000002,Africa (median),,WFP HungerMapLive
+2023-12-31,25.21,Africa (median),,WFP HungerMapLive
+2024-01-01,25.295,Africa (median),,WFP HungerMapLive
+2024-01-02,25.295,Africa (median),,WFP HungerMapLive
+2024-01-03,25.295,Africa (median),,WFP HungerMapLive
+2024-01-04,25.28,Africa (median),,WFP HungerMapLive
+2024-01-05,25.13,Africa (median),,WFP HungerMapLive
+2024-01-06,24.97,Africa (median),,WFP HungerMapLive
+2024-01-07,25.13,Africa (median),,WFP HungerMapLive
+2024-01-08,25.13,Africa (median),,WFP HungerMapLive
+2024-01-09,24.97,Africa (median),,WFP HungerMapLive
+2024-01-10,24.97,Africa (median),,WFP HungerMapLive
+2024-01-11,24.96,Africa (median),,WFP HungerMapLive
+2024-01-12,24.81,Africa (median),,WFP HungerMapLive
+2024-01-13,24.12,Africa (median),,WFP HungerMapLive
+2024-01-14,24.38,Africa (median),,WFP HungerMapLive
+2024-01-15,24.36,Africa (median),,WFP HungerMapLive
+2024-01-16,24.85,Africa (median),,WFP HungerMapLive
+2024-01-17,24.54,Africa (median),,WFP HungerMapLive
+2024-01-18,24.4,Africa (median),,WFP HungerMapLive
+2024-01-19,24.39,Africa (median),,WFP HungerMapLive
+2024-01-20,24.26,Africa (median),,WFP HungerMapLive
+2024-01-21,24.27,Africa (median),,WFP HungerMapLive
+2024-01-22,24.27,Africa (median),,WFP HungerMapLive
+2024-01-23,24.27,Africa (median),,WFP HungerMapLive
+2024-01-24,24.24,Africa (median),,WFP HungerMapLive
+2024-01-25,24.26,Africa (median),,WFP HungerMapLive
+2024-01-26,24.24,Africa (median),,WFP HungerMapLive
+2024-01-27,24.24,Africa (median),,WFP HungerMapLive
+2024-01-28,24.24,Africa (median),,WFP HungerMapLive
+2024-01-29,24.75,Africa (median),,WFP HungerMapLive
+2024-01-30,25.26,Africa (median),,WFP HungerMapLive
+2024-01-31,24.24,Africa (median),,WFP HungerMapLive
+2024-02-01,24.26,Africa (median),,WFP HungerMapLive
+2024-02-02,25.24,Africa (median),,WFP HungerMapLive
+2024-02-03,24.84,Africa (median),,WFP HungerMapLive
+2024-02-03,24.84,,Africa (median),WFP HungerMapLive
+2024-02-03,23.55,,Algeria,WFP HungerMapLive
+2024-02-03,18.49,,Botswana,WFP HungerMapLive
+2024-02-03,31.36,,Burundi,WFP HungerMapLive
+2024-02-03,21.16,,Cabo Verde,WFP HungerMapLive
+2024-02-03,31.63,,Central African Republic,WFP HungerMapLive
+2024-02-03,29.71,,Comoros,WFP HungerMapLive
+2024-02-03,20.25,,Congo Republic,WFP HungerMapLive
+2024-02-03,16.91,,Cote d'Ivoire,WFP HungerMapLive
+2024-02-03,25.4,,Djibouti,WFP HungerMapLive
+2024-02-03,17.69,,Egypt,WFP HungerMapLive
+2024-02-03,17.23,,Eswatini,WFP HungerMapLive
+2024-02-03,25.24,,Gambia,WFP HungerMapLive
+2024-02-03,15.97,,Ghana,WFP HungerMapLive
+2024-02-03,32.51,,Guinea-Bissau,WFP HungerMapLive
+2024-02-03,34.83,,Lesotho,WFP HungerMapLive
+2024-02-03,36.63,,Liberia,WFP HungerMapLive
+2024-02-03,17.49,,Libya,WFP HungerMapLive
+2024-02-03,30.2,,Madagascar,WFP HungerMapLive
+2024-02-03,29.08,,Mauritania,WFP HungerMapLive
+2024-02-03,18.28,,Morocco,WFP HungerMapLive
+2024-02-03,46.14,,Nigeria,WFP HungerMapLive
+2024-02-03,19.99,,Rwanda,WFP HungerMapLive
+2024-02-03,20.1,,Sao Tome and Principe,WFP HungerMapLive
+2024-02-03,28.34,,Senegal,WFP HungerMapLive
+2024-02-03,52.05,,Sierra Leone,WFP HungerMapLive
+2024-02-03,89.85,,Somalia,WFP HungerMapLive
+2024-02-03,29.83,,South Sudan,WFP HungerMapLive
+2024-02-03,34.16,,Sudan,WFP HungerMapLive
+2024-02-03,7.57,,Tanzania,WFP HungerMapLive
+2024-02-03,21.36,,Togo,WFP HungerMapLive
+2024-02-03,15.0,,Tunisia,WFP HungerMapLive
+2024-02-03,16.92,,Uganda,WFP HungerMapLive
+2024-02-03,24.84,,Zimbabwe,WFP HungerMapLive
+2024-02-02,25.24,,Africa (median),WFP HungerMapLive
 2024-02-02,24.14,,Algeria,WFP HungerMapLive
 2024-02-02,18.49,,Botswana,WFP HungerMapLive
 2024-02-02,31.36,,Burundi,WFP HungerMapLive
@@ -471,6 +506,7 @@ date,value,iso_code,name_short,source
 2024-02-02,36.63,,Liberia,WFP HungerMapLive
 2024-02-02,17.49,,Libya,WFP HungerMapLive
 2024-02-02,29.74,,Madagascar,WFP HungerMapLive
+2024-02-02,29.72,,Mauritania,WFP HungerMapLive
 2024-02-02,18.28,,Morocco,WFP HungerMapLive
 2024-02-02,46.12,,Nigeria,WFP HungerMapLive
 2024-02-02,19.99,,Rwanda,WFP HungerMapLive
@@ -485,7 +521,7 @@ date,value,iso_code,name_short,source
 2024-02-02,15.0,,Tunisia,WFP HungerMapLive
 2024-02-02,16.97,,Uganda,WFP HungerMapLive
 2024-02-02,25.25,,Zimbabwe,WFP HungerMapLive
-2024-02-01,24.200000000000003,,Africa (median),WFP HungerMapLive
+2024-02-01,24.26,,Africa (median),WFP HungerMapLive
 2024-02-01,24.14,,Algeria,WFP HungerMapLive
 2024-02-01,18.49,,Botswana,WFP HungerMapLive
 2024-02-01,31.36,,Burundi,WFP HungerMapLive
@@ -504,6 +540,7 @@ date,value,iso_code,name_short,source
 2024-02-01,36.63,,Liberia,WFP HungerMapLive
 2024-02-01,17.49,,Libya,WFP HungerMapLive
 2024-02-01,29.78,,Madagascar,WFP HungerMapLive
+2024-02-01,29.44,,Mauritania,WFP HungerMapLive
 2024-02-01,18.19,,Morocco,WFP HungerMapLive
 2024-02-01,46.14,,Nigeria,WFP HungerMapLive
 2024-02-01,19.99,,Rwanda,WFP HungerMapLive
@@ -518,7 +555,7 @@ date,value,iso_code,name_short,source
 2024-02-01,15.01,,Tunisia,WFP HungerMapLive
 2024-02-01,16.92,,Uganda,WFP HungerMapLive
 2024-02-01,24.26,,Zimbabwe,WFP HungerMapLive
-2024-01-31,23.95,,Africa (median),WFP HungerMapLive
+2024-01-31,24.24,,Africa (median),WFP HungerMapLive
 2024-01-31,24.24,,Algeria,WFP HungerMapLive
 2024-01-31,18.53,,Botswana,WFP HungerMapLive
 2024-01-31,31.95,,Burundi,WFP HungerMapLive
@@ -537,6 +574,7 @@ date,value,iso_code,name_short,source
 2024-01-31,36.63,,Liberia,WFP HungerMapLive
 2024-01-31,17.52,,Libya,WFP HungerMapLive
 2024-01-31,29.57,,Madagascar,WFP HungerMapLive
+2024-01-31,30.39,,Mauritania,WFP HungerMapLive
 2024-01-31,18.18,,Morocco,WFP HungerMapLive
 2024-01-31,46.08,,Nigeria,WFP HungerMapLive
 2024-01-31,19.99,,Rwanda,WFP HungerMapLive
@@ -551,7 +589,7 @@ date,value,iso_code,name_short,source
 2024-01-31,15.01,,Tunisia,WFP HungerMapLive
 2024-01-31,16.92,,Uganda,WFP HungerMapLive
 2024-01-31,23.66,,Zimbabwe,WFP HungerMapLive
-2024-01-30,24.75,,Africa (median),WFP HungerMapLive
+2024-01-30,25.26,,Africa (median),WFP HungerMapLive
 2024-01-30,24.24,,Algeria,WFP HungerMapLive
 2024-01-30,18.53,,Botswana,WFP HungerMapLive
 2024-01-30,31.95,,Burundi,WFP HungerMapLive
@@ -570,6 +608,7 @@ date,value,iso_code,name_short,source
 2024-01-30,36.63,,Liberia,WFP HungerMapLive
 2024-01-30,17.52,,Libya,WFP HungerMapLive
 2024-01-30,29.69,,Madagascar,WFP HungerMapLive
+2024-01-30,30.13,,Mauritania,WFP HungerMapLive
 2024-01-30,18.18,,Morocco,WFP HungerMapLive
 2024-01-30,46.14,,Nigeria,WFP HungerMapLive
 2024-01-30,19.99,,Rwanda,WFP HungerMapLive
@@ -584,7 +623,7 @@ date,value,iso_code,name_short,source
 2024-01-30,15.02,,Tunisia,WFP HungerMapLive
 2024-01-30,17.01,,Uganda,WFP HungerMapLive
 2024-01-30,23.47,,Zimbabwe,WFP HungerMapLive
-2024-01-29,24.24,,Africa (median),WFP HungerMapLive
+2024-01-29,24.75,,Africa (median),WFP HungerMapLive
 2024-01-29,24.24,,Algeria,WFP HungerMapLive
 2024-01-29,18.53,,Botswana,WFP HungerMapLive
 2024-01-29,31.95,,Burundi,WFP HungerMapLive
@@ -603,6 +642,7 @@ date,value,iso_code,name_short,source
 2024-01-29,36.63,,Liberia,WFP HungerMapLive
 2024-01-29,17.52,,Libya,WFP HungerMapLive
 2024-01-29,29.4,,Madagascar,WFP HungerMapLive
+2024-01-29,29.99,,Mauritania,WFP HungerMapLive
 2024-01-29,18.16,,Morocco,WFP HungerMapLive
 2024-01-29,46.0,,Nigeria,WFP HungerMapLive
 2024-01-29,19.99,,Rwanda,WFP HungerMapLive
@@ -617,7 +657,7 @@ date,value,iso_code,name_short,source
 2024-01-29,15.04,,Tunisia,WFP HungerMapLive
 2024-01-29,17.17,,Uganda,WFP HungerMapLive
 2024-01-29,22.84,,Zimbabwe,WFP HungerMapLive
-2024-01-28,23.729999999999997,,Africa (median),WFP HungerMapLive
+2024-01-28,24.24,,Africa (median),WFP HungerMapLive
 2024-01-28,24.24,,Algeria,WFP HungerMapLive
 2024-01-28,18.53,,Botswana,WFP HungerMapLive
 2024-01-28,31.95,,Burundi,WFP HungerMapLive
@@ -636,6 +676,7 @@ date,value,iso_code,name_short,source
 2024-01-28,36.63,,Liberia,WFP HungerMapLive
 2024-01-28,17.52,,Libya,WFP HungerMapLive
 2024-01-28,29.73,,Madagascar,WFP HungerMapLive
+2024-01-28,29.74,,Mauritania,WFP HungerMapLive
 2024-01-28,18.15,,Morocco,WFP HungerMapLive
 2024-01-28,45.95,,Nigeria,WFP HungerMapLive
 2024-01-28,19.99,,Rwanda,WFP HungerMapLive
@@ -650,7 +691,7 @@ date,value,iso_code,name_short,source
 2024-01-28,15.06,,Tunisia,WFP HungerMapLive
 2024-01-28,17.17,,Uganda,WFP HungerMapLive
 2024-01-28,23.22,,Zimbabwe,WFP HungerMapLive
-2024-01-27,23.72,,Africa (median),WFP HungerMapLive
+2024-01-27,24.24,,Africa (median),WFP HungerMapLive
 2024-01-27,24.24,,Algeria,WFP HungerMapLive
 2024-01-27,18.53,,Botswana,WFP HungerMapLive
 2024-01-27,31.95,,Burundi,WFP HungerMapLive
@@ -669,6 +710,7 @@ date,value,iso_code,name_short,source
 2024-01-27,36.63,,Liberia,WFP HungerMapLive
 2024-01-27,17.52,,Libya,WFP HungerMapLive
 2024-01-27,29.59,,Madagascar,WFP HungerMapLive
+2024-01-27,29.16,,Mauritania,WFP HungerMapLive
 2024-01-27,18.17,,Morocco,WFP HungerMapLive
 2024-01-27,45.9,,Nigeria,WFP HungerMapLive
 2024-01-27,19.99,,Rwanda,WFP HungerMapLive
@@ -683,7 +725,7 @@ date,value,iso_code,name_short,source
 2024-01-27,15.01,,Tunisia,WFP HungerMapLive
 2024-01-27,17.17,,Uganda,WFP HungerMapLive
 2024-01-27,23.2,,Zimbabwe,WFP HungerMapLive
-2024-01-26,24.13,,Africa (median),WFP HungerMapLive
+2024-01-26,24.24,,Africa (median),WFP HungerMapLive
 2024-01-26,24.24,,Algeria,WFP HungerMapLive
 2024-01-26,18.52,,Botswana,WFP HungerMapLive
 2024-01-26,31.96,,Burundi,WFP HungerMapLive
@@ -702,6 +744,7 @@ date,value,iso_code,name_short,source
 2024-01-26,36.63,,Liberia,WFP HungerMapLive
 2024-01-26,17.53,,Libya,WFP HungerMapLive
 2024-01-26,29.66,,Madagascar,WFP HungerMapLive
+2024-01-26,29.41,,Mauritania,WFP HungerMapLive
 2024-01-26,18.17,,Morocco,WFP HungerMapLive
 2024-01-26,45.97,,Nigeria,WFP HungerMapLive
 2024-01-26,19.99,,Rwanda,WFP HungerMapLive
@@ -716,7 +759,7 @@ date,value,iso_code,name_short,source
 2024-01-26,15.0,,Tunisia,WFP HungerMapLive
 2024-01-26,17.39,,Uganda,WFP HungerMapLive
 2024-01-26,24.02,,Zimbabwe,WFP HungerMapLive
-2024-01-25,24.25,,Africa (median),WFP HungerMapLive
+2024-01-25,24.26,,Africa (median),WFP HungerMapLive
 2024-01-25,24.24,,Algeria,WFP HungerMapLive
 2024-01-25,18.52,,Botswana,WFP HungerMapLive
 2024-01-25,31.96,,Burundi,WFP HungerMapLive
@@ -735,6 +778,7 @@ date,value,iso_code,name_short,source
 2024-01-25,36.63,,Liberia,WFP HungerMapLive
 2024-01-25,17.53,,Libya,WFP HungerMapLive
 2024-01-25,29.67,,Madagascar,WFP HungerMapLive
+2024-01-25,28.58,,Mauritania,WFP HungerMapLive
 2024-01-25,18.17,,Morocco,WFP HungerMapLive
 2024-01-25,45.83,,Nigeria,WFP HungerMapLive
 2024-01-25,19.99,,Rwanda,WFP HungerMapLive
@@ -749,7 +793,7 @@ date,value,iso_code,name_short,source
 2024-01-25,15.0,,Tunisia,WFP HungerMapLive
 2024-01-25,17.39,,Uganda,WFP HungerMapLive
 2024-01-25,24.26,,Zimbabwe,WFP HungerMapLive
-2024-01-24,24.22,,Africa (median),WFP HungerMapLive
+2024-01-24,24.24,,Africa (median),WFP HungerMapLive
 2024-01-24,24.24,,Algeria,WFP HungerMapLive
 2024-01-24,18.52,,Botswana,WFP HungerMapLive
 2024-01-24,31.78,,Burundi,WFP HungerMapLive
@@ -768,6 +812,7 @@ date,value,iso_code,name_short,source
 2024-01-24,36.63,,Liberia,WFP HungerMapLive
 2024-01-24,17.52,,Libya,WFP HungerMapLive
 2024-01-24,29.56,,Madagascar,WFP HungerMapLive
+2024-01-24,28.23,,Mauritania,WFP HungerMapLive
 2024-01-24,18.18,,Morocco,WFP HungerMapLive
 2024-01-24,45.76,,Nigeria,WFP HungerMapLive
 2024-01-24,19.99,,Rwanda,WFP HungerMapLive
@@ -782,7 +827,7 @@ date,value,iso_code,name_short,source
 2024-01-24,14.99,,Tunisia,WFP HungerMapLive
 2024-01-24,17.45,,Uganda,WFP HungerMapLive
 2024-01-24,24.2,,Zimbabwe,WFP HungerMapLive
-2024-01-23,24.259999999999998,,Africa (median),WFP HungerMapLive
+2024-01-23,24.27,,Africa (median),WFP HungerMapLive
 2024-01-23,24.27,,Algeria,WFP HungerMapLive
 2024-01-23,18.52,,Botswana,WFP HungerMapLive
 2024-01-23,31.76,,Burundi,WFP HungerMapLive
@@ -801,6 +846,7 @@ date,value,iso_code,name_short,source
 2024-01-23,36.63,,Liberia,WFP HungerMapLive
 2024-01-23,17.53,,Libya,WFP HungerMapLive
 2024-01-23,29.41,,Madagascar,WFP HungerMapLive
+2024-01-23,28.51,,Mauritania,WFP HungerMapLive
 2024-01-23,18.09,,Morocco,WFP HungerMapLive
 2024-01-23,45.83,,Nigeria,WFP HungerMapLive
 2024-01-23,20.0,,Rwanda,WFP HungerMapLive
@@ -815,7 +861,7 @@ date,value,iso_code,name_short,source
 2024-01-23,14.91,,Tunisia,WFP HungerMapLive
 2024-01-23,17.49,,Uganda,WFP HungerMapLive
 2024-01-23,24.25,,Zimbabwe,WFP HungerMapLive
-2024-01-22,24.165,,Africa (median),WFP HungerMapLive
+2024-01-22,24.27,,Africa (median),WFP HungerMapLive
 2024-01-22,24.27,,Algeria,WFP HungerMapLive
 2024-01-22,18.52,,Botswana,WFP HungerMapLive
 2024-01-22,31.76,,Burundi,WFP HungerMapLive
@@ -834,6 +880,7 @@ date,value,iso_code,name_short,source
 2024-01-22,36.63,,Liberia,WFP HungerMapLive
 2024-01-22,17.53,,Libya,WFP HungerMapLive
 2024-01-22,29.27,,Madagascar,WFP HungerMapLive
+2024-01-22,27.94,,Mauritania,WFP HungerMapLive
 2024-01-22,17.92,,Morocco,WFP HungerMapLive
 2024-01-22,45.59,,Nigeria,WFP HungerMapLive
 2024-01-22,20.0,,Rwanda,WFP HungerMapLive
@@ -848,7 +895,7 @@ date,value,iso_code,name_short,source
 2024-01-22,14.91,,Tunisia,WFP HungerMapLive
 2024-01-22,17.48,,Uganda,WFP HungerMapLive
 2024-01-22,24.06,,Zimbabwe,WFP HungerMapLive
-2024-01-21,24.055,,Africa (median),WFP HungerMapLive
+2024-01-21,24.27,,Africa (median),WFP HungerMapLive
 2024-01-21,24.27,,Algeria,WFP HungerMapLive
 2024-01-21,18.52,,Botswana,WFP HungerMapLive
 2024-01-21,31.76,,Burundi,WFP HungerMapLive
@@ -867,6 +914,7 @@ date,value,iso_code,name_short,source
 2024-01-21,36.63,,Liberia,WFP HungerMapLive
 2024-01-21,17.53,,Libya,WFP HungerMapLive
 2024-01-21,28.7,,Madagascar,WFP HungerMapLive
+2024-01-21,26.59,,Mauritania,WFP HungerMapLive
 2024-01-21,17.9,,Morocco,WFP HungerMapLive
 2024-01-21,45.52,,Nigeria,WFP HungerMapLive
 2024-01-21,20.0,,Rwanda,WFP HungerMapLive
@@ -881,7 +929,7 @@ date,value,iso_code,name_short,source
 2024-01-21,14.89,,Tunisia,WFP HungerMapLive
 2024-01-21,17.5,,Uganda,WFP HungerMapLive
 2024-01-21,23.84,,Zimbabwe,WFP HungerMapLive
-2024-01-20,24.075000000000003,,Africa (median),WFP HungerMapLive
+2024-01-20,24.26,,Africa (median),WFP HungerMapLive
 2024-01-20,24.26,,Algeria,WFP HungerMapLive
 2024-01-20,18.54,,Botswana,WFP HungerMapLive
 2024-01-20,31.79,,Burundi,WFP HungerMapLive
@@ -900,6 +948,7 @@ date,value,iso_code,name_short,source
 2024-01-20,36.63,,Liberia,WFP HungerMapLive
 2024-01-20,17.59,,Libya,WFP HungerMapLive
 2024-01-20,28.34,,Madagascar,WFP HungerMapLive
+2024-01-20,26.95,,Mauritania,WFP HungerMapLive
 2024-01-20,17.57,,Morocco,WFP HungerMapLive
 2024-01-20,45.44,,Nigeria,WFP HungerMapLive
 2024-01-20,20.0,,Rwanda,WFP HungerMapLive
@@ -914,7 +963,7 @@ date,value,iso_code,name_short,source
 2024-01-20,14.89,,Tunisia,WFP HungerMapLive
 2024-01-20,17.49,,Uganda,WFP HungerMapLive
 2024-01-20,23.89,,Zimbabwe,WFP HungerMapLive
-2024-01-19,24.26,,Africa (median),WFP HungerMapLive
+2024-01-19,24.39,,Africa (median),WFP HungerMapLive
 2024-01-19,24.26,,Algeria,WFP HungerMapLive
 2024-01-19,18.54,,Botswana,WFP HungerMapLive
 2024-01-19,31.79,,Burundi,WFP HungerMapLive
@@ -933,6 +982,7 @@ date,value,iso_code,name_short,source
 2024-01-19,36.63,,Liberia,WFP HungerMapLive
 2024-01-19,17.59,,Libya,WFP HungerMapLive
 2024-01-19,28.32,,Madagascar,WFP HungerMapLive
+2024-01-19,27.22,,Mauritania,WFP HungerMapLive
 2024-01-19,17.48,,Morocco,WFP HungerMapLive
 2024-01-19,45.35,,Nigeria,WFP HungerMapLive
 2024-01-19,20.0,,Rwanda,WFP HungerMapLive
@@ -948,7 +998,7 @@ date,value,iso_code,name_short,source
 2024-01-19,17.49,,Uganda,WFP HungerMapLive
 2024-01-19,16.61,,Zambia,WFP HungerMapLive
 2024-01-19,24.52,,Zimbabwe,WFP HungerMapLive
-2024-01-18,24.26,,Africa (median),WFP HungerMapLive
+2024-01-18,24.4,,Africa (median),WFP HungerMapLive
 2024-01-18,24.26,,Algeria,WFP HungerMapLive
 2024-01-18,18.54,,Botswana,WFP HungerMapLive
 2024-01-18,31.79,,Burundi,WFP HungerMapLive
@@ -967,6 +1017,7 @@ date,value,iso_code,name_short,source
 2024-01-18,36.63,,Liberia,WFP HungerMapLive
 2024-01-18,17.62,,Libya,WFP HungerMapLive
 2024-01-18,28.61,,Madagascar,WFP HungerMapLive
+2024-01-18,26.78,,Mauritania,WFP HungerMapLive
 2024-01-18,17.47,,Morocco,WFP HungerMapLive
 2024-01-18,45.31,,Nigeria,WFP HungerMapLive
 2024-01-18,20.0,,Rwanda,WFP HungerMapLive
@@ -982,7 +1033,7 @@ date,value,iso_code,name_short,source
 2024-01-18,17.49,,Uganda,WFP HungerMapLive
 2024-01-18,16.59,,Zambia,WFP HungerMapLive
 2024-01-18,24.54,,Zimbabwe,WFP HungerMapLive
-2024-01-17,24.25,,Africa (median),WFP HungerMapLive
+2024-01-17,24.54,,Africa (median),WFP HungerMapLive
 2024-01-17,24.25,,Algeria,WFP HungerMapLive
 2024-01-17,18.54,,Botswana,WFP HungerMapLive
 2024-01-17,31.8,,Burundi,WFP HungerMapLive
@@ -1001,6 +1052,7 @@ date,value,iso_code,name_short,source
 2024-01-17,36.63,,Liberia,WFP HungerMapLive
 2024-01-17,17.62,,Libya,WFP HungerMapLive
 2024-01-17,28.58,,Madagascar,WFP HungerMapLive
+2024-01-17,26.71,,Mauritania,WFP HungerMapLive
 2024-01-17,17.36,,Morocco,WFP HungerMapLive
 2024-01-17,45.29,,Nigeria,WFP HungerMapLive
 2024-01-17,20.0,,Rwanda,WFP HungerMapLive
@@ -1016,7 +1068,7 @@ date,value,iso_code,name_short,source
 2024-01-17,17.49,,Uganda,WFP HungerMapLive
 2024-01-17,16.32,,Zambia,WFP HungerMapLive
 2024-01-17,24.83,,Zimbabwe,WFP HungerMapLive
-2024-01-16,24.555,,Africa (median),WFP HungerMapLive
+2024-01-16,24.85,,Africa (median),WFP HungerMapLive
 2024-01-16,24.26,,Algeria,WFP HungerMapLive
 2024-01-16,18.54,,Botswana,WFP HungerMapLive
 2024-01-16,32.23,,Burundi,WFP HungerMapLive
@@ -1036,6 +1088,7 @@ date,value,iso_code,name_short,source
 2024-01-16,36.63,,Liberia,WFP HungerMapLive
 2024-01-16,17.58,,Libya,WFP HungerMapLive
 2024-01-16,28.09,,Madagascar,WFP HungerMapLive
+2024-01-16,27.09,,Mauritania,WFP HungerMapLive
 2024-01-16,17.63,,Morocco,WFP HungerMapLive
 2024-01-16,45.23,,Nigeria,WFP HungerMapLive
 2024-01-16,19.95,,Rwanda,WFP HungerMapLive
@@ -1051,7 +1104,7 @@ date,value,iso_code,name_short,source
 2024-01-16,17.5,,Uganda,WFP HungerMapLive
 2024-01-16,16.37,,Zambia,WFP HungerMapLive
 2024-01-16,24.85,,Zimbabwe,WFP HungerMapLive
-2024-01-15,24.14,,Africa (median),WFP HungerMapLive
+2024-01-15,24.36,,Africa (median),WFP HungerMapLive
 2024-01-15,24.14,,Algeria,WFP HungerMapLive
 2024-01-15,18.51,,Botswana,WFP HungerMapLive
 2024-01-15,32.23,,Burundi,WFP HungerMapLive
@@ -1071,6 +1124,7 @@ date,value,iso_code,name_short,source
 2024-01-15,36.63,,Liberia,WFP HungerMapLive
 2024-01-15,17.58,,Libya,WFP HungerMapLive
 2024-01-15,28.13,,Madagascar,WFP HungerMapLive
+2024-01-15,26.8,,Mauritania,WFP HungerMapLive
 2024-01-15,17.63,,Morocco,WFP HungerMapLive
 2024-01-15,4.42,,Nigeria,WFP HungerMapLive
 2024-01-15,19.95,,Rwanda,WFP HungerMapLive
@@ -1086,7 +1140,7 @@ date,value,iso_code,name_short,source
 2024-01-15,17.5,,Uganda,WFP HungerMapLive
 2024-01-15,16.29,,Zambia,WFP HungerMapLive
 2024-01-15,25.27,,Zimbabwe,WFP HungerMapLive
-2024-01-14,24.25,,Africa (median),WFP HungerMapLive
+2024-01-14,24.38,,Africa (median),WFP HungerMapLive
 2024-01-14,24.12,,Algeria,WFP HungerMapLive
 2024-01-14,18.56,,Botswana,WFP HungerMapLive
 2024-01-14,32.35,,Burundi,WFP HungerMapLive
@@ -1106,6 +1160,7 @@ date,value,iso_code,name_short,source
 2024-01-14,36.63,,Liberia,WFP HungerMapLive
 2024-01-14,17.53,,Libya,WFP HungerMapLive
 2024-01-14,28.34,,Madagascar,WFP HungerMapLive
+2024-01-14,26.46,,Mauritania,WFP HungerMapLive
 2024-01-14,17.63,,Morocco,WFP HungerMapLive
 2024-01-14,44.95,,Nigeria,WFP HungerMapLive
 2024-01-14,19.95,,Rwanda,WFP HungerMapLive
@@ -1121,7 +1176,7 @@ date,value,iso_code,name_short,source
 2024-01-14,17.5,,Uganda,WFP HungerMapLive
 2024-01-14,16.13,,Zambia,WFP HungerMapLive
 2024-01-14,25.25,,Zimbabwe,WFP HungerMapLive
-2024-01-13,24.060000000000002,,Africa (median),WFP HungerMapLive
+2024-01-13,24.12,,Africa (median),WFP HungerMapLive
 2024-01-13,24.12,,Algeria,WFP HungerMapLive
 2024-01-13,18.56,,Botswana,WFP HungerMapLive
 2024-01-13,32.35,,Burundi,WFP HungerMapLive
@@ -1141,6 +1196,7 @@ date,value,iso_code,name_short,source
 2024-01-13,36.63,,Liberia,WFP HungerMapLive
 2024-01-13,17.53,,Libya,WFP HungerMapLive
 2024-01-13,28.65,,Madagascar,WFP HungerMapLive
+2024-01-13,26.22,,Mauritania,WFP HungerMapLive
 2024-01-13,17.63,,Morocco,WFP HungerMapLive
 2024-01-13,44.76,,Nigeria,WFP HungerMapLive
 2024-01-13,19.95,,Rwanda,WFP HungerMapLive
@@ -1156,7 +1212,7 @@ date,value,iso_code,name_short,source
 2024-01-13,17.5,,Uganda,WFP HungerMapLive
 2024-01-13,16.06,,Zambia,WFP HungerMapLive
 2024-01-13,25.23,,Zimbabwe,WFP HungerMapLive
-2024-01-12,24.46,,Africa (median),WFP HungerMapLive
+2024-01-12,24.81,,Africa (median),WFP HungerMapLive
 2024-01-12,24.11,,Algeria,WFP HungerMapLive
 2024-01-12,18.56,,Botswana,WFP HungerMapLive
 2024-01-12,32.35,,Burundi,WFP HungerMapLive
@@ -1176,6 +1232,7 @@ date,value,iso_code,name_short,source
 2024-01-12,36.63,,Liberia,WFP HungerMapLive
 2024-01-12,17.6,,Libya,WFP HungerMapLive
 2024-01-12,28.49,,Madagascar,WFP HungerMapLive
+2024-01-12,26.23,,Mauritania,WFP HungerMapLive
 2024-01-12,17.63,,Morocco,WFP HungerMapLive
 2024-01-12,44.74,,Nigeria,WFP HungerMapLive
 2024-01-12,24.81,,Rwanda,WFP HungerMapLive
@@ -1191,7 +1248,7 @@ date,value,iso_code,name_short,source
 2024-01-12,17.5,,Uganda,WFP HungerMapLive
 2024-01-12,16.48,,Zambia,WFP HungerMapLive
 2024-01-12,25.7,,Zimbabwe,WFP HungerMapLive
-2024-01-11,24.81,,Africa (median),WFP HungerMapLive
+2024-01-11,24.96,,Africa (median),WFP HungerMapLive
 2024-01-11,24.11,,Algeria,WFP HungerMapLive
 2024-01-11,18.56,,Botswana,WFP HungerMapLive
 2024-01-11,32.35,,Burundi,WFP HungerMapLive
@@ -1212,6 +1269,7 @@ date,value,iso_code,name_short,source
 2024-01-11,36.63,,Liberia,WFP HungerMapLive
 2024-01-11,17.6,,Libya,WFP HungerMapLive
 2024-01-11,28.25,,Madagascar,WFP HungerMapLive
+2024-01-11,26.59,,Mauritania,WFP HungerMapLive
 2024-01-11,17.63,,Morocco,WFP HungerMapLive
 2024-01-11,44.57,,Nigeria,WFP HungerMapLive
 2024-01-11,24.81,,Rwanda,WFP HungerMapLive
@@ -1227,7 +1285,7 @@ date,value,iso_code,name_short,source
 2024-01-11,17.5,,Uganda,WFP HungerMapLive
 2024-01-11,16.61,,Zambia,WFP HungerMapLive
 2024-01-11,26.14,,Zimbabwe,WFP HungerMapLive
-2024-01-10,24.81,,Africa (median),WFP HungerMapLive
+2024-01-10,24.97,,Africa (median),WFP HungerMapLive
 2024-01-10,24.08,,Algeria,WFP HungerMapLive
 2024-01-10,18.58,,Botswana,WFP HungerMapLive
 2024-01-10,32.35,,Burundi,WFP HungerMapLive
@@ -1248,6 +1306,7 @@ date,value,iso_code,name_short,source
 2024-01-10,36.63,,Liberia,WFP HungerMapLive
 2024-01-10,17.64,,Libya,WFP HungerMapLive
 2024-01-10,28.4,,Madagascar,WFP HungerMapLive
+2024-01-10,27.27,,Mauritania,WFP HungerMapLive
 2024-01-10,17.64,,Morocco,WFP HungerMapLive
 2024-01-10,44.52,,Nigeria,WFP HungerMapLive
 2024-01-10,24.81,,Rwanda,WFP HungerMapLive
@@ -1263,7 +1322,7 @@ date,value,iso_code,name_short,source
 2024-01-10,17.5,,Uganda,WFP HungerMapLive
 2024-01-10,16.22,,Zambia,WFP HungerMapLive
 2024-01-10,25.45,,Zimbabwe,WFP HungerMapLive
-2024-01-09,24.81,,Africa (median),WFP HungerMapLive
+2024-01-09,24.97,,Africa (median),WFP HungerMapLive
 2024-01-09,24.08,,Algeria,WFP HungerMapLive
 2024-01-09,18.58,,Botswana,WFP HungerMapLive
 2024-01-09,32.32,,Burundi,WFP HungerMapLive
@@ -1284,6 +1343,7 @@ date,value,iso_code,name_short,source
 2024-01-09,36.63,,Liberia,WFP HungerMapLive
 2024-01-09,17.65,,Libya,WFP HungerMapLive
 2024-01-09,28.44,,Madagascar,WFP HungerMapLive
+2024-01-09,27.35,,Mauritania,WFP HungerMapLive
 2024-01-09,17.64,,Morocco,WFP HungerMapLive
 2024-01-09,44.48,,Nigeria,WFP HungerMapLive
 2024-01-09,24.81,,Rwanda,WFP HungerMapLive
@@ -1299,7 +1359,7 @@ date,value,iso_code,name_short,source
 2024-01-09,17.49,,Uganda,WFP HungerMapLive
 2024-01-09,16.16,,Zambia,WFP HungerMapLive
 2024-01-09,26.0,,Zimbabwe,WFP HungerMapLive
-2024-01-08,24.97,,Africa (median),WFP HungerMapLive
+2024-01-08,25.13,,Africa (median),WFP HungerMapLive
 2024-01-08,23.81,,Algeria,WFP HungerMapLive
 2024-01-08,18.58,,Botswana,WFP HungerMapLive
 2024-01-08,32.31,,Burundi,WFP HungerMapLive
@@ -1320,6 +1380,7 @@ date,value,iso_code,name_short,source
 2024-01-08,36.63,,Liberia,WFP HungerMapLive
 2024-01-08,17.65,,Libya,WFP HungerMapLive
 2024-01-08,28.78,,Madagascar,WFP HungerMapLive
+2024-01-08,28.11,,Mauritania,WFP HungerMapLive
 2024-01-08,17.64,,Morocco,WFP HungerMapLive
 2024-01-08,44.32,,Nigeria,WFP HungerMapLive
 2024-01-08,24.81,,Rwanda,WFP HungerMapLive
@@ -1335,7 +1396,7 @@ date,value,iso_code,name_short,source
 2024-01-08,17.49,,Uganda,WFP HungerMapLive
 2024-01-08,15.82,,Zambia,WFP HungerMapLive
 2024-01-08,26.01,,Zimbabwe,WFP HungerMapLive
-2024-01-07,24.97,,Africa (median),WFP HungerMapLive
+2024-01-07,25.13,,Africa (median),WFP HungerMapLive
 2024-01-07,23.81,,Algeria,WFP HungerMapLive
 2024-01-07,18.58,,Botswana,WFP HungerMapLive
 2024-01-07,32.31,,Burundi,WFP HungerMapLive
@@ -1356,6 +1417,7 @@ date,value,iso_code,name_short,source
 2024-01-07,36.63,,Liberia,WFP HungerMapLive
 2024-01-07,17.65,,Libya,WFP HungerMapLive
 2024-01-07,29.17,,Madagascar,WFP HungerMapLive
+2024-01-07,27.55,,Mauritania,WFP HungerMapLive
 2024-01-07,17.64,,Morocco,WFP HungerMapLive
 2024-01-07,44.27,,Nigeria,WFP HungerMapLive
 2024-01-07,24.81,,Rwanda,WFP HungerMapLive
@@ -1371,7 +1433,7 @@ date,value,iso_code,name_short,source
 2024-01-07,17.49,,Uganda,WFP HungerMapLive
 2024-01-07,15.84,,Zambia,WFP HungerMapLive
 2024-01-07,26.51,,Zimbabwe,WFP HungerMapLive
-2024-01-06,24.81,,Africa (median),WFP HungerMapLive
+2024-01-06,24.97,,Africa (median),WFP HungerMapLive
 2024-01-06,23.81,,Algeria,WFP HungerMapLive
 2024-01-06,18.58,,Botswana,WFP HungerMapLive
 2024-01-06,32.31,,Burundi,WFP HungerMapLive
@@ -1392,6 +1454,7 @@ date,value,iso_code,name_short,source
 2024-01-06,36.63,,Liberia,WFP HungerMapLive
 2024-01-06,17.65,,Libya,WFP HungerMapLive
 2024-01-06,29.61,,Madagascar,WFP HungerMapLive
+2024-01-06,28.0,,Mauritania,WFP HungerMapLive
 2024-01-06,17.63,,Morocco,WFP HungerMapLive
 2024-01-06,44.35,,Nigeria,WFP HungerMapLive
 2024-01-06,24.81,,Rwanda,WFP HungerMapLive
@@ -1407,7 +1470,7 @@ date,value,iso_code,name_short,source
 2024-01-06,17.49,,Uganda,WFP HungerMapLive
 2024-01-06,15.6,,Zambia,WFP HungerMapLive
 2024-01-06,26.8,,Zimbabwe,WFP HungerMapLive
-2024-01-05,24.97,,Africa (median),WFP HungerMapLive
+2024-01-05,25.13,,Africa (median),WFP HungerMapLive
 2024-01-05,23.37,,Algeria,WFP HungerMapLive
 2024-01-05,18.58,,Botswana,WFP HungerMapLive
 2024-01-05,32.31,,Burundi,WFP HungerMapLive
@@ -1429,6 +1492,7 @@ date,value,iso_code,name_short,source
 2024-01-05,36.63,,Liberia,WFP HungerMapLive
 2024-01-05,17.65,,Libya,WFP HungerMapLive
 2024-01-05,29.69,,Madagascar,WFP HungerMapLive
+2024-01-05,28.68,,Mauritania,WFP HungerMapLive
 2024-01-05,17.63,,Morocco,WFP HungerMapLive
 2024-01-05,44.25,,Nigeria,WFP HungerMapLive
 2024-01-05,24.81,,Rwanda,WFP HungerMapLive
@@ -1444,7 +1508,7 @@ date,value,iso_code,name_short,source
 2024-01-05,17.49,,Uganda,WFP HungerMapLive
 2024-01-05,15.54,,Zambia,WFP HungerMapLive
 2024-01-05,26.82,,Zimbabwe,WFP HungerMapLive
-2024-01-04,25.13,,Africa (median),WFP HungerMapLive
+2024-01-04,25.28,,Africa (median),WFP HungerMapLive
 2024-01-04,23.37,,Algeria,WFP HungerMapLive
 2024-01-04,18.58,,Botswana,WFP HungerMapLive
 2024-01-04,32.31,,Burundi,WFP HungerMapLive
@@ -1466,6 +1530,7 @@ date,value,iso_code,name_short,source
 2024-01-04,36.63,,Liberia,WFP HungerMapLive
 2024-01-04,17.65,,Libya,WFP HungerMapLive
 2024-01-04,29.69,,Madagascar,WFP HungerMapLive
+2024-01-04,28.84,,Mauritania,WFP HungerMapLive
 2024-01-04,17.63,,Morocco,WFP HungerMapLive
 2024-01-04,44.21,,Nigeria,WFP HungerMapLive
 2024-01-04,24.81,,Rwanda,WFP HungerMapLive
@@ -1481,7 +1546,7 @@ date,value,iso_code,name_short,source
 2024-01-04,17.49,,Uganda,WFP HungerMapLive
 2024-01-04,15.49,,Zambia,WFP HungerMapLive
 2024-01-04,26.55,,Zimbabwe,WFP HungerMapLive
-2024-01-03,25.14,,Africa (median),WFP HungerMapLive
+2024-01-03,25.295,,Africa (median),WFP HungerMapLive
 2024-01-03,23.38,,Algeria,WFP HungerMapLive
 2024-01-03,18.58,,Botswana,WFP HungerMapLive
 2024-01-03,32.31,,Burundi,WFP HungerMapLive
@@ -1503,6 +1568,7 @@ date,value,iso_code,name_short,source
 2024-01-03,36.63,,Liberia,WFP HungerMapLive
 2024-01-03,17.62,,Libya,WFP HungerMapLive
 2024-01-03,30.28,,Madagascar,WFP HungerMapLive
+2024-01-03,28.92,,Mauritania,WFP HungerMapLive
 2024-01-03,17.63,,Morocco,WFP HungerMapLive
 2024-01-03,44.01,,Nigeria,WFP HungerMapLive
 2024-01-03,24.81,,Rwanda,WFP HungerMapLive
@@ -1518,7 +1584,7 @@ date,value,iso_code,name_short,source
 2024-01-03,17.49,,Uganda,WFP HungerMapLive
 2024-01-03,15.53,,Zambia,WFP HungerMapLive
 2024-01-03,26.15,,Zimbabwe,WFP HungerMapLive
-2024-01-02,25.14,,Africa (median),WFP HungerMapLive
+2024-01-02,25.295,,Africa (median),WFP HungerMapLive
 2024-01-02,23.24,,Algeria,WFP HungerMapLive
 2024-01-02,18.58,,Botswana,WFP HungerMapLive
 2024-01-02,32.31,,Burundi,WFP HungerMapLive
@@ -1540,6 +1606,7 @@ date,value,iso_code,name_short,source
 2024-01-02,36.63,,Liberia,WFP HungerMapLive
 2024-01-02,17.62,,Libya,WFP HungerMapLive
 2024-01-02,30.24,,Madagascar,WFP HungerMapLive
+2024-01-02,29.28,,Mauritania,WFP HungerMapLive
 2024-01-02,18.32,,Morocco,WFP HungerMapLive
 2024-01-02,43.94,,Nigeria,WFP HungerMapLive
 2024-01-02,24.81,,Rwanda,WFP HungerMapLive
@@ -1555,7 +1622,7 @@ date,value,iso_code,name_short,source
 2024-01-02,17.49,,Uganda,WFP HungerMapLive
 2024-01-02,15.58,,Zambia,WFP HungerMapLive
 2024-01-02,26.72,,Zimbabwe,WFP HungerMapLive
-2024-01-01,25.14,,Africa (median),WFP HungerMapLive
+2024-01-01,25.295,,Africa (median),WFP HungerMapLive
 2024-01-01,23.24,,Algeria,WFP HungerMapLive
 2024-01-01,18.58,,Botswana,WFP HungerMapLive
 2024-01-01,32.31,,Burundi,WFP HungerMapLive
@@ -1577,6 +1644,7 @@ date,value,iso_code,name_short,source
 2024-01-01,36.63,,Liberia,WFP HungerMapLive
 2024-01-01,17.62,,Libya,WFP HungerMapLive
 2024-01-01,30.7,,Madagascar,WFP HungerMapLive
+2024-01-01,28.13,,Mauritania,WFP HungerMapLive
 2024-01-01,18.41,,Morocco,WFP HungerMapLive
 2024-01-01,43.73,,Nigeria,WFP HungerMapLive
 2024-01-01,24.81,,Rwanda,WFP HungerMapLive
@@ -1592,7 +1660,7 @@ date,value,iso_code,name_short,source
 2024-01-01,17.49,,Uganda,WFP HungerMapLive
 2024-01-01,16.4,,Zambia,WFP HungerMapLive
 2024-01-01,28.21,,Zimbabwe,WFP HungerMapLive
-2023-12-31,25.195,,Africa (median),WFP HungerMapLive
+2023-12-31,25.21,,Africa (median),WFP HungerMapLive
 2023-12-31,23.21,,Algeria,WFP HungerMapLive
 2023-12-31,15.34,,Angola,WFP HungerMapLive
 2023-12-31,18.5,,Botswana,WFP HungerMapLive
@@ -1615,6 +1683,7 @@ date,value,iso_code,name_short,source
 2023-12-31,36.63,,Liberia,WFP HungerMapLive
 2023-12-31,17.64,,Libya,WFP HungerMapLive
 2023-12-31,30.81,,Madagascar,WFP HungerMapLive
+2023-12-31,27.77,,Mauritania,WFP HungerMapLive
 2023-12-31,18.43,,Morocco,WFP HungerMapLive
 2023-12-31,43.65,,Nigeria,WFP HungerMapLive
 2023-12-31,24.84,,Rwanda,WFP HungerMapLive
@@ -1630,7 +1699,7 @@ date,value,iso_code,name_short,source
 2023-12-31,17.48,,Uganda,WFP HungerMapLive
 2023-12-31,16.33,,Zambia,WFP HungerMapLive
 2023-12-31,28.74,,Zimbabwe,WFP HungerMapLive
-2023-12-30,25.27,,Africa (median),WFP HungerMapLive
+2023-12-30,25.435000000000002,,Africa (median),WFP HungerMapLive
 2023-12-30,23.21,,Algeria,WFP HungerMapLive
 2023-12-30,15.17,,Angola,WFP HungerMapLive
 2023-12-30,18.5,,Botswana,WFP HungerMapLive
@@ -1654,6 +1723,7 @@ date,value,iso_code,name_short,source
 2023-12-30,17.64,,Libya,WFP HungerMapLive
 2023-12-30,31.1,,Madagascar,WFP HungerMapLive
 2023-12-30,33.3,,Malawi,WFP HungerMapLive
+2023-12-30,27.89,,Mauritania,WFP HungerMapLive
 2023-12-30,18.43,,Morocco,WFP HungerMapLive
 2023-12-30,43.49,,Nigeria,WFP HungerMapLive
 2023-12-30,24.84,,Rwanda,WFP HungerMapLive
@@ -1669,7 +1739,7 @@ date,value,iso_code,name_short,source
 2023-12-30,17.48,,Uganda,WFP HungerMapLive
 2023-12-30,16.29,,Zambia,WFP HungerMapLive
 2023-12-30,29.1,,Zimbabwe,WFP HungerMapLive
-2023-12-29,25.27,,Africa (median),WFP HungerMapLive
+2023-12-29,25.41,,Africa (median),WFP HungerMapLive
 2023-12-29,23.21,,Algeria,WFP HungerMapLive
 2023-12-29,15.13,,Angola,WFP HungerMapLive
 2023-12-29,18.5,,Botswana,WFP HungerMapLive
@@ -1693,6 +1763,7 @@ date,value,iso_code,name_short,source
 2023-12-29,17.64,,Libya,WFP HungerMapLive
 2023-12-29,31.01,,Madagascar,WFP HungerMapLive
 2023-12-29,33.4,,Malawi,WFP HungerMapLive
+2023-12-29,27.97,,Mauritania,WFP HungerMapLive
 2023-12-29,18.43,,Morocco,WFP HungerMapLive
 2023-12-29,43.36,,Nigeria,WFP HungerMapLive
 2023-12-29,24.84,,Rwanda,WFP HungerMapLive
@@ -1708,7 +1779,7 @@ date,value,iso_code,name_short,source
 2023-12-29,17.48,,Uganda,WFP HungerMapLive
 2023-12-29,16.39,,Zambia,WFP HungerMapLive
 2023-12-29,28.9,,Zimbabwe,WFP HungerMapLive
-2023-12-28,25.225,,Africa (median),WFP HungerMapLive
+2023-12-28,25.27,,Africa (median),WFP HungerMapLive
 2023-12-28,23.21,,Algeria,WFP HungerMapLive
 2023-12-28,15.48,,Angola,WFP HungerMapLive
 2023-12-28,18.5,,Botswana,WFP HungerMapLive
@@ -1732,6 +1803,7 @@ date,value,iso_code,name_short,source
 2023-12-28,17.64,,Libya,WFP HungerMapLive
 2023-12-28,31.12,,Madagascar,WFP HungerMapLive
 2023-12-28,33.05,,Malawi,WFP HungerMapLive
+2023-12-28,27.94,,Mauritania,WFP HungerMapLive
 2023-12-28,18.43,,Morocco,WFP HungerMapLive
 2023-12-28,43.33,,Nigeria,WFP HungerMapLive
 2023-12-28,24.84,,Rwanda,WFP HungerMapLive
@@ -1747,7 +1819,7 @@ date,value,iso_code,name_short,source
 2023-12-28,17.48,,Uganda,WFP HungerMapLive
 2023-12-28,16.45,,Zambia,WFP HungerMapLive
 2023-12-28,29.09,,Zimbabwe,WFP HungerMapLive
-2023-12-27,25.225,,Africa (median),WFP HungerMapLive
+2023-12-27,25.27,,Africa (median),WFP HungerMapLive
 2023-12-27,23.21,,Algeria,WFP HungerMapLive
 2023-12-27,15.73,,Angola,WFP HungerMapLive
 2023-12-27,18.5,,Botswana,WFP HungerMapLive
@@ -1771,6 +1843,7 @@ date,value,iso_code,name_short,source
 2023-12-27,17.64,,Libya,WFP HungerMapLive
 2023-12-27,31.26,,Madagascar,WFP HungerMapLive
 2023-12-27,32.44,,Malawi,WFP HungerMapLive
+2023-12-27,27.76,,Mauritania,WFP HungerMapLive
 2023-12-27,18.43,,Morocco,WFP HungerMapLive
 2023-12-27,43.21,,Nigeria,WFP HungerMapLive
 2023-12-27,24.84,,Rwanda,WFP HungerMapLive
@@ -1786,7 +1859,7 @@ date,value,iso_code,name_short,source
 2023-12-27,17.49,,Uganda,WFP HungerMapLive
 2023-12-27,16.18,,Zambia,WFP HungerMapLive
 2023-12-27,29.1,,Zimbabwe,WFP HungerMapLive
-2023-12-26,25.225,,Africa (median),WFP HungerMapLive
+2023-12-26,25.27,,Africa (median),WFP HungerMapLive
 2023-12-26,23.21,,Algeria,WFP HungerMapLive
 2023-12-26,15.73,,Angola,WFP HungerMapLive
 2023-12-26,18.5,,Botswana,WFP HungerMapLive
@@ -1810,6 +1883,7 @@ date,value,iso_code,name_short,source
 2023-12-26,17.64,,Libya,WFP HungerMapLive
 2023-12-26,30.95,,Madagascar,WFP HungerMapLive
 2023-12-26,32.33,,Malawi,WFP HungerMapLive
+2023-12-26,28.19,,Mauritania,WFP HungerMapLive
 2023-12-26,18.43,,Morocco,WFP HungerMapLive
 2023-12-26,43.14,,Nigeria,WFP HungerMapLive
 2023-12-26,24.84,,Rwanda,WFP HungerMapLive
@@ -1825,7 +1899,7 @@ date,value,iso_code,name_short,source
 2023-12-26,17.5,,Uganda,WFP HungerMapLive
 2023-12-26,16.09,,Zambia,WFP HungerMapLive
 2023-12-26,30.37,,Zimbabwe,WFP HungerMapLive
-2023-12-25,25.17,,Africa (median),WFP HungerMapLive
+2023-12-25,25.22,,Africa (median),WFP HungerMapLive
 2023-12-25,23.21,,Algeria,WFP HungerMapLive
 2023-12-25,16.0,,Angola,WFP HungerMapLive
 2023-12-25,18.5,,Botswana,WFP HungerMapLive
@@ -1850,6 +1924,7 @@ date,value,iso_code,name_short,source
 2023-12-25,17.64,,Libya,WFP HungerMapLive
 2023-12-25,31.09,,Madagascar,WFP HungerMapLive
 2023-12-25,32.02,,Malawi,WFP HungerMapLive
+2023-12-25,27.79,,Mauritania,WFP HungerMapLive
 2023-12-25,18.43,,Morocco,WFP HungerMapLive
 2023-12-25,22.95,,Mozambique,WFP HungerMapLive
 2023-12-25,6.81,,Namibia,WFP HungerMapLive
@@ -1867,7 +1942,7 @@ date,value,iso_code,name_short,source
 2023-12-25,17.5,,Uganda,WFP HungerMapLive
 2023-12-25,16.06,,Zambia,WFP HungerMapLive
 2023-12-25,30.38,,Zimbabwe,WFP HungerMapLive
-2023-12-24,25.17,,Africa (median),WFP HungerMapLive
+2023-12-24,25.22,,Africa (median),WFP HungerMapLive
 2023-12-24,23.21,,Algeria,WFP HungerMapLive
 2023-12-24,16.01,,Angola,WFP HungerMapLive
 2023-12-24,18.5,,Botswana,WFP HungerMapLive
@@ -1892,6 +1967,7 @@ date,value,iso_code,name_short,source
 2023-12-24,17.64,,Libya,WFP HungerMapLive
 2023-12-24,31.1,,Madagascar,WFP HungerMapLive
 2023-12-24,31.84,,Malawi,WFP HungerMapLive
+2023-12-24,27.27,,Mauritania,WFP HungerMapLive
 2023-12-24,18.43,,Morocco,WFP HungerMapLive
 2023-12-24,22.72,,Mozambique,WFP HungerMapLive
 2023-12-24,6.8,,Namibia,WFP HungerMapLive
@@ -1909,7 +1985,7 @@ date,value,iso_code,name_short,source
 2023-12-24,17.5,,Uganda,WFP HungerMapLive
 2023-12-24,16.05,,Zambia,WFP HungerMapLive
 2023-12-24,29.64,,Zimbabwe,WFP HungerMapLive
-2023-12-23,25.17,,Africa (median),WFP HungerMapLive
+2023-12-23,25.22,,Africa (median),WFP HungerMapLive
 2023-12-23,23.23,,Algeria,WFP HungerMapLive
 2023-12-23,15.89,,Angola,WFP HungerMapLive
 2023-12-23,18.41,,Botswana,WFP HungerMapLive
@@ -1934,6 +2010,7 @@ date,value,iso_code,name_short,source
 2023-12-23,17.63,,Libya,WFP HungerMapLive
 2023-12-23,31.21,,Madagascar,WFP HungerMapLive
 2023-12-23,31.42,,Malawi,WFP HungerMapLive
+2023-12-23,28.04,,Mauritania,WFP HungerMapLive
 2023-12-23,18.43,,Morocco,WFP HungerMapLive
 2023-12-23,23.58,,Mozambique,WFP HungerMapLive
 2023-12-23,7.0,,Namibia,WFP HungerMapLive
@@ -1951,7 +2028,7 @@ date,value,iso_code,name_short,source
 2023-12-23,17.5,,Uganda,WFP HungerMapLive
 2023-12-23,15.75,,Zambia,WFP HungerMapLive
 2023-12-23,29.38,,Zimbabwe,WFP HungerMapLive
-2023-12-22,25.17,,Africa (median),WFP HungerMapLive
+2023-12-22,25.22,,Africa (median),WFP HungerMapLive
 2023-12-22,23.23,,Algeria,WFP HungerMapLive
 2023-12-22,15.71,,Angola,WFP HungerMapLive
 2023-12-22,18.41,,Botswana,WFP HungerMapLive
@@ -1976,6 +2053,7 @@ date,value,iso_code,name_short,source
 2023-12-22,17.63,,Libya,WFP HungerMapLive
 2023-12-22,31.45,,Madagascar,WFP HungerMapLive
 2023-12-22,31.26,,Malawi,WFP HungerMapLive
+2023-12-22,28.79,,Mauritania,WFP HungerMapLive
 2023-12-22,18.81,,Morocco,WFP HungerMapLive
 2023-12-22,23.84,,Mozambique,WFP HungerMapLive
 2023-12-22,6.93,,Namibia,WFP HungerMapLive
@@ -1993,7 +2071,7 @@ date,value,iso_code,name_short,source
 2023-12-22,17.5,,Uganda,WFP HungerMapLive
 2023-12-22,15.82,,Zambia,WFP HungerMapLive
 2023-12-22,29.79,,Zimbabwe,WFP HungerMapLive
-2023-12-21,25.17,,Africa (median),WFP HungerMapLive
+2023-12-21,25.22,,Africa (median),WFP HungerMapLive
 2023-12-21,23.23,,Algeria,WFP HungerMapLive
 2023-12-21,15.15,,Angola,WFP HungerMapLive
 2023-12-21,18.41,,Botswana,WFP HungerMapLive
@@ -2018,6 +2096,7 @@ date,value,iso_code,name_short,source
 2023-12-21,17.09,,Libya,WFP HungerMapLive
 2023-12-21,31.51,,Madagascar,WFP HungerMapLive
 2023-12-21,30.51,,Malawi,WFP HungerMapLive
+2023-12-21,28.65,,Mauritania,WFP HungerMapLive
 2023-12-21,18.81,,Morocco,WFP HungerMapLive
 2023-12-21,24.09,,Mozambique,WFP HungerMapLive
 2023-12-21,6.83,,Namibia,WFP HungerMapLive
@@ -2035,7 +2114,7 @@ date,value,iso_code,name_short,source
 2023-12-21,17.5,,Uganda,WFP HungerMapLive
 2023-12-21,16.36,,Zambia,WFP HungerMapLive
 2023-12-21,29.63,,Zimbabwe,WFP HungerMapLive
-2023-12-20,25.17,,Africa (median),WFP HungerMapLive
+2023-12-20,25.205,,Africa (median),WFP HungerMapLive
 2023-12-20,23.22,,Algeria,WFP HungerMapLive
 2023-12-20,15.05,,Angola,WFP HungerMapLive
 2023-12-20,18.4,,Botswana,WFP HungerMapLive
@@ -2060,6 +2139,7 @@ date,value,iso_code,name_short,source
 2023-12-20,17.06,,Libya,WFP HungerMapLive
 2023-12-20,31.28,,Madagascar,WFP HungerMapLive
 2023-12-20,30.35,,Malawi,WFP HungerMapLive
+2023-12-20,29.37,,Mauritania,WFP HungerMapLive
 2023-12-20,18.82,,Morocco,WFP HungerMapLive
 2023-12-20,24.29,,Mozambique,WFP HungerMapLive
 2023-12-20,6.7,,Namibia,WFP HungerMapLive
@@ -2077,7 +2157,7 @@ date,value,iso_code,name_short,source
 2023-12-20,17.49,,Uganda,WFP HungerMapLive
 2023-12-20,16.25,,Zambia,WFP HungerMapLive
 2023-12-20,29.93,,Zimbabwe,WFP HungerMapLive
-2023-12-19,25.17,,Africa (median),WFP HungerMapLive
+2023-12-19,25.205,,Africa (median),WFP HungerMapLive
 2023-12-19,23.21,,Algeria,WFP HungerMapLive
 2023-12-19,15.18,,Angola,WFP HungerMapLive
 2023-12-19,18.4,,Botswana,WFP HungerMapLive
@@ -2102,6 +2182,7 @@ date,value,iso_code,name_short,source
 2023-12-19,17.06,,Libya,WFP HungerMapLive
 2023-12-19,30.96,,Madagascar,WFP HungerMapLive
 2023-12-19,29.87,,Malawi,WFP HungerMapLive
+2023-12-19,28.96,,Mauritania,WFP HungerMapLive
 2023-12-19,18.82,,Morocco,WFP HungerMapLive
 2023-12-19,25.12,,Mozambique,WFP HungerMapLive
 2023-12-19,6.63,,Namibia,WFP HungerMapLive
