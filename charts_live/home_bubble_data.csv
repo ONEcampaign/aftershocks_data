@@ -8,14 +8,14 @@ Burkina Faso,Burkina Faso,BFA,1,6.45,952.37,9.6,49.18,347.0,23.08,22673762.0,5.0
 Republic of Burundi,Burundi,BDI,1,5.95,228.82,26.642,31.39,62.0,0.28,12889576.0,5.24,38.6,68.38,0.39
 Republic of Cabo Verde,Cabo Verde,CPV,1,4.48,4790.43,7.6,21.15,144.0,52.05,593149.0,2.21,12.2,86.79,
 Republic of Cameroon,Cameroon,CMR,1,4.18,1807.37,7.3,37.84,1524.0,11.45,27914536.0,4.44,48.3,77.07,0.4
-Central African Republic,Central African Republic,CAF,1,2.45,572.9,7.59,31.61,22.0,44.54,5579144.0,4.57,77.5,37.4,0.29
+Central African Republic,Central African Republic,CAF,1,2.45,572.9,7.59,31.27,22.0,44.54,5579144.0,4.57,77.5,37.4,0.29
 Republic of Chad,Chad,TCD,1,3.75,715.52,3.3,52.43,419.0,28.32,17723315.0,5.55,67.4,22.31,0.3
 Union of the Comoros,Comoros,COM,1,3.5,1406.2,20.9,29.68,31.0,47.45,836774.0,4.07,47.2,58.82,0.4
-Republic of the Congo,Congo Republic,COG,1,4.43,2984.02,3.2,20.58,725.0,10.96,5970424.0,4.32,33.0,80.3,0.42
-Republic of Côte d'Ivoire,Cote d'Ivoire,CIV,1,6.6,2908.75,5.1,17.16,2526.0,43.2,28160542.0,4.54,57.9,89.89,0.38
+Republic of the Congo,Congo Republic,COG,1,4.43,2984.02,3.2,20.43,725.0,10.96,5970424.0,4.32,33.0,80.3,0.42
+Republic of Côte d'Ivoire,Cote d'Ivoire,CIV,1,6.6,2908.75,5.1,17.15,2526.0,43.2,28160542.0,4.54,57.9,89.89,0.38
 Republic of Djibouti,Djibouti,DJI,1,5.99,4026.42,3.6,25.41,237.0,35.79,1120849.0,2.63,47.2,,
 Democratic Republic of the Congo,DR Congo,COD,1,4.69,710.16,14.06,42.93,802.0,14.54,99010212.0,5.72,63.8,77.04,0.37
-Arab Republic of Egypt,Egypt,EGY,1,3.6,3319.79,21.3,17.61,12641.0,38.15,110990103.0,3.24,16.6,71.17,0.49
+Arab Republic of Egypt,Egypt,EGY,1,3.6,3319.79,21.3,17.58,12641.0,38.15,110990103.0,3.24,16.6,71.17,0.49
 Republic of Equatorial Guinea,Equatorial Guinea,GNQ,1,5.47,6500.43,-1.3,,,12.78,1674908.0,4.35,58.3,94.37,
 State of Eritrea,Eritrea,ERI,1,,,,,,,,,,,
 Kingdom of Eswatini,Eswatini,SWZ,1,3.27,4198.35,5.6,17.02,56.0,35.56,1201670.0,2.92,37.4,88.42,0.37
@@ -30,30 +30,30 @@ Republic of Kenya,Kenya,KEN,1,5.26,2194.25,9.1,25.19,3299.0,20.53,54027487.0,3.3
 Kingdom of Lesotho,Lesotho,LSO,1,2.31,1166.67,8.0,34.74,82.0,40.68,2305825.0,3.07,69.9,76.64,0.4
 Republic of Liberia,Liberia,LBR,1,5.3,825.98,9.18,36.63,81.0,70.36,5302681.0,4.18,58.1,48.3,0.32
 State of Libya,Libya,LBY,1,7.45,6357.36,4.1,17.5,,18.15,6812341.0,2.17,9.5,86.1,
-Republic of Madagascar,Madagascar,MDG,1,4.8,548.12,10.82,30.86,411.0,8.88,29611714.0,3.98,36.3,76.68,0.39
+Republic of Madagascar,Madagascar,MDG,1,4.8,548.12,10.82,30.84,411.0,8.88,29611714.0,3.98,36.3,76.68,0.39
 Republic of Malawi,Malawi,MWI,1,3.26,471.93,25.4,33.3,126.0,21.01,20405317.0,4.06,29.0,62.14,0.41
 Republic of Mali,Mali,MLI,1,4.8,957.41,7.7,58.48,406.0,16.08,22593590.0,5.69,58.8,30.76,0.32
-Islamic Republic of Mauritania,Mauritania,MRT,1,5.34,2408.23,11.0,31.68,608.0,32.53,4736139.0,4.45,49.0,53.5,0.38
+Islamic Republic of Mauritania,Mauritania,MRT,1,5.34,2408.23,11.0,32.44,608.0,32.53,4736139.0,4.45,49.0,53.5,0.38
 Republic of Mauritius,Mauritius,MUS,1,3.8,12773.3,12.2,,198.0,83.74,1262523.0,1.44,14.8,93.16,0.62
 Kingdom of Morocco,Morocco,MAR,1,3.62,4212.02,8.3,18.4,4921.0,62.8,37457971.0,2.35,16.0,73.75,0.5
 Republic of Mozambique,Mozambique,MOZ,1,4.96,687.38,10.91,22.95,1695.0,64.7,32969518.0,4.71,52.8,60.66,0.36
 Republic of Namibia,Namibia,NAM,1,2.71,5052.89,6.9,6.81,,21.46,2567012.0,3.29,30.1,91.53,0.45
 Republic of Niger,Niger,NER,1,11.14,695.72,3.108,81.73,341.0,20.92,26207977.0,6.74,45.6,35.05,0.32
-Federal Republic of Nigeria,Nigeria,NGA,1,3.06,1734.36,21.34,46.02,2903.0,37.2,218541212.0,5.25,72.2,62.02,0.36
+Federal Republic of Nigeria,Nigeria,NGA,1,3.06,1734.36,21.34,45.88,2903.0,37.2,218541212.0,5.25,72.2,62.02,0.36
 Republic of Rwanda,Rwanda,RWA,1,6.99,997.98,31.7,19.99,255.0,75.49,13776698.0,3.93,30.3,73.22,0.38
 Democratic Republic of São Tomé and Príncipe,Sao Tome and Principe,STP,1,2.4,3205.9,25.2,20.1,8.0,49.25,227380.0,4.21,12.7,92.82,
 Republic of Senegal,Senegal,SEN,1,8.82,1885.53,12.8,28.34,1345.0,8.93,17316449.0,4.49,28.9,51.9,0.42
 Republic of Seychelles,Seychelles,SYC,1,3.91,21094.6,2.53,,,78.0,119878.0,2.29,12.0,95.87,0.63
-Republic of Sierra Leone,Sierra Leone,SLE,1,4.74,416.58,37.09,51.42,71.0,57.66,8605718.0,4.08,80.1,43.21,0.36
-Federal Republic of Somalia,Somalia,SOM,1,3.7,756.98,6.1,90.6,54.0,43.57,17597511.0,5.88,72.7,5.4,
+Republic of Sierra Leone,Sierra Leone,SLE,1,4.74,416.58,37.09,51.35,71.0,57.66,8605718.0,4.08,80.1,43.21,0.36
+Federal Republic of Somalia,Somalia,SOM,1,3.7,756.98,6.1,90.72,54.0,43.57,17597511.0,5.88,72.7,5.4,
 Republic of South Africa,South Africa,ZAF,1,1.81,6426.89,7.2,,6648.0,35.13,59893885.0,2.36,25.8,95.02,0.43
 Republic of South Sudan,South Sudan,SSD,1,4.2,479.04,-11.57,29.7,,39.16,10913164.0,4.54,63.3,34.52,0.31
 "Saint Helena, Ascension and Tristan da Cunha",St. Helena,SHN,1,,,,,,,,,,,
 Republic of the Sudan,Sudan,SDN,1,0.3,525.73,87.3,34.17,425.0,28.62,46874204.0,4.29,39.9,60.7,0.38
-United Republic of Tanzania,Tanzania,TZA,1,6.09,1317.86,4.8,7.68,1547.0,49.11,65497748.0,4.77,34.7,77.89,0.39
+United Republic of Tanzania,Tanzania,TZA,1,6.09,1317.86,4.8,7.65,1547.0,49.11,65497748.0,4.77,34.7,77.89,0.39
 Togolese Republic,Togo,TGO,1,5.3,1060.82,7.7,21.34,227.0,17.56,8848699.0,4.2,44.4,66.54,0.43
-Republic of Tunisia,Tunisia,TUN,1,1.9,4335.63,10.1,15.03,3428.0,51.81,12356117.0,2.15,14.3,79.04,0.52
+Republic of Tunisia,Tunisia,TUN,1,1.9,4335.63,10.1,15.1,3428.0,51.81,12356117.0,2.15,14.3,79.04,0.52
 Republic of Uganda,Uganda,UGA,1,5.73,1247.87,10.2,16.91,832.0,27.64,47249585.0,4.7,31.9,76.53,0.38
 Western Sahara,Western Sahara,ESH,1,,,,,,,,,,,
 Republic of Zambia,Zambia,ZMB,1,4.31,1468.77,9.9,16.61,1622.0,46.03,20017675.0,4.5,41.7,86.75,0.4
-Republic of Zimbabwe,Zimbabwe,ZWE,1,3.6,2856.54,55.9,26.37,158.0,29.11,16320537.0,3.46,37.9,88.69,0.47
+Republic of Zimbabwe,Zimbabwe,ZWE,1,3.6,2856.54,55.9,26.24,158.0,29.11,16320537.0,3.46,37.9,88.69,0.47
