@@ -184,3 +184,23 @@ def health_expenditure_share() -> pd.DataFrame:
         .assign(year=lambda d: d.date.dt.year)
         .filter(["year", "iso_code", "value"])
     )
+
+
+def health_expenditure_share_one() -> pd.DataFrame:
+    """Get health expenditure share from ONE's GHED analysis"""
+    url = (
+        "https://raw.githubusercontent.com/ONEcampaign/topic_health_financing/"
+        "main/output/section1_chart2.csv"
+    )
+
+    data = pd.read_csv(url).astype({"year": "datetime64[ns]"})
+
+    data = data.melt(id_vars=["year"], var_name="country", value_name="value")
+
+    data = (
+        data.assign(year=lambda d: d.year.dt.year)
+        .pipe(add_iso_codes_column, id_column="country", id_type="regex")
+        .filter(["year", "iso_code", "value"])
+    )
+
+    return data
