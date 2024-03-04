@@ -8251,3 +8251,11 @@ INFO (2024-03-03 11:16:50,620): Updated vaccination rate chart
 INFO (2024-03-03 11:16:55,195): Updated overview text (summary) json
 INFO (2024-03-03 11:16:55,195): Updated daily charts in country page
 INFO (2024-03-03 11:16:58,306): Updated economy picker
+INFO (2024-03-04 07:41:20,694): Updated DSA list data
+INFO (2024-03-04 07:44:02,537): Downloaded IDS debt service data
+INFO (2024-03-04 07:45:26,353): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2024-03-04 07:47:52,340): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2024-03-04 07:48:00,821): Successfully updated chart C07
+INFO (2024-03-04 07:48:00,826): Successfully updated chart C08
+INFO (2024-03-04 07:48:02,224): Updated weekly charts in debt page
+INFO (2024-03-04 07:50:21,731): Updated weekly charts in country page
