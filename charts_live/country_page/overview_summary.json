@@ -528,8 +528,8 @@
     },
     "insufficient_food": {
         "DZA": {
-            "value": "10,181,901",
-            "date": "03 March",
+            "value": "10,167,666",
+            "date": "04 March",
             "info": ""
         },
         "AGO": {
@@ -544,7 +544,7 @@
         },
         "BWA": {
             "value": "482,450",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "BFA": {
@@ -554,12 +554,12 @@
         },
         "BDI": {
             "value": "4,049,672",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "CPV": {
             "value": "123,501",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "CMR": {
@@ -579,22 +579,22 @@
         },
         "COM": {
             "value": "248,607",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "COG": {
-            "value": "1,452,592",
-            "date": "03 March",
+            "value": "1,462,167",
+            "date": "04 March",
             "info": ""
         },
         "CIV": {
-            "value": "4,752,233",
-            "date": "03 March",
+            "value": "4,784,588",
+            "date": "04 March",
             "info": ""
         },
         "DJI": {
             "value": "274,301",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "COD": {
@@ -603,13 +603,13 @@
             "info": ""
         },
         "EGY": {
-            "value": "19,700,014",
-            "date": "03 March",
+            "value": "19,680,140",
+            "date": "04 March",
             "info": ""
         },
         "SWZ": {
             "value": "197,458",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "ETH": {
@@ -619,12 +619,12 @@
         },
         "GMB": {
             "value": "684,308",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "GHA": {
-            "value": "5,339,958",
-            "date": "03 March",
+            "value": "5,339,452",
+            "date": "04 March",
             "info": ""
         },
         "GIN": {
@@ -633,8 +633,8 @@
             "info": ""
         },
         "GNB": {
-            "value": "684,996",
-            "date": "03 March",
+            "value": "685,228",
+            "date": "04 March",
             "info": ""
         },
         "KEN": {
@@ -644,22 +644,22 @@
         },
         "LSO": {
             "value": "799,396",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "LBR": {
             "value": "1,938,749",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "LBY": {
             "value": "1,210,119",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "MDG": {
-            "value": "8,604,027",
-            "date": "03 March",
+            "value": "8,456,955",
+            "date": "04 March",
             "info": ""
         },
         "MWI": {
@@ -673,13 +673,13 @@
             "info": ""
         },
         "MRT": {
-            "value": "1,769,326",
-            "date": "03 March",
+            "value": "1,823,653",
+            "date": "04 March",
             "info": ""
         },
         "MAR": {
             "value": "6,871,057",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "MOZ": {
@@ -704,32 +704,32 @@
         },
         "RWA": {
             "value": "2,621,655",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "STP": {
             "value": "45,654",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "SEN": {
-            "value": "4,943,407",
-            "date": "03 March",
+            "value": "4,943,918",
+            "date": "04 March",
             "info": ""
         },
         "SLE": {
-            "value": "4,622,496",
-            "date": "03 March",
+            "value": "4,663,931",
+            "date": "04 March",
             "info": ""
         },
         "SOM": {
-            "value": "15,734,570",
-            "date": "03 March",
+            "value": "15,731,361",
+            "date": "04 March",
             "info": ""
         },
         "SSD": {
-            "value": "3,253,413",
-            "date": "03 March",
+            "value": "3,253,312",
+            "date": "04 March",
             "info": ""
         },
         "SDN": {
@@ -744,17 +744,17 @@
         },
         "TGO": {
             "value": "1,883,276",
-            "date": "03 March",
+            "date": "04 March",
             "info": ""
         },
         "TUN": {
-            "value": "1,862,114",
-            "date": "03 March",
+            "value": "1,866,174",
+            "date": "04 March",
             "info": ""
         },
         "UGA": {
-            "value": "7,976,981",
-            "date": "03 March",
+            "value": "7,977,181",
+            "date": "04 March",
             "info": ""
         },
         "ZMB": {
@@ -763,8 +763,8 @@
             "info": ""
         },
         "ZWE": {
-            "value": "5,246,981",
-            "date": "03 March",
+            "value": "5,263,858",
+            "date": "04 March",
             "info": ""
         }
     },
@@ -1567,12 +1567,12 @@
     },
     "inflation": {
         "Africa (median)": {
-            "value": "5.43",
-            "date": "30 November 2023"
+            "value": "5.2039",
+            "date": "31 December 2023"
         },
         "DZA": {
-            "value": "8.9",
-            "date": "30 November 2023",
+            "value": "7.8",
+            "date": "31 December 2023",
             "info": ""
         },
         "AGO": {
@@ -1596,8 +1596,8 @@
             "info": ""
         },
         "BDI": {
-            "value": "20.379",
-            "date": "30 November 2023",
+            "value": "20.047",
+            "date": "31 December 2023",
             "info": ""
         },
         "CPV": {
@@ -1606,8 +1606,8 @@
             "info": ""
         },
         "CMR": {
-            "value": "6.8",
-            "date": "31 October 2023",
+            "value": "6.2",
+            "date": "30 November 2023",
             "info": ""
         },
         "CAF": {
@@ -1631,18 +1631,18 @@
             "info": ""
         },
         "CIV": {
-            "value": "3.7",
-            "date": "30 November 2023",
+            "value": "3.9",
+            "date": "31 December 2023",
             "info": ""
         },
         "DJI": {
-            "value": "3.6",
-            "date": "30 November 2023",
+            "value": "3.8",
+            "date": "31 December 2023",
             "info": ""
         },
         "COD": {
-            "value": "40.4",
-            "date": "30 September 2023",
+            "value": "42.5",
+            "date": "31 October 2023",
             "info": ""
         },
         "EGY": {
@@ -1676,8 +1676,8 @@
             "info": ""
         },
         "GMB": {
-            "value": "18.404",
-            "date": "30 November 2023",
+            "value": "17.299",
+            "date": "31 December 2023",
             "info": ""
         },
         "GHA": {
@@ -1696,8 +1696,8 @@
             "info": ""
         },
         "KEN": {
-            "value": "6.6",
-            "date": "31 December 2023",
+            "value": "6.9",
+            "date": "31 January 2024",
             "info": ""
         },
         "LSO": {
@@ -1716,8 +1716,8 @@
             "info": ""
         },
         "MDG": {
-            "value": "7.6",
-            "date": "31 October 2023",
+            "value": "7.2",
+            "date": "30 November 2023",
             "info": ""
         },
         "MWI": {
@@ -1741,13 +1741,13 @@
             "info": ""
         },
         "MAR": {
-            "value": "3.6",
-            "date": "30 November 2023",
+            "value": "3.4",
+            "date": "31 December 2023",
             "info": ""
         },
         "MOZ": {
-            "value": "5.36",
-            "date": "30 November 2023",
+            "value": "4.29",
+            "date": "31 December 2023",
             "info": ""
         },
         "NAM": {
@@ -1796,8 +1796,8 @@
             "info": ""
         },
         "ZAF": {
-            "value": "5.5",
-            "date": "30 November 2023",
+            "value": "5.1",
+            "date": "31 December 2023",
             "info": ""
         },
         "SSD": {
@@ -1826,18 +1826,18 @@
             "info": ""
         },
         "UGA": {
-            "value": "2.6",
-            "date": "31 December 2023",
+            "value": "2.8",
+            "date": "31 January 2024",
             "info": ""
         },
         "ZMB": {
-            "value": "13.1",
-            "date": "31 December 2023",
+            "value": "13.2",
+            "date": "31 January 2024",
             "info": ""
         },
         "ZWE": {
-            "value": "26.5",
-            "date": "31 December 2023",
+            "value": "34.8",
+            "date": "31 January 2024",
             "info": ""
         }
     }
