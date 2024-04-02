@@ -1,27 +1,27 @@
 {
     "gdp_growth": {
         "DZA": {
-            "value": "3.8%",
+            "value": "2.6%",
             "year": "2023",
             "info": ""
         },
         "AGO": {
-            "value": "1.3%",
+            "value": "3.5%",
             "year": "2023",
             "info": ""
         },
         "BEN": {
-            "value": "5.5%",
+            "value": "6.0%",
             "year": "2023",
             "info": ""
         },
         "BWA": {
-            "value": "3.8%",
+            "value": "3.7%",
             "year": "2023",
             "info": ""
         },
         "BFA": {
-            "value": "4.4%",
+            "value": "4.9%",
             "year": "2023",
             "info": ""
         },
@@ -36,17 +36,17 @@
             "info": ""
         },
         "CMR": {
-            "value": "4.0%",
+            "value": "4.3%",
             "year": "2023",
             "info": ""
         },
         "CAF": {
-            "value": "1.0%",
+            "value": "2.5%",
             "year": "2023",
             "info": ""
         },
         "TCD": {
-            "value": "4.0%",
+            "value": "3.5%",
             "year": "2023",
             "info": ""
         },
@@ -56,7 +56,7 @@
             "info": ""
         },
         "COG": {
-            "value": "4.0%",
+            "value": "4.1%",
             "year": "2023",
             "info": ""
         },
@@ -66,27 +66,32 @@
             "info": ""
         },
         "DJI": {
-            "value": "5.0%",
+            "value": "4.0%",
             "year": "2023",
             "info": ""
         },
         "COD": {
-            "value": "6.7%",
+            "value": "6.3%",
             "year": "2023",
             "info": ""
         },
         "EGY": {
-            "value": "4.2%",
+            "value": "3.7%",
             "year": "2023",
             "info": ""
         },
         "GNQ": {
-            "value": "6.2%",
+            "value": "1.8%",
+            "year": "2023",
+            "info": ""
+        },
+        "ERI": {
+            "value": "2.8%",
             "year": "2023",
             "info": ""
         },
         "SWZ": {
-            "value": "3.1%",
+            "value": "2.8%",
             "year": "2023",
             "info": ""
         },
@@ -96,7 +101,7 @@
             "info": ""
         },
         "GAB": {
-            "value": "2.8%",
+            "value": "3.0%",
             "year": "2023",
             "info": ""
         },
@@ -106,12 +111,12 @@
             "info": ""
         },
         "GHA": {
-            "value": "1.2%",
+            "value": "1.6%",
             "year": "2023",
             "info": ""
         },
         "GIN": {
-            "value": "5.9%",
+            "value": "5.6%",
             "year": "2023",
             "info": ""
         },
@@ -121,57 +126,57 @@
             "info": ""
         },
         "KEN": {
-            "value": "5.0%",
+            "value": "5.3%",
             "year": "2023",
             "info": ""
         },
         "LSO": {
-            "value": "2.1%",
+            "value": "2.2%",
             "year": "2023",
             "info": ""
         },
         "LBR": {
-            "value": "4.6%",
+            "value": "4.3%",
             "year": "2023",
             "info": ""
         },
         "LBY": {
-            "value": "12.5%",
+            "value": "17.5%",
             "year": "2023",
             "info": ""
         },
         "MDG": {
-            "value": "4.0%",
+            "value": "4.2%",
             "year": "2023",
             "info": ""
         },
         "MWI": {
-            "value": "1.7%",
-            "year": "2023",
-            "info": ""
-        },
-        "MLI": {
-            "value": "4.5%",
-            "year": "2023",
-            "info": ""
-        },
-        "MRT": {
-            "value": "4.5%",
-            "year": "2023",
-            "info": ""
-        },
-        "MUS": {
-            "value": "5.1%",
-            "year": "2023",
-            "info": ""
-        },
-        "MAR": {
             "value": "2.4%",
             "year": "2023",
             "info": ""
         },
+        "MLI": {
+            "value": "5.0%",
+            "year": "2023",
+            "info": ""
+        },
+        "MRT": {
+            "value": "4.4%",
+            "year": "2023",
+            "info": ""
+        },
+        "MUS": {
+            "value": "4.6%",
+            "year": "2023",
+            "info": ""
+        },
+        "MAR": {
+            "value": "3.0%",
+            "year": "2023",
+            "info": ""
+        },
         "MOZ": {
-            "value": "7.0%",
+            "value": "5.0%",
             "year": "2023",
             "info": ""
         },
@@ -181,12 +186,12 @@
             "info": ""
         },
         "NER": {
-            "value": "4.1%",
+            "value": "6.1%",
             "year": "2023",
             "info": ""
         },
         "NGA": {
-            "value": "2.9%",
+            "value": "3.2%",
             "year": "2023",
             "info": ""
         },
@@ -196,22 +201,22 @@
             "info": ""
         },
         "STP": {
-            "value": "0.5%",
+            "value": "2.0%",
             "year": "2023",
             "info": ""
         },
         "SEN": {
-            "value": "4.1%",
+            "value": "8.3%",
             "year": "2023",
             "info": ""
         },
         "SYC": {
-            "value": "4.2%",
+            "value": "3.9%",
             "year": "2023",
             "info": ""
         },
         "SLE": {
-            "value": "2.7%",
+            "value": "3.1%",
             "year": "2023",
             "info": ""
         },
@@ -221,17 +226,17 @@
             "info": ""
         },
         "ZAF": {
-            "value": "0.9%",
+            "value": "0.1%",
             "year": "2023",
             "info": ""
         },
         "SSD": {
-            "value": "3.5%",
+            "value": "5.6%",
             "year": "2023",
             "info": ""
         },
         "SDN": {
-            "value": "18.3%",
+            "value": "1.2%",
             "year": "2023",
             "info": ""
         },
@@ -241,7 +246,7 @@
             "info": ""
         },
         "TGO": {
-            "value": "5.4%",
+            "value": "5.5%",
             "year": "2023",
             "info": ""
         },
@@ -251,29 +256,29 @@
             "info": ""
         },
         "UGA": {
-            "value": "4.6%",
+            "value": "5.7%",
             "year": "2023",
             "info": ""
         },
         "ZMB": {
-            "value": "3.6%",
+            "value": "4.0%",
             "year": "2023",
             "info": ""
         },
         "ZWE": {
-            "value": "4.1%",
+            "value": "2.5%",
             "year": "2023",
             "info": ""
         }
     },
     "poverty": {
         "Sub-Saharan Africa (WB)": {
-            "value": "35.4",
+            "value": "36.7",
             "Year": "2019"
         },
         "World": {
             "value": "9.0",
-            "Year": "2019"
+            "Year": "2022"
         },
         "DZA": {
             "value": "0.5",
@@ -286,8 +291,8 @@
             "info": ""
         },
         "BEN": {
-            "value": "20.1",
-            "Year": "2018",
+            "value": "12.7",
+            "Year": "2021",
             "info": ""
         },
         "BWA": {
@@ -296,13 +301,13 @@
             "info": ""
         },
         "BFA": {
-            "value": "31.2",
-            "Year": "2018",
+            "value": "25.3",
+            "Year": "2021",
             "info": ""
         },
         "BDI": {
-            "value": "65.1",
-            "Year": "2013",
+            "value": "62.1",
+            "Year": "2020",
             "info": ""
         },
         "CPV": {
@@ -311,8 +316,8 @@
             "info": ""
         },
         "CMR": {
-            "value": "25.7",
-            "Year": "2014",
+            "value": "23.0",
+            "Year": "2021",
             "info": ""
         },
         "CAF": {
@@ -321,8 +326,8 @@
             "info": ""
         },
         "TCD": {
-            "value": "30.9",
-            "Year": "2018",
+            "value": "30.8",
+            "Year": "2022",
             "info": ""
         },
         "COM": {
@@ -336,8 +341,8 @@
             "info": ""
         },
         "CIV": {
-            "value": "11.5",
-            "Year": "2018",
+            "value": "9.7",
+            "Year": "2021",
             "info": ""
         },
         "DJI": {
@@ -346,8 +351,8 @@
             "info": ""
         },
         "COD": {
-            "value": "69.9",
-            "Year": "2012",
+            "value": "78.9",
+            "Year": "2020",
             "info": ""
         },
         "EGY": {
@@ -386,8 +391,8 @@
             "info": ""
         },
         "GNB": {
-            "value": "21.7",
-            "Year": "2018",
+            "value": "26.0",
+            "Year": "2021",
             "info": ""
         },
         "KEN": {
@@ -416,13 +421,13 @@
             "info": ""
         },
         "MLI": {
-            "value": "15.2",
-            "Year": "2018",
+            "value": "20.8",
+            "Year": "2021",
             "info": ""
         },
         "MRT": {
-            "value": "6.5",
-            "Year": "2014",
+            "value": "5.4",
+            "Year": "2019",
             "info": ""
         },
         "MUS": {
@@ -436,7 +441,7 @@
             "info": ""
         },
         "MOZ": {
-            "value": "74.4",
+            "value": "74.5",
             "Year": "2019",
             "info": ""
         },
@@ -446,8 +451,8 @@
             "info": ""
         },
         "NER": {
-            "value": "50.9",
-            "Year": "2018",
+            "value": "50.6",
+            "Year": "2021",
             "info": ""
         },
         "NGA": {
@@ -461,13 +466,13 @@
             "info": ""
         },
         "STP": {
-            "value": "15.6",
+            "value": "15.7",
             "Year": "2017",
             "info": ""
         },
         "SEN": {
-            "value": "9.2",
-            "Year": "2018",
+            "value": "9.9",
+            "Year": "2021",
             "info": ""
         },
         "SYC": {
@@ -501,23 +506,23 @@
             "info": ""
         },
         "TGO": {
-            "value": "28.4",
-            "Year": "2018",
+            "value": "26.6",
+            "Year": "2021",
             "info": ""
         },
         "TUN": {
-            "value": "0.1",
-            "Year": "2015",
+            "value": "0.3",
+            "Year": "2021",
             "info": ""
         },
         "UGA": {
-            "value": "42.2",
+            "value": "42.1",
             "Year": "2019",
             "info": ""
         },
         "ZMB": {
-            "value": "60.8",
-            "Year": "2015",
+            "value": "64.3",
+            "Year": "2022",
             "info": ""
         },
         "ZWE": {
@@ -583,8 +588,8 @@
             "info": ""
         },
         "COG": {
-            "value": "1,502,303",
-            "date": "31 March",
+            "value": "1,479,368",
+            "date": "02 April",
             "info": ""
         },
         "CIV": {
@@ -1042,527 +1047,523 @@
     },
     "debt_service": {
         "Afghanistan": {
-            "debt_service": "123.0",
-            "debt_service_share": "4.6"
+            "debt_service": "126.7",
+            "debt_service_share": "2.3"
         },
         "Albania": {
-            "debt_service": "541.0",
-            "debt_service_share": "7.0"
+            "debt_service": "591.9",
+            "debt_service_share": "9.5"
         },
         "Argentina": {
-            "debt_service": "21,439.8",
-            "debt_service_share": "8.8"
+            "debt_service": "6,698.1",
+            "debt_service_share": "2.8"
         },
         "Armenia": {
-            "debt_service": "457.7",
-            "debt_service_share": "6.2"
+            "debt_service": "564.2",
+            "debt_service_share": "8.2"
         },
         "Azerbaijan": {
-            "debt_service": "1,327.9",
-            "debt_service_share": "5.2"
+            "debt_service": "3,324.1",
+            "debt_service_share": "14.0"
         },
         "Bangladesh": {
-            "debt_service": "4,109.4",
-            "debt_service_share": "6.8"
+            "debt_service": "5,971.8",
+            "debt_service_share": "8.8"
         },
         "Belarus": {
-            "debt_service": "4,060.2",
-            "debt_service_share": "17.3"
+            "debt_service": "3,738.8",
+            "debt_service_share": "14.3"
         },
         "Belize": {
-            "debt_service": "124.9",
-            "debt_service_share": "16.0"
+            "debt_service": "150.9",
+            "debt_service_share": "19.5"
         },
         "Bhutan": {
-            "debt_service": "248.6",
-            "debt_service_share": "27.3"
+            "debt_service": "287.3",
+            "debt_service_share": "33.1"
         },
         "Bolivia": {
-            "debt_service": "1,404.2",
-            "debt_service_share": "8.7"
-        },
-        "Bosnia and Herzegovina": {
-            "debt_service": "619.5",
-            "debt_service_share": "5.2"
-        },
-        "Brazil": {
-            "debt_service": "22,400.3",
-            "debt_service_share": "2.1"
-        },
-        "Bulgaria": {
-            "debt_service": "1,873.1",
-            "debt_service_share": "4.3"
-        },
-        "Cambodia": {
-            "debt_service": "655.8",
-            "debt_service_share": "7.4"
-        },
-        "China": {
-            "debt_service": "48,143.8",
-            "debt_service_share": "0.8"
-        },
-        "Colombia": {
-            "debt_service": "10,782.7",
+            "debt_service": "1,317.7",
             "debt_service_share": "8.3"
         },
+        "Bosnia and Herzegovina": {
+            "debt_service": "570.4",
+            "debt_service_share": "4.9"
+        },
+        "Brazil": {
+            "debt_service": "24,764.4",
+            "debt_service_share": "2.6"
+        },
+        "Bulgaria": {
+            "debt_service": "2,247.3",
+            "debt_service_share": "5.5"
+        },
+        "Cambodia": {
+            "debt_service": "733.7",
+            "debt_service_share": "8.4"
+        },
+        "China": {
+            "debt_service": "65,612.9",
+            "debt_service_share": "1.0"
+        },
+        "Colombia": {
+            "debt_service": "9,300.3",
+            "debt_service_share": "7.8"
+        },
         "Costa Rica": {
-            "debt_service": "1,917.4",
-            "debt_service_share": "11.0"
+            "debt_service": "1,386.1",
+            "debt_service_share": "9.2"
         },
         "Dominica": {
-            "debt_service": "182.5",
-            "debt_service_share": "53.9"
+            "debt_service": "46.9",
+            "debt_service_share": "13.2"
         },
         "Dominican Republic": {
-            "debt_service": "2,245.5",
-            "debt_service_share": "9.7"
-        },
-        "Ecuador": {
-            "debt_service": "3,688.8",
-            "debt_service_share": "8.1"
+            "debt_service": "2,845.6",
+            "debt_service_share": "12.3"
         },
         "El Salvador": {
-            "debt_service": "2,635.0",
-            "debt_service_share": "25.7"
+            "debt_service": "1,308.0",
+            "debt_service_share": "13.1"
         },
         "Fiji": {
-            "debt_service": "94.2",
-            "debt_service_share": "4.8"
+            "debt_service": "145.2",
+            "debt_service_share": "7.6"
         },
         "Georgia": {
-            "debt_service": "549.7",
-            "debt_service_share": "5.9"
+            "debt_service": "673.2",
+            "debt_service_share": "7.9"
         },
         "Grenada": {
-            "debt_service": "53.2",
-            "debt_service_share": "14.2"
+            "debt_service": "54.7",
+            "debt_service_share": "14.4"
         },
         "Guatemala": {
-            "debt_service": "716.7",
-            "debt_service_share": "4.7"
+            "debt_service": "1,004.0",
+            "debt_service_share": "6.5"
         },
         "Guyana": {
-            "debt_service": "100.9",
-            "debt_service_share": "2.4"
+            "debt_service": "125.2",
+            "debt_service_share": "3.4"
         },
         "Haiti": {
-            "debt_service": "147.1",
-            "debt_service_share": "5.9"
-        },
-        "Honduras": {
-            "debt_service": "590.4",
-            "debt_service_share": "6.1"
+            "debt_service": "157.8",
+            "debt_service_share": "5.4"
         },
         "India": {
-            "debt_service": "22,888.6",
-            "debt_service_share": "2.0"
+            "debt_service": "32,850.3",
+            "debt_service_share": "2.9"
         },
         "Indonesia": {
-            "debt_service": "25,320.1",
-            "debt_service_share": "9.6"
+            "debt_service": "38,908.9",
+            "debt_service_share": "15.1"
         },
         "Iran": {
-            "debt_service": "36.9",
+            "debt_service": "47.0",
             "debt_service_share": "0.1"
         },
         "Iraq": {
-            "debt_service": "4,155.6",
-            "debt_service_share": "3.2"
+            "debt_service": "3,330.7",
+            "debt_service_share": "2.7"
         },
         "Jamaica": {
-            "debt_service": "782.9",
-            "debt_service_share": "13.3"
+            "debt_service": "1,061.0",
+            "debt_service_share": "20.1"
         },
         "Jordan": {
-            "debt_service": "2,250.5",
-            "debt_service_share": "12.9"
+            "debt_service": "1,569.4",
+            "debt_service_share": "8.9"
         },
         "Kazakhstan": {
-            "debt_service": "2,640.3",
-            "debt_service_share": "4.1"
+            "debt_service": "3,773.8",
+            "debt_service_share": "7.0"
         },
         "Kyrgyz Republic": {
-            "debt_service": "306.0",
-            "debt_service_share": "6.3"
+            "debt_service": "320.0",
+            "debt_service_share": "6.4"
         },
         "Laos": {
-            "debt_service": "1,428.5",
-            "debt_service_share": "54.5"
+            "debt_service": "1,334.1",
+            "debt_service_share": "51.6"
         },
         "Lebanon": {
-            "debt_service": "3,863.2",
-            "debt_service_share": "157.6"
+            "debt_service": "3,231.7",
+            "debt_service_share": "67.5"
         },
         "Maldives": {
-            "debt_service": "433.0",
-            "debt_service_share": "15.1"
+            "debt_service": "466.8",
+            "debt_service_share": "16.3"
         },
         "Mexico": {
-            "debt_service": "31,939.7",
-            "debt_service_share": "5.5"
+            "debt_service": "36,766.3",
+            "debt_service_share": "8.0"
         },
         "Moldova": {
-            "debt_service": "229.7",
-            "debt_service_share": "3.7"
+            "debt_service": "371.6",
+            "debt_service_share": "6.1"
         },
         "Mongolia": {
-            "debt_service": "1,164.9",
-            "debt_service_share": "16.1"
+            "debt_service": "3,122.0",
+            "debt_service_share": "49.9"
         },
         "Montenegro": {
-            "debt_service": "316.4",
+            "debt_service": "310.2",
             "debt_service_share": "9.4"
         },
         "Myanmar": {
-            "debt_service": "1,126.5",
-            "debt_service_share": "7.6"
+            "debt_service": "1,007.5",
+            "debt_service_share": "7.8"
         },
         "Nepal": {
-            "debt_service": "442.2",
-            "debt_service_share": "3.8"
+            "debt_service": "500.9",
+            "debt_service_share": "4.0"
         },
         "Nicaragua": {
-            "debt_service": "512.3",
-            "debt_service_share": "10.2"
+            "debt_service": "706.7",
+            "debt_service_share": "14.2"
         },
         "North Macedonia": {
-            "debt_service": "1,064.8",
-            "debt_service_share": "17.6"
+            "debt_service": "790.1",
+            "debt_service_share": "13.8"
         },
         "Papua New Guinea": {
-            "debt_service": "426.1",
-            "debt_service_share": "5.7"
+            "debt_service": "672.5",
+            "debt_service_share": "9.8"
         },
         "Paraguay": {
-            "debt_service": "1,238.9",
-            "debt_service_share": "11.8"
+            "debt_service": "1,273.9",
+            "debt_service_share": "12.3"
         },
         "Peru": {
-            "debt_service": "2,289.7",
+            "debt_service": "2,441.2",
             "debt_service_share": "3.7"
         },
         "Philippines": {
-            "debt_service": "3,904.2",
-            "debt_service_share": "3.3"
+            "debt_service": "6,985.7",
+            "debt_service_share": "5.8"
         },
         "Russia": {
-            "debt_service": "21,883.8",
-            "debt_service_share": "3.2"
+            "debt_service": "20,094.2",
+            "debt_service_share": "2.7"
         },
         "Samoa": {
-            "debt_service": "36.5",
-            "debt_service_share": "10.5"
+            "debt_service": "33.3",
+            "debt_service_share": "9.6"
         },
         "Serbia": {
-            "debt_service": "1,381.7",
-            "debt_service_share": "3.8"
+            "debt_service": "3,701.9",
+            "debt_service_share": "10.8"
         },
         "Solomon Islands": {
-            "debt_service": "7.0",
-            "debt_service_share": "1.2"
+            "debt_service": "7.7",
+            "debt_service_share": "1.3"
         },
         "Sri Lanka": {
-            "debt_service": "4,606.6",
-            "debt_service_share": "33.2"
+            "debt_service": "5,491.7",
+            "debt_service_share": "38.6"
+        },
+        "Suriname": {
+            "debt_service": "298.7",
+            "debt_service_share": "30.8"
         },
         "Syria": {
-            "debt_service": "79.9",
-            "debt_service_share": "0.5"
+            "debt_service": "72.3",
+            "debt_service_share": "0.4"
         },
         "Tajikistan": {
-            "debt_service": "276.3",
-            "debt_service_share": "7.0"
+            "debt_service": "343.2",
+            "debt_service_share": "8.4"
         },
         "Thailand": {
-            "debt_service": "1,266.6",
-            "debt_service_share": "1.0"
+            "debt_service": "3,104.3",
+            "debt_service_share": "2.1"
         },
         "Timor-Leste": {
-            "debt_service": "26.6",
-            "debt_service_share": "1.5"
+            "debt_service": "33.7",
+            "debt_service_share": "1.9"
         },
         "Tonga": {
-            "debt_service": "21.3",
-            "debt_service_share": "7.6"
+            "debt_service": "21.2",
+            "debt_service_share": "9.0"
         },
         "T\u00fcrkiye": {
-            "debt_service": "20,824.3",
-            "debt_service_share": "4.7"
-        },
-        "Turkmenistan": {
-            "debt_service": "1,203.7",
-            "debt_service_share": "13.3"
-        },
-        "Ukraine": {
-            "debt_service": "4,590.0",
-            "debt_service_share": "4.2"
-        },
-        "Uzbekistan": {
-            "debt_service": "1,991.0",
+            "debt_service": "21,766.4",
             "debt_service_share": "6.0"
         },
+        "Turkmenistan": {
+            "debt_service": "997.7",
+            "debt_service_share": "11.0"
+        },
+        "Ukraine": {
+            "debt_service": "9,054.8",
+            "debt_service_share": "9.0"
+        },
+        "Uzbekistan": {
+            "debt_service": "2,592.6",
+            "debt_service_share": "8.2"
+        },
         "Vanuatu": {
-            "debt_service": "24.6",
-            "debt_service_share": "4.5"
+            "debt_service": "22.4",
+            "debt_service_share": "4.6"
         },
         "Vietnam": {
-            "debt_service": "5,236.2",
-            "debt_service_share": "5.5"
+            "debt_service": "6,021.7",
+            "debt_service_share": "5.6"
         },
         "Yemen": {
-            "debt_service": "578.6",
-            "debt_service_share": "31.4"
+            "debt_service": "548.7",
+            "debt_service_share": "24.2"
         },
         "DZA": {
-            "debt_service": "105.2",
+            "debt_service": "96.3",
             "debt_service_share": "0.1",
             "info": ""
         },
         "AGO": {
-            "debt_service": "9,482.8",
-            "debt_service_share": "49.4",
+            "debt_service": "11,556.2",
+            "debt_service_share": "41.3",
             "info": ""
         },
         "BEN": {
-            "debt_service": "732.0",
-            "debt_service_share": "17.8",
+            "debt_service": "814.0",
+            "debt_service_share": "21.9",
             "info": ""
         },
         "BWA": {
-            "debt_service": "166.1",
-            "debt_service_share": "2.5",
+            "debt_service": "226.1",
+            "debt_service_share": "3.5",
             "info": ""
         },
         "BFA": {
-            "debt_service": "347.0",
-            "debt_service_share": "5.8",
+            "debt_service": "364.2",
+            "debt_service_share": "5.9",
             "info": ""
         },
         "BDI": {
-            "debt_service": "61.7",
-            "debt_service_share": "5.6",
-            "info": ""
-        },
-        "CPV": {
-            "debt_service": "144.0",
-            "debt_service_share": "18.4",
-            "info": ""
-        },
-        "CMR": {
-            "debt_service": "1,524.4",
-            "debt_service_share": "17.8",
-            "info": ""
-        },
-        "CAF": {
-            "debt_service": "21.9",
-            "debt_service_share": "4.3",
-            "info": ""
-        },
-        "TCD": {
-            "debt_service": "419.2",
-            "debt_service_share": "17.9",
-            "info": ""
-        },
-        "COM": {
-            "debt_service": "31.0",
-            "debt_service_share": "11.0",
-            "info": ""
-        },
-        "COG": {
-            "debt_service": "724.8",
-            "debt_service_share": "22.3",
-            "info": ""
-        },
-        "CIV": {
-            "debt_service": "2,525.5",
-            "debt_service_share": "13.7",
-            "info": ""
-        },
-        "DJI": {
-            "debt_service": "236.6",
-            "debt_service_share": "25.1",
-            "info": ""
-        },
-        "COD": {
-            "debt_service": "802.0",
-            "debt_service_share": "6.2",
-            "info": ""
-        },
-        "EGY": {
-            "debt_service": "12,641.0",
-            "debt_service_share": "12.2",
-            "info": ""
-        },
-        "ERI": {
-            "debt_service": "35.5",
+            "debt_service": "61.4",
             "debt_service_share": "5.7",
             "info": ""
         },
+        "CPV": {
+            "debt_service": "152.9",
+            "debt_service_share": "19.8",
+            "info": ""
+        },
+        "CMR": {
+            "debt_service": "1,669.8",
+            "debt_service_share": "19.9",
+            "info": ""
+        },
+        "CAF": {
+            "debt_service": "23.2",
+            "debt_service_share": "4.6",
+            "info": ""
+        },
+        "TCD": {
+            "debt_service": "407.6",
+            "debt_service_share": "19.4",
+            "info": ""
+        },
+        "COM": {
+            "debt_service": "32.4",
+            "debt_service_share": "11.3",
+            "info": ""
+        },
+        "COG": {
+            "debt_service": "834.7",
+            "debt_service_share": "25.1",
+            "info": ""
+        },
+        "CIV": {
+            "debt_service": "3,190.5",
+            "debt_service_share": "19.0",
+            "info": ""
+        },
+        "DJI": {
+            "debt_service": "303.9",
+            "debt_service_share": "35.6",
+            "info": ""
+        },
+        "COD": {
+            "debt_service": "626.7",
+            "debt_service_share": "4.3",
+            "info": ""
+        },
+        "EGY": {
+            "debt_service": "18,906.3",
+            "debt_service_share": "17.7",
+            "info": ""
+        },
+        "ERI": {
+            "debt_service": "36.5",
+            "debt_service_share": "3.7",
+            "info": ""
+        },
         "SWZ": {
-            "debt_service": "55.9",
-            "debt_service_share": "3.8",
+            "debt_service": "89.3",
+            "debt_service_share": "5.8",
             "info": ""
         },
         "ETH": {
-            "debt_service": "2,713.5",
-            "debt_service_share": "14.0",
+            "debt_service": "3,890.4",
+            "debt_service_share": "17.0",
             "info": ""
         },
         "GAB": {
-            "debt_service": "622.1",
-            "debt_service_share": "16.1",
+            "debt_service": "795.0",
+            "debt_service_share": "21.9",
             "info": ""
         },
         "GMB": {
-            "debt_service": "108.6",
-            "debt_service_share": "18.4",
+            "debt_service": "111.5",
+            "debt_service_share": "21.3",
             "info": ""
         },
         "GHA": {
-            "debt_service": "3,018.5",
-            "debt_service_share": "19.3",
+            "debt_service": "2,792.8",
+            "debt_service_share": "15.6",
             "info": ""
         },
         "GIN": {
-            "debt_service": "583.7",
-            "debt_service_share": "14.2",
+            "debt_service": "728.6",
+            "debt_service_share": "17.7",
             "info": ""
         },
         "GNB": {
-            "debt_service": "58.1",
-            "debt_service_share": "13.6",
+            "debt_service": "68.8",
+            "debt_service_share": "17.1",
             "info": ""
         },
         "KEN": {
-            "debt_service": "3,299.4",
-            "debt_service_share": "12.8",
+            "debt_service": "5,457.6",
+            "debt_service_share": "20.1",
             "info": ""
         },
         "LSO": {
-            "debt_service": "81.8",
-            "debt_service_share": "6.5",
+            "debt_service": "102.7",
+            "debt_service_share": "8.2",
             "info": ""
         },
         "LBR": {
-            "debt_service": "81.2",
-            "debt_service_share": "6.8",
+            "debt_service": "72.7",
+            "debt_service_share": "5.7",
             "info": ""
         },
         "MDG": {
-            "debt_service": "410.7",
-            "debt_service_share": "14.2",
+            "debt_service": "482.0",
+            "debt_service_share": "15.1",
             "info": ""
         },
         "MWI": {
-            "debt_service": "126.2",
-            "debt_service_share": "4.5",
+            "debt_service": "147.3",
+            "debt_service_share": "5.3",
             "info": ""
         },
         "MLI": {
-            "debt_service": "406.0",
-            "debt_service_share": "6.8",
+            "debt_service": "408.7",
+            "debt_service_share": "7.2",
             "info": ""
         },
         "MRT": {
-            "debt_service": "608.3",
-            "debt_service_share": "22.5",
+            "debt_service": "534.8",
+            "debt_service_share": "20.1",
             "info": ""
         },
         "MUS": {
-            "debt_service": "197.9",
-            "debt_service_share": "4.5",
+            "debt_service": "535.2",
+            "debt_service_share": "12.6",
             "info": ""
         },
         "MAR": {
-            "debt_service": "4,921.4",
-            "debt_service_share": "9.9",
+            "debt_service": "7,641.4",
+            "debt_service_share": "16.7",
             "info": ""
         },
         "MOZ": {
-            "debt_service": "1,694.9",
-            "debt_service_share": "24.7",
+            "debt_service": "825.5",
+            "debt_service_share": "12.0",
             "info": ""
         },
         "NER": {
-            "debt_service": "341.1",
+            "debt_service": "341.8",
             "debt_service_share": "7.7",
             "info": ""
         },
         "NGA": {
-            "debt_service": "2,902.7",
-            "debt_service_share": "5.2",
+            "debt_service": "3,331.5",
+            "debt_service_share": "4.3",
             "info": ""
         },
         "RWA": {
-            "debt_service": "255.2",
-            "debt_service_share": "6.2",
+            "debt_service": "258.9",
+            "debt_service_share": "6.4",
             "info": ""
         },
         "STP": {
-            "debt_service": "8.4",
-            "debt_service_share": "4.4",
+            "debt_service": "17.5",
+            "debt_service_share": "9.3",
             "info": ""
         },
         "SEN": {
-            "debt_service": "1,344.9",
-            "debt_service_share": "15.0",
+            "debt_service": "1,779.4",
+            "debt_service_share": "19.3",
             "info": ""
         },
         "SLE": {
-            "debt_service": "71.3",
-            "debt_service_share": "8.2",
+            "debt_service": "75.8",
+            "debt_service_share": "8.8",
             "info": ""
         },
         "SOM": {
-            "debt_service": "54.0",
-            "debt_service_share": "6.7",
+            "debt_service": "55.4",
+            "debt_service_share": "6.9",
             "info": ""
         },
         "ZAF": {
-            "debt_service": "6,647.6",
-            "debt_service_share": "5.0",
+            "debt_service": "8,937.0",
+            "debt_service_share": "6.5",
             "info": ""
         },
         "SDN": {
-            "debt_service": "425.2",
-            "debt_service_share": "12.3",
+            "debt_service": "458.0",
+            "debt_service_share": "8.4",
             "info": ""
         },
         "TZA": {
-            "debt_service": "1,547.1",
-            "debt_service_share": "9.9",
+            "debt_service": "1,632.6",
+            "debt_service_share": "9.5",
             "info": ""
         },
         "TGO": {
-            "debt_service": "226.8",
-            "debt_service_share": "10.5",
+            "debt_service": "236.5",
+            "debt_service_share": "11.0",
             "info": ""
         },
         "TUN": {
-            "debt_service": "3,427.8",
-            "debt_service_share": "20.7",
+            "debt_service": "3,970.7",
+            "debt_service_share": "25.2",
             "info": ""
         },
         "UGA": {
-            "debt_service": "831.7",
-            "debt_service_share": "7.6",
+            "debt_service": "1,185.9",
+            "debt_service_share": "11.5",
             "info": ""
         },
         "ZMB": {
-            "debt_service": "1,621.5",
-            "debt_service_share": "19.7",
+            "debt_service": "2,961.8",
+            "debt_service_share": "32.6",
             "info": ""
         },
         "ZWE": {
-            "debt_service": "158.3",
-            "debt_service_share": "1.6",
+            "debt_service": "156.0",
+            "debt_service_share": "3.3",
             "info": ""
         }
     },
     "debt_service_regions": {
         "Africa": {
-            "debt_service": "68852.5",
-            "debt_service_share": "9.7"
+            "debt_service": "89385.8",
+            "debt_service_share": "12.3"
         }
     },
     "inflation": {
@@ -1696,8 +1697,8 @@
             "info": ""
         },
         "KEN": {
-            "value": "6.9",
-            "date": "31 January 2024",
+            "value": "6.3",
+            "date": "29 February 2024",
             "info": ""
         },
         "LSO": {
@@ -1826,18 +1827,18 @@
             "info": ""
         },
         "UGA": {
-            "value": "2.8",
-            "date": "31 January 2024",
+            "value": "3.4",
+            "date": "29 February 2024",
             "info": ""
         },
         "ZMB": {
-            "value": "13.2",
-            "date": "31 January 2024",
+            "value": "13.5",
+            "date": "29 February 2024",
             "info": ""
         },
         "ZWE": {
-            "value": "34.8",
-            "date": "31 January 2024",
+            "value": "47.6",
+            "date": "29 February 2024",
             "info": ""
         }
     }
