@@ -134,10 +134,16 @@ def wfp_insufficient_food_single_measure() -> None:
         f"{PATHS.charts}/country_page/overview_food_sm_region.csv", index=False
     )
 
+    def _clean_data(row):
+        try:
+            return row.split("On")[1].strip()
+        except AttributeError:
+            pass
+
     # dynamic regions version
     kn_region = (
         regions.assign(
-            date=lambda d: d["date"].apply(lambda x: x.split("On")[1].strip()),
+            date=lambda d: d["date"].apply(lambda x: _clean_data(x)),
             value=lambda d: d.value.map(lambda x: f"{x:,.0f}"),
         )
         .filter(["name_short", "date", "value"], axis=1)
@@ -277,3 +283,7 @@ def food_inflation_chart() -> None:
     regions_data.assign(source=source).to_csv(
         f"{PATHS.download}/country_page/food_inflation_ts_regions.csv", index=False
     )
+
+
+if __name__ == "__main__":
+    wfp_insufficient_food_single_measure()

@@ -52,10 +52,11 @@ def download_owid_data() -> None:
             url,
             usecols=columns.keys(),
             dtype=columns,
-            parse_dates=["date"],
             encoding=None,
             engine="python",
         )
+
+        df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d")
 
         print("Downloaded OWID data successfully")
         df.to_feather(PATHS.raw_data + r"/owid_data.feather")
@@ -149,7 +150,7 @@ def get_indicators_ts(owid_data: pd.DataFrame, indicators: list[str]) -> pd.Data
     id_vars = ["iso_code", "date"]
 
     return get_indicators_ts_wide(owid_data, indicators).melt(
-        id_vars=id_vars, var_name=["indicator"]
+        id_vars=id_vars, var_name="indicator"
     )
 
 
