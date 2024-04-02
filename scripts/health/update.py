@@ -38,9 +38,6 @@ def update_monthly_health_data() -> None:
     health_topic.update_dtp_data()
     health_common.update_malaria_data()
 
-    # IHME
-    health_topic.update_ihme_data()
-
 
 def update_monthly_health_charts() -> None:
     """Update health charts which change infrequently"""

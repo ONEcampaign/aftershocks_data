@@ -157,16 +157,6 @@ def __extract_codes() -> pd.DataFrame:
         raise ConnectionError("Could not connect to IHME website")
 
 
-def update_ihme_data() -> None:
-    df = __extract_data()
-    df.to_csv(f"{PATHS.raw_data}/health/ihme_health_spending.csv", index=False)
-    logger.info("Updated IHME health spending data")
-
-    codes = __extract_codes()
-    codes.to_csv(f"{PATHS.raw_data}/health/ihme_health_spending_codes.csv", index=False)
-    logger.info("Updated IHME health spending codes")
-
-
 def _read_ihme_data() -> pd.DataFrame:
     return pd.read_csv(f"{PATHS.raw_data}/health/ihme_health_spending.csv")
 
