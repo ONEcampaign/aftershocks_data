@@ -1,4 +1,25 @@
 Country,Cause,Type,Year,Deaths per 100K people,Deaths,missing
+Angola,HIV/AIDS,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,23.27,"3,817",False
+Angola,Road injury,Injuries,2000.0,25.06,"4,110",False
+Angola,Congenital anomalies,Noncommunicable diseases,2000.0,39.67,"6,505",False
+Angola,Ischaemic heart disease,Noncommunicable diseases,2000.0,41.5,"6,806",False
+Angola,Stroke,Noncommunicable diseases,2000.0,50.98,"8,361",False
+Angola,Tuberculosis,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,75.26,"12,343",False
+Angola,Malaria,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,113.74,"18,654",False
+Angola,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,207.53,"34,034",False
+Angola,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,242.72,"39,807",False
+Angola,Diarrhoeal diseases,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,252.15,"41,352",False
+Angola,Congenital anomalies,Noncommunicable diseases,2019.0,23.28,"7,402",False
+Angola,Road injury,Injuries,2019.0,26.15,"8,317",False
+Angola,Ischaemic heart disease,Noncommunicable diseases,2019.0,31.51,"10,020",False
+Angola,Stroke,Noncommunicable diseases,2019.0,33.61,"10,687",False
+Angola,HIV/AIDS,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,40.27,"12,805",False
+Angola,Malaria,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,42.79,"13,608",False
+Angola,Diarrhoeal diseases,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,47.94,"15,245",False
+Angola,Tuberculosis,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,53.43,"16,991",False
+Angola,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,78.29,"24,897",False
+Angola,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,97.62,"31,044",False
+French Southern Territories,,,,,nan,True
 Burundi,Road injury,Injuries,2000.0,30.35,"1,936",False
 Burundi,Protein-energy malnutrition,"Communicable, maternal, neonatal, and nutritional diseases",2000.0,41.39,"2,640",False
 Burundi,Ischaemic heart disease,Noncommunicable diseases,2000.0,44.37,"2,830",False
@@ -299,6 +320,7 @@ Eritrea,Ischaemic heart disease,Noncommunicable diseases,2019.0,61.59,"2,154",Fa
 Eritrea,Diarrhoeal diseases,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,65.54,"2,292",False
 Eritrea,Stroke,Noncommunicable diseases,2019.0,73.32,"2,564",False
 Eritrea,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,93.7,"3,277",False
+Western Sahara,,,,,nan,True
 Ethiopia,Diabetes mellitus,Noncommunicable diseases,2000.0,20.41,"13,513",False
 Ethiopia,Congenital anomalies,Noncommunicable diseases,2000.0,23.19,"15,349",False
 Ethiopia,Road injury,Injuries,2000.0,24.62,"16,300",False
@@ -439,6 +461,7 @@ Equatorial Guinea,Malaria,"Communicable, maternal, neonatal, and nutritional dis
 Equatorial Guinea,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,67.31,913,False
 Equatorial Guinea,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,79.19,"1,074",False
 Equatorial Guinea,HIV/AIDS,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,135.58,"1,838",False
+British Indian Ocean Territory,,,,,nan,True
 Kenya,Ischaemic heart disease,Noncommunicable diseases,2000.0,19.83,"6,345",False
 Kenya,Road injury,Injuries,2000.0,26.41,"8,452",False
 Kenya,Cirrhosis of the liver,Noncommunicable diseases,2000.0,29.77,"9,528",False
@@ -659,6 +682,7 @@ Malawi,Malaria,"Communicable, maternal, neonatal, and nutritional diseases",2019
 Malawi,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,41.61,"7,739",False
 Malawi,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,55.79,"10,377",False
 Malawi,HIV/AIDS,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,69.03,"12,839",False
+Mayotte,,,,,nan,True
 Namibia,Chronic obstructive pulmonary disease,Noncommunicable diseases,2000.0,22.49,404,False
 Namibia,Road injury,Injuries,2000.0,22.54,404,False
 Namibia,Diabetes mellitus,Noncommunicable diseases,2000.0,32.37,581,False
@@ -719,6 +743,7 @@ Nigeria,Tuberculosis,"Communicable, maternal, neonatal, and nutritional diseases
 Nigeria,Diarrhoeal diseases,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,72.0,"144,724",False
 Nigeria,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,103.12,"207,281",False
 Nigeria,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,118.78,"238,750",False
+Reunion,,,,,nan,True
 Rwanda,Diabetes mellitus,Noncommunicable diseases,2000.0,27.24,"2,162",False
 Rwanda,Road injury,Injuries,2000.0,37.96,"3,012",False
 Rwanda,Cirrhosis of the liver,Noncommunicable diseases,2000.0,48.13,"3,818",False
@@ -779,6 +804,7 @@ Senegal,Diarrhoeal diseases,"Communicable, maternal, neonatal, and nutritional d
 Senegal,Ischaemic heart disease,Noncommunicable diseases,2019.0,38.19,"6,224",False
 Senegal,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,44.07,"7,184",False
 Senegal,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,62.97,"10,264",False
+St. Helena,,,,,nan,True
 Sierra Leone,Road injury,Injuries,2000.0,31.23,"1,432",False
 Sierra Leone,Congenital anomalies,Noncommunicable diseases,2000.0,31.83,"1,459",False
 Sierra Leone,Stroke,Noncommunicable diseases,2000.0,51.62,"2,366",False
@@ -1059,10 +1085,3 @@ Zimbabwe,Ischaemic heart disease,Noncommunicable diseases,2019.0,58.17,"8,493",F
 Zimbabwe,Neonatal conditions,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,65.18,"9,516",False
 Zimbabwe,Lower respiratory infections,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,73.83,"10,779",False
 Zimbabwe,HIV/AIDS,"Communicable, maternal, neonatal, and nutritional diseases",2019.0,136.91,"19,988",False
-Angola,,,,,nan,True
-British Indian Ocean Territory,,,,,nan,True
-French Southern Territories,,,,,nan,True
-Mayotte,,,,,nan,True
-Reunion,,,,,nan,True
-St. Helena,,,,,nan,True
-Western Sahara,,,,,nan,True
