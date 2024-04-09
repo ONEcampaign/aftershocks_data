@@ -318,15 +318,16 @@ def flourish_ids_debt_stocks() -> None:
 
 def debt_distress_map() -> None:
     df = (
-        get_dsa()
+        get_dsa(update=True)
         .pipe(add_short_names_column, id_column="country", id_type="regex")
         .pipe(add_iso_codes_column, id_column="name_short", id_type="regex")
         .filter(
             ["iso_code", "name_short", "latest_publication", "risk_of_debt_distress"]
         )
         .dropna(subset=["risk_of_debt_distress"])
-        .assign(latest_publication=lambda d: date_to_str(d.latest_publication))
     )
+
+    df = df.assign(latest_publication=lambda d: date_to_str(d.latest_publication))
 
     # chart version
     df.to_csv(f"{PATHS.charts}/debt_topic/debt_distress_map.csv", index=False)
