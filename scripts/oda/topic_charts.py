@@ -655,7 +655,7 @@ def aid_to_ukraine() -> pd.DataFrame:
     dg = donor_groupings()
 
     oda = ODAData(
-        years=range(2015, 2023),
+        years=range(2015, 2024),
         donors=list(dg["dac_countries"]) + [84],
         prices="constant",
         base_year=common.CONSTANT_YEAR,

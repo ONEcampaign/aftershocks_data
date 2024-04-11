@@ -8,7 +8,7 @@ set_data_path(config.PATHS.raw_data)
 set_pydeflate_path(config.PATHS.raw_data)
 
 
-YEARS = range(2000, 2023)
+YEARS = range(2000, 2024)
 
 
 DAC = [
