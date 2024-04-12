@@ -433,6 +433,7 @@ def oda_covid_idrc():
     )
 
     df["preliminary"] = df.loc[lambda d: d.Year == 2023, "Other ODA"]
+    df.loc[lambda d: d.Year == 2023, "Other ODA"] = None
 
     # live version
     df.to_csv(f"{PATHS.charts}/oda_topic/oda_covid.csv", index=False)
