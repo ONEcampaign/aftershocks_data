@@ -328,7 +328,7 @@ def oda_covid_idrc():
 
     dg = donor_groupings()
 
-    oda = ODAData(
+    oda22 = ODAData(
         years=range(2015, 2023),
         donors=list(dg["dac_countries"]) + [20001, 84],
         prices="constant",
@@ -336,21 +336,26 @@ def oda_covid_idrc():
         include_names=True,
     )
 
-    indicators = [
-        "total_covid_oda_ge",
-        "total_oda_ge",
-        "total_oda_flow_net",
-        "idrc_ge_linked",
-    ]
-
-    data = (
-        oda.load_indicator(indicators)
-        .get_data()
-        .loc[
-            lambda d: ~((d.year < 2018) & (d.indicator == "total_oda_ge"))
-            & ~((d.year >= 2018) & (d.indicator == "total_oda_flow_net"))
-        ]
+    oda23 = ODAData(
+        years=range(2015, 2024),
+        donors=list(dg["dac_countries"]) + [20001, 84],
+        prices="constant",
+        base_year=common.CONSTANT_YEAR + 1,
+        include_names=True,
     )
+
+    indicators22 = ["total_covid_oda_ge"]
+    indicators23 = ["total_oda_ge", "total_oda_flow_net", "idrc_ge_linked"]
+
+    d22 = oda22.load_indicator(indicators22).get_data()
+    d23 = oda23.load_indicator(indicators23).get_data()
+
+    data = pd.concat([d22, d23], ignore_index=True)
+
+    data = data.loc[
+        lambda d: ~((d.year < 2018) & (d.indicator == "total_oda_ge"))
+        & ~((d.year >= 2018) & (d.indicator == "total_oda_flow_net"))
+    ]
 
     dac = list(dg["dac_countries"]) + [84, 82]
 
@@ -772,14 +777,13 @@ def aid_to_ukraine_comparison() -> None:
 
 
 if __name__ == "__main__":
-    global_aid_ts()
-    oda_gni_single_year()
-    sector_totals()
-    key_sector_shares()
-    aid_to_regions_ts()
-    aid_to_incomes()
+    # global_aid_ts()
+    # oda_gni_single_year()
+    # sector_totals()
+    # aid_to_regions_ts()
+    # aid_to_incomes()
     oda_covid_idrc()
-    oda_idrc_share()
-    flow_shares_idrc_covid()
-    aid_to_ukraine_comparison()
+    # oda_idrc_share()
+    # flow_shares_idrc_covid()
+    # aid_to_ukraine_comparison()
     ...
