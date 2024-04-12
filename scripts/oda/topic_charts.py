@@ -772,12 +772,12 @@ def aid_to_ukraine_comparison() -> None:
 
 
 if __name__ == "__main__":
-    # global_aid_ts()
-    # oda_gni_single_year()
-    # sector_totals()
-    # key_sector_shares()
-    # aid_to_regions_ts()
-    # aid_to_incomes()
+    global_aid_ts()
+    oda_gni_single_year()
+    sector_totals()
+    key_sector_shares()
+    aid_to_regions_ts()
+    aid_to_incomes()
     oda_covid_idrc()
     oda_idrc_share()
     flow_shares_idrc_covid()
