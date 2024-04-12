@@ -159,7 +159,7 @@ dmypy.json
 /raw_data/crs_2022_raw.feather
 
 
-/raw_data/oda/table2a_raw.feather
-/raw_data/table2a_raw.feather
 
-*.feather
+raw_data/table2a_raw.feather
+raw_data/dac1.feather
+raw_data/oda/table2a_raw.feather
