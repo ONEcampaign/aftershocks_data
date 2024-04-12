@@ -137,6 +137,12 @@ year,donor_code,recipient_code,value,recipient
 2000,76,10047,11.6,Upper-middle income
 2000,76,10048,0.48000000000000004,High income
 2000,76,10049,0.04,Not classified by income
+2000,82,10024,0.1,Not classified by income
+2000,82,10045,0.0,Low income
+2000,82,10046,0.02,Lower-middle income
+2000,82,10047,0.25,Upper-middle income
+2000,82,10048,0.0,High income
+2000,82,10049,0.0,Not classified by income
 2000,84,10024,0.0,Not classified by income
 2000,84,10045,0.0,Low income
 2000,84,10046,0.0,Lower-middle income
@@ -329,6 +335,12 @@ year,donor_code,recipient_code,value,recipient
 2001,76,10047,6.54,Upper-middle income
 2001,76,10048,0.13,High income
 2001,76,10049,0.02,Not classified by income
+2001,82,10024,0.21000000000000002,Not classified by income
+2001,82,10045,0.0,Low income
+2001,82,10046,0.11,Lower-middle income
+2001,82,10047,0.05,Upper-middle income
+2001,82,10048,0.0,High income
+2001,82,10049,0.0,Not classified by income
 2001,84,10024,0.54,Not classified by income
 2001,84,10045,0.29,Low income
 2001,84,10046,0.61,Lower-middle income
@@ -521,6 +533,12 @@ year,donor_code,recipient_code,value,recipient
 2002,76,10047,10.77,Upper-middle income
 2002,76,10048,0.25,High income
 2002,76,10049,0.01,Not classified by income
+2002,82,10024,0.21000000000000002,Not classified by income
+2002,82,10045,0.34,Low income
+2002,82,10046,0.4,Lower-middle income
+2002,82,10047,0.15,Upper-middle income
+2002,82,10048,0.0,High income
+2002,82,10049,0.0,Not classified by income
 2002,84,10024,0.59,Not classified by income
 2002,84,10045,0.36,Low income
 2002,84,10046,0.43000000000000005,Lower-middle income
@@ -713,6 +731,12 @@ year,donor_code,recipient_code,value,recipient
 2003,76,10047,20.560000000000002,Upper-middle income
 2003,76,10048,0.11,High income
 2003,76,10049,0.01,Not classified by income
+2003,82,10024,0.24,Not classified by income
+2003,82,10045,0.05,Low income
+2003,82,10046,0.17,Lower-middle income
+2003,82,10047,0.43,Upper-middle income
+2003,82,10048,0.0,High income
+2003,82,10049,0.0,Not classified by income
 2003,84,10024,0.76,Not classified by income
 2003,84,10045,0.27,Low income
 2003,84,10046,0.54,Lower-middle income
@@ -905,6 +929,12 @@ year,donor_code,recipient_code,value,recipient
 2004,76,10047,36.27,Upper-middle income
 2004,76,10048,1.34,High income
 2004,76,10049,0.24,Not classified by income
+2004,82,10024,1.1300000000000001,Not classified by income
+2004,82,10045,0.9600000000000001,Low income
+2004,82,10046,1.3199999999999998,Lower-middle income
+2004,82,10047,1.3599999999999999,Upper-middle income
+2004,82,10048,0.05,High income
+2004,82,10049,0.01,Not classified by income
 2004,84,10024,1.77,Not classified by income
 2004,84,10045,2.03,Low income
 2004,84,10046,2.71,Lower-middle income
@@ -1097,6 +1127,12 @@ year,donor_code,recipient_code,value,recipient
 2005,76,10047,65.32,Upper-middle income
 2005,76,10048,2.39,High income
 2005,76,10049,0.41,Not classified by income
+2005,82,10024,1.9,Not classified by income
+2005,82,10045,1.74,Low income
+2005,82,10046,2.5999999999999996,Lower-middle income
+2005,82,10047,2.59,Upper-middle income
+2005,82,10048,0.11,High income
+2005,82,10049,0.02,Not classified by income
 2005,84,10024,3.5599999999999996,Not classified by income
 2005,84,10045,3.56,Low income
 2005,84,10046,4.56,Lower-middle income
@@ -1289,6 +1325,12 @@ year,donor_code,recipient_code,value,recipient
 2006,76,10047,53.959999999999994,Upper-middle income
 2006,76,10048,3.45,High income
 2006,76,10049,0.58,Not classified by income
+2006,82,10024,2.46,Not classified by income
+2006,82,10045,3.11,Low income
+2006,82,10046,4.16,Lower-middle income
+2006,82,10047,3.82,Upper-middle income
+2006,82,10048,0.25,High income
+2006,82,10049,0.04,Not classified by income
 2006,84,10024,4.23,Not classified by income
 2006,84,10045,9.19,Low income
 2006,84,10046,6.21,Lower-middle income
@@ -1481,6 +1523,12 @@ year,donor_code,recipient_code,value,recipient
 2007,76,10047,151.86,Upper-middle income
 2007,76,10048,3.3400000000000003,High income
 2007,76,10049,0.51,Not classified by income
+2007,82,10024,3.4899999999999998,Not classified by income
+2007,82,10045,3.8,Low income
+2007,82,10046,4.18,Lower-middle income
+2007,82,10047,4.29,Upper-middle income
+2007,82,10048,0.2,High income
+2007,82,10049,0.02,Not classified by income
 2007,84,10024,7.02,Not classified by income
 2007,84,10045,24.6,Low income
 2007,84,10046,7.33,Lower-middle income
@@ -1673,6 +1721,12 @@ year,donor_code,recipient_code,value,recipient
 2008,76,10047,111.77000000000001,Upper-middle income
 2008,76,10048,6.069999999999999,High income
 2008,76,10049,0.56,Not classified by income
+2008,82,10024,5.86,Not classified by income
+2008,82,10045,0.0,Low income
+2008,82,10046,0.0,Lower-middle income
+2008,82,10047,0.0,Upper-middle income
+2008,82,10048,0.0,High income
+2008,82,10049,0.0,Not classified by income
 2008,84,10024,8.600000000000001,Not classified by income
 2008,84,10045,18.8,Low income
 2008,84,10046,10.22,Lower-middle income
@@ -1865,6 +1919,12 @@ year,donor_code,recipient_code,value,recipient
 2009,76,10047,138.2,Upper-middle income
 2009,76,10048,4.89,High income
 2009,76,10049,0.31000000000000005,Not classified by income
+2009,82,10024,3.61,Not classified by income
+2009,82,10045,0.0,Low income
+2009,82,10046,0.0,Lower-middle income
+2009,82,10047,0.0,Upper-middle income
+2009,82,10048,0.0,High income
+2009,82,10049,0.0,Not classified by income
 2009,84,10024,7.39,Not classified by income
 2009,84,10045,11.92,Low income
 2009,84,10046,7.7299999999999995,Lower-middle income
@@ -2057,6 +2117,12 @@ year,donor_code,recipient_code,value,recipient
 2010,76,10047,133.88,Upper-middle income
 2010,76,10048,4.31,High income
 2010,76,10049,0.64,Not classified by income
+2010,82,10024,4.52,Not classified by income
+2010,82,10045,4.21,Low income
+2010,82,10046,4.97,Lower-middle income
+2010,82,10047,4.640000000000001,Upper-middle income
+2010,82,10048,0.18,High income
+2010,82,10049,0.03,Not classified by income
 2010,84,10024,6.09,Not classified by income
 2010,84,10045,17.87,Low income
 2010,84,10046,6.04,Lower-middle income
@@ -2249,6 +2315,12 @@ year,donor_code,recipient_code,value,recipient
 2011,76,10047,184.52,Upper-middle income
 2011,76,10048,3.1199999999999997,High income
 2011,76,10049,0.44,Not classified by income
+2011,82,10024,6.07,Not classified by income
+2011,82,10045,4.67,Low income
+2011,82,10046,5.01,Lower-middle income
+2011,82,10047,8.25,Upper-middle income
+2011,82,10048,0.15,High income
+2011,82,10049,0.02,Not classified by income
 2011,84,10024,8.95,Not classified by income
 2011,84,10045,19.98,Low income
 2011,84,10046,9.309999999999999,Lower-middle income
@@ -2441,6 +2513,12 @@ year,donor_code,recipient_code,value,recipient
 2012,76,10047,182.57,Upper-middle income
 2012,76,10048,1.36,High income
 2012,76,10049,0.46,Not classified by income
+2012,82,10024,4.9399999999999995,Not classified by income
+2012,82,10045,6.390000000000001,Low income
+2012,82,10046,5.53,Lower-middle income
+2012,82,10047,6.21,Upper-middle income
+2012,82,10048,0.05,High income
+2012,82,10049,0.01,Not classified by income
 2012,84,10024,8.32,Not classified by income
 2012,84,10045,22.14,Low income
 2012,84,10046,9.77,Lower-middle income
@@ -2633,6 +2711,12 @@ year,donor_code,recipient_code,value,recipient
 2013,76,10047,163.88,Upper-middle income
 2013,76,10048,1.56,High income
 2013,76,10049,0.56,Not classified by income
+2013,82,10024,6.65,Not classified by income
+2013,82,10045,6.630000000000001,Low income
+2013,82,10046,7.640000000000001,Lower-middle income
+2013,82,10047,9.39,Upper-middle income
+2013,82,10048,0.08,High income
+2013,82,10049,0.03,Not classified by income
 2013,84,10024,10.08,Not classified by income
 2013,84,10045,16.3,Low income
 2013,84,10046,10.05,Lower-middle income
@@ -2825,6 +2909,12 @@ year,donor_code,recipient_code,value,recipient
 2014,76,10047,142.28,Upper-middle income
 2014,76,10048,1.76,High income
 2014,76,10049,0.43,Not classified by income
+2014,82,10024,8.77,Not classified by income
+2014,82,10045,7.74,Low income
+2014,82,10046,8.83,Lower-middle income
+2014,82,10047,10.2,Upper-middle income
+2014,82,10048,0.08,High income
+2014,82,10049,0.03,Not classified by income
 2014,84,10024,10.379999999999999,Not classified by income
 2014,84,10045,7.66,Low income
 2014,84,10046,10.39,Lower-middle income
@@ -3017,6 +3107,12 @@ year,donor_code,recipient_code,value,recipient
 2015,76,10047,126.98,Upper-middle income
 2015,76,10048,0.43,High income
 2015,76,10049,0.13999999999999999,Not classified by income
+2015,82,10024,8.62,Not classified by income
+2015,82,10045,5.050000000000001,Low income
+2015,82,10046,8.940000000000001,Lower-middle income
+2015,82,10047,8.58,Upper-middle income
+2015,82,10048,0.02,High income
+2015,82,10049,0.0,Not classified by income
 2015,84,10024,12.34,Not classified by income
 2015,84,10045,6.9399999999999995,Low income
 2015,84,10046,12.86,Lower-middle income
@@ -3209,6 +3305,12 @@ year,donor_code,recipient_code,value,recipient
 2016,76,10047,173.36,Upper-middle income
 2016,76,10048,1.53,High income
 2016,76,10049,0.22,Not classified by income
+2016,82,10024,12.280000000000001,Not classified by income
+2016,82,10045,6.62,Low income
+2016,82,10046,9.469999999999999,Lower-middle income
+2016,82,10047,13.31,Upper-middle income
+2016,82,10048,0.08,High income
+2016,82,10049,0.01,Not classified by income
 2016,84,10024,13.95,Not classified by income
 2016,84,10045,8.08,Low income
 2016,84,10046,15.66,Lower-middle income
@@ -3401,6 +3503,12 @@ year,donor_code,recipient_code,value,recipient
 2017,76,10047,191.64,Upper-middle income
 2017,76,10048,0.75,High income
 2017,76,10049,0.17,Not classified by income
+2017,82,10024,17.08,Not classified by income
+2017,82,10045,5.91,Low income
+2017,82,10046,8.95,Lower-middle income
+2017,82,10047,9.5,Upper-middle income
+2017,82,10048,0.08,High income
+2017,82,10049,0.0,Not classified by income
 2017,84,10024,20.53,Not classified by income
 2017,84,10045,8.95,Low income
 2017,84,10046,13.57,Lower-middle income
@@ -3593,6 +3701,12 @@ year,donor_code,recipient_code,value,recipient
 2018,76,10047,185.25,Upper-middle income
 2018,76,10048,1.31,High income
 2018,76,10049,1.3,Not classified by income
+2018,82,10024,17.08,Not classified by income
+2018,82,10045,7.3500000000000005,Low income
+2018,82,10046,9.66,Lower-middle income
+2018,82,10047,12.54,Upper-middle income
+2018,82,10048,0.06,High income
+2018,82,10049,0.07,Not classified by income
 2018,84,10024,17.38,Not classified by income
 2018,84,10045,10.35,Low income
 2018,84,10046,15.649999999999999,Lower-middle income
@@ -3785,6 +3899,12 @@ year,donor_code,recipient_code,value,recipient
 2019,76,10047,190.36,Upper-middle income
 2019,76,10048,0.73,High income
 2019,76,10049,1.72,Not classified by income
+2019,82,10024,15.97,Not classified by income
+2019,82,10045,8.14,Low income
+2019,82,10046,11.69,Lower-middle income
+2019,82,10047,10.399999999999999,Upper-middle income
+2019,82,10048,0.04,High income
+2019,82,10049,0.16,Not classified by income
 2019,84,10024,18.78,Not classified by income
 2019,84,10045,10.34,Low income
 2019,84,10046,17.6,Lower-middle income
@@ -3977,6 +4097,12 @@ year,donor_code,recipient_code,value,recipient
 2020,76,10047,228.75,Upper-middle income
 2020,76,10048,0.63,High income
 2020,76,10049,1.96,Not classified by income
+2020,82,10024,14.879999999999999,Not classified by income
+2020,82,10045,8.030000000000001,Low income
+2020,82,10046,14.870000000000001,Lower-middle income
+2020,82,10047,9.29,Upper-middle income
+2020,82,10048,0.03,High income
+2020,82,10049,0.1,Not classified by income
 2020,84,10024,17.48,Not classified by income
 2020,84,10045,9.08,Low income
 2020,84,10046,23.23,Lower-middle income
@@ -4169,6 +4295,12 @@ year,donor_code,recipient_code,value,recipient
 2021,76,10047,252.12,Upper-middle income
 2021,76,10048,0.8400000000000001,High income
 2021,76,10049,1.0699999999999998,Not classified by income
+2021,82,10024,16.18,Not classified by income
+2021,82,10045,9.2,Low income
+2021,82,10046,19.240000000000002,Lower-middle income
+2021,82,10047,13.43,Upper-middle income
+2021,82,10048,0.04,High income
+2021,82,10049,0.04,Not classified by income
 2021,84,10024,20.48,Not classified by income
 2021,84,10045,11.36,Low income
 2021,84,10046,28.08,Lower-middle income
@@ -4289,9 +4421,9 @@ year,donor_code,recipient_code,value,recipient
 2022,11,10047,420.78999999999996,Upper-middle income
 2022,11,10048,2.0500000000000003,High income
 2022,11,10049,11.05,Not classified by income
-2022,12,10024,9723.94,Not classified by income
+2022,12,10024,9723.88,Not classified by income
 2022,12,10045,2079.48,Low income
-2022,12,10046,2579.8,Lower-middle income
+2022,12,10046,2579.38,Lower-middle income
 2022,12,10047,714.91,Upper-middle income
 2022,12,10048,9.12,High income
 2022,12,10049,93.7,Not classified by income
@@ -4325,10 +4457,10 @@ year,donor_code,recipient_code,value,recipient
 2022,40,10047,43.75,Upper-middle income
 2022,40,10048,0.06,High income
 2022,40,10049,0.35,Not classified by income
-2022,50,10024,1809.56,Not classified by income
+2022,50,10024,1813.02,Not classified by income
 2022,50,10045,398.26,Low income
 2022,50,10046,1205.5,Lower-middle income
-2022,50,10047,485.11,Upper-middle income
+2022,50,10047,485.29,Upper-middle income
 2022,50,10048,0.5599999999999999,High income
 2022,50,10049,12.48,Not classified by income
 2022,61,10024,54.06,Not classified by income
@@ -4361,6 +4493,12 @@ year,donor_code,recipient_code,value,recipient
 2022,76,10047,210.66,Upper-middle income
 2022,76,10048,0.32,High income
 2022,76,10049,1.9100000000000001,Not classified by income
+2022,82,10024,156.35999999999999,Not classified by income
+2022,82,10045,5.53,Low income
+2022,82,10046,28.65,Lower-middle income
+2022,82,10047,8.55,Upper-middle income
+2022,82,10048,0.02,High income
+2022,82,10049,0.06,Not classified by income
 2022,84,10024,104.07000000000001,Not classified by income
 2022,84,10045,11.67,Low income
 2022,84,10046,97.49,Lower-middle income
@@ -4409,9 +4547,9 @@ year,donor_code,recipient_code,value,recipient
 2022,918,10047,2276.3199999999997,Upper-middle income
 2022,918,10048,1.96,High income
 2022,918,10049,42.53,Not classified by income
-2022,20001,10024,89125.97,Not classified by income
+2022,20001,10024,89129.37,Not classified by income
 2022,20001,10045,31999.96,Low income
-2022,20001,10046,67860.20999999999,Lower-middle income
-2022,20001,10047,19108.57,Upper-middle income
+2022,20001,10046,67859.79000000001,Lower-middle income
+2022,20001,10047,19108.76,Upper-middle income
 2022,20001,10048,240.95,High income
 2022,20001,10049,483.12,Not classified by income

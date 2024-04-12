@@ -251,7 +251,7 @@ def get_idrc() -> pd.DataFrame:
         donors=DAC + [20001],
         include_names=True,
         prices="constant",
-        base_year=2022,
+        base_year=2023,
     )
 
     oda.load_indicator(list(indicators))
@@ -267,7 +267,7 @@ def get_total_official():
         donors=DAC + [20001],
         include_names=True,
         prices="constant",
-        base_year=2022,
+        base_year=2023,
     )
     oda.load_indicator(["total_oda_flow_net", "total_oda_ge"])
 
