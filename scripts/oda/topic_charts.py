@@ -432,7 +432,7 @@ def oda_covid_idrc():
         )
     )
 
-    df["preliminary"] = df.loc[lambda d: d.Year == 2023, "Other ODA"]
+    df["Preliminary"] = df.loc[lambda d: d.Year == 2023, "Other ODA"]
     df.loc[lambda d: d.Year == 2023, "Other ODA"] = None
 
     # live version
@@ -780,13 +780,13 @@ def aid_to_ukraine_comparison() -> None:
 
 
 if __name__ == "__main__":
-    # global_aid_ts()
-    # oda_gni_single_year()
-    # sector_totals()
-    # aid_to_regions_ts()
-    # aid_to_incomes()
+    global_aid_ts()
+    oda_gni_single_year()
+    sector_totals()
+    aid_to_regions_ts()
+    aid_to_incomes()
     oda_covid_idrc()
-    # oda_idrc_share()
-    # flow_shares_idrc_covid()
-    # aid_to_ukraine_comparison()
+    oda_idrc_share()
+    flow_shares_idrc_covid()
+    aid_to_ukraine_comparison()
     ...
