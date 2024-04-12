@@ -11,6 +11,7 @@ set_data_path(PATHS.raw_oda)
 DacMembers = (
     donor_groupings()["dac_members"]
     | {84: "Lithuania"}
+    | {82: "Estonia"}
     | {20001: "DAC Countries, Total"}
 )
 
@@ -30,7 +31,7 @@ def global_aid_ts() -> None:
         years=range(2000, 2024),
         donors=list(DacMembers),
         prices="constant",
-        base_year=common.CONSTANT_YEAR,
+        base_year=common.CONSTANT_YEAR + 1,
         include_names=True,
     )
 
@@ -331,7 +332,7 @@ def oda_covid_idrc():
         years=range(2015, 2023),
         donors=list(dg["dac_countries"]) + [20001, 84],
         prices="constant",
-        base_year=common.CONSTANT_YEAR,
+        base_year=common.CONSTANT_YEAR + 1,
         include_names=True,
     )
 
@@ -351,7 +352,7 @@ def oda_covid_idrc():
         ]
     )
 
-    dac = list(dg["dac_countries"]) + [84]
+    dac = list(dg["dac_countries"]) + [84, 82]
 
     dac_covid = (
         data.loc[lambda d: d.donor_code.isin(dac)]
@@ -447,8 +448,8 @@ def oda_idrc_share():
     dg = donor_groupings()
 
     oda = ODAData(
-        years=range(2008, 2023),
-        donors=list(dg["dac_countries"]) + [20001, 84],
+        years=range(2008, 2024),
+        donors=list(dg["dac_countries"]) + [20001, 84, 82],
         prices="constant",
         base_year=common.CONSTANT_YEAR,
         include_names=True,
@@ -469,7 +470,7 @@ def oda_idrc_share():
         ]
     )
 
-    dac = list(dg["dac_countries"]) + [84]
+    dac = list(dg["dac_countries"]) + [84, 82]
 
     # dac2022 = (
     #     data.loc[lambda d: d.donor_code.isin(dac) & (d.year == 2022)]
@@ -543,9 +544,9 @@ def flow_shares_idrc_covid():
 
     oda = ODAData(
         years=range(2010, 2023),
-        donors=list(dg["dac_countries"]) + [20001, 84],
+        donors=list(dg["dac_countries"]) + [20001, 84, 82],
         prices="constant",
-        base_year=common.CONSTANT_YEAR,
+        base_year=common.CONSTANT_YEAR + 1,
         include_names=True,
     )
 
@@ -566,7 +567,7 @@ def flow_shares_idrc_covid():
     # urkaine22 = ukraine.query("year == 2021").assign(value=16120.581863, year=2022)
     # ukraine = pd.concat([ukraine, urkaine22], ignore_index=True)
 
-    dac = list(dg["dac_countries"]) + [84]
+    dac = list(dg["dac_countries"]) + [84, 82]
 
     dac_covid = (
         data.loc[lambda d: d.donor_code.isin(dac)]
@@ -655,8 +656,8 @@ def aid_to_ukraine() -> pd.DataFrame:
     dg = donor_groupings()
 
     oda = ODAData(
-        years=range(2015, 2024),
-        donors=list(dg["dac_countries"]) + [84],
+        years=range(2015, 2023),
+        donors=list(dg["dac_countries"]) + [84, 82],
         prices="constant",
         base_year=common.CONSTANT_YEAR,
         include_names=True,
@@ -771,12 +772,12 @@ def aid_to_ukraine_comparison() -> None:
 
 
 if __name__ == "__main__":
-    global_aid_ts()
-    oda_gni_single_year()
-    sector_totals()
-    key_sector_shares()
-    aid_to_regions_ts()
-    aid_to_incomes()
+    # global_aid_ts()
+    # oda_gni_single_year()
+    # sector_totals()
+    # key_sector_shares()
+    # aid_to_regions_ts()
+    # aid_to_incomes()
     oda_covid_idrc()
     oda_idrc_share()
     flow_shares_idrc_covid()

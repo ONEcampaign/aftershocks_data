@@ -13,6 +13,7 @@ set_bblocks_data_path(PATHS.bblocks_data)
 DacCountries = (
     donor_groupings()["dac_countries"]
     | {84: "Lithuania"}
+    | {82: "Estonia"}
     | {20001: "DAC Countries, Total"}
 )
 
@@ -22,7 +23,7 @@ def global_aid_key_number() -> None:
         years=range(2020, 2024),
         donors=20001,
         prices="constant",
-        base_year=common.CONSTANT_YEAR,
+        base_year=common.CONSTANT_YEAR + 1,
         include_names=True,
     )
 
