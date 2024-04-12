@@ -345,7 +345,7 @@ def oda_covid_idrc():
     )
 
     indicators22 = ["total_covid_oda_ge"]
-    indicators23 = ["total_oda_ge", "total_oda_flow_net", "idrc_ge_linked"]
+    indicators23 = ["total_oda_ge", "total_oda_flow_net", "idrc_flow"]
 
     d22 = oda22.load_indicator(indicators22).get_data()
     d23 = oda23.load_indicator(indicators23).get_data()
@@ -396,7 +396,7 @@ def oda_covid_idrc():
             other_oda=lambda d: round(
                 d["Total ODA"].fillna(0)
                 - d["total_covid_oda_ge"].fillna(0)
-                - d["idrc_ge_linked"].fillna(0)
+                - d["idrc_flow"].fillna(0)
                 - d["aid_to_ukraine"].fillna(0),
                 1,
             )
@@ -413,7 +413,7 @@ def oda_covid_idrc():
                 "year": "Year",
                 "donor_name": "Donor",
                 "total_covid_oda_ge": "COVID ODA",
-                "idrc_ge_linked": "IDRC",
+                "idrc_flow": "IDRC",
                 "aid_to_ukraine": "ODA to Ukraine",
                 "other_oda": "Other ODA",
             }
@@ -431,6 +431,8 @@ def oda_covid_idrc():
             axis=1,
         )
     )
+
+    df["preliminary"] = df.loc[lambda d: d.Year == 2023, "Other ODA"]
 
     # live version
     df.to_csv(f"{PATHS.charts}/oda_topic/oda_covid.csv", index=False)
