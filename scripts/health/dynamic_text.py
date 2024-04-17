@@ -1,4 +1,5 @@
 """ """
+
 import json
 
 import country_converter as coco
@@ -122,7 +123,12 @@ def doses_dynamic() -> None:
         df.sort_values(by=["date"])
         .dropna(subset=["total_vaccinations"])
         .drop_duplicates(["iso_code"], keep="last")
-        .pipe(add_income_level_column, id_column="iso_code", id_type="ISO3")
+        .pipe(
+            add_income_level_column,
+            id_column="iso_code",
+            id_type="ISO3",
+            # update_data=True,
+        )
     )
 
     latest_date = df["date"].max()
@@ -285,15 +291,15 @@ def malaria_dynamic() -> dict:
     """Create dynamic text for malaria"""
 
     malaria = get_malaria_data()
-    malaria[
-        "malaria_africa_total"
-    ] = f"{malaria['malaria_africa_total'] / 1000:.0f} thousand"
-    malaria[
-        "malaria_world_total"
-    ] = f"{malaria['malaria_world_total'] / 1000:.0f} thousand"
-    malaria[
-        "malaria_rest_of_world_total"
-    ] = f"{malaria['malaria_rest_of_world_total'] / 1000:.0f} thousand"
+    malaria["malaria_africa_total"] = (
+        f"{malaria['malaria_africa_total'] / 1000:.0f} thousand"
+    )
+    malaria["malaria_world_total"] = (
+        f"{malaria['malaria_world_total'] / 1000:.0f} thousand"
+    )
+    malaria["malaria_rest_of_world_total"] = (
+        f"{malaria['malaria_rest_of_world_total'] / 1000:.0f} thousand"
+    )
 
     return malaria
 

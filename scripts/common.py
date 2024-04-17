@@ -7,7 +7,7 @@ from country_converter import country_converter
 
 from scripts.config import PATHS
 
-WEO_YEAR: int = 2023
+WEO_YEAR: int = 2024
 CAUSES_OF_DEATH_YEAR = 2019
 DEBT_YEAR: int = 2024
 
