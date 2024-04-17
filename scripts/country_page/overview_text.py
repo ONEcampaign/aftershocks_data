@@ -50,3 +50,7 @@ def build_summary() -> None:
     update_key_number(
         path=f"{PATHS.charts}/country_page/overview_summary.json", new_dict=data
     )
+
+
+if __name__ == "__main__":
+    build_summary()

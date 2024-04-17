@@ -459,9 +459,9 @@ def wb_poverty_single_measure() -> None:
         .assign(
             name=lambda d: "As of " + d.date.dt.year.astype(str),
             lower=lambda d: d.date_90s.apply(
-                lambda x: f"In {x.year}"
-                if not pd.isnull(x)
-                else "Comparison not available"
+                lambda x: (
+                    f"In {x.year}" if not pd.isnull(x) else "Comparison not available"
+                )
             ),
             center=lambda d: (d.value - d.value_90s) / d.value_90s,
         )
@@ -568,4 +568,5 @@ def financial_overview() -> None:
 
 
 if __name__ == "__main__":
+    gdp_growth_single_measure()
     inflation_ts_chart()
