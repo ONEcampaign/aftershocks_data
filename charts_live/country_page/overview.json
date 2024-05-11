@@ -425,8 +425,8 @@
     },
     "insufficient_food": {
         "Algeria": {
-            "value": "9,340,556",
-            "date": "10 May"
+            "value": "9,339,738",
+            "date": "11 May"
         },
         "Angola": {
             "value": "5,459,841",
@@ -437,20 +437,20 @@
             "date": "11 January"
         },
         "Botswana": {
-            "value": "485,004",
-            "date": "10 May"
+            "value": "482,905",
+            "date": "11 May"
         },
         "Burkina Faso": {
             "value": "11,151,127",
             "date": "07 December"
         },
         "Burundi": {
-            "value": "4,081,480",
-            "date": "10 May"
+            "value": "4,107,580",
+            "date": "11 May"
         },
         "Cabo Verde": {
-            "value": "119,035",
-            "date": "10 May"
+            "value": "119,019",
+            "date": "11 May"
         },
         "Cameroon": {
             "value": "10,563,980",
@@ -465,12 +465,12 @@
             "date": "05 January"
         },
         "Comoros": {
-            "value": "248,741",
-            "date": "10 May"
+            "value": "249,431",
+            "date": "11 May"
         },
         "Congo Republic": {
-            "value": "1,468,654",
-            "date": "10 May"
+            "value": "1,500,171",
+            "date": "11 May"
         },
         "Cote d'Ivoire": {
             "value": "5,136,502",
@@ -481,52 +481,52 @@
             "date": "20 November"
         },
         "Djibouti": {
-            "value": "275,437",
-            "date": "10 May"
+            "value": "276,441",
+            "date": "11 May"
         },
         "Egypt": {
-            "value": "24,794,072",
-            "date": "10 May"
+            "value": "24,791,344",
+            "date": "11 May"
         },
         "Eswatini": {
             "value": "204,610",
-            "date": "10 May"
+            "date": "11 May"
         },
         "Ethiopia": {
             "value": "23,208,022",
             "date": "12 June"
         },
         "Gambia": {
-            "value": "697,929",
-            "date": "10 May"
+            "value": "695,932",
+            "date": "11 May"
         },
         "Ghana": {
-            "value": "5,162,751",
-            "date": "10 May"
+            "value": "5,169,599",
+            "date": "11 May"
         },
         "Guinea": {
             "value": "6,992,101",
             "date": "11 January"
         },
         "Guinea-Bissau": {
-            "value": "681,567",
-            "date": "10 May"
+            "value": "681,470",
+            "date": "11 May"
         },
         "Kenya": {
             "value": "13,611,708",
             "date": "16 January"
         },
         "Lesotho": {
-            "value": "740,749",
-            "date": "10 May"
+            "value": "743,816",
+            "date": "11 May"
         },
         "Liberia": {
-            "value": "1,944,397",
-            "date": "10 May"
+            "value": "1,944,392",
+            "date": "11 May"
         },
         "Libya": {
-            "value": "1,202,330",
-            "date": "10 May"
+            "value": "1,199,773",
+            "date": "11 May"
         },
         "Madagascar": {
             "value": "8,456,955",
@@ -545,8 +545,8 @@
             "date": "18 March"
         },
         "Morocco": {
-            "value": "6,306,063",
-            "date": "10 May"
+            "value": "6,305,613",
+            "date": "11 May"
         },
         "Mozambique": {
             "value": "7,566,013",
@@ -566,15 +566,15 @@
         },
         "Rwanda": {
             "value": "2,672,344",
-            "date": "10 May"
+            "date": "11 May"
         },
         "Sao Tome and Principe": {
-            "value": "41,753",
-            "date": "10 May"
+            "value": "42,359",
+            "date": "11 May"
         },
         "Senegal": {
-            "value": "4,890,709",
-            "date": "10 May"
+            "value": "4,885,425",
+            "date": "11 May"
         },
         "Sierra Leone": {
             "value": "4,690,540",
@@ -585,8 +585,8 @@
             "date": "17 March"
         },
         "South Sudan": {
-            "value": "3,443,123",
-            "date": "10 May"
+            "value": "3,443,475",
+            "date": "11 May"
         },
         "Sudan": {
             "value": "16,125,814",
@@ -597,16 +597,16 @@
             "date": "16 February"
         },
         "Togo": {
-            "value": "1,881,216",
-            "date": "10 May"
+            "value": "1,878,647",
+            "date": "11 May"
         },
         "Tunisia": {
-            "value": "1,708,320",
-            "date": "10 May"
+            "value": "1,708,571",
+            "date": "11 May"
         },
         "Uganda": {
-            "value": "8,246,708",
-            "date": "10 May"
+            "value": "8,172,741",
+            "date": "11 May"
         },
         "Zambia": {
             "value": "3,325,606",
@@ -620,11 +620,11 @@
     "vaccination": {
         "Angola": {
             "value": "27.0",
-            "date": "19 November"
+            "date": "31 December"
         },
         "Burundi": {
             "value": "0.3",
-            "date": "05 November"
+            "date": "31 December"
         },
         "Benin": {
             "value": "20.5",
@@ -636,7 +636,7 @@
         },
         "Botswana": {
             "value": "63.2",
-            "date": "07 May"
+            "date": "31 December"
         },
         "Central African Republic": {
             "value": "44.5",
@@ -804,7 +804,7 @@
         },
         "Chad": {
             "value": "28.3",
-            "date": "19 November"
+            "date": "31 December"
         },
         "Togo": {
             "value": "17.6",
