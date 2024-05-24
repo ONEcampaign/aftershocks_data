@@ -186,4 +186,4 @@ def wb_support_chart(download: bool = False) -> None:
 
 
 if __name__ == "__main__":
-    wb_support_chart(download=False)
+    wb_support_chart(download=True)

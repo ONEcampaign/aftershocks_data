@@ -9581,3 +9581,35 @@ INFO (2024-05-23 11:17:59,713): Updated vaccination rate chart
 INFO (2024-05-23 11:18:04,258): Updated overview text (summary) json
 INFO (2024-05-23 11:18:04,258): Updated daily charts in country page
 INFO (2024-05-23 11:18:07,362): Updated economy picker
+INFO (2024-05-24 10:32:36,955): Updated DSA list data
+INFO (2024-05-24 10:35:53,589): Downloaded IDS debt service data
+INFO (2024-05-24 10:37:31,699): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2024-05-24 10:40:35,465): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2024-05-24 10:40:41,650): Successfully updated chart C07
+INFO (2024-05-24 10:40:41,659): Successfully updated chart C08
+INFO (2024-05-24 10:40:43,572): Updated weekly charts in debt page
+INFO (2024-05-24 10:41:20,823): Updated DTP data from WHO.
+INFO (2024-05-24 10:41:22,010): Updated monthly charts in health page
+INFO (2024-05-24 10:41:46,734): Updated SH.STA.STNT.ME.ZS data
+INFO (2024-05-24 10:42:10,677): Updated SN.ITK.DEFC.ZS data
+INFO (2024-05-24 10:42:33,500): Updated SN.ITK.SVFI.ZS data
+INFO (2024-05-24 10:42:33,501): Updated monthly hunger data
+INFO (2024-05-24 10:43:00,680): Updated weekly charts in country page
+INFO (2024-05-24 10:43:19,573): Updated World Bank Health and Education spending data
+INFO (2024-05-24 10:43:19,573): Updated monthly charts in debt page
+INFO (2024-05-24 10:53:10,315): Updated monthly charts in country page
+INFO (2024-05-24 11:02:36,042): Updated OWID data
+INFO (2024-05-24 11:02:36,510): Updated daily charts in health page
+INFO (2024-05-24 11:02:41,667): Updated IPC data
+INFO (2024-05-24 11:02:41,732): Updated Pink Sheet data
+INFO (2024-05-24 11:02:42,010): Updated WFP data
+INFO (2024-05-24 11:02:42,555): Updated hunger topic charts
+INFO (2024-05-24 11:02:42,617): Updated hunger overview charts
+INFO (2024-05-24 11:02:42,670): Updated hunger dynamic text
+INFO (2024-05-24 11:02:42,670): Updated daily hunger data and all charts and text
+INFO (2024-05-24 11:03:52,449): Updated WFP data (insufficient food)
+INFO (2024-05-24 11:03:54,578): Updated WFP insufficient food charts
+INFO (2024-05-24 11:03:55,604): Updated vaccination rate chart
+INFO (2024-05-24 11:03:57,907): Updated overview text (summary) json
+INFO (2024-05-24 11:03:57,907): Updated daily charts in country page
+INFO (2024-05-24 11:04:00,260): Updated economy picker
