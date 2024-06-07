@@ -1,181 +1,181 @@
 {
     "life_expectancy": {
-        "COM": {
-            "value": "63.4"
+        "ZMB": {
+            "value": "61.8"
         },
-        "SLE": {
-            "value": "60.1"
-        },
-        "MUS": {
-            "value": "73.7"
-        },
-        "GMB": {
-            "value": "62.1"
+        "AFE": {
+            "value": "62.9"
         },
         "LSO": {
-            "value": "53.1"
-        },
-        "SWZ": {
-            "value": "57.1"
-        },
-        "ERI": {
-            "value": "66.5"
-        },
-        "TGO": {
-            "value": "61.6"
-        },
-        "BEN": {
-            "value": "59.8"
-        },
-        "MOZ": {
-            "value": "59.3"
-        },
-        "GNQ": {
-            "value": "60.6"
+            "value": "53.0"
         },
         "ZAF": {
-            "value": "62.3"
+            "value": "61.5"
         },
-        "GNB": {
-            "value": "59.7"
+        "CMR": {
+            "value": "61.0"
         },
         "MRT": {
-            "value": "64.4"
+            "value": "64.7"
         },
-        "AFW": {
-            "value": "57.0"
+        "ETH": {
+            "value": "65.6"
         },
-        "BFA": {
-            "value": "59.3"
-        },
-        "ZMB": {
-            "value": "61.2"
-        },
-        "SSF": {
-            "value": "60.2"
-        },
-        "Sub-Saharan Africa": {
-            "value": "60.2"
-        },
-        "TUN": {
-            "value": "73.8"
-        },
-        "RWA": {
-            "value": "66.1"
+        "STP": {
+            "value": "68.8"
         },
         "COD": {
-            "value": "59.2"
+            "value": "59.7"
         },
-        "KEN": {
-            "value": "61.4"
+        "GNB": {
+            "value": "59.9"
+        },
+        "SSF": {
+            "value": "60.8"
+        },
+        "COG": {
+            "value": "63.1"
+        },
+        "MUS": {
+            "value": "73.5"
+        },
+        "SSD": {
+            "value": "55.6"
+        },
+        "COM": {
+            "value": "63.7"
+        },
+        "GMB": {
+            "value": "62.9"
+        },
+        "Sub-Saharan Africa": {
+            "value": "60.8"
+        },
+        "MWI": {
+            "value": "62.9"
+        },
+        "CPV": {
+            "value": "74.7"
+        },
+        "GIN": {
+            "value": "59.0"
+        },
+        "SOM": {
+            "value": "56.1"
+        },
+        "DJI": {
+            "value": "62.9"
+        },
+        "NAM": {
+            "value": "58.1"
+        },
+        "SLE": {
+            "value": "60.4"
+        },
+        "DZA": {
+            "value": "77.1"
+        },
+        "GHA": {
+            "value": "63.9"
+        },
+        "SEN": {
+            "value": "67.9"
         },
         "EGY": {
             "value": "70.2"
         },
-        "GHA": {
-            "value": "63.8"
-        },
-        "SYC": {
-            "value": "73.4"
-        },
-        "LBY": {
-            "value": "71.9"
-        },
-        "World": {
-            "value": "71.3"
-        },
-        "UGA": {
-            "value": "62.7"
-        },
-        "AFE": {
-            "value": "62.5"
-        },
-        "CMR": {
-            "value": "60.3"
-        },
-        "LBR": {
-            "value": "60.7"
-        },
-        "CIV": {
-            "value": "58.6"
-        },
-        "MDG": {
-            "value": "64.5"
-        },
         "NER": {
-            "value": "61.6"
-        },
-        "GAB": {
-            "value": "65.8"
-        },
-        "DJI": {
-            "value": "62.3"
-        },
-        "AGO": {
-            "value": "61.6"
-        },
-        "SSD": {
-            "value": "55.0"
-        },
-        "NAM": {
-            "value": "59.3"
+            "value": "62.1"
         },
         "SDN": {
-            "value": "65.3"
+            "value": "65.6"
         },
-        "NGA": {
-            "value": "52.7"
+        "ERI": {
+            "value": "66.6"
         },
-        "MLI": {
-            "value": "58.9"
+        "GAB": {
+            "value": "65.7"
         },
-        "TZA": {
-            "value": "66.2"
-        },
-        "BWA": {
-            "value": "61.1"
-        },
-        "ZWE": {
-            "value": "59.3"
-        },
-        "TCD": {
-            "value": "52.5"
-        },
-        "SOM": {
-            "value": "55.3"
-        },
-        "STP": {
-            "value": "67.6"
-        },
-        "ETH": {
-            "value": "65.0"
-        },
-        "DZA": {
-            "value": "76.4"
-        },
-        "GIN": {
-            "value": "58.9"
-        },
-        "BDI": {
-            "value": "61.7"
-        },
-        "MAR": {
-            "value": "74.0"
-        },
-        "SEN": {
+        "RWA": {
             "value": "67.1"
         },
-        "COG": {
-            "value": "63.5"
+        "SWZ": {
+            "value": "56.4"
+        },
+        "GNQ": {
+            "value": "61.2"
+        },
+        "NGA": {
+            "value": "53.6"
+        },
+        "CIV": {
+            "value": "58.9"
+        },
+        "MDG": {
+            "value": "65.2"
+        },
+        "TZA": {
+            "value": "66.8"
+        },
+        "BEN": {
+            "value": "60.0"
+        },
+        "UGA": {
+            "value": "63.6"
+        },
+        "AGO": {
+            "value": "61.9"
+        },
+        "TUN": {
+            "value": "74.3"
+        },
+        "BFA": {
+            "value": "59.8"
+        },
+        "LBR": {
+            "value": "61.1"
+        },
+        "LBY": {
+            "value": "72.2"
+        },
+        "World": {
+            "value": "72.0"
+        },
+        "MLI": {
+            "value": "59.4"
+        },
+        "TGO": {
+            "value": "61.6"
+        },
+        "BWA": {
+            "value": "65.9"
+        },
+        "KEN": {
+            "value": "62.1"
+        },
+        "ZWE": {
+            "value": "59.4"
+        },
+        "TCD": {
+            "value": "53.0"
         },
         "CAF": {
-            "value": "53.9"
+            "value": "54.5"
         },
-        "CPV": {
-            "value": "74.1"
+        "MOZ": {
+            "value": "59.6"
         },
-        "MWI": {
-            "value": "62.9"
+        "AFW": {
+            "value": "57.6"
+        },
+        "SYC": {
+            "value": "73.8"
+        },
+        "MAR": {
+            "value": "75.0"
+        },
+        "BDI": {
+            "value": "62.0"
         }
     }
 }
