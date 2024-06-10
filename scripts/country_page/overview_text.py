@@ -32,9 +32,8 @@ def build_summary() -> None:
             if country not in country_data.keys():
                 try:
                     data[indicator][df.get(country, None)] = data[indicator][country]
-                    data[indicator][df.get(country, None)] = {"info": "display-none"}
                 except KeyError:
-                    pass
+                    data[indicator][df.get(country, None)] = {"info": "display-none"}
                 try:
                     del data[indicator][country]
                 except KeyError:
