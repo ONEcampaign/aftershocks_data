@@ -91,8 +91,15 @@ def clean_art(df_art: pd.DataFrame) -> pd.DataFrame:
         .dropna(subset=["name"])
         .loc[:, lambda d: ~d.columns.str.contains("named")]
         .set_index(["year", "iso_code", "name"])
-        .replace("...", "")
+        .replace("...", pd.NA)
+        .replace("NA", pd.NA)
+        .replace("<NAN>", pd.NA)
+        .replace("<NA>", pd.NA)
+        .replace("nan", pd.NA)
+        .replace("NaN", pd.NA)
+        .astype("string[pyarrow]")
     )
+
     return df_art.pipe(
         clean_numeric_series, series_columns=df_art.columns, to=float
     ).reset_index()

@@ -303,9 +303,10 @@ def art_chart() -> None:
         "Western and central Africa": "Africa",
     }
 
+    df_art = _read_art()
+
     df = (
-        _read_art()
-        .filter(["iso_code", "year", "name"] + list(indicator), axis=1)
+        df_art.filter(["iso_code", "year", "name"] + list(indicator), axis=1)
         .rename(columns=indicator)
         .replace("Eastern and southern Africa", "EAS")
         .assign(
@@ -332,11 +333,11 @@ def art_chart() -> None:
     )
 
     # chart version
-    (
-        df.pivot(index="year", columns="name_short", values="people_on_art")
-        .reset_index()
-        .to_csv(f"{PATHS.charts}/country_page/people_on_art_ts.csv", index=False)
-    )
+    dfp = df.pivot(
+        index="year", columns="name_short", values="people_on_art"
+    ).reset_index()
+
+    dfp.to_csv(f"{PATHS.charts}/country_page/people_on_art_ts.csv", index=False)
 
     # download version
     df.assign(source="UNAIDS").to_csv(
@@ -461,4 +462,5 @@ def dpt_chart() -> None:
 
 if __name__ == "__main__":
     ...
+    art_chart()
     # leading_causes_of_death_chart()

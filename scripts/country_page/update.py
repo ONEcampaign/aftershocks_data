@@ -202,3 +202,7 @@ def update_monthly() -> None:
     health.art_chart()
     health.malaria_chart()
     health.dpt_chart()
+
+
+if __name__ == "__main__":
+    update_monthly_hiv_data()
