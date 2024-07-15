@@ -283,3 +283,7 @@ def wb_spending_topic_chart() -> None:
     # Create download version
     df.to_csv(f"{PATHS.download}/health/health_expenditure_per_person.csv", index=False)
     logger.debug("Saved download version of 'health_expenditure_per_person.csv'")
+
+
+if __name__ == "__main__":
+    update_dtp_data()

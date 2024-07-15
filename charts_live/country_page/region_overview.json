@@ -1,48 +1,48 @@
 {
     "inflation": {
-        "Sub-Saharan Africa (WB)": {
-            "value": "4.5",
-            "date": "31 March 2024"
-        },
-        "Western Africa": {
-            "value": "3.3",
-            "date": "31 March 2024"
-        },
-        "Southern Africa": {
-            "value": "4.5",
-            "date": "31 March 2024"
+        "Western and Central Africa": {
+            "value": "3.7",
+            "date": "30 April 2024"
         },
         "Sub-Saharan Africa (UN)": {
-            "value": "4.5",
-            "date": "31 March 2024"
+            "value": "4.7",
+            "date": "30 April 2024"
         },
-        "Eastern and Southern Africa": {
-            "value": "5.1",
-            "date": "31 March 2024"
-        },
-        "Western and Central Africa": {
-            "value": "3.3",
-            "date": "31 March 2024"
+        "Southern Africa": {
+            "value": "5.0",
+            "date": "30 April 2024"
         },
         "Africa": {
             "value": "4.7",
-            "date": "31 March 2024"
+            "date": "30 April 2024"
         },
         "Middle Africa": {
-            "value": "26.1",
-            "date": "31 March 2024"
+            "value": "19.2",
+            "date": "30 April 2024"
+        },
+        "Eastern and Southern Africa": {
+            "value": "5.0",
+            "date": "30 April 2024"
+        },
+        "Sub-Saharan Africa (WB)": {
+            "value": "4.7",
+            "date": "30 April 2024"
+        },
+        "Western Africa": {
+            "value": "3.6",
+            "date": "30 April 2024"
         },
         "North Africa (WB)": {
-            "value": "7.5",
-            "date": "31 March 2024"
+            "value": "5.1",
+            "date": "30 April 2024"
         },
         "Northern Africa": {
-            "value": "7.5",
-            "date": "31 March 2024"
+            "value": "5.1",
+            "date": "30 April 2024"
         },
         "Eastern Africa": {
-            "value": "5.3",
-            "date": "31 March 2024"
+            "value": "3.4",
+            "date": "30 April 2024"
         }
     },
     "gdp_growth": {
