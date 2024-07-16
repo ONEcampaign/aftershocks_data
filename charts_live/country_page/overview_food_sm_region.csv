@@ -1,12 +1,13 @@
 name_short,date,value,lower,change,center
 North Africa (WB),On 15 July,43524379.0,Change in the last month,-0.009914510238625107,0.015895012309316368
-Sub-Saharan Africa (WB),On 15 July,377094712.0,Change in the last month,-0.01605239721052787,0.012818981690552013
-Africa,On 15 July,420619091.0,Change in the last month,-0.015420799640086358,0.013718582054390763
-Sub-Saharan Africa (UN),On 15 July,360968898.0,Change in the last month,-0.017272365737742712,0.013718582054390763
+Sub-Saharan Africa (WB),On 15 July,377096160.0,Change in the last month,-0.016345302799765538,0.012818981690552013
+Africa,On 15 July,420620539.0,Change in the last month,-0.015683743817497486,0.013718582054390763
+Sub-Saharan Africa (UN),On 15 July,360970346.0,Change in the last month,-0.017577589315077136,0.013718582054390763
 Eastern and Southern Africa,On 15 July,173150840.0,Change in the last month,-0.03023302468375988,-0.0014778915958881427
-Western and Central Africa,On 15 July,203655452.0,Change in the last month,-0.0036898636658752038,0.022926542307209856
+Western and Central Africa,On 15 July,203656900.0,Change in the last month,-0.004245873083037921,0.022926542307209856
 Northern Africa,On 15 July,59650193.0,Change in the last month,-0.004065601552770581,0.00493481192417612
-Middle Africa,On 15 July,66615731.0,Change in the last month,0.003667827189731243,0.05262734265012454
+Middle Africa,"['On 05 January' 'On 11 May' 'On 15 July' 'On 16 July' 'On 19 February'
+ 'On 20 November' 'On 31 December']",66617179.0,Change in the last month,0.0019446788822394812,0.05262734265012454
 Western Africa,On 15 July,185048646.0,Change in the last month,-0.005508244750576097,0.01784912784272735
 Southern Africa,On 15 July,1663132.0,Change in the last month,-0.013448329916317281,0.056602968061468834
 Eastern Africa,On 15 July,107641389.0,Change in the last month,-0.048949666513096735,-0.002134142428687899
