@@ -1,12 +1,13 @@
 name_short,date,value,lower,change,center
-North Africa (WB),On 06 August,43848832.0,Change in the last month,-0.015379137303951462,0.0019334672262757298
-Sub-Saharan Africa (WB),On 06 August,382252384.0,Change in the last month,-0.7487224422608747,0.0005407802319295911
-Africa,On 06 August,426101216.0,Change in the last month,-0.7278646408532286,0.0005896146256976307
-Sub-Saharan Africa (UN),On 06 August,366126570.0,Change in the last month,-0.7567753698647671,0.0005896146256976307
-Eastern and Southern Africa,On 06 August,172803258.0,Change in the last month,-0.02429914808752165,-0.00024734022603221923
-Western and Central Africa,On 06 August,209168621.0,Change in the last month,-0.8443519242356305,0.0010176710552980473
-Northern Africa,On 06 August,59974646.0,Change in the last month,-0.008145739942725827,0.0008351542127465736
-Middle Africa,On 06 August,67044521.0,Change in the last month,-0.011123331601666342,0.0024509015577590626
-Western Africa,On 06 August,190133048.0,Change in the last month,-0.8564051478441667,0.0007813791895694751
-Southern Africa,On 06 August,1684959.0,Change in the last month,-0.019161654173069476,0.0024664263440381806
-Eastern Africa,On 06 August,107264042.0,Change in the last month,-0.03964341636732849,-0.00010036384056420751
+North Africa (WB),On 06 August,43848832.0,Change in the last month,-0.015379137303951462,0.04426943381794419
+Sub-Saharan Africa (WB),On 06 August,373846111.0,Change in the last month,0.0024849814863932007,-0.002297970370115944
+Africa,On 06 August,417694943.0,Change in the last month,0.0005792449219133022,-0.0014319701953058356
+Sub-Saharan Africa (UN),On 06 August,357720297.0,Change in the last month,0.0020571052862714545,-0.0014319701953058356
+Eastern and Southern Africa,On 06 August,172883101.0,Change in the last month,-0.024675601706936057,-0.0056632000884442035
+Western and Central Africa,On 06 August,200682505.0,Change in the last month,0.027088706125472095,0.017890768381936734
+Northern Africa,On 06 August,59974646.0,Change in the last month,-0.008145739942725827,0.01912202267849003
+Middle Africa,"['On 05 January' 'On 06 August' 'On 07 August' 'On 11 May'
+ 'On 19 February' 'On 20 November' 'On 31 December']",66977580.0,Change in the last month,-0.00735314543773502,0.05262734265012454
+Western Africa,On 06 August,181713873.0,Change in the last month,0.03274551658471414,0.00705595697029222
+Southern Africa,On 06 August,1684959.0,Change in the last month,-0.019161654173069476,0.05647227753353249
+Eastern Africa,On 06 August,107343885.0,Change in the last month,-0.04021944265569999,-0.002297970370115944
