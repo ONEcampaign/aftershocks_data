@@ -39,8 +39,11 @@ def update_monthly_leading_causes_of_death() -> None:
         except requests.exceptions.JSONDecodeError:
             logger.info(f"Error downloading data for {country}")
             continue
-
-    df = pd.concat(dfs, ignore_index=True)
+    try:
+        df = pd.concat(dfs, ignore_index=True)
+    except ValueError:
+        logger.info("No data was downloaded")
+        return
 
     df.to_csv(
         f"{PATHS.raw_data}/health/leading_causes_of_death_{request_year}.csv",
@@ -106,7 +109,7 @@ def update_monthly_weo_data() -> None:
     weo = WorldEconomicOutlook()
 
     # update data
-    weo.update_data(year=None, release=None)
+    weo.update_data()
 
 
 def update_monthly_wb_data() -> None:
@@ -205,4 +208,4 @@ def update_monthly() -> None:
 
 
 if __name__ == "__main__":
-    update_monthly_hiv_data()
+    update_weekly()
