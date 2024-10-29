@@ -3,25 +3,33 @@ name: daily-update
   schedule:
     - cron: '11 11 * * *'
   workflow_dispatch:
+
+permissions:
+    contents: write
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
 
     steps:
       - name: checkout repo content
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
       - name: setup python
-        uses: actions/setup-python@v4.6.0
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
+
+      - name: Install pip
+        run: python -m ensurepip --upgrade
+
       - name: Install Poetry
         run:  |
           pip install poetry
       - name: Install dependencies
         run:  |
-          pip install -r requirements.txt
+          poetry install
       - name: Run daily update
         env:
           IPC_API: ${{ secrets.IPC_API }}
