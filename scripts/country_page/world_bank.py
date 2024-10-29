@@ -7,86 +7,207 @@ from bblocks import (
 )
 
 from scripts import config
+from urllib.parse import urlencode, quote
 
 
-def _wb_update_api(db, filt, cols, start):
-    # Limit call to 1.1m rows
-    limit = "1100000"
+def api_query(
+    base_url: str,
+    dataset_id: str,
+    resource_id: str,
+    select_str: str,
+    filter_str: str,
+    data_type: str = "json",
+    max_records: int = 1000,
+):
+    skip = 0  # Initialize skip for pagination
+    all_data = []  # Initialize an empty list to store all data
+    while True:
+        # Construct the full API URL with parameters
+        url = (
+            f"{base_url}?datasetId={dataset_id}&resourceId={resource_id}"
+            f"&select={select_str}&filter={filter_str}&type={data_type}&skip={skip}&top={max_records}"
+        )
 
-    end = f"end_of_period>='{start-1}-12-01T00:00:00.000'"
+        # Make the API request
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for bad responses
+        result = response.json()
 
-    # Create url
-    url = db + "SELECT " + cols + " WHERE " + end + " LIMIT " + limit
+        # Add the retrieved data to all_data
+        data_batch = result.get("data", [])
+        all_data.extend(data_batch)
 
-    # Get file
-    file = requests.get(url)
-    json = file.json()
+        # Break if no more records are found
+        if len(data_batch) < max_records:
+            break
 
-    # Create file from returned json
-    df = pd.DataFrame.from_dict(json)
+        # Increment skip by max_records to fetch the next batch
+        skip += max_records
 
-    df.end_of_period = pd.to_datetime(df.end_of_period)
-    df.board_approval_date = pd.to_datetime(df.board_approval_date)
+    # Convert to DataFrame for easy manipulation
+
+    df = pd.DataFrame(all_data)
+    return df
+
+
+def fetch_ida_records(
+    base_url: str,
+    dataset_id: str,
+    resource_id: str,
+    select_fields: list,
+    end_period_start: str,
+    status_in: tuple,
+    max_records: int = 1000,
+) -> pd.DataFrame:
+    """
+    Fetches all records from the API, bypassing the 1000 record limit per call.
+
+    Args:
+        base_url (str): The base URL of the API.
+        dataset_id (str): The dataset ID for the API query.
+        resource_id (str): The resource ID for the API query.
+        select_fields (list): A list of fields to select.
+        max_records (int): Maximum number of records per call (default is 1000).
+
+    Returns:
+        pd.DataFrame: A DataFrame containing all records from the API.
+    """
+
+    # Encode select fields and filters into URL format
+    select_str = "%2C".join([quote(field) for field in select_fields])
+    filter_str = f"end_of_period>='{end_period_start}'"
+
+    return api_query(
+        base_url=base_url,
+        dataset_id=dataset_id,
+        resource_id=resource_id,
+        select_str=select_str,
+        filter_str=filter_str,
+        max_records=max_records,
+    )
+
+
+def fetch_ibrd_records(
+    base_url: str,
+    dataset_id: str,
+    resource_id: str,
+    select_fields: list,
+    end_period_start: str,
+    status_in: tuple,
+    max_records: int = 1000,
+) -> pd.DataFrame:
+    """
+    Fetches all records from the API, bypassing the 1000 record limit per call.
+
+    Args:
+        base_url (str): The base URL of the API.
+        dataset_id (str): The dataset ID for the API query.
+        resource_id (str): The resource ID for the API query.
+        select_fields (list): A list of fields to select.
+        max_records (int): Maximum number of records per call (default is 1000).
+
+    Returns:
+        pd.DataFrame: A DataFrame containing all records from the API.
+    """
+
+    # Encode select fields and filters into URL format
+    select_str = "%2C".join([quote(field) for field in select_fields])
+    filter_str = f"end_of_period>='{end_period_start}'"
+
+    return api_query(
+        base_url=base_url,
+        dataset_id=dataset_id,
+        resource_id=resource_id,
+        select_str=select_str,
+        filter_str=filter_str,
+        max_records=max_records,
+    )
+
+
+def clean_wb_response(df: pd.DataFrame) -> pd.DataFrame:
+    df["end_of_period"] = pd.to_datetime(df["end_of_period"], format="%d-%b-%Y")
+    df["board_approval_date"] = pd.to_datetime(
+        df["board_approval_date"], format="%d-%b-%Y"
+    )
 
     df = df.rename(
         columns={
             "end_of_period": "period",
-            "repaid_to_ida": "repayment",
+            "repaid_to_ida_us_": "repayment",
             "repaid_to_ibrd": "repayment",
+            "disbursed_amount_us_": "disbursed_amount",
         }
     )
 
     return df
 
 
-def __clean_types(df):
-    df[["country_code", "country"]] = df[["country_code", "country"]].astype("category")
-    df[["disbursed_amount", "repayment"]] = df[
-        ["disbursed_amount", "repayment"]
-    ].astype(float)
-    return df
-
-
 def _wbg_update_data(ibrd=True, ida=True, start=2017) -> None:
+    base_url = "https://datacatalogapi.worldbank.org/dexapps/fone/api/apiservice"
+
+    credit_status_in = (
+        "Fully Disbursed",
+        "Disbursing",
+        "Approved",
+        "Effective",
+        "Disbursing&Repaying",
+    )
+    end_period_start = "01-Jan-2016"
     if ida:
-        db = "https://finances.worldbank.org/resource/tdwh-3krx.json?$query="
-        filt = (
-            'credit_status = "Fully Disbursed" '
-            'or credit_status = "Disbursing" '
-            'or credit_status = "Disbursing%26Repaying" '
-            'or credit_status = "Approved" '
-            'or credit_status = "Effective" '
-        )
-        cols = (
-            "end_of_period, country_code, country, disbursed_amount, "
-            "repaid_to_ida, board_approval_date"
+        dataset_id = "DS00976"
+        resource_id = "RS00906"
+
+        select_fields = [
+            "end_of_period",
+            "country_code",
+            "country",
+            "disbursed_amount_us_",
+            "repaid_to_ida_us_",
+            "board_approval_date",
+            "credit_status",
+        ]
+
+        df = fetch_ida_records(
+            base_url=base_url,
+            dataset_id=dataset_id,
+            resource_id=resource_id,
+            select_fields=select_fields,
+            end_period_start=end_period_start,
+            status_in=credit_status_in,
+            max_records=100_000,
         )
 
-        df = _wb_update_api(db, filt, cols, start)
-
-        df = __clean_types(df)
+        df = clean_wb_response(df)
 
         df.reset_index(drop=True).to_feather(
             config.PATHS.raw_data + r"/ida_full_historical_data.feather"
         )
 
     if ibrd:
-        db = "https://finances.worldbank.org/resource/zucq-nrc3.json?$query="
-        filt = (
-            'loan_status = "Fully Disbursed" '
-            'or loan_status = "Disbursing" '
-            'or loan_status = "Disbursing%26Repaying" '
-            'or loan_status = "Approved" '
-            'or loan_status = "Effective" '
-        )
-        cols = (
-            "end_of_period, country_code, country,disbursed_amount, "
-            "repaid_to_ibrd, board_approval_date"
+        dataset_id = "DS00975"
+        resource_id = "RS00905"
+
+        select_fields = [
+            "end_of_period",
+            "country_code",
+            "country",
+            "disbursed_amount",
+            "repaid_to_ibrd",
+            "board_approval_date",
+            "loan_status",
+        ]
+
+        df = fetch_ibrd_records(
+            base_url=base_url,
+            dataset_id=dataset_id,
+            resource_id=resource_id,
+            select_fields=select_fields,
+            end_period_start=end_period_start,
+            status_in=credit_status_in,
+            max_records=100_000,
         )
 
-        df = _wb_update_api(db, filt, cols, start)
-
-        df = __clean_types(df)
+        df = clean_wb_response(df)
 
         df.reset_index(drop=True).to_feather(
             config.PATHS.raw_data + r"/ibrd_full_historical_data.feather"
@@ -186,4 +307,5 @@ def wb_support_chart(download: bool = False) -> None:
 
 
 if __name__ == "__main__":
+
     wb_support_chart(download=True)
