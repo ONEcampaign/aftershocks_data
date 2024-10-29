@@ -34,7 +34,7 @@ jobs:
         env:
           IPC_API: ${{ secrets.IPC_API }}
         run:  |
-          python update_daily.py
+          poetry run python update_daily.py
       - name: Save changes
         run:  |
           git config --local user.email "action@github.com"
