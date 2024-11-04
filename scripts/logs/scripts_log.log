@@ -12174,3 +12174,11 @@ INFO (2024-11-03 11:17:03,000): Updated vaccination rate chart
 INFO (2024-11-03 11:17:07,599): Updated overview text (summary) json
 INFO (2024-11-03 11:17:07,599): Updated daily charts in country page
 INFO (2024-11-03 11:17:10,184): Updated economy picker
+INFO (2024-11-04 07:12:17,434): Updated DSA list data
+INFO (2024-11-04 07:15:03,472): Downloaded IDS debt service data
+INFO (2024-11-04 07:16:21,169): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2024-11-04 07:18:45,240): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2024-11-04 07:18:52,652): Successfully updated chart C07
+INFO (2024-11-04 07:18:52,656): Successfully updated chart C08
+INFO (2024-11-04 07:18:58,780): Updated weekly charts in debt page
+INFO (2024-11-04 07:23:07,660): Updated weekly charts in country page
