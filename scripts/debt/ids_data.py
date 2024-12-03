@@ -7,7 +7,7 @@ from scripts.debt.common import get_indicator_data, DEBT_SERVICE, DEBT_STOCKS
 from scripts.logger import logger
 
 START_YEAR: int = 2009
-END_YEAR: int = 2028
+END_YEAR: int = 2029
 
 
 # ---------------------------------------------------------------------
@@ -358,5 +358,5 @@ def update_flourish_charts() -> None:
 
 
 if __name__ == "__main__":
-    # update_ids_data()
+    update_ids_data()
     update_flourish_charts()

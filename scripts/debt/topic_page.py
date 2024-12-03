@@ -26,7 +26,7 @@ from scripts.logger import logger
 set_bblocks_data_path(PATHS.bblocks_data)
 
 SOURCE = "International Debt Statistics (IDS) Database"
-DATE = " (December 2023)"
+DATE = " (December 2024)"
 
 
 def debt_stocks_columns() -> None:

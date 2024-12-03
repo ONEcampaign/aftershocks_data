@@ -23,7 +23,7 @@ set_bblocks_data_path(PATHS.bblocks_data)
 KEY_NUMBERS: dict = {}
 
 CURRENT_YEAR = datetime.datetime.now().year
-STOCKS_YEAR = CURRENT_YEAR - 2
+STOCKS_YEAR = CURRENT_YEAR - 1
 
 
 def debt_distress() -> None:
