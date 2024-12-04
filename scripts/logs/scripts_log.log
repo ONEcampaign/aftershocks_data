@@ -12722,3 +12722,18 @@ INFO (2024-12-03 13:17:46,192): Downloaded IDS debt stocks data: ids_stocks_raw
 INFO (2024-12-03 13:20:19,741): Downloaded IDS debt stocks data: ids_stocks_raw_long
 INFO (2024-12-03 13:20:23,569): Successfully updated chart C07
 INFO (2024-12-03 13:20:23,572): Successfully updated chart C08
+INFO (2024-12-04 11:16:18,507): Updated OWID data
+INFO (2024-12-04 11:16:19,350): Updated daily charts in health page
+INFO (2024-12-04 11:16:22,953): Updated IPC data
+INFO (2024-12-04 11:16:23,041): Updated Pink Sheet data
+INFO (2024-12-04 11:16:23,488): Updated WFP data
+INFO (2024-12-04 11:16:24,192): Updated hunger topic charts
+INFO (2024-12-04 11:16:24,268): Updated hunger overview charts
+INFO (2024-12-04 11:16:24,337): Updated hunger dynamic text
+INFO (2024-12-04 11:16:24,337): Updated daily hunger data and all charts and text
+INFO (2024-12-04 11:17:33,871): Updated WFP data (insufficient food)
+INFO (2024-12-04 11:17:38,036): Updated WFP insufficient food charts
+INFO (2024-12-04 11:17:40,299): Updated vaccination rate chart
+INFO (2024-12-04 11:17:44,941): Updated overview text (summary) json
+INFO (2024-12-04 11:17:44,941): Updated daily charts in country page
+INFO (2024-12-04 11:17:47,628): Updated economy picker
