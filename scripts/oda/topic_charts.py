@@ -328,7 +328,7 @@ def oda_covid_idrc():
 
     dg = donor_groupings()
 
-    oda22 = ODAData(
+    oda = ODAData(
         years=range(2015, 2024),
         donors=list(dg["dac_countries"]) + [20001],
         prices="constant",
@@ -336,21 +336,14 @@ def oda_covid_idrc():
         include_names=True,
     )
 
-    oda23 = ODAData(
-        years=range(2015, 2024),
-        donors=list(dg["dac_countries"]) + [20001],
-        prices="constant",
-        base_year=common.CONSTANT_YEAR,
-        include_names=True,
-    )
+    indicators = [
+        "total_oda_ge",
+        "total_covid_oda_ge",
+        "total_oda_flow_net",
+        "idrc_ge_linked",
+    ]
 
-    indicators22 = ["total_covid_oda_ge"]
-    indicators23 = ["total_oda_ge", "total_oda_flow_net", "idrc_ge_linked"]
-
-    d22 = oda22.load_indicator(indicators22).get_data()
-    d23 = oda23.load_indicator(indicators23).get_data()
-
-    data = pd.concat([d22, d23], ignore_index=True)
+    data = oda.load_indicator(indicators).get_data()
 
     data = data.loc[
         lambda d: ~((d.year < 2018) & (d.indicator == "total_oda_ge"))
@@ -372,13 +365,26 @@ def oda_covid_idrc():
         .assign(donor_code=20001, donor_name="DAC Countries, Total")
     )
 
+    data_idrc = (
+        data.loc[lambda d: d.donor_code.isin(dac)]
+        .query("indicator in ['idrc_ge_linked'] and year == 2023")
+        .groupby(
+            ["year", "indicator", "currency", "prices"],
+            as_index=False,
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum(numeric_only=True)
+        .assign(donor_code=20001, donor_name="DAC Countries, Total")
+    )
+
     ukraine_aid = (
         aid_to_ukraine()
         .assign(indicator="aid_to_ukraine")
         .loc[lambda d: d.year >= 2015]
     )
 
-    data = pd.concat([data, dac_covid, ukraine_aid], ignore_index=True)
+    data = pd.concat([data, dac_covid, ukraine_aid, data_idrc], ignore_index=True)
 
     data.indicator = data.indicator.replace(
         {"total_oda_ge": "Total ODA", "total_oda_flow_net": "Total ODA"}
