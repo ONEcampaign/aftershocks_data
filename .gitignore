@@ -163,3 +163,5 @@ dmypy.json
 raw_data/table2a_raw.feather
 raw_data/dac1.feather
 raw_data/oda/table2a_raw.feather
+raw_data/table1_raw_2000_2023.parquet
+raw_data/table2a_raw_2000_2023.parquet
