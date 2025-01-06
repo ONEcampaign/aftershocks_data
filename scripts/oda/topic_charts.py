@@ -330,7 +330,7 @@ def oda_covid_idrc():
 
     oda22 = ODAData(
         years=range(2015, 2024),
-        donors=list(dg["dac_countries"]) + [20001, 84],
+        donors=list(dg["dac_countries"]) + [20001],
         prices="constant",
         base_year=common.CONSTANT_YEAR,
         include_names=True,
@@ -338,14 +338,14 @@ def oda_covid_idrc():
 
     oda23 = ODAData(
         years=range(2015, 2024),
-        donors=list(dg["dac_countries"]) + [20001, 84],
+        donors=list(dg["dac_countries"]) + [20001],
         prices="constant",
         base_year=common.CONSTANT_YEAR,
         include_names=True,
     )
 
     indicators22 = ["total_covid_oda_ge"]
-    indicators23 = ["total_oda_ge", "total_oda_flow_net", "idrc_flow"]
+    indicators23 = ["total_oda_ge", "total_oda_flow_net", "idrc_ge_linked"]
 
     d22 = oda22.load_indicator(indicators22).get_data()
     d23 = oda23.load_indicator(indicators23).get_data()
@@ -357,7 +357,7 @@ def oda_covid_idrc():
         & ~((d.year >= 2018) & (d.indicator == "total_oda_flow_net"))
     ]
 
-    dac = list(dg["dac_countries"]) + [84, 82]
+    dac = list(dg["dac_countries"])
 
     dac_covid = (
         data.loc[lambda d: d.donor_code.isin(dac)]
@@ -396,7 +396,7 @@ def oda_covid_idrc():
             other_oda=lambda d: round(
                 d["Total ODA"].fillna(0)
                 - d["total_covid_oda_ge"].fillna(0)
-                - d["idrc_flow"].fillna(0)
+                - d["idrc_ge_linked"].fillna(0)
                 - d["aid_to_ukraine"].fillna(0),
                 1,
             )
@@ -413,7 +413,7 @@ def oda_covid_idrc():
                 "year": "Year",
                 "donor_name": "Donor",
                 "total_covid_oda_ge": "COVID ODA",
-                "idrc_flow": "IDRC",
+                "idrc_ge_linked": "IDRC",
                 "aid_to_ukraine": "ODA to Ukraine",
                 "other_oda": "Other ODA",
             }
