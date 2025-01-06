@@ -1,6 +1,6 @@
 import pandas as pd
-from oda_data import set_data_path, ODAData, recipient_groupings, read_crs
-from pydeflate import set_pydeflate_path, update_dac1
+from oda_data import set_data_path, ODAData, read_crs, donor_groupings
+from pydeflate import set_pydeflate_path
 
 from scripts import config
 
@@ -9,42 +9,7 @@ set_pydeflate_path(config.PATHS.raw_data)
 
 
 YEARS = range(2000, 2024)
-
-
-DAC = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    18,
-    20,
-    21,
-    22,
-    40,
-    50,
-    61,
-    68,
-    69,
-    75,
-    76,
-    82,
-    84,
-    301,
-    302,
-    701,
-    742,
-    801,
-    820,
-    918,
-]
+DAC = list(donor_groupings()["dac_members"])
 
 
 def get_totals():
@@ -191,7 +156,7 @@ def get_ukraine_bilat() -> pd.DataFrame:
         recipients=list(recipients),
         include_names=True,
         prices="constant",
-        base_year=2022,
+        base_year=2023,
     )
 
     oda.load_indicator(list(indicators))
@@ -202,7 +167,7 @@ def get_ukraine_bilat() -> pd.DataFrame:
 
 
 def get_ukraine_crs() -> pd.DataFrame:
-    df = read_crs(years=range(2015, 2023))
+    df = read_crs(years=range(2015, 2024))
 
     df = df.loc[lambda d: d.recipient_code == 85].loc[lambda d: d.donor_code.isin(DAC)]
     df = df.loc[lambda d: d.flow_name != "Other Official Flows (non Export Credit)"]
