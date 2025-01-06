@@ -4,7 +4,7 @@ from pydeflate import set_pydeflate_path
 
 from scripts import config
 
-set_data_path(config.PATHS.raw_data)
+set_data_path(config.PATHS.raw_oda)
 set_pydeflate_path(config.PATHS.raw_data)
 
 
@@ -259,4 +259,4 @@ if __name__ == "__main__":
     get_oda_by_income()
     get_oda_to_africa()
     get_oda_to_regions()
-    # df = get_ukraine_crs()
+    df = get_ukraine_crs()
