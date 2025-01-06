@@ -23,7 +23,7 @@ def global_aid_key_number() -> None:
         years=range(2020, 2024),
         donors=20001,
         prices="constant",
-        base_year=common.CONSTANT_YEAR + 1,
+        base_year=common.CONSTANT_YEAR,
         include_names=True,
     )
 
@@ -123,12 +123,12 @@ def aid_to_africa_ts() -> None:
         .reset_index()
         .assign(
             share=lambda d: format_number(
-                (d["Africa, Total"] / d["Developing Countries, Total"]),
+                (d["Africa"] / d["Developing countries"]),
                 as_percentage=True,
                 decimals=1,
             )
         )
-        .rename(columns={"Africa, Total": "value"})
+        .rename(columns={"Africa": "value"})
         .filter(["year", "donor_name", "value", "share"], axis=1)
         .pipe(common.add_change, as_formatted_str=True, grouper="donor_name")
         .assign(
@@ -163,7 +163,7 @@ def aid_to_incomes_latest() -> None:
         10100: "Developing Countries, Total",
     }
     oda = ODAData(
-        years=range(common.START_YEAR, 2025),
+        years=range(common.START_YEAR, 2024),
         donors=20001,
         recipients=list(recipients),
         include_names=True,
@@ -283,10 +283,10 @@ def aid_to_food() -> None:
 
 
 if __name__ == "__main__":
-    global_aid_key_number()
-    aid_gni_key_number()
-    aid_to_incomes_latest()
-    aid_to_africa_ts()
+    # global_aid_key_number()
+    # aid_gni_key_number()
+    # aid_to_incomes_latest()
+    # aid_to_africa_ts()
     aid_to_health_ts()
     aid_to_food()
     aid_to_humanitarian_ts()

@@ -1,9 +1,12 @@
 import numpy as np
 import pandas as pd
 from bblocks import convert_id, format_number
+from oda_data.clean_data.common import dac_deflate
+
 from pydeflate import deflate, set_pydeflate_path
 from oda_data import donor_groupings
 from scripts.config import PATHS
+
 
 set_pydeflate_path(PATHS.raw_data)
 
@@ -221,14 +224,10 @@ def append_dac_total(df: pd.DataFrame, grouper=None) -> pd.DataFrame:
 def add_constant_change_column(df: pd.DataFrame, base: int) -> pd.DataFrame:
     """Add a column with the change in constant terms"""
 
-    df_constant = deflate(
+    df_constant = dac_deflate(
         df,
         base_year=base,
-        date_column="year",
-        source="oecd_dac",
-        id_column="donor_code",
-        id_type="DAC",
-        target_col="value_constant",
+        target_value_column="value_constant",
     )
 
     df_constant["pct_change"] = df_constant.groupby(["donor_code", "flows_code"])[
@@ -327,17 +326,8 @@ def aid_to_sector_ts(filter_function: callable) -> pd.DataFrame:
             ),
         )
         .assign(
-            value=lambda d: deflate(
-                d,
-                base_year=CONSTANT_YEAR,
-                date_column="year",
-                deflator_source="oecd_dac",
-                deflator_method="dac_deflator",
-                exchange_source="oecd_dac",
-                id_column="donor_code",
-                id_type="DAC",
-                source_col="value",
-                target_col="value_constant",
+            value=lambda d: dac_deflate(
+                d, base_year=CONSTANT_YEAR, target_value_column="value_constant"
             ).value_constant,
         )
         .assign(
