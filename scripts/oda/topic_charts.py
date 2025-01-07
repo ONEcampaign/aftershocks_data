@@ -384,7 +384,15 @@ def oda_covid_idrc():
         .loc[lambda d: d.year >= 2015]
     )
 
-    data = pd.concat([data, dac_covid, ukraine_aid, data_idrc], ignore_index=True)
+    data = pd.concat(
+        [
+            data,
+            dac_covid,
+            ukraine_aid,
+            # data_idrc,
+        ],
+        ignore_index=True,
+    )
 
     data.indicator = data.indicator.replace(
         {"total_oda_ge": "Total ODA", "total_oda_flow_net": "Total ODA"}
