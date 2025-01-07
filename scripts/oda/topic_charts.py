@@ -803,4 +803,5 @@ if __name__ == "__main__":
     oda_idrc_share()
     flow_shares_idrc_covid()
     aid_to_ukraine_comparison()
+    key_sector_shares()
     ...
