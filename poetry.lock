@@ -1174,13 +1174,13 @@ dev = ["black (>=24)", "bump2version (>=1.0.1)", "pytest (>=8)", "pytest-cov (>=
 
 [[package]]
 name = "oda-reader"
-version = "1.0.0"
+version = "1.0.1"
 description = "A simple package to import ODA data using the OECD Data API"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "oda_reader-1.0.0-py3-none-any.whl", hash = "sha256:637b63645932504421cb5357e2f075971d2ea2f7ff51f71f10cf6a091827c945"},
-    {file = "oda_reader-1.0.0.tar.gz", hash = "sha256:0a01023cee162921978f4a8233f6e41540f56ad618db36ead4469aea3ec14635"},
+    {file = "oda_reader-1.0.1-py3-none-any.whl", hash = "sha256:fd15e09ae4faa5063b87786960665c85913a61f0c90cdbd298624f17cb8f3864"},
+    {file = "oda_reader-1.0.1.tar.gz", hash = "sha256:d28e032b1b82416fd43e63ef0a8403cb664ce5423659119ebd1850196e81ee21"},
 ]
 
 [package.dependencies]
@@ -1206,10 +1206,10 @@ files = [
 
 [package.dependencies]
 numpy = [
-    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
-    {version = ">=1.23.5", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
     {version = ">=1.21.4", markers = "python_version >= \"3.10\" and platform_system == \"Darwin\" and python_version < \"3.11\""},
     {version = ">=1.21.2", markers = "platform_system != \"Darwin\" and python_version >= \"3.10\" and python_version < \"3.11\""},
+    {version = ">=1.23.5", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
+    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
 ]
 
 [[package]]
@@ -1304,9 +1304,9 @@ files = [
 
 [package.dependencies]
 numpy = [
-    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
-    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
     {version = ">=1.22.4", markers = "python_version < \"3.11\""},
+    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
+    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
