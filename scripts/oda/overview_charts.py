@@ -283,10 +283,10 @@ def aid_to_food() -> None:
 
 
 if __name__ == "__main__":
-    # global_aid_key_number()
-    # aid_gni_key_number()
-    # aid_to_incomes_latest()
-    # aid_to_africa_ts()
+    global_aid_key_number()
+    aid_gni_key_number()
+    aid_to_incomes_latest()
+    aid_to_africa_ts()
     aid_to_health_ts()
     aid_to_food()
     aid_to_humanitarian_ts()
