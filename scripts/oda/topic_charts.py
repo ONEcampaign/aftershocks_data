@@ -320,6 +320,30 @@ def aid_to_incomes() -> None:
     logger.debug("Saved download version of aid_to_income_ts.csv")
 
 
+def covid_bi_multi_dac() -> pd.DataFrame:
+    from oda_data.tools.groupings import donor_groupings
+
+    df = pd.read_csv(
+        PATHS.raw_data + r"/bi_plus_multi_health_spending_multiple_donors.csv"
+    )
+
+    codes = {v: k for k, v in donor_groupings()["dac_members"].items()}
+
+    df["donor_code"] = df["donor_name"].map(codes)
+
+    total = (
+        df.groupby(["year"], as_index=False)["covid_oda"]
+        .sum()
+        .assign(donor_name="DAC Countries, Total", donor_code=20001)
+    )
+
+    df = pd.concat([df, total], ignore_index=True).rename(
+        columns={"covid_oda": "value"}
+    )
+
+    return df
+
+
 def oda_covid_idrc():
     from oda_data import ODAData, set_data_path
     from oda_data.tools.groupings import donor_groupings
@@ -338,7 +362,7 @@ def oda_covid_idrc():
 
     indicators = [
         "total_oda_ge",
-        "total_covid_oda_ge",
+        # "total_covid_oda_ge",
         "total_oda_flow_net",
         "idrc_ge_linked",
     ]
@@ -365,6 +389,10 @@ def oda_covid_idrc():
         .assign(donor_code=20001, donor_name="DAC Countries, Total")
     )
 
+    covid = covid_bi_multi_dac().assign(
+        curreny="USD", prices="constant", indicator="total_covid_oda_ge"
+    )
+
     data_idrc = (
         data.loc[lambda d: d.donor_code.isin(dac)]
         .query("indicator in ['idrc_ge_linked'] and year == 2023")
@@ -387,7 +415,8 @@ def oda_covid_idrc():
     data = pd.concat(
         [
             data,
-            dac_covid,
+            covid,
+            # dac_covid,
             ukraine_aid,
             # data_idrc,
         ],
