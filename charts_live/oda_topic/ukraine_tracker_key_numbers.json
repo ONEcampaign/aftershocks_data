@@ -11,7 +11,7 @@
         "France": "118,994",
         "Germany": "1,243,445",
         "Greece": "33,130",
-        "Hungary": "58,840",
+        "Hungary": "62,145",
         "Iceland": "5,740",
         "Ireland": "113,720",
         "Italy": "175,696",
@@ -31,7 +31,7 @@
         "Switzerland": "77,450",
         "United Kingdom": "254,035",
         "United States": "85,000",
-        "DAC Countries": "5,513,830"
+        "DAC Countries": "5,517,135"
     },
     "cost22": {
         "Australia": "",
@@ -79,7 +79,7 @@
         "France": "301.79",
         "Germany": "9,509.16",
         "Greece": "10.77",
-        "Hungary": "249.19",
+        "Hungary": "269.54",
         "Iceland": "8.90",
         "Ireland": "501.20",
         "Italy": "1,075.25",
@@ -99,7 +99,7 @@
         "Switzerland": "801.04",
         "United Kingdom": "1,304.64",
         "United States": "371.03",
-        "DAC Countries": "34.89"
+        "DAC Countries": "34.85"
     },
     "cost24": {
         "Australia": "",
@@ -113,7 +113,7 @@
         "France": "336.38",
         "Germany": "11,202.65",
         "Greece": "12.38",
-        "Hungary": "258.43",
+        "Hungary": "278.78",
         "Iceland": "6.81",
         "Ireland": "375.71",
         "Italy": "1,347.52",
@@ -133,7 +133,7 @@
         "Switzerland": "779.97",
         "United Kingdom": "1,211.59",
         "United States": "397.28",
-        "DAC Countries": "36.38"
+        "DAC Countries": "36.34"
     },
     "year": {
         "Australia": 2022,
@@ -249,7 +249,7 @@
         "France": 1.9,
         "Germany": 26.7,
         "Greece": 3.0,
-        "Hungary": 67.1,
+        "Hungary": 72.6,
         "Iceland": 9.4,
         "Ireland": 20.8,
         "Italy": 16.2,
@@ -269,7 +269,7 @@
         "Switzerland": 17.8,
         "United Kingdom": 8.3,
         "United States": 0.6,
-        "DAC Countries": 16.6
+        "DAC Countries": 16.5
     },
     "share24": {
         "Australia": "",
@@ -283,7 +283,7 @@
         "France": 2.1,
         "Germany": 31.4,
         "Greece": 3.4,
-        "Hungary": 69.6,
+        "Hungary": 75.1,
         "Iceland": 7.2,
         "Ireland": 15.6,
         "Italy": 20.3,
@@ -303,9 +303,9 @@
         "Switzerland": 17.3,
         "United Kingdom": 7.7,
         "United States": 0.7,
-        "DAC Countries": 17.3
+        "DAC Countries": 17.2
     },
-    "total_refugees_total": "6,342,956",
+    "total_refugees_total": "6,346,263",
     "total_refugees_date": "16 February",
     "latest_refugees": {
         "Czech Republic": "390,000",
