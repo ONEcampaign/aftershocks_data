@@ -594,7 +594,7 @@ def flow_shares_idrc_covid():
     dg = donor_groupings()
 
     oda = ODAData(
-        years=range(2010, 2023),
+        years=range(2010, 2024),
         donors=list(dg["dac_countries"]) + [20001],
         prices="constant",
         base_year=common.CONSTANT_YEAR,
