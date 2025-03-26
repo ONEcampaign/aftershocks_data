@@ -192,9 +192,11 @@ def health_expenditure_share_wb() -> pd.DataFrame:
 def health_expenditure_share_ghed() -> pd.DataFrame:
     """Get gov health expenditure share from GHED database"""
 
-    df = (bbdata.GHED().get_data()
-            .loc[lambda d: d.indicator_code == "gghed_gge", ['iso3_code', 'year', 'value']]
-            .rename(columns = {'iso3_code': 'iso_code'})
-          )
+    df = (
+        bbdata.GHED()
+        .get_data()
+        .loc[lambda d: d.indicator_code == "gghed_gge", ["iso3_code", "year", "value"]]
+        .rename(columns={"iso3_code": "iso_code"})
+    )
 
     return df
