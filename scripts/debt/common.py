@@ -189,7 +189,7 @@ def health_expenditure_share_wb() -> pd.DataFrame:
     )
 
 
-def health_expenditure_share_one() -> pd.DataFrame:
+def health_expenditure_share_ghed() -> pd.DataFrame:
     """Get gov health expenditure share from GHED database"""
 
     df = (bbdata.GHED().get_data()
