@@ -18,7 +18,7 @@ from scripts.debt.common import (
     education_expenditure_share,
     read_dservice_data,
     read_dstocks_data,
-    health_expenditure_share_one,
+    health_expenditure_share_ghed,
 )
 from scripts.debt.overview_charts import CURRENT_YEAR
 from scripts.logger import logger
@@ -244,7 +244,7 @@ def debt_to_china_chart() -> None:
 
 def debt_service_comparison_chart() -> None:
     edu = education_expenditure_share()
-    health = health_expenditure_share_one()
+    health = health_expenditure_share_ghed()
     comparison = edu.merge(
         health, on=["iso_code", "year"], how="outer", suffixes=("_edu", "_health")
     )

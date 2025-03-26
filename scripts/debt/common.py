@@ -4,6 +4,7 @@ import pandas as pd
 import requests
 from bblocks import WorldBankData, add_iso_codes_column, set_bblocks_data_path
 from pyjstat import pyjstat
+import bblocks_data_importers as bbdata
 
 from scripts.config import PATHS
 from scripts.logger import logger
@@ -173,7 +174,9 @@ def education_expenditure_share() -> pd.DataFrame:
     )
 
 
-def health_expenditure_share() -> pd.DataFrame:
+def health_expenditure_share_wb() -> pd.DataFrame:
+    """Get gov health expenditure share from World Bank"""
+
     indicator = "SH.XPD.GHED.GE.ZS"
 
     return (
@@ -186,21 +189,14 @@ def health_expenditure_share() -> pd.DataFrame:
     )
 
 
-def health_expenditure_share_one() -> pd.DataFrame:
-    """Get health expenditure share from ONE's GHED analysis"""
-    url = (
-        "https://raw.githubusercontent.com/ONEcampaign/topic_health_financing/"
-        "main/output/section1_chart2.csv"
+def health_expenditure_share_ghed() -> pd.DataFrame:
+    """Get gov health expenditure share from GHED database"""
+
+    df = (
+        bbdata.GHED()
+        .get_data()
+        .loc[lambda d: d.indicator_code == "gghed_gge", ["iso3_code", "year", "value"]]
+        .rename(columns={"iso3_code": "iso_code"})
     )
 
-    data = pd.read_csv(url).astype({"year": "datetime64[ns]"})
-
-    data = data.melt(id_vars=["year"], var_name="country", value_name="value")
-
-    data = (
-        data.assign(year=lambda d: d.year.dt.year)
-        .pipe(add_iso_codes_column, id_column="country", id_type="regex")
-        .filter(["year", "iso_code", "value"])
-    )
-
-    return data
+    return df
