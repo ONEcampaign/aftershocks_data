@@ -174,7 +174,9 @@ def education_expenditure_share() -> pd.DataFrame:
     )
 
 
-def health_expenditure_share() -> pd.DataFrame:
+def health_expenditure_share_wb() -> pd.DataFrame:
+    """Get gov health expenditure share from World Bank"""
+
     indicator = "SH.XPD.GHED.GE.ZS"
 
     return (
