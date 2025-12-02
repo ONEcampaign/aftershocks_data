@@ -24,6 +24,8 @@ jobs:
         uses: astral-sh/setup-uv@v7
       - name: Install dependencies
         run: uv sync
+      - name: Patch bblocks_data_importers
+        run: sed -i 's/coco_logger = coco.logging.getLogger()/#coco_logger = coco.logging.getLogger()/' .venv/lib/python*/site-packages/bblocks_data_importers/utilities.py
       - name: Run daily update
         env:
           IPC_API: ${{ secrets.IPC_API }}
