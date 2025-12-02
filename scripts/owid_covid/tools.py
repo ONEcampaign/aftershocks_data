@@ -9,7 +9,7 @@ from scripts.config import PATHS
 def download_owid_data() -> None:
     """Download OWID data from Github"""
 
-    url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
+    url = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv"
 
     columns = {
         "iso_code": str,
