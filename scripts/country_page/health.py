@@ -114,9 +114,12 @@ def _read_leading_causes_of_death(year: int) -> pd.DataFrame:
 
 
 def _get_x_largest_causes(df: pd.DataFrame, x: int = 5) -> pd.DataFrame:
-    return df.groupby(["iso_code", "year"], as_index=False).apply(
-        lambda d: d.nlargest(n=x, columns="death_rate")
+    idx = (
+        df.groupby(["iso_code", "year"], group_keys=False)["death_rate"]
+        .nlargest(x)
+        .index.get_level_values(-1)
     )
+    return df.loc[idx]
 
 
 def _combined_causes_of_death_data(sort_indicator: str) -> pd.DataFrame:

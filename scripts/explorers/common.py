@@ -212,7 +212,7 @@ def add_hdi_column(df: pd.DataFrame, iso_column="iso_code") -> pd.DataFrame:
 
 
 def _weo_meta() -> pd.DataFrame:
-    weo = WorldEconomicOutlook()
+    weo = WorldEconomicOutlook(year=2025, release=2)
     weo.load_data(indicator=list(ECONOMICS_WEO_INDICATORS))
 
     return (
@@ -266,7 +266,6 @@ def _wb_health_meta() -> pd.DataFrame:
 
 
 def _owid_health_meta() -> pd.DataFrame:
-
     return (
         read_owid_data()
         .pipe(get_indicators_ts, indicators=OWID_INDICATORS)

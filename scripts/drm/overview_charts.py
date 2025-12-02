@@ -13,13 +13,12 @@ from scripts.drm import common
 
 set_bblocks_data_path(PATHS.bblocks_data)
 
-WEO = WorldEconomicOutlook()
+WEO = WorldEconomicOutlook(year=2025, release=2)
 
 
 def _latest_weo_ssa_with_yoy_change(
     df: pd.DataFrame, summary: bool = True
 ) -> pd.DataFrame:
-
     current_year = datetime.now().year
 
     exclude = ["value", "iso_code", "estimate"] if summary else ["value"]
@@ -48,7 +47,6 @@ def _latest_weo_ssa_with_yoy_change(
 def _latest_unu_ssa_with_yoy_change(
     df: pd.DataFrame, summary: bool = True
 ) -> pd.DataFrame:
-
     latest_year = 2020
 
     exclude = ["value", "iso_code"] if summary else ["value"]
@@ -74,7 +72,6 @@ def _latest_unu_ssa_with_yoy_change(
 
 
 def revenue_key_number(summary: bool = True) -> None:
-
     df = common.gov_revenue(WEO)
     df = (
         df.pipe(_latest_weo_ssa_with_yoy_change, summary=summary)
@@ -102,6 +99,5 @@ def revenue_key_number(summary: bool = True) -> None:
 
 
 if __name__ == "__main__":
-
     revenue_key_number(summary=False)
     ...

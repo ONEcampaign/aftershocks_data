@@ -106,7 +106,7 @@ def update_monthly_weo_data() -> None:
     """Update the WEO data. Monthly schedule though it updates twice a year"""
 
     # create object
-    weo = WorldEconomicOutlook()
+    weo = WorldEconomicOutlook(year=2025, release=2)
 
     # update data
     weo.update_data()

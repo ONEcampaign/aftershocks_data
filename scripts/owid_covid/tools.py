@@ -95,7 +95,7 @@ def date_resample(df: pd.DataFrame, grouper=None) -> pd.DataFrame:
     # Resample other data
     df = (
         df.groupby(grouper)
-        .apply(lambda x: x.set_index("date").asfreq(freq="W-MON"))["value"]
+        .apply(lambda x: x.set_index("date").asfreq(freq="W-MON"), include_groups=False)["value"]
         .reset_index(drop=False)
     )
 
