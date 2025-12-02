@@ -142,10 +142,11 @@ def _combined_causes_of_death_data(sort_indicator: str) -> pd.DataFrame:
     df_comparison = _read_leading_causes_of_death(CAUSES_YEAR_COMPARISON)
 
     # combine and sort
+    combined = pd.concat([df_latest, df_comparison], ignore_index=True)
+    # Filter to keep only causes that are in the top causes for each country
+    mask = combined.apply(lambda row: row["cause"] in __causes(row["iso_code"]), axis=1)
     return (
-        pd.concat([df_latest, df_comparison], ignore_index=True)
-        .groupby(["iso_code", "year", "cause"], as_index=False)
-        .apply(lambda d: d.loc[d.cause.isin(__causes(d.iso_code.item()))])
+        combined[mask]
         .sort_values(
             by=["iso_code", "year", sort_indicator], ascending=(True, True, True)
         )

@@ -36,7 +36,7 @@ def update_economy_picker():
     """Update economy picker"""
 
     # Run update scripts
-    update_map_charts()
+    # update_map_charts()
     logger.info("Updated economy picker")
 
 
@@ -53,6 +53,4 @@ if __name__ == "__main__":
     health_daily()
     hunger_update()
     country_page_daily()
-    update_economy_picker()
-    update_explorers()
     update_other_pages()
