@@ -13,28 +13,21 @@ jobs:
 
     steps:
       - name: checkout repo content
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.head_ref }}
       - name: setup python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.10"
-
-      - name: Install pip
-        run: python -m ensurepip --upgrade
-
-      - name: Install Poetry
-        run:  |
-          pip install poetry
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
       - name: Install dependencies
-        run:  |
-          poetry install
+        run: uv sync
       - name: Run daily update
         env:
           IPC_API: ${{ secrets.IPC_API }}
-        run:  |
-          poetry run python update_daily.py
+        run: uv run python update_daily.py
       - name: Save changes
         run:  |
           git config --local user.email "action@github.com"
@@ -42,7 +35,7 @@ jobs:
           git add .
           git commit -m "Run daily update"
       - name: push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy download folder to GitHub Pages

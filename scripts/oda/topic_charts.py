@@ -374,7 +374,7 @@ def oda_covid_idrc():
         & ~((d.year >= 2018) & (d.indicator == "total_oda_flow_net"))
     ]
 
-    dac = list(dg["dac_countries"])
+    dac = list(dg["dac_countries"] | {84: "Lithuania"} | {82: "Estonia"})
 
     dac_covid = (
         data.loc[lambda d: d.donor_code.isin(dac)]

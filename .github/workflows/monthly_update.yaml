@@ -3,32 +3,31 @@ name: monthly-update
   schedule:
     - cron: '15 15 7 * *'
   workflow_dispatch:
+
+permissions:
+    contents: write
+
 jobs:
   run-all:
     runs-on: ubuntu-latest
 
     steps:
       - name: checkout repo content
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.head_ref }}
       - name: setup python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.10"
-      - name: Install Poetry
-        run: |
-          python -m ensurepip --upgrade
-          pip install poetry
-          poetry --version
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
       - name: Install dependencies
-        run: |
-          poetry install
+        run: uv sync
       - name: Run monthly update
         env:
           IPC_API: ${{ secrets.IPC_API }}
-        run:  |
-          poetry run python update_monthly.py
+        run: uv run python update_monthly.py
       - name: Save changes
         run:  |
           git config --local user.email "action@github.com"
@@ -36,11 +35,11 @@ jobs:
           git add .
           git commit -m "Monthly database update"
       - name: push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy download folder to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: charts_download # The folder the action should deploy.
