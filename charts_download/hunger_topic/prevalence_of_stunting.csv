@@ -1,111 +1,111 @@
 iso_code,date,value,country
-SYC,2022,7.2,Seychelles
-MUS,2022,8.6,Mauritius
-DZA,2022,8.6,Algeria
-TUN,2022,8.6,Tunisia
-CPV,2022,9.4,Cabo Verde
-STP,2022,10.0,Sao Tome
-SYC,2000,10.6,Seychelles
-MUS,2000,12.6,Mauritius
-TUN,2000,12.6,Tunisia
-GHA,2022,12.7,Ghana
-MAR,2022,12.8,Morocco
-GAB,2022,13.4,Gabon
-GMB,2022,13.6,Gambia
-GNQ,2022,16.1,Equatorial Guinea
-COG,2022,16.5,Congo Republic
-NAM,2022,16.8,Namibia
-SEN,2022,17.0,Senegal
-CPV,2000,17.8,Cabo Verde
-SOM,2022,18.0,Somalia
-KEN,2022,18.4,Kenya
-LBY,2000,18.4,Libya
-DJI,2022,18.7,Djibouti
-COM,2022,18.8,Comoros
-CIV,2022,20.2,Côte d'Ivoire
-EGY,2022,20.4,Egypt
-SWZ,2022,21.2,Eswatini
-BWA,2022,21.6,Botswana
-ZWE,2022,21.6,Zimbabwe
-BFA,2022,21.8,Burkina Faso
-MRT,2022,22.1,Mauritania
-DZA,2000,22.3,Algeria
-TGO,2022,22.3,Togo
-ZAF,2022,22.8,South Africa
-UGA,2022,23.4,Uganda
-MLI,2022,23.8,Mali
-SEN,2000,24.7,Senegal
-MAR,2000,25.2,Morocco
+CPV,2024,5.3,Cabo Verde
+SYC,2024,6.2,Seychelles
+MUS,2024,7.8,Mauritius
+DZA,2024,8.9,Algeria
+TUN,2024,8.9,Tunisia
+LBY,2024,9.2,Libya
+STP,2024,10.0,Sao Tome
+SYC,2000,10.5,Seychelles
+MUS,2000,12.4,Mauritius
+TUN,2000,12.5,Tunisia
+EGY,2024,12.9,Egypt
+GAB,2024,13.7,Gabon
+MAR,2024,13.7,Morocco
+GMB,2024,14.0,Gambia
+GHA,2024,15.6,Ghana
+CPV,2000,15.9,Cabo Verde
+COG,2024,16.3,Congo Republic
+NAM,2024,16.4,Namibia
+GNQ,2024,17.1,Equatorial Guinea
+SEN,2024,17.2,Senegal
+COM,2024,17.4,Comoros
+KEN,2024,17.9,Kenya
+SWZ,2024,18.9,Eswatini
+BFA,2024,19.5,Burkina Faso
+LBY,2000,19.8,Libya
+CIV,2024,20.3,Côte d'Ivoire
+DJI,2024,20.9,Djibouti
+BWA,2024,21.0,Botswana
+MRT,2024,21.5,Mauritania
+DZA,2000,22.4,Algeria
+TGO,2024,23.0,Togo
+MLI,2024,23.2,Mali
+UGA,2024,23.5,Uganda
+ZWE,2024,23.7,Zimbabwe
+SOM,2024,23.9,Somalia
+ZAF,2024,24.4,South Africa
+SEN,2000,24.6,Senegal
+SLE,2024,25.2,Sierra Leone
+MAR,2000,25.3,Morocco
 GAB,2000,25.5,Gabon
 EGY,2000,25.9,Egypt
-SLE,2022,26.0,Sierra Leone
-LBR,2022,26.6,Liberia
 ZAF,2000,26.6,South Africa
-CMR,2022,26.9,Cameroon
-GNB,2022,27.7,Guinea-Bissau
-GMB,2000,27.8,Gambia
-GIN,2022,27.9,Guinea
-SSD,2022,27.9,South Sudan
+GIN,2024,26.6,Guinea
+LBR,2024,26.9,Liberia
+CMR,2024,27.2,Cameroon
+GMB,2000,27.7,Gambia
+GNB,2024,28.3,Guinea-Bissau
 NAM,2000,29.7,Namibia
-RWA,2022,29.8,Rwanda
+RWA,2024,29.8,Rwanda
+TZA,2024,29.9,Tanzania
+SSD,2024,30.0,South Sudan
 BWA,2000,30.3,Botswana
-BEN,2022,30.4,Benin
-TZA,2022,30.6,Tanzania
-STP,2000,31.3,Sao Tome
-ZMB,2022,31.4,Zambia
-SSA,2022,31.5156047420072,Sub-Saharan Africa
-LSO,2022,31.8,Lesotho
-TGO,2000,32.1,Togo
-TCD,2022,32.3,Chad
-GHA,2000,32.6,Ghana
-CIV,2000,32.6,Côte d'Ivoire
-ZWE,2000,32.8,Zimbabwe
-GIN,2000,33.0,Guinea
-SOM,2000,33.0,Somalia
-DJI,2000,33.7,Djibouti
-COG,2000,33.7,Congo Republic
-GNB,2000,33.8,Guinea-Bissau
-MWI,2022,34.0,Malawi
-NGA,2022,34.2,Nigeria
-ETH,2022,34.4,Ethiopia
-BEN,2000,34.9,Benin
-SWZ,2000,35.8,Eswatini
-SDN,2022,36.0,Sudan
-MOZ,2022,36.4,Mozambique
-CMR,2000,37.5,Cameroon
-SLE,2000,38.1,Sierra Leone
-KEN,2000,38.5,Kenya
-MDG,2022,38.6,Madagascar
-GNQ,2000,38.8,Equatorial Guinea
-SSD,2000,39.0,South Sudan
-SDN,2000,39.3,Sudan
-MRT,2000,39.3,Mauritania
-MLI,2000,39.5,Mali
-CAF,2022,39.8,Central African Rep.
-COD,2022,40.3,DR Congo
-BFA,2000,40.5,Burkina Faso
-LSO,2000,41.6,Lesotho
-NGA,2000,41.7,Nigeria
-TCD,2000,42.0,Chad
-CAF,2000,43.1,Central African Rep.
-SSA,2000,43.1791604378433,Sub-Saharan Africa
-ERI,2000,43.5,Eritrea
-AGO,2022,43.6,Angola
-COM,2000,43.9,Comoros
+STP,2000,30.8,Sao Tome
+TCD,2024,31.5,Chad
+TGO,2000,31.6,Togo
+DJI,2000,31.8,Djibouti
+SSA,2024,31.9301221843097,Sub-Saharan Africa
+ZMB,2024,32.3,Zambia
+CIV,2000,32.4,Côte d'Ivoire
+GHA,2000,32.8,Ghana
+GIN,2000,33.1,Guinea
+ZWE,2000,33.1,Zimbabwe
+MWI,2024,33.2,Malawi
+BEN,2024,33.2,Benin
+GNB,2000,33.4,Guinea-Bissau
+SOM,2000,33.6,Somalia
+COG,2000,33.6,Congo Republic
+NGA,2024,33.8,Nigeria
+BEN,2000,34.8,Benin
+LSO,2024,35.0,Lesotho
+SDN,2024,35.4,Sudan
+ETH,2024,35.5,Ethiopia
+SWZ,2000,35.7,Eswatini
+MOZ,2024,37.0,Mozambique
+CMR,2000,37.4,Cameroon
+SDN,2000,38.3,Sudan
+GNQ,2000,38.3,Equatorial Guinea
+MDG,2024,38.4,Madagascar
+KEN,2000,38.6,Kenya
+SLE,2000,38.7,Sierra Leone
+CAF,2024,38.9,Central African Rep.
+SSD,2000,39.1,South Sudan
+MRT,2000,39.2,Mauritania
+MLI,2000,40.0,Mali
+BFA,2000,40.4,Burkina Faso
+SSA,2000,41.5227911018946,Sub-Saharan Africa
+NGA,2000,41.8,Nigeria
+LSO,2000,42.1,Lesotho
+TCD,2000,42.2,Chad
+CAF,2000,43.2,Central African Rep.
+ERI,2000,43.4,Eritrea
+COM,2000,43.8,Comoros
 UGA,2000,44.0,Uganda
-LBR,2000,44.9,Liberia
+COD,2024,44.1,DR Congo
+LBR,2000,45.0,Liberia
 COD,2000,46.0,DR Congo
-AGO,2000,46.5,Angola
-TZA,2000,47.4,Tanzania
-NER,2022,47.4,Niger
-RWA,2000,48.5,Rwanda
+AGO,2000,47.5,Angola
+TZA,2000,47.6,Tanzania
+AGO,2024,47.7,Angola
+ERI,2024,48.0,Eritrea
+NER,2024,48.3,Niger
 MOZ,2000,48.6,Mozambique
-ERI,2022,50.2,Eritrea
-ZMB,2000,51.8,Zambia
-LBY,2022,52.2,Libya
-NER,2000,53.2,Niger
-MDG,2000,55.2,Madagascar
-MWI,2000,56.0,Malawi
-BDI,2022,56.5,Burundi
-ETH,2000,57.0,Ethiopia
-BDI,2000,63.1,Burundi
+RWA,2000,48.7,Rwanda
+ZMB,2000,52.1,Zambia
+NER,2000,52.1,Niger
+BDI,2024,55.3,Burundi
+MWI,2000,56.1,Malawi
+MDG,2000,56.1,Madagascar
+ETH,2000,56.9,Ethiopia
+BDI,2000,63.0,Burundi
