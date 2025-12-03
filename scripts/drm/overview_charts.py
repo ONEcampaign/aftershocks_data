@@ -13,7 +13,7 @@ from scripts.drm import common
 
 set_bblocks_data_path(PATHS.bblocks_data)
 
-WEO = WorldEconomicOutlook(year=2025, release=2)
+WEO = WorldEconomicOutlook(year=2025, release=1)
 
 
 def _latest_weo_ssa_with_yoy_change(

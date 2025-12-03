@@ -16151,3 +16151,82 @@ INFO (2025-12-02 14:34:30,079): Updated WFP insufficient food charts
 INFO (2025-12-02 14:34:32,042): Updated vaccination rate chart
 INFO (2025-12-02 14:34:36,491): Updated overview text (summary) json
 INFO (2025-12-02 14:34:36,492): Updated daily charts in country page
+INFO (2025-12-03 07:11:34,107): Updated OWID data
+INFO (2025-12-03 07:11:34,554): Updated daily charts in health page
+INFO (2025-12-03 07:17:21,226): Updated OWID data
+INFO (2025-12-03 07:17:21,702): Updated daily charts in health page
+INFO (2025-12-03 07:20:04,857): Updated DSA list data
+INFO (2025-12-03 07:22:43,058): Downloaded IDS debt service data
+INFO (2025-12-03 07:24:03,839): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2025-12-03 07:26:38,905): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2025-12-03 07:27:55,539): Updated DTP data from WHO.
+INFO (2025-12-03 07:27:58,359): Updated monthly charts in health page
+INFO (2025-12-03 07:28:08,542): Updated SH.STA.STNT.ME.ZS data
+INFO (2025-12-03 07:28:18,309): Updated SN.ITK.DEFC.ZS data
+INFO (2025-12-03 07:28:28,202): Updated SN.ITK.SVFI.ZS data
+INFO (2025-12-03 07:28:28,202): Updated monthly hunger data
+INFO (2025-12-03 07:28:48,416): Updated World Bank Health and Education spending data
+INFO (2025-12-03 07:28:48,416): Updated monthly charts in debt page
+INFO (2025-12-03 07:32:19,307): Error downloading data for DZA
+INFO (2025-12-03 07:32:19,402): Error downloading data for AGO
+INFO (2025-12-03 07:32:19,494): Error downloading data for BEN
+INFO (2025-12-03 07:32:19,581): Error downloading data for BWA
+INFO (2025-12-03 07:32:19,674): Error downloading data for IOT
+INFO (2025-12-03 07:32:19,786): Error downloading data for BFA
+INFO (2025-12-03 07:32:19,892): Error downloading data for BDI
+INFO (2025-12-03 07:32:19,996): Error downloading data for CPV
+INFO (2025-12-03 07:32:20,085): Error downloading data for CMR
+INFO (2025-12-03 07:32:20,175): Error downloading data for CAF
+INFO (2025-12-03 07:32:20,272): Error downloading data for TCD
+INFO (2025-12-03 07:32:20,369): Error downloading data for COM
+INFO (2025-12-03 07:32:20,472): Error downloading data for COG
+INFO (2025-12-03 07:32:20,571): Error downloading data for CIV
+INFO (2025-12-03 07:32:20,684): Error downloading data for DJI
+INFO (2025-12-03 07:32:20,797): Error downloading data for COD
+INFO (2025-12-03 07:32:20,915): Error downloading data for EGY
+INFO (2025-12-03 07:32:21,014): Error downloading data for GNQ
+INFO (2025-12-03 07:32:21,113): Error downloading data for ERI
+INFO (2025-12-03 07:32:21,211): Error downloading data for SWZ
+INFO (2025-12-03 07:32:21,307): Error downloading data for ETH
+INFO (2025-12-03 07:32:21,418): Error downloading data for ATF
+INFO (2025-12-03 07:32:21,533): Error downloading data for GAB
+INFO (2025-12-03 07:32:21,635): Error downloading data for GMB
+INFO (2025-12-03 07:32:21,748): Error downloading data for GHA
+INFO (2025-12-03 07:32:21,897): Error downloading data for GIN
+INFO (2025-12-03 07:32:22,007): Error downloading data for GNB
+INFO (2025-12-03 07:32:22,100): Error downloading data for KEN
+INFO (2025-12-03 07:32:22,192): Error downloading data for LSO
+INFO (2025-12-03 07:32:22,286): Error downloading data for LBR
+INFO (2025-12-03 07:32:22,388): Error downloading data for LBY
+INFO (2025-12-03 07:32:22,482): Error downloading data for MDG
+INFO (2025-12-03 07:32:22,584): Error downloading data for MWI
+INFO (2025-12-03 07:32:22,695): Error downloading data for MLI
+INFO (2025-12-03 07:32:22,795): Error downloading data for MRT
+INFO (2025-12-03 07:32:22,892): Error downloading data for MUS
+INFO (2025-12-03 07:32:22,993): Error downloading data for MAR
+INFO (2025-12-03 07:32:23,096): Error downloading data for MOZ
+INFO (2025-12-03 07:32:23,191): Error downloading data for NAM
+INFO (2025-12-03 07:32:23,291): Error downloading data for NER
+INFO (2025-12-03 07:32:23,404): Error downloading data for NGA
+INFO (2025-12-03 07:32:23,519): Error downloading data for RWA
+INFO (2025-12-03 07:32:23,632): Error downloading data for STP
+INFO (2025-12-03 07:32:23,749): Error downloading data for SEN
+INFO (2025-12-03 07:32:23,865): Error downloading data for SYC
+INFO (2025-12-03 07:32:23,988): Error downloading data for SLE
+INFO (2025-12-03 07:32:24,104): Error downloading data for SOM
+INFO (2025-12-03 07:32:24,218): Error downloading data for ZAF
+INFO (2025-12-03 07:32:24,341): Error downloading data for SSD
+INFO (2025-12-03 07:32:24,462): Error downloading data for SHN
+INFO (2025-12-03 07:32:24,580): Error downloading data for SDN
+INFO (2025-12-03 07:32:24,697): Error downloading data for TZA
+INFO (2025-12-03 07:32:24,818): Error downloading data for TGO
+INFO (2025-12-03 07:32:24,940): Error downloading data for TUN
+INFO (2025-12-03 07:32:25,055): Error downloading data for UGA
+INFO (2025-12-03 07:32:25,176): Error downloading data for ESH
+INFO (2025-12-03 07:32:25,290): Error downloading data for ZMB
+INFO (2025-12-03 07:32:25,408): Error downloading data for ZWE
+INFO (2025-12-03 07:32:25,410): No data was downloaded
+INFO (2025-12-03 08:02:11,572): Updated DSA list data
+INFO (2025-12-03 08:02:22,264): Downloaded IDS debt service data
+INFO (2025-12-03 08:02:27,292): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2025-12-03 08:02:35,584): Downloaded IDS debt stocks data: ids_stocks_raw_long

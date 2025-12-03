@@ -15,7 +15,7 @@ set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def _base_weo_economics() -> pd.DataFrame:
-    weo = WorldEconomicOutlook(year=2025, release=2)
+    weo = WorldEconomicOutlook(year=2025, release=1)
     weo.load_data(list(ECONOMICS_WEO_INDICATORS))
 
     return (

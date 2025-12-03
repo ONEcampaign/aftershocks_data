@@ -94,7 +94,7 @@ def weo_indicators() -> pd.DataFrame:
     }
 
     # Create a WEO object to import the data
-    weo = WorldEconomicOutlook(year=2025, release=2)
+    weo = WorldEconomicOutlook(year=2025, release=1)
 
     # Load the data for the relevant indicators
     weo.load_data(list(indicators))

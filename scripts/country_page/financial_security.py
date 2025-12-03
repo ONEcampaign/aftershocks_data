@@ -196,7 +196,7 @@ def __weo_center(df: pd.DataFrame) -> pd.DataFrame:
 
 def _read_weo() -> pd.DataFrame:
     """Read the WEO data and return a dataframe with the last 10 years of data"""
-    weo = WorldEconomicOutlook(year=2025, release=2)
+    weo = WorldEconomicOutlook(year=2025, release=1)
 
     weo.load_data(indicator=list(WEO_INDICATORS))
 
@@ -476,13 +476,13 @@ def wb_poverty_single_measure() -> None:
 def _financial_weo() -> pd.DataFrame:
     indicators = ["GGX_NGDP"]
 
-    return WorldEconomicOutlook(year=2025, release=2).load_data(indicators).get_data()
+    return WorldEconomicOutlook(year=2025, release=1).load_data(indicators).get_data()
 
 
 def _financial_gdp_usd_current() -> pd.DataFrame:
     indicators = ["NGDPD"]
 
-    return WorldEconomicOutlook(year=2025, release=2).load_data(indicators).get_data()
+    return WorldEconomicOutlook(year=2025, release=1).load_data(indicators).get_data()
 
 
 def _financial_wb(update: bool = False) -> pd.DataFrame:

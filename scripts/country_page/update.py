@@ -106,7 +106,7 @@ def update_monthly_weo_data() -> None:
     """Update the WEO data. Monthly schedule though it updates twice a year"""
 
     # create object
-    weo = WorldEconomicOutlook(year=2025, release=2)
+    weo = WorldEconomicOutlook(year=2025, release=1)
 
     # update data
     weo.update_data()
@@ -184,7 +184,7 @@ def update_monthly() -> None:
     # update_monthly_debt_data()
 
     # Health
-    update_monthly_leading_causes_of_death()
+    # update_monthly_leading_causes_of_death()  # Commented out - WHO API not returning data
     update_monthly_hiv_data()
     update_monthly_malaria_data()
 

@@ -44,11 +44,26 @@ def unpack_ghe_country(country: str, country_data: list, year: int) -> pd.DataFr
 
 
 def clean_hiv(df_hiv: pd.DataFrame) -> pd.DataFrame:
-    df_hiv = df_hiv.rename(columns={"Unnamed: 0": "year", "Unnamed: 1": "iso_code"})
-    df_hiv.columns = ["year", "iso_code"] + df_hiv.iloc[4, 2:].fillna("").to_list()
+    # Get indicator names (row 3) and sub-columns (row 4)
+    indicators = df_hiv.iloc[3, 2:].fillna("").to_list()
+    sub_cols = df_hiv.iloc[4, 2:].fillna("").to_list()
+
+    # Forward fill indicator names to propagate across Estimate/Low/High columns
+    current_indicator = ""
+    filled_indicators = []
+    for ind in indicators:
+        if ind != "":
+            current_indicator = ind
+        filled_indicators.append(current_indicator)
+
+    # Combine to create unique column names (e.g., "Adults (15-49) prevalence (%)_Estimate")
+    unique_cols = ["year", "iso_code"] + [
+        f"{ind}_{sub}" for ind, sub in zip(filled_indicators, sub_cols)
+    ]
+
+    df_hiv.columns = unique_cols
     df_hiv = (
-        df_hiv.drop("", axis=1)
-        .iloc[6:]
+        df_hiv.iloc[5:]
         .dropna(subset="iso_code")
         .set_index(["year", "iso_code"])
         .replace("...", "")
