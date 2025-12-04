@@ -357,10 +357,10 @@ def debt_distress_map() -> None:
 def update_debt_country_charts() -> None:
     debt_stocks_columns()
     debt_service_columns()
-    # debt_to_gdp_ts()
+    debt_to_gdp_ts()
     debt_composition_chart()
     debt_to_china_chart()
-    # debt_service_comparison_chart()
+    debt_service_comparison_chart()
     flourish_ids_debt_service()
     flourish_ids_debt_stocks()
     debt_distress_map()

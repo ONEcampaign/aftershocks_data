@@ -6,8 +6,9 @@ authors = ["Jorge Rivera <jorge.rivera@one.org>","Luca Picci <luca.picci@one.org
 license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
-    "bblocks>=1.4.3",
+    "bblocks==1.4.3",
     "country-converter>=1.3.2",
+    "imf-reader>=1.3.1",
     "numpy>=2.3.5",
     "oda-data>=2.3.0.post1",
     "pandas>=2.3.3",
