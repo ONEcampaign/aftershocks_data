@@ -22,4 +22,4 @@ def debt_page_weekly():
 
 if __name__ == "__main__":
     debt_page_weekly()
-    country_page_weekly()
+    # country_page_weekly()

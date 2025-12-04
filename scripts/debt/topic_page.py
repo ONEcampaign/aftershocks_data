@@ -26,7 +26,7 @@ from scripts.logger import logger
 set_bblocks_data_path(PATHS.bblocks_data)
 
 SOURCE = "International Debt Statistics (IDS) Database"
-DATE = " (December 2024)"
+DATE = " (December 2025)"
 
 
 def debt_stocks_columns() -> None:
@@ -158,8 +158,24 @@ def debt_to_gdp_ts() -> None:
 
 
 def read_debt_chart_data() -> pd.DataFrame:
+    # Patterns that indicate aggregate/income group rows (not actual countries)
+    exclude_patterns = [
+        "income",
+        "IDA",
+        "IBRD",
+        "blend",
+        "excluding high income",
+        "Least developed countries",
+        "South Asia",
+    ]
+
     return (
         pd.read_feather(f"{PATHS.raw_debt}/ids_tableau.feather")
+        .loc[
+            lambda d: ~d.Country.str.lower().str.contains(
+                "|".join(p.lower() for p in exclude_patterns), regex=True
+            )
+        ]
         .assign(
             stocks_type=lambda d: d["Series Id"].map(common.DEBT_STOCKS),
             service_type=lambda d: d["Series Id"].map(common.DEBT_SERVICE),
@@ -180,7 +196,7 @@ def read_debt_chart_data() -> pd.DataFrame:
 def debt_composition_chart() -> None:
     df = (
         read_debt_chart_data()
-        .loc[lambda d: d.time == 2022]
+        .loc[lambda d: d.time == 2024]
         .dropna(subset=["stocks_type"])
         .groupby(["time", "Country", "Creditors", "stocks_type"], as_index=False)
         .sum(numeric_only=True)
@@ -341,10 +357,10 @@ def debt_distress_map() -> None:
 def update_debt_country_charts() -> None:
     debt_stocks_columns()
     debt_service_columns()
-    debt_to_gdp_ts()
+    # debt_to_gdp_ts()
     debt_composition_chart()
     debt_to_china_chart()
-    debt_service_comparison_chart()
+    # debt_service_comparison_chart()
     flourish_ids_debt_service()
     flourish_ids_debt_stocks()
     debt_distress_map()

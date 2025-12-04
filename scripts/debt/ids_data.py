@@ -7,7 +7,7 @@ from scripts.debt.common import get_indicator_data, DEBT_SERVICE, DEBT_STOCKS
 from scripts.logger import logger
 
 START_YEAR: int = 2009
-END_YEAR: int = 2029
+END_YEAR: int = 2030
 
 
 # ---------------------------------------------------------------------
