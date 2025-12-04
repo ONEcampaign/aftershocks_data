@@ -26,10 +26,11 @@ jobs:
           version: "0.9.14"
       - name: Install dependencies
         run: uv sync
-      - name: Patch bblocks_data_importers
+      - name: Patch bblocks packages
         run: |
           sed -i 's/coco_logger = coco.logging.getLogger()/#coco_logger = coco.logging.getLogger()/' .venv/lib/python*/site-packages/bblocks_data_importers/utilities.py
           sed -i 's/coco_logger.setLevel(logging.CRITICAL)/#coco_logger.setLevel(logging.CRITICAL)/' .venv/lib/python*/site-packages/bblocks_data_importers/utilities.py
+          sed -i 's/weo = WorldEconomicOutlook().load_data/weo = WorldEconomicOutlook(year=2025, release=1).load_data/' .venv/lib/python*/site-packages/bblocks/dataframe_tools/common.py
       - name: Run daily update
         env:
           IPC_API: ${{ secrets.IPC_API }}
