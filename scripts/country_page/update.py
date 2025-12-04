@@ -191,8 +191,8 @@ def update_monthly() -> None:
     # ------- update related charts-----------
 
     # Financial security
-    financial_security.gdp_growth_single_measure()
-    financial_security.gdp_growth_regions_single_measure()
+    # financial_security.gdp_growth_single_measure()
+    # financial_security.gdp_growth_regions_single_measure()
     financial_security.poverty_chart()
     financial_security.wb_poverty_single_measure()
     debt_chart_country()
