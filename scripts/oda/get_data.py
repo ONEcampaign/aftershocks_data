@@ -1,5 +1,5 @@
 import pandas as pd
-from oda_data import set_data_path, ODAData, read_crs, donor_groupings
+from oda_data import set_data_path, ODAData, CRSData, provider_groupings, OECDClient
 from pydeflate import set_pydeflate_path
 
 from scripts import config
@@ -8,18 +8,18 @@ set_data_path(config.PATHS.raw_oda)
 set_pydeflate_path(config.PATHS.raw_data)
 
 
-YEARS = range(2000, 2024)
-DAC = list(donor_groupings()["dac_members"])
+YEARS = range(2000, 2025)
+DAC = list(provider_groupings()["dac_members"])
 
 
 def get_totals():
-    oda = ODAData(years=YEARS, donors=DAC)
-    oda.load_indicator(["total_oda_flow_net", "total_oda_ge"])
-
-    flow = oda.get_data("total_oda_flow_net").assign(
-        flows_code=1140, indicator="ODA (net flows)"
+    oda = OECDClient(
+        years=YEARS, providers=DAC, measure=["net_disbursement", "grant_equivalent"]
     )
-    ge = oda.get_data("total_oda_ge").assign(
+    oda = oda.get_indicators(["DAC1.10.1010"])
+
+    flow = oda.loc[lambda d: d.flows_code == 1140].assign(indicator="ODA (net flows)")
+    ge = oda.loc[lambda d: d.flows_code == 1160].assign(
         flows_code=1160, indicator="ODA (grant equivalent)"
     )
 
@@ -35,15 +35,14 @@ def get_totals():
 
 
 def get_oda_gni():
-    oda = ODAData(years=YEARS, donors=DAC)
-    oda.add_share_of_gni().load_indicator(["total_oda_flow_net", "total_oda_ge"])
+    oda = OECDClient(
+        years=YEARS, providers=DAC, measure=["net_disbursement", "grant_equivalent"]
+    )
 
-    flow = oda.get_data("total_oda_flow_net").loc[lambda d: d.year < 2018]
-    ge = oda.get_data("total_oda_ge").loc[lambda d: d.year >= 2018]
+    oda = oda.get_indicators(["ONE.40.1010_11010_1"])
 
     data = (
-        pd.concat([flow, ge], ignore_index=True)
-        .assign(value=lambda d: round(d.gni_share, 2), indicator="ODA GNI")
+        oda.assign(value=lambda d: round(d.value * 100, 2), indicator="ODA GNI")
         .assign(flows_code=1140)
         .filter(["year", "donor_code", "flows_code", "value", "indicator"], axis=1)
     )
@@ -52,21 +51,25 @@ def get_oda_gni():
 
 
 def get_gni():
-    oda = ODAData(years=YEARS, donors=DAC)
-    oda.load_indicator("gni")
-    data = (
-        oda.get_data("gni")
-        .assign(flows_code=1140, indicator="GNI")
-        .filter(["year", "donor_code", "flows_code", "value", "indicator"], axis=1)
+    oda = OECDClient(years=YEARS, providers=DAC, measure=["net_disbursement"])
+
+    oda = oda.get_indicators(["DAC1.40.1"])
+
+    data = oda.assign(indicator="GNI").filter(
+        ["year", "donor_code", "flows_code", "value", "indicator"], axis=1
     )
     data.to_csv(f"{config.PATHS.raw_oda}/gni.csv", index=False)
 
 
 def get_oda_by_income():
     recipients = [10024, 10045, 10046, 10047, 10048, 10049]
-    oda = ODAData(years=YEARS, donors=DAC + [20001], recipients=recipients)
-    oda.load_indicator("recipient_total_flow_net")
-    data = oda.get_data()
+    oda = OECDClient(
+        years=YEARS,
+        providers=DAC + [20001],
+        measure=["net_disbursement"],
+        recipients=recipients,
+    )
+    oda = oda.get_indicators(["ONE.10.206_106"])
 
     names = {
         10024: "Not classified by income",
@@ -77,7 +80,7 @@ def get_oda_by_income():
         10049: "Not classified by income",
     }
 
-    data = data.assign(recipient=lambda d: d.recipient_code.map(names))
+    data = oda.assign(recipient=lambda d: d.recipient_code.map(names))
 
     data.filter(
         ["year", "donor_code", "recipient_code", "value", "recipient"], axis=1
@@ -88,13 +91,17 @@ def get_oda_to_africa() -> None:
     total = [10100]
     africa = [10001]
 
-    oda = ODAData(years=YEARS, donors=DAC, recipients=total + africa)
+    recipients = total + africa
 
-    oda.load_indicator("recipient_total_flow_net")
-
-    data = oda.get_data().filter(
-        ["year", "donor_code", "recipient_code", "value"], axis=1
+    oda = OECDClient(
+        years=YEARS,
+        providers=DAC + [20001],
+        measure=["net_disbursement"],
+        recipients=recipients,
     )
+    oda = oda.get_indicators(["ONE.10.206_106"])
+
+    data = oda.filter(["year", "donor_code", "recipient_code", "value"], axis=1)
 
     total_data = data.query(f"recipient_code in {total}").drop(
         ["recipient_code"], axis=1
@@ -121,25 +128,26 @@ def get_oda_to_regions():
         10012: "Oceania",
     }
 
+    oda = OECDClient(
+        years=YEARS,
+        providers=DAC + [20001],
+        measure=["net_disbursement"],
+        recipients=list(recipients),
+    )
+
+    oda = oda.get_indicators(["DAC2A.10.106", "DAC2A.10.206"])
+
     indicators = {
-        "recipient_imputed_multi_flow_net": "imputed_multilateral",
-        "recipient_bilateral_flow_net": "bilateral",
+        "DAC2A.10.106": "imputed_multilateral",
+        "DAC2A.10.206": "bilateral",
     }
 
-    oda = ODAData(years=YEARS, donors=DAC + [20001], recipients=list(recipients))
-
-    oda.load_indicator(list(indicators))
-
-    data = (
-        oda.get_data()
-        .assign(
-            recipient=lambda d: d.recipient_code.map(recipients),
-            indicator=lambda d: d.indicator.map(indicators),
-        )
-        .filter(
-            ["year", "donor_code", "recipient_code", "value", "indicator", "recipient"],
-            axis=1,
-        )
+    data = oda.assign(
+        recipient=lambda d: d.recipient_code.map(recipients),
+        indicator=lambda d: d.one_indicator.map(indicators),
+    ).filter(
+        ["year", "donor_code", "recipient_code", "value", "indicator", "recipient"],
+        axis=1,
     )
 
     data.to_csv(f"{config.PATHS.raw_oda}/total_oda_by_region.csv", index=False)
@@ -167,9 +175,10 @@ def get_ukraine_bilat() -> pd.DataFrame:
 
 
 def get_ukraine_crs() -> pd.DataFrame:
-    df = read_crs(years=range(2015, 2024))
+    df = CRSData(years=range(2015, 2025), recipients=[85], providers=DAC).read(
+        using_bulk_download=True
+    )
 
-    df = df.loc[lambda d: d.recipient_code == 85].loc[lambda d: d.donor_code.isin(DAC)]
     df = df.loc[lambda d: d.flow_name != "Other Official Flows (non Export Credit)"]
 
     df = (
@@ -208,7 +217,6 @@ def get_ukraine_crs() -> pd.DataFrame:
 
 
 def get_idrc() -> pd.DataFrame:
-
     indicators = {"idrc_ge_linked": "irdc"}
 
     oda = ODAData(
@@ -259,4 +267,4 @@ if __name__ == "__main__":
     get_oda_by_income()
     get_oda_to_africa()
     get_oda_to_regions()
-    df = get_ukraine_crs()
+    # df = get_ukraine_crs()

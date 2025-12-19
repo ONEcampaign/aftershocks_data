@@ -1,23 +1,23 @@
 import numpy as np
 import pandas as pd
 from bblocks import convert_id, format_number
+from oda_data import provider_groupings
 from oda_data.clean_data.common import dac_deflate
 
 from pydeflate import deflate, set_pydeflate_path
-from oda_data import donor_groupings
 from scripts.config import PATHS
 
 
 set_pydeflate_path(PATHS.raw_data)
 
 # Define a year for the constant price calculations
-CONSTANT_YEAR: int = 2023
+CONSTANT_YEAR: int = 2024
 
 # Start year for the timeseries charts
 START_YEAR: int = 2010
 
 # DAC codes for the members of the DAC
-DAC = list(donor_groupings()["dac_members"])
+DAC = list(provider_groupings()["dac_members"])
 
 # How to group sectors into more aggregated categories
 SECTORS_MAPPING: dict = {

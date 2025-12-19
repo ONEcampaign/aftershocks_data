@@ -1,4 +1,5 @@
 """Create dynamic text for the hunger topic"""
+
 import datetime
 import json
 
@@ -27,12 +28,12 @@ def stunting() -> dict:
         .round({"value": 0})
     )
 
-    ssa_value = f'{df.loc[df.iso_code == "SSA", "value"].iloc[-1]:.0f}'
-    ssa_date = f'{df.loc[df.iso_code == "SSA", "date"].iloc[-1]}'
+    ssa_value = f"{df.loc[df.iso_code == 'SSA', 'value'].iloc[-1]:.0f}"
+    ssa_date = f"{df.loc[df.iso_code == 'SSA', 'date'].iloc[-1]}"
     ssa_value_2000 = (
-        f'{df.loc[(df.iso_code == "SSA") & (df.date == 2000), "value"].iloc[-1]:.0f}'
+        f"{df.loc[(df.iso_code == 'SSA') & (df.date == 2000), 'value'].iloc[-1]:.0f}"
     )
-    world_value = f'{df.loc[df.iso_code == "WLD", "value"].iloc[-1]:.0f}'
+    world_value = f"{df.loc[df.iso_code == 'WLD', 'value'].iloc[-1]:.0f}"
 
     return {
         "stunting_ssa_value": ssa_value,

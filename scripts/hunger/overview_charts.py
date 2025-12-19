@@ -34,7 +34,7 @@ def insufficient_food_single_measure() -> None:
     d = {
         "value": latest_value / 1000000,
         "change": change,
-        "top_label": f'as of {latest_date.strftime("%d %b %Y")}',
+        "top_label": f"as of {latest_date.strftime('%d %b %Y')}",
         "arrow": arrow,
         "bottom_label": "in the last 30 days",
     }

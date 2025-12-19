@@ -15,5 +15,5 @@ def key_numbers() -> None:
     )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     key_numbers()

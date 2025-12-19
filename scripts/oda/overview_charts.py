@@ -1,6 +1,6 @@
 from bblocks import format_number, set_bblocks_data_path
 from oda_data import ODAData, set_data_path
-from oda_data.tools.groupings import donor_groupings
+from oda_data.tools.groupings import provider_groupings
 
 from scripts.common import df_to_key_number, update_key_number
 from scripts.config import PATHS
@@ -11,7 +11,7 @@ set_data_path(PATHS.raw_oda)
 set_bblocks_data_path(PATHS.bblocks_data)
 
 DacCountries = (
-    donor_groupings()["dac_countries"]
+    provider_groupings()["dac_countries"]
     | {84: "Lithuania"}
     | {82: "Estonia"}
     | {20001: "DAC Countries, Total"}

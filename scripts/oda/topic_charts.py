@@ -1,7 +1,14 @@
 import pandas as pd
 from bblocks import format_number
-from oda_data import ODAData, set_data_path
-from oda_data.tools.groupings import donor_groupings
+from oda_data import (
+    ODAData,
+    set_data_path,
+    CRSData,
+    provider_groupings,
+    add_sectors,
+    add_broad_sectors,
+)
+from oda_data.clean_data.common import dac_deflate
 
 from scripts.config import PATHS
 from scripts.logger import logger
@@ -9,7 +16,7 @@ from scripts.oda import common
 
 set_data_path(PATHS.raw_oda)
 DacMembers = (
-    donor_groupings()["dac_members"]
+    provider_groupings()["dac_members"]
     | {84: "Lithuania"}
     | {82: "Estonia"}
     | {20001: "DAC Countries, Total"}
@@ -126,21 +133,34 @@ def oda_gni_single_year() -> None:
 
 
 def _sectors_ts() -> tuple[pd.DataFrame, list]:
-    df_ = common.read_sectors()
-    common.check_sector_completeness(df_=df_)
+    df_ = common.read_sectors().drop(columns=["purpose_name"])
+    df_ = add_broad_sectors(df_)
+    df = df_.rename(columns={"purpose_name": "sector", "recipient_name": "recipient"})
 
-    df = pd.DataFrame()
+    # Add sector share of total by year and donor
+    df["share"] = df.groupby(
+        ["year", "donor_code", "sector"], dropna=False, observed=True
+    )["value"].transform(lambda x: x / x.sum())
 
-    for sn, sl in common.SECTORS_MAPPING.items():
-        _ = df_.pipe(common.filter_map_broad_sector, sector_name=sn, sectors_list=sl)
-        df = pd.concat([df, _], ignore_index=True)
+    df = df.groupby(["year", "donor_code", "sector", "recipient"], as_index=False)[
+        ["value", "share"]
+    ].sum()
+
+    all_dev = (
+        df.assign(recipient="All Developing Countries")
+        .groupby(
+            ["year", "donor_code", "sector", "recipient"],
+            as_index=False,
+            dropna=False,
+            observed=True,
+        )[["value", "share"]]
+        .sum()
+    )
+
+    df = pd.concat([df, all_dev], ignore_index=True)
 
     df = (
-        df.groupby(["year", "donor_code", "sector", "recipient"], as_index=False)[
-            ["value", "share"]
-        ]
-        .sum()
-        .loc[lambda d: d.recipient == "All Developing Countries"]
+        df.loc[lambda d: d.recipient == "All Developing Countries"]
         .assign(year=lambda d: d.year.dt.year)
         .pipe(
             common.append_dac_total,
@@ -699,81 +719,55 @@ def flow_shares_idrc_covid():
 
 
 def aid_to_ukraine() -> pd.DataFrame:
-    from oda_data import ODAData, set_data_path
-    from oda_data.tools.groupings import donor_groupings
+    from oda_data import OECDClient, set_data_path, sector_imputations, CRSData
+    from oda_data.tools.groupings import provider_groupings
 
     set_data_path(PATHS.raw_oda)
 
-    dg = donor_groupings()
+    dg = provider_groupings()
 
-    oda = ODAData(
-        years=range(2015, 2024),
-        donors=list(dg["dac_countries"]),
-        prices="constant",
+    oda = OECDClient(
+        years=range(2015, 2025),
+        providers=list(dg["dac_countries"]),
         base_year=common.CONSTANT_YEAR,
-        include_names=True,
     )
 
-    oda.load_indicator(
-        [
-            "recipient_imputed_multi_flow_net",
-            "crs_bilateral_ge",
-            "recipient_total_flow_net",
-        ]
+    indicators = {
+        "DAC2A.10.106": "imputed_multilateral",
+        "DAC2A.10.206": "bilateral",
+    }
+
+    crs = CRSData(
+        years=range(2018, 2025), providers=list(dg["dac_countries"]), recipients=85
     )
 
-    df_bilateral_ge = (
-        oda.get_data("crs_bilateral_ge")
-        .loc[lambda d: d.recipient_name == "Ukraine"]
-        .loc[lambda d: d.year >= 2018]
-    )
+    cols = ["year", "donor_code", "donor_name", "recipient_code", "recipient_name"]
 
     df_bilateral_ge = (
-        df_bilateral_ge.groupby(
-            [
-                "year",
-                "indicator",
-                "donor_code",
-                "donor_name",
-                "recipient_code",
-                "recipient_name",
-                "currency",
-                "prices",
-            ],
-            observed=True,
-            dropna=False,
-        )["value"]
+        crs.read(using_bulk_download=True, columns=cols + ["usd_disbursement"])
+        .assign(value=lambda d: d.usd_disbursement)
+        .groupby(cols, dropna=False, observed=True)["value"]
         .sum()
         .reset_index()
+        .pipe(dac_deflate, base_year=common.CONSTANT_YEAR)
+        .assign(prices="constant", currency="USD")
     )
 
     df_multilateral = (
-        oda.get_data("recipient_imputed_multi_flow_net")
+        oda.get_indicators("DAC2A.10.106")
         .loc[lambda d: d.recipient_name == "Ukraine"]
         .loc[lambda d: d.year >= 2018]
     )
 
     df_total_flow = (
-        oda.get_data("recipient_total_flow_net")
+        oda.get_indicators(["ONE.10.206_106"])
         .loc[lambda d: d.recipient_name == "Ukraine"]
         .loc[lambda d: d.year < 2018]
     )
 
     df = (
         pd.concat([df_bilateral_ge, df_multilateral, df_total_flow], ignore_index=True)
-        .groupby(
-            [
-                "year",
-                "donor_code",
-                "donor_name",
-                "recipient_code",
-                "recipient_name",
-                "currency",
-                "prices",
-            ],
-            dropna=False,
-            observed=True,
-        )["value"]
+        .groupby(cols + ["currency", "prices"], dropna=False, observed=True)["value"]
         .sum()
         .reset_index()
         .assign(indicator="aid_to_ukraine")
@@ -823,14 +817,14 @@ def aid_to_ukraine_comparison() -> None:
 
 
 if __name__ == "__main__":
-    global_aid_ts()
-    oda_gni_single_year()
-    sector_totals()
+    # global_aid_ts()
+    # oda_gni_single_year()
+    # sector_totals() # ON
     aid_to_regions_ts()
     aid_to_incomes()
-    oda_covid_idrc()
-    oda_idrc_share()
-    flow_shares_idrc_covid()
+    # oda_covid_idrc()
+    # oda_idrc_share()
+    # flow_shares_idrc_covid()
     aid_to_ukraine_comparison()
-    key_sector_shares()
+    # key_sector_shares() # ON
     ...

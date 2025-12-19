@@ -19,7 +19,6 @@ set_bblocks_data_path(PATHS.bblocks_data)
 
 
 def _base_wb_health() -> pd.DataFrame:
-
     wb = WorldBankData()
     wb.load_data(indicator=list(HEALTH_WB_INDICATORS), most_recent_only=True)
 
@@ -34,7 +33,6 @@ def _base_wb_health() -> pd.DataFrame:
 
 
 def _base_owid_health() -> pd.DataFrame:
-
     return (
         read_owid_data()
         .pipe(get_indicators_ts, indicators=OWID_INDICATORS)
@@ -51,7 +49,6 @@ def _base_owid_health() -> pd.DataFrame:
 
 
 def _base_who_health() -> pd.DataFrame:
-
     return (
         pd.read_csv(f"{PATHS.raw_data}/health/malaria_est_deaths_country.csv")
         .filter(["iso_code", "value"], axis=1)
@@ -65,7 +62,6 @@ def _base_who_health() -> pd.DataFrame:
 
 
 def _base_hiv_health() -> pd.DataFrame:
-
     deaths = (
         pd.read_csv(f"{PATHS.raw_data}/health/aids related deaths total.csv")
         .filter(["country", "All ages estimate"], axis=1)

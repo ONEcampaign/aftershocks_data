@@ -69,7 +69,6 @@ def _read_unu() -> pd.DataFrame:
 
 
 def unu_gov_revenue() -> pd.DataFrame:
-
     return (
         _read_unu()
         .filter(["iso_code", "year", "total revenue_including grants_inc sc"], axis=1)

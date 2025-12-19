@@ -67,18 +67,17 @@ def create_topic_chart(df: pd.DataFrame) -> None:
             & (df.age == "all ages")
             & (df.units == "people")
             & (df.value_type == "value"),
-
             ["entity_name", "indicator_code", "year", "value"],
         ]
-        .dropna(subset=["value"]) # drop rows with no value
-        .assign(value_rounded=lambda d: d.loc[
+        .dropna(subset=["value"])  # drop rows with no value
+        .assign(
+            value_rounded=lambda d: d.loc[
                 d.indicator_code.isin(
                     ["unaids_new_hiv_infections", "unaids_aids_related_deaths"]
                 )
             ]["value"].apply(unaids_rounding),
         )
         .assign(value_rounded=lambda d: d.value_rounded.fillna(d.value))
-
         .pivot(
             index=["year", "indicator_code"],
             columns="entity_name",
@@ -87,7 +86,6 @@ def create_topic_chart(df: pd.DataFrame) -> None:
         .reset_index()
         .rename(columns={"indicator_code": "indicator"})
         .assign(indicator=lambda x: x.indicator.map(INDICATORS))
-
     )
 
     df.to_csv(f"{PATHS.charts}/health/hiv_topic_chart_v2.csv", index=False)

@@ -68,7 +68,7 @@ def base_africa_df():
 
 def _download_wb_regions():
     df = pd.read_excel(
-        "http://databank.worldbank.org/" "data/download/site-content/CLASS.xlsx",
+        "http://databank.worldbank.org/data/download/site-content/CLASS.xlsx",
         sheet_name="Groups",
     ).rename(
         columns={
@@ -86,7 +86,11 @@ def read_wb_regions(region_code: str) -> dict:
 
     df = pd.read_csv(f"{PATHS.raw_data}/wb_groupings.csv")
 
-    data = df.groupby("group_code").apply(lambda d: d.iso_code.to_list(), include_groups=False).to_dict()
+    data = (
+        df.groupby("group_code")
+        .apply(lambda d: d.iso_code.to_list(), include_groups=False)
+        .to_dict()
+    )
 
     return data[region_code]
 

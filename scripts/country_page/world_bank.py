@@ -231,7 +231,7 @@ def wb_financial_summary(
 
     df = (
         df.filter(columns, axis=1)
-        .loc[lambda d: d.period >= f"{start_year-1}-12-01"]
+        .loc[lambda d: d.period >= f"{start_year - 1}-12-01"]
         .assign(
             disbursed_amount=lambda d: d.disbursed_amount.astype(float),
         )
@@ -307,5 +307,4 @@ def wb_support_chart(download: bool = False) -> None:
 
 
 if __name__ == "__main__":
-
     wb_support_chart(download=True)
