@@ -805,6 +805,9 @@ def aid_to_ukraine_comparison() -> None:
         .loc[lambda d: d.donor_name != "DAC Countries, Total"]
     )
 
+    data = data.sort_values(['year','value'], ascending=False)
+
+
     # chart version
     data.to_csv(f"{PATHS.charts}/oda_topic/aid_to_ukraine_comparison.csv", index=False)
 
