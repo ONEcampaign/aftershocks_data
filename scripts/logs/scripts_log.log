@@ -16534,3 +16534,10 @@ INFO (2025-12-21 11:21:53,148): Updated WFP insufficient food charts
 INFO (2025-12-21 11:21:55,167): Updated vaccination rate chart
 INFO (2025-12-21 11:21:59,745): Updated overview text (summary) json
 INFO (2025-12-21 11:21:59,746): Updated daily charts in country page
+INFO (2025-12-22 07:16:43,119): Updated DSA list data
+INFO (2025-12-22 07:19:39,155): Downloaded IDS debt service data
+INFO (2025-12-22 07:21:02,067): Downloaded IDS debt stocks data: ids_stocks_raw
+INFO (2025-12-22 07:23:39,252): Downloaded IDS debt stocks data: ids_stocks_raw_long
+INFO (2025-12-22 07:24:40,598): Successfully updated chart C07
+INFO (2025-12-22 07:24:40,602): Successfully updated chart C08
+INFO (2025-12-22 07:24:45,039): Updated weekly charts in debt page
