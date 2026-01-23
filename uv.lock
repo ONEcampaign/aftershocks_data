@@ -17,6 +17,7 @@ dependencies = [
     { name = "imf-reader" },
     { name = "numpy" },
     { name = "oda-data" },
+    { name = "oda-reader" },
     { name = "pandas" },
     { name = "pyarrow" },
     { name = "pydeflate" },
@@ -31,6 +32,7 @@ requires-dist = [
     { name = "imf-reader", specifier = ">=1.4.1" },
     { name = "numpy", specifier = ">=2.3.5" },
     { name = "oda-data", specifier = ">=2.4.1" },
+    { name = "oda-reader", specifier = "==1.4.2" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "pyarrow", specifier = ">=19.0.1" },
     { name = "pydeflate", specifier = ">=2.3.3" },
@@ -1035,7 +1037,7 @@ wheels = [
 
 [[package]]
 name = "oda-reader"
-version = "1.4.1"
+version = "1.4.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "filelock" },
@@ -1047,9 +1049,9 @@ dependencies = [
     { name = "requests" },
     { name = "requests-cache" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a5/bb/69a6d5fb1165c565e5dde9db387a959932416291235224987c034ac0a1b2/oda_reader-1.4.1.tar.gz", hash = "sha256:cfff97e144ddc69c50e6edaf3d7782c3bf6561960208482ab166f47d94ef0cac", size = 44827, upload-time = "2025-12-19T16:37:00.029Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/20/2f/99c3c89543289cc31b2600b8bc33d60c797ddd31fc6de2ac51794c982dfe/oda_reader-1.4.2.tar.gz", hash = "sha256:ab23e8c44e56d6cc36418cab0f7634c714c66b5a8044c634fc4ee05d3db15920", size = 44831, upload-time = "2026-01-23T13:46:37.976Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/26/93/4d10495a0517d7e237cd39dc96e8891f04d560610726d5111e85a909d79d/oda_reader-1.4.1-py3-none-any.whl", hash = "sha256:ac464690026c9cd63bf36a1c82b7111da13f87066becd04ff01d86bd52d36a76", size = 61157, upload-time = "2025-12-19T16:36:58.98Z" },
+    { url = "https://files.pythonhosted.org/packages/97/2a/0cb1b8036bb34ef35a4dabe8cea8b672ba729e2920cdfeeefbce8b19a800/oda_reader-1.4.2-py3-none-any.whl", hash = "sha256:ba080c833aa174c29d182d79b768906090716d5372b4c596e82570a462e90b5a", size = 61156, upload-time = "2026-01-23T13:46:37.079Z" },
 ]
 
 [[package]]
